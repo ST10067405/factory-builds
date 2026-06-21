@@ -232,6 +232,44 @@ footer {
 .j-body p { margin-bottom: 1rem; }
 .j-body h3 { font-family: var(--font-h); font-size: 1.2rem; font-weight: 400; margin: 1.3rem 0 .4rem; color: var(--roast); }
 @media(max-width:640px) { .j-box { padding: 2rem 1.4rem; } }
+
+/* ── chatbot ── */
+#cb-btn{position:fixed;bottom:1.6rem;right:1.6rem;z-index:1100;width:56px;height:56px;border-radius:50%;background:var(--caramel);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(201,139,60,.4);transition:transform .25s,box-shadow .25s}
+#cb-btn:hover{transform:scale(1.08);box-shadow:0 6px 28px rgba(201,139,60,.55)}
+#cb-btn svg{width:26px;height:26px;fill:var(--espresso);transition:opacity .2s}
+#cb-btn.open #cb-icon-chat{opacity:0;position:absolute}
+#cb-btn.open #cb-icon-close{opacity:1}
+#cb-icon-close{opacity:0}
+#cb-panel{position:fixed;bottom:5rem;right:1.6rem;z-index:1099;width:340px;max-width:calc(100vw - 2rem);background:var(--milk);border-radius:16px;box-shadow:0 12px 48px rgba(26,15,8,.18);display:flex;flex-direction:column;overflow:hidden;transition:opacity .28s,transform .28s;opacity:0;transform:translateY(12px) scale(.97);pointer-events:none;border:1px solid rgba(26,15,8,.08)}
+#cb-panel.open{opacity:1;transform:none;pointer-events:all}
+#cb-head{background:var(--espresso);padding:1rem 1.1rem;display:flex;align-items:center;gap:.75rem}
+#cb-avatar{width:36px;height:36px;border-radius:50%;background:var(--caramel);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+#cb-head-info{flex:1}
+#cb-head-name{font-size:.95rem;color:#fff;font-weight:600}
+#cb-head-status{font-size:.68rem;color:rgba(255,255,255,.45);display:flex;align-items:center;gap:.35rem}
+#cb-head-status::before{content:'';width:6px;height:6px;border-radius:50%;background:#4caf50;display:inline-block}
+#cb-msgs{flex:1;overflow-y:auto;padding:.9rem;display:flex;flex-direction:column;gap:.6rem;max-height:300px;min-height:180px}
+.cb-msg{max-width:84%;padding:.52rem .82rem;border-radius:14px;font-size:.83rem;line-height:1.55;animation:cb-pop .2s ease}
+@keyframes cb-pop{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.cb-msg.bot{background:var(--cream);color:var(--espresso);border-bottom-left-radius:3px;align-self:flex-start;border:1px solid rgba(26,15,8,.08)}
+.cb-msg.user{background:var(--caramel);color:var(--espresso);border-bottom-right-radius:3px;align-self:flex-end;font-weight:600}
+.cb-msg a{color:var(--caramel);text-decoration:underline}
+.cb-msg.user a{color:var(--espresso)}
+#cb-typing{display:none;align-items:center;gap:4px;padding:.5rem .85rem;align-self:flex-start}
+#cb-typing.show{display:flex}
+#cb-typing span{width:7px;height:7px;border-radius:50%;background:var(--honey);animation:cb-bounce 1.2s infinite}
+#cb-typing span:nth-child(2){animation-delay:.2s}
+#cb-typing span:nth-child(3){animation-delay:.4s}
+@keyframes cb-bounce{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-6px)}}
+#cb-quick{display:flex;flex-wrap:wrap;gap:.4rem;padding:.5rem .9rem .6rem;border-top:1px solid rgba(26,15,8,.08)}
+.cb-q{background:var(--cream);border:1px solid rgba(201,139,60,.35);border-radius:50px;padding:.3rem .72rem;font-size:.72rem;cursor:pointer;color:var(--roast);font-weight:600;transition:background .2s;white-space:nowrap}
+.cb-q:hover{background:var(--caramel);color:var(--espresso);border-color:var(--caramel)}
+#cb-form{display:flex;border-top:1px solid rgba(26,15,8,.08);background:var(--cream)}
+#cb-input{flex:1;border:none;background:transparent;padding:.72rem 1rem;font-size:.83rem;color:var(--espresso);outline:none}
+#cb-input::placeholder{color:var(--honey)}
+#cb-send{background:none;border:none;padding:.72rem .9rem;cursor:pointer;color:var(--caramel);display:flex;align-items:center;transition:transform .2s}
+#cb-send:hover{transform:translateX(3px)}
+#cb-send svg{width:20px;height:20px;fill:currentColor}
 </style>
 </head>
 <body>
@@ -623,6 +661,43 @@ const J_ARTS = {
   closeBtn.addEventListener('click', closeOverlay);
   overlay.addEventListener('click', e => { if (e.target === overlay) closeOverlay(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeOverlay(); });
+})();
+</script>
+
+<!-- ── chatbot ── -->
+<button id="cb-btn" aria-label="Chat with us"><svg id="cb-icon-chat" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.956 9.956 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm4.293 13.293c-.232-.116-1.373-.677-1.586-.754-.213-.078-.368-.116-.522.116-.155.232-.598.754-.733.909-.135.155-.27.174-.502.058-.232-.116-.98-.361-1.867-1.151-.69-.615-1.155-1.374-1.29-1.606-.136-.232-.015-.357.101-.473.104-.104.232-.27.348-.406.116-.135.155-.232.232-.387.078-.155.039-.29-.019-.406-.058-.116-.522-1.259-.715-1.723-.19-.453-.38-.39-.522-.398-.136-.006-.29-.008-.445-.008s-.406.058-.619.29c-.213.232-.812.793-.812 1.934 0 1.141.832 2.244.948 2.399.116.155 1.638 2.5 3.969 3.506.555.24.988.383 1.326.49.557.178 1.064.153 1.464.093.447-.067 1.373-.561 1.566-1.103.193-.542.193-1.007.135-1.103-.058-.097-.213-.155-.445-.271z"/></svg><svg id="cb-icon-close" viewBox="0 0 24 24" style="position:absolute"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></button>
+<div id="cb-panel" role="dialog">
+  <div id="cb-head"><div id="cb-avatar">☕</div><div id="cb-head-info"><div id="cb-head-name">Jooma Coffee</div><div id="cb-head-status">Online now</div></div></div>
+  <div id="cb-msgs"></div>
+  <div id="cb-typing"><span></span><span></span><span></span></div>
+  <div id="cb-quick"><button class="cb-q">☕ Menu</button><button class="cb-q">🕒 Hours</button><button class="cb-q">📍 Location</button><button class="cb-q">🎂 Catering</button><button class="cb-q">🐾 Dogs</button></div>
+  <form id="cb-form" autocomplete="off"><input id="cb-input" type="text" placeholder="Ask something…" maxlength="200"><button type="submit" id="cb-send" aria-label="Send"><svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></button></form>
+</div>
+
+<script>
+(function(){
+  var btn=document.getElementById('cb-btn'),panel=document.getElementById('cb-panel'),msgs=document.getElementById('cb-msgs'),input=document.getElementById('cb-input'),form=document.getElementById('cb-form'),typing=document.getElementById('cb-typing'),opened=false;
+  var KB=[
+    {k:['hour','open','close','time','when','daily','weekend'],r:'We are open <strong>daily</strong> — pop in any morning for your coffee fix. ☕ Find us at 2 Village Rd, Kloof.'},
+    {k:['menu','food','eat','breakfast','sarmi','sandwich','bake','cake','pastry','lunch'],r:'We serve <strong>all-day breakfast</strong>, sarmies (our toasties are legendary), house bakes, and more. The menu uses fresh, local ingredients. Stop in and see what\'s on today. 🥪'},
+    {k:['coffee','espresso','flat white','cappuccino','latte','filter','brew','bean','roast'],r:'Artisan espresso, flat whites, cappuccinos, filter coffee and more — all made with care. We take our beans seriously. ☕'},
+    {k:['cater','catering','function','event','group','order','party'],r:'We do catering for functions and events. Call us on <a href="tel:0317645828">031 764 5828</a> to discuss your requirements — we\'ll put together a package that works. 🎂'},
+    {k:['dog','pup','puppy','pet','animal','pooch'],r:'Dogs are very welcome at Jooma! There\'s a Puppuccino (R10) and a free Beeno waiting for your pooch. 🐾'},
+    {k:['location','where','address','find','village','kloof','directions'],r:'We are at <strong>2 Village Road, Kloof</strong> — right in the heart of the village. Easy to find, even easier to keep coming back. 📍'},
+    {k:['instagram','facebook','social','follow'],r:'Follow us on Instagram <a href="https://instagram.com/jooma_coffee" target="_blank">@jooma_coffee</a> or Facebook <a href="https://facebook.com/joomakloof" target="_blank">/joomakloof</a>. ☕'},
+    {k:['phone','call','contact','number'],r:'Give us a call on <a href="tel:0317645828">031 764 5828</a> — happy to help with orders, catering or any questions. 📞'},
+    {k:['hello','hi','hey','howzit','morning','afternoon'],r:'Hey! ☕ Welcome to Jooma Coffee. Great coffee, all-day food, right here in Kloof. What can I help with?'},
+    {k:['thank','thanks','great','love','perfect'],r:'Glad to help! Come see us soon at 2 Village Rd. ☕'},
+  ];
+  var DEFAULT='Not sure about that one — give us a call on <a href="tel:0317645828">031 764 5828</a> and we\'ll sort you out. ☕';
+  function addMsg(t,r){var d=document.createElement('div');d.className='cb-msg '+r;d.innerHTML=t;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;}
+  function match(text){var t=text.toLowerCase();for(var i=0;i<KB.length;i++){for(var j=0;j<KB[i].k.length;j++){if(t.indexOf(KB[i].k[j])!==-1)return KB[i].r;}}return DEFAULT;}
+  function botReply(text){typing.classList.add('show');msgs.scrollTop=msgs.scrollHeight;setTimeout(function(){typing.classList.remove('show');addMsg(match(text),'bot');},700+Math.random()*500);}
+  function send(text){text=text.trim();if(!text)return;addMsg(text,'user');input.value='';botReply(text);}
+  form.addEventListener('submit',function(e){e.preventDefault();send(input.value);});
+  document.querySelectorAll('.cb-q').forEach(function(q){q.addEventListener('click',function(){send(q.textContent.replace(/[^\w\s]/g,'').trim());});});
+  btn.addEventListener('click',function(){opened=!opened;btn.classList.toggle('open',opened);panel.classList.toggle('open',opened);if(opened&&msgs.children.length===0){setTimeout(function(){addMsg('Hey! ☕ Welcome to <strong>Jooma Coffee</strong> — Kloof\'s favourite neighbourhood café. Artisan coffee, all-day breakfast, sarmies and bakes. How can I help?','bot');},300);}if(opened)setTimeout(function(){input.focus();},350);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&opened){opened=false;btn.classList.remove('open');panel.classList.remove('open');}});
 })();
 </script>
 </body>
