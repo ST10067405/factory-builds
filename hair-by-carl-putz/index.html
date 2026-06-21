@@ -231,6 +231,43 @@ footer{background:var(--ink);color:rgba(255,255,255,.6);padding:3rem 0 2rem;text
   .g-cell img,.team-photo img{transition:none}
   #hero-canvas{display:none}
 }
+
+/* ── chatbot ── */
+#cb-btn{position:fixed;bottom:1.6rem;right:1.6rem;z-index:1100;width:56px;height:56px;border-radius:50%;background:var(--gold);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(201,151,58,.45);transition:transform .25s,box-shadow .25s}
+#cb-btn:hover{transform:scale(1.08);box-shadow:0 6px 28px rgba(201,151,58,.55)}
+#cb-btn svg{width:26px;height:26px;fill:#fff;transition:opacity .2s}
+#cb-btn.open #cb-icon-chat{opacity:0;position:absolute}
+#cb-btn.open #cb-icon-close{opacity:1}
+#cb-icon-close{opacity:0}
+#cb-panel{position:fixed;bottom:5rem;right:1.6rem;z-index:1099;width:340px;max-width:calc(100vw - 2rem);background:var(--parchment);border-radius:18px;box-shadow:0 12px 48px rgba(44,26,16,.22);display:flex;flex-direction:column;overflow:hidden;transition:opacity .28s,transform .28s;opacity:0;transform:translateY(12px) scale(.97);pointer-events:none}
+#cb-panel.open{opacity:1;transform:none;pointer-events:all}
+#cb-head{background:var(--espresso);padding:1rem 1.1rem;display:flex;align-items:center;gap:.75rem}
+#cb-avatar{width:36px;height:36px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+#cb-head-info{flex:1}
+#cb-head-name{font-family:var(--font-h);font-size:1rem;color:#fff;font-weight:500}
+#cb-head-status{font-size:.7rem;color:rgba(255,255,255,.55);display:flex;align-items:center;gap:.35rem}
+#cb-head-status::before{content:'';width:7px;height:7px;border-radius:50%;background:#4caf50;display:inline-block}
+#cb-msgs{flex:1;overflow-y:auto;padding:.9rem;display:flex;flex-direction:column;gap:.6rem;max-height:320px;min-height:200px}
+.cb-msg{max-width:82%;padding:.55rem .85rem;border-radius:14px;font-size:.85rem;line-height:1.5;animation:cb-pop .2s ease}
+@keyframes cb-pop{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.cb-msg.bot{background:var(--cream);color:var(--ink);border-bottom-left-radius:4px;align-self:flex-start;border:1px solid var(--line)}
+.cb-msg.user{background:var(--gold);color:#fff;border-bottom-right-radius:4px;align-self:flex-end}
+.cb-msg a{color:inherit;text-decoration:underline}
+#cb-typing{display:none;align-items:center;gap:4px;padding:.5rem .85rem;align-self:flex-start}
+#cb-typing.show{display:flex}
+#cb-typing span{width:7px;height:7px;border-radius:50%;background:var(--muted);animation:cb-bounce 1.2s infinite}
+#cb-typing span:nth-child(2){animation-delay:.2s}
+#cb-typing span:nth-child(3){animation-delay:.4s}
+@keyframes cb-bounce{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-6px)}}
+#cb-quick{display:flex;flex-wrap:wrap;gap:.4rem;padding:.5rem .9rem .6rem;border-top:1px solid var(--line)}
+.cb-q{background:var(--cream);border:1px solid var(--line);border-radius:50px;padding:.32rem .75rem;font-size:.74rem;cursor:pointer;color:var(--espresso);font-weight:500;transition:background .2s,border-color .2s;white-space:nowrap}
+.cb-q:hover{background:var(--gold);color:#fff;border-color:var(--gold)}
+#cb-form{display:flex;border-top:1px solid var(--line);background:var(--cream)}
+#cb-input{flex:1;border:none;background:transparent;padding:.75rem 1rem;font-size:.85rem;font-family:var(--font-b);color:var(--ink);outline:none}
+#cb-input::placeholder{color:var(--muted)}
+#cb-send{background:none;border:none;padding:.75rem .9rem;cursor:pointer;color:var(--gold);display:flex;align-items:center;transition:transform .2s}
+#cb-send:hover{transform:translateX(3px)}
+#cb-send svg{width:20px;height:20px;fill:currentColor}
 </style>
 </head>
 <body>
@@ -737,6 +774,128 @@ const J_ARTS = {
   closeBtn.addEventListener('click',closeJ);
   overlay.addEventListener('click',function(e){if(e.target===overlay)closeJ();});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')closeJ();});
+})();
+</script>
+
+<!-- ── chatbot widget ── -->
+<button id="cb-btn" aria-label="Chat with us">
+  <svg id="cb-icon-chat" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.956 9.956 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.95 7.95 0 01-4.065-1.115l-.29-.174-3.01.894.894-3.01-.174-.29A7.96 7.96 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8zm4.293-5.707c-.232-.116-1.373-.677-1.586-.754-.213-.078-.368-.116-.522.116-.155.232-.598.754-.733.909-.135.155-.27.174-.502.058-.232-.116-.98-.361-1.867-1.151-.69-.615-1.155-1.374-1.29-1.606-.136-.232-.015-.357.101-.473.104-.104.232-.27.348-.406.116-.135.155-.232.232-.387.078-.155.039-.29-.019-.406-.058-.116-.522-1.259-.715-1.723-.19-.453-.38-.39-.522-.398-.136-.006-.29-.008-.445-.008s-.406.058-.619.29c-.213.232-.812.793-.812 1.934 0 1.141.832 2.244.948 2.399.116.155 1.638 2.5 3.969 3.506.555.24.988.383 1.326.49.557.178 1.064.153 1.464.093.447-.067 1.373-.561 1.566-1.103.193-.542.193-1.007.135-1.103-.058-.097-.213-.155-.445-.271z"/></svg>
+  <svg id="cb-icon-close" viewBox="0 0 24 24" style="position:absolute"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+</button>
+
+<div id="cb-panel" role="dialog" aria-label="Chat with Hair by Carl Putz">
+  <div id="cb-head">
+    <div id="cb-avatar">✂️</div>
+    <div id="cb-head-info">
+      <div id="cb-head-name">Hair by Carl Putz</div>
+      <div id="cb-head-status">Online now</div>
+    </div>
+  </div>
+  <div id="cb-msgs"></div>
+  <div id="cb-typing"><span></span><span></span><span></span></div>
+  <div id="cb-quick">
+    <button class="cb-q">📅 Book</button>
+    <button class="cb-q">🕒 Hours</button>
+    <button class="cb-q">✂️ Services</button>
+    <button class="cb-q">📍 Location</button>
+    <button class="cb-q">💰 Pricing</button>
+  </div>
+  <form id="cb-form" autocomplete="off">
+    <input id="cb-input" type="text" placeholder="Ask something…" maxlength="200">
+    <button type="submit" id="cb-send" aria-label="Send">
+      <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+    </button>
+  </form>
+</div>
+
+<script>
+(function(){
+  var btn=document.getElementById('cb-btn');
+  var panel=document.getElementById('cb-panel');
+  var msgs=document.getElementById('cb-msgs');
+  var input=document.getElementById('cb-input');
+  var form=document.getElementById('cb-form');
+  var typing=document.getElementById('cb-typing');
+  var opened=false;
+
+  var KB=[
+    {k:['book','appoint','reserve','fresha','whatsapp','schedule'],r:'You can book via WhatsApp — just message Carl directly at <a href="https://wa.me/27726407185" target="_blank">072 640 7185</a>, or use <a href="https://www.fresha.com/book-now/hair-by-carl-putz" target="_blank">Fresha</a> to see availability online. Appointments are recommended! 📅'},
+    {k:['hour','open','close','time','when','weekend','saturday','sunday','monday'],r:'We\'re open <strong>Monday to Saturday</strong>, closing at <strong>3pm</strong>. Appointments are recommended — walk-ins welcome subject to availability. 🕒'},
+    {k:['price','cost','how much','charge','rate','fee'],r:'Pricing depends on the service — haircuts, colour, highlights, and nail treatments are all priced differently. The best way to get a quote is to <a href="https://wa.me/27726407185" target="_blank">WhatsApp Carl</a> with what you\'re after. 💬'},
+    {k:['service','offer','do','cut','colour','color','highlight','nail','manicure','bridal','event','wedding','massage','head'],r:'Carl offers: <strong>Haircuts & Styling</strong>, <strong>Colour & Highlights</strong>, <strong>Head Massage</strong> (included every visit!), and <strong>Bridal & Event Hair</strong>. Nail care is available on-site with Pretty. ✂️💅'},
+    {k:['location','where','address','find','directions','kloof','village'],r:'We\'re at <strong>33 Village Road, Kloof, 3610</strong>. Secure on-site parking is available. 📍'},
+    {k:['park','parking'],r:'Yes — there\'s secure on-site parking at 33 Village Road, Kloof. No stress finding a spot. 🚗'},
+    {k:['drink','coffee','tea','refresh','welcome'],r:'Every visit starts with a complimentary drink — tea, coffee, or something cold. You\'re a guest here, not just a client. ☕'},
+    {k:['massage','scalp','head massage','relax'],r:'A proper head massage is included with every appointment — it\'s not an add-on, it\'s just part of the experience at Carl\'s. 🙌'},
+    {k:['carl','bowtie','experience','year','how long'],r:'Carl Putz has been doing hair for <strong>over 40 years</strong> and is known locally as The Bowtie Man. You\'re in very experienced hands. 🎀'},
+    {k:['pretty','nail','nails','manicure','nail tech'],r:'Pretty is our on-site nail technician. Manicures, nail shaping, polish changes — book your hair and nails in one visit! 💅'},
+    {k:['review','rating','star','google','reputation'],r:'Carl has a <strong>4.9★ rating from 59 Google reviews</strong>. Clients love the unhurried pace and personal attention. 🌟'},
+    {k:['bridal','wedding','bride','event','special occasion'],r:'Carl specialises in bridal and event hair — updos, trial sessions, and on-the-day styling. <a href="https://wa.me/27726407185" target="_blank">WhatsApp</a> to discuss your requirements. 👰'},
+    {k:['hello','hi','hey','howzit','good morning','good afternoon'],r:'Hello! 👋 I\'m Carl\'s virtual assistant. I can help with bookings, services, hours, and more. What can I help you with?'},
+    {k:['thank','thanks','great','awesome','perfect','excellent'],r:'You\'re very welcome! Is there anything else I can help with? 😊'},
+    {k:['bye','goodbye','later','see you'],r:'Thanks for stopping by! We\'d love to see you at the salon. 🎀 Book any time on <a href="https://wa.me/27726407185" target="_blank">WhatsApp</a>.'},
+  ];
+
+  var DEFAULT='I\'m not sure about that one — but Carl or the team can answer any question! <a href="https://wa.me/27726407185" target="_blank">WhatsApp us on 072 640 7185</a> and we\'ll get back to you. 😊';
+
+  function addMsg(text,role){
+    var d=document.createElement('div');
+    d.className='cb-msg '+role;
+    d.innerHTML=text;
+    msgs.appendChild(d);
+    msgs.scrollTop=msgs.scrollHeight;
+  }
+
+  function match(text){
+    var t=text.toLowerCase();
+    for(var i=0;i<KB.length;i++){
+      for(var j=0;j<KB[i].k.length;j++){
+        if(t.indexOf(KB[i].k[j])!==-1)return KB[i].r;
+      }
+    }
+    return DEFAULT;
+  }
+
+  function botReply(text){
+    typing.classList.add('show');
+    msgs.scrollTop=msgs.scrollHeight;
+    setTimeout(function(){
+      typing.classList.remove('show');
+      addMsg(match(text),'bot');
+    },800+Math.random()*400);
+  }
+
+  function send(text){
+    text=text.trim();
+    if(!text)return;
+    addMsg(text,'user');
+    input.value='';
+    botReply(text);
+  }
+
+  form.addEventListener('submit',function(e){e.preventDefault();send(input.value);});
+
+  document.querySelectorAll('.cb-q').forEach(function(q){
+    q.addEventListener('click',function(){send(q.textContent.replace(/[^\w\s]/g,'').trim());});
+  });
+
+  btn.addEventListener('click',function(){
+    opened=!opened;
+    btn.classList.toggle('open',opened);
+    panel.classList.toggle('open',opened);
+    if(opened&&msgs.children.length===0){
+      setTimeout(function(){
+        addMsg('👋 Hi! Welcome to <strong>Hair by Carl Putz</strong>. I\'m here to help with bookings, hours, services, and anything else you\'d like to know. How can I help?','bot');
+      },300);
+    }
+    if(opened)setTimeout(function(){input.focus();},350);
+  });
+
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&opened){
+      opened=false;btn.classList.remove('open');panel.classList.remove('open');
+    }
+  });
 })();
 </script>
 </body>
