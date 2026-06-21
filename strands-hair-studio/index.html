@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STRANDS | Precision Hair Studio · The Colony, Hillcrest</title>
+  <meta name="description" content="STRANDS — precision cuts, honest colour and considered treatment at The Colony, Hillcrest. 4.9★ on Google." />
+  <meta property="og:title" content="STRANDS | The Colony, Hillcrest" />
+  <meta property="og:description" content="Precision hair. Honest hands. Shop 6, The Colony, 50 Old Main Rd, Hillcrest." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── DESIGN TOKENS ─── */
+    :root {
+      --chalk:  #F8F5F0;
+      --paper:  #EFE9E0;
+      --ink:    #181614;
+      --muted:  #8A8480;
+      --blush:  #B8836A;
+      --copper: #C4956E;
+      --sage:   #7A9485;
+      --line:   rgba(24,22,20,.09);
+      --ease:   cubic-bezier(.25,.46,.45,.94);
+    }
+    *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body {
+      background: var(--chalk);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 400;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    img { display:block; width:100%; object-fit:cover; }
+    a   { color:inherit; text-decoration:none; }
+
+    /* ─── LOADER ─── */
+    #loader {
+      position: fixed; inset: 0;
+      background: var(--chalk);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 9999;
+      transition: opacity .7s var(--ease), visibility .7s;
+    }
+    #loader.done { opacity:0; visibility:hidden; pointer-events:none; }
+    .ld-word {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(2.5rem,9vw,6rem);
+      letter-spacing: .45em;
+      overflow: hidden;
+      display: flex;
+    }
+    .ld-word span {
+      display: inline-block;
+      transform: translateY(110%);
+      animation: liftUp .9s var(--ease) forwards;
+    }
+    .ld-word span:nth-child(1){animation-delay:.08s}
+    .ld-word span:nth-child(2){animation-delay:.13s}
+    .ld-word span:nth-child(3){animation-delay:.18s}
+    .ld-word span:nth-child(4){animation-delay:.23s}
+    .ld-word span:nth-child(5){animation-delay:.28s}
+    .ld-word span:nth-child(6){animation-delay:.33s}
+    .ld-word span:nth-child(7){animation-delay:.38s}
+    @keyframes liftUp { to { transform: translateY(0); } }
+
+    /* ─── NAV ─── */
+    #nav {
+      position: fixed; top:0; left:0; right:0;
+      z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.5rem 3rem;
+      transition: background .35s var(--ease), box-shadow .35s;
+    }
+    #nav.scrolled {
+      background: rgba(248,245,240,.95);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 1px 0 var(--line);
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 1.2rem;
+      letter-spacing: .28em;
+    }
+    .nav-logo small {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      font-size: .52rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: .12rem;
+    }
+    .nav-links { display:flex; align-items:center; gap:2.5rem; }
+    .nav-links a {
+      font-size: .7rem;
+      font-weight: 500;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      opacity: .65;
+      transition: opacity .2s;
+    }
+    .nav-links a:hover { opacity: 1; }
+    .nav-book {
+      background: var(--ink) !important;
+      color: var(--chalk) !important;
+      opacity: 1 !important;
+      padding: .5rem 1.35rem;
+      border-radius: 2px;
+      font-size: .65rem !important;
+      letter-spacing: .2em !important;
+      transition: background .25s !important;
+    }
+    .nav-book:hover { background: var(--blush) !important; }
+
+    /* ─── HERO ─── */
+    #hero {
+      position: relative;
+      height: 100vh; min-height: 620px;
+      overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1600&q=80')
+                  center / cover no-repeat;
+    }
+    .hero-bg::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(248,245,240,.1)  0%,
+        rgba(248,245,240,.52) 45%,
+        rgba(248,245,240,.88) 100%
+      );
+    }
+    #strandCanvas {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .hero-inner {
+      position: relative; z-index: 2;
+      text-align: center;
+      padding: 0 2rem;
+    }
+    .hero-eyebrow {
+      font-size: .65rem;
+      font-weight: 500;
+      letter-spacing: .35em;
+      text-transform: uppercase;
+      color: var(--blush);
+      opacity: 0; transform: translateY(18px);
+      transition: opacity .8s .4s var(--ease), transform .8s .4s var(--ease);
+    }
+    .hero-h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(4rem,11vw,9rem);
+      letter-spacing: .14em;
+      line-height: 1;
+      margin: .6rem 0;
+      opacity: 0; transform: translateY(28px);
+      transition: opacity 1s .55s var(--ease), transform 1s .55s var(--ease);
+    }
+    .hero-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(1rem,2.4vw,1.55rem);
+      color: var(--ink);
+      opacity: 0; transform: translateY(18px);
+      transition: opacity .8s .75s var(--ease), transform .8s .75s var(--ease);
+    }
+    .hero-stats {
+      display: flex; align-items: center; justify-content: center;
+      gap: 2rem;
+      margin-top: 2.5rem;
+      opacity: 0; transform: translateY(18px);
+      transition: opacity .8s .92s var(--ease), transform .8s .92s var(--ease);
+    }
+    .hstat strong {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem; font-weight: 400; line-height: 1;
+      color: var(--blush);
+    }
+    .hstat span {
+      font-size: .6rem; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--muted);
+    }
+    .hstat-div { width:1px; height:2.5rem; background:var(--line); }
+    .hero-scroll {
+      position: absolute; bottom:2.5rem; left:50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex; flex-direction:column; align-items:center; gap:.5rem;
+      opacity: 0;
+      transition: opacity .8s 1.1s var(--ease);
+    }
+    .hero-scroll em {
+      font-style: normal;
+      font-size: .55rem; letter-spacing: .28em;
+      text-transform: uppercase; color: var(--muted);
+    }
+    .scroll-bar {
+      width: 1px; height: 36px;
+      background: linear-gradient(to bottom, var(--blush), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+    @keyframes scrollPulse {
+      0%   { transform:scaleY(0); transform-origin:top; }
+      50%  { transform:scaleY(1); transform-origin:top; }
+      51%  { transform:scaleY(1); transform-origin:bottom; }
+      100% { transform:scaleY(0); transform-origin:bottom; }
+    }
+    body.loaded .hero-eyebrow,
+    body.loaded .hero-h1,
+    body.loaded .hero-tagline,
+    body.loaded .hero-stats,
+    body.loaded .hero-scroll {
+      opacity: 1; transform: translateY(0);
+    }
+
+    /* ─── MARQUEE ─── */
+    .mq-wrap {
+      overflow: hidden;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: var(--paper);
+      padding: .8rem 0;
+    }
+    .mq-track {
+      display: flex; width: max-content;
+      animation: mqScroll 26s linear infinite;
+    }
+    .mq-track:hover { animation-play-state:paused; }
+    .mq-item {
+      padding: 0 2.2rem;
+      font-size: .6rem; font-weight: 500;
+      letter-spacing: .28em; text-transform: uppercase;
+      color: var(--muted); white-space: nowrap;
+    }
+    .mq-item.hi { color: var(--blush); }
+    @keyframes mqScroll { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+    /* ─── SECTIONS ─── */
+    section { padding: 6rem 3rem; }
+    .s-label {
+      font-size: .62rem; font-weight: 500;
+      letter-spacing: .32em; text-transform: uppercase;
+      color: var(--blush); margin-bottom: 1rem;
+    }
+    .s-h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(2rem,5vw,3.6rem);
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+    .s-p {
+      max-width: 56ch; color: var(--muted); line-height: 1.85;
+      font-size: .95rem;
+    }
+
+    /* ─── ABOUT ─── */
+    #about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem; align-items: center;
+    }
+    .about-img {
+      position: relative;
+      aspect-ratio: 3/4; overflow: hidden;
+    }
+    .about-img img {
+      height: 100%;
+      transition: transform 7s var(--ease);
+    }
+    .about-img:hover img { transform: scale(1.05); }
+    .about-badge {
+      position: absolute; bottom:1.5rem; right:1.5rem;
+      background: var(--chalk);
+      padding: 1rem 1.25rem;
+      text-align: center;
+      box-shadow: 0 4px 24px rgba(0,0,0,.07);
+    }
+    .about-badge strong {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem; font-weight: 400; line-height: 1;
+      color: var(--blush);
+    }
+    .about-badge span {
+      font-size: .58rem; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--muted);
+    }
+    .about-text { display:flex; flex-direction:column; gap:1.5rem; }
+    .about-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-weight: 300;
+      font-size: 1.3rem; line-height: 1.75;
+      border-left: 2px solid var(--blush);
+      padding-left: 1.5rem;
+    }
+    .about-stats {
+      display: flex; gap: 3rem;
+      padding-top: .5rem;
+      border-top: 1px solid var(--line);
+    }
+    .astat strong {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem; font-weight: 400;
+      color: var(--blush); line-height: 1;
+    }
+    .astat span {
+      font-size: .6rem; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--muted);
+    }
+
+    /* ─── SERVICES ─── */
+    #services { background: var(--ink); color: var(--chalk); }
+    #services .s-label { color: var(--copper); }
+    #services .s-h2   { color: var(--chalk); }
+    .svc-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      border: 1px solid rgba(255,255,255,.07);
+      margin-top: 3rem;
+    }
+    .svc-card {
+      padding: 2.5rem;
+      border: 1px solid rgba(255,255,255,.07);
+      display: flex; flex-direction:column; gap:.9rem;
+      transition: background .3s;
+    }
+    .svc-card:hover { background: rgba(255,255,255,.04); }
+    .svc-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.2rem; font-weight: 300;
+      color: rgba(255,255,255,.1); line-height: 1;
+    }
+    .svc-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem; font-weight: 400; color: var(--chalk);
+    }
+    .svc-desc {
+      font-size: .83rem; line-height: 1.75;
+      color: rgba(255,255,255,.46);
+    }
+    .svc-from {
+      font-size: .62rem; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--copper);
+      margin-top: auto;
+    }
+
+    /* ─── GALLERY ─── */
+    #gallery { background: var(--paper); }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      grid-auto-rows: 250px;
+      gap: 6px;
+      margin-top: 2.5rem;
+    }
+    .gi { overflow:hidden; }
+    .gi img { height:100%; transition:transform .65s var(--ease); }
+    .gi:hover img { transform:scale(1.07); }
+    .gi.tall { grid-row: span 2; }
+    .gi.wide { grid-column: span 2; }
+
+    /* ─── JOURNAL ─── */
+    #journal { background: var(--chalk); }
+    .j-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 2.5rem;
+      margin-top: 2.5rem;
+    }
+    .art-card {
+      cursor: pointer;
+      border-top: 1px solid var(--line);
+      padding-top: 1.5rem;
+      display: flex; flex-direction:column; gap:.7rem;
+      transition: opacity .2s;
+    }
+    .art-card:hover { opacity: .65; }
+    .art-kicker {
+      font-size: .58rem; letter-spacing: .22em;
+      text-transform: uppercase; color: var(--blush);
+    }
+    .art-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem; font-weight: 400; line-height: 1.4;
+    }
+    .art-ex {
+      font-size: .83rem; color: var(--muted); line-height: 1.75;
+    }
+    .art-cta {
+      font-size: .6rem; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--blush);
+      margin-top: auto;
+    }
+
+    /* ─── MODAL ─── */
+    #modal {
+      position: fixed; inset:0; z-index: 500;
+      display: flex; align-items:flex-end;
+      background: rgba(24,22,20,.48);
+      backdrop-filter: blur(5px);
+      opacity:0; visibility:hidden;
+      transition: opacity .35s, visibility .35s;
+    }
+    #modal.open { opacity:1; visibility:visible; }
+    .modal-sheet {
+      width: 100%; max-height: 80vh;
+      background: var(--chalk);
+      overflow-y: auto;
+      padding: 3rem min(5rem,8vw);
+      transform: translateY(100%);
+      transition: transform .45s var(--ease);
+    }
+    #modal.open .modal-sheet { transform:translateY(0); }
+    .modal-close {
+      position: absolute; top:2rem; right:2rem;
+      background:none; border:none; cursor:pointer;
+      font-size:1.6rem; line-height:1;
+      color: var(--ink); opacity:.6;
+      transition: opacity .2s;
+    }
+    .modal-close:hover { opacity:1; }
+    .modal-kicker {
+      font-size:.6rem; letter-spacing:.22em;
+      text-transform:uppercase; color:var(--blush);
+      margin-bottom:.75rem;
+    }
+    .modal-title {
+      font-family:'Cormorant Garamond',serif;
+      font-weight:300;
+      font-size:clamp(1.5rem,4vw,2.6rem);
+      line-height:1.25;
+      margin-bottom:2rem;
+      padding-bottom:1.5rem;
+      border-bottom:1px solid var(--line);
+    }
+    .modal-body { font-size:.93rem; line-height:1.95; color:#4a4745; }
+    .modal-body p+p { margin-top:1.25rem; }
+    .modal-body h3 {
+      font-family:'Cormorant Garamond',serif;
+      font-size:1.25rem; font-weight:600;
+      margin:1.75rem 0 .5rem;
+    }
+
+    /* ─── CONTACT ─── */
+    #contact { background: var(--paper); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 5rem;
+      margin-top: 3rem;
+    }
+    .contact-details { display:flex; flex-direction:column; gap:2rem; }
+    .cd-label {
+      font-size:.58rem; letter-spacing:.22em;
+      text-transform:uppercase; color:var(--blush);
+      margin-bottom:.35rem;
+    }
+    .cd-val {
+      font-family:'Cormorant Garamond',serif;
+      font-size:1.1rem; font-weight:400; line-height:1.65;
+    }
+    .cd-val a:hover { color:var(--blush); }
+    .map-frame {
+      overflow:hidden; border-radius:2px;
+      height:400px;
+    }
+    .map-frame iframe { width:100%; height:100%; border:none; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--ink);
+      color: rgba(255,255,255,.4);
+      padding: 3rem;
+      display: flex; align-items:center; justify-content:space-between;
+      flex-wrap:wrap; gap:1.5rem;
+    }
+    .footer-logo {
+      font-family:'Cormorant Garamond',serif;
+      font-weight:600; font-size:1.1rem;
+      letter-spacing:.28em; color:var(--chalk);
+    }
+    .footer-logo small {
+      display:block;
+      font-family:'DM Sans',sans-serif;
+      font-weight:300; font-size:.5rem;
+      letter-spacing:.2em; color:rgba(255,255,255,.35);
+      margin-top:.15rem;
+    }
+    .footer-copy { font-size:.67rem; letter-spacing:.06em; }
+    .footer-links { display:flex; gap:1.5rem; }
+    .footer-links a {
+      font-size:.67rem; letter-spacing:.1em;
+      transition:color .2s;
+    }
+    .footer-links a:hover { color:var(--blush); }
+
+    /* ─── REVEAL ─── */
+    .reveal {
+      opacity: 0; transform: translateY(28px);
+      transition: opacity .85s var(--ease), transform .85s var(--ease);
+    }
+    .reveal.on { opacity:1; transform:translateY(0); }
+    .reveal-l {
+      opacity: 0; transform: translateX(-28px);
+      transition: opacity .85s var(--ease), transform .85s var(--ease);
+    }
+    .reveal-l.on { opacity:1; transform:translateX(0); }
+
+    /* ─── RESPONSIVE ─── */
+    @media(max-width:960px){
+      #nav { padding:1.2rem 1.5rem; }
+      .hide-mob { display:none; }
+      section  { padding:4rem 1.5rem; }
+      #about   { grid-template-columns:1fr; }
+      .svc-grid{ grid-template-columns:1fr; }
+      .gallery-grid { grid-template-columns:repeat(2,1fr); }
+      .j-grid  { grid-template-columns:1fr; }
+      .contact-grid { grid-template-columns:1fr; }
+      footer   { flex-direction:column; text-align:center; }
+    }
+    @media(prefers-reduced-motion:reduce){
+      *,*::before,*::after{
+        animation-duration:.01ms!important;
+        transition-duration:.01ms!important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="ld-word">
+    <span>S</span><span>T</span><span>R</span><span>A</span><span>N</span><span>D</span><span>S</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#hero" class="nav-logo">
+    STRANDS
+    <small>Hair Studio · Hillcrest</small>
+  </a>
+  <div class="nav-links">
+    <a href="#about"    class="hide-mob">Studio</a>
+    <a href="#services" class="hide-mob">Services</a>
+    <a href="#gallery"  class="hide-mob">Gallery</a>
+    <a href="#journal"  class="hide-mob">Journal</a>
+    <a href="#contact"  class="nav-book">Book Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <canvas id="strandCanvas"></canvas>
+  <div class="hero-inner">
+    <p class="hero-eyebrow">The Colony · 50 Old Main Road · Hillcrest</p>
+    <h1 class="hero-h1">STRANDS</h1>
+    <p class="hero-tagline">Precision cuts. Honest colour. Every time.</p>
+    <div class="hero-stats">
+      <div class="hstat">
+        <strong>4.9★</strong>
+        <span>Google Rating</span>
+      </div>
+      <div class="hstat-div"></div>
+      <div class="hstat">
+        <strong>29</strong>
+        <span>Reviews</span>
+      </div>
+      <div class="hstat-div"></div>
+      <div class="hstat">
+        <strong>The Colony</strong>
+        <span>Shop 6, Floor A</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <em>Scroll</em>
+    <div class="scroll-bar"></div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="mq-wrap">
+  <div class="mq-track" aria-hidden="true">
+    <span class="mq-item">Cut &amp; Style</span>
+    <span class="mq-item hi">·</span>
+    <span class="mq-item">Colour</span>
+    <span class="mq-item hi">·</span>
+    <span class="mq-item">Balayage</span>
+    <span class="mq-item hi">·</span>
+    <span class="mq-item">Highlights</span>
+    <span class="mq-item hi">·</span>
+    <span class="mq-item">Blowout &amp; Finish</span>
+    <span class="mq-item hi">·</span>
+    <span class="mq-item">Olaplex</span>
+    <span class="mq-item hi">·</span>
+    <span class="mq-item">Keratin</span>
+    <span class="mq-item hi">·</span>
+    <span class="mq-item">Bridal</span>
+    <span class="mq-item hi">·</span>
+    <span class="mq-item">Men&rsquo;s Grooming</span>
+    <span class="mq-item hi">·</span>
+    <!-- duplicate for seamless loop -->
+    <span class="mq-item">Cut &amp; Style</span>
+    <span class="mq-item hi">·</span>
+    <span class="mq-item">Colour</span>
+    <span class="mq-item hi">·</span>
+    <span class="mq-item">Balayage</span>
+    <span class="mq-item hi">·</span>
+    <span class="mq-item">Highlights</span>
+    <span class="mq-item hi">·</span>
+    <span class="mq-item">Blowout &amp; Finish</span>
+    <span class="mq-item hi">·</span>
+    <span class="mq-item">Olaplex</span>
+    <span class="mq-item hi">·</span>
+    <span class="mq-item">Keratin</span>
+    <span class="mq-item hi">·</span>
+    <span class="mq-item">Bridal</span>
+    <span class="mq-item hi">·</span>
+    <span class="mq-item">Men&rsquo;s Grooming</span>
+    <span class="mq-item hi">·</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-img reveal-l">
+    <img
+      src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800&q=80"
+      alt="STRANDS studio interior"
+      loading="lazy"
+    />
+    <div class="about-badge">
+      <strong>4.9★</strong>
+      <span>On Google</span>
+    </div>
+  </div>
+  <div class="about-text">
+    <p class="s-label reveal">Our Studio</p>
+    <h2 class="s-h2 reveal">Hair that moves<br><em>like you do.</em></h2>
+    <p class="about-quote reveal">
+      "We believe great hair is never accidental — it is the result of listening carefully, cutting precisely, and colouring honestly."
+    </p>
+    <p class="s-p reveal">
+      STRANDS sits inside The Colony on Old Main Road, one of Hillcrest's most considered shopping destinations. We specialise in precision cuts, lived-in colour and restorative treatments that work with your hair — not against it.
+    </p>
+    <p class="s-p reveal">
+      Whether you are after a clean shape-up, a full colour transformation or a treatment that actually makes a difference, we approach every service with the same care. And we never rush it.
+    </p>
+    <div class="about-stats reveal">
+      <div class="astat">
+        <strong>4.9★</strong>
+        <span>Google Rating</span>
+      </div>
+      <div class="astat">
+        <strong>The Colony</strong>
+        <span>Old Main Rd, Hillcrest</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <p class="s-label reveal">What we offer</p>
+  <h2 class="s-h2 reveal">Every strand,<br>considered.</h2>
+  <div class="svc-grid">
+    <div class="svc-card reveal">
+      <div class="svc-num">01</div>
+      <div class="svc-name">Cut &amp; Style</div>
+      <div class="svc-desc">Precision cuts tailored to your face shape, hair type and lifestyle. We take the time to understand what works for you — not just what looks good in the chair.</div>
+      <div class="svc-from">From R280</div>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-num">02</div>
+      <div class="svc-name">Balayage</div>
+      <div class="svc-desc">Hand-painted colour that grows out naturally. Whether you want sun-kissed warmth or a cool ash fade, we blend by eye for a result that looks effortless for months.</div>
+      <div class="svc-from">From R680</div>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-num">03</div>
+      <div class="svc-name">Full Colour</div>
+      <div class="svc-desc">Root touch-ups, full-head colour and vibrant transformations. We use Wella and Schwarzkopf Professional for rich, long-lasting results that respect your hair's integrity.</div>
+      <div class="svc-from">From R520</div>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-num">04</div>
+      <div class="svc-name">Olaplex Treatment</div>
+      <div class="svc-desc">Science-backed bond repair that rebuilds hair from the inside out. Perfect after colour, chemical treatments, or when your hair simply needs a structural reset.</div>
+      <div class="svc-from">From R380</div>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-num">05</div>
+      <div class="svc-name">Keratin Smoothing</div>
+      <div class="svc-desc">Eliminate frizz and reduce blow-dry time with a professional keratin treatment — especially welcome in KZN's coastal humidity. Results last three to five months.</div>
+      <div class="svc-from">From R950</div>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-num">06</div>
+      <div class="svc-name">Blowout &amp; Finish</div>
+      <div class="svc-desc">The perfect finish for a special occasion or simply a great hair day. Includes a wash, scalp massage, blow-dry and a style of your choosing.</div>
+      <div class="svc-from">From R220</div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <p class="s-label reveal">Our work</p>
+  <h2 class="s-h2 reveal">A strand above.</h2>
+  <div class="gallery-grid">
+    <div class="gi tall reveal">
+      <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&q=80" alt="Precision cut" loading="lazy" />
+    </div>
+    <div class="gi reveal">
+      <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=600&q=80" alt="Colour work" loading="lazy" />
+    </div>
+    <div class="gi reveal">
+      <img src="https://images.unsplash.com/photo-1519699047748-de8e44a31dc2?w=600&q=80" alt="Style finish" loading="lazy" />
+    </div>
+    <div class="gi tall reveal">
+      <img src="https://images.unsplash.com/photo-1634450995990-3e55f0fca2d2?w=600&q=80" alt="Hair styling" loading="lazy" />
+    </div>
+    <div class="gi wide reveal">
+      <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=800&q=80" alt="Balayage result" loading="lazy" />
+    </div>
+    <div class="gi reveal">
+      <img src="https://images.unsplash.com/photo-1550606823-db9e55ff5b65?w=600&q=80" alt="Cut and colour" loading="lazy" />
+    </div>
+    <div class="gi reveal">
+      <img src="https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=600&q=80" alt="Blowout finish" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<!-- JOURNAL -->
+<section id="journal">
+  <p class="s-label reveal">From the studio</p>
+  <h2 class="s-h2 reveal">Thoughts on hair.</h2>
+  <div class="j-grid" id="journalGrid"></div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <p class="s-label reveal">Find us</p>
+  <h2 class="s-h2 reveal">Book your appointment.</h2>
+  <div class="contact-grid">
+    <div class="contact-details">
+      <div class="reveal">
+        <p class="cd-label">Location</p>
+        <p class="cd-val">
+          Shop 6, Floor A<br>
+          The Colony<br>
+          50 Old Main Road<br>
+          Hillcrest, KZN
+        </p>
+      </div>
+      <div class="reveal">
+        <p class="cd-label">Hours</p>
+        <p class="cd-val">
+          Mon &ndash; Fri: 9:00am &ndash; 6:00pm<br>
+          Saturday: 8:30am &ndash; 4:00pm<br>
+          Sunday: Closed
+        </p>
+      </div>
+      <div class="reveal">
+        <p class="cd-label">Rating</p>
+        <p class="cd-val">4.9★ on Google &mdash; 29 reviews</p>
+      </div>
+      <div class="reveal">
+        <p class="cd-label">Booking</p>
+        <p class="cd-val">
+          Walk-in welcome.<br>
+          <a href="https://maps.google.com/?q=The+Colony+50+Old+Main+Road+Hillcrest" target="_blank" rel="noopener" style="color:var(--blush)">
+            Find us on Google Maps &rarr;
+          </a>
+        </p>
+      </div>
+    </div>
+    <div class="map-frame reveal">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3462.887!2d30.771987!3d-29.77586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef6fbde3736ed41%3A0xf4de7b6b7ad73780!2sThe%20Colony%20Shopping%20Centre%2C%20Old%20Main%20Rd%2C%20Hillcrest%2C%203650!5e0!3m2!1sen!2sza!4v1718550000000!5m2!1sen!2sza"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="STRANDS — The Colony, 50 Old Main Rd, Hillcrest"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    STRANDS
+    <small>Hair Studio · The Colony, Hillcrest</small>
+  </div>
+  <p class="footer-copy">&copy; 2026 STRANDS Hair Studio. Shop 6, The Colony, 50 Old Main Rd, Hillcrest.</p>
+  <div class="footer-links">
+    <a href="#about">Studio</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Book</a>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div id="modal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="modal-sheet">
+    <button class="modal-close" id="modalClose" aria-label="Close article">&times;</button>
+    <p class="modal-kicker" id="modalKicker"></p>
+    <h2 class="modal-title"  id="modalTitle"></h2>
+    <div class="modal-body"  id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+  const REDUCE = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ── LOADER ── */
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.getElementById('loader').classList.add('done');
+      document.body.classList.add('loaded');
+    }, 1600);
+  });
+
+  /* ── NAV SCROLL ── */
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  /* ── STRAND CANVAS ANIMATION ── */
+  (function () {
+    if (REDUCE || ('ontouchstart' in window)) return;
+
+    const canvas = document.getElementById('strandCanvas');
+    const ctx    = canvas.getContext('2d');
+    const hero   = document.getElementById('hero');
+
+    function resize() {
+      canvas.width  = hero.offsetWidth;
+      canvas.height = hero.offsetHeight;
+      buildStrands();
+    }
+
+    const COLS = [
+      'rgba(184,131,106,0.14)',
+      'rgba(196,149,110,0.11)',
+      'rgba(122,148,133,0.09)',
+      'rgba(201,168,120,0.08)',
+      'rgba(184,131,106,0.06)',
+    ];
+
+    let strands = [];
+    function buildStrands() {
+      const n = 10;
+      strands = Array.from({ length: n }, (_, i) => ({
+        xBase: canvas.width * (0.05 + (i / (n - 1)) * 0.9),
+        phase: Math.random() * Math.PI * 2,
+        amp:   18 + Math.random() * 55,
+        freq:  0.002 + Math.random() * 0.003,
+        speed: 0.12 + Math.random() * 0.28,
+        col:   COLS[i % COLS.length],
+        lw:    0.4 + Math.random() * 0.9,
+      }));
+    }
+
+    let t = 0;
+    function tick() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      t += 0.004;
+      strands.forEach(s => {
+        ctx.beginPath();
+        ctx.strokeStyle = s.col;
+        ctx.lineWidth   = s.lw;
+        ctx.lineCap     = 'round';
+        let first = true;
+        for (let y = 0; y <= canvas.height; y += 5) {
+          const x = s.xBase + Math.sin(y * s.freq + s.phase + t * s.speed) * s.amp;
+          if (first) { ctx.moveTo(x, y); first = false; }
+          else        { ctx.lineTo(x, y); }
+        }
+        ctx.stroke();
+      });
+      requestAnimationFrame(tick);
+    }
+
+    resize();
+    window.addEventListener('resize', resize, { passive: true });
+    tick();
+  })();
+
+  /* ── INTERSECTION REVEAL ── */
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('on');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal, .reveal-l').forEach(el => observer.observe(el));
+
+  /* ── JOURNAL DATA ── */
+  const ARTS = [
+    {
+      kicker: "Technique",
+      title:  "The case for a precision cut",
+      ex:     "Why the difference between a good haircut and a great one often comes down to millimetres — and patience.",
+      html: `<p>There is a moment in a haircut — usually somewhere between the third and fourth section — when you either feel the shape arriving or you do not. The best stylists feel it. They pause, check the fall, and adjust before it is too late.</p>
+<p>A precision cut is not a specific style. It is an approach. It means understanding how your hair grows, where the weight should sit, and how the cut will behave at week three — not just when it is fresh from the chair.</p>
+<h3>Why it matters more than you think</h3>
+<p>Most people judge a cut in the first 48 hours. The real test is week two and three. Does the shape hold? Does it still look intentional? A truly precise cut retains its structure long after it leaves the salon.</p>
+<p>At STRANDS, we spend more time on the consultation than most salons spend on the cut itself. We ask about your morning routine, your cowlicks, whether you blow-dry or air-dry. That is not filler conversation — it is the foundation of a haircut that works for your actual life.</p>`
+    },
+    {
+      kicker: "Colour",
+      title:  "Balayage vs. highlights: which is right for you?",
+      ex:     "Two techniques, very different results. Here is how to know which one your hair is asking for.",
+      html: `<p>Both balayage and traditional highlights add lightness to your hair. But the similarity ends there. The technique, the grow-out, the maintenance and the final effect are entirely different — and choosing the wrong one can leave you chasing a result you will never quite reach.</p>
+<h3>Traditional highlights</h3>
+<p>Foil highlights wrap sections of hair in foil and process them at maximum lift. The result is consistent, high-contrast brightening — particularly effective for platinum or very blonde looks. They suit certain aesthetics and hair types perfectly.</p>
+<h3>Balayage</h3>
+<p>Balayage (from the French "to sweep") is hand-painted directly onto the hair surface, mimicking how the sun would naturally lighten it — concentrated at the ends, softer at the roots. The grow-out is gradual and flattering, making it a lower-maintenance option.</p>
+<h3>Which one is for you?</h3>
+<p>If you want something that requires less upkeep and grows out beautifully, balayage is usually the answer. If you are after maximum brightness or a very specific, consistent tone, foils may suit you better. We recommend a consultation — what you want and what your hair can achieve are two parts of the same conversation.</p>`
+    },
+    {
+      kicker: "Climate",
+      title:  "Humidity and your hair: a Hillcrest guide",
+      ex:     "KZN humidity is real. Here is what actually works — and what is just marketing.",
+      html: `<p>If you live in Hillcrest or anywhere along the KwaZulu-Natal coast, you already know that humidity is not a footnote — it is a weather system that affects your hair every single day. Frizz, volume loss and colour fading are all amplified by moisture in the air.</p>
+<h3>What humidity actually does</h3>
+<p>Hair is porous. When humidity is high, hair absorbs moisture from the air, causing the cuticle to swell and lift. This is what creates frizz. For straight or colour-treated hair, it usually means a rough, undefined texture and faster colour fade.</p>
+<h3>What actually helps</h3>
+<p>Anti-humidity sprays offer a temporary fix. For lasting results, the answer is in the treatment: a professional keratin smoothing seals the cuticle at a structural level, dramatically reducing frizz and blow-dry time for months. Olaplex also improves cuticle integrity, which helps resist humidity damage over time.</p>
+<h3>The honest truth</h3>
+<p>No product eliminates humidity. But the right treatment, combined with a good at-home routine, makes it manageable. We are happy to talk through what will actually work for your hair type — without overselling you on things you do not need.</p>`
+    },
+    {
+      kicker: "Routine",
+      title:  "A 10-minute morning routine that actually works",
+      ex:     "You do not need an hour. You need a plan.",
+      html: `<p>Most people spend too long on their hair in the morning because they are trying to fix what went wrong the night before. Great morning hair almost always starts in the shower — not at the mirror.</p>
+<h3>The two-minute shower step</h3>
+<p>A good conditioner applied from mid-length to ends and left on for two minutes while you wash your body does more for your hair than most heat styling tools. Rinse with cool water to close the cuticle.</p>
+<h3>The product rule</h3>
+<p>Apply product to damp hair, not soaking wet hair. A small amount of leave-in conditioner or lightweight oil on towel-dried hair gives you a proper base. Anything applied to soaking wet hair gets diluted before it can work.</p>
+<h3>Heat with purpose</h3>
+<p>Always use a heat protectant. Work in sections — top layers last. Point the nozzle downward to smooth the cuticle. For most hair types, 80% dry on medium heat, then high for the last 20%, gives the best result without damaging the ends.</p>
+<h3>The overnight trick</h3>
+<p>A silk or satin pillowcase costs very little and dramatically reduces friction and frizz overnight. It is the single cheapest improvement most people can make to their daily hair health.</p>`
+    },
+    {
+      kicker: "Treatment",
+      title:  "Olaplex: is it actually worth it?",
+      ex:     "The science behind the bottle — and whether your hair really needs it.",
+      html: `<p>Few products in recent memory have generated as much conversation as Olaplex. Launched in 2014, it promised something the hair industry had never quite managed: a chemical treatment that could actively repair broken hair bonds. A decade later, it is a staple in premium salons worldwide.</p>
+<h3>What Olaplex actually does</h3>
+<p>The active ingredient works by finding broken disulfide bonds — the structural links that give hair its strength and elasticity — and reconnecting them. This happens at a molecular level, which is why Olaplex feels different to other conditioning treatments. It is not coating the hair; it is repairing the structure inside it.</p>
+<h3>Who benefits most</h3>
+<p>Olaplex has the biggest visible effect on colour-treated, chemically processed or heat-damaged hair. If your hair is healthy and largely untreated, you may not notice a dramatic difference — though it will not cause harm. For anyone with brittle ends, breakage, or hair that feels porous and rough, a professional Olaplex treatment is one of the most effective salon services available.</p>
+<h3>The home range</h3>
+<p>The retail Olaplex products (No.3 through No.8) are effective maintenance tools, and they work even better as a system following a professional in-salon treatment. Ask us which products suit your hair type — not all of them are necessary for everyone.</p>`
+    },
+    {
+      kicker: "Local",
+      title:  "Why The Colony is Hillcrest's best beauty destination",
+      ex:     "There is something different about getting your hair done here. We think we know why.",
+      html: `<p>The Colony on Old Main Road is one of those Hillcrest spots that feels intentional without feeling precious. It is not the biggest centre in the area, and that is exactly the point. The mix of independent retailers, good coffee and considered services creates an atmosphere that large malls simply cannot manufacture.</p>
+<h3>A different kind of appointment</h3>
+<p>When you book a hair appointment in a large mall salon, you are often aware of the volume — the footfall, the noise, the sense that your slot is one of many. At STRANDS in The Colony, the appointment feels like the main event. The schedule exists for you.</p>
+<h3>Before or after — the Colony way</h3>
+<p>Part of what makes The Colony work as a destination is that it pairs beautifully with other plans. A coffee before, a browse after. Hillcrest's village feel is at its best on Old Main Road, and The Colony sits at the heart of it.</p>
+<h3>The detail in the setting</h3>
+<p>We believe the environment you get your hair done in matters. The light, the pace of the experience — these things show up in how you feel when you walk out. We have tried to make STRANDS a place that matches the quality of the work. We think The Colony helps with that.</p>`
+    },
+  ];
+
+  const grid = document.getElementById('journalGrid');
+  ARTS.forEach((a, i) => {
+    const card = document.createElement('div');
+    card.className = 'art-card reveal';
+    card.style.transitionDelay = (i * 0.08) + 's';
+    card.innerHTML =
+      '<div class="art-kicker">' + a.kicker + '</div>' +
+      '<h3 class="art-title">' + a.title + '</h3>' +
+      '<p class="art-ex">' + a.ex + '</p>' +
+      '<span class="art-cta">Read article &rarr;</span>';
+    card.addEventListener('click', () => openModal(a));
+    grid.appendChild(card);
+    observer.observe(card);
+  });
+
+  /* ── MODAL ── */
+  const modal = document.getElementById('modal');
+
+  function openModal(a) {
+    document.getElementById('modalKicker').textContent = a.kicker;
+    document.getElementById('modalTitle').textContent  = a.title;
+    document.getElementById('modalBody').innerHTML     = a.html;
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('modalClose').addEventListener('click', closeModal);
+  modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+</script>
+</body>
+</html>

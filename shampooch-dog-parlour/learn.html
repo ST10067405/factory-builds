@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dog Care Journal | Shampooch Dog Parlour — grooming, coat care & nutrition tips</title>
+<meta name="description" content="Practical dog care from Shampooch — keeping your dog fresh between grooms, breed coat care, nutrition for a shiny coat, spotting skin issues, and your puppy's first groom." />
+<meta property="og:title" content="Dog Care Journal — Shampooch Dog Parlour" />
+<!-- GEO/SEO: FAQ schema so Google + AI assistants can cite Shampooch -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"How do I keep my dog clean between grooming appointments?","acceptedAnswer":{"@type":"Answer","text":"Brush a few times a week to prevent matting, wipe paws and face after walks, and use a damp cloth for quick freshen-ups. Avoid over-bathing, which dries out the coat."}},
+    {"@type":"Question","name":"What should I feed my dog for a healthy, shiny coat?","acceptedAnswer":{"@type":"Answer","text":"A complete diet with quality protein and omega-3 fatty acids (fish oil) supports coat shine. Ask your vet before changing food or adding supplements."}},
+    {"@type":"Question","name":"When should my puppy have its first groom?","acceptedAnswer":{"@type":"Answer","text":"Around 12–16 weeks, once initial vaccinations are complete. Early, gentle visits help your puppy learn to enjoy grooming."}}
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{--navy:#2A1E26;--blue:#EA357D;--blue-deep:#C42168;--light:#FBF5F8;--ink:#221820;--muted:#7C6A74;--line:#F3E0EA;--maxw:1180px}
+  *{box-sizing:border-box}html{scroll-behavior:smooth}
+  body{margin:0;background:var(--light);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.6}
+  h1,h2,h3{font-family:Sora,system-ui,sans-serif;font-weight:700;line-height:1.08;letter-spacing:-.02em;margin:0}
+  p{margin:0 0 1rem}a{color:inherit}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;font-weight:700;color:var(--blue)}
+  .btn{display:inline-flex;align-items:center;padding:.55rem 1.1rem;border-radius:12px;font-weight:600;font-size:.92rem;text-decoration:none;background:var(--blue);color:#fff;transition:transform .2s,background .2s}
+  .btn:hover{transform:translateY(-2px);background:var(--blue-deep)}
+  header.nav{position:sticky;top:0;z-index:30;background:rgba(244,246,249,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{font-family:Sora;font-weight:800;font-size:1.25rem;color:var(--navy);text-decoration:none;display:inline-flex;align-items:center;gap:8px}.brand span{color:var(--blue)}.brand svg{width:22px;height:22px;color:var(--blue)}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{color:var(--navy);text-decoration:none;font-size:.92rem;font-weight:600}.nav-links a:hover,.nav-links a.active{color:var(--blue)}
+  .navtoggle{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px;padding:8px}
+  .navtoggle span{width:24px;height:2px;background:var(--navy);display:block;border-radius:2px}
+  @media(max-width:780px){
+    .navtoggle{display:flex}
+    .nav-links{position:absolute;top:72px;left:0;right:0;background:#fff;flex-direction:column;align-items:stretch;gap:0;padding:6px 0;border-bottom:1px solid var(--line);box-shadow:0 18px 30px -20px rgba(34,24,30,.3);display:none}
+    .nav-links.open{display:flex}
+    .nav-links a:not(.btn){padding:13px 24px}
+    .nav-links .btn{margin:8px 24px;text-align:center;justify-content:center}
+  }
+  /* clickable cards + article modal */
+  .card,.feature{cursor:pointer}
+  .amodal{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:18px}
+  .amodal[hidden]{display:none}
+  .amodal-bg{position:absolute;inset:0;background:rgba(34,24,30,.55);backdrop-filter:blur(4px)}
+  .amodal-card{position:relative;background:#fff;border-radius:22px;max-width:660px;width:100%;max-height:86vh;overflow:auto;padding:38px;box-shadow:0 40px 90px -30px rgba(0,0,0,.5);animation:popin .35s cubic-bezier(.22,1,.36,1)}
+  @keyframes popin{from{opacity:0;transform:translateY(26px) scale(.97)}to{opacity:1;transform:none}}
+  .amodal-x{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;border:0;background:var(--blue);color:#fff;font-size:1.4rem;line-height:1;cursor:pointer}
+  .amodal-x:hover{background:var(--blue-deep)}
+  .amodal-body .eyebrow{color:var(--blue)}
+  .amodal-body h2{font-family:Sora;font-size:1.7rem;margin:.3rem 0 .8rem;color:var(--navy);line-height:1.1}
+  .amodal-body p{color:var(--muted);margin:0 0 1rem}
+  .amodal-body ul{color:var(--ink);padding-left:1.1rem;margin:0 0 1rem}
+  .amodal-body li{margin-bottom:.5rem}.amodal-body li b{color:var(--navy)}
+  .amodal-body iframe{width:100%;height:240px;border:0;border-radius:14px;margin:4px 0 12px}
+  .amodal-note{font-size:.72rem;color:var(--blue);background:rgba(234,53,125,.1);border:1px dashed rgba(234,53,125,.4);border-radius:8px;padding:.4rem .7rem;display:inline-block}
+  @media(max-width:560px){.amodal-card{padding:24px;border-radius:18px;max-height:90vh}}
+  @media(prefers-reduced-motion:reduce){.amodal-card{animation:none}}
+  .pagehead{padding:74px 0 56px}
+  .pagehead h1{font-size:clamp(2.3rem,5vw,3.8rem);max-width:18ch;margin-top:.5rem}
+  .pagehead p{color:var(--muted);max-width:54ch;margin-top:1rem;font-size:1.1rem}
+  section.block{padding:8px 0 72px}
+  .feature{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#fff;margin-bottom:34px}
+  @media(max-width:820px){.feature{grid-template-columns:1fr}}
+  .feature .img{background:linear-gradient(150deg,#f7e0ec,#f3cfe0);min-height:280px;overflow:hidden}
+  .feature .img img{width:100%;height:100%;object-fit:cover;display:block}
+  .feature .body{padding:40px}.feature .body h2{font-size:1.8rem;margin:.4rem 0 .7rem}.feature .body p{color:var(--muted)}
+  .meta{font-size:.78rem;color:var(--blue);font-weight:700;letter-spacing:.04em}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media(max-width:860px){.grid{grid-template-columns:1fr}}
+  .card{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:transform .25s,box-shadow .25s}
+  .card:hover{transform:translateY(-4px);box-shadow:0 22px 44px -28px rgba(30,42,56,.45)}
+  .card .thumb{height:160px;background:linear-gradient(135deg,#f7e0ec,#f3cfe0);overflow:hidden}
+  .card .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+  .card .c{padding:22px}.card h3{font-size:1.15rem;margin-bottom:.35rem}.card p{color:var(--muted);font-size:.92rem;margin:0}
+  .read{margin-top:12px;font-weight:700;color:var(--blue);font-size:.86rem}
+  .geo{margin-top:44px;background:var(--navy);color:#fff;border-radius:18px;padding:34px 36px}
+  .geo h3{color:#7DB0FB;margin-bottom:.6rem}.geo p{color:rgba(255,255,255,.8);margin:0;max-width:72ch}
+  .draft{font-size:.7rem;color:var(--blue);background:rgba(59,130,246,.1);border:1px dashed rgba(59,130,246,.4);border-radius:8px;padding:.35rem .6rem;display:inline-block;margin-top:14px}
+  footer{background:var(--navy);color:rgba(255,255,255,.7);padding:40px 0;font-size:.85rem;margin-top:20px}
+  .foot-in{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;align-items:center}
+  .brand-l{font-family:Sora;font-weight:800;color:#fff;font-size:1.1rem}.brand-l span{color:var(--blue)}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"/><path d="M12 11v11"/><path d="m19 3-7 8-7-8Z"/></svg>Sham<span>pooch</span></a>
+    <nav class="nav-links">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#proof">Reviews</a>
+      <a href="learn.html" class="active">Dog Care</a>
+      <a href="index.html#contact">Visit</a>
+      <a class="btn" href="index.html#contact">Book a groom</a>
+    </nav>
+    <button class="navtoggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="pagehead">
+  <div class="wrap">
+    <p class="eyebrow">Dog Care Journal</p>
+    <h1>Healthy, happy, good-looking pups.</h1>
+    <p>Simple, vet-sensible tips from the Shampooch grooming table — so your dog looks and feels great between visits. New posts monthly.</p>
+  </div>
+</div>
+
+<section class="block">
+  <div class="wrap">
+    <article class="feature">
+      <div class="img"><img src="images/u_dog_13.jpg" alt="A pampered dog wrapped in a towel after grooming" loading="lazy" /></div>
+      <div class="body">
+        <span class="meta">GUIDE · 3 MIN READ</span>
+        <h2>Keeping your dog fresh between grooms</h2>
+        <p>Brush a few times a week to stop matting before it starts, wipe paws and face after walks, and keep baths to a minimum so the coat doesn't dry out. A little routine at home makes every groom easier — and your dog happier.</p>
+        <p style="color:var(--blue);font-weight:700">Read the guide →</p>
+        <span class="draft">DRAFT · groomer to confirm tips + add their product picks</span>
+      </div>
+    </article>
+
+    <div class="grid">
+      <div class="card"><div class="thumb"><img src="images/u_dog_10.jpg" alt="A freshly groomed shih-tzu — coat care by breed" loading="lazy" /></div><div class="c"><span class="meta">COAT CARE</span><h3>Coat care by breed</h3><p>What different breeds actually need between grooms.</p><div class="read">Read →</div></div></div>
+      <div class="card"><div class="thumb"><img src="images/u_dog_3.jpg" alt="A healthy, content dog" loading="lazy" /></div><div class="c"><span class="meta">NUTRITION</span><h3>Nutrition for a shiny coat</h3><p>The diet basics that show up in the coat — and what to ask your vet.</p><div class="read">Read →</div></div></div>
+      <div class="card"><div class="thumb"><img src="images/u_dog_8.jpg" alt="A dog being pampered" loading="lazy" /></div><div class="c"><span class="meta">HEALTH</span><h3>Spotting skin issues early</h3><p>When it's home-care, and when it's time to see the vet.</p><div class="read">Read →</div></div></div>
+      <div class="card"><div class="thumb"><img src="images/u_dog_4.jpg" alt="Puppies" loading="lazy" /></div><div class="c"><span class="meta">PUPPIES</span><h3>Your puppy's first groom</h3><p>What to expect and how to prepare for a calm first visit.</p><div class="read">Read →</div></div></div>
+      <div class="card"><div class="thumb"><img src="images/u_dog_14.jpg" alt="A dog being scissor-trimmed" loading="lazy" /></div><div class="c"><span class="meta">PAW CARE</span><h3>Nail trims without the drama</h3><p>How we keep nail care calm — and how you can help at home.</p><div class="read">Read →</div></div></div>
+      <div class="card"><div class="thumb"><img src="images/u_dog_1.jpg" alt="Dogs out on a walk" loading="lazy" /></div><div class="c"><span class="meta">WATERFALL</span><h3>Dog-friendly spots near you</h3><p>Walks and parks Waterfall dog owners love.</p><div class="read">Read →</div></div></div>
+    </div>
+    <span class="draft">DRAFT · launch with 3 cornerstone posts, then 1–2/month — repurposed to Shampooch's Instagram</span>
+
+    <div class="geo">
+      <h3>Why this page wins new clients</h3>
+      <p>Owners Google things like "how to keep my dog clean between grooms" and "puppy's first groom" long before they book. These guides answer exactly that — so Shampooch shows up in search and in AI assistants like ChatGPT (every post carries FAQ + Article schema), builds trust as the local expert, and links straight to booking. Helpful first; honest shout-outs to the shampoos, brushes and foods Shampooch actually trusts (disclosed) — never thin SEO filler.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-in">
+    <div class="brand-l">Sham<span>pooch</span> Dog Parlour</div>
+    <div>23 Link Rd, Waterfall · 031 762 1627</div>
+    <div style="opacity:.6">Concept site · built by Arkatype Digital</div>
+  </div>
+</footer>
+<div class="amodal" id="amodal" hidden><div class="amodal-bg"></div><div class="amodal-card" role="dialog" aria-modal="true"><button class="amodal-x" aria-label="Close">&times;</button><div class="amodal-body"></div></div></div>
+<script>
+const ARTICLES={
+"Keeping your dog fresh between grooms":`<p class="eyebrow">GUIDE · 3 MIN</p><h2>Keeping your dog fresh between grooms</h2><p>A little routine at home keeps your dog comfy — and makes every groom quicker and calmer.</p><ul><li><b>Brush a few times a week.</b> It stops mats before they start — especially behind the ears, under the legs and around the collar.</li><li><b>Wipe paws and face after walks.</b> A damp cloth lifts mud, pollen and grass seeds.</li><li><b>Go easy on baths.</b> Over-bathing dries the coat out — a quick rinse between visits is plenty.</li><li><b>Check ears and nails weekly.</b> A quick look catches little problems early.</li></ul><p>Not sure what your dog's coat needs? Ask us at your next appointment — we're happy to show you.</p><a class="btn" href="index.html#contact">Book a groom</a>`,
+"Coat care by breed":`<p class="eyebrow">COAT CARE</p><h2>Coat care by breed</h2><p>Every coat is a little different. The general rules:</p><ul><li><b>Double coats</b> (Huskies, Pomeranians, GSDs) — brush often, never shave; the coat insulates against heat and cold.</li><li><b>Curly / wool coats</b> (Poodles, Bichons, Maltese) — mat easily; regular brushing and grooms keep them soft.</li><li><b>Silky long coats</b> (Yorkies, Shih Tzus) — gentle daily brushing, or a low-maintenance "puppy cut".</li><li><b>Short coats</b> (Staffies, Beagles) — a weekly rubber-brush and the odd bath does it.</li></ul><p>Tell us your breed and we'll tailor the cut and the schedule.</p>`,
+"Nutrition for a shiny coat":`<p class="eyebrow">NUTRITION</p><h2>Nutrition for a shiny coat</h2><p>A healthy coat starts on the inside.</p><ul><li><b>Quality protein</b> is the building block of healthy hair.</li><li><b>Omega-3s</b> (fish oil) support shine and calm skin.</li><li><b>Fresh water, always</b> — hydration shows in the coat.</li></ul><span class="amodal-note">General guidance — always check with your vet before changing food or adding supplements.</span>`,
+"Spotting skin issues early":`<p class="eyebrow">HEALTH</p><h2>Spotting skin issues early</h2><p>Caught early, most skin niggles are easy to sort:</p><ul><li>Constant scratching, licking or chewing</li><li>Red patches, bumps or "hot spots"</li><li>Flaky skin, a dull coat or bald patches</li><li>A yeasty or unusually strong smell</li></ul><p>A regular groom helps us notice changes early. If something looks sore, infected or is spreading, see your vet.</p>`,
+"Your puppy's first groom":`<p class="eyebrow">PUPPIES</p><h2>Your puppy's first groom</h2><p>Start early and keep it positive, so grooming becomes something they enjoy.</p><ul><li><b>When:</b> around 12–16 weeks, once the first vaccinations are done.</li><li><b>Keep it short</b> the first time — a bath, a tidy and lots of praise.</li><li><b>Practise at home:</b> touch paws, ears and tail gently so it feels familiar.</li></ul><p>We take puppies slowly — first visits are all about making friends.</p>`,
+"Nail trims without the drama":`<p class="eyebrow">PAW CARE</p><h2>Nail trims without the drama</h2><p>Long nails are uncomfortable and can even change how your dog walks.</p><ul><li>Hear clicking on the floor? They're due a trim.</li><li>Handle paws often at home so it feels normal.</li><li>We trim a little at a time, calmly — never rushed.</li></ul><p>Pop in for a quick nail trim any time — no full groom needed.</p>`,
+"Dog-friendly spots near you":`<p class="eyebrow">UPPER HIGHWAY</p><h2>Dog-friendly spots near you</h2><p>Make a morning of it — a walk before or after a groom. A few local favourites:</p><ul><li><b>Krantzkloof Nature Reserve</b> (Kloof) — scenic trails and lookouts; dogs welcome on lead.</li><li><b>Springside Nature Reserve</b> (Hillcrest) — easy walks and a little stream.</li><li><b>The Upper Highway green belts</b> — quiet neighbourhood trails around Waterfall.</li></ul><iframe title="Dog-friendly spots in the Upper Highway" src="https://www.google.com/maps?q=nature+reserves+Kloof+Upper+Highway+Durban&output=embed" loading="lazy"></iframe><span class="amodal-note">DRAFT — confirm current access &amp; leash rules with each reserve before publishing.</span>`
+};
+(function(){
+ var m=document.getElementById('amodal'),body=m.querySelector('.amodal-body'),card=m.querySelector('.amodal-card');
+ function open(h){body.innerHTML=h;m.hidden=false;document.body.style.overflow='hidden';card.scrollTop=0;}
+ function close(){m.hidden=true;document.body.style.overflow='';}
+ document.querySelectorAll('.card,.feature').forEach(function(c){c.addEventListener('click',function(){var h=c.querySelector('h2,h3');var k=h&&h.textContent.trim();if(k&&ARTICLES[k])open(ARTICLES[k]);});});
+ m.querySelector('.amodal-bg').addEventListener('click',close);
+ m.querySelector('.amodal-x').addEventListener('click',close);
+ addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden)close();});
+ var t=document.querySelector('.navtoggle'),nl=document.querySelector('.nav-links');
+ if(t)t.addEventListener('click',function(){nl.classList.toggle('open');});
+}());
+</script>
+</body>
+</html>

@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Steam and Cream Cafe | Café in Kloof, Upper Highway, Durban</title>
+<meta name="description" content="Steam and Cream — a much-loved café in Kloof, Upper Highway. Great coffee, all-day menu, and a warm space for catch-ups, catering and group bookings." />
+<meta property="og:title" content="Steam and Cream Cafe — Kloof, Durban" />
+<meta property="og:description" content="Great coffee and an all-day menu in the Upper Highway. 4.5★ from 118 reviews." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --espresso:#2B2118; --espresso-2:#241A12; --bronze:#C0843D; --bronze-soft:#D9A65E;
+    --cream:#F3EDE3; --cream-2:#EAE0D2; --ink:#1B140D; --muted:#6E6256; --line:rgba(43,33,24,.12);
+    --maxw:1180px; --r:14px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.05;letter-spacing:-.01em;margin:0}
+  h2{font-size:clamp(2rem,4vw,3rem)}
+  h3{font-size:1.35rem;font-weight:600}
+  p{margin:0 0 1rem}
+  a{color:inherit}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .eyebrow{font-family:Inter;text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;font-weight:600;color:var(--bronze)}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.5rem;border-radius:999px;font-weight:600;font-size:.95rem;text-decoration:none;border:1.5px solid transparent;transition:transform .2s ease,background .2s ease,color .2s ease;cursor:pointer}
+  .btn-primary{background:var(--bronze);color:#1b1109}
+  .btn-primary:hover{transform:translateY(-2px);background:var(--bronze-soft)}
+  .btn-ghost{border-color:rgba(243,237,227,.5);color:var(--cream)}
+  .btn-ghost:hover{background:rgba(243,237,227,.12)}
+  .btn-dark{background:var(--espresso);color:var(--cream)}
+  .btn-dark:hover{transform:translateY(-2px)}
+
+  /* NAV */
+  header.nav{position:fixed;top:0;left:0;right:0;z-index:30;transition:background .3s ease,backdrop-filter .3s ease,border-color .3s}
+  header.nav.scrolled{background:rgba(43,33,24,.82);backdrop-filter:blur(12px);border-bottom:1px solid rgba(243,237,227,.1)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{font-family:Fraunces;font-weight:600;font-size:1.25rem;color:var(--cream);text-decoration:none;letter-spacing:-.01em}
+  .brand span{color:var(--bronze-soft)}
+  .nav-links{display:flex;gap:30px;align-items:center}
+  .nav-links a{color:rgba(243,237,227,.85);text-decoration:none;font-size:.92rem;font-weight:500}
+  .nav-links a:hover{color:#fff}
+  .nav-links .btn{padding:.6rem 1.2rem}
+  .navtoggle{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px;padding:8px}
+  .navtoggle span{width:24px;height:2px;background:var(--cream);display:block;border-radius:2px}
+  header.nav.scrolled .navtoggle span{background:var(--cream)}
+  @media(max-width:760px){
+    .navtoggle{display:flex}
+    .nav-links{position:absolute;top:74px;left:0;right:0;background:var(--espresso-2);flex-direction:column;align-items:stretch;gap:0;padding:6px 0;display:none;border-top:1px solid rgba(243,237,227,.12)}
+    .nav-links.open{display:flex}
+    .nav-links a:not(.btn){padding:13px 24px;color:var(--cream)}
+    .nav-links .btn{margin:8px 24px;text-align:center;justify-content:center}
+  }
+
+  /* HERO */
+  .hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;color:var(--cream)}
+  #shader{display:none}
+  .hero-fallback{position:absolute;inset:0;background:#241a12 url('images/g1.jpg') center/cover no-repeat}
+  .grain{position:absolute;inset:0;opacity:.10;mix-blend-mode:overlay;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  .hero-veil{position:absolute;inset:0;background:linear-gradient(90deg,rgba(26,18,11,.78) 0%,rgba(26,18,11,.45) 45%,rgba(26,18,11,.1) 100%)}
+  .steam{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+  .steam span{position:absolute;bottom:22%;width:16px;height:160px;border-radius:50%;background:linear-gradient(to top,rgba(243,237,227,0),rgba(243,237,227,.45));filter:blur(9px);opacity:0;animation:steam 8s ease-in infinite}
+  @keyframes steam{0%{transform:translateY(0) scaleX(1);opacity:0}25%{opacity:.45}100%{transform:translateY(-240px) scaleX(2.6);opacity:0}}
+  .hero-in{position:relative;z-index:2;padding:120px 0 80px}
+  .hero h1{font-size:clamp(2.8rem,7vw,5.4rem);font-weight:600;max-width:14ch}
+  .hero p.lede{font-size:clamp(1.05rem,1.6vw,1.3rem);max-width:46ch;color:rgba(243,237,227,.9);margin-top:1.2rem}
+  .hero .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:2rem}
+  .hero .stat{display:flex;gap:22px;margin-top:3rem;align-items:center;color:rgba(243,237,227,.85);font-size:.9rem}
+  .hero .stat b{font-family:Fraunces;font-size:1.5rem;color:#fff;display:block;font-weight:600}
+  .stars{color:var(--bronze-soft);letter-spacing:2px}
+
+  /* SECTION */
+  section.block{padding:96px 0}
+  .section-head{max-width:60ch;margin-bottom:48px}
+  .section-head h2{margin-top:.6rem}
+  .section-head p{color:var(--muted);margin-top:.8rem;font-size:1.05rem}
+
+  /* MENU CARDS */
+  .grid{display:grid;gap:22px}
+  .cols-3{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:860px){.cols-3{grid-template-columns:1fr}}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;transition:transform .25s ease,box-shadow .25s ease}
+  .card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -24px rgba(43,33,24,.45)}
+  .card h3{margin-bottom:.5rem}
+  .card p{color:var(--muted);margin:0;font-size:.97rem}
+  .tag{display:inline-block;font-size:.72rem;font-weight:600;color:var(--bronze);background:rgba(192,132,61,.12);padding:.3rem .7rem;border-radius:999px;margin-bottom:1rem}
+
+  /* GALLERY */
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:150px;gap:14px}
+  .gallery div{border-radius:12px;background:linear-gradient(135deg,#cdbca6,# b09b80);position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:14px;color:#fff;font-size:.8rem;font-weight:500}
+  .gallery div::after{content:"photo";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase}
+  .gallery .has-img{padding:0}
+  .gallery .has-img::after{display:none}
+  .gallery .has-img img{width:100%;height:100%;object-fit:cover;display:block}
+  .gallery .tall{grid-row:span 2}
+  .gallery .wide{grid-column:span 2}
+  @media(max-width:760px){.gallery{grid-template-columns:repeat(2,1fr)}}
+
+  /* PROOF */
+  .proof{background:var(--espresso);color:var(--cream);border-radius:24px;padding:64px 40px;text-align:center}
+  .proof .big{font-family:Fraunces;font-size:clamp(2.5rem,6vw,4rem);font-weight:600;color:var(--bronze-soft)}
+  .proof-row{display:flex;gap:48px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+
+  /* ABOUT */
+  .about{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+  @media(max-width:860px){.about{grid-template-columns:1fr}}
+  .about .photo{aspect-ratio:4/5;border-radius:18px;background:linear-gradient(160deg,#3a2a1c,#241a12);position:relative;display:flex;align-items:center;justify-content:center;color:rgba(243,237,227,.4);font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;overflow:hidden}
+  .about .photo img{width:100%;height:100%;object-fit:cover;display:block}
+
+  /* CONTACT */
+  .contact{background:var(--espresso-2);color:var(--cream);border-radius:24px;padding:56px 40px;display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  @media(max-width:760px){.contact{grid-template-columns:1fr}}
+  .contact a{color:var(--bronze-soft);text-decoration:none;font-weight:600}
+  .contact .row{display:flex;gap:12px;margin-bottom:14px;color:rgba(243,237,227,.85)}
+  .contact .row svg{width:20px;height:20px;color:var(--bronze-soft);flex-shrink:0}
+  a:focus-visible,.btn:focus-visible{outline:3px solid var(--bronze-soft);outline-offset:3px;border-radius:10px}
+  .map{background:linear-gradient(135deg,#33271b,#1c140d);border-radius:14px;min-height:230px;display:flex;align-items:center;justify-content:center;color:rgba(243,237,227,.4);font-size:.8rem;text-transform:uppercase;letter-spacing:.12em}
+
+  footer{background:var(--espresso);color:rgba(243,237,227,.7);padding:40px 0;font-size:.85rem}
+  .foot-in{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;align-items:center}
+
+  /* DRAFT note */
+  .draft{font-size:.7rem;color:var(--bronze);background:rgba(192,132,61,.1);border:1px dashed rgba(192,132,61,.4);border-radius:8px;padding:.4rem .7rem;display:inline-block;margin-top:10px}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.steam span{display:none}}
+/* ── journal ── */
+.journal-section{padding:80px 0;background:var(--cream-2)}
+.journal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.4rem;margin-top:2.5rem}
+.journal-card{background:var(--cream);border-radius:var(--r);padding:1.8rem;cursor:pointer;border:1px solid var(--line);transition:transform .28s,box-shadow .28s,border-color .28s}
+.journal-card:hover{transform:translateY(-5px);box-shadow:0 18px 44px -24px rgba(192,132,61,.22);border-color:var(--bronze)}
+.journal-kicker{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--bronze);margin-bottom:.6rem}
+.journal-title{font-family:Fraunces,Georgia,serif;font-size:1.28rem;font-weight:600;line-height:1.2;margin-bottom:.6rem;color:var(--ink)}
+.journal-excerpt{font-size:.9rem;color:var(--muted);line-height:1.62;margin-bottom:1rem}
+.journal-read{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--bronze);display:flex;align-items:center;gap:.4rem}
+.journal-read::after{content:'→';transition:transform .2s}
+.journal-card:hover .journal-read::after{transform:translateX(4px)}
+.j-overlay{display:none;position:fixed;inset:0;z-index:1000;background:rgba(43,33,24,.6);backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:2rem}
+.j-overlay.open{display:flex}
+.j-box{background:var(--cream);border-radius:var(--r);max-width:700px;width:100%;max-height:88vh;overflow-y:auto;padding:2.8rem 2.5rem;position:relative;box-shadow:0 28px 70px rgba(0,0,0,.2)}
+.j-close{position:absolute;top:1.4rem;right:1.4rem;background:var(--cream-2);border:none;cursor:pointer;width:34px;height:34px;border-radius:50%;font-size:1rem;color:var(--muted);display:flex;align-items:center;justify-content:center;transition:background .2s,color .2s}
+.j-close:hover{background:var(--espresso);color:var(--cream)}
+.j-kicker{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--bronze);margin-bottom:.6rem}
+.j-title{font-family:Fraunces,Georgia,serif;font-size:1.75rem;font-weight:600;line-height:1.16;margin-bottom:1rem;color:var(--ink)}
+.j-body{font-size:.93rem;line-height:1.82;color:var(--espresso)}
+.j-body p{margin-bottom:1rem}
+.j-body h3{font-family:Fraunces,Georgia,serif;font-size:1.1rem;font-weight:600;margin:1.3rem 0 .4rem;color:var(--espresso)}
+@media(max-width:640px){.j-box{padding:2rem 1.4rem}}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top">Steam <span>&amp;</span> Cream</a>
+    <nav class="nav-links">
+      <a href="#menu">Menu</a>
+      <a href="#gallery">The Space</a>
+      <a href="learn.html">Journal</a>
+      <a href="#contact">Visit</a>
+      <a class="btn btn-primary" href="#contact">Book a table</a>
+    </nav>
+    <button class="navtoggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <canvas id="shader"></canvas>
+  <div class="hero-fallback" aria-hidden="true"></div>
+  <div class="hero-veil"></div>
+  <div class="grain"></div>
+  <div class="steam" aria-hidden="true">
+    <span style="left:14%;animation-delay:0s"></span>
+    <span style="left:22%;animation-delay:2.4s"></span>
+    <span style="left:33%;animation-delay:1.1s"></span>
+    <span style="left:9%;animation-delay:3.6s"></span>
+    <span style="left:27%;animation-delay:5s"></span>
+  </div>
+  <div class="wrap hero-in">
+    <p class="eyebrow">Kloof · Upper Highway, Durban</p>
+    <h1>Good coffee, slow mornings, full tables.</h1>
+    <p class="lede">A much-loved neighbourhood café in the Upper Highway — all-day menu, proper coffee, and a warm room made for catch-ups, catering and group bookings.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#contact">Book a table</a>
+      <a class="btn btn-ghost" href="#menu">View the menu</a>
+    </div>
+    <div class="stat">
+      <div><b><span class="stars">★★★★½</span></b> 4.5 from 118 Google reviews</div>
+    </div>
+  </div>
+</section>
+
+<main>
+  <!-- MENU -->
+  <section class="block" id="menu">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">The menu</p>
+        <h2>From the first flat white to a long, lazy brunch.</h2>
+        <p>Grouped the way guests order — pulled from Steam &amp; Cream's own Google menu. We'll confirm the latest dishes &amp; prices before launch.</p>
+      </div>
+      <div class="grid cols-3">
+        <div class="card reveal"><span class="tag">All-day Breakfast</span><h3>Served all day</h3><p>Traditional French Toast R85 · Egg Benedict R85 · Full English R95 — breakfast classics, any time.</p></div>
+        <div class="card reveal"><span class="tag">Our Famous Scones</span><h3>Famous scones — R65</h3><p>Freshly baked, strawberry jam &amp; whipped cream. Add cheese R15.</p></div>
+        <div class="card reveal"><span class="tag">Sourdough Sandwiches</span><h3>Stacked on sourdough</h3><p>Chicken mayo &amp; bacon, savoury mince &amp; cheese, creamy fillet — from R70.</p></div>
+      </div>
+      <p style="margin-top:22px;font-weight:500;color:var(--ink)">Bring the dog, too — there's a Puppuccino (R10) and a free Beeno for your pooch.</p>
+      <span class="draft">Menu &amp; prices pulled from Steam &amp; Cream's own Google listing — confirm latest before launch.</span>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="block" id="gallery" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">The space</p>
+        <h2>A room that makes people stay a little longer.</h2>
+        <p>We’ll re-grade the café’s own photos to one consistent look — no stock imagery.</p>
+      </div>
+      <div class="gallery reveal">
+        <div class="wide tall has-img"><img src="images/u_coffee_8.jpg" alt="A warm, plant-filled café space" loading="lazy" /></div>
+        <div class="has-img"><img src="images/g2.jpg" alt="Eggs Benedict at Steam and Cream" loading="lazy" /></div>
+        <div class="has-img"><img src="images/g3.jpg" alt="Avocado toast at Steam and Cream" loading="lazy" /></div>
+        <div class="has-img"><img src="images/u_coffee_11.jpg" alt="A café counter" loading="lazy" /></div>
+        <div class="wide has-img"><img src="images/u_coffee_1.jpg" alt="Friends raising coffees together" loading="lazy" /></div>
+      </div>
+      <span class="draft">DRAFT · awaiting client: real café photography (with usage rights)</span>
+    </div>
+  </section>
+
+  <!-- PROOF -->
+  <section class="block" style="padding-top:0">
+    <div class="wrap">
+      <div class="proof reveal">
+        <p class="eyebrow" style="color:var(--bronze-soft)">Loved in the Upper Highway</p>
+        <div class="proof-row">
+          <div><div class="big">4.5★</div>Google rating</div>
+          <div><div class="big">118</div>reviews &amp; counting</div>
+          <div><div class="big">Kloof</div>your local</div>
+        </div>
+        <p style="max-width:48ch;margin:24px auto 0;color:rgba(243,237,227,.8)">Real reviews shown as a placeholder — we’ll feature approved guest quotes once the café signs off.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="block" id="about" style="padding-top:0">
+    <div class="wrap about">
+      <div class="reveal">
+        <p class="eyebrow">Our story</p>
+        <h2>Built on regulars, good beans and a warm welcome.</h2>
+        <p>Steam &amp; Cream has become an Upper Highway favourite the honest way — by getting the coffee right and treating every guest like a regular.</p>
+        <p>This is a short draft in the café’s own voice; the founders’ real story and details get added before launch.</p>
+        <span class="draft">DRAFT · awaiting client: founding story, owner names, team photo</span>
+      </div>
+      <div class="photo reveal">Owner / team photo</div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="block" id="contact" style="padding-top:0">
+    <div class="wrap">
+      <div class="contact reveal">
+        <div>
+          <p class="eyebrow" style="color:var(--bronze-soft)">Visit / Book</p>
+          <h2 style="color:#fff;margin-top:.5rem">Pop in, or book your table.</h2>
+          <div class="row" style="margin-top:24px"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><a href="tel:+27686736603">068 673 6603</a></div>
+          <div class="row"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Kloof, Upper Highway, Durban</span></div>
+          <div class="row"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><span>Trading hours — to confirm with café</span></div>
+          <div class="cta-row" style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap">
+            <a class="btn btn-primary" href="tel:+27686736603">Call to book</a>
+            <a class="btn btn-ghost" href="#menu">Catering &amp; groups</a>
+          </div>
+          <span class="draft">DRAFT · awaiting client: hours, address, booking method, catering enquiry inbox</span>
+        </div>
+        <div class="map" style="display:block;padding:0;overflow:hidden;min-height:230px"><iframe title="Steam and Cream Cafe location" src="https://www.google.com/maps?q=Steam%20and%20Cream%20Cafe%2C%20Kloof%2C%20Durban&output=embed" width="100%" height="240" style="border:0;display:block" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ── journal ── -->
+<section class="journal-section" id="journal">
+  <div class="wrap">
+    <p class="eyebrow reveal">From the kitchen</p>
+    <h2 class="reveal" style="margin-bottom:2.5rem">Stories from <em>Steam &amp; Cream</em></h2>
+    <div class="journal-grid">
+      <div class="journal-card reveal" data-jid="scone-story">
+        <p class="journal-kicker">Baking</p>
+        <h3 class="journal-title">How we make our scones — and why we won't use a recipe shortcut</h3>
+        <p class="journal-excerpt">Good scones take time. Here's what we actually do, and why it matters for what ends up on your plate.</p>
+        <span class="journal-read">Read more</span>
+      </div>
+      <div class="journal-card reveal" data-jid="breakfast-all-day">
+        <p class="journal-kicker">Menu</p>
+        <h3 class="journal-title">Why we serve breakfast all day — and what that means for the kitchen</h3>
+        <p class="journal-excerpt">Running breakfast through close isn't easy. Here's how we make it work and why we think it's worth it.</p>
+        <span class="journal-read">Read more</span>
+      </div>
+      <div class="journal-card reveal" data-jid="afternoon-tea">
+        <p class="journal-kicker">Tradition</p>
+        <h3 class="journal-title">The quiet art of afternoon tea — and why we take it seriously</h3>
+        <p class="journal-excerpt">Afternoon tea is a ritual, not just a meal. We've thought carefully about how to do it properly.</p>
+        <span class="journal-read">Read more</span>
+      </div>
+      <div class="journal-card reveal" data-jid="best-cafe-kloof">
+        <p class="journal-kicker">Community</p>
+        <h3 class="journal-title">What makes a great neighbourhood café? We have thoughts</h3>
+        <p class="journal-excerpt">After years in Kloof, we've formed strong opinions about what a café should be for its community.</p>
+        <span class="journal-read">Read more</span>
+      </div>
+      <div class="journal-card reveal" data-jid="sourdough">
+        <p class="journal-kicker">Bread & Baking</p>
+        <h3 class="journal-title">Our sourdough — where it came from and why we keep the starter alive</h3>
+        <p class="journal-excerpt">A starter is a living thing. Ours has been going for years. Here's the story behind the bread on your table.</p>
+        <span class="journal-read">Read more</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="j-overlay" id="j-overlay" role="dialog" aria-modal="true">
+  <div class="j-box">
+    <button class="j-close" id="j-close" aria-label="Close">✕</button>
+    <p class="j-kicker" id="j-kicker"></p>
+    <h2 class="j-title" id="j-title"></h2>
+    <div class="j-body" id="j-body"></div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap foot-in">
+    <div class="brand" style="font-size:1.1rem">Steam <span>&amp;</span> Cream</div>
+    <div>Kloof · Upper Highway, Durban · 068 673 6603</div>
+    <div style="opacity:.6">Concept site · built by Arkatype Digital</div>
+  </div>
+</footer>
+
+<script>
+/* nav scroll state */
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40),{passive:true});
+
+/* scroll reveal */
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* WebGL aurora shader hero ($0 — no media generation) */
+(function(){
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const cv=document.getElementById('shader');
+  const gl=cv.getContext('webgl');
+  if(!gl){return;} // CSS fallback stays visible
+  function rs(){cv.width=cv.clientWidth*Math.min(devicePixelRatio,2);cv.height=cv.clientHeight*Math.min(devicePixelRatio,2);gl.viewport(0,0,cv.width,cv.height);}
+  const vs=`attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}`;
+  const fs=`precision highp float;uniform vec2 r;uniform float t;
+  float h(vec2 n){return fract(sin(dot(n,vec2(12.9898,4.1414)))*43758.5453);}
+  float noise(vec2 p){vec2 i=floor(p),f=fract(p);float a=h(i),b=h(i+vec2(1,0)),c=h(i+vec2(0,1)),d=h(i+vec2(1,1));vec2 u=f*f*(3.-2.*f);return mix(a,b,u.x)+(c-a)*u.y*(1.-u.x)+(d-b)*u.x*u.y;}
+  float fbm(vec2 p){float v=0.,a=.5;for(int i=0;i<5;i++){v+=a*noise(p);p*=2.02;a*=.5;}return v;}
+  void main(){
+    vec2 uv=gl_FragCoord.xy/r.xy; vec2 q=uv; q.x*=r.x/r.y;
+    float f=fbm(q*3.0+vec2(t*0.06,t*0.04)+fbm(q*2.0-t*0.03));
+    vec3 espresso=vec3(0.10,0.07,0.045);
+    vec3 bronze=vec3(0.75,0.52,0.24);
+    vec3 amber=vec3(0.92,0.68,0.34);
+    vec3 col=mix(espresso,bronze,smoothstep(0.35,0.85,f));
+    col=mix(col,amber,smoothstep(0.7,1.0,f)*0.6);
+    col*=mix(0.7,1.15,uv.y);              // top a touch brighter
+    col*=1.0-0.35*length(uv-vec2(0.5));   // soft vignette
+    gl_FragColor=vec4(col,1.0);
+  }`;
+  function sh(t,s){const o=gl.createShader(t);gl.shaderSource(o,s);gl.compileShader(o);return o;}
+  const pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,vs));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,fs));gl.linkProgram(pr);gl.useProgram(pr);
+  const buf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buf);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
+  const loc=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(loc);gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
+  const uR=gl.getUniformLocation(pr,'r'),uT=gl.getUniformLocation(pr,'t');
+  rs();addEventListener('resize',rs);
+  const start=performance.now();
+  (function loop(){const t=(performance.now()-start)/1000;gl.uniform2f(uR,cv.width,cv.height);gl.uniform1f(uT,t);gl.drawArrays(gl.TRIANGLE_STRIP,0,4);requestAnimationFrame(loop);})();
+})();
+
+// ── journal ──
+const J_ARTS = {
+  'scone-story': {
+    kicker: 'Baking',
+    title: 'How we make our scones — and why we won\'t use a recipe shortcut',
+    body: '<p>Steam & Cream scones have been on the menu since we opened. The recipe hasn\'t changed. Neither has the process.</p><h3>Why scones are harder than they look</h3><p>A scone is three or four ingredients, which makes it sound simple. In practice, it\'s one of the most temperamental bakes in a café kitchen. Too much mixing and the gluten develops, turning the texture tough. Too little and they don\'t hold together. The butter needs to be properly cold — warm butter melts in the oven before the dough has set, leaving a flat, dense result. And the oven temperature has to be right from the moment the tray goes in, because scones don\'t recover from a slow start.</p><h3>What we actually do</h3><p>We work the butter in by hand — cold butter, worked quickly, until you have something between breadcrumbs and small flakes. The liquid goes in all at once, the dough is brought together with the minimum possible handling, and it rests briefly before being pressed out. Not rolled — pressing is gentler on the gluten. Then they go straight into a hot oven, no delay.</p><h3>The shortcut we won\'t take</h3><p>There are scone mixes. There are scones that come frozen and are baked from frozen. You\'d be surprised how many cafés in the Upper Highway use them. We don\'t, and we won\'t. It\'s not snobbery — it\'s that you can taste the difference, and our regulars know what a Steam & Cream scone should feel like.</p><p>Made fresh daily. When they\'re out, they\'re out.</p>'
+  },
+  'breakfast-all-day': {
+    kicker: 'Menu',
+    title: 'Why we serve breakfast all day — and what that means for the kitchen',
+    body: '<p>Most cafés stop serving breakfast at 11. We don\'t. We\'ve had people ask why, and the honest answer is: because people want it, and because good food at the right time is what we\'re here for.</p><h3>The kitchen logistics problem</h3><p>Running breakfast all day in a single kitchen that\'s also producing lunch service is genuinely difficult. It means keeping eggs, batter, and breakfast proteins ready alongside sandwiches, salads, and soups. It means mise en place that doubles up. It means your kitchen team has to hold two service modes in their heads simultaneously.</p><p>We chose to solve that problem rather than avoid it, because the alternative — telling someone who arrives at noon that they can\'t have scrambled eggs — doesn\'t feel like hospitality.</p><h3>Why it works at Steam & Cream</h3><p>Kloof isn\'t a CBD. People come in from walks, from errands, from a slow Saturday morning. The rhythm here is different to a downtown spot with its hard 11 o\'clock service cut. The area\'s regulars keep unusual hours. We adapted to that rather than imposing a schedule that made our life easier but their visit less good.</p><h3>Our most ordered breakfast items</h3><p>The eggs benedict on house sourdough is consistently the top order, regardless of time. The stack (pancakes with seasonal compote and double cream) is close behind it. Both have been on the menu since we opened, with minor tweaks — mostly seasonal changes to what goes on top.</p>'
+  },
+  'afternoon-tea': {
+    kicker: 'Tradition',
+    title: 'The quiet art of afternoon tea — and why we take it seriously',
+    body: '<p>Afternoon tea has a reputation as a special-occasion thing — birthdays, mother\'s days, the kind of event you photograph and share. At Steam & Cream, we serve it every day, and we think of it rather more simply than that. It\'s just a very good reason to sit down for an hour in the middle of the afternoon.</p><h3>What makes afternoon tea properly good</h3><p>The bread. This is the opinion of people who\'ve thought about this a lot. Thin, even, carefully made finger sandwiches on good bread with proper fillings — not thick slices and a smear of something nondescript. The bread should be soft, the crusts off, and the filling to bread ratio should favour the filling. Everything else builds from there.</p><h3>The sweet tier</h3><p>The scones have to be right (see our notes on that elsewhere). The pastries should be small enough to eat in two or three bites — they\'re not meant to be the whole point. What matters is that everything on the stand has been made with care, looks considered, and tastes genuinely good rather than impressive from a distance.</p><h3>The tea itself</h3><p>We take tea seriously. We have a proper selection, brewed in teapots, with the option to refill the pot. The pouring temperature varies by leaf — this matters and most places don\'t think about it. Green teas and white teas need cooler water. Black teas take a full boil. We won\'t bore guests with this unless they ask, but we do it right regardless.</p><p>Afternoon tea at Steam & Cream is available daily from 2pm. Booking is recommended for groups of four or more.</p>'
+  },
+  'best-cafe-kloof': {
+    kicker: 'Community',
+    title: 'What makes a great neighbourhood café? We have thoughts',
+    body: '<p>We\'ve been in Kloof long enough to have developed strong opinions about what a local café should do for its community. Here\'s where we\'ve landed.</p><h3>It should feel like the same place every time</h3><p>Consistency is the most underrated quality in a café. Not consistency in a chain sense — every outlet being identical — but in a personal sense. When a regular arrives, their usual should be ready to be made, their preferred table is usually available, and the person at the counter knows their name. This sounds small. It\'s not small. It\'s the thing that makes a café feel like yours rather than just a place you happened to buy coffee.</p><h3>It should be a place where time passes well</h3><p>A good café is a place where you can spend an hour by yourself without feeling like you\'re taking up a table, and where a conversation between two people can go on for two hours without the environment making you want to leave. Good lighting, comfortable seating, background music that doesn\'t compete with conversation. These are not accidents — they\'re decisions.</p><h3>It should know what it is</h3><p>We\'re a café. Not a restaurant, not a takeaway, not a co-working space (though we don\'t mind people working here). We do what we do well and we don\'t try to be everything. The menu is concise on purpose. A long menu in a small kitchen is usually a sign that most of it comes from elsewhere. Ours comes from here.</p><p>We\'ve been in Kloof for years and we plan to be here for a lot more of them.</p>'
+  },
+  'sourdough': {
+    kicker: 'Bread & Baking',
+    title: 'Our sourdough — where it came from and why we keep the starter alive',
+    body: '<p>Most people who eat our sourdough don\'t think much about what makes it different. That\'s fine — it should just taste good. But for those who\'re curious, here\'s what\'s actually going on in the bread on your table.</p><h3>What a starter is</h3><p>A sourdough starter is a live culture — a community of wild yeast and lactobacillus bacteria that ferments flour and water. It\'s what makes the bread rise and what gives it the characteristic tang. There\'s no commercial yeast in our bread. The starter is the engine.</p><p>Ours has been going for several years. It lives in a container in the kitchen, is fed flour and water daily (usually twice), and is used in every loaf we bake. The age of a starter affects its flavour — an older, well-established culture produces bread with more complexity than a young one. This one has had time to develop.</p><h3>Why sourdough is different to eat</h3><p>The long fermentation process (our dough ferments slowly in the fridge overnight before baking) means the starches and gluten in the flour are partially broken down before you eat it. This makes it more digestible for many people who have difficulty with regular bread. It also means the bread has a lower glycaemic impact — the sugars absorb more slowly. Not a miracle food, but genuinely different in a meaningful way.</p><h3>What we use it for</h3><p>Our sourdough is the bread under the eggs benedict, the basis for the avocado toast, and what goes into most of our toasted sandwiches. The loaves are baked fresh daily. Slices are also available to buy.</p>'
+  }
+};
+
+(function(){
+  const overlay=document.getElementById('j-overlay');
+  const closeBtn=document.getElementById('j-close');
+  document.querySelectorAll('.journal-card').forEach(card=>{
+    card.addEventListener('click',()=>{
+      const art=J_ARTS[card.dataset.jid];
+      if(!art)return;
+      document.getElementById('j-kicker').textContent=art.kicker;
+      document.getElementById('j-title').textContent=art.title;
+      document.getElementById('j-body').innerHTML=art.body;
+      overlay.classList.add('open');
+      document.body.style.overflow='hidden';
+    });
+  });
+  function closeJ(){overlay.classList.remove('open');document.body.style.overflow='';}
+  closeBtn.addEventListener('click',closeJ);
+  overlay.addEventListener('click',e=>{if(e.target===overlay)closeJ();});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeJ();});
+})();
+</script>
+<script>(function(){var t=document.querySelector('.navtoggle'),nl=document.querySelector('.nav-links');if(t)t.addEventListener('click',function(){nl.classList.toggle('open');});}());</script>
+</body>
+</html>

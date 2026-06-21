@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The HerSpace Journal | Skincare &amp; self-care, explained</title>
+<meta name="description" content="Simple, expert skincare and self-care reads from HerSpace Beauty & Aesthetics in Westville — glow-up routines, treatment guides and seasonal skin advice." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{--wine:#3a0e22;--magenta:#a31a5b;--magenta-deep:#7e133f;--rose:#d96a93;--blush:#f6dfe6;--petal:#f3c6d6;--gold:#c19233;--gold-soft:#e3c98a;--cream:#fcf6f3;--cream2:#f8ece8;--ink:#2b1820;--muted:rgba(43,24,32,.62);--line:rgba(163,26,91,.16);--shadow:0 18px 50px -22px rgba(123,19,63,.34)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:'Raleway',system-ui,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.disp{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.08}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{width:min(1180px,92vw);margin:0 auto}
+.eyebrow{font-weight:600;font-size:.74rem;letter-spacing:.34em;text-transform:uppercase;color:var(--magenta)}
+.rule{width:58px;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold-soft));margin:18px auto;border:0}
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;padding:14px 26px;border-radius:999px;cursor:pointer;transition:transform .25s,box-shadow .25s,background .25s;border:1px solid transparent}
+.btn-primary{background:linear-gradient(120deg,var(--magenta),var(--rose));color:#fff;box-shadow:var(--shadow)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--wine);border:1px solid var(--line)}
+.btn-ghost:hover{background:#fff;border-color:var(--magenta)}
+:focus-visible{outline:2.5px solid var(--magenta);outline-offset:3px;border-radius:6px}
+.nav{position:sticky;top:0;z-index:60;backdrop-filter:saturate(140%) blur(10px);background:rgba(252,246,243,.82);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.brand{display:flex;align-items:center;gap:11px}
+.brand .mark{width:38px;height:38px;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--rose),var(--magenta));display:grid;place-items:center;color:#fff;box-shadow:var(--shadow)}
+.brand .mark svg{width:21px;height:21px}
+.brand .name{font-family:'Cormorant Garamond';font-weight:700;font-size:1.46rem;color:var(--wine);line-height:1}
+.brand .name b{color:var(--magenta)}
+.brand .name small{display:block;font-family:'Raleway';font-weight:500;font-size:.52rem;letter-spacing:.42em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{font-weight:500;font-size:.83rem;letter-spacing:.06em;transition:color .2s}
+.nav-links a:hover{color:var(--magenta)}
+.nav-links .btn{padding:12px 22px}
+.navtoggle{display:none;background:none;border:0;cursor:pointer;padding:8px;color:var(--wine)}
+.navtoggle svg{width:26px;height:26px}
+.jhero{position:relative;overflow:hidden;text-align:center;padding:74px 0 60px;background:radial-gradient(900px 420px at 50% -10%,var(--blush),transparent 60%),linear-gradient(180deg,var(--cream2),var(--cream))}
+.jhero h1{font-size:clamp(2.8rem,6.5vw,5rem);color:var(--wine);margin:12px 0 0}
+.jhero h1 em{font-style:italic;color:var(--magenta)}
+.jhero p{max-width:56ch;margin:18px auto 0;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding:70px 0 90px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);cursor:pointer;transition:transform .3s ease,box-shadow .3s ease;text-align:left;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-7px);box-shadow:0 26px 60px -24px rgba(123,19,63,.45)}
+.card img{width:100%;height:200px;object-fit:cover}
+.card .b{padding:22px 24px 26px;display:flex;flex-direction:column;flex:1}
+.card .k{font-size:.68rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--magenta)}
+.card h3{font-size:1.5rem;color:var(--wine);margin:9px 0 0}
+.card p{font-size:.92rem;color:var(--muted);margin:9px 0 0}
+.card .more{margin-top:16px;font-weight:600;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--magenta);display:inline-flex;gap:7px;align-items:center}
+/* modal */
+.amodal{position:fixed;inset:0;z-index:120;display:none;align-items:flex-start;justify-content:center;padding:40px 18px;overflow:auto;background:rgba(58,14,34,.55);backdrop-filter:blur(4px)}
+.amodal.open{display:flex;animation:fade .3s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.asheet{position:relative;width:min(720px,100%);background:var(--cream);border-radius:22px;overflow:hidden;box-shadow:0 40px 90px -30px rgba(0,0,0,.55);animation:rise .35s ease}
+@keyframes rise{from{transform:translateY(24px);opacity:.6}to{transform:none;opacity:1}}
+.asheet .ahead{position:relative;height:230px}
+.asheet .ahead img{width:100%;height:100%;object-fit:cover}
+.asheet .ahead:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(58,14,34,.6))}
+.asheet .ahead .k{position:absolute;left:26px;bottom:50px;z-index:2;color:var(--gold-soft);font-weight:600;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase}
+.asheet .ahead h2{position:absolute;left:26px;right:26px;bottom:18px;z-index:2;color:#fff;font-size:2rem;margin:0}
+.aclose{position:absolute;top:16px;right:16px;z-index:5;width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:var(--wine);cursor:pointer;display:grid;place-items:center;transition:transform .2s,background .2s}
+.aclose:hover{transform:rotate(90deg) scale(1.05);background:#fff}
+.aclose svg{width:20px;height:20px}
+.abody{padding:30px 34px 36px}
+.abody p{margin:0 0 15px}
+.abody h4{font-family:'Cormorant Garamond';font-size:1.4rem;color:var(--magenta-deep);margin:24px 0 8px}
+.abody ul{margin:0 0 15px;padding-left:20px}
+.abody li{margin:0 0 8px}
+.abody .tip{background:var(--blush);border-left:3px solid var(--magenta);border-radius:10px;padding:14px 18px;margin:18px 0;font-size:.95rem}
+.abody .cta{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
+/* faq */
+.faq{padding:20px 0 96px}
+.faq .section-head{text-align:center;max-width:640px;margin:0 auto 36px}
+.faq .section-head h2{font-size:clamp(2.1rem,4vw,3rem);color:var(--wine);margin:12px 0 0}
+.fitem{max-width:820px;margin:0 auto;border-bottom:1px solid var(--line)}
+.fitem button{width:100%;text-align:left;background:none;border:0;cursor:pointer;padding:22px 0;display:flex;justify-content:space-between;gap:16px;align-items:center;font-family:'Cormorant Garamond';font-size:1.4rem;color:var(--wine)}
+.fitem .fa-ic{flex:none;color:var(--magenta);transition:transform .3s}
+.fitem.open .fa-ic{transform:rotate(45deg)}
+.fitem .ans{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--muted)}
+.fitem .ans p{margin:0 0 18px}
+.foot{background:var(--wine);color:rgba(247,231,238,.82);padding:48px 0 28px;text-align:center}
+.foot .name{font-family:'Cormorant Garamond';font-weight:700;font-size:1.5rem;color:#fff}
+.foot .name b{color:var(--rose)}
+.foot a{color:var(--gold-soft)}
+.foot .copy{margin-top:18px;font-size:.78rem;color:rgba(247,231,238,.55)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:900px){.nav-links{position:fixed;inset:0 0 0 28%;flex-direction:column;align-items:flex-start;gap:22px;padding:90px 30px;background:var(--cream);transform:translateX(100%);transition:transform .35s;z-index:70}.nav-links.open{transform:none}.navtoggle{display:block;z-index:80}.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}.asheet .ahead h2{font-size:1.6rem}}
+@media (prefers-reduced-motion: reduce){*{animation:none !important}.reveal{opacity:1;transform:none}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Do I need to do anything before my facial?","acceptedAnswer":{"@type":"Answer","text":"Come with a clean face if you can, and skip strong actives (retinol, acids) for 2–3 days before a peel or microneedling. We'll guide you through everything on arrival."}},
+{"@type":"Question","name":"How often should I have a facial?","acceptedAnswer":{"@type":"Answer","text":"Every 4–6 weeks suits most skin, matching your skin's natural renewal cycle. Targeted concerns like pigmentation may benefit from a short course closer together."}},
+{"@type":"Question","name":"Is HerSpace ladies only?","acceptedAnswer":{"@type":"Answer","text":"Yes. HerSpace is a private, ladies-only space in Westville, strictly by appointment, so you can fully relax."}},
+{"@type":"Question","name":"What skincare do you use?","acceptedAnswer":{"@type":"Answer","text":"We treat with Kalahari, a professional South African range built around indigenous botanicals, and can prescribe a simple home routine to extend your results."}}
+]}
+</script>
+</head>
+<body id="top">
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html" aria-label="HerSpace home">
+      <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-9.2-9.2C1 8 3 4.5 6.4 4.5c2 0 3.4 1.2 4.2 2.6C11.4 5.7 12.8 4.5 14.8 4.5 18.2 4.5 20.2 8 18.4 11.8 16.2 16.5 12 21 12 21z"/><path d="M12 3v3"/></svg></span>
+      <span class="name">Her<b>Space</b><small>Beauty &amp; Aesthetics</small></span>
+    </a>
+    <nav class="nav-links" id="nav">
+      <a href="index.html#treatments">Treatments</a>
+      <a href="index.html#signature">Signature</a>
+      <a href="index.html#space">Our Space</a>
+      <a href="learn.html">Journal</a>
+      <a href="index.html#visit">Visit</a>
+      <a class="btn btn-primary" href="https://wa.me/27645196805" target="_blank" rel="noopener">Book your glow-up</a>
+    </nav>
+    <button class="navtoggle" id="navtoggle" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  </div>
+</header>
+
+<section class="jhero">
+  <div class="wrap">
+    <p class="eyebrow">The HerSpace journal</p>
+    <h1>Glow, <em>explained.</em></h1>
+    <hr class="rule" />
+    <p>Honest, expert skincare &amp; self-care — no jargon, no pressure. Tap any story to open it.</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="grid" id="grid">
+    <!-- cards injected -->
+  </div>
+</div>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Good to know</p>
+      <h2>Before you book</h2>
+      <hr class="rule" />
+    </div>
+    <div id="faq"></div>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-labelledby="atitle">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close article"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <div class="ahead"><img id="aimg" src="" alt="" /><span class="k" id="akick"></span><h2 id="atitle"></h2></div>
+    <div class="abody" id="abody"></div>
+  </div>
+</div>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="name">Her<b>Space</b></div>
+    <p style="margin:10px 0 0;font-size:.9rem">31 Aberfoyle Road, Westville · <a href="https://wa.me/27645196805" target="_blank" rel="noopener">064 519 6805</a> · Ladies only, by appointment</p>
+    <p class="copy">© 2026 HerSpace Beauty &amp; Aesthetics · Concept site by Arkatype Digital</p>
+  </div>
+</footer>
+
+<script>
+var ARTICLES=[
+ {k:"Skincare",t:"Build a glow-up routine",img:"images/fa_6_g.jpg",
+  ex:"The five-step ritual that actually makes a difference — minus the overwhelm.",
+  html:`<p>A good routine isn't about owning twenty products. It's about doing a few of the right things, consistently. Here's the simple framework we recommend to clients.</p>
+  <h4>1. Cleanse (morning &amp; night)</h4><p>A gentle cleanser removes the day without stripping your skin. Double-cleanse at night if you wear makeup or SPF.</p>
+  <h4>2. Treat with a serum</h4><p>This is where you target a concern — vitamin C for brightness in the morning, or a hydrating/repairing serum at night.</p>
+  <h4>3. Moisturise</h4><p>Lock everything in. Even oily skin needs moisture; skipping it often makes oiliness worse.</p>
+  <h4>4. SPF, every single morning</h4><p>The most powerful anti-ageing step there is. Sun exposure causes the majority of visible ageing — and we get a lot of it in Durban.</p>
+  <h4>5. A professional facial every 4–6 weeks</h4><p>At-home care maintains; a professional treatment resets. Together they're what create a real, lasting glow.</p>
+  <div class="tip">New to skincare? Start with just cleanser, moisturiser and SPF for two weeks, then add one new product at a time so you can see what works.</div>`},
+
+ {k:"Self-care",t:"Why downtime isn't optional",img:"images/am_1.jpg",
+  ex:"The real science behind rest, stress and your skin.",
+  html:`<p>When life is busy, "me-time" feels like the first thing to cut. But rest isn't a reward you earn after everything else — it's part of how your body and skin actually function.</p>
+  <h4>Stress shows on your face</h4><p>Raised cortisol (your stress hormone) can trigger breakouts, dullness and increased sensitivity, and it breaks down collagen over time. Managing stress is genuinely a skincare step.</p>
+  <h4>Touch calms the nervous system</h4><p>A facial or massage does more than feel nice — slow, intentional touch lowers your heart rate and shifts you out of "fight or flight" into rest mode, where your body repairs.</p>
+  <h4>Sleep is when skin rebuilds</h4><p>Most cell renewal happens overnight. An hour of switching off before bed — and protecting your sleep — pays off visibly.</p>
+  <div class="tip">Think of a standing monthly appointment as preventative care for your mind, not an indulgence. The glow is a bonus.</div>`},
+
+ {k:"Treatments",t:"Facial vs dermaplaning vs peel",img:"images/fa_5_g.jpg",
+  ex:"Which treatment is right for your skin, and how often.",
+  html:`<p>Not sure what to book? Here's a plain-English guide to three of our most popular treatments and what each one actually does.</p>
+  <h4>Classic / signature facial</h4><p>A full reset: cleanse, exfoliate, extract, mask, massage and finish. Best for maintenance, hydration and relaxation. Suits everyone, every 4–6 weeks.</p>
+  <h4>Dermaplaning</h4><p>A sterile blade gently removes dead skin and fine "peach fuzz". Skin feels instantly smoother, makeup sits better, and products absorb more deeply. Great before an event.</p>
+  <h4>Chemical peel</h4><p>A controlled exfoliation using acids to target pigmentation, dullness, congestion and texture. There can be light flaking afterwards — that's the point. Best done as a short course.</p>
+  <div class="tip">Still unsure? Book a consultation. We'll look at your skin and recommend the right starting point — no pressure to over-treat.</div>`},
+
+ {k:"Aftercare",t:"Make your facial results last",img:"images/fa_1_g.jpg",
+  ex:"Small habits in the days after that keep your glow going for weeks.",
+  html:`<p>A great facial gives you a head start — what you do in the next few days decides how long it lasts.</p>
+  <ul>
+   <li><strong>Leave your skin bare</strong> for the rest of the day if you can — let it breathe and absorb.</li>
+   <li><strong>Skip the gym, sauna and hot showers</strong> for 24 hours, especially after exfoliating treatments.</li>
+   <li><strong>Don't pick or exfoliate at home</strong> for a few days — your skin has just been cared for.</li>
+   <li><strong>Hydrate, inside and out</strong> — water plus a good moisturiser.</li>
+   <li><strong>Wear SPF</strong> — freshly treated skin is more sun-sensitive.</li>
+  </ul>
+  <div class="tip">Ask us for a simple home routine using your prescribed Kalahari products — it's the single biggest thing that extends your results.</div>`},
+
+ {k:"Seasonal",t:"Durban skin: humidity &amp; sun",img:"images/fa_11_g.jpg",
+  ex:"How our coastal climate affects your skin — and what to adjust.",
+  html:`<p>Durban's warm, humid, sunny climate is lovely to live in and a lot for your skin to handle. A few seasonal tweaks go a long way.</p>
+  <h4>Humidity = more oil &amp; congestion</h4><p>Switch to lighter, gel-based moisturisers in summer and keep cleansing consistent. You don't need to dry skin out — just balance it.</p>
+  <h4>Sun is year-round here</h4><p>UV doesn't take winter off. Daily SPF is non-negotiable on the coast, and reapplication matters on beach days.</p>
+  <h4>Sweat &amp; salt water</h4><p>Rinse off after the beach or a workout to stop sweat and salt sitting on the skin and clogging pores.</p>
+  <div class="tip">A monthly deep-cleanse facial keeps humidity-related congestion in check before it becomes breakouts.</div>`},
+
+ {k:"Treatments",t:"Microneedling: what to expect",img:"images/fa_12.jpg",
+  ex:"A calm, honest walk-through of the treatment everyone's talking about.",
+  html:`<p>Microneedling sounds intense, but for most people it's far gentler than expected. Here's exactly how it goes.</p>
+  <h4>What it does</h4><p>Tiny, controlled micro-channels prompt your skin to produce fresh collagen and elastin — softening scarring, fine lines and uneven texture over a course of sessions.</p>
+  <h4>During</h4><p>We apply a numbing cream first, so it's comfortable. The treatment itself is quick and methodical.</p>
+  <h4>Afterwards</h4><p>Expect some redness, a little like mild sunburn, for a day or two. Skin then looks fresher and firmer as collagen builds over the following weeks.</p>
+  <div class="tip">Results build with a series. We'll plan a sensible schedule and a gentle aftercare routine so your skin recovers beautifully.</div>`},
+
+ {k:"Lashes &amp; brows",t:"Caring for lashes &amp; brows",img:"images/fa_4_g.jpg",
+  ex:"Keep your lash extensions and laminated brows looking fresh for longer.",
+  html:`<p>A little aftercare keeps lash and brow treatments looking salon-fresh between appointments.</p>
+  <h4>The first 24–48 hours</h4><p>Keep new lash extensions and laminated brows dry and avoid steam — this lets everything set properly.</p>
+  <h4>Day to day</h4><p>Brush lashes gently with a clean spoolie, avoid oil-based products near the eyes, and resist the urge to rub or pull.</p>
+  <h4>Topping up</h4><p>Lash extensions are typically refilled every 2–3 weeks as your natural lashes shed; brow lamination lasts around 6–8 weeks.</p>
+  <div class="tip">Booking a regular slot means you're never caught out — your lashes and brows always look intentional.</div>`}
+];
+
+var FAQS=[
+ {q:"Do I need to do anything before my facial?",a:"Come with a clean face if you can, and avoid strong actives like retinol or acids for 2–3 days before a peel or microneedling. We'll talk you through everything when you arrive."},
+ {q:"How often should I have a facial?",a:"Every 4–6 weeks suits most skin — it matches your skin's natural renewal cycle. Specific concerns like pigmentation may benefit from a short, closer-together course."},
+ {q:"Is HerSpace really ladies only?",a:"Yes — it's a private, ladies-only space in Westville, strictly by appointment, so you can completely switch off and relax."},
+ {q:"What products do you use?",a:"We treat with Kalahari, a professional South African skincare range built around indigenous botanicals, and can set you up with a simple home routine to extend your results."},
+ {q:"How do I book?",a:"The quickest way is WhatsApp on 064 519 6805 — message us your preferred day and treatment and we'll find you a slot."}
+];
+
+// build cards
+var grid=document.getElementById('grid');
+ARTICLES.forEach(function(a,i){
+  var c=document.createElement('button');
+  c.className='card reveal'; c.type='button'; c.setAttribute('data-i',i);
+  c.innerHTML='<img src="'+a.img+'" alt="'+a.t.replace(/<[^>]+>/g,'')+'" loading="lazy" /><div class="b"><div class="k">'+a.k+'</div><h3>'+a.t+'</h3><p>'+a.ex+'</p><span class="more">Read story <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>';
+  c.addEventListener('click',function(){openA(i);});
+  grid.appendChild(c);
+});
+
+// modal
+var modal=document.getElementById('amodal');
+function openA(i){var a=ARTICLES[i];
+  document.getElementById('aimg').src=a.img; document.getElementById('aimg').alt=a.t.replace(/<[^>]+>/g,'');
+  document.getElementById('akick').innerHTML=a.k;
+  document.getElementById('atitle').innerHTML=a.t;
+  document.getElementById('abody').innerHTML=a.html+'<div class="cta"><a class="btn btn-primary" href="https://wa.me/27645196805" target="_blank" rel="noopener">Book a treatment</a><a class="btn btn-ghost" href="index.html#treatments">See the menu</a></div>';
+  modal.classList.add('open'); document.body.style.overflow='hidden';
+  document.getElementById('aclose').focus();
+}
+function closeA(){modal.classList.remove('open'); document.body.style.overflow='';}
+document.getElementById('aclose').addEventListener('click',closeA);
+modal.addEventListener('click',function(e){if(e.target===modal)closeA();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeA();});
+
+// faq
+var faq=document.getElementById('faq');
+FAQS.forEach(function(f){
+  var d=document.createElement('div'); d.className='fitem';
+  d.innerHTML='<button type="button"><span>'+f.q+'</span><span class="fa-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="ans"><p>'+f.a+'</p></div>';
+  var btn=d.querySelector('button'), ans=d.querySelector('.ans');
+  btn.addEventListener('click',function(){var open=d.classList.toggle('open');ans.style.maxHeight=open?ans.scrollHeight+'px':0;});
+  faq.appendChild(d);
+});
+
+// nav + reveal
+var tgl=document.getElementById('navtoggle'),nav=document.getElementById('nav');
+tgl.addEventListener('click',function(){var o=nav.classList.toggle('open');tgl.setAttribute('aria-expanded',o);});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+</script>
+</body>
+</html>

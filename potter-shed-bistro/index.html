@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>The Potter Shed Bistro | Outdoor Dining in Hillcrest</title>
+<meta name="description" content="The Potter Shed Bistro — Hillcrest's favourite outdoor bistro. Fresh food, home-brewed craft beer, ziplines and nature walks at Morewood Activity Centre."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&family=Caveat:wght@500&display=swap" rel="stylesheet"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"The Potter Shed Bistro","address":{"@type":"PostalAddress","streetAddress":"64a Springside Rd, Everton","addressLocality":"Hillcrest","addressRegion":"KwaZulu-Natal","postalCode":"3610","addressCountry":"ZA"},"telephone":"087 265 6676","priceRange":"R100-R200","servesCuisine":["Bistro","Craft Beer"],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.2","reviewCount":"330"}}</script>
+<style>
+:root{
+  --forest:#1B3A20;--moss:#3D7A52;--terra:#C0561F;--cream:#F4EFE4;
+  --bark:#2C1A0A;--gold:#C9A84C;--sage:#9BB59E;--white:#FDFCF8;
+  --ease:cubic-bezier(.16,1,.3,1);--nav-h:70px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--white);color:var(--bark);overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;line-height:1.2}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+/* LOADER */
+#loader{position:fixed;inset:0;background:var(--forest);display:flex;align-items:center;justify-content:center;z-index:9999;transition:opacity .6s,visibility .6s}
+#loader.done{opacity:0;visibility:hidden;pointer-events:none}
+.ld-inner{text-align:center;color:var(--cream)}
+.ld-leaf{font-size:2.4rem;display:block;margin-bottom:.9rem;animation:sway 1.4s ease-in-out infinite}
+.ld-word{font-family:'Playfair Display',serif;font-size:1rem;letter-spacing:.2em;text-transform:uppercase;opacity:.65}
+@keyframes sway{0%,100%{transform:rotate(-12deg)}50%{transform:rotate(12deg)}}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);display:flex;align-items:center;padding:0 clamp(1.5rem,4vw,3rem);z-index:900;transition:background .4s,box-shadow .4s}
+nav.scrolled{background:rgba(27,58,32,.95);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(255,255,255,.06)}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--cream);font-weight:600;flex:1}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:rgba(244,239,228,.8);font-size:.84rem;font-weight:500;letter-spacing:.04em;transition:color .2s}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{background:var(--terra);color:var(--cream)!important;padding:.45rem 1.2rem;border-radius:5px;transition:background .2s!important}
+.nav-cta:hover{background:#a8481a!important}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.burger span{width:22px;height:2px;background:var(--cream);border-radius:2px;display:block;transition:all .3s}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .burger{display:flex}
+  .nav-links.open{display:flex;flex-direction:column;position:fixed;top:var(--nav-h);left:0;right:0;background:var(--forest);padding:1.5rem 2rem;gap:1.25rem;z-index:899}
+}
+
+/* HERO */
+#hero{position:relative;height:100vh;min-height:580px;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=80') center/cover no-repeat;transform:scale(1.06);will-change:transform}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(140deg,rgba(27,58,32,.85) 0%,rgba(27,58,32,.6) 55%,rgba(44,26,10,.72) 100%)}
+#leafCanvas{position:absolute;inset:0;pointer-events:none;z-index:2}
+.hero-content{position:relative;z-index:3;padding:0 clamp(1.5rem,6vw,6rem);max-width:680px;margin-top:var(--nav-h)}
+.hero-badge{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.3);padding:.35rem .9rem;border-radius:100px;margin-bottom:1.4rem}
+.hero-title{font-size:clamp(2.6rem,6vw,5rem);color:var(--cream);line-height:1.08;margin-bottom:1.15rem}
+.hero-title em{color:var(--gold);font-style:italic}
+.hero-sub{color:rgba(244,239,228,.82);font-size:clamp(.95rem,1.5vw,1.12rem);line-height:1.75;max-width:510px;margin-bottom:2rem}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{background:var(--terra);color:var(--cream);padding:.85rem 2rem;border-radius:6px;font-weight:600;font-size:.88rem;transition:background .2s,transform .25s;letter-spacing:.02em}
+.btn-primary:hover{background:#a8481a;transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid rgba(244,239,228,.45);color:var(--cream);padding:.85rem 2rem;border-radius:6px;font-weight:500;font-size:.88rem;transition:all .2s}
+.btn-ghost:hover{border-color:var(--cream);background:rgba(244,239,228,.08);transform:translateY(-2px)}
+.scroll-hint{position:absolute;bottom:2.2rem;left:50%;transform:translateX(-50%);color:rgba(244,239,228,.45);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;z-index:3;animation:bob 2.2s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(7px)}}
+
+/* SHARED SECTION */
+section{padding:clamp(4rem,8vw,7rem) clamp(1.5rem,5vw,4rem)}
+.sec-head{text-align:center;max-width:640px;margin:0 auto 3.5rem}
+.label{font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);display:block;margin-bottom:.7rem}
+h2{font-size:clamp(1.75rem,3.5vw,2.8rem);color:var(--bark);margin-bottom:.75rem}
+h2 em{color:var(--moss);font-style:italic}
+.sec-head p{color:#6B5A4E;line-height:1.75;font-size:.97rem}
+
+/* ABOUT */
+#about{background:var(--cream)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;max-width:1160px;margin:0 auto}
+.about-img-wrap{position:relative}
+.about-img-wrap img{width:100%;height:500px;object-fit:cover;border-radius:14px}
+.about-badge{position:absolute;bottom:-1.4rem;right:-1.4rem;background:var(--terra);color:var(--cream);padding:1.2rem 1.5rem;border-radius:10px;text-align:center;font-family:'Playfair Display',serif;box-shadow:0 8px 24px rgba(192,86,31,.3)}
+.about-badge .big{font-size:2rem;font-weight:700;display:block;line-height:1}
+.about-badge .sm{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;opacity:.85}
+.about-text h2{margin-bottom:.9rem}
+.about-text p{color:#5A4A3E;line-height:1.82;margin-bottom:.95rem;font-size:.95rem}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.6rem}
+.chip{background:var(--white);border:1.5px solid rgba(61,122,82,.2);color:var(--moss);padding:.38rem 1rem;border-radius:100px;font-size:.78rem;font-weight:500}
+@media(max-width:900px){.about-grid{grid-template-columns:1fr;gap:2rem}.about-badge{right:1rem;bottom:1rem}}
+
+/* MENU */
+#menu{background:var(--white)}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.5rem;max-width:1160px;margin:0 auto}
+.mcrd{background:var(--white);border:1px solid rgba(44,26,10,.08);border-radius:12px;overflow:hidden;transition:transform .3s var(--ease),box-shadow .3s}
+.mcrd:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(44,26,10,.1)}
+.mcrd-img{height:195px;background-size:cover;background-position:center;position:relative}
+.mcrd-tag{position:absolute;top:.7rem;left:.7rem;background:var(--terra);color:var(--cream);font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.28rem .65rem;border-radius:4px}
+.mcrd-body{padding:1.2rem 1.3rem}
+.mcrd-body h3{font-size:1.1rem;margin-bottom:.45rem;color:var(--bark)}
+.mcrd-body p{font-size:.83rem;color:#7A6558;line-height:1.65;margin-bottom:.7rem}
+.mcrd-price{font-weight:600;color:var(--terra);font-size:.88rem}
+
+/* ACTIVITIES */
+#activities{background:var(--forest)}
+#activities .sec-head h2{color:var(--cream)}
+#activities .sec-head h2 em{color:var(--gold)}
+#activities .sec-head p{color:rgba(244,239,228,.65)}
+#activities .label{color:var(--gold)}
+.act-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:1.4rem;max-width:1160px;margin:0 auto}
+.act-card{background:rgba(253,252,248,.07);border:1px solid rgba(253,252,248,.11);border-radius:12px;padding:2rem 1.5rem;text-align:center;transition:background .3s,transform .3s var(--ease)}
+.act-card:hover{background:rgba(253,252,248,.13);transform:translateY(-4px)}
+.act-icon{font-size:2.4rem;display:block;margin-bottom:.9rem}
+.act-card h3{color:var(--cream);font-size:1.05rem;margin-bottom:.45rem}
+.act-card p{color:rgba(244,239,228,.6);font-size:.83rem;line-height:1.65}
+
+/* GALLERY */
+#gallery{background:var(--cream)}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,230px);gap:.9rem;max-width:1100px;margin:0 auto}
+.gitem{border-radius:10px;overflow:hidden;position:relative;cursor:pointer}
+.gitem:first-child{grid-column:span 2}
+.gitem img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+.gitem:hover img{transform:scale(1.07)}
+.gitem-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(27,58,32,.45) 0%,transparent 60%);opacity:0;transition:opacity .3s}
+.gitem:hover .gitem-ov{opacity:1}
+@media(max-width:680px){.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}.gitem{height:170px}}
+
+/* JOURNAL */
+#journal{background:var(--white)}
+.jgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.4rem;max-width:1160px;margin:0 auto}
+.jcard{background:var(--cream);border-radius:12px;overflow:hidden;cursor:pointer;transition:transform .3s var(--ease),box-shadow .3s;border:1px solid rgba(44,26,10,.06)}
+.jcard:hover{transform:translateY(-5px);box-shadow:0 14px 36px rgba(44,26,10,.1)}
+.jcard-icon{height:76px;display:flex;align-items:center;padding:0 1.4rem;background:var(--forest)}
+.jcard-body{padding:1.2rem 1.4rem}
+.jcard-kicker{font-size:.67rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-bottom:.45rem;display:block}
+.jcard-body h3{font-size:1.02rem;color:var(--bark);margin-bottom:.45rem;line-height:1.4}
+.jcard-body p{font-size:.82rem;color:#7A6558;line-height:1.62}
+.jread{display:inline-flex;align-items:center;gap:.35rem;margin-top:.9rem;font-size:.78rem;font-weight:600;color:var(--moss);transition:gap .2s}
+.jcard:hover .jread{gap:.6rem}
+
+/* MODAL */
+#jmodal{position:fixed;inset:0;z-index:9000;display:none;align-items:flex-end;justify-content:center}
+#jmodal.open{display:flex}
+.jmodal-bd{position:absolute;inset:0;background:rgba(27,58,32,.6);backdrop-filter:blur(4px);cursor:pointer}
+.jmodal-sheet{position:relative;z-index:1;background:var(--white);border-radius:20px 20px 0 0;max-width:740px;width:100%;max-height:88vh;overflow-y:auto;transform:translateY(100%);transition:transform .45s var(--ease)}
+#jmodal.open .jmodal-sheet{transform:translateY(0)}
+.jmodal-head{padding:1.8rem 2rem 1.2rem;border-bottom:1px solid rgba(44,26,10,.08);position:sticky;top:0;background:var(--white);z-index:1}
+.jmodal-kicker{font-size:.68rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-bottom:.45rem}
+.jmodal-head h2{font-size:1.45rem;color:var(--bark);line-height:1.3}
+.jmodal-close{position:absolute;top:1.4rem;right:1.4rem;background:rgba(44,26,10,.06);border:none;cursor:pointer;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--bark)}
+.jmodal-body{padding:1.5rem 2rem 3rem}
+.jmodal-body h3{font-size:1.05rem;color:var(--forest);margin:1.4rem 0 .55rem}
+.jmodal-body p{font-size:.91rem;color:#5A4A3E;line-height:1.82;margin-bottom:.8rem}
+.jmodal-body ul{padding-left:1.4rem;margin-bottom:1rem}
+.jmodal-body li{font-size:.89rem;color:#5A4A3E;line-height:1.8;margin-bottom:.35rem}
+
+/* CONTACT */
+#contact{background:var(--cream)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;max-width:1000px;margin:0 auto}
+.contact-info h2{font-size:2rem;margin-bottom:1.4rem}
+.cdetail{display:flex;align-items:flex-start;gap:.75rem;margin-bottom:1rem;font-size:.9rem;color:#5A4A3E;line-height:1.65}
+.cdetail svg{flex-shrink:0;margin-top:2px}
+.cmap{border-radius:12px;overflow:hidden;height:310px}
+.cmap iframe{width:100%;height:100%;border:none}
+@media(max-width:768px){.contact-grid{grid-template-columns:1fr;gap:2rem}}
+
+/* FOOTER */
+footer{background:var(--forest);color:rgba(244,239,228,.65);padding:3rem clamp(1.5rem,5vw,4rem) 2rem;text-align:center}
+.ft-logo{font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--cream);font-weight:600;margin-bottom:.4rem}
+.ft-tag{font-size:.83rem;opacity:.55;margin-bottom:1.4rem}
+.ft-div{border:none;border-top:1px solid rgba(244,239,228,.1);margin:1.4rem 0}
+.ft-bot{font-size:.76rem;opacity:.45;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}
+.ft-bot a{color:var(--gold)}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
+  #loader{display:none!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div id="loader"><div class="ld-inner"><span class="ld-leaf">🌿</span><p class="ld-word">The Potter Shed</p></div></div>
+
+<nav id="nav">
+  <div class="nav-logo">The Potter Shed <span>Bistro</span></div>
+  <button class="burger" id="burger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">Our Story</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#activities">Activities</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#journal">Journal</a></li>
+    <li><a href="#contact" class="nav-cta">Find Us</a></li>
+  </ul>
+</nav>
+
+<section id="hero">
+  <canvas id="leafCanvas"></canvas>
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Morewood Activity Centre · Hillcrest</div>
+    <h1 class="hero-title">Where Nature<br><em>Sets the Table</em></h1>
+    <p class="hero-sub">Outdoor dining, home-brewed craft beer, ziplines and warm Hillcrest hospitality — all tucked into the trees at Springside.</p>
+    <div class="hero-actions">
+      <a href="#menu" class="btn-primary">See the Menu</a>
+      <a href="#activities" class="btn-ghost">Explore Activities</a>
+    </div>
+  </div>
+  <div class="scroll-hint">scroll down</div>
+</section>
+
+<section id="about">
+  <div class="about-grid">
+    <div class="about-img-wrap reveal">
+      <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=800&q=80" alt="Bistro dining outdoors at The Potter Shed"/>
+      <div class="about-badge"><span class="big">330+</span><span class="sm">Happy Reviews</span></div>
+    </div>
+    <div class="about-text reveal">
+      <span class="label">Our Story</span>
+      <h2>A Bistro <em>Born</em> in the Bush</h2>
+      <p>Tucked away at the Morewood Activity Centre on Springside Road, The Potter Shed Bistro is Hillcrest's best-kept secret — and one of its most beloved. We opened with a simple belief: good food tastes even better outdoors, surrounded by nature.</p>
+      <p>Whether you're stopping in for a morning coffee, a hearty lunch with the family, or a lazy afternoon over craft beer and shared platters, the vibe is always the same — relaxed, welcoming and connected to the land around us.</p>
+      <p>Owner Brett and the team are passionate about keeping things honest: fresh ingredients, fair prices and a warm welcome every time. Dogs are always welcome, and so are muddy boots.</p>
+      <div class="chips">
+        <span class="chip">Dog Friendly</span>
+        <span class="chip">Home Brew Lager</span>
+        <span class="chip">Craft Beer</span>
+        <span class="chip">Outdoor Seating</span>
+        <span class="chip">Family Friendly</span>
+        <span class="chip">Daily Specials</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="sec-head reveal">
+    <span class="label">What We're Serving</span>
+    <h2>Fresh, Honest <em>Bistro Food</em></h2>
+    <p>From hearty burgers and golden vegan pizzas to home-brewed lager and morning coffee — everything here is made to be enjoyed slowly, outside.</p>
+  </div>
+  <div class="menu-grid">
+    <div class="mcrd reveal">
+      <div class="mcrd-img" style="background-image:url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80')"><span class="mcrd-tag">House Favourite</span></div>
+      <div class="mcrd-body"><h3>Burger &amp; Chips</h3><p>A proper stack with juicy patty, fresh veg and house sauce. Served with golden chips. The one everyone orders twice.</p><span class="mcrd-price">From R 85</span></div>
+    </div>
+    <div class="mcrd reveal">
+      <div class="mcrd-img" style="background-image:url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80')"><span class="mcrd-tag">Vegan-Friendly</span></div>
+      <div class="mcrd-body"><h3>Vegan Pizza</h3><p>Wood-fired flavour, plant-based toppings and a crispy base. Proof that dining well outdoors doesn't have to cost the earth.</p><span class="mcrd-price">From R 95</span></div>
+    </div>
+    <div class="mcrd reveal">
+      <div class="mcrd-img" style="background-image:url('https://images.unsplash.com/photo-1527281400683-1aae777175f8?w=600&q=80')"><span class="mcrd-tag">Brewed On-Site</span></div>
+      <div class="mcrd-body"><h3>Home Brewed Lager</h3><p>Crisp, cold and made right here at the shed. Pair it with anything on the menu and feel the day slow right down.</p><span class="mcrd-price">From R 45</span></div>
+    </div>
+    <div class="mcrd reveal">
+      <div class="mcrd-img" style="background-image:url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80')"><span class="mcrd-tag">Morning Ritual</span></div>
+      <div class="mcrd-body"><h3>Morning Coffee</h3><p>A proper flat white or filter, enjoyed outside with birdsong. Start your Hillcrest day the right way.</p><span class="mcrd-price">From R 35</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="activities">
+  <div class="sec-head reveal">
+    <span class="label">Beyond the Plate</span>
+    <h2 style="color:var(--cream)">Adventure Comes <em>Standard</em></h2>
+    <p>At The Potter Shed, the fun doesn't stop at the table. Morewood Activity Centre has everything you need to turn lunch into a full day out.</p>
+  </div>
+  <div class="act-grid">
+    <div class="act-card reveal"><span class="act-icon">🪂</span><h3>Ziplines</h3><p>Fly through the tree canopy on our thrilling zipline runs. Great for groups, families and adrenaline seekers.</p></div>
+    <div class="act-card reveal"><span class="act-icon">🌿</span><h3>Nature Walks</h3><p>Explore the beautiful Springside trails. Build a proper appetite before settling in for lunch.</p></div>
+    <div class="act-card reveal"><span class="act-icon">🏓</span><h3>Pickle Ball</h3><p>South Africa's fastest-growing sport. Challenge your crew to a set or two before refuelling at the bistro.</p></div>
+    <div class="act-card reveal"><span class="act-icon">🧗</span><h3>Obstacle Course</h3><p>Test your strength and teamwork. Perfect for team-building days and active families.</p></div>
+    <div class="act-card reveal"><span class="act-icon">🍺</span><h3>Craft Beer Tasting</h3><p>Sample our rotating selection of craft beers — including our signature home-brewed lager, made on the property.</p></div>
+    <div class="act-card reveal"><span class="act-icon">🐾</span><h3>Dog Friendly</h3><p>Bring the whole family, paws included. We welcome dogs warmly, because good company makes everything taste better.</p></div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="sec-head reveal">
+    <span class="label">A Taste of the Experience</span>
+    <h2>See What <em>Awaits</em></h2>
+  </div>
+  <div class="gallery-grid">
+    <div class="gitem reveal"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80" alt="Outdoor dining"/><div class="gitem-ov"></div></div>
+    <div class="gitem reveal"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&q=80" alt="Nature trails"/><div class="gitem-ov"></div></div>
+    <div class="gitem reveal"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Fresh bistro food"/><div class="gitem-ov"></div></div>
+    <div class="gitem reveal"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80" alt="Burgers"/><div class="gitem-ov"></div></div>
+    <div class="gitem reveal"><img src="https://images.unsplash.com/photo-1527281400683-1aae777175f8?w=600&q=80" alt="Craft beer"/><div class="gitem-ov"></div></div>
+  </div>
+</section>
+
+<section id="journal">
+  <div class="sec-head reveal">
+    <span class="label">From the Kitchen + Beyond</span>
+    <h2>Stories, Tips &amp; <em>Good Reads</em></h2>
+    <p>Outdoor dining science, craft brewing, adventure tips and how to plan the perfect Hillcrest day out.</p>
+  </div>
+  <div class="jgrid" id="jGrid"></div>
+</section>
+
+<section id="contact">
+  <div class="contact-grid">
+    <div class="reveal">
+      <span class="label">Come Find Us</span>
+      <h2>We're Waiting <em>in the Trees</em></h2>
+      <p style="color:#5A4A3E;line-height:1.75;margin-bottom:1.5rem;font-size:.95rem">No reservations needed — just pitch up, find a table outside and let the day take care of itself.</p>
+      <div class="cdetail"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--moss)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>64a Springside Rd, Everton, Hillcrest<br><span style="font-size:.82rem;opacity:.7">Morewood Activity Centre</span></span></div>
+      <div class="cdetail"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--moss)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.42 2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.86a16 16 0 0 0 6.29 6.29l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>087 265 6676</span></div>
+      <div class="cdetail"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--moss)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Wed–Sun: 07:30 to 17:00<br><span style="font-size:.82rem;opacity:.7">Closed Monday and Tuesday</span></span></div>
+    </div>
+    <div class="cmap reveal">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3461!2d30.7815735!3d-29.7827906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef6fbe61477d931%3A0x8068f5ba92ac847!2sThe%20Potter%20Shed%20Bistro!5e0!3m2!1sen!2sza!4v1700000000000" allowfullscreen="" loading="lazy" title="The Potter Shed Bistro map"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ft-logo">The Potter Shed Bistro</div>
+  <p class="ft-tag">Outdoor dining, craft beer and adventure in Hillcrest, KwaZulu-Natal.</p>
+  <hr class="ft-div"/>
+  <div class="ft-bot">
+    <span>64a Springside Rd, Everton, Hillcrest · 087 265 6676</span>
+    <span>Concept build by <a href="https://arkatype.co.za" target="_blank">Arkatype Studios</a></span>
+  </div>
+</footer>
+
+<div id="jmodal" role="dialog" aria-modal="true" aria-labelledby="jmodal-title">
+  <div class="jmodal-bd" id="jmodalBd"></div>
+  <div class="jmodal-sheet">
+    <div class="jmodal-head">
+      <p class="jmodal-kicker" id="jmodalKicker"></p>
+      <h2 id="jmodal-title"></h2>
+      <button class="jmodal-close" id="jmodalClose" aria-label="Close">&#x2715;</button>
+    </div>
+    <div class="jmodal-body" id="jmodalBody"></div>
+  </div>
+</div>
+
+<script>
+const REDUCE = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// Loader
+window.addEventListener('load', () => {
+  const l = document.getElementById('loader');
+  if (REDUCE) { l.style.display = 'none'; return; }
+  setTimeout(() => l.classList.add('done'), 700);
+});
+
+// Nav
+const nav = document.getElementById('nav');
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('navLinks');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 50), { passive: true });
+burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+// Hero parallax
+if (!REDUCE) {
+  const bg = document.getElementById('heroBg');
+  window.addEventListener('scroll', () => {
+    if (scrollY < innerHeight) bg.style.transform = `scale(1.06) translateY(${scrollY * 0.22}px)`;
+  }, { passive: true });
+}
+
+// Leaf canvas
+(function() {
+  if (REDUCE || 'ontouchstart' in window) return;
+  const canvas = document.getElementById('leafCanvas');
+  const ctx = canvas.getContext('2d');
+  const resize = () => { canvas.width = canvas.offsetWidth; canvas.height = canvas.offsetHeight; };
+  resize();
+  window.addEventListener('resize', resize, { passive: true });
+  const COLS = ['rgba(74,124,89,.68)','rgba(192,86,31,.55)','rgba(201,168,76,.6)','rgba(155,181,158,.5)','rgba(27,58,32,.5)'];
+  const leaves = [];
+  let t = 0;
+  const mk = () => ({ x: Math.random() * canvas.width, y: -15, sz: 3 + Math.random() * 7, spd: .45 + Math.random() * 1.1, drift: (Math.random()-.5)*.5, rot: Math.random()*Math.PI*2, rspd: (Math.random()-.5)*.04, phase: Math.random()*Math.PI*2, col: COLS[Math.floor(Math.random()*COLS.length)] });
+  const draw = l => { ctx.save(); ctx.translate(l.x,l.y); ctx.rotate(l.rot); ctx.fillStyle=l.col; ctx.beginPath(); ctx.ellipse(0,0,l.sz*.42,l.sz,0,0,Math.PI*2); ctx.fill(); ctx.strokeStyle='rgba(255,255,255,.22)'; ctx.lineWidth=.35; ctx.beginPath(); ctx.moveTo(0,-l.sz); ctx.lineTo(0,l.sz); ctx.stroke(); ctx.restore(); };
+  (function tick() {
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    t += .008;
+    if (leaves.length < 28 && Math.random() < .04) leaves.push(mk());
+    for (let i = leaves.length-1; i >= 0; i--) {
+      const l = leaves[i];
+      l.y += l.spd; l.x += l.drift + Math.sin(t+l.phase)*.38; l.rot += l.rspd;
+      draw(l);
+      if (l.y > canvas.height+20) leaves.splice(i,1);
+    }
+    requestAnimationFrame(tick);
+  })();
+})();
+
+// Scroll reveal
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 55); obs.unobserve(e.target); }
+  });
+}, { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// Journal
+const ARTS = [
+  { kicker:'Outdoor Dining', title:'Why Outdoor Dining Just Hits Different', ex:'The science behind why food tastes better under the open sky.', icon:'<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2"/><path d="M21 22a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-5"/></svg>', html:'<p>There is something undeniably special about a meal eaten outdoors. The same burger you had last Tuesday somehow tastes richer when the sky is above you and a light breeze keeps the air fresh. And as it turns out, there is science behind this.</p><h3>The Multisensory Effect</h3><p>Taste is not just about the tongue. Oxford neuroscientist Charles Spence has spent years studying how environment shapes flavour perception. His research shows that natural sounds, birdsong, wind and water, increase the sweetness and richness we perceive in food by up to 10%. The brain is processing everything at once.</p><h3>Light Changes Everything</h3><p>Natural daylight affects how we perceive colour, and colour is a huge part of how we identify freshness in food. People consistently rate the same food as tasting fresher in natural light versus artificial lighting. The golden tones of outdoor light make food look more appealing, and when food looks great, it tastes great.</p><h3>Slower, Better Meals</h3><p>Outdoor settings naturally encourage us to slow down. Research consistently links mindful eating to higher satisfaction and better digestion. You leave feeling nourished rather than just full. At The Potter Shed, we believe this so deeply that we built everything outside.</p>' },
+  { kicker:'Craft Beer', title:'From Grain to Glass: What Makes Our Home Brew Special', ex:'The story behind our on-site lager and what craft brewing really means.', icon:'<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 11h1a3 3 0 0 1 0 6h-1"/><path d="M9 12v6"/><path d="M13 12v6"/><path d="M14 7.5c-1 0-1.44.5-3 .5s-2-.5-3-.5-1.44.5-3 .5"/><path d="M14 3.5c-1 0-1.44.5-3 .5s-2-.5-3-.5-1.44.5-3 .5"/><path d="M3 3.5V22l.5.5h9l.5-.5V3.5"/></svg>', html:'<p>Walk up to the bar at The Potter Shed and you will notice something on tap that you will not find at most bistros: our own home-brewed lager, made right here on the property. What exactly makes craft beer different from what you find in a supermarket fridge?</p><h3>What Craft Actually Means</h3><p>Craft beer is made with intention. It is produced in smaller batches, using quality ingredients, by brewers who care deeply about what goes into the glass. Unlike mass-produced lagers optimised for consistency at scale, craft beer is optimised for flavour and character.</p><h3>The Brewing Process</h3><p>At its simplest, beer is made from four ingredients: water, malt, hops and yeast. Each decision shapes the final flavour. Our lager is brewed to be crisp and clean, with a subtle hop bitterness that makes it the perfect companion to our food menu.</p><ul><li><strong>Mashing:</strong> Malt mixed with hot water to extract fermentable sugars.</li><li><strong>Boiling:</strong> Wort is boiled and hops are added for bitterness.</li><li><strong>Fermentation:</strong> Yeast converts sugars to alcohol and CO2.</li><li><strong>Conditioning:</strong> The beer rests and clarifies before serving.</li></ul><h3>Pairing Beer with Bistro Food</h3><p>Our lager is deliberately versatile. Its clean profile works beautifully with our burgers (carbonation cuts through the fat), our vegan pizza, and on its own after a morning zipline run. Come in and we will help you find your match.</p>' },
+  { kicker:'Adventure Dining', title:'Zip, Walk, Eat, Repeat: The Adventure Dining Revolution', ex:'Why combining activities and food creates the best days out.', icon:'<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>', html:'<p>There is a growing movement reshaping how South Africans think about going out for a meal. The best experiences now combine great food with something that gets your blood pumping first. Welcome to adventure dining.</p><h3>The Science of the Earned Meal</h3><p>Psychologists call it the effort heuristic: we value things more when we feel we have worked for them. Food eaten after physical activity is consistently rated as more satisfying. When you have just come down a zipline, the burger hits differently.</p><h3>The Social Factor</h3><p>Activities break down social barriers in a way that a quiet restaurant never quite manages. When you have laughed with someone on an obstacle course, sitting down for a meal together feels natural and warm. Some of our most memorable moments come from groups who arrived as colleagues and left as friends.</p><h3>How to Plan Your Day</h3><ul><li>Arrive 07:30 to 09:00 for morning coffee and a light bite.</li><li>Head out on the trails or book activities at Morewood.</li><li>Return by midday for a proper bistro lunch.</li><li>Settle in for the afternoon with a craft beer and nowhere else to be.</li></ul>' },
+  { kicker:'Dog Friendly', title:"A Dog's Guide to Hillcrest's Best Outdoor Dining", ex:'Tips for a great day out with your four-legged companion.', icon:'<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>', html:'<p>If you have a dog, you know the guilt of leaving them at home while you head out for a meal. The Potter Shed Bistro is proud to be genuinely dog-friendly, not just as an afterthought but as a core part of who we are.</p><h3>Why We Prioritise Pet-Friendly Dining</h3><p>Research from psychology and behavioural science consistently shows that people feel more relaxed and sociable in the presence of their pets. Dog-friendly venues attract a warm, community-minded crowd. At The Potter Shed, dogs are welcome because we know they make the whole experience better.</p><h3>Tips for Dining Out with Your Dog</h3><ul><li><strong>Tire them out first.</strong> A short walk before arriving makes for a calmer, happier dog at the table.</li><li><strong>Bring water.</strong> We have bowls available, but having your own keeps them hydrated from arrival.</li><li><strong>Stick to outdoor seating.</strong> Dogs are far more comfortable where they can look around and feel the breeze.</li><li><strong>Skip the table scraps.</strong> Bistro food can be rich for dogs. Save the burger for yourself.</li></ul><h3>Our Dog Policy</h3><p>All friendly, leashed dogs are welcome in our outdoor areas. We ask that you clean up after your pet and keep them on a lead at all times. Water bowls available on request.</p>' },
+  { kicker:'Food Philosophy', title:'Fresh, Fair and Local: Our Food Philosophy', ex:'Why we believe honest food is always the best food.', icon:'<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 8v4l3 3"/></svg>', html:'<p>The menu at The Potter Shed is not complicated. We are not trying to win awards. What we are trying to do is serve genuinely good food at prices that make sense, in a setting that makes people feel at ease.</p><h3>Fresh Over Fancy</h3><p>Our menu changes with availability and season. When produce is at its peak, you will taste it on the plate. We keep our menu lean enough to ensure everything served is always fresh. Nothing sits around. Nothing is reheated and passed off as made.</p><h3>Value That Respects You</h3><p>We set our prices at R 100 to R 200 per person deliberately. Eating well should not be a luxury. The Potter Shed is not a special-occasion restaurant, it is an every-weekend kind of place. We want families, couples, solo visitors and dog walkers to come in without doing the maths first.</p><h3>The Vegan Promise</h3><p>Our vegan options are full menu items made with the same care as everything else. Our vegan pizza is one of our most popular dishes, not because all our guests are vegan, but because it is genuinely delicious. That is the bar we hold everything to.</p><h3>Daily Specials</h3><p>Every day we put up a specials board based on what is fresh and what the kitchen is excited about. In our experience, the specials are always worth a second look.</p>' },
+  { kicker:'Hillcrest Life', title:'The Perfect Hillcrest Day Out', ex:'How to plan an unforgettable day in the Upper Highway.', icon:'<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>', html:'<p>The Upper Highway area of KwaZulu-Natal, Hillcrest, Kloof, Waterfall and surrounds, is one of South Africa\'s most liveable and loveable stretches of landscape. Here is how to make the most of a full day in the area.</p><h3>Morning: Start With the Trails</h3><p>Begin early. The mornings in Hillcrest are cool, green and quiet. Head to Springside Nature Reserve or the trails around Morewood Activity Centre for a 45-minute walk. You will see African birds, lush indigenous bush, and get the kind of fresh-air clarity that no coffee can replicate.</p><h3>Mid-Morning: Fuel Up at the Shed</h3><p>Arrive at The Potter Shed from 07:30. Start with a proper coffee and a light morning bite. This is also a good time to book activities at Morewood for later in the day.</p><h3>Late Morning: Get Moving</h3><p>The ziplines, obstacle course and pickle ball courts are best done when you are fuelled but not overfull. Allow one to two hours depending on what you book. The energy in the group is always great after a shared challenge.</p><h3>Midday: The Big Lunch</h3><p>Back at the bistro by noon with a proper appetite. Order burgers, share a pizza, pour the first round of craft beer. Settle in. This is the part of the day where you stop watching the clock.</p><h3>Afternoon: The Slow Hours</h3><p>Another beer, good conversation, no pressure to move. By the time you head home you will have walked in nature, tried something new, eaten well and laughed a lot. That is a Hillcrest day done right.</p>' }
+];
+
+const jGrid = document.getElementById('jGrid');
+ARTS.forEach((art, idx) => {
+  const c = document.createElement('div');
+  c.className = 'jcard reveal';
+  c.innerHTML = `<div class="jcard-icon">${art.icon}</div><div class="jcard-body"><span class="jcard-kicker">${art.kicker}</span><h3>${art.title}</h3><p>${art.ex}</p><span class="jread">Read more &rarr;</span></div>`;
+  c.addEventListener('click', () => openJModal(idx));
+  jGrid.appendChild(c);
+  const o2 = new IntersectionObserver(([e]) => { if (e.isIntersecting) { c.classList.add('visible'); o2.unobserve(c); } }, { threshold: .1 });
+  o2.observe(c);
+});
+
+function openJModal(idx) {
+  const a = ARTS[idx];
+  document.getElementById('jmodalKicker').textContent = a.kicker;
+  document.getElementById('jmodal-title').textContent = a.title;
+  document.getElementById('jmodalBody').innerHTML = a.html;
+  document.getElementById('jmodal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeJModal() {
+  document.getElementById('jmodal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('jmodalClose').addEventListener('click', closeJModal);
+document.getElementById('jmodalBd').addEventListener('click', closeJModal);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeJModal(); });
+</script>
+</body>
+</html>

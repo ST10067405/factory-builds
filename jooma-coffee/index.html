@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jooma Coffee — Artisan Coffee & Kitchen · Kloof, KZN</title>
+<meta name="description" content="Kloof's favourite neighbourhood coffee shop. Artisan espresso, all-day breakfast, sarmies, bakes and catering. 2 Village Rd, Kloof — open daily.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ── reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+
+/* ── tokens ── */
+:root {
+  --espresso:  #1A0F08;
+  --roast:     #2C1B0E;
+  --caramel:   #C98B3C;
+  --honey:     #D4963F;
+  --cream:     #F5EFE3;
+  --milk:      #FDFAF5;
+  --muted:     #9A8070;
+  --muted-dark:rgba(245,239,227,0.55);
+  --font-h:    'Fraunces', Georgia, serif;
+  --font-b:    'DM Sans', system-ui, sans-serif;
+  --ease:      cubic-bezier(.22,.68,0,1.2);
+}
+
+/* ── base ── */
+body { font-family: var(--font-b); background: var(--milk); color: var(--espresso); overflow-x: hidden; }
+
+/* ── nav ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.2rem 2.8rem;
+  transition: background .4s, backdrop-filter .4s;
+}
+nav.scrolled { background: rgba(26,15,8,.92); backdrop-filter: blur(14px); }
+.nav-logo { font-family: var(--font-h); font-size: 1.35rem; font-weight: 300; color: var(--cream); letter-spacing: .05em; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: rgba(245,239,227,.75); transition: color .2s; }
+.nav-links a:hover { color: var(--caramel); }
+.nav-cta { background: var(--caramel) !important; color: var(--espresso) !important; padding: .4rem 1.1rem !important; border-radius: 2rem; font-weight: 600 !important; }
+
+/* ── hero ── */
+#hero {
+  position: relative; height: 100dvh; min-height: 620px;
+  overflow: hidden; display: flex; align-items: flex-end;
+  padding: 0 2.8rem 5.5rem;
+}
+#hero-img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center 55%;
+}
+#hero::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(26,15,8,.90) 0%, rgba(26,15,8,.42) 45%, rgba(26,15,8,.12) 100%);
+}
+#steamCanvas { position: absolute; inset: 0; pointer-events: none; z-index: 2; }
+.hero-content { position: relative; z-index: 3; max-width: 680px; }
+.hero-kicker {
+  display: inline-block; font-size: .73rem; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--caramel); margin-bottom: 1rem;
+}
+.hero-title {
+  font-family: var(--font-h); font-size: clamp(2.8rem, 5.5vw, 5.2rem);
+  font-weight: 300; color: var(--cream); line-height: 1.08; margin-bottom: 1.4rem;
+}
+.hero-title em { font-style: italic; color: var(--caramel); }
+.hero-sub {
+  font-size: 1rem; line-height: 1.68; color: rgba(245,239,227,.72);
+  max-width: 480px; margin-bottom: 2rem;
+}
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-primary {
+  display: inline-block; background: var(--caramel); color: var(--espresso);
+  font-weight: 600; font-size: .84rem; letter-spacing: .06em;
+  padding: .75rem 1.8rem; border-radius: 2rem;
+  transition: transform .2s var(--ease), background .2s;
+}
+.btn-primary:hover { transform: translateY(-2px); background: var(--honey); }
+.btn-ghost {
+  display: inline-block; border: 1.5px solid rgba(245,239,227,.38);
+  color: var(--cream); font-size: .84rem; letter-spacing: .06em;
+  padding: .75rem 1.8rem; border-radius: 2rem;
+  transition: border-color .2s, color .2s;
+}
+.btn-ghost:hover { border-color: var(--caramel); color: var(--caramel); }
+.hero-badge {
+  position: absolute; right: 2.8rem; bottom: 5.5rem; z-index: 3;
+  text-align: center; color: rgba(245,239,227,.7);
+}
+.hero-badge .stars { font-size: 1.6rem; color: var(--caramel); line-height: 1; }
+.hero-badge .badge-count { font-family: var(--font-h); font-size: 1.1rem; font-weight: 300; color: var(--cream); }
+.hero-badge .badge-label { font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; margin-top: .15rem; }
+
+/* ── section base ── */
+section { padding: 6.5rem 2.8rem; }
+.section-kicker { font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--caramel); margin-bottom: .8rem; }
+.section-title { font-family: var(--font-h); font-size: clamp(2rem, 3.6vw, 3.2rem); font-weight: 300; line-height: 1.12; margin-bottom: 1.1rem; }
+.section-sub { font-size: 1rem; line-height: 1.65; color: var(--muted); max-width: 560px; margin-bottom: 3rem; }
+
+/* ── reveal ── */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s, transform .7s var(--ease); }
+.reveal.on { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1 !important; transform: none !important; } }
+
+/* ── menu section ── */
+#menu { background: var(--cream); }
+.menu-inner { max-width: 1160px; margin: 0 auto; }
+.menu-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem; margin-top: 0;
+}
+.menu-card {
+  background: var(--milk); border-radius: 1.25rem; overflow: hidden;
+  transition: transform .25s var(--ease), box-shadow .25s;
+}
+.menu-card:hover { transform: translateY(-5px); box-shadow: 0 14px 36px rgba(26,15,8,.12); }
+.menu-card-img { height: 190px; width: 100%; object-fit: cover; }
+.menu-card-body { padding: 1.25rem 1.4rem 1.6rem; }
+.menu-card-cat { font-size: .67rem; letter-spacing: .18em; text-transform: uppercase; color: var(--caramel); margin-bottom: .4rem; }
+.menu-card-name { font-family: var(--font-h); font-size: 1.25rem; font-weight: 300; margin-bottom: .5rem; }
+.menu-card-desc { font-size: .88rem; color: var(--muted); line-height: 1.55; }
+
+/* ── vibe section ── */
+#vibe { background: var(--espresso); color: var(--cream); }
+.vibe-inner {
+  max-width: 1160px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 5rem; align-items: center;
+}
+.vibe-img-wrap { border-radius: 1.5rem; overflow: hidden; }
+.vibe-img-wrap img { width: 100%; height: 500px; object-fit: cover; }
+.vibe-text .section-title { color: var(--cream); }
+.vibe-text .section-sub { color: var(--muted-dark); margin-bottom: 2rem; }
+.vibe-list { list-style: none; display: flex; flex-direction: column; gap: .85rem; }
+.vibe-list li { display: flex; align-items: center; gap: .8rem; font-size: .92rem; color: rgba(245,239,227,.8); }
+.vibe-list li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--caramel); flex-shrink: 0; }
+
+/* ── catering section ── */
+#catering { background: var(--roast); }
+.catering-inner {
+  max-width: 1160px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 4.5rem; align-items: center;
+}
+.catering-text .section-title { color: var(--cream); }
+.catering-text .section-sub { color: var(--muted-dark); }
+.catering-cta { margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+.catering-cards { display: flex; flex-direction: column; gap: 1rem; }
+.catering-card {
+  background: rgba(245,239,227,.06); border: 1px solid rgba(245,239,227,.1);
+  border-radius: 1rem; padding: 1.4rem 1.6rem;
+  transition: border-color .2s;
+}
+.catering-card:hover { border-color: rgba(201,139,60,.4); }
+.catering-card-title { font-family: var(--font-h); font-size: 1.1rem; font-weight: 300; color: var(--caramel); margin-bottom: .4rem; }
+.catering-card-desc { font-size: .87rem; color: rgba(245,239,227,.6); line-height: 1.55; }
+
+/* ── find us section ── */
+#find-us { background: var(--cream); }
+.find-inner {
+  max-width: 1160px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 5rem; align-items: start;
+}
+.hours-table { margin-top: 1.5rem; display: grid; grid-template-columns: auto 1fr; gap: .5rem 2rem; }
+.hours-day { font-size: .9rem; color: var(--muted); }
+.hours-time { font-size: .9rem; font-weight: 600; }
+.contact-rows { margin-top: 2rem; display: flex; flex-direction: column; gap: .75rem; }
+.contact-row { display: flex; align-items: center; gap: .7rem; font-size: .92rem; }
+.contact-row a { color: var(--caramel); font-weight: 600; transition: color .2s; }
+.contact-row a:hover { color: var(--honey); }
+.map-embed {
+  border-radius: 1.25rem; overflow: hidden;
+  box-shadow: 0 8px 32px rgba(26,15,8,.12); height: 360px;
+}
+.map-embed iframe { width: 100%; height: 100%; border: 0; }
+
+/* ── footer ── */
+footer {
+  background: var(--espresso); color: rgba(245,239,227,.45);
+  padding: 3rem 2.8rem;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 1rem; font-size: .82rem;
+}
+.footer-brand { font-family: var(--font-h); font-size: 1.15rem; font-weight: 300; color: var(--cream); }
+.footer-right { display: flex; gap: 1.5rem; align-items: center; }
+.footer-right a { color: rgba(245,239,227,.45); transition: color .2s; }
+.footer-right a:hover { color: var(--caramel); }
+
+/* ── responsive ── */
+@media (max-width: 900px) {
+  .vibe-inner, .catering-inner, .find-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .vibe-img-wrap img { height: 320px; }
+}
+@media (max-width: 600px) {
+  nav { padding: 1rem 1.5rem; }
+  .nav-links { display: none; }
+  #hero { padding: 0 1.5rem 4.5rem; }
+  .hero-badge { right: 1.5rem; bottom: 4.5rem; }
+  section { padding: 4.5rem 1.5rem; }
+  footer { flex-direction: column; align-items: flex-start; padding: 2.5rem 1.5rem; }
+}
+/* ── journal ── */
+.journal-section { padding: 7rem 0; background: var(--milk); }
+.journal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); gap: 1.4rem; margin-top: 2.5rem; }
+.journal-card { background: var(--cream); border-radius: 1rem; padding: 1.8rem; cursor: pointer; border: 1px solid transparent; transition: transform .3s, box-shadow .3s, border-color .3s; }
+.journal-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(26,15,8,.1); border-color: rgba(201,139,60,.28); }
+.journal-kicker { font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; color: var(--caramel); margin-bottom: .65rem; }
+.journal-title { font-family: var(--font-h); font-size: 1.38rem; font-weight: 400; line-height: 1.22; margin-bottom: .6rem; color: var(--espresso); }
+.journal-excerpt { font-size: .87rem; color: var(--muted); line-height: 1.62; margin-bottom: 1.1rem; }
+.journal-read { font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: var(--honey); display: flex; align-items: center; gap: .4rem; }
+.journal-read::after { content: '→'; transition: transform .2s; }
+.journal-card:hover .journal-read::after { transform: translateX(4px); }
+/* journal modal */
+.j-overlay { display: none; position: fixed; inset: 0; z-index: 1000; background: rgba(26,15,8,.65); backdrop-filter: blur(8px); align-items: center; justify-content: center; padding: 2rem; }
+.j-overlay.open { display: flex; }
+.j-box { background: var(--milk); border-radius: 1.4rem; max-width: 700px; width: 100%; max-height: 88vh; overflow-y: auto; padding: 2.8rem 2.5rem; position: relative; box-shadow: 0 28px 70px rgba(0,0,0,.22); }
+.j-close { position: absolute; top: 1.4rem; right: 1.4rem; background: var(--cream); border: none; cursor: pointer; width: 34px; height: 34px; border-radius: 50%; font-size: 1rem; color: var(--muted); display: flex; align-items: center; justify-content: center; transition: background .2s,color .2s; }
+.j-close:hover { background: var(--espresso); color: #fff; }
+.j-kicker { font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; color: var(--caramel); margin-bottom: .6rem; }
+.j-title { font-family: var(--font-h); font-size: 1.9rem; font-weight: 400; line-height: 1.2; margin-bottom: 1.1rem; color: var(--espresso); }
+.j-body { font-size: .93rem; line-height: 1.82; color: var(--espresso); }
+.j-body p { margin-bottom: 1rem; }
+.j-body h3 { font-family: var(--font-h); font-size: 1.2rem; font-weight: 400; margin: 1.3rem 0 .4rem; color: var(--roast); }
+@media(max-width:640px) { .j-box { padding: 2rem 1.4rem; } }
+</style>
+</head>
+<body>
+
+<!-- ── nav ── -->
+<nav id="nav">
+  <div class="nav-logo">Jooma Coffee</div>
+  <ul class="nav-links">
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#vibe">Our story</a></li>
+    <li><a href="#catering">Catering</a></li>
+    <li><a href="#find-us" class="nav-cta">Find us</a></li>
+  </ul>
+</nav>
+
+<!-- ── hero ── -->
+<section id="hero">
+  <img id="hero-img"
+    src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1600&q=80"
+    alt="Artisan espresso — Jooma Coffee Kloof" fetchpriority="high">
+  <canvas id="steamCanvas"></canvas>
+  <div class="hero-content">
+    <span class="hero-kicker">2 Village Rd · Kloof · Open Daily</span>
+    <h1 class="hero-title">More than coffee.<br><em>A corner of Kloof.</em></h1>
+    <p class="hero-sub">Artisan espresso, all-day breakfast, and sarmies worth the drive — served under a tented veranda that feels like home.</p>
+    <div class="hero-actions">
+      <a href="#menu" class="btn-primary">See the menu</a>
+      <a href="#catering" class="btn-ghost">Catering enquiries</a>
+    </div>
+  </div>
+  <div class="hero-badge">
+    <div class="stars">★ 4.4</div>
+    <div class="badge-count">803</div>
+    <div class="badge-label">Google reviews</div>
+  </div>
+</section>
+
+<!-- ── menu ── -->
+<section id="menu">
+  <div class="menu-inner">
+    <p class="section-kicker reveal">What we do best</p>
+    <h2 class="section-title reveal">The Jooma staples.</h2>
+    <p class="section-sub reveal">From the morning cappuccino to the afternoon slice — everything made with care, nothing rushed.</p>
+    <div class="menu-grid">
+      <div class="menu-card reveal">
+        <img class="menu-card-img" src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80" alt="Signature cappuccino" loading="lazy">
+        <div class="menu-card-body">
+          <p class="menu-card-cat">Signature coffee</p>
+          <h3 class="menu-card-name">Great Cappuccino</h3>
+          <p class="menu-card-desc">Our most-ordered drink. Full-bodied espresso, perfectly textured milk — every single time.</p>
+        </div>
+      </div>
+      <div class="menu-card reveal">
+        <img class="menu-card-img" src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=600&q=80" alt="Pepperonata Breakfast Stack" loading="lazy">
+        <div class="menu-card-body">
+          <p class="menu-card-cat">All-day breakfast</p>
+          <h3 class="menu-card-name">Pepperonata Stack</h3>
+          <p class="menu-card-desc">Roasted pepperonata with free-range eggs. The dish people keep coming back for.</p>
+        </div>
+      </div>
+      <div class="menu-card reveal">
+        <img class="menu-card-img" src="https://images.unsplash.com/photo-1528736235302-52922df5c122?w=600&q=80" alt="Artisan sarmies and lunch" loading="lazy">
+        <div class="menu-card-body">
+          <p class="menu-card-cat">Sarmies &amp; light lunch</p>
+          <h3 class="menu-card-name">Artisan Sarmies</h3>
+          <p class="menu-card-desc">Loaded sandwiches on freshly baked bread. Simple ingredients done with real skill.</p>
+        </div>
+      </div>
+      <div class="menu-card reveal">
+        <img class="menu-card-img" src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&q=80" alt="Carrot cake and sweet bakes" loading="lazy">
+        <div class="menu-card-body">
+          <p class="menu-card-cat">Bakes &amp; sweet things</p>
+          <h3 class="menu-card-name">Carrot Cake &amp; Milkshakes</h3>
+          <p class="menu-card-desc">The carrot cake has its own fan club. Milkshakes and bakes to round the visit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── vibe ── -->
+<section id="vibe">
+  <div class="vibe-inner">
+    <div class="vibe-img-wrap reveal">
+      <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=800&q=80" alt="Jooma Coffee veranda atmosphere" loading="lazy">
+    </div>
+    <div class="vibe-text">
+      <p class="section-kicker reveal">Our story</p>
+      <h2 class="section-title reveal">Kloof's corner for coffee people.</h2>
+      <p class="section-sub reveal">Whether you are under the tented veranda on a warm afternoon or grabbing a takeaway on the way through — Jooma runs on good coffee, honest food, and the kind of service that makes you come back. 803 Google reviews and counting.</p>
+      <ul class="vibe-list reveal">
+        <li>Tented veranda seating — rain or shine</li>
+        <li>Kerbside pickup &amp; delivery available</li>
+        <li>Live acoustic music nights</li>
+        <li>Community hub since day one</li>
+        <li>Award-winning cappuccino &amp; hand-crafted espresso</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── catering ── -->
+<section id="catering">
+  <div class="catering-inner">
+    <div class="catering-text">
+      <p class="section-kicker reveal">Catering &amp; groups</p>
+      <h2 class="section-title reveal">Feeding a crowd?<br><em style="font-style:italic;color:var(--caramel)">We do that.</em></h2>
+      <p class="section-sub reveal">Corporate lunches, private events, office deliveries — send us the details and we will handle the rest. Catering enquiries answered within the hour.</p>
+      <div class="catering-cta reveal">
+        <a href="tel:0317645828" class="btn-primary">Call 031 764 5828</a>
+        <a href="https://instagram.com/jooma_coffee" target="_blank" rel="noopener" class="btn-ghost" style="border-color:rgba(245,239,227,.3);color:var(--cream)">DM on Instagram</a>
+      </div>
+    </div>
+    <div class="catering-cards reveal">
+      <div class="catering-card">
+        <p class="catering-card-title">Office &amp; Corporate</p>
+        <p class="catering-card-desc">Coffee station setup, sandwich platters and bake trays for your team. Delivered to Kloof and surrounds.</p>
+      </div>
+      <div class="catering-card">
+        <p class="catering-card-title">Group Reservations</p>
+        <p class="catering-card-desc">Booking 8 or more? Reserve your spot under the veranda and we will set up ahead of your arrival.</p>
+      </div>
+      <div class="catering-card">
+        <p class="catering-card-title">Private Events</p>
+        <p class="catering-card-desc">Birthday breakfasts, business mornings, milestone moments — let us know what you need.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── find us ── -->
+<section id="find-us">
+  <div class="find-inner">
+    <div>
+      <p class="section-kicker reveal">Visit us</p>
+      <h2 class="section-title reveal">Find Jooma in Kloof.</h2>
+      <p class="section-sub reveal" style="margin-bottom:1rem">2 Village Rd, Kloof, Durban, 3610</p>
+      <div class="hours-table reveal">
+        <span class="hours-day">Monday – Friday</span><span class="hours-time">8:00 am – 4:00 pm</span>
+        <span class="hours-day">Saturday</span><span class="hours-time">8:00 am – 3:00 pm</span>
+        <span class="hours-day">Sunday</span><span class="hours-time">8:00 am – 2:00 pm</span>
+      </div>
+      <div class="contact-rows reveal">
+        <div class="contact-row">
+          <span>📞</span>
+          <a href="tel:0317645828">031 764 5828</a>
+        </div>
+        <div class="contact-row">
+          <span>📸</span>
+          <a href="https://instagram.com/jooma_coffee" target="_blank" rel="noopener">@jooma_coffee</a>
+        </div>
+        <div class="contact-row">
+          <span>👍</span>
+          <a href="https://facebook.com/joomakloof" target="_blank" rel="noopener">/joomakloof</a>
+        </div>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="map-embed">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3462.5!2d30.8433985!3d-29.7944239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef6fc2e8938e8f7%3A0x7d0d09bd06121747!2sJooma%20Coffee!5e0!3m2!1sen!2sza!4v1718000000000"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Jooma Coffee map"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── journal ── -->
+<section class="journal-section" id="journal">
+  <div class="menu-inner">
+    <span class="eyebrow reveal">From the Counter</span>
+    <h2 class="section-title reveal">The <em>coffee journal</em></h2>
+    <div class="journal-grid">
+      <div class="journal-card reveal" data-jid="single-origin">
+        <p class="journal-kicker">Coffee Education</p>
+        <h3 class="journal-title">Why single-origin coffee actually tastes different</h3>
+        <p class="journal-excerpt">It's not marketing. Where a coffee is grown — and how — shapes everything in the cup.</p>
+        <span class="journal-read">Read more</span>
+      </div>
+      <div class="journal-card reveal" data-jid="flat-white">
+        <p class="journal-kicker">Brewing Craft</p>
+        <h3 class="journal-title">The art of the perfect flat white</h3>
+        <p class="journal-excerpt">Milk texture, espresso ratio, pour angle — small variables, enormous difference.</p>
+        <span class="journal-read">Read more</span>
+      </div>
+      <div class="journal-card reveal" data-jid="light-roast">
+        <p class="journal-kicker">About Coffee</p>
+        <h3 class="journal-title">Why we roast light — and what it means for your cup</h3>
+        <p class="journal-excerpt">Light roasts aren't weaker. They're more complex. Here's the science behind the choice.</p>
+        <span class="journal-read">Read more</span>
+      </div>
+      <div class="journal-card reveal" data-jid="food-pairing">
+        <p class="journal-kicker">Food & Coffee</p>
+        <h3 class="journal-title">What to eat with your coffee — a proper pairing guide</h3>
+        <p class="journal-excerpt">The right food amplifies your coffee. The wrong choice fights it.</p>
+        <span class="journal-read">Read more</span>
+      </div>
+      <div class="journal-card reveal" data-jid="kloof-coffee">
+        <p class="journal-kicker">Community</p>
+        <h3 class="journal-title">Kloof's coffee scene — and why independent matters</h3>
+        <p class="journal-excerpt">Chain coffee is convenient. But there's something only a local, owner-run café can do.</p>
+        <span class="journal-read">Read more</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="j-overlay" id="j-overlay" role="dialog" aria-modal="true">
+  <div class="j-box">
+    <button class="j-close" id="j-close" aria-label="Close">✕</button>
+    <p class="j-kicker" id="j-kicker"></p>
+    <h2 class="j-title" id="j-title"></h2>
+    <div class="j-body" id="j-body"></div>
+  </div>
+</div>
+
+<!-- ── footer ── -->
+<footer>
+  <div class="footer-brand">Jooma Coffee</div>
+  <span>© 2026 · 2 Village Rd, Kloof · 031 764 5828</span>
+  <div class="footer-right">
+    <a href="https://instagram.com/jooma_coffee" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://facebook.com/joomakloof" target="_blank" rel="noopener">Facebook</a>
+    <a href="#catering">Catering</a>
+  </div>
+</footer>
+
+<script>
+const REDUCE = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// nav scroll
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+// reveal on scroll
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); revealObs.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+// ── steam wisps animation ──
+(function () {
+  if (REDUCE) return;
+  const canvas = document.getElementById('steamCanvas');
+  const ctx    = canvas.getContext('2d');
+  const hero   = document.getElementById('hero');
+
+  function resize() {
+    canvas.width  = hero.offsetWidth;
+    canvas.height = hero.offsetHeight;
+  }
+
+  const TOTAL = 22;
+  let wisps = [];
+
+  function spawnWisp() {
+    return {
+      x:       canvas.width * 0.5 + (Math.random() - 0.5) * 140,
+      y:       canvas.height * 0.70 + (Math.random() - 0.5) * 50,
+      vy:      -(0.32 + Math.random() * 0.52),
+      life:    0,
+      maxLife: 150 + Math.random() * 110,
+      size:    1.0 + Math.random() * 3.0,
+      phase:   Math.random() * Math.PI * 2,
+      sway:    0.22 + Math.random() * 0.65,
+    };
+  }
+
+  for (let i = 0; i < TOTAL; i++) {
+    const w = spawnWisp();
+    w.life = Math.floor(Math.random() * w.maxLife);
+    wisps.push(w);
+  }
+
+  function tick() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    wisps.forEach((w, i) => {
+      w.life++;
+      if (w.life > w.maxLife) { wisps[i] = spawnWisp(); return; }
+      const p     = w.life / w.maxLife;
+      const alpha = p < 0.18 ? p / 0.18 : p > 0.62 ? 1 - (p - 0.62) / 0.38 : 1;
+      w.y += w.vy;
+      w.x += Math.sin(w.life * 0.038 + w.phase) * w.sway * 0.32;
+      const r = w.size * (0.65 + p * 0.6);
+      ctx.beginPath();
+      ctx.arc(w.x, w.y, r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(253,250,245,${alpha * 0.10})`;
+      ctx.fill();
+    });
+    requestAnimationFrame(tick);
+  }
+
+  resize();
+  window.addEventListener('resize', resize, { passive: true });
+  tick();
+})();
+
+// ── journal ──
+const J_ARTS = {
+  'single-origin': {
+    kicker: 'Coffee Education',
+    title: 'Why single-origin coffee actually tastes different',
+    body: `<p>Pick up a bag of supermarket coffee and the label says "blend." Pick up a bag of specialty coffee and it says "Ethiopia Yirgacheffe" or "Colombia Huila." That specificity isn't snobbery — it's information.</p>
+<h3>The terroir of coffee</h3>
+<p>Just like wine grapes, coffee cherries absorb their environment. Soil composition, altitude, rainfall, shade — all of it imprints on the bean. A coffee grown at 2,000 metres in Ethiopia will have a fundamentally different flavour profile to one grown at 900 metres in Brazil. Higher altitude means slower ripening, which means more complex sugars and more nuanced acidity.</p>
+<h3>Processing makes a difference too</h3>
+<p>After picking, cherries are processed — either washed (the fruit is removed before drying), natural (dried whole), or honey (somewhere in between). Each method dramatically changes the cup. Natural-processed coffees often taste fruity, almost wine-like. Washed coffees are typically cleaner and brighter. The same bean, processed differently, is essentially a different coffee.</p>
+<h3>Why blends exist</h3>
+<p>Blends aren't worse — they're consistent. Roasters blend to hit a flavour target year-round, regardless of harvest variation. For espresso, that's often desirable. But if you want to taste what a specific place and season produce, single-origin is the only way.</p>
+<p>At Jooma, we rotate single-origins regularly. Ask us what's on the bar today.</p>`
+  },
+  'flat-white': {
+    kicker: 'Brewing Craft',
+    title: 'The art of the perfect flat white',
+    body: `<p>The flat white is deceptively simple: espresso, steamed milk, done. But every variable matters, and the gap between a great flat white and a forgettable one is bigger than most people realise.</p>
+<h3>The espresso base</h3>
+<p>A flat white uses a ristretto-style shot — shorter extraction, concentrated, slightly sweeter, with less bitterness. This matters because the milk-to-coffee ratio is tighter than a latte. The espresso character has nowhere to hide. A flawed extraction will show up immediately.</p>
+<h3>Milk texture</h3>
+<p>The milk should be silky, not frothy. We're aiming for what baristas call "microfoam" — milk that has been steamed to around 60°C with very fine, uniform bubbles. If you can see large bubbles on the surface, the milk has been over-aerated. The texture should be like wet paint. It should pour, not plop.</p>
+<h3>The ratio</h3>
+<p>A classic flat white uses about 150–160ml of milk to a double ristretto. That's less than a latte (around 220–250ml), which means the coffee flavour is more dominant. You should taste the espresso, complemented by milk — not milk flavoured with coffee.</p>
+<h3>Temperature</h3>
+<p>60–65°C is the sweet spot. Above 70°C and the milk proteins break down, producing a slightly scalded, sweeter, flatter taste. Below 55°C and the drink feels thin. Order immediately and drink it while it's in the window.</p>`
+  },
+  'light-roast': {
+    kicker: 'About Coffee',
+    title: 'Why we roast light — and what it means for your cup',
+    body: `<p>When people hear "light roast" they often assume it means weak coffee. It's one of the most common misconceptions in specialty coffee, and it's worth clearing up.</p>
+<h3>Roast level and caffeine</h3>
+<p>Lighter roasts actually retain slightly more caffeine than dark roasts. The roasting process breaks down caffeine over time, so the longer a bean spends in the drum, the more caffeine is lost. Light roast = more caffeine, not less.</p>
+<h3>What roasting actually does</h3>
+<p>Green coffee beans are dense, grassy, and almost unrecognisable from the roasted product. Heat drives out moisture, triggers the Maillard reaction (the same browning process that creates a crust on bread), and eventually causes first crack — the point at which the bean expands and the structure opens up. Light roasts stop shortly after first crack. Dark roasts push past second crack, where more of the bean's original character is burned away and replaced by roasty, bitter compounds.</p>
+<h3>Flavour complexity</h3>
+<p>A well-sourced, lightly roasted coffee will often have fruit-forward, floral, or complex acidic notes that simply don't survive a dark roast. If you've ever tasted a specialty Ethiopian that reminded you of blueberries or jasmine — that's the light roast preserving what the terroir put there.</p>
+<p>We choose light roasts because we want you to taste the coffee, not just the roast. If you usually drink dark roast and find ours surprising, give it two or three tries. It grows on you.</p>`
+  },
+  'food-pairing': {
+    kicker: 'Food & Coffee',
+    title: 'What to eat with your coffee — a proper pairing guide',
+    body: `<p>Coffee and food interact. Some combinations lift both. Some flatten each other. A little awareness goes a long way.</p>
+<h3>The acidity factor</h3>
+<p>Bright, acidic coffees — light roasts, washed Ethiopians, Kenyan single-origins — pair well with foods that have some sweetness to balance them. A blueberry muffin, a slice of banana bread, or a lemon tart all work beautifully. The acidity in the coffee cuts through sweetness; the sweetness softens the coffee's brightness.</p>
+<h3>Espresso and chocolate</h3>
+<p>A classic for a reason. Chocolate and espresso share roasty, bitter compounds that reinforce each other. The key is quality — a great dark chocolate with a well-extracted espresso is genuinely harmonious. Milk chocolate with a bitter over-extraction is just two unpleasant things colliding.</p>
+<h3>Milk-based drinks and savoury food</h3>
+<p>Flat whites and lattes are surprisingly good with mildly savoury food — a plain croissant, a slice of sourdough with butter, or even a light cheese. The milk adds creaminess that bridges the gap between savoury and sweet.</p>
+<h3>What to avoid</h3>
+<p>Strong spices (chilli, cumin) tend to compete with coffee rather than complement it. Very sweet, heavily frosted pastries can make coffee taste harsh by contrast. And fresh citrus — while it sounds like it should work — often clashes with coffee's own acidity rather than harmonising with it.</p>
+<p>Our kitchen at Jooma is built around coffee-first thinking. Everything on the menu is chosen to work with what's in your cup.</p>`
+  },
+  'kloof-coffee': {
+    kicker: 'Community',
+    title: 'Kloof\'s coffee scene — and why independent matters',
+    body: `<p>Kloof isn't Cape Town or Joburg. It doesn't have a sprawling artisan coffee strip. But it has something those cities are increasingly trying to recreate: a proper neighbourhood feel, and a handful of people who actually care about what they're doing.</p>
+<h3>The chain coffee problem</h3>
+<p>Chain cafés solve a real problem: consistency across hundreds of locations. But that consistency comes at a cost. Everything is centralised — the roasting, the training, the menu decisions. The barista in front of you is executing a system, not making a coffee. And the money leaves the suburb immediately.</p>
+<h3>What independent actually means</h3>
+<p>When you buy a coffee from an independent café, you're funding the person who opened it, the staff they hired locally, and usually a small-scale roaster who takes quality seriously. The supply chain is shorter, the relationships are real, and the feedback loop actually works — if you tell us your flat white was too hot, we adjust. That doesn't happen at a chain.</p>
+<h3>Coffee as community infrastructure</h3>
+<p>A good café does more than serve drinks. It's a place to work, meet, decompress, think. Kloof has always had that suburban village quality — people know each other, businesses know their regulars. A neighbourhood café reinforces that. A drive-through doesn't.</p>
+<p>We're at 2 Village Road. Come in, sit down, and stay a while.</p>`
+  }
+};
+
+(function () {
+  const overlay = document.getElementById('j-overlay');
+  const closeBtn = document.getElementById('j-close');
+
+  document.querySelectorAll('.journal-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const art = J_ARTS[card.dataset.jid];
+      if (!art) return;
+      document.getElementById('j-kicker').textContent = art.kicker;
+      document.getElementById('j-title').textContent  = art.title;
+      document.getElementById('j-body').innerHTML     = art.body;
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeOverlay() {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  closeBtn.addEventListener('click', closeOverlay);
+  overlay.addEventListener('click', e => { if (e.target === overlay) closeOverlay(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeOverlay(); });
+})();
+</script>
+</body>
+</html>

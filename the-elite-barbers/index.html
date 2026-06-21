@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Elite Barbers | Premium barbershop in Westville, Upper Highway</title>
+<meta name="description" content="The Elite Barbers — a premium black-and-gold barbershop in Westville, Upper Highway. Fresh fades, sharp beard work and hot-towel shaves. 4.8★ on Google." />
+<meta property="og:title" content="The Elite Barbers — Westville" />
+<meta property="og:description" content="Premium cuts, fades & beard work in Westville. 4.8★." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{--bg:#141210;--panel:#1C1916;--panel2:#232019;--gold:#C9A24B;--gold-soft:#E2C277;--cream:#F4EEE2;--muted:rgba(244,238,226,.62);--line:rgba(201,162,75,.22);--maxw:1180px}
+  *{box-sizing:border-box}html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--cream);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:Oswald,sans-serif;font-weight:600;line-height:1.04;letter-spacing:.01em;margin:0;text-transform:uppercase}
+  h2{font-size:clamp(2rem,4.2vw,3.1rem)}
+  p{margin:0 0 1rem}a{color:inherit}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .eyebrow{font-family:Oswald;text-transform:uppercase;letter-spacing:.32em;font-size:.74rem;font-weight:500;color:var(--gold)}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 1.7rem;border-radius:4px;font-family:Oswald;font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:.92rem;text-decoration:none;border:1.5px solid transparent;transition:transform .2s,background .2s,color .2s;cursor:pointer}
+  .btn-primary{background:var(--gold);color:#16120a}.btn-primary:hover{transform:translateY(-2px);background:var(--gold-soft)}
+  .btn-ghost{border-color:var(--line);color:var(--cream)}.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+  a:focus-visible,.btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+  header.nav{position:sticky;top:0;z-index:30;background:rgba(20,18,16,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{font-family:Oswald;font-weight:700;font-size:1.3rem;letter-spacing:.08em;text-transform:uppercase;color:var(--cream);text-decoration:none;display:inline-flex;align-items:center;gap:9px}
+  .brand span{color:var(--gold)}
+  .brand svg{width:24px;height:24px;color:var(--gold)}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{color:rgba(244,238,226,.82);text-decoration:none;font-family:Oswald;font-weight:500;letter-spacing:.06em;text-transform:uppercase;font-size:.88rem}
+  .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+  .nav-links .btn{padding:.55rem 1.1rem}
+  .navtoggle{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px;padding:8px}
+  .navtoggle span{width:24px;height:2px;background:var(--gold);display:block;border-radius:2px}
+  @media(max-width:820px){
+    .navtoggle{display:flex}
+    .nav-links{position:absolute;top:74px;left:0;right:0;background:var(--panel);flex-direction:column;align-items:stretch;gap:0;padding:6px 0;display:none;border-bottom:1px solid var(--line)}
+    .nav-links.open{display:flex}
+    .nav-links a:not(.btn){padding:13px 24px}
+    .nav-links .btn{margin:8px 24px;justify-content:center}
+  }
+
+  /* HERO */
+  .hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden}
+  .hero-img{position:absolute;inset:0;background:#0d0c0a center/cover no-repeat}
+  .hero-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,12,10,.5) 0%,rgba(13,12,10,.8) 100%)}
+  .hero-in{position:relative;z-index:2;padding:120px 0;text-align:center;max-width:880px;margin:0 auto}
+  .hero h1{font-size:clamp(3rem,7.5vw,6rem);font-weight:700;margin:0 auto}
+  .hero h1 em{font-style:normal;color:var(--gold)}
+  .hero p.lede{font-size:clamp(1.05rem,1.5vw,1.28rem);max-width:50ch;color:var(--muted);margin:1.2rem auto 0}
+  .hero .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:2rem;justify-content:center}
+  .hero .stat{display:flex;gap:10px;align-items:center;justify-content:center;margin-top:2rem;color:var(--muted);font-size:.92rem}
+  .hero .rule{margin-left:auto;margin-right:auto}
+  .board{display:grid;grid-template-columns:1fr 1fr;gap:2px 56px;max-width:920px}
+  @media(max-width:760px){.board{grid-template-columns:1fr}}
+  .board .item{display:flex;align-items:baseline;gap:12px;padding:16px 0;border-bottom:1px dashed var(--line)}
+  .board .item .name{font-family:Oswald;font-weight:500;letter-spacing:.02em;text-transform:uppercase;color:var(--cream);white-space:nowrap}
+  .board .item .dots{flex:1;border-bottom:1px dotted rgba(201,162,75,.45);position:relative;top:-5px}
+  .board .item .pr{font-family:Oswald;font-weight:600;color:var(--gold);white-space:nowrap}
+  .ba{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:940px;margin:0 auto}
+  @media(max-width:680px){.ba{grid-template-columns:1fr}}
+  .ba figure{margin:0;position:relative;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .ba img{width:100%;height:440px;object-fit:cover;display:block}
+  .ba figcaption{position:absolute;top:14px;left:14px;font-family:Oswald;font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:.76rem;background:rgba(13,12,10,.75);color:var(--gold);padding:6px 12px;border-radius:4px;border:1px solid var(--line)}
+  .stars{color:var(--gold);letter-spacing:2px}
+  .rule{width:64px;height:3px;background:var(--gold);margin-bottom:22px}
+
+  section.block{padding:96px 0}
+  .section-head{max-width:60ch;margin-bottom:46px}
+  .section-head h2{margin-top:.5rem}
+  .section-head p{color:var(--muted);margin-top:.7rem}
+  .grid{display:grid;gap:20px}.cols-3{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:860px){.cols-3{grid-template-columns:1fr}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:30px;transition:transform .25s,border-color .25s}
+  .card:hover{transform:translateY(-4px);border-color:var(--gold)}
+  .card .ic{width:46px;height:46px;color:var(--gold);margin-bottom:16px}.card .ic svg{width:42px;height:42px}
+  .card h3{font-size:1.3rem;margin-bottom:.4rem}
+  .card p{color:var(--muted);margin:0;font-size:.96rem}
+  .price{color:var(--gold);font-family:Oswald;font-weight:600;margin-top:10px;display:block}
+
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:170px;gap:12px}
+  .gallery div{border-radius:8px;overflow:hidden;background:var(--panel2)}
+  .gallery img{width:100%;height:100%;object-fit:cover;display:block}
+  .gallery .tall{grid-row:span 2}.gallery .wide{grid-column:span 2}
+  @media(max-width:760px){.gallery{grid-template-columns:repeat(2,1fr)}}
+
+  .proof{background:linear-gradient(135deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:14px;padding:56px 40px;text-align:center}
+  .proof .big{font-family:Oswald;font-size:clamp(2.6rem,6vw,4rem);font-weight:700;color:var(--gold);line-height:1}
+  .proof-row{display:flex;gap:56px;justify-content:center;flex-wrap:wrap}
+
+  .about{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+  @media(max-width:860px){.about{grid-template-columns:1fr}}
+  .about .photo{aspect-ratio:4/5;border-radius:10px;overflow:hidden;border:1px solid var(--line)}
+  .about .photo img{width:100%;height:100%;object-fit:cover;display:block}
+
+  .contact{display:grid;grid-template-columns:1fr 1fr;gap:36px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:46px}
+  @media(max-width:760px){.contact{grid-template-columns:1fr}}
+  .contact a{color:var(--gold);text-decoration:none;font-weight:600}
+  .contact .row{display:flex;gap:12px;margin-bottom:14px;color:var(--cream)}
+  .contact .row svg{width:20px;height:20px;color:var(--gold);flex-shrink:0}
+  .map{border-radius:10px;overflow:hidden;min-height:240px;border:1px solid var(--line)}
+  .map iframe{width:100%;height:100%;min-height:240px;border:0;display:block;filter:grayscale(.3) contrast(1.05)}
+
+  footer{background:var(--panel2);color:var(--muted);padding:40px 0;font-size:.85rem;border-top:1px solid var(--line)}
+  .foot-in{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;align-items:center}
+  .brand-l{font-family:Oswald;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--cream)}.brand-l span{color:var(--gold)}
+  .draft{font-size:.7rem;color:var(--gold);background:rgba(201,162,75,.1);border:1px dashed rgba(201,162,75,.4);border-radius:6px;padding:.35rem .7rem;display:inline-block;margin-top:14px}
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+/* ── journal ── */
+.journal-section{padding:80px 0;background:var(--panel)}
+.journal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.4rem;margin-top:2.5rem}
+.journal-card{background:var(--panel2);border-radius:8px;padding:1.8rem;cursor:pointer;border:1px solid var(--line);transition:transform .28s,box-shadow .28s,border-color .28s}
+.journal-card:hover{transform:translateY(-5px);box-shadow:0 18px 44px -24px rgba(0,0,0,.5);border-color:var(--gold)}
+.journal-kicker{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
+.journal-title{font-family:Oswald,sans-serif;font-size:1.3rem;font-weight:500;letter-spacing:.02em;text-transform:uppercase;line-height:1.16;margin-bottom:.6rem;color:var(--cream)}
+.journal-excerpt{font-size:.9rem;color:var(--muted);line-height:1.62;margin-bottom:1rem}
+.journal-read{font-family:Oswald,sans-serif;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:.4rem}
+.journal-read::after{content:'→';transition:transform .2s}
+.journal-card:hover .journal-read::after{transform:translateX(4px)}
+.j-overlay{display:none;position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.72);backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:2rem}
+.j-overlay.open{display:flex}
+.j-box{background:var(--panel);border:1px solid var(--line);border-radius:8px;max-width:700px;width:100%;max-height:88vh;overflow-y:auto;padding:2.8rem 2.5rem;position:relative;box-shadow:0 28px 70px rgba(0,0,0,.4)}
+.j-close{position:absolute;top:1.4rem;right:1.4rem;background:var(--panel2);border:1px solid var(--line);cursor:pointer;width:34px;height:34px;border-radius:4px;font-size:1rem;color:var(--muted);display:flex;align-items:center;justify-content:center;transition:background .2s,color .2s,border-color .2s}
+.j-close:hover{background:var(--gold);color:#1a1208;border-color:var(--gold)}
+.j-kicker{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
+.j-title{font-family:Oswald,sans-serif;font-size:1.9rem;font-weight:600;text-transform:uppercase;letter-spacing:.02em;line-height:1.1;margin-bottom:1rem;color:var(--cream)}
+.j-body{font-size:.93rem;line-height:1.82;color:rgba(244,238,226,.85)}
+.j-body p{margin-bottom:1rem}
+.j-body h3{font-family:Oswald,sans-serif;font-size:1.05rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin:1.3rem 0 .4rem;color:var(--gold)}
+@media(max-width:640px){.j-box{padding:2rem 1.4rem}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg>The Elite <span>Barbers</span></a>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#gallery">The Shop</a>
+      <a href="learn.html">Journal</a>
+      <a href="#visit">Visit</a>
+      <a class="btn btn-primary" href="#visit">Book a chair</a>
+    </nav>
+    <button class="navtoggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-img" style="background-image:url('images/u_11.jpg')"></div>
+  <div class="hero-veil"></div>
+  <div class="wrap hero-in">
+    <div class="rule"></div>
+    <p class="eyebrow">Westville · Upper Highway, Durban</p>
+    <h1>A <em>sharp cut</em> is non-negotiable.</h1>
+    <p class="lede">Premium fades, precision beard work and hot-towel shaves — in a black-and-gold chair that feels as good as the cut looks.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#visit">Book a chair</a>
+      <a class="btn btn-ghost" href="#services">See services</a>
+    </div>
+    <div class="stat"><span class="stars">★★★★★</span> 4.8 from 130+ Google reviews</div>
+  </div>
+</section>
+
+<main>
+  <section class="block" id="services">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">What we do</p>
+        <h2>Cuts, fades &amp; beard work — done right.</h2>
+        <p>Grouped the way the guys book. Exact services &amp; prices come straight from The Elite Barbers before launch.</p>
+      </div>
+      <div class="board reveal">
+        <div class="item"><span class="name">Signature cut</span><span class="dots"></span><span class="pr">from R—</span></div>
+        <div class="item"><span class="name">Skin fade</span><span class="dots"></span><span class="pr">from R—</span></div>
+        <div class="item"><span class="name">Cut &amp; beard combo</span><span class="dots"></span><span class="pr">from R—</span></div>
+        <div class="item"><span class="name">Beard sculpt</span><span class="dots"></span><span class="pr">from R—</span></div>
+        <div class="item"><span class="name">Hot-towel shave</span><span class="dots"></span><span class="pr">from R—</span></div>
+        <div class="item"><span class="name">Line-up / edge-up</span><span class="dots"></span><span class="pr">from R—</span></div>
+        <div class="item"><span class="name">Kids' cut (u/12)</span><span class="dots"></span><span class="pr">from R—</span></div>
+        <div class="item"><span class="name">Grey blend</span><span class="dots"></span><span class="pr">from R—</span></div>
+      </div>
+      <span class="draft">DRAFT · awaiting client: exact service list &amp; prices</span>
+    </div>
+  </section>
+
+  <section class="block" id="transformations" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">The transformation</p>
+        <h2>Before &amp; after.</h2>
+        <p>The difference a proper cut makes. This is where the real magic shows.</p>
+      </div>
+      <div class="ba reveal">
+        <figure><img src="images/before_1.jpg" alt="Before — grown out" loading="lazy" /><figcaption>Before</figcaption></figure>
+        <figure><img src="images/u_9.jpg" alt="After — fresh cut" loading="lazy" /><figcaption>After</figcaption></figure>
+      </div>
+      <span class="draft" style="margin-top:18px">DRAFT · sample images — swap in The Elite Barbers' real before/afters from @the.elite.barbers.23 (login-walled, so client to supply)</span>
+    </div>
+  </section>
+
+  <section class="block" id="gallery" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">The shop</p>
+        <h2>Black, gold, and a serious chair.</h2>
+        <p>A real look inside The Elite Barbers — plus a few fresh cuts.</p>
+      </div>
+      <div class="gallery reveal">
+        <div class="wide tall"><img src="images/gbp_1.jpg" alt="The Elite Barbers' black-and-gold chairs" loading="lazy" /></div>
+        <div><img src="images/u_1.jpg" alt="A fresh fade in progress" loading="lazy" /></div>
+        <div><img src="images/u_9.jpg" alt="A clean fade" loading="lazy" /></div>
+        <div><img src="images/gbp_3.jpg" alt="Inside The Elite Barbers" loading="lazy" /></div>
+        <div><img src="images/u_5.jpg" alt="Clipper work" loading="lazy" /></div>
+        <div class="wide"><img src="images/u_13.jpg" alt="A barber at work" loading="lazy" /></div>
+      </div>
+      <span class="draft">DRAFT · their real shop photos shown + sample cuts — we'll swap in their own gallery before launch</span>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:0">
+    <div class="wrap">
+      <div class="proof reveal">
+        <p class="eyebrow">Trusted in Westville</p>
+        <div class="proof-row" style="margin-top:8px">
+          <div><div class="big">4.8★</div>Google rating</div>
+          <div><div class="big">130+</div>reviews</div>
+          <div><div class="big">Westville</div>your local</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="about" style="padding-top:0">
+    <div class="wrap about">
+      <div class="reveal">
+        <div class="rule"></div>
+        <p class="eyebrow">The Elite standard</p>
+        <h2>More than a haircut.</h2>
+        <p>We built The Elite Barbers around one idea: every man walks out feeling sharper than he walked in. Black-and-gold chairs, proper tools, and barbers who take the time to get it right.</p>
+        <p>This is a short draft in their own voice — the founders' real story gets added before launch.</p>
+        <span class="draft">DRAFT · awaiting client: founding story, head barber, team photo</span>
+      </div>
+      <div class="photo reveal"><img src="images/gbp_2.jpg" alt="Inside The Elite Barbers — gold detailing" loading="lazy" /></div>
+    </div>
+  </section>
+
+  <section class="block" id="visit" style="padding-top:0">
+    <div class="wrap">
+      <div class="contact reveal">
+        <div>
+          <div class="rule"></div>
+          <p class="eyebrow">Book / Visit</p>
+          <h2 style="margin:.4rem 0 1.2rem">Grab a chair.</h2>
+          <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+27314924561">031 492 4561</a></div>
+          <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Westville, Upper Highway, Durban</span></div>
+          <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Trading hours — to confirm with the shop</span></div>
+          <div class="cta-row" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:20px">
+            <a class="btn btn-primary" href="tel:+27314924561">Call to book</a>
+            <a class="btn btn-ghost" href="#services">View services</a>
+          </div>
+          <span class="draft">DRAFT · awaiting client: hours, online booking link, exact address</span>
+        </div>
+        <div class="map"><iframe title="The Elite Barbers location" src="https://www.google.com/maps?q=The+Elite+Barbers+Westville+Durban&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ── journal ── -->
+<section class="journal-section" id="journal">
+  <div class="wrap">
+    <p class="eyebrow reveal">From the chair</p>
+    <h2 class="reveal" style="margin-bottom:2.5rem">The <em style="font-style:italic;font-family:Inter,sans-serif;font-weight:400;text-transform:none">barber's</em> journal</h2>
+    <div class="journal-grid">
+      <div class="journal-card reveal" data-jid="classic-fade">
+        <p class="journal-kicker">Technique</p>
+        <h3 class="journal-title">What actually makes a classic fade — and how to spot a great one</h3>
+        <p class="journal-excerpt">A fade looks simple. Doing it right is anything but. Here's what separates a sharp fade from a sloppy one.</p>
+        <span class="journal-read">Read more</span>
+      </div>
+      <div class="journal-card reveal" data-jid="maintain-cut">
+        <p class="journal-kicker">Between Visits</p>
+        <h3 class="journal-title">How to maintain your cut between barber visits</h3>
+        <p class="journal-excerpt">A good haircut doesn't disappear the moment you leave the chair — if you know how to look after it.</p>
+        <span class="journal-read">Read more</span>
+      </div>
+      <div class="journal-card reveal" data-jid="beard-guide">
+        <p class="journal-kicker">Beard Work</p>
+        <h3 class="journal-title">The complete guide to beard maintenance — at home and in the chair</h3>
+        <p class="journal-excerpt">Growing a beard is easy. A well-kept beard takes more thought. Here's what actually matters.</p>
+        <span class="journal-read">Read more</span>
+      </div>
+      <div class="journal-card reveal" data-jid="talk-to-barber">
+        <p class="journal-kicker">Communication</p>
+        <h3 class="journal-title">How to talk to your barber — and actually get the cut you want</h3>
+        <p class="journal-excerpt">Most bad haircuts start with a communication failure. Here's how to fix that before you sit down.</p>
+        <span class="journal-read">Read more</span>
+      </div>
+      <div class="journal-card reveal" data-jid="good-haircut">
+        <p class="journal-kicker">Craft</p>
+        <h3 class="journal-title">What goes into a genuinely good haircut</h3>
+        <p class="journal-excerpt">It's not just scissors and clippers. The decisions made before the first cut is taken matter more than most people realise.</p>
+        <span class="journal-read">Read more</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="j-overlay" id="j-overlay" role="dialog" aria-modal="true">
+  <div class="j-box">
+    <button class="j-close" id="j-close" aria-label="Close">✕</button>
+    <p class="j-kicker" id="j-kicker"></p>
+    <h2 class="j-title" id="j-title"></h2>
+    <div class="j-body" id="j-body"></div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap foot-in">
+    <div class="brand-l">The Elite <span>Barbers</span></div>
+    <div>Westville · Upper Highway · 031 492 4561</div>
+    <div style="opacity:.6">Concept site · built by Arkatype Digital</div>
+  </div>
+</footer>
+
+<script>
+  const io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.14});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  (function(){var t=document.querySelector('.navtoggle'),nl=document.querySelector('.nav-links');if(t)t.addEventListener('click',function(){nl.classList.toggle('open');});}());
+
+// ── journal ──
+const J_ARTS = {
+  'classic-fade': {
+    kicker: 'Technique',
+    title: 'What actually makes a classic fade — and how to spot a great one',
+    body: '<p>A fade is one of the most requested cuts in any barbershop. It\'s also one of the most technically demanding to execute well. The difference between a sharp fade and a mediocre one is visible — once you know what to look for.</p><h3>What a fade actually is</h3><p>A fade is a graduated transition from shorter hair at the sides and back to longer hair on top. The gradient — from skin or near-skin at the base, through different guard lengths, up to a blend point — should be smooth, consistent, and invisible. No lines, no hard jumps between lengths. Just a continuous transition that looks like it happened naturally.</p><h3>Where most fades go wrong</h3><p>The most common failure point is the blend line — the transition zone between the clippers and the length on top. A barber who rushes this, or who doesn\'t have the technique fully dialled in, leaves a visible step. The second common problem is inconsistent curvature around the head — one side slightly higher or the taper line not matching. You won\'t always see it standing face-on, but you\'ll see it in photos.</p><h3>High, mid, and low</h3><p>The starting point of the fade — whether it begins at the temple, mid-head, or low near the ear — changes the entire character of the cut. A high fade is bolder and more dramatic. A low fade is more subtle and works with more styles. A mid fade sits between them. At Elite Barbers, we\'ll discuss which works best for your head shape, hair type, and the style you\'re going for before we start.</p>'
+  },
+  'maintain-cut': {
+    kicker: 'Between Visits',
+    title: 'How to maintain your cut between barber visits',
+    body: '<p>A good haircut has a lifespan. Knowing how to extend it — and what to do when it starts to go — makes a real difference to how you look between visits.</p><h3>The first two weeks</h3><p>The first two weeks after a haircut are usually the best. Everything is fresh, the lines are clean, and the shape is exactly what was intended. This is also when the foundation is set — if you\'re styling it with heat or product in a particular direction, this is the time to train it.</p><h3>Weeks three and four</h3><p>This is where most men\'s cuts start to look a little full around the edges. The hairline and neckline in particular grow out visibly. Some barbershops offer a free neckline tidy between appointments — worth asking about. At Elite Barbers, we do. It keeps the cut looking intentional for longer without needing the full service.</p><h3>What you can do at home</h3><p>Invest in a decent clipper for neckline maintenance. The neckline is the most visible growth indicator — keeping it clean makes everything else look neater. Most men can learn to do a basic neckline tidy at home in a couple of attempts.</p><h3>Styling between visits</h3><p>The right product makes a significant difference. A strong-hold clay or pomade for shorter styles; a lighter wax or styling cream for longer cuts with movement. The difference between a cut that looks good and one that looks great is often what you do with it after the shower. If you\'re not sure what to use, ask your barber — we\'re always happy to recommend something.</p>'
+  },
+  'beard-guide': {
+    kicker: 'Beard Work',
+    title: 'The complete guide to beard maintenance — at home and in the chair',
+    body: '<p>A well-kept beard is not low effort. It looks effortless — those are different things. Here\'s the honest guide to what it actually takes.</p><h3>The grow-out phase</h3><p>The hardest part of growing a beard is the first three to four weeks. The growth is uneven, the cheek line is undefined, and it often itches. Most men who fail to grow a beard give up here. The key is to wait it out and resist the urge to trim during this period. At around four weeks, you\'ll have enough length to see what you\'re actually working with and to start shaping properly.</p><h3>Neckline and cheek line</h3><p>These two lines define the beard and do the most to determine whether it looks intentional or unkempt. The neckline should sit about two finger-widths above the Adam\'s apple and follow a natural curve. Too high and the beard looks disconnected from the neck. Too low and it looks like overgrowth. The cheek line can be natural (following your natural growth pattern) or shaped higher for a cleaner look. A barber will get this right from the start — once you see it set properly, maintaining it at home is easier.</p><h3>Product and routine</h3><p>Beard oil is not optional for beards longer than a few weeks. It conditions the hair and the skin underneath, which otherwise becomes dry and flaky. Apply it daily after washing. Beard balm adds light hold and shape. Brush daily — it trains the growth direction and distributes product evenly.</p><h3>When to come in</h3><p>For most beard styles, a barber visit every three to four weeks maintains the shape. If you\'re growing it out, less frequent visits with more aggressive trimming at each session is fine. At Elite Barbers, we do hot-towel treatments and straight-razor work around the neckline — it\'s a different result to clippers alone.</p>'
+  },
+  'talk-to-barber': {
+    kicker: 'Communication',
+    title: 'How to talk to your barber — and actually get the cut you want',
+    body: '<p>The most common reason for a disappointing haircut is a miscommunication that happened in the first 90 seconds. Here\'s how to prevent it.</p><h3>Bring a reference photo</h3><p>Words are imprecise. "Short back and sides" means different things to different people. "A bit shorter" is not useful information. A photo — or two — gives your barber something concrete to work from. The photo doesn\'t need to be of someone who looks like you. It just needs to show the cut you want. Your barber can tell you whether it will work for your hair type and head shape, and what adaptations might be needed.</p><h3>Tell them what you don\'t want</h3><p>As important as what you want is what you\'re trying to avoid. If your last cut was too short on top, say so. If you hate it when the taper starts too high, say so. These negatives help your barber calibrate more than abstract descriptions of positives.</p><h3>Be specific about length</h3><p>If you say "just a trim," your barber has to guess what that means. "About a centimetre off the length and I want to keep the texture" is better. Guard numbers are useful for the sides and back — "a one on the sides with a high fade" is unambiguous in a way that "short sides" isn\'t.</p><h3>Check in mid-cut</h3><p>Most barbers will check in with you during the cut. Take those moments seriously. If something looks different to what you were expecting, say so while there\'s still length to work with. Saying nothing and then expressing dissatisfaction at the end helps no one.</p><p>At Elite Barbers, we ask questions before we pick up a clipper. That conversation isn\'t a formality — it\'s how we get the cut right.</p>'
+  },
+  'good-haircut': {
+    kicker: 'Craft',
+    title: 'What goes into a genuinely good haircut',
+    body: '<p>Most people evaluate a haircut when it\'s done. A good barber has already been making the decisions that determine the result from the moment you sat down.</p><h3>The consultation</h3><p>A proper consultation isn\'t about asking what number guard you want. It\'s about understanding your hair — its texture, density, growth direction, cowlicks, where it naturally falls, how it behaves when it gets longer. It\'s about your face shape, your lifestyle, whether you style daily or prefer low-maintenance, how long ago you last had it cut. All of this shapes what cut will actually look good on you.</p><h3>Head shape and proportion</h3><p>A good barber cuts for your head shape, not just replicating a template. The same fade that looks sharp on one person can look wrong on another because the skull shape means the graduation sits differently. The length on top that works for a round face doesn\'t work the same way on a narrow one. Good barbers make these adjustments intuitively and without drawing attention to them.</p><h3>Texture and movement</h3><p>The best cuts don\'t just look good fresh out of the chair — they look good three days later when you\'ve showered and run your hands through your hair. That quality comes from understanding how hair moves and cutting with — not against — its natural texture. It\'s the difference between a cut that takes ten minutes to style and one that looks good with minimal effort.</p><h3>The finish</h3><p>The details at the end — the neckline, around the ears, the edge of the sideburn — are what separate a professional cut from a functional one. They\'re the last things done and the first things people notice when they grow out. We take them seriously.</p>'
+  }
+};
+
+(function(){
+  const overlay=document.getElementById('j-overlay');
+  const closeBtn=document.getElementById('j-close');
+  document.querySelectorAll('.journal-card').forEach(card=>{
+    card.addEventListener('click',()=>{
+      const art=J_ARTS[card.dataset.jid];
+      if(!art)return;
+      document.getElementById('j-kicker').textContent=art.kicker;
+      document.getElementById('j-title').textContent=art.title;
+      document.getElementById('j-body').innerHTML=art.body;
+      overlay.classList.add('open');
+      document.body.style.overflow='hidden';
+    });
+  });
+  function closeJ(){overlay.classList.remove('open');document.body.style.overflow='';}
+  closeBtn.addEventListener('click',closeJ);
+  overlay.addEventListener('click',e=>{if(e.target===overlay)closeJ();});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeJ();});
+})();
+</script>
+</body>
+</html>

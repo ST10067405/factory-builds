@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>entropy HAIR DESIGNS STUDIO | Lillies Quarter, Hillcrest</title>
+<meta name="description" content="entropy HAIR DESIGNS STUDIO — an editorial hair and barbering studio at Lillies Quarter, Hillcrest. Cuts, colour, blow waves and beard work by expert stylists."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&display=swap" rel="stylesheet"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HairSalon","name":"entropy HAIR DESIGNS STUDIO","address":{"@type":"PostalAddress","streetAddress":"Shop C8-C9, Lillies Quarter, 12 Old Main Rd","addressLocality":"Hillcrest","addressRegion":"KwaZulu-Natal","postalCode":"3650","addressCountry":"ZA"},"telephone":"031 765 4898","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.6","reviewCount":"113"}}</script>
+<style>
+:root{
+  --black:#0A0A0A;--offblack:#111111;--charcoal:#1C1C1C;
+  --white:#FAFAFA;--offwhite:#F2F0EC;--grey:#6B6B6B;
+  --gold:#C9A84C;--gold-lt:rgba(201,168,76,.15);
+  --ease:cubic-bezier(.16,1,.3,1);--nav-h:68px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Space Grotesk',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+/* NOISE TEXTURE */
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");opacity:.4;pointer-events:none;z-index:9998}
+
+/* LOADER */
+#loader{position:fixed;inset:0;background:var(--black);display:flex;align-items:center;justify-content:center;z-index:9999;transition:opacity .7s,visibility .7s}
+#loader.done{opacity:0;visibility:hidden;pointer-events:none}
+.ld-inner{text-align:center}
+.ld-mark{font-family:'Playfair Display',serif;font-size:3rem;color:var(--gold);line-height:1;display:block;animation:pulse 1.2s ease-in-out infinite;font-style:italic}
+.ld-word{font-size:.65rem;letter-spacing:.35em;text-transform:lowercase;color:var(--grey);margin-top:.9rem;display:block}
+@keyframes pulse{0%,100%{opacity:.5;transform:scale(.96)}50%{opacity:1;transform:scale(1)}}
+
+/* CURSOR (desktop only) */
+#cursor{position:fixed;width:10px;height:10px;border-radius:50%;background:var(--gold);pointer-events:none;z-index:9997;transform:translate(-50%,-50%);transition:width .2s,height .2s,opacity .3s;mix-blend-mode:difference}
+#cursor-ring{position:fixed;width:36px;height:36px;border-radius:50%;border:1px solid rgba(201,168,76,.5);pointer-events:none;z-index:9996;transform:translate(-50%,-50%);transition:all .12s ease}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);display:flex;align-items:center;padding:0 clamp(1.5rem,4vw,3rem);z-index:900;transition:background .4s,border-color .4s;border-bottom:1px solid transparent}
+nav.scrolled{background:rgba(10,10,10,.94);backdrop-filter:blur(16px);border-color:rgba(255,255,255,.06)}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--white);font-style:italic;letter-spacing:.02em;flex:1}
+.nav-logo span{color:var(--gold);font-style:normal;font-family:'Space Grotesk',sans-serif;font-size:.6rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;display:block;line-height:1}
+.nav-links{display:flex;gap:2.2rem;list-style:none}
+.nav-links a{color:rgba(250,250,250,.55);font-size:.8rem;font-weight:500;letter-spacing:.06em;text-transform:lowercase;transition:color .2s}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{border:1px solid rgba(201,168,76,.4)!important;color:var(--gold)!important;padding:.42rem 1.1rem;border-radius:3px;transition:background .2s!important}
+.nav-cta:hover{background:var(--gold-lt)!important}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.burger span{width:22px;height:1.5px;background:var(--white);display:block;transition:all .3s}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .burger{display:flex}
+  .nav-links.open{display:flex;flex-direction:column;position:fixed;top:var(--nav-h);left:0;right:0;background:var(--offblack);padding:1.5rem 2rem;gap:1.2rem;z-index:899;border-bottom:1px solid rgba(255,255,255,.06)}
+}
+
+/* HERO */
+#hero{position:relative;height:100vh;min-height:600px;display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
+.hero-left{position:relative;display:flex;align-items:flex-end;padding:clamp(2rem,6vw,5rem);background:var(--black)}
+.hero-right{position:relative;overflow:hidden}
+.hero-right img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:grayscale(20%) contrast(1.05)}
+.hero-right::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(10,10,10,.7) 0%,transparent 40%)}
+.hero-left-content{position:relative;z-index:2;max-width:480px}
+.hero-eyebrow{font-size:.65rem;font-weight:600;letter-spacing:.28em;text-transform:lowercase;color:var(--gold);margin-bottom:1.8rem;display:flex;align-items:center;gap:.8rem}
+.hero-eyebrow::before{content:'';width:28px;height:1px;background:var(--gold);display:block}
+.hero-h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,5.5vw,5.5rem);line-height:.95;margin-bottom:1.8rem}
+.hero-h1 em{color:var(--gold);font-style:italic;display:block}
+.hero-h1 strong{font-weight:700;display:block}
+.hero-sub{color:rgba(250,250,250,.5);font-size:.9rem;line-height:1.8;max-width:360px;margin-bottom:2.2rem}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-gold{background:var(--gold);color:var(--black);padding:.82rem 2rem;border-radius:3px;font-weight:700;font-size:.82rem;letter-spacing:.06em;text-transform:lowercase;transition:opacity .2s,transform .25s}
+.btn-gold:hover{opacity:.88;transform:translateY(-2px)}
+.btn-wire{border:1px solid rgba(250,250,250,.25);color:var(--white);padding:.82rem 2rem;border-radius:3px;font-size:.82rem;letter-spacing:.06em;text-transform:lowercase;transition:all .2s}
+.btn-wire:hover{border-color:var(--white);transform:translateY(-2px)}
+.hero-stats{position:absolute;bottom:clamp(2rem,4vw,3.5rem);right:clamp(2rem,4vw,3.5rem);display:flex;gap:2.5rem;z-index:3}
+.stat{text-align:right}
+.stat-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--white);line-height:1;display:block}
+.stat-lbl{font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(250,250,250,.4);margin-top:.2rem;display:block}
+@media(max-width:860px){
+  #hero{grid-template-columns:1fr;height:auto;min-height:100vh}
+  .hero-right{height:55vw;min-height:260px}
+  .hero-right::after{background:linear-gradient(to top,rgba(10,10,10,.8) 0%,transparent 50%)}
+  .hero-left{align-items:flex-start;padding-top:calc(var(--nav-h)+2rem)}
+  .hero-stats{position:static;margin-top:2rem;justify-content:flex-start}
+}
+
+/* MARQUEE */
+.marquee-wrap{border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);padding:.9rem 0;overflow:hidden;background:var(--offblack)}
+.marquee-track{display:flex;gap:3rem;animation:marquee 22s linear infinite;width:max-content;white-space:nowrap}
+.marquee-track span{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(250,250,250,.35)}
+.marquee-track span.gold{color:var(--gold)}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* SHARED */
+section{padding:clamp(4rem,8vw,7rem) clamp(1.5rem,5vw,4rem)}
+.sec-label{font-size:.62rem;font-weight:600;letter-spacing:.28em;text-transform:lowercase;color:var(--gold);display:flex;align-items:center;gap:.7rem;margin-bottom:1.2rem}
+.sec-label::before{content:'';width:22px;height:1px;background:var(--gold);display:block}
+h2.display{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.5rem);line-height:1.1;color:var(--white)}
+h2.display em{color:var(--gold);font-style:italic}
+.body-text{color:rgba(250,250,250,.55);font-size:.93rem;line-height:1.85}
+
+/* ABOUT */
+#about{background:var(--offblack)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;max-width:1200px;margin:0 auto}
+.about-img{position:relative}
+.about-img img{width:100%;height:560px;object-fit:cover;object-position:center top;filter:grayscale(15%)}
+.about-img::before{content:'entropy';position:absolute;bottom:-1.2rem;left:-1.2rem;font-family:'Playfair Display',serif;font-style:italic;font-size:5rem;color:transparent;-webkit-text-stroke:1px rgba(201,168,76,.2);line-height:1;z-index:-1;pointer-events:none;user-select:none}
+.about-text{}
+.about-text h2{margin-bottom:1.25rem}
+.about-text .body-text{margin-bottom:1rem}
+.stylists{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}
+.stylist-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:1.1rem 1.2rem;transition:background .3s,border-color .3s}
+.stylist-card:hover{background:rgba(201,168,76,.06);border-color:rgba(201,168,76,.2)}
+.stylist-name{font-weight:600;font-size:.9rem;color:var(--white);margin-bottom:.25rem}
+.stylist-role{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+@media(max-width:900px){.about-grid{grid-template-columns:1fr;gap:2.5rem}.about-img img{height:400px}}
+
+/* SERVICES */
+#services{background:var(--black)}
+.services-head{max-width:560px;margin-bottom:4rem}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1px;background:rgba(255,255,255,.07);max-width:1200px;margin:0 auto;border:1px solid rgba(255,255,255,.07)}
+.svc{background:var(--black);padding:2.2rem 2rem;transition:background .3s}
+.svc:hover{background:rgba(201,168,76,.04)}
+.svc-num{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:700;color:rgba(201,168,76,.15);line-height:1;margin-bottom:1rem}
+.svc-title{font-weight:600;font-size:1rem;color:var(--white);margin-bottom:.6rem}
+.svc-desc{font-size:.82rem;color:rgba(250,250,250,.45);line-height:1.75}
+.svc-price{display:inline-block;margin-top:1rem;font-size:.75rem;font-weight:600;letter-spacing:.1em;color:var(--gold);border:1px solid rgba(201,168,76,.25);padding:.28rem .75rem;border-radius:2px}
+
+/* GALLERY */
+#gallery{background:var(--offblack);padding-bottom:4rem}
+.gallery-head{max-width:480px;margin-bottom:3rem}
+.bento{display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:repeat(3,180px);gap:6px;max-width:1200px;margin:0 auto}
+.bento-item{overflow:hidden;position:relative}
+.bento-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease);filter:grayscale(20%)}
+.bento-item:hover img{transform:scale(1.08);filter:grayscale(0%)}
+.bento-item::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,10,10,.2) 0%,transparent 60%)}
+.bi-1{grid-column:1/6;grid-row:1/3}
+.bi-2{grid-column:6/9;grid-row:1/2}
+.bi-3{grid-column:9/13;grid-row:1/2}
+.bi-4{grid-column:6/10;grid-row:2/4}
+.bi-5{grid-column:10/13;grid-row:2/3}
+.bi-6{grid-column:1/4;grid-row:3/4}
+.bi-7{grid-column:4/6;grid-row:3/4}
+.bi-8{grid-column:10/13;grid-row:3/4}
+@media(max-width:760px){
+  .bento{grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,160px);gap:4px}
+  .bi-1,.bi-2,.bi-3,.bi-4,.bi-5,.bi-6,.bi-7,.bi-8{grid-column:auto;grid-row:auto}
+  .bi-1{grid-column:1/3;grid-row:1/2}
+}
+
+/* BOOKING BAND */
+#book{background:var(--gold);padding:4rem clamp(1.5rem,5vw,4rem)}
+.book-inner{display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto;gap:2rem;flex-wrap:wrap}
+.book-text h2{font-family:'Playfair Display',serif;font-size:2.2rem;color:var(--black);line-height:1.15;margin-bottom:.5rem}
+.book-text p{font-size:.9rem;color:rgba(10,10,10,.65);line-height:1.7}
+.btn-black{background:var(--black);color:var(--gold);padding:.9rem 2.2rem;border-radius:3px;font-weight:700;font-size:.85rem;letter-spacing:.06em;text-transform:lowercase;transition:opacity .2s,transform .25s;flex-shrink:0}
+.btn-black:hover{opacity:.85;transform:translateY(-2px)}
+
+/* JOURNAL */
+#journal{background:var(--black)}
+.jgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1px;background:rgba(255,255,255,.06);max-width:1200px;margin:0 auto;border:1px solid rgba(255,255,255,.06)}
+.jcard{background:var(--black);padding:0;cursor:pointer;overflow:hidden;transition:background .3s}
+.jcard:hover{background:rgba(201,168,76,.04)}
+.jcard-top{padding:1.8rem 1.8rem 1.2rem;border-bottom:1px solid rgba(255,255,255,.06)}
+.jcard-top svg{margin-bottom:1.1rem}
+.jcard-kicker{font-size:.62rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem;display:block}
+.jcard-top h3{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--white);line-height:1.4;font-weight:400}
+.jcard-bot{padding:1rem 1.8rem;font-size:.79rem;color:rgba(250,250,250,.4);line-height:1.65}
+.jread{display:inline-flex;align-items:center;gap:.4rem;margin-top:.9rem;font-size:.75rem;font-weight:600;color:var(--gold);letter-spacing:.04em;transition:gap .2s}
+.jcard:hover .jread{gap:.7rem}
+
+/* MODAL */
+#jmodal{position:fixed;inset:0;z-index:9000;display:none;align-items:flex-end;justify-content:center}
+#jmodal.open{display:flex}
+.jmodal-bd{position:absolute;inset:0;background:rgba(0,0,0,.72);backdrop-filter:blur(6px);cursor:pointer}
+.jmodal-sheet{position:relative;z-index:1;background:var(--offblack);border-radius:16px 16px 0 0;max-width:760px;width:100%;max-height:90vh;overflow-y:auto;transform:translateY(100%);transition:transform .45s var(--ease)}
+#jmodal.open .jmodal-sheet{transform:translateY(0)}
+.jmodal-head{padding:2rem 2rem 1.2rem;border-bottom:1px solid rgba(255,255,255,.07);position:sticky;top:0;background:var(--offblack);z-index:1}
+.jmodal-kicker{font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;display:block}
+.jmodal-head h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--white);line-height:1.3;font-weight:400;font-style:italic}
+.jmodal-close{position:absolute;top:1.4rem;right:1.4rem;background:rgba(255,255,255,.07);border:none;cursor:pointer;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.95rem;color:var(--white)}
+.jmodal-body{padding:1.5rem 2rem 3rem}
+.jmodal-body h3{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--gold);margin:1.6rem 0 .6rem;font-style:italic;font-weight:400}
+.jmodal-body p{font-size:.9rem;color:rgba(250,250,250,.6);line-height:1.85;margin-bottom:.8rem}
+.jmodal-body ul{padding-left:1.4rem;margin-bottom:1rem}
+.jmodal-body li{font-size:.88rem;color:rgba(250,250,250,.55);line-height:1.82;margin-bottom:.4rem}
+
+/* CONTACT */
+#contact{background:var(--offblack)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;max-width:1100px;margin:0 auto}
+.contact-info h2{margin-bottom:1.5rem}
+.cdetail{display:flex;align-items:flex-start;gap:.8rem;margin-bottom:1.1rem;font-size:.88rem;color:rgba(250,250,250,.5);line-height:1.65}
+.cdetail svg{flex-shrink:0;margin-top:3px}
+.cdetail strong{color:var(--white);font-weight:500}
+.cmap{border-radius:8px;overflow:hidden;height:320px;border:1px solid rgba(255,255,255,.08)}
+.cmap iframe{width:100%;height:100%;border:none;filter:grayscale(80%) invert(10%)}
+@media(max-width:768px){.contact-grid{grid-template-columns:1fr;gap:2.5rem}}
+
+/* FOOTER */
+footer{background:var(--black);border-top:1px solid rgba(255,255,255,.07);padding:3rem clamp(1.5rem,5vw,4rem) 2rem}
+.ft-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;max-width:1200px;margin:0 auto}
+.ft-logo{font-family:'Playfair Display',serif;font-style:italic;font-size:1.1rem;color:var(--white)}
+.ft-logo span{color:var(--gold)}
+.ft-copy{font-size:.75rem;color:rgba(250,250,250,.3)}
+.ft-copy a{color:var(--gold)}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .65s var(--ease),transform .65s var(--ease)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-x{opacity:0;transform:translateX(-24px);transition:opacity .65s var(--ease),transform .65s var(--ease)}
+.reveal-x.visible{opacity:1;transform:translateX(0)}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
+  #loader,#cursor,#cursor-ring{display:none!important}
+  .reveal,.reveal-x{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div id="loader"><div class="ld-inner"><span class="ld-mark">e</span><span class="ld-word">entropy · hair designs studio</span></div></div>
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<nav id="nav">
+  <div class="nav-logo">entropy<span>hair designs studio</span></div>
+  <button class="burger" id="burger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">studio</a></li>
+    <li><a href="#services">services</a></li>
+    <li><a href="#gallery">gallery</a></li>
+    <li><a href="#journal">journal</a></li>
+    <li><a href="#contact" class="nav-cta">book now</a></li>
+  </ul>
+</nav>
+
+<section id="hero">
+  <div class="hero-left">
+    <div class="hero-left-content">
+      <div class="hero-eyebrow">lillies quarter, hillcrest</div>
+      <h1 class="hero-h1">
+        <strong>Hair</strong>
+        <em>by design.</em>
+        <strong>Not by chance.</strong>
+      </h1>
+      <p class="hero-sub">An editorial hair and barbering studio where every cut, colour and blow wave is crafted with intention. At Lillies Quarter, Hillcrest.</p>
+      <div class="hero-actions">
+        <a href="#book" class="btn-gold">book a session</a>
+        <a href="#services" class="btn-wire">our services</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">4.6</span><span class="stat-lbl">Google rating</span></div>
+        <div class="stat"><span class="stat-num">113</span><span class="stat-lbl">Reviews</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80" alt="Hair styling at entropy studio"/>
+  </div>
+</section>
+
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="gold">entropy</span><span>cuts</span><span>colour</span><span>blow waves</span><span>barbering</span><span>beard work</span><span>hillcrest</span>
+    <span class="gold">entropy</span><span>cuts</span><span>colour</span><span>blow waves</span><span>barbering</span><span>beard work</span><span>hillcrest</span>
+    <span class="gold">entropy</span><span>cuts</span><span>colour</span><span>blow waves</span><span>barbering</span><span>beard work</span><span>hillcrest</span>
+  </div>
+</div>
+
+<section id="about">
+  <div class="about-grid">
+    <div class="about-img reveal-x">
+      <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80" alt="Inside entropy HAIR DESIGNS STUDIO"/>
+    </div>
+    <div class="about-text reveal">
+      <div class="sec-label">our studio</div>
+      <h2 class="display">Designed to <em>transform.</em></h2>
+      <p class="body-text" style="margin:1.2rem 0 .9rem">entropy HAIR DESIGNS STUDIO is not your average salon. Nestled in the Lillies Quarter lifestyle centre on Old Main Road, Hillcrest, we are a full-service hair studio with an editorial edge — where technique meets creativity and every client leaves looking deliberately, undeniably themselves.</p>
+      <p class="body-text">Named for the principle of creative disorder, entropy embraces individuality. Whether you are here for a precision cut, a bold colour transformation, a sleek blow wave or your first proper shave, our stylists bring the same level of care and craftsmanship to every chair.</p>
+      <div class="stylists">
+        <div class="stylist-card"><div class="stylist-name">Charlene</div><div class="stylist-role">Senior Stylist</div></div>
+        <div class="stylist-card"><div class="stylist-name">Stephan</div><div class="stylist-role">Barber Specialist</div></div>
+        <div class="stylist-card"><div class="stylist-name">Keegan</div><div class="stylist-role">Colour &amp; Cut</div></div>
+        <div class="stylist-card"><div class="stylist-name">+ Team</div><div class="stylist-role">entropy Creatives</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="services-head reveal">
+    <div class="sec-label">what we do</div>
+    <h2 class="display">Every service. <em>Elevated.</em></h2>
+  </div>
+  <div class="services-grid">
+    <div class="svc reveal"><div class="svc-num">01</div><div class="svc-title">Precision Cuts</div><p class="svc-desc">Cut to your face shape, lifestyle and vision. Our stylists listen before they pick up the scissors — and never cut too much.</p><span class="svc-price">From R 250</span></div>
+    <div class="svc reveal"><div class="svc-num">02</div><div class="svc-title">Colour &amp; Balayage</div><p class="svc-desc">From full colour to sun-kissed balayage, dimensional highlights and toning — colour work that lasts and turns heads.</p><span class="svc-price">From R 450</span></div>
+    <div class="svc reveal"><div class="svc-num">03</div><div class="svc-title">Blow Wave &amp; Style</div><p class="svc-desc">A proper blow wave by someone who knows what they're doing. Smooth, bouncy, effortless. Leave looking like you.</p><span class="svc-price">From R 200</span></div>
+    <div class="svc reveal"><div class="svc-num">04</div><div class="svc-title">Barbering</div><p class="svc-desc">Classic cuts and fades for men who take their grooming seriously. Precise, clean, always fresh.</p><span class="svc-price">From R 180</span></div>
+    <div class="svc reveal"><div class="svc-num">05</div><div class="svc-title">Beard &amp; Shave</div><p class="svc-desc">The full experience — whether it's your first shave or a regular beard trim. Relaxing, expert, done right.</p><span class="svc-price">From R 120</span></div>
+    <div class="svc reveal"><div class="svc-num">06</div><div class="svc-title">Treatments</div><p class="svc-desc">Hair that looks incredible starts with hair that is healthy. Deep conditioning, scalp treatments and bond repair to restore what the elements take away.</p><span class="svc-price">From R 300</span></div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="gallery-head reveal">
+    <div class="sec-label">the work</div>
+    <h2 class="display">Show, don't <em>tell.</em></h2>
+  </div>
+  <div class="bento">
+    <div class="bento-item bi-1"><img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800&q=80" alt="Hair styling"/></div>
+    <div class="bento-item bi-2"><img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&q=80" alt="Haircut"/></div>
+    <div class="bento-item bi-3"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80" alt="Barbering"/></div>
+    <div class="bento-item bi-4"><img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=600&q=80" alt="Hair colour"/></div>
+    <div class="bento-item bi-5"><img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=600&q=80" alt="Blow wave"/></div>
+    <div class="bento-item bi-6"><img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?w=600&q=80" alt="Salon interior"/></div>
+    <div class="bento-item bi-7"><img src="https://images.unsplash.com/photo-1522337094846-8a818192de1f?w=600&q=80" alt="Hair transformation"/></div>
+    <div class="bento-item bi-8"><img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=600&q=80" alt="Men grooming"/></div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="book-inner">
+    <div class="book-text">
+      <h2>Ready for your<br>next transformation?</h2>
+      <p>Walk-ins welcome. Appointments recommended. Call or pop in at Lillies Quarter.</p>
+    </div>
+    <a href="tel:031 765 4898" class="btn-black">call 031 765 4898</a>
+  </div>
+</section>
+
+<section id="journal">
+  <div class="reveal" style="max-width:500px;margin-bottom:3.5rem">
+    <div class="sec-label">the journal</div>
+    <h2 class="display">Know your <em>hair.</em></h2>
+  </div>
+  <div class="jgrid" id="jGrid"></div>
+</section>
+
+<section id="contact">
+  <div class="contact-grid">
+    <div class="reveal">
+      <div class="sec-label">find us</div>
+      <h2 class="display" style="font-size:2rem;margin-bottom:1.5rem">Come in &amp; <em>sit down.</em></h2>
+      <div class="cdetail"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><strong>Shop C8-C9, Lillies Quarter</strong><br>12 Old Main Rd, Hillcrest, 3650</span></div>
+      <div class="cdetail"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.42 2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.86a16 16 0 0 0 6.29 6.29l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>031 765 4898</span></div>
+      <div class="cdetail"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Mon to Sat: 08:00 to 17:30<br><span style="font-size:.8rem;opacity:.6">Closed Sunday</span></span></div>
+      <div class="cdetail"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><span>Walk-ins welcome · Appointments recommended</span></div>
+    </div>
+    <div class="cmap reveal">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3460!2d30.7724616!3d-29.7874003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef6fba4e2232e85%3A0xe9e6501ae27e4b1f!2sentropy%20HAIR%20DESIGNS%20STUDIO!5e0!3m2!1sen!2sza!4v1700000000000" allowfullscreen="" loading="lazy" title="entropy HAIR DESIGNS STUDIO map"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ft-inner">
+    <div class="ft-logo">entropy <span>studio</span></div>
+    <p class="ft-copy">Lillies Quarter, Hillcrest · 031 765 4898 · Concept build by <a href="https://arkatype.co.za" target="_blank">Arkatype Studios</a></p>
+  </div>
+</footer>
+
+<div id="jmodal" role="dialog" aria-modal="true" aria-labelledby="jmodal-title">
+  <div class="jmodal-bd" id="jmodalBd"></div>
+  <div class="jmodal-sheet">
+    <div class="jmodal-head">
+      <span class="jmodal-kicker" id="jmodalKicker"></span>
+      <h2 id="jmodal-title"></h2>
+      <button class="jmodal-close" id="jmodalClose" aria-label="Close">&#x2715;</button>
+    </div>
+    <div class="jmodal-body" id="jmodalBody"></div>
+  </div>
+</div>
+
+<script>
+const REDUCE = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// Loader
+window.addEventListener('load', () => {
+  const l = document.getElementById('loader');
+  if (REDUCE) { l.style.display='none'; return; }
+  setTimeout(() => l.classList.add('done'), 800);
+});
+
+// Nav
+const nav = document.getElementById('nav');
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('navLinks');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 50), { passive: true });
+burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+// Custom cursor
+if (!REDUCE && !('ontouchstart' in window)) {
+  const cur = document.getElementById('cursor');
+  const ring = document.getElementById('cursor-ring');
+  let rx=0, ry=0;
+  document.addEventListener('mousemove', e => {
+    cur.style.left = e.clientX+'px'; cur.style.top = e.clientY+'px';
+    rx += (e.clientX - rx) * 0.12; ry += (e.clientY - ry) * 0.12;
+    ring.style.left = rx+'px'; ring.style.top = ry+'px';
+  });
+  document.querySelectorAll('a,button,.jcard,.svc').forEach(el => {
+    el.addEventListener('mouseenter', () => { cur.style.transform='translate(-50%,-50%) scale(2)'; ring.style.opacity='0'; });
+    el.addEventListener('mouseleave', () => { cur.style.transform='translate(-50%,-50%) scale(1)'; ring.style.opacity='1'; });
+  });
+  (function animRing() { rx += (parseFloat(cur.style.left||0) - rx) * 0.12; ry += (parseFloat(cur.style.top||0) - ry) * 0.12; ring.style.left=rx+'px'; ring.style.top=ry+'px'; requestAnimationFrame(animRing); })();
+}
+
+// Scroll reveal
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 60); obs.unobserve(e.target); }
+  });
+}, { threshold: .1 });
+document.querySelectorAll('.reveal,.reveal-x').forEach(el => obs.observe(el));
+
+// Journal articles
+const ARTS = [
+  { kicker:'Hair Care', title:'Why Your Hair Hates Durban Humidity (and What To Do About It)', ex:'Expert advice on managing frizz, moisture and style in KZN weather.', icon:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/><circle cx="12" cy="12" r="4"/></svg>', html:'<p>Anyone who lives in KwaZulu-Natal knows the weather here does not play fair. Warm, humid air is beautiful for the garden, but for your hair it is a near-constant battle. Frizz, flatness and colour fade are all linked to humidity, and the Upper Highway climate compounds the problem. Here is what is actually happening — and what to do about it.</p><h3>Why Humidity Attacks Your Hair</h3><p>Hair is made of keratin fibres wrapped in a cuticle layer — the outer scale-like surface of each strand. When humidity is high, moisture from the air penetrates the cuticle and causes the hair shaft to swell unevenly. The result is frizz, particularly in hair that is already dry, colour-treated or naturally textured.</p><h3>Colour and Humidity</h3><p>Colour-treated hair is especially vulnerable. The chemical process used in colouring opens the cuticle to deposit pigment, which makes the hair more porous and therefore more susceptible to moisture absorption. Without proper aftercare, this leads to rapid colour fade and brassiness — especially in Durban\'s conditions.</p><h3>What Actually Works</h3><ul><li><strong>Protein treatments:</strong> Strengthen the hair shaft and reduce porosity, helping lock moisture out in humid conditions.</li><li><strong>Leave-in conditioner:</strong> A light leave-in applied to damp hair seals the cuticle before it can absorb ambient moisture.</li><li><strong>Anti-humidity products:</strong> Look for serums or sprays that contain silicones or polymers — they coat the hair and repel moisture without weighing it down.</li><li><strong>Microfibre towels:</strong> Friction from regular towels roughens the cuticle. A microfibre towel reduces this dramatically.</li><li><strong>Cold water rinse:</strong> Always finish your wash with cool water to seal the cuticle before stepping out into the humidity.</li></ul><h3>Ask Us In the Chair</h3><p>Every client at entropy gets a consultation before we start. We want to understand your hair type, your routine and your environment before making recommendations. If humidity is your nemesis, we have solutions — from bond-building treatments to the right blow-wave technique for your hair texture.</p>' },
+  { kicker:'Style Guide', title:'How to Choose the Right Haircut for Your Face Shape', ex:'A simple, honest guide to finding cuts that actually work for you.', icon:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>', html:'<p>The most common question we hear in the chair at entropy is some version of: "What would look good on me?" It is the right question to ask, and the honest answer starts with face shape. Not because it is a rigid rule, but because knowing your face shape gives you a useful starting point for a conversation about what works — and what does not.</p><h3>The Main Face Shapes</h3><p>Faces broadly fall into one of six categories: oval, round, square, heart, oblong and diamond. Most people are a blend of two, and that is completely normal. The goal is not to fit a box — it is to understand the proportions you are working with.</p><ul><li><strong>Oval:</strong> Balanced proportions, slightly wider at the cheekbones. The lucky one — almost any cut works. Versatility is your friend.</li><li><strong>Round:</strong> Full cheeks, soft jaw, similar width and length. Aim for height at the crown and layers to add length. Avoid styles that add width at the sides.</li><li><strong>Square:</strong> Strong jaw, wide forehead, angular corners. Textured cuts soften the angles. Avoid blunt, straight cuts at jaw level.</li><li><strong>Heart:</strong> Wide forehead, narrow chin. Side-swept fringes and volume at the chin area create balance. Avoid styles that add fullness at the temples.</li><li><strong>Oblong:</strong> Long and narrow. Width-adding layers and fringes shorten the appearance. Avoid centre parts and long, straight styles that emphasise length.</li><li><strong>Diamond:</strong> Narrow forehead and chin with wide cheekbones. Fringes and chin-length styles add width where needed.</li></ul><h3>But Honestly?</h3><p>The best cut is the one that makes you feel like yourself. Face shape is a tool, not a rule. At entropy, we start with your face shape, add your lifestyle, your hair texture, how much time you want to spend styling each morning, and what you actually like — and work from there. The result is always more individual than any formula.</p>' },
+  { kicker:'Men\'s Grooming', title:'The Art of the First Shave: What No One Tells You', ex:'A straight-talking guide for anyone facing their first proper barber experience.', icon:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg>', html:'<p>There is a review on our Google page from a mother whose son Stephan put at ease during his first proper shaving experience. "He was pampered and made to feel comfortable throughout the whole process." That kind of moment is exactly why Stephan does what he does — and it got us thinking about how many people come in nervous, unsure of what to expect, with no idea that it can genuinely be one of the best appointments of their life.</p><h3>What Happens in a Proper Shave</h3><p>A barber shave is different from anything you do at home. The process is unhurried, deliberate and deeply relaxing once you let it be. Here is what to expect:</p><ul><li><strong>Hot towel:</strong> The first thing on your face is a hot towel, softening the skin and opening the pores. The warmth alone is worth the trip.</li><li><strong>Pre-shave oil:</strong> A light oil is applied to protect the skin and allow the blade to glide cleanly without dragging.</li><li><strong>Shaving cream and brush:</strong> Applied in circular motions to lift the hair and create a thick lather. The brush itself is a sensation.</li><li><strong>The shave:</strong> The barber works in short strokes with the grain of your hair growth, angled to follow the curves of your face. Multiple passes get progressively closer.</li><li><strong>Cold towel and aftershave:</strong> Closes the pores and soothes the skin. You will leave feeling ten years younger.</li></ul><h3>How to Prepare</h3><p>Come in with your face clean and freshly washed. Do not shave beforehand. If you have sensitive skin, mention it at the start of the appointment. That is all Stephan needs to adjust his approach.</p><h3>Beard Trims</h3><p>If you are maintaining a beard rather than removing it, the same principles apply. A proper trim follows your natural beard line, removes stragglers with precision and leaves your beard looking shaped rather than attacked. Done right, a trim adds to your appearance rather than simply maintaining it.</p>' },
+  { kicker:'Colour',  title:'Understanding Hair Colour: A Guide for First-Timers', ex:'What to expect from your first colour appointment, explained simply.', icon:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22C6.48 22 2 17.52 2 12S6.48 2 12 2s10 4.48 10 10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>', html:'<p>Colour is one of the most transformative things you can do in a salon chair — and also one of the most misunderstood. If you have never had your hair coloured professionally, the vocabulary alone can feel overwhelming: balayage, highlights, toning, roots, lift, gloss. Here is the plain-language version.</p><h3>The Key Terms</h3><ul><li><strong>All-over colour:</strong> A single shade applied from root to tip. Great for covering grey or making a bold statement.</li><li><strong>Highlights:</strong> Lighter sections woven through the hair to create dimension and brightness. Foils keep sections separate and precise.</li><li><strong>Balayage:</strong> A freehand technique where colour is painted onto the hair to create a natural, sun-kissed effect. Blends in as it grows out, so maintenance is less frequent than foils.</li><li><strong>Toning:</strong> A semi-permanent colour applied after bleaching or lightening to neutralise brassiness and achieve the exact shade you want. The step that takes blonde from yellow to platinum.</li><li><strong>Gloss:</strong> A clear or lightly tinted treatment that adds shine and refreshes existing colour without dramatically changing it.</li></ul><h3>What to Bring to Your Colour Consultation</h3><p>The best thing you can do is bring photos — three to five images of hair colour you love. Not necessarily the same cut, not necessarily from someone with the same hair texture as yours. Just colours you are drawn to. This gives your stylist a starting point that is far more useful than words.</p><h3>Aftercare is Half the Result</h3><p>The colour in the chair is only half the job. Colour-treated hair needs sulphate-free shampoo (sulphates strip colour rapidly), a weekly conditioning treatment and UV protection if you are regularly in the sun. We will send you home with specific recommendations for your treatment after every colour appointment.</p>' },
+  { kicker:'Healthy Hair', title:'The 6 Habits That Are Actually Damaging Your Hair', ex:'Common routines that cause more harm than good — and what to swap them for.', icon:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>', html:'<p>In our years in the salon, we have noticed that the hair issues most clients come in with are rarely a mystery. They almost always trace back to a small number of habits that feel harmless but compound over time into real damage. Here are the six we see most often.</p><h3>1. Washing Every Day</h3><p>Daily washing strips the natural oils your scalp produces to protect and moisturise your hair. Most hair types do best with two to three washes per week. Your scalp will initially overproduce oil when you reduce washing, but normalises within two to three weeks. Dry shampoo is your bridge in the meantime.</p><h3>2. Brushing Wet Hair Aggressively</h3><p>Wet hair is weaker and more elastic than dry hair. Brushing it with a paddle brush from the roots down creates unnecessary breakage. Always start at the ends and work upward — or use a wide-tooth comb on conditioned, wet hair.</p><h3>3. Heat Without Protection</h3><p>Using straighteners, curling irons or a high-heat blow dryer without a heat protectant is burning your hair, slowly. A spray or cream applied before any heat tool forms a barrier between the iron and the hair shaft. Non-negotiable.</p><h3>4. Tight Ponytails and Buns Daily</h3><p>The tension of a daily tight ponytail in the same spot creates traction alopecia over time — a type of hair loss caused by repeated pulling. Alternate positions, use fabric bands instead of elastics and let your hair down at home.</p><h3>5. Skipping Regular Trims</h3><p>Split ends do not stay at the ends. They travel up the shaft, causing breakage further from the tip over time. A trim every eight to ten weeks removes the damage before it spreads and keeps your hair looking intentional rather than just grown out.</p><h3>6. Towel-Drying Aggressively</h3><p>The friction of rubbing your hair with a regular towel roughs up the cuticle, causing frizz and breakage. Switch to a microfibre towel or an old cotton T-shirt and simply squeeze the water out rather than rubbing.</p>' },
+  { kicker:'Studio Life', title:'What to Expect on Your First Visit to entropy', ex:'A first-timer\'s guide to the studio, the experience and the people.', icon:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>', html:'<p>Walking into a new salon is a particular kind of nervousness — you are about to hand over something you care about to someone you have never met. At entropy, we understand that. This is what your first visit actually looks like.</p><h3>Finding Us</h3><p>We are in Shop C8 and C9 at Lillies Quarter on Old Main Road, Hillcrest. The Lillies Quarter centre is easy to find and has parking directly outside. Look for the studio towards the back of the centre — it is unmistakable once you have been once.</p><h3>The Consultation</h3><p>Every appointment starts with a consultation. Not a quick check-in, a real one. Your stylist will ask about your hair history (colour, heat use, previous treatments), your current routine, what you love about your hair, what frustrates you, and what you are hoping for today. This takes five to ten minutes and is the most important part of the appointment.</p><p>If you have photos of what you are going for, bring them. If you are unsure what you want and just know you need a change, say that too. We are good at working with uncertainty.</p><h3>The Service</h3><p>Once your stylist has a clear picture of where you are and where you want to go, they will explain exactly what they plan to do and check in throughout. If anything is not feeling right, say so. We would always rather adjust mid-service than have you leave unhappy.</p><h3>Aftercare Advice</h3><p>Before you leave, your stylist will give you specific recommendations for maintaining your hair at home. These are not generic product suggestions — they are based on your specific hair type, treatment and goals. We take this seriously because the result you leave with only lasts as long as the care at home supports it.</p><h3>Walk-Ins</h3><p>We take walk-ins when we have availability, but appointments are recommended — especially for colour services, which require more time. Call us on 031 765 4898 or simply pop in and we will do our best to fit you in.</p>' }
+];
+
+const jGrid = document.getElementById('jGrid');
+ARTS.forEach((art, idx) => {
+  const c = document.createElement('div');
+  c.className = 'jcard reveal';
+  c.innerHTML = `<div class="jcard-top">${art.icon}<span class="jcard-kicker">${art.kicker}</span><h3>${art.title}</h3></div><div class="jcard-bot">${art.ex}<span class="jread">read more &rarr;</span></div>`;
+  c.addEventListener('click', () => openModal(idx));
+  jGrid.appendChild(c);
+  const o2 = new IntersectionObserver(([e]) => { if (e.isIntersecting) { c.classList.add('visible'); o2.unobserve(c); } }, { threshold: .1 });
+  o2.observe(c);
+});
+
+function openModal(idx) {
+  const a = ARTS[idx];
+  document.getElementById('jmodalKicker').textContent = a.kicker;
+  document.getElementById('jmodal-title').textContent = a.title;
+  document.getElementById('jmodalBody').innerHTML = a.html;
+  document.getElementById('jmodal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('jmodal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('jmodalClose').addEventListener('click', closeModal);
+document.getElementById('jmodalBd').addEventListener('click', closeModal);
+document.addEventListener('keydown', e => { if (e.key==='Escape') closeModal(); });
+</script>
+</body>
+</html>

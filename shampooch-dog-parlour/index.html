@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Shampooch Dog Parlour | Dog grooming in Waterfall, Upper Highway</title>
+<meta name="description" content="Shampooch Dog Parlour — much-loved dog grooming in Waterfall, Upper Highway. Full grooms, bath & tidy, nail care and puppy's first cut. Book by phone or enquiry." />
+<meta property="og:title" content="Shampooch Dog Parlour — Waterfall, Upper Highway" />
+<meta property="og:description" content="Loved dog grooming in Waterfall. 133 reviews. Book a groom today." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{--navy:#2A1E26;--blue:#EA357D;--blue-deep:#C42168;--pink-soft:#E775B2;--light:#FBF5F8;--ink:#221820;--muted:#7C6A74;--line:#F3E0EA;--maxw:1180px}
+  *{box-sizing:border-box}html{scroll-behavior:smooth}
+  body{margin:0;background:var(--light);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:Sora,system-ui,sans-serif;font-weight:700;line-height:1.05;letter-spacing:-.02em;margin:0}
+  h2{font-size:clamp(2rem,4vw,3rem)}
+  p{margin:0 0 1rem}a{color:inherit}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;font-weight:700;color:var(--blue)}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.6rem;border-radius:12px;font-weight:600;font-size:.95rem;text-decoration:none;border:2px solid transparent;transition:transform .2s,background .2s,box-shadow .2s;cursor:pointer}
+  .btn-primary{background:var(--blue);color:#fff;box-shadow:0 10px 24px -12px var(--blue)}
+  .btn-primary:hover{transform:translateY(-2px);background:var(--blue-deep)}
+  .btn-ghost{border-color:var(--line);color:var(--navy);background:#fff}
+  .btn-ghost:hover{transform:translateY(-2px);border-color:var(--blue)}
+  header.nav{position:sticky;top:0;z-index:30;background:rgba(244,246,249,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{font-family:Sora;font-weight:800;font-size:1.25rem;color:var(--navy);text-decoration:none;letter-spacing:-.02em;display:inline-flex;align-items:center;gap:8px}
+  .brand svg{width:22px;height:22px;color:var(--blue)}
+  .brand span{color:var(--blue)}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{color:var(--navy);text-decoration:none;font-size:.92rem;font-weight:600}
+  .nav-links a:hover{color:var(--blue)}
+  .nav-links .btn{padding:.55rem 1.1rem}
+  .navtoggle{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px;padding:8px}
+  .navtoggle span{width:24px;height:2px;background:var(--navy);display:block;border-radius:2px}
+  @media(max-width:780px){
+    .navtoggle{display:flex}
+    .nav-links{position:absolute;top:72px;left:0;right:0;background:#fff;flex-direction:column;align-items:stretch;gap:0;padding:6px 0;border-bottom:1px solid var(--line);box-shadow:0 18px 30px -20px rgba(34,24,30,.3);display:none}
+    .nav-links.open{display:flex}
+    .nav-links a:not(.btn){padding:13px 24px}
+    .nav-links .btn{margin:8px 24px;text-align:center;justify-content:center}
+  }
+
+  /* HERO — asymmetric offset + kinetic headline */
+  .hero{padding:70px 0 0;overflow:hidden;position:relative}
+  .bubbles{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+  .bubble{position:absolute;bottom:-70px;border-radius:50%;background:radial-gradient(circle at 32% 28%,rgba(255,255,255,.95),rgba(244,156,196,.45) 55%,rgba(234,53,125,.14));box-shadow:inset 0 -4px 10px rgba(234,53,125,.22),inset 2px 2px 9px rgba(255,255,255,.85);animation:rise linear infinite}
+  @keyframes rise{0%{transform:translateY(0) scale(.5);opacity:0}12%{opacity:.8}88%{opacity:.5}100%{transform:translateY(-96vh) scale(1);opacity:0}}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;position:relative;z-index:1}
+  @media(max-width:880px){.hero-grid{grid-template-columns:1fr;gap:28px}}
+  .hero h1{font-size:clamp(2.6rem,6vw,4.6rem);font-weight:800}
+  .kin{background:linear-gradient(90deg,var(--blue),#F49CC4,var(--blue));background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sweep 5s linear infinite}
+  @keyframes sweep{to{background-position:200% center}}
+  .hero p.lede{font-size:clamp(1.05rem,1.5vw,1.25rem);color:var(--muted);max-width:46ch;margin-top:1.1rem}
+  .hero .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:1.8rem}
+  .hero .trust{margin-top:1.6rem;font-size:.9rem;color:var(--muted);display:flex;align-items:center;gap:10px}
+  .stars{color:#F59E0B;letter-spacing:1px}
+  .hero-visual{position:relative}
+  .hero-card{aspect-ratio:4/5;border-radius:24px;background:linear-gradient(150deg,#2b3b4e,#1e2a38);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.35);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;box-shadow:0 30px 60px -30px rgba(30,42,56,.5);overflow:hidden}
+  .hero-card img{width:100%;height:100%;object-fit:cover;object-position:75% 65%;display:block}
+  .badge{position:absolute;left:-18px;bottom:30px;background:#fff;border-radius:16px;padding:14px 18px;box-shadow:0 18px 40px -20px rgba(30,42,56,.4);font-weight:700;color:var(--navy);font-family:Sora}
+  .badge small{display:block;color:var(--muted);font-weight:500;font-family:Inter;font-size:.72rem;margin-top:2px}
+
+  /* MARQUEE band */
+  .marquee{margin-top:56px;background:var(--navy);color:#fff;padding:16px 0;overflow:hidden;white-space:nowrap}
+  .marquee .track{display:inline-block;animation:scrollx 22s linear infinite;font-family:Sora;font-weight:700;font-size:1.1rem;letter-spacing:.02em}
+  .marquee .track span{margin:0 26px;opacity:.92}
+  .marquee .dot{color:var(--blue)}
+  @keyframes scrollx{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  section.block{padding:84px 0}
+  .section-head{max-width:60ch;margin-bottom:40px}
+  .section-head h2{margin-top:.5rem}
+  .section-head p{color:var(--muted);margin-top:.7rem;font-size:1.05rem}
+  .grid{display:grid;gap:22px}.cols-3{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:860px){.cols-3{grid-template-columns:1fr}}
+  .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px;transition:transform .25s,box-shadow .25s}
+  .card:hover{transform:translateY(-4px);box-shadow:0 22px 44px -28px rgba(30,42,56,.45)}
+  .card .ic{width:46px;height:46px;border-radius:12px;background:rgba(59,130,246,.12);display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--blue)}
+  .card .ic svg{width:24px;height:24px}
+  .row svg{width:20px;height:20px;color:var(--blue);flex-shrink:0}
+  a:focus-visible,.btn:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:10px}
+  .card h3{font-size:1.2rem;margin-bottom:.4rem}
+  .card p{color:var(--muted);margin:0;font-size:.96rem}
+
+  .proof{background:#fff;border:1px solid var(--line);border-radius:24px;padding:48px 40px;display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center}
+  @media(max-width:780px){.proof{grid-template-columns:1fr;gap:24px}}
+  .proof .score{text-align:center}
+  .proof .score b{font-family:Sora;font-size:3.4rem;font-weight:800;color:var(--navy);display:block;line-height:1}
+  .proof blockquote{margin:0;font-family:Sora;font-weight:600;font-size:1.5rem;color:var(--navy);line-height:1.25}
+  .proof cite{display:block;margin-top:12px;color:var(--muted);font-style:normal;font-size:.9rem}
+
+  .about{background:var(--navy);color:#fff;border-radius:24px;padding:64px 48px;text-align:center}
+  .about .big{font-family:Sora;font-weight:700;font-size:clamp(1.6rem,3.2vw,2.4rem);max-width:24ch;margin:0 auto;line-height:1.2}
+  .about p{color:rgba(255,255,255,.7);max-width:52ch;margin:18px auto 0}
+
+  .contact{display:grid;grid-template-columns:1fr 1fr;gap:36px;background:#fff;border:1px solid var(--line);border-radius:24px;padding:48px}
+  @media(max-width:780px){.contact{grid-template-columns:1fr}}
+  .contact a{color:var(--blue);text-decoration:none;font-weight:600}
+  .contact .row{display:flex;gap:12px;margin-bottom:14px;color:var(--ink)}
+  .map{background:linear-gradient(135deg,#e7edf4,#dbe4ee);border-radius:16px;min-height:240px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.8rem;text-transform:uppercase;letter-spacing:.12em}
+
+  footer{background:var(--navy);color:rgba(255,255,255,.7);padding:40px 0;font-size:.85rem;margin-top:8px}
+  .foot-in{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;align-items:center}
+  .brand-l{font-family:Sora;font-weight:800;color:#fff;font-size:1.1rem}.brand-l span{color:var(--blue)}
+  .draft{font-size:.7rem;color:var(--blue);background:rgba(59,130,246,.1);border:1px dashed rgba(59,130,246,.4);border-radius:8px;padding:.35rem .6rem;display:inline-block;margin-top:14px}
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.kin,.marquee .track{animation:none}.bubble{display:none}}
+/* ── journal ── */
+.journal-section{padding:80px 0;background:#fff}
+.journal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.4rem;margin-top:2.5rem}
+.journal-card{background:var(--light);border-radius:18px;padding:1.8rem;cursor:pointer;border:1px solid var(--line);transition:transform .28s,box-shadow .28s,border-color .28s}
+.journal-card:hover{transform:translateY(-5px);box-shadow:0 18px 44px -24px rgba(234,53,125,.25);border-color:var(--blue)}
+.journal-kicker{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:.6rem}
+.journal-title{font-family:Sora,system-ui,sans-serif;font-size:1.18rem;font-weight:700;line-height:1.18;margin-bottom:.6rem;color:var(--navy)}
+.journal-excerpt{font-size:.9rem;color:var(--muted);line-height:1.62;margin-bottom:1rem}
+.journal-read{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);display:flex;align-items:center;gap:.4rem}
+.journal-read::after{content:'→';transition:transform .2s}
+.journal-card:hover .journal-read::after{transform:translateX(4px)}
+.j-overlay{display:none;position:fixed;inset:0;z-index:1000;background:rgba(42,30,38,.6);backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:2rem}
+.j-overlay.open{display:flex}
+.j-box{background:#fff;border-radius:18px;max-width:700px;width:100%;max-height:88vh;overflow-y:auto;padding:2.8rem 2.5rem;position:relative;box-shadow:0 28px 70px rgba(0,0,0,.18)}
+.j-close{position:absolute;top:1.4rem;right:1.4rem;background:var(--light);border:none;cursor:pointer;width:34px;height:34px;border-radius:50%;font-size:1rem;color:var(--muted);display:flex;align-items:center;justify-content:center;transition:background .2s,color .2s}
+.j-close:hover{background:var(--navy);color:#fff}
+.j-kicker{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:.6rem}
+.j-title{font-family:Sora,system-ui,sans-serif;font-size:1.75rem;font-weight:700;line-height:1.14;margin-bottom:1rem;color:var(--navy)}
+.j-body{font-size:.93rem;line-height:1.82;color:var(--ink)}
+.j-body p{margin-bottom:1rem}
+.j-body h3{font-family:Sora,system-ui,sans-serif;font-size:1.08rem;font-weight:700;margin:1.3rem 0 .4rem;color:var(--navy)}
+@media(max-width:640px){.j-box{padding:2rem 1.4rem}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"/><path d="M12 11v11"/><path d="m19 3-7 8-7-8Z"/></svg>Sham<span>pooch</span></a>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#proof">Reviews</a>
+      <a href="learn.html">Dog Care</a>
+      <a href="#contact">Visit</a>
+      <a class="btn btn-primary" href="#contact">Book a groom</a>
+    </nav>
+    <button class="navtoggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="bubbles" id="bubbles" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Waterfall · Upper Highway, Durban</p>
+      <h1>Happy dogs,<br><span class="kin">great grooms.</span></h1>
+      <p class="lede">Waterfall's much-loved dog parlour — gentle, professional grooming that leaves tails wagging. Full grooms, bath &amp; tidy, nails and puppy's first cut.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#contact">Book a groom</a>
+        <a class="btn btn-ghost" href="#services">See services</a>
+      </div>
+      <div class="trust"><span class="stars">★★★★★</span> Loved by 133 local dog owners on Google</div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card"><img src="images/u_dog_6.jpg" alt="A happy, freshly groomed dog" loading="lazy" /></div>
+      <div class="badge">133 reviews<small>Waterfall favourite</small></div>
+    </div>
+  </div>
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <span>FULL GROOMS <b class="dot">•</b></span><span>BATH &amp; TIDY <b class="dot">•</b></span><span>NAIL TRIMS <b class="dot">•</b></span><span>DE-SHEDDING <b class="dot">•</b></span><span>PUPPY'S FIRST CUT <b class="dot">•</b></span><span>HAND-DRYING <b class="dot">•</b></span>
+      <span>FULL GROOMS <b class="dot">•</b></span><span>BATH &amp; TIDY <b class="dot">•</b></span><span>NAIL TRIMS <b class="dot">•</b></span><span>DE-SHEDDING <b class="dot">•</b></span><span>PUPPY'S FIRST CUT <b class="dot">•</b></span><span>HAND-DRYING <b class="dot">•</b></span>
+    </div>
+  </div>
+</section>
+
+<main>
+  <section class="block" id="services">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">What we do</p>
+        <h2>Grooming that's kind, careful and tail-wag approved.</h2>
+        <p>Grouped the way owners book. Exact services &amp; prices come straight from Shampooch before launch.</p>
+      </div>
+      <div class="grid cols-3">
+        <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/></svg></div><h3>Full groom</h3><p>Wash, cut, style and finish — the complete spa day for your pup.</p></div>
+        <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></div><h3>Bath &amp; tidy</h3><p>A freshen-up between full grooms to keep them clean and comfy.</p></div>
+        <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><circle cx="11" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="4" cy="8" r="2"/><path d="M12 10c-3 0-5.5 2.3-5.5 5 0 1.9 1.6 3 3.5 3 .9 0 1.4-.3 2-.3s1.1.3 2 .3c1.9 0 3.5-1.1 3.5-3 0-2.7-2.5-5-5.5-5z"/></svg></div><h3>Nail &amp; paw care</h3><p>Gentle nail trims and paw tidying — quick, calm, stress-free.</p></div>
+        <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg></div><h3>Puppy's first cut</h3><p>A gentle introduction so grooming becomes something they enjoy.</p></div>
+        <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.8 19.6A2 2 0 1 0 14 16H2"/><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"/><path d="M9.8 4.4A2 2 0 1 1 11 8H2"/></svg></div><h3>De-shedding &amp; hand-dry</h3><p>Less hair at home, a coat that looks and feels its best.</p></div>
+        <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg></div><h3>Add-ons</h3><p>Teeth, ears and the little extras that keep them healthy.</p></div>
+      </div>
+      <span class="draft">DRAFT · awaiting client: exact services, prices, breed/size pricing</span>
+    </div>
+  </section>
+
+  <section class="block" id="proof" style="padding-top:0">
+    <div class="wrap">
+      <div class="proof reveal">
+        <div class="score"><b>4.x★</b><div style="color:var(--muted);margin-top:6px">133 Google reviews</div></div>
+        <div>
+          <blockquote>"They treat every dog like their own — our pup actually pulls us through the door."</blockquote>
+          <cite>— Placeholder review · real, approved quotes added before launch</cite>
+        </div>
+      </div>
+      <span class="draft">DRAFT · awaiting client: confirm rating, pick approved review quotes</span>
+    </div>
+  </section>
+
+  <style>
+    .ggrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    @media(max-width:760px){.ggrid{grid-template-columns:repeat(2,1fr)}}
+    .gtile{aspect-ratio:4/5;border-radius:16px;overflow:hidden;background:linear-gradient(150deg,#f7e0ec,#f3cfe0);display:flex;align-items:center;justify-content:center;color:var(--blue-deep);font-weight:600;font-size:.82rem;letter-spacing:.04em;text-transform:uppercase}
+    .gtile img{width:100%;height:100%;object-fit:cover;display:block}
+    .gtile.ph{border:1px dashed rgba(234,53,125,.45)}
+  </style>
+  <section class="block" id="gallery" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Recent grooms</p>
+        <h2>Fresh cuts, happy tails.</h2>
+        <p>A few of our recent visitors. We'll fill this with your own gallery of happy dogs once we're underway.</p>
+      </div>
+      <div class="ggrid reveal">
+        <div class="gtile"><img src="images/s4.jpg" alt="A real recent groom at Shampooch — a Yorkshire Terrier" loading="lazy" /></div>
+        <div class="gtile"><img src="images/u_dog_13.jpg" alt="A pampered dog wrapped in a towel" loading="lazy" /></div>
+        <div class="gtile"><img src="images/u_dog_14.jpg" alt="A poodle being scissor-trimmed" loading="lazy" /></div>
+        <div class="gtile"><img src="images/u_dog_5.jpg" alt="A dog being blow-dried at the groomer" loading="lazy" /></div>
+        <div class="gtile"><img src="images/u_dog_10.jpg" alt="A freshly groomed shih-tzu" loading="lazy" /></div>
+        <div class="gtile"><img src="images/u_dog_8.jpg" alt="A pampered dog at the spa" loading="lazy" /></div>
+        <div class="gtile"><img src="images/u_dog_11.jpg" alt="A happy groomed corgi" loading="lazy" /></div>
+        <div class="gtile"><img src="images/u_dog_2.jpg" alt="A happy dog" loading="lazy" /></div>
+      </div>
+      <span class="draft">DRAFT · first tile is a real Shampooch groom; the rest are sample images, replaced with their own gallery + owner/team photo before launch</span>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:0">
+    <div class="wrap">
+      <div class="about reveal">
+        <div class="big">Built on 133 happy tails — and the owners who keep coming back.</div>
+        <p>Shampooch became a Waterfall favourite the honest way: calm, careful grooming and dogs that can't wait to visit. This is a short draft in their own voice — the real story gets added before launch.</p>
+        <span class="draft" style="color:var(--blue);background:rgba(96,165,250,.18);border-color:rgba(96,165,250,.5)">DRAFT · awaiting client: founding story, owner name, team photo</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="contact" style="padding-top:0">
+    <div class="wrap">
+      <div class="contact reveal">
+        <div>
+          <p class="eyebrow">Book / Visit</p>
+          <h2 style="margin:.4rem 0 1rem">Book your dog's next groom.</h2>
+          <div class="row"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><a href="tel:+27317621627">031 762 1627</a></div>
+          <div class="row"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span><a href="mailto:shampooch44@gmail.com">shampooch44@gmail.com</a></div>
+          <div class="row"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span><span>23 Link Rd, Waterfall, Upper Highway</span></div>
+          <div class="row"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><span>Trading hours — to confirm with Shampooch</span></div>
+          <div class="cta-row" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:18px">
+            <a class="btn btn-primary" href="tel:+27317621627">Call to book</a>
+            <a class="btn btn-ghost" href="mailto:shampooch44@gmail.com">Email an enquiry</a>
+          </div>
+          <span class="draft">DRAFT · awaiting client: hours, online booking pref, deposit policy</span>
+        </div>
+        <div class="map" style="display:block;padding:0;overflow:hidden;min-height:240px"><iframe title="Shampooch Dog Parlour location" src="https://www.google.com/maps?q=Shampooch%20Dog%20Parlour%2C%2023%20Link%20Rd%2C%20Waterfall%2C%20Durban&output=embed" width="100%" height="260" style="border:0;display:block" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ── journal ── -->
+<section class="journal-section" id="journal">
+  <div class="wrap">
+    <p class="eyebrow reveal">Dog care tips</p>
+    <h2 class="reveal" style="margin-bottom:2.5rem">From the <em style="font-style:italic">parlour</em></h2>
+    <div class="journal-grid">
+      <div class="journal-card reveal" data-jid="grooming-frequency">
+        <p class="journal-kicker">Grooming Basics</p>
+        <h3 class="journal-title">How often should you groom your dog? It depends on the breed</h3>
+        <p class="journal-excerpt">There's no one-size-fits-all answer. Here's how to figure out the right schedule for your dog.</p>
+        <span class="journal-read">Read more</span>
+      </div>
+      <div class="journal-card reveal" data-jid="home-brushing">
+        <p class="journal-kicker">At-Home Care</p>
+        <h3 class="journal-title">How to brush your dog at home without a fight</h3>
+        <p class="journal-excerpt">Regular brushing between grooms keeps mats away and your dog comfortable. Here's how to make it easy.</p>
+        <span class="journal-read">Read more</span>
+      </div>
+      <div class="journal-card reveal" data-jid="choosing-groomer">
+        <p class="journal-kicker">Finding the Right Fit</p>
+        <h3 class="journal-title">What to look for in a dog groomer (and what to avoid)</h3>
+        <p class="journal-excerpt">Not all parlours are equal. Here are the questions worth asking before you book.</p>
+        <span class="journal-read">Read more</span>
+      </div>
+      <div class="journal-card reveal" data-jid="nail-trims">
+        <p class="journal-kicker">Health & Comfort</p>
+        <h3 class="journal-title">Why nail trims matter more than most owners realise</h3>
+        <p class="journal-excerpt">Overgrown nails affect posture, gait, and joint health. It's not just cosmetic.</p>
+        <span class="journal-read">Read more</span>
+      </div>
+      <div class="journal-card reveal" data-jid="stress-free-bath">
+        <p class="journal-kicker">Puppy Tips</p>
+        <h3 class="journal-title">How to make bath time stress-free for anxious dogs</h3>
+        <p class="journal-excerpt">Fear of water or the grooming table is common — and fixable. Here's what actually works.</p>
+        <span class="journal-read">Read more</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="j-overlay" id="j-overlay" role="dialog" aria-modal="true">
+  <div class="j-box">
+    <button class="j-close" id="j-close" aria-label="Close">✕</button>
+    <p class="j-kicker" id="j-kicker"></p>
+    <h2 class="j-title" id="j-title"></h2>
+    <div class="j-body" id="j-body"></div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap foot-in">
+    <div class="brand-l">Sham<span>pooch</span> Dog Parlour</div>
+    <div>23 Link Rd, Waterfall · 031 762 1627</div>
+    <div style="opacity:.6">Concept site · built by Arkatype Digital</div>
+  </div>
+</footer>
+
+<script>
+  // Soap bubbles — on-theme decorative motif ($0, code-generated, reduced-motion safe)
+  const bw=document.getElementById('bubbles');
+  if(bw && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    for(let i=0;i<16;i++){const b=document.createElement('span');b.className='bubble';const s=8+Math.random()*46;b.style.width=b.style.height=s+'px';b.style.left=(Math.random()*100)+'%';b.style.animationDuration=(7+Math.random()*11)+'s';b.style.animationDelay=(-Math.random()*14)+'s';bw.appendChild(b);}
+  }
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.14});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// ── journal ──
+const J_ARTS = {
+  'grooming-frequency': {
+    kicker: 'Grooming Basics',
+    title: 'How often should you groom your dog? It depends on the breed',
+    body: '<p>A golden retriever needs to be groomed very differently to a short-haired Staffie. Coat type, length, texture, and how fast it grows all determine the right schedule — not a single one-size rule.</p><h3>Long and double coats</h3><p>Breeds with longer coats — golden retrievers, spaniels, border collies, Maltese — typically need a full groom every 6–8 weeks, plus regular brushing at home in between. Without it, the coat can mat, and mats that form close to the skin are painful to remove and can harbour moisture and bacteria.</p><h3>Curly and wavy coats</h3><p>Poodles, bichons, labradoodles, and other curly-coated breeds have hair that just keeps growing — they don\'t shed in the same way. A groom every 6–8 weeks is usually needed to prevent knots, with some owners bringing them in as frequently as every 4–5 weeks for a tidy trim. Without regular attention, curly coats can become solid mats underneath that only become visible when the outer coat is parted.</p><h3>Short coats</h3><p>Beagles, Boxers, Dachshunds, and other short-haired breeds need far less grooming but still benefit from a bath and brush every 8–12 weeks. Even short coats shed, and a good deshed treatment removes loose undercoat and reduces how much of it ends up on your furniture.</p><p>Not sure what your dog needs? Call us — we\'re happy to give advice based on breed before you book.</p>'
+  },
+  'home-brushing': {
+    kicker: 'At-Home Care',
+    title: 'How to brush your dog at home without a fight',
+    body: '<p>Regular brushing between grooms is one of the best things you can do for your dog\'s coat and skin health. It removes loose fur, prevents matting, and gives you a chance to check for lumps, ticks, or skin irritation. The only problem: many dogs hate it, especially if they weren\'t introduced to it early.</p><h3>Introduce it gradually</h3><p>If your dog has a negative reaction to the brush, don\'t push through it — that just reinforces the association. Start by simply having the brush nearby during a calm moment, letting your dog sniff it. Next session, touch it briefly to the dog\'s body without brushing. Over days or weeks, build up to short, gentle brushing sessions — always rewarded with a treat and calm praise at the end.</p><h3>Right tool for the coat</h3><p>Using the wrong brush makes the job harder and less comfortable. Slicker brushes work well for most medium and long coats. De-shedding tools (like a Furminator) are great for double-coated breeds. Rubber grooming mitts are ideal for short-haired dogs and dogs who dislike brushes. Ask us at your next visit what we recommend for your dog\'s specific coat.</p><h3>Focus areas</h3><p>Pay attention to the spots most prone to matting: behind the ears, under the \'armpits\', around the collar, and at the base of the tail. These areas trap moisture and rub, which means mats form here first. A few minutes on these spots regularly saves a lot of trouble at groom time.</p><p>A well-brushed dog is a pleasure to groom. We notice — and appreciate — when our clients have been keeping up with brushing at home.</p>'
+  },
+  'choosing-groomer': {
+    kicker: 'Finding the Right Fit',
+    title: 'What to look for in a dog groomer (and what to avoid)',
+    body: '<p>Your dog can\'t tell you if they had a bad experience. That puts the responsibility on you to choose carefully. Here\'s what\'s worth paying attention to.</p><h3>Transparency about the process</h3><p>A good groomer will walk you through what happens during your dog\'s appointment, answer questions about techniques, and let you know if anything needs attention — a skin issue, an ear concern, a mat that was worse than expected. Vague answers or reluctance to discuss what happens while you\'re away is a red flag.</p><h3>The handling approach</h3><p>Particularly for anxious or older dogs, ask how the parlour handles dogs that are stressed on the table. Force-free and gentle handling takes longer and requires more skill, but it\'s what a good groomer does. Watch how staff interact with the dogs in reception. You\'ll learn a lot.</p><h3>What the space looks and smells like</h3><p>A clean, well-organised grooming space with good ventilation is basic — and not universal. If kennels are used for dogs waiting between stages of the groom, check that they\'re appropriate in size and that dogs aren\'t left for excessive periods. At Shampooch, we aim to minimise waiting time so the experience is as relaxed as possible.</p><h3>After the groom</h3><p>Your dog should come home smelling clean, with a coat that\'s been properly dried and finished — not damp. Check around the face, paws, and undercarriage. These are the areas that often get rushed. A groomer who takes pride in the work will finish those areas properly.</p>'
+  },
+  'nail-trims': {
+    kicker: 'Health & Comfort',
+    title: 'Why nail trims matter more than most owners realise',
+    body: '<p>Long nails are the most commonly overlooked aspect of dog care — and one of the most impactful for your dog\'s comfort and health over time.</p><h3>What overgrown nails do to posture</h3><p>When nails are too long, dogs can\'t place their paws flat on the ground properly. They shift their weight back to compensate, which changes their posture and gait. Done consistently over time, this can contribute to joint stress in the wrists, elbows, and hips — particularly in older or larger dogs. What looks like an \'age thing\' is sometimes actually a nail-length thing that has compounded over years.</p><h3>The quick problem</h3><p>The quick is the blood vessel and nerve inside the nail. In clear nails, you can see it as a pink area. In dark nails, it\'s invisible. When nails are left to grow too long, the quick grows with them, making it progressively harder to trim nails back to the correct length without causing bleeding. Regular trimming keeps the quick short. Allowing nails to get very overgrown often means you can only trim a little at a time, over multiple sessions.</p><h3>How often is enough?</h3><p>For most dogs, every 4–6 weeks is right. Dogs that walk a lot on concrete wear their nails down naturally and may need less frequent trims. Dogs that mostly walk on grass or soft surfaces wear very little down and may need more frequent attention. If you can hear your dog\'s nails clicking on hard floors, they\'re overdue.</p><p>We include a nail check with every groom at Shampooch. If nails need attention between grooms, we\'re happy to see your dog just for that.</p>'
+  },
+  'stress-free-bath': {
+    kicker: 'Puppy Tips',
+    title: 'How to make bath time stress-free for anxious dogs',
+    body: '<p>Bath anxiety in dogs is extremely common. It\'s not a personality flaw — it\'s usually a learned response, often from early experiences that were rushed, cold, or uncomfortable. The good news is it\'s usually addressable with patience and the right approach.</p><h3>Start before the water</h3><p>For dogs with bath anxiety, don\'t start by picking them up and putting them in. Spend time in the bathroom together without anything happening — sit on the floor, give treats, play a little. Make the space itself neutral before introducing water into the equation.</p><h3>Temperature and water pressure matter</h3><p>Dogs are sensitive to water temperature and to the pressure and sound of the spray. Use warm — not hot — water, and a gentle shower head setting rather than a strong direct stream. Directing the flow away from the face helps significantly. Many dogs that \'hate baths\' actually hate the face-wetting part most. Working around the face with a damp cloth rather than direct spray can change the whole experience.</p><h3>During and after</h3><p>Stay calm yourself — dogs are acutely sensitive to your tension. A calm, matter-of-fact tone works better than anxious reassurance, which can actually reinforce the dog\'s sense that something worrying is happening. Towel dry gently and immediately reward the dog heavily after the bath. Over time, that positive association at the end filters backward.</p><h3>At the grooming parlour</h3><p>At Shampooch, we work at the dog\'s pace with anxious animals. If your dog has had difficult experiences at groomers before, let us know when you book. We can schedule a meet-and-greet first, or plan the appointment around lower-stimulus times.</p>'
+  }
+};
+
+(function(){
+  const overlay=document.getElementById('j-overlay');
+  const closeBtn=document.getElementById('j-close');
+  document.querySelectorAll('.journal-card').forEach(card=>{
+    card.addEventListener('click',()=>{
+      const art=J_ARTS[card.dataset.jid];
+      if(!art)return;
+      document.getElementById('j-kicker').textContent=art.kicker;
+      document.getElementById('j-title').textContent=art.title;
+      document.getElementById('j-body').innerHTML=art.body;
+      overlay.classList.add('open');
+      document.body.style.overflow='hidden';
+    });
+  });
+  function closeJ(){overlay.classList.remove('open');document.body.style.overflow='';}
+  closeBtn.addEventListener('click',closeJ);
+  overlay.addEventListener('click',e=>{if(e.target===overlay)closeJ();});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeJ();});
+})();
+</script>
+<script>(function(){var t=document.querySelector('.navtoggle'),nl=document.querySelector('.nav-links');if(t)t.addEventListener('click',function(){nl.classList.toggle('open');});}());</script>
+</body>
+</html>

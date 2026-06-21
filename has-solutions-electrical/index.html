@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>H.A.S. Solutions (Electrical) — Licensed Electrician Hillcrest, KZN</title>
+<meta name="description" content="Licensed electrician serving Hillcrest, Kloof, Gillitts, Waterfall and surrounds. Fault finding, DB upgrades, rewiring, COC. Call 072 408 2155.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0C1B2E;
+    --yellow: #F5C518;
+    --white: #FAFAFA;
+    --steel: #2A3A4A;
+    --muted: #7A8A9A;
+    --line: rgba(255,255,255,.08);
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ── LOADER ── */
+  #loader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.15em;
+    pointer-events: none;
+  }
+
+  #loader span {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: clamp(3rem, 12vw, 7rem);
+    letter-spacing: -0.02em;
+    color: var(--white);
+    display: inline-block;
+    transform: translateY(110%);
+    opacity: 0;
+  }
+
+  #loader span.dot {
+    color: var(--yellow);
+    font-size: clamp(2rem, 8vw, 5rem);
+    align-self: flex-start;
+    margin-top: 0.18em;
+  }
+
+  #loader.done {
+    opacity: 0;
+    transition: opacity 0.5s ease 0.2s;
+    pointer-events: none;
+  }
+
+  /* ── NAV ── */
+  #nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 1.25rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.35s var(--ease), backdrop-filter 0.35s var(--ease), box-shadow 0.35s var(--ease);
+  }
+
+  #nav.scrolled {
+    background: rgba(42, 58, 74, 0.97);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 1px 0 var(--line);
+  }
+
+  .nav-brand {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    text-decoration: none;
+  }
+
+  .nav-brand .wordmark {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.12em;
+    color: var(--white);
+  }
+
+  .nav-brand .sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.22em;
+    color: var(--yellow);
+    text-transform: uppercase;
+    margin-top: 0.15em;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(250,250,250,0.72);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--white); }
+
+  .btn-quote {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--navy) !important;
+    background: var(--yellow);
+    border: none;
+    padding: 0.6rem 1.35rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.2s, transform 0.2s;
+    display: inline-block;
+  }
+
+  .btn-quote:hover { opacity: 0.88; transform: translateY(-1px); }
+
+  /* ── HERO ── */
+  #hero {
+    position: relative;
+    min-height: 100vh;
+    background: var(--navy);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 9rem 2rem 0;
+    overflow: hidden;
+  }
+
+  #spark-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--yellow);
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 2rem;
+    height: 1px;
+    background: var(--yellow);
+  }
+
+  h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: clamp(3.5rem, 9vw, 7.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    color: var(--white);
+    margin-bottom: 1.75rem;
+  }
+
+  .hero-sub {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: var(--muted);
+    max-width: 480px;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 4rem;
+  }
+
+  .btn-primary {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    color: var(--navy);
+    background: var(--yellow);
+    border: none;
+    padding: 1rem 2.2rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+
+  .btn-primary:hover { opacity: 0.88; transform: translateY(-2px); }
+
+  .btn-outline {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    color: var(--white);
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.28);
+    padding: 1rem 2.2rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .btn-outline:hover {
+    border-color: rgba(255,255,255,0.55);
+    background: rgba(255,255,255,0.05);
+  }
+
+  .hero-stats {
+    position: relative;
+    z-index: 2;
+    border-top: 1px solid var(--line);
+    padding: 1.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .stat-val {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--yellow);
+  }
+
+  .stat-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* ── SECTION BASE ── */
+  section { padding: 6rem 2rem; }
+
+  .section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-kicker {
+    font-size: 0.68rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--yellow);
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    margin-bottom: 3.5rem;
+  }
+
+  /* ── SERVICES ── */
+  #services {
+    background: var(--steel);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+
+  .service-card {
+    background: var(--steel);
+    padding: 2.25rem 2rem;
+    transition: background 0.25s;
+    position: relative;
+  }
+
+  .service-card:hover { background: #334455; }
+
+  .service-num {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    color: var(--yellow);
+    margin-bottom: 1.1rem;
+    opacity: 0.7;
+  }
+
+  .service-icon {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    display: block;
+    line-height: 1;
+  }
+
+  .service-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    line-height: 1.3;
+    margin-bottom: 0.6rem;
+  }
+
+  .service-desc {
+    font-size: 0.83rem;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+
+  /* ── WHY HAS ── */
+  #why {
+    background: #F0EEE9;
+    color: var(--navy);
+  }
+
+  #why .section-title { color: var(--navy); }
+  #why .section-kicker { color: #8A6E0A; }
+
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .pillar {
+    padding: 2.5rem;
+    border: 1px solid rgba(12,27,46,0.1);
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .pillar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--yellow);
+  }
+
+  .pillar-icon {
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+    display: block;
+  }
+
+  .pillar-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--navy);
+    margin-bottom: 0.6rem;
+  }
+
+  .pillar-text {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    color: #556070;
+  }
+
+  /* ── GALLERY ── */
+  #gallery { background: var(--navy); }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5px;
+    background: var(--line);
+  }
+
+  .gallery-img {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background: var(--steel);
+  }
+
+  .gallery-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s var(--ease), filter 0.3s;
+    filter: brightness(0.82) saturate(0.9);
+  }
+
+  .gallery-img:hover img {
+    transform: scale(1.04);
+    filter: brightness(0.95) saturate(1.1);
+  }
+
+  /* ── JOURNAL ── */
+  #journal { background: var(--steel); }
+
+  .journal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .article-card {
+    background: var(--navy);
+    border: 1px solid var(--line);
+    padding: 2rem;
+    cursor: pointer;
+    transition: border-color 0.25s, transform 0.25s;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .article-card:hover {
+    border-color: var(--yellow);
+    transform: translateY(-3px);
+  }
+
+  .article-kicker {
+    font-size: 0.64rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--yellow);
+  }
+
+  .article-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: var(--white);
+  }
+
+  .article-ex {
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: var(--muted);
+    flex: 1;
+  }
+
+  .article-read {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--yellow);
+    font-weight: 600;
+    margin-top: 0.5rem;
+  }
+
+  /* ── CONTACT ── */
+  #contact { background: var(--navy); }
+
+  .contact-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .contact-left { }
+
+  .call-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 0.04em;
+    color: var(--navy);
+    background: var(--yellow);
+    padding: 1.25rem 2.5rem;
+    text-decoration: none;
+    margin-bottom: 2.5rem;
+    transition: opacity 0.2s, transform 0.2s;
+    display: block;
+    text-align: center;
+  }
+
+  .call-btn:hover { opacity: 0.88; transform: translateY(-2px); }
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .contact-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .contact-detail-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--yellow);
+  }
+
+  .contact-detail-val {
+    font-size: 0.95rem;
+    color: var(--white);
+    line-height: 1.5;
+  }
+
+  .map-wrap {
+    border: 1px solid var(--line);
+    overflow: hidden;
+    aspect-ratio: 16/11;
+  }
+
+  .map-wrap iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    filter: grayscale(0.3) invert(0.9) hue-rotate(180deg) brightness(0.8);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy);
+    border-top: 1px solid var(--line);
+    padding: 2.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 100%;
+  }
+
+  .footer-brand {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    color: rgba(250,250,250,0.5);
+  }
+
+  .footer-copy {
+    font-size: 0.76rem;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+
+  /* ── MODAL ── */
+  #modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0,0,0,0.7);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+
+  #modal-overlay.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  #modal-sheet {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    background: var(--steel);
+    border-top: 3px solid var(--yellow);
+    max-height: 85vh;
+    overflow-y: auto;
+    transform: translateY(100%);
+    transition: transform 0.45s var(--ease);
+    padding: 2.5rem 2rem 3rem;
+  }
+
+  #modal-sheet.open {
+    transform: translateY(0);
+  }
+
+  .modal-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: none;
+    border: 1px solid var(--line);
+    color: var(--white);
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .modal-close:hover {
+    border-color: var(--yellow);
+    background: rgba(245,197,24,0.08);
+  }
+
+  .modal-kicker {
+    font-size: 0.64rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--yellow);
+    margin-bottom: 0.75rem;
+  }
+
+  .modal-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    line-height: 1.15;
+    margin-bottom: 1.75rem;
+    color: var(--white);
+  }
+
+  .modal-body {
+    font-size: 0.93rem;
+    line-height: 1.8;
+    color: rgba(250,250,250,0.78);
+  }
+
+  .modal-body p { margin-bottom: 1rem; }
+
+  .modal-body h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--yellow);
+    margin: 1.5rem 0 0.5rem;
+  }
+
+  .modal-body ul {
+    padding-left: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .modal-body li { margin-bottom: 0.4rem; }
+
+  /* ── REVEALS ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.65s var(--ease), transform 0.65s var(--ease);
+  }
+
+  .reveal.on {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .pillars { grid-template-columns: 1fr; }
+    .journal-grid { grid-template-columns: repeat(2, 1fr); }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    .contact-inner { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+  }
+
+  @media (max-width: 600px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .journal-grid { grid-template-columns: 1fr; }
+    .gallery-grid { grid-template-columns: 1fr; }
+    h1 { font-size: clamp(2.8rem, 13vw, 5rem); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+    .reveal { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader" aria-hidden="true">
+  <span id="l-h">H</span>
+  <span class="dot" id="l-d1">·</span>
+  <span id="l-a">A</span>
+  <span class="dot" id="l-d2">·</span>
+  <span id="l-s">S</span>
+</div>
+
+<!-- NAV -->
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <a href="#" class="nav-brand" aria-label="H.A.S. Solutions home">
+    <span class="wordmark">HAS SOLUTIONS</span>
+    <span class="sub">Electrical</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#journal">Journal</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="tel:0724082155" class="btn-quote">Get a Quote</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero" aria-label="Hero">
+  <canvas id="spark-canvas" aria-hidden="true"></canvas>
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Licensed Electrician &middot; Hillcrest</p>
+    <h1>Powering<br>Hillcrest<br>homes.</h1>
+    <p class="hero-sub">Fault finding. DB upgrades. New installations. Available across the greater Hillcrest area.</p>
+    <div class="hero-ctas">
+      <a href="tel:0724082155" class="btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.12 1.18 2 2 0 012.1 0h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 14.93z"/></svg>
+        Call 072 408 2155
+      </a>
+      <a href="#services" class="btn-outline">View Services &rarr;</a>
+    </div>
+  </div>
+  <div class="hero-stats" aria-label="At a glance">
+    <div class="stat">
+      <span class="stat-val">5.0&#9733;</span>
+      <span class="stat-label">Google Rating</span>
+    </div>
+    <div class="stat">
+      <span class="stat-val">2</span>
+      <span class="stat-label">Reviews</span>
+    </div>
+    <div class="stat">
+      <span class="stat-val">Fast</span>
+      <span class="stat-label">Response</span>
+    </div>
+    <div class="stat">
+      <span class="stat-val">COC</span>
+      <span class="stat-label">Certified</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" aria-label="Services">
+  <div class="section-inner">
+    <p class="section-kicker reveal">What we do</p>
+    <h2 class="section-title reveal" style="color:var(--white)">Electrical services<br>you can count on.</h2>
+    <div class="services-grid">
+
+      <div class="service-card reveal">
+        <span class="service-num">01</span>
+        <span class="service-icon" aria-hidden="true">&#9889;</span>
+        <h3 class="service-name">Fault Finding &amp; Diagnostics</h3>
+        <p class="service-desc">Precise electrical fault detection using modern diagnostic tools. We find the problem fast so you&rsquo;re not in the dark longer than necessary.</p>
+      </div>
+
+      <div class="service-card reveal">
+        <span class="service-num">02</span>
+        <span class="service-icon" aria-hidden="true">&#128268;</span>
+        <h3 class="service-name">Distribution Board (DB) Upgrades</h3>
+        <p class="service-desc">Outdated DB boards are a fire hazard. We upgrade and certify your board to current SANS standards, protecting your home and family.</p>
+      </div>
+
+      <div class="service-card reveal">
+        <span class="service-num">03</span>
+        <span class="service-icon" aria-hidden="true">&#128161;</span>
+        <h3 class="service-name">Full Rewiring</h3>
+        <p class="service-desc">Complete rewiring for older homes or major renovations. Done neatly, safely, and to code &mdash; with minimum disruption to your household.</p>
+      </div>
+
+      <div class="service-card reveal">
+        <span class="service-num">04</span>
+        <span class="service-icon" aria-hidden="true">&#127777;&#65039;</span>
+        <h3 class="service-name">Outdoor &amp; Garden Lighting</h3>
+        <p class="service-desc">Transform your outdoor space with professionally installed garden and feature lighting. Energy-efficient LED solutions tailored to KZN homes.</p>
+      </div>
+
+      <div class="service-card reveal">
+        <span class="service-num">05</span>
+        <span class="service-icon" aria-hidden="true">&#128204;</span>
+        <h3 class="service-name">Security Lighting Installation</h3>
+        <p class="service-desc">Motion-activated and perimeter security lighting installed by a licensed professional. Deter intruders and improve visibility around your property.</p>
+      </div>
+
+      <div class="service-card reveal">
+        <span class="service-num">06</span>
+        <span class="service-icon" aria-hidden="true">&#9989;</span>
+        <h3 class="service-name">Certificate of Compliance (COC)</h3>
+        <p class="service-desc">Required for property sales and insurance. We inspect, certify, and issue your COC quickly &mdash; giving buyers and banks what they need.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY HAS -->
+<section id="why" aria-label="Why H.A.S. Solutions">
+  <div class="section-inner">
+    <p class="section-kicker reveal">Why choose us</p>
+    <h2 class="section-title reveal">The H.A.S. difference.</h2>
+    <div class="pillars">
+
+      <div class="pillar reveal">
+        <span class="pillar-icon" aria-hidden="true">&#128272;</span>
+        <h3 class="pillar-title">Licensed &amp; Insured</h3>
+        <p class="pillar-text">H.A.S. Solutions is a fully licensed electrical contractor registered with the Department of Labour. Every job is backed by comprehensive insurance for your peace of mind.</p>
+      </div>
+
+      <div class="pillar reveal">
+        <span class="pillar-icon" aria-hidden="true">&#9889;</span>
+        <h3 class="pillar-title">Fast Response</h3>
+        <p class="pillar-text">Electrical faults don&rsquo;t wait &mdash; and neither do we. We prioritise rapid response across Hillcrest, Kloof, Gillitts and the surrounding areas so you&rsquo;re never left waiting.</p>
+      </div>
+
+      <div class="pillar reveal">
+        <span class="pillar-icon" aria-hidden="true">&#11088;</span>
+        <h3 class="pillar-title">5.0&#9733; Rated</h3>
+        <p class="pillar-text">A perfect Google rating earned through quality workmanship and honest service. Our reputation is built on referrals from satisfied Hillcrest homeowners and businesses.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" aria-label="Work gallery">
+  <div class="section-inner">
+    <p class="section-kicker reveal">Our work</p>
+    <h2 class="section-title reveal" style="color:var(--white)">Quality you can see.</h2>
+    <div class="gallery-grid">
+      <div class="gallery-img reveal"><img src="https://images.unsplash.com/photo-1575060537120-ac5e96e1a16f?w=600&q=80" alt="Home in darkness during power outage" loading="lazy"></div>
+      <div class="gallery-img reveal"><img src="https://images.unsplash.com/photo-1761251947512-a293e482919f?w=600&q=80" alt="Deteriorated electrical panel on cracked wall" loading="lazy"></div>
+      <div class="gallery-img reveal"><img src="https://images.unsplash.com/photo-1576446470246-499c738d1c8e?w=600&q=80" alt="Tripped circuit breakers in fuse box" loading="lazy"></div>
+      <div class="gallery-img reveal"><img src="https://images.unsplash.com/photo-1780034766462-e8af5f2c9e22?w=600&q=80" alt="Open electrical control panel being diagnosed" loading="lazy"></div>
+      <div class="gallery-img reveal"><img src="https://images.unsplash.com/photo-1724867431886-aa029d2ad504?w=600&q=80" alt="Wall-mounted switch box needing attention" loading="lazy"></div>
+      <div class="gallery-img reveal"><img src="https://images.unsplash.com/photo-1758101755915-462eddc23f57?w=600&q=80" alt="Electrician testing circuits after electrical fault" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNAL -->
+<section id="journal" aria-label="Electrical journal">
+  <div class="section-inner">
+    <p class="section-kicker reveal">Electrical journal</p>
+    <h2 class="section-title reveal" style="color:var(--white)">Know your home&rsquo;s<br>electrical system.</h2>
+    <div class="journal-grid" id="journal-grid"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" aria-label="Contact H.A.S. Solutions">
+  <div class="section-inner">
+    <p class="section-kicker reveal">Get in touch</p>
+    <h2 class="section-title reveal" style="color:var(--white)">Ready to book?<br>Let&rsquo;s talk.</h2>
+  </div>
+  <div class="contact-inner">
+    <div class="contact-left reveal">
+      <a href="tel:0724082155" class="call-btn" aria-label="Call H.A.S. Solutions on 072 408 2155">
+        <div style="font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:600;margin-bottom:0.3rem;opacity:0.7;">Tap to call now</div>
+        <div>072 408 2155</div>
+      </a>
+      <div class="contact-details">
+        <div class="contact-detail">
+          <span class="contact-detail-label">Address</span>
+          <span class="contact-detail-val">Forest Hills, Hillcrest<br>KwaZulu-Natal, South Africa</span>
+        </div>
+        <div class="contact-detail">
+          <span class="contact-detail-label">Service Area</span>
+          <span class="contact-detail-val">Serving Hillcrest, Kloof, Gillitts,<br>Waterfall and surrounds</span>
+        </div>
+        <div class="contact-detail">
+          <span class="contact-detail-label">Google Rating</span>
+          <span class="contact-detail-val" style="color:var(--yellow);">5.0 &#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        </div>
+      </div>
+    </div>
+    <div class="map-wrap reveal" aria-label="Map showing Forest Hills, Hillcrest, KZN">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3463.4!2d30.7743!3d-29.7700!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7aa7e9b4e7f33%3A0x5006c6aee4c66e91!2sForest%20Hills%2C%20Hillcrest%2C%203610!5e0!3m2!1sen!2sza!4v1700000000000"
+        loading="lazy"
+        title="H.A.S. Solutions location map"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-brand">HAS SOLUTIONS &mdash; ELECTRICAL</span>
+  <span class="footer-copy">Forest Hills, Hillcrest, KZN &middot; 072 408 2155 &middot; &copy; 2026</span>
+</footer>
+
+<!-- MODAL -->
+<div id="modal-overlay" role="dialog" aria-modal="true" aria-label="Article" tabindex="-1"></div>
+<div id="modal-sheet" aria-hidden="true">
+  <button class="modal-close" id="modal-close" aria-label="Close article">&times;</button>
+  <div class="modal-inner">
+    <p class="modal-kicker" id="modal-kicker"></p>
+    <h2 class="modal-title" id="modal-title"></h2>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  // ── REDUCE MOTION CHECK ──
+  var prefersReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // ── LOADER ──
+  var loader = document.getElementById("loader");
+  if (!prefersReduced) {
+    var letters = [
+      document.getElementById("l-h"),
+      document.getElementById("l-d1"),
+      document.getElementById("l-a"),
+      document.getElementById("l-d2"),
+      document.getElementById("l-s")
+    ];
+    letters.forEach(function (el, i) {
+      setTimeout(function () {
+        el.style.transition = "transform 0.65s cubic-bezier(0.22,1,0.36,1), opacity 0.5s ease";
+        el.style.transform = "translateY(0)";
+        el.style.opacity = "1";
+      }, 80 + i * 100);
+    });
+    setTimeout(function () {
+      loader.classList.add("done");
+      setTimeout(function () { loader.style.display = "none"; }, 700);
+    }, 900);
+  } else {
+    loader.style.display = "none";
+  }
+
+  // ── NAV SCROLL ──
+  var nav = document.getElementById("nav");
+  window.addEventListener("scroll", function () {
+    nav.classList.toggle("scrolled", window.scrollY > 60);
+  }, { passive: true });
+
+  // ── CANVAS SPARKS ──
+  if (!prefersReduced) {
+    var canvas = document.getElementById("spark-canvas");
+    var ctx = canvas.getContext("2d");
+    var arcs = [];
+
+    function resize() {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+    }
+    resize();
+    window.addEventListener("resize", resize, { passive: true });
+
+    function rnd(min, max) { return min + Math.random() * (max - min); }
+
+    function spawnArc() {
+      var W = canvas.width;
+      var H = canvas.height;
+      var startX = rnd(W * 0.05, W * 0.65);
+      var startY = rnd(H * 0.05, H * 0.4);
+      var endX = startX + rnd(-W * 0.25, W * 0.35);
+      var endY = startY + rnd(H * 0.1, H * 0.5);
+      var cp1x = startX + rnd(-80, 80);
+      var cp1y = startY + rnd(20, 100);
+      var cp2x = endX + rnd(-80, 80);
+      var cp2y = endY - rnd(20, 80);
+      var duration = rnd(300, 800);
+      var born = performance.now();
+      var branches = [];
+      var branchCount = Math.floor(rnd(1, 3));
+      for (var b = 0; b < branchCount; b++) {
+        var t = rnd(0.3, 0.7);
+        var bx = Math.pow(1 - t, 3) * startX + 3 * Math.pow(1 - t, 2) * t * cp1x + 3 * (1 - t) * t * t * cp2x + Math.pow(t, 3) * endX;
+        var by = Math.pow(1 - t, 3) * startY + 3 * Math.pow(1 - t, 2) * t * cp1y + 3 * (1 - t) * t * t * cp2y + Math.pow(t, 3) * endY;
+        branches.push({
+          sx: bx, sy: by,
+          ex: bx + rnd(-60, 60),
+          ey: by + rnd(30, 120),
+          cp1x: bx + rnd(-30, 30), cp1y: by + rnd(10, 40),
+          cp2x: bx + rnd(-30, 30), cp2y: by + rnd(30, 80)
+        });
+      }
+      arcs.push({ startX: startX, startY: startY, endX: endX, endY: endY, cp1x: cp1x, cp1y: cp1y, cp2x: cp2x, cp2y: cp2y, duration: duration, born: born, branches: branches });
+    }
+
+    function drawArc(arc, now) {
+      var progress = (now - arc.born) / arc.duration;
+      if (progress >= 1) return false;
+      var alpha = progress < 0.2
+        ? progress / 0.2
+        : progress > 0.75
+          ? 1 - (progress - 0.75) / 0.25
+          : 1;
+      ctx.beginPath();
+      ctx.moveTo(arc.startX, arc.startY);
+      ctx.bezierCurveTo(arc.cp1x, arc.cp1y, arc.cp2x, arc.cp2y, arc.endX, arc.endY);
+      ctx.strokeStyle = "rgba(245,197,24," + (0.15 * alpha) + ")";
+      ctx.lineWidth = rnd(0.5, 1.2);
+      ctx.stroke();
+      arc.branches.forEach(function (br) {
+        if (progress > 0.2) {
+          ctx.beginPath();
+          ctx.moveTo(br.sx, br.sy);
+          ctx.bezierCurveTo(br.cp1x, br.cp1y, br.cp2x, br.cp2y, br.ex, br.ey);
+          ctx.strokeStyle = "rgba(255,255,255," + (0.08 * alpha) + ")";
+          ctx.lineWidth = 0.6;
+          ctx.stroke();
+        }
+      });
+      return true;
+    }
+
+    var lastSpawn = 0;
+    var spawnInterval = rnd(1200, 2000);
+
+    function animate(now) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      arcs = arcs.filter(function (a) { return drawArc(a, now); });
+      if (now - lastSpawn > spawnInterval && arcs.length < 6) {
+        spawnArc();
+        lastSpawn = now;
+        spawnInterval = rnd(1200, 2200);
+      }
+      requestAnimationFrame(animate);
+    }
+
+    setTimeout(function () {
+      spawnArc();
+      lastSpawn = performance.now();
+      requestAnimationFrame(animate);
+    }, 800);
+  }
+
+  // ── REVEALS ──
+  if (!prefersReduced) {
+    var revealEls = document.querySelectorAll(".reveal");
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add("on");
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(function (el) { observer.observe(el); });
+  } else {
+    document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("on"); });
+  }
+
+  // ── JOURNAL ARTICLES ──
+  var ARTS = [
+    {
+      kicker: "Safety",
+      title: "Why your DB board might be a fire hazard",
+      ex: "Old distribution boards with ceramic fuses or undersized breakers can overheat — find out the warning signs and what to do.",
+      body: `
+        <p>Your distribution board (DB board) is the nerve centre of your home's electrical system. But in older KZN homes — especially those built before 2000 — the DB board may pose a serious fire risk that most homeowners overlook completely.</p>
+
+        <h3>The warning signs</h3>
+        <ul>
+          <li>Breakers that trip repeatedly or won't reset</li>
+          <li>A burning smell near your DB board or sockets</li>
+          <li>Discoloration or scorch marks around the board</li>
+          <li>Old ceramic rewirable fuses instead of modern breakers</li>
+          <li>A board that feels warm to the touch</li>
+        </ul>
+
+        <h3>Why it happens</h3>
+        <p>Homes built decades ago were designed for far less electrical load than we use today. Air conditioners, induction hobs, EV chargers, and multiple high-draw appliances can overwhelm circuits that were never designed to handle them. When a circuit is overloaded consistently, heat builds up inside the wiring and the board itself — creating the perfect conditions for an electrical fire.</p>
+
+        <h3>What you should do</h3>
+        <p>If your home is more than 20 years old and the DB board has never been upgraded, it's time to have it inspected. A licensed electrician can assess whether your board is SANS-compliant and advise on an upgrade that protects your home, your family, and your insurance coverage.</p>
+
+        <p>Contact H.A.S. Solutions on 072 408 2155 for a DB board assessment in the Hillcrest area.</p>
+      `
+    },
+    {
+      kicker: "DIY",
+      title: "The homeowner's guide to tripped circuits",
+      ex: "A tripped breaker is usually no cause for alarm — but repeated trips are your electrical system telling you something important.",
+      body: `
+        <p>A tripped circuit breaker is one of the most common electrical issues homeowners face. The good news: in most cases, it's your electrical system doing exactly what it's designed to do — protecting you from an overload or fault.</p>
+
+        <h3>Why circuits trip</h3>
+        <ul>
+          <li><strong>Overload:</strong> Too many appliances on a single circuit drawing more current than it's rated for.</li>
+          <li><strong>Short circuit:</strong> A live wire making contact with a neutral wire — more serious and needs professional attention.</li>
+          <li><strong>Earth fault:</strong> Current leaking to earth, often detected by your ELCB (earth leakage circuit breaker).</li>
+        </ul>
+
+        <h3>How to reset a tripped breaker</h3>
+        <p>Locate your DB board (usually in a garage, utility room, or passage). You'll see a breaker that's moved to the middle position or flipped off. Switch it fully off, then firmly back on. If it holds, you're done — but unplug a few appliances from that circuit first.</p>
+
+        <h3>When to call an electrician</h3>
+        <p>If the breaker trips again immediately, or repeatedly trips under normal load, don't keep resetting it. This is a sign of an underlying fault that needs professional diagnosis. Repeated trips can damage wiring and appliances — and in the worst case, cause a fire.</p>
+
+        <p>H.A.S. Solutions offers fast fault-finding across Hillcrest and surrounds. Call 072 408 2155.</p>
+      `
+    },
+    {
+      kicker: "Legal",
+      title: "What is a Certificate of Compliance and why do you need one?",
+      ex: "Selling a home in South Africa? You can't do it without a valid COC. Here's everything you need to know.",
+      body: `
+        <p>A Certificate of Compliance (COC) is a legal document issued by a registered electrician confirming that the electrical installation in a property complies with the relevant South African standards (SANS 10142-1).</p>
+
+        <h3>When is a COC required?</h3>
+        <ul>
+          <li>When selling a residential or commercial property</li>
+          <li>When a new electrical connection is made</li>
+          <li>After major electrical work is completed</li>
+          <li>When required by an insurance company</li>
+          <li>After a municipality or Eskom request</li>
+        </ul>
+
+        <h3>What does the inspection cover?</h3>
+        <p>A licensed electrician will inspect your DB board, earthing, wiring, sockets, switches, and connections. Any non-compliance must be rectified before the COC can be issued. The COC includes the electrician's registration number and is their professional guarantee of the work.</p>
+
+        <h3>How long is a COC valid?</h3>
+        <p>A COC is technically valid until a change is made to the electrical installation. However, many conveyancers and banks require a COC that is less than two years old at the time of property transfer. Always confirm requirements with your attorney.</p>
+
+        <h3>The cost of skipping it</h3>
+        <p>A property sale can be delayed or cancelled without a valid COC. More importantly, if an electrical fire occurs in a home without a COC, your insurance claim may be rejected.</p>
+
+        <p>H.A.S. Solutions issues COCs for properties across the Hillcrest area. Call 072 408 2155 to book an inspection.</p>
+      `
+    },
+    {
+      kicker: "Savings",
+      title: "LED vs halogen: the upgrade that pays for itself",
+      ex: "Switching from halogen to LED lighting can cut your lighting electricity bill by up to 80%. Here's how the numbers stack up.",
+      body: `
+        <p>If your home still has halogen downlights — common in many Hillcrest homes built in the 2000s and 2010s — you're paying significantly more for lighting than you need to. The LED upgrade is one of the best value electrical investments a homeowner can make.</p>
+
+        <h3>The numbers</h3>
+        <p>A typical halogen downlight uses 50W. An equivalent LED uses just 8–10W while producing the same amount of light. In a home with 20 downlights running 4 hours per day:</p>
+        <ul>
+          <li><strong>Halogen:</strong> 20 &times; 50W &times; 4h = 4kWh per day</li>
+          <li><strong>LED:</strong> 20 &times; 9W &times; 4h = 0.72kWh per day</li>
+        </ul>
+        <p>At South African electricity rates, this typically saves R300–R600 per month depending on your tariff. Most LED upgrades pay for themselves in 6–18 months.</p>
+
+        <h3>Beyond the savings</h3>
+        <ul>
+          <li>LEDs last 15,000–25,000 hours vs 2,000 for halogens — far fewer replacements</li>
+          <li>LEDs produce less heat — better for your ceiling and aircon load</li>
+          <li>Modern LEDs offer warm white tones that rival halogen aesthetics</li>
+          <li>LEDs are available in smart-home compatible versions</li>
+        </ul>
+
+        <h3>The right way to upgrade</h3>
+        <p>While LEDs are available at hardware stores, a professional installation ensures correct wiring, transformer compatibility (many halogen setups use 12V transformers that need replacing), and a neat finish. H.A.S. Solutions handles full LED retrofits across the Hillcrest area.</p>
+      `
+    },
+    {
+      kicker: "Design",
+      title: "Outdoor lighting ideas for KZN homes",
+      ex: "KwaZulu-Natal's mild climate means your garden is an extension of your living space. Here's how to light it properly.",
+      body: `
+        <p>With KZN's warm climate and lush landscapes, outdoor living is part of the lifestyle. Whether you have a large garden in Hillcrest or a compact courtyard in Kloof, professional outdoor lighting transforms your property after dark.</p>
+
+        <h3>Types of outdoor lighting to consider</h3>
+        <ul>
+          <li><strong>Path lighting:</strong> Low-set lights along driveways and garden paths improve safety and add kerb appeal.</li>
+          <li><strong>Feature spotlights:</strong> Uplight trees, feature walls, or architectural elements for dramatic effect.</li>
+          <li><strong>Deck and patio lighting:</strong> Warm downlights or strip lights create an inviting entertainment space.</li>
+          <li><strong>Security lighting:</strong> Motion-activated floodlights deter intruders while keeping your property visible.</li>
+          <li><strong>Pool and water feature lighting:</strong> Underwater and surrounding lights extend pool usability into the evening.</li>
+        </ul>
+
+        <h3>KZN-specific considerations</h3>
+        <p>The Hillcrest and Valley of a Thousand Hills area experiences high humidity and occasional severe storms. All outdoor fittings should be IP65-rated minimum, and underground wiring must be armoured cable laid at the correct depth with conduit at entry points.</p>
+
+        <h3>LED is the only choice outdoors</h3>
+        <p>For outdoor installations, LED is essential — not just for energy savings but for longevity. Outdoor lights run for more hours and in tougher conditions. LED fittings designed for outdoor use will last years without maintenance.</p>
+
+        <p>Contact H.A.S. Solutions to plan and install your outdoor lighting in the Hillcrest area.</p>
+      `
+    },
+    {
+      kicker: "Guide",
+      title: "When to call an electrician vs. fix it yourself",
+      ex: "Some electrical jobs are safe DIY territory. Others are legally reserved for licensed professionals. Know the difference.",
+      body: `
+        <p>South Africa's Occupation Health and Safety Act is clear: most electrical work on fixed wiring must be performed by a registered electrician. But there's also plenty a homeowner can safely handle. Here's a practical guide.</p>
+
+        <h3>Safe DIY electrical tasks</h3>
+        <ul>
+          <li>Replacing a blown light bulb</li>
+          <li>Resetting a tripped breaker (once only — call an electrician if it trips again)</li>
+          <li>Replacing a damaged plug on an appliance cord</li>
+          <li>Installing a new light fitting that plugs in (not wired)</li>
+          <li>Changing a battery in a smoke detector</li>
+        </ul>
+
+        <h3>Always call a licensed electrician for</h3>
+        <ul>
+          <li>Any work on your DB board or wiring</li>
+          <li>Installing new circuits or adding sockets to fixed wiring</li>
+          <li>Outdoor electrical installations</li>
+          <li>Fault finding in walls or ceiling cavities</li>
+          <li>Installing a geyser, stove, or other hardwired appliance</li>
+          <li>Any work that requires a Certificate of Compliance</li>
+        </ul>
+
+        <h3>Why it matters</h3>
+        <p>Unlicensed electrical work that causes damage or injury may invalidate your home insurance. It can also create hidden dangers that aren't apparent immediately — loose connections in walls can arc and ignite insulation years later.</p>
+
+        <p>When in doubt, call H.A.S. Solutions on 072 408 2155. A quick question costs nothing.</p>
+      `
+    }
+  ];
+
+  var grid = document.getElementById("journal-grid");
+  ARTS.forEach(function (art, i) {
+    var card = document.createElement("div");
+    card.className = "article-card reveal";
+    card.setAttribute("role", "button");
+    card.setAttribute("tabindex", "0");
+    card.setAttribute("aria-label", "Read article: " + art.title);
+    card.innerHTML =
+      "<span class=\"article-kicker\">" + art.kicker + "</span>" +
+      "<h3 class=\"article-title\">" + art.title + "</h3>" +
+      "<p class=\"article-ex\">" + art.ex + "</p>" +
+      "<span class=\"article-read\">Read more &rarr;</span>";
+    card.addEventListener("click", function () { openModal(i); });
+    card.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openModal(i); } });
+    grid.appendChild(card);
+  });
+
+  // Observe newly added cards
+  if (!prefersReduced) {
+    var newCards = grid.querySelectorAll(".reveal");
+    var obs2 = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("on"); obs2.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    newCards.forEach(function (el) { obs2.observe(el); });
+  } else {
+    grid.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("on"); });
+  }
+
+  // ── MODAL ──
+  var overlay = document.getElementById("modal-overlay");
+  var sheet = document.getElementById("modal-sheet");
+  var closeBtn = document.getElementById("modal-close");
+  var mkicker = document.getElementById("modal-kicker");
+  var mtitle = document.getElementById("modal-title");
+  var mbody = document.getElementById("modal-body");
+
+  function openModal(i) {
+    var art = ARTS[i];
+    mkicker.textContent = art.kicker;
+    mtitle.textContent = art.title;
+    mbody.innerHTML = art.body;
+    overlay.classList.add("open");
+    sheet.classList.add("open");
+    sheet.removeAttribute("aria-hidden");
+    sheet.scrollTop = 0;
+    document.body.style.overflow = "hidden";
+    closeBtn.focus();
+  }
+
+  function closeModal() {
+    overlay.classList.remove("open");
+    sheet.classList.remove("open");
+    sheet.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  closeBtn.addEventListener("click", closeModal);
+  overlay.addEventListener("click", closeModal);
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeModal(); });
+
+}());
+</script>
+</body>
+</html>

@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maryvale Veterinary Clinic — Westville, Durban</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ── reset + tokens ── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --cream:     #F7F5F0;
+  --parchment: #ECE8DF;
+  --deep:      #1C3329;
+  --sage:      #4A7058;
+  --fern:      #2E5C3E;
+  --amber:     #C07A2F;
+  --warm:      #B89660;
+  --muted:     #898480;
+  --ink:       #1A1C18;
+  --ff-head:   'Cormorant Garamond', Georgia, serif;
+  --ff-body:   'DM Sans', system-ui, sans-serif;
+  --ease:      cubic-bezier(.22,.68,0,1.2);
+}
+html { scroll-behavior: smooth; }
+body { background: var(--cream); color: var(--ink); font-family: var(--ff-body); font-weight: 300; line-height: 1.65; overflow-x: hidden; }
+
+/* ── canvas drift ── */
+#drift { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
+
+/* ── reveal ── */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .65s var(--ease), transform .65s var(--ease); }
+.reveal.on { opacity: 1; transform: none; }
+
+/* ── nav ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.25rem 2.5rem;
+  transition: background .3s, box-shadow .3s;
+}
+nav.scrolled {
+  background: rgba(28,51,41,.94); backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0,0,0,.18);
+}
+.nav-logo { font-family: var(--ff-head); font-size: 1.35rem; font-weight: 400; color: #fff; letter-spacing: .02em; text-decoration: none; }
+.nav-logo span { color: var(--warm); }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { color: rgba(255,255,255,.82); font-size: .87rem; text-decoration: none; letter-spacing: .04em; text-transform: uppercase; transition: color .2s; }
+.nav-links a:hover { color: var(--warm); }
+.nav-cta {
+  background: var(--amber); color: #fff; border: none; padding: .55rem 1.3rem;
+  font-family: var(--ff-body); font-size: .82rem; font-weight: 500;
+  letter-spacing: .05em; text-transform: uppercase; cursor: pointer;
+  border-radius: 2px; text-decoration: none; transition: background .2s;
+}
+.nav-cta:hover { background: var(--warm); }
+
+/* ── hero ── */
+.hero {
+  position: relative; height: 100vh; min-height: 640px;
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  overflow: hidden;
+}
+.hero-bg { position: absolute; inset: 0; z-index: 1; background: var(--deep); }
+.hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: .52; }
+.hero-overlay {
+  position: absolute; inset: 0; z-index: 2;
+  background: linear-gradient(to bottom, rgba(28,51,41,.3) 0%, rgba(28,51,41,.68) 100%);
+}
+.hero-content { position: relative; z-index: 3; max-width: 820px; padding: 2rem; color: #fff; }
+.hero-eyebrow {
+  display: inline-block; font-size: .76rem; font-weight: 400;
+  letter-spacing: .18em; text-transform: uppercase;
+  color: var(--warm); margin-bottom: 1.2rem;
+  border-bottom: 1px solid rgba(184,150,96,.4); padding-bottom: .4rem;
+}
+.hero-title {
+  font-family: var(--ff-head); font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 300; line-height: 1.06; letter-spacing: -.01em; margin-bottom: 1.4rem;
+}
+.hero-title em { font-style: italic; color: var(--warm); }
+.hero-sub { font-size: 1.05rem; font-weight: 300; color: rgba(255,255,255,.82); max-width: 520px; margin: 0 auto 2.2rem; }
+.hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.btn-primary {
+  background: var(--amber); color: #fff; border: none;
+  padding: .88rem 2.2rem; font-family: var(--ff-body);
+  font-size: .9rem; font-weight: 500; letter-spacing: .05em;
+  text-transform: uppercase; cursor: pointer; border-radius: 2px;
+  text-decoration: none; transition: background .2s, transform .2s; display: inline-block;
+}
+.btn-primary:hover { background: var(--warm); transform: translateY(-2px); }
+.btn-ghost {
+  background: transparent; color: #fff;
+  border: 1.5px solid rgba(255,255,255,.5);
+  padding: .88rem 2.2rem; font-family: var(--ff-body);
+  font-size: .9rem; font-weight: 400; letter-spacing: .05em;
+  text-transform: uppercase; cursor: pointer; border-radius: 2px;
+  text-decoration: none; transition: border-color .2s, transform .2s; display: inline-block;
+}
+.btn-ghost:hover { border-color: #fff; transform: translateY(-2px); }
+.hero-scroll {
+  position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+  z-index: 3; display: flex; flex-direction: column; align-items: center; gap: .4rem;
+  color: rgba(255,255,255,.5); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase;
+}
+.scroll-line { width: 1px; height: 48px; background: rgba(255,255,255,.3); animation: scrollPulse 2s ease-in-out infinite; }
+@keyframes scrollPulse {
+  0%, 100% { opacity: .3; transform: scaleY(1); }
+  50%       { opacity: .85; transform: scaleY(1.15); }
+}
+
+/* ── generic section utilities ── */
+section { position: relative; z-index: 2; }
+.container { max-width: 1160px; margin: 0 auto; padding: 0 2rem; }
+.sec-label { font-size: .74rem; letter-spacing: .2em; text-transform: uppercase; color: var(--amber); font-weight: 400; margin-bottom: .6rem; }
+.sec-title { font-family: var(--ff-head); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.15; margin-bottom: 1rem; }
+.sec-title em { font-style: italic; color: var(--sage); }
+.sec-sub { font-size: 1rem; color: var(--muted); max-width: 540px; }
+
+/* ── services ── */
+.services-section { padding: 7rem 0; background: var(--cream); }
+.services-head { text-align: center; margin-bottom: 4rem; }
+.services-head .sec-sub { margin: 0 auto; }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+.service-card {
+  background: var(--parchment); border-radius: 1rem; overflow: hidden;
+  transition: transform .3s var(--ease), box-shadow .3s;
+}
+.service-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(28,51,41,.12); }
+.service-card-img { width: 100%; height: 220px; object-fit: cover; display: block; }
+.service-card-body { padding: 1.6rem 1.8rem; }
+.service-icon { font-size: 1.5rem; margin-bottom: .7rem; }
+.service-name { font-family: var(--ff-head); font-size: 1.5rem; font-weight: 400; margin-bottom: .5rem; }
+.service-desc { font-size: .88rem; color: var(--muted); line-height: 1.65; }
+
+/* ── experience ── */
+.experience-section { padding: 7rem 0; background: var(--parchment); }
+.experience-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.experience-images { position: relative; }
+.exp-img-main { width: 100%; border-radius: 1.2rem; aspect-ratio: 4/5; object-fit: cover; display: block; }
+.exp-img-inset {
+  position: absolute; bottom: -2rem; right: -2rem;
+  width: 46%; border-radius: .9rem; aspect-ratio: 1; object-fit: cover; display: block;
+  border: 4px solid var(--parchment); box-shadow: 0 12px 40px rgba(28,51,41,.15);
+}
+.experience-text { display: flex; flex-direction: column; gap: 1.4rem; }
+.experience-text p { font-size: 1rem; color: var(--ink); line-height: 1.78; }
+.stats-row { display: flex; gap: 2.5rem; margin-top: .5rem; flex-wrap: wrap; }
+.stat { display: flex; flex-direction: column; }
+.stat-num { font-family: var(--ff-head); font-size: 2.8rem; font-weight: 300; color: var(--deep); line-height: 1; }
+.stat-label { font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-top: .25rem; }
+
+/* ── book CTA ── */
+.book-cta { padding: 6rem 0; text-align: center; background: var(--deep); color: #fff; }
+.book-cta .sec-title { color: #fff; }
+.book-cta .sec-title em { color: var(--warm); }
+.book-cta .sec-sub { color: rgba(255,255,255,.68); margin: 0 auto 2.2rem; }
+.book-cta-info { display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-bottom: 2.2rem; font-size: .9rem; color: rgba(255,255,255,.62); }
+
+/* ── journal ── */
+.journal-section { padding: 7rem 0; background: var(--cream); }
+.journal-head { margin-bottom: 3.5rem; }
+.journal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 1.5rem; }
+.journal-card {
+  background: var(--parchment); border-radius: 1.25rem; padding: 2rem; cursor: pointer;
+  transition: transform .3s var(--ease), box-shadow .3s; border: 1px solid transparent;
+}
+.journal-card:hover { transform: translateY(-5px); box-shadow: 0 16px 44px rgba(28,51,41,.1); border-color: rgba(74,112,88,.2); }
+.journal-tag { font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; color: var(--amber); margin-bottom: .8rem; font-weight: 400; }
+.journal-title { font-family: var(--ff-head); font-size: 1.45rem; font-weight: 400; line-height: 1.25; margin-bottom: .7rem; }
+.journal-excerpt { font-size: .87rem; color: var(--muted); line-height: 1.62; margin-bottom: 1.2rem; }
+.journal-read { font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--sage); font-weight: 400; display: flex; align-items: center; gap: .4rem; }
+.journal-read::after { content: '→'; transition: transform .2s; }
+.journal-card:hover .journal-read::after { transform: translateX(4px); }
+
+/* ── modal ── */
+.modal-overlay {
+  display: none; position: fixed; inset: 0; z-index: 1000;
+  background: rgba(26,28,24,.65); backdrop-filter: blur(8px);
+  align-items: center; justify-content: center; padding: 2rem;
+}
+.modal-overlay.open { display: flex; }
+.modal-box {
+  background: var(--cream); border-radius: 1.5rem; max-width: 720px; width: 100%;
+  max-height: 88vh; overflow-y: auto; padding: 3rem 2.8rem; position: relative;
+  box-shadow: 0 30px 80px rgba(0,0,0,.22);
+}
+.modal-close {
+  position: absolute; top: 1.5rem; right: 1.5rem; background: var(--parchment);
+  border: none; cursor: pointer; width: 36px; height: 36px; border-radius: 50%;
+  font-size: 1.1rem; color: var(--muted); display: flex; align-items: center; justify-content: center;
+  transition: background .2s, color .2s;
+}
+.modal-close:hover { background: var(--deep); color: #fff; }
+.modal-tag { font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; color: var(--amber); margin-bottom: .7rem; font-weight: 400; }
+.modal-title { font-family: var(--ff-head); font-size: 2rem; font-weight: 400; line-height: 1.2; margin-bottom: 1.2rem; }
+.modal-body { font-size: .95rem; line-height: 1.82; color: var(--ink); }
+.modal-body p { margin-bottom: 1rem; }
+.modal-body h3 { font-family: var(--ff-head); font-size: 1.3rem; font-weight: 400; margin: 1.4rem 0 .5rem; color: var(--deep); }
+.modal-body ul { padding-left: 1.4rem; margin-bottom: 1rem; }
+.modal-body li { margin-bottom: .4rem; }
+
+/* ── find us ── */
+.findus-section { padding: 7rem 0; background: var(--parchment); }
+.findus-inner { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: start; }
+.findus-info { display: flex; flex-direction: column; gap: 1.8rem; }
+.info-block { display: flex; flex-direction: column; gap: .35rem; }
+.info-label { font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; color: var(--amber); font-weight: 400; }
+.info-value { font-size: 1rem; color: var(--ink); }
+.info-value a { color: var(--sage); text-decoration: none; }
+.info-value a:hover { color: var(--deep); }
+.map-box { border-radius: 1.2rem; overflow: hidden; box-shadow: 0 12px 40px rgba(28,51,41,.12); }
+.map-box iframe { width: 100%; height: 420px; display: block; border: 0; }
+
+/* ── footer ── */
+footer {
+  background: var(--ink); color: rgba(255,255,255,.55);
+  padding: 2.5rem 0; text-align: center; font-size: .82rem;
+  position: relative; z-index: 2;
+}
+footer a { color: var(--warm); text-decoration: none; }
+footer strong { color: rgba(255,255,255,.88); }
+
+/* ── responsive ── */
+@media (max-width: 900px) {
+  .experience-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .exp-img-inset { bottom: -1.5rem; right: -1rem; width: 42%; }
+  .findus-inner { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+  nav { padding: 1rem 1.5rem; }
+  .modal-box { padding: 2rem 1.5rem; }
+  .services-grid { grid-template-columns: 1fr; }
+  .exp-img-inset { display: none; }
+  .stats-row { gap: 1.5rem; }
+  .hero-title { font-size: clamp(2.8rem, 11vw, 5.5rem); }
+}
+</style>
+</head>
+<body>
+
+<canvas id="drift"></canvas>
+
+<!-- ── nav ── -->
+<nav id="main-nav">
+  <a href="#top" class="nav-logo">Maryvale <span>Vet</span></a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#journal">Journal</a></li>
+    <li><a href="#find-us">Contact</a></li>
+  </ul>
+  <a href="tel:+27312666310" class="nav-cta">031 266 6310</a>
+</nav>
+
+<!-- ── hero ── -->
+<section class="hero" id="top">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1600&auto=format&fit=crop&q=80" alt="Veterinary care" loading="eager">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow reveal">Westville · Salamanca Centre</p>
+    <h1 class="hero-title reveal">Exceptional care<br>for <em>every paw</em></h1>
+    <p class="hero-sub reveal">A trusted veterinary practice serving Westville and surrounds — compassionate, thorough, and always in your pet's corner.</p>
+    <div class="hero-btns reveal">
+      <a href="tel:+27312666310" class="btn-primary">Book Appointment</a>
+      <a href="#services" class="btn-ghost">Our Services</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    Discover
+  </div>
+</section>
+
+<!-- ── services ── -->
+<section class="services-section" id="services">
+  <div class="container">
+    <div class="services-head">
+      <p class="sec-label reveal">What We Offer</p>
+      <h2 class="sec-title reveal">Full-spectrum <em>veterinary care</em></h2>
+      <p class="sec-sub reveal">From routine wellness to complex procedures — everything your pet needs, right here in Westville.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card reveal">
+        <img class="service-card-img" src="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=600&auto=format&fit=crop&q=80" alt="Wellness check">
+        <div class="service-card-body">
+          <div class="service-icon">🩺</div>
+          <h3 class="service-name">Wellness Checks</h3>
+          <p class="service-desc">Annual and bi-annual health examinations to catch issues early and keep your pet in peak condition year-round.</p>
+        </div>
+      </div>
+
+      <div class="service-card reveal">
+        <img class="service-card-img" src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=600&auto=format&fit=crop&q=80" alt="Vaccinations">
+        <div class="service-card-body">
+          <div class="service-icon">💉</div>
+          <h3 class="service-name">Vaccinations</h3>
+          <p class="service-desc">Core and lifestyle vaccines tailored to your pet's age and risk profile — with reminders when they're due.</p>
+        </div>
+      </div>
+
+      <div class="service-card reveal">
+        <img class="service-card-img" src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=600&auto=format&fit=crop&q=80" alt="Surgery and procedures">
+        <div class="service-card-body">
+          <div class="service-icon">⚕️</div>
+          <h3 class="service-name">Surgery & Procedures</h3>
+          <p class="service-desc">Soft tissue surgery, spay and neuter, wound repair — performed with precision and full anaesthetic monitoring.</p>
+        </div>
+      </div>
+
+      <div class="service-card reveal">
+        <img class="service-card-img" src="https://images.unsplash.com/photo-1601758003122-53c40e686a19?w=600&auto=format&fit=crop&q=80" alt="Pet dental">
+        <div class="service-card-body">
+          <div class="service-icon">🦷</div>
+          <h3 class="service-name">Pet Dental Care</h3>
+          <p class="service-desc">Professional scaling, polishing, and oral health advice. Dental disease affects most pets over three — we catch it early.</p>
+        </div>
+      </div>
+
+      <div class="service-card reveal">
+        <img class="service-card-img" src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=600&auto=format&fit=crop&q=80" alt="Senior pet care">
+        <div class="service-card-body">
+          <div class="service-icon">🐾</div>
+          <h3 class="service-name">Senior Pet Care</h3>
+          <p class="service-desc">Older pets have different needs. Our senior care programmes cover pain, mobility, nutrition, and quality-of-life checks.</p>
+        </div>
+      </div>
+
+      <div class="service-card reveal">
+        <img class="service-card-img" src="https://images.unsplash.com/photo-1574144611937-0df059b5ef3e?w=600&auto=format&fit=crop&q=80" alt="Emergency consultations">
+        <div class="service-card-body">
+          <div class="service-icon">🚨</div>
+          <h3 class="service-name">Emergency Consultations</h3>
+          <p class="service-desc">When something can't wait, call us. We do our best to accommodate urgent cases and provide immediate triage.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── experience / about ── -->
+<section class="experience-section" id="about">
+  <div class="container">
+    <div class="experience-inner">
+      <div class="experience-images reveal">
+        <img class="exp-img-main" src="https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?w=800&auto=format&fit=crop&q=80" alt="Maryvale Veterinary Clinic">
+        <img class="exp-img-inset" src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=400&auto=format&fit=crop&q=80" alt="Veterinary care">
+      </div>
+      <div class="experience-text">
+        <div>
+          <p class="sec-label reveal">Our Practice</p>
+          <h2 class="sec-title reveal">Where <em>trust</em> is the first treatment</h2>
+        </div>
+        <p class="reveal">At Maryvale Veterinary Clinic, we understand that bringing your pet to the vet can be stressful — for both of you. Our team works hard to create an environment that feels calm, caring, and efficient from the moment you walk in.</p>
+        <p class="reveal">Conveniently located in the Salamanca Centre, we've built our practice on consistent, honest care. We take the time to explain what we're doing and why, so you always leave feeling confident about your pet's health.</p>
+        <div class="stats-row">
+          <div class="stat reveal">
+            <span class="stat-num">225</span>
+            <span class="stat-label">Google Reviews</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat-num">4.9★</span>
+            <span class="stat-label">Average Rating</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Committed to Care</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── book CTA ── -->
+<section class="book-cta">
+  <div class="container">
+    <p class="sec-label reveal" style="color:var(--warm)">Ready to Visit?</p>
+    <h2 class="sec-title reveal">Give your pet the care <em>they deserve</em></h2>
+    <p class="sec-sub reveal">Call us to book or pop in at the Salamanca Centre, Westville.</p>
+    <div class="book-cta-info reveal">
+      <span>📞 031 266 6310</span>
+      <span>📱 083 448 7807</span>
+      <span>📍 Salamanca Centre, Westville</span>
+    </div>
+    <a href="tel:+27312666310" class="btn-primary reveal" style="font-size:1rem;padding:1rem 2.8rem;">Call to Book</a>
+  </div>
+</section>
+
+<!-- ── journal ── -->
+<section class="journal-section" id="journal">
+  <div class="container">
+    <div class="journal-head">
+      <p class="sec-label reveal">Pet Health Journal</p>
+      <h2 class="sec-title reveal">Knowledge your <em>pets will thank you for</em></h2>
+    </div>
+    <div class="journal-grid">
+
+      <div class="journal-card reveal" data-article="wellness-checks">
+        <p class="journal-tag">Preventive Care</p>
+        <h3 class="journal-title">The Importance of Annual Wellness Checks</h3>
+        <p class="journal-excerpt">Regular check-ups catch problems before they become costly emergencies — here's what happens during a vet wellness exam.</p>
+        <span class="journal-read">Read article</span>
+      </div>
+
+      <div class="journal-card reveal" data-article="vaccinations">
+        <p class="journal-tag">Vaccinations</p>
+        <h3 class="journal-title">Vaccination Schedules — What Does Your Pet Actually Need?</h3>
+        <p class="journal-excerpt">Core vaccines, lifestyle vaccines, and how to build the right schedule for your dog or cat's situation.</p>
+        <span class="journal-read">Read article</span>
+      </div>
+
+      <div class="journal-card reveal" data-article="emergency-signs">
+        <p class="journal-tag">Emergency Care</p>
+        <h3 class="journal-title">Signs Your Pet Needs Emergency Vet Attention</h3>
+        <p class="journal-excerpt">Not every symptom is an emergency — but some are. Knowing the difference could save your pet's life.</p>
+        <span class="journal-read">Read article</span>
+      </div>
+
+      <div class="journal-card reveal" data-article="dental-health">
+        <p class="journal-tag">Dental Health</p>
+        <h3 class="journal-title">Pet Dental Health — Why It Matters More Than You Think</h3>
+        <p class="journal-excerpt">Over 80% of dogs and 70% of cats show signs of dental disease by age three. Here's what you can do.</p>
+        <span class="journal-read">Read article</span>
+      </div>
+
+      <div class="journal-card reveal" data-article="senior-pets">
+        <p class="journal-tag">Senior Care</p>
+        <h3 class="journal-title">Senior Pets — How Their Health Needs Change With Age</h3>
+        <p class="journal-excerpt">Ageing pets need different nutrition, more frequent checks, and a watchful eye. Here's how to help them thrive.</p>
+        <span class="journal-read">Read article</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── modal ── -->
+<div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-box">
+    <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+    <p class="modal-tag" id="modal-tag"></p>
+    <h2 class="modal-title" id="modal-title"></h2>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<!-- ── find us ── -->
+<section class="findus-section" id="find-us">
+  <div class="container">
+    <div style="margin-bottom:3rem">
+      <p class="sec-label reveal">Find Us</p>
+      <h2 class="sec-title reveal">Visit us in <em>Westville</em></h2>
+    </div>
+    <div class="findus-inner">
+      <div class="findus-info">
+        <div class="info-block reveal">
+          <span class="info-label">Address</span>
+          <span class="info-value">Salamanca Centre, 39 Maryvale Rd<br>Westville, Durban, 3630</span>
+        </div>
+        <div class="info-block reveal">
+          <span class="info-label">Phone</span>
+          <span class="info-value">
+            <a href="tel:+27312666310">031 266 6310</a><br>
+            <a href="tel:+27834487807">083 448 7807</a>
+          </span>
+        </div>
+        <div class="info-block reveal">
+          <span class="info-label">Hours</span>
+          <span class="info-value">
+            Monday – Friday: 8:00 – 17:30<br>
+            Saturday: 8:00 – 12:00<br>
+            Sunday &amp; Public Holidays: Closed
+          </span>
+        </div>
+        <div class="info-block reveal">
+          <span class="info-label">After Hours</span>
+          <span class="info-value">For urgent cases after hours, call <a href="tel:+27834487807">083 448 7807</a></span>
+        </div>
+        <a href="tel:+27312666310" class="btn-primary reveal" style="align-self:flex-start;margin-top:.5rem">Call to Book</a>
+      </div>
+      <div class="map-box reveal">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3460.8!2d30.9060226!3d-29.8423597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef70024bc3e9a35%3A0xeadee320b2104e15!2sMaryvale%20Veterinary%20Clinic!5e0!3m2!1sen!2sza!4v1718870000000!5m2!1sen!2sza"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Maryvale Veterinary Clinic location on Google Maps">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── footer ── -->
+<footer>
+  <div class="container">
+    <p><strong>Maryvale Veterinary Clinic</strong> &nbsp;·&nbsp; Salamanca Centre, Westville &nbsp;·&nbsp; <a href="tel:+27312666310">031 266 6310</a></p>
+    <p style="margin-top:.4rem">© 2026 Maryvale Veterinary Clinic. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+/* ── articles ── */
+const ARTICLES = {
+  'wellness-checks': {
+    tag: 'Preventive Care',
+    title: 'The Importance of Annual Wellness Checks',
+    body: `
+      <p>One of the most valuable things you can do for your pet is schedule a wellness examination at least once a year. Unlike humans, pets age much faster — a single calendar year can represent several years of biological ageing, especially for dogs and cats.</p>
+      <h3>What happens during a wellness check?</h3>
+      <p>A thorough wellness examination covers:</p>
+      <ul>
+        <li>Body condition score and weight assessment</li>
+        <li>Heart and lung auscultation</li>
+        <li>Teeth and gum examination</li>
+        <li>Skin, coat, eyes, and ears</li>
+        <li>Palpation of lymph nodes and abdomen</li>
+        <li>Parasite screening (ticks, fleas, worms)</li>
+        <li>Vaccine status review</li>
+      </ul>
+      <h3>Why annual isn't always enough</h3>
+      <p>For pets over seven years of age, we recommend bi-annual wellness checks. Senior pets can develop kidney disease, arthritis, or thyroid problems that are much easier to manage when caught early.</p>
+      <h3>The cost benefit</h3>
+      <p>Prevention consistently costs far less than treatment. A wellness visit that catches early dental disease, a heart murmur, or a skin condition saves you money — and your pet discomfort — in the long run.</p>
+      <p>Book your pet's next wellness check with us. Call <a href="tel:+27312666310" style="color:#4A7058">031 266 6310</a>.</p>
+    `
+  },
+  'vaccinations': {
+    tag: 'Vaccinations',
+    title: 'Vaccination Schedules — What Does Your Pet Actually Need?',
+    body: `
+      <p>Vaccines are one of the most powerful tools we have for protecting your pet from serious disease. But with so many options, it can be confusing to know which ones are necessary and how often.</p>
+      <h3>Core vaccines</h3>
+      <p>Core vaccines are recommended for all pets regardless of lifestyle:</p>
+      <ul>
+        <li><strong>Dogs:</strong> Distemper, Parvovirus, Adenovirus (CAV-2), and Rabies</li>
+        <li><strong>Cats:</strong> Herpesvirus, Calicivirus, Panleukopenia (FVRCP), and Rabies</li>
+      </ul>
+      <h3>Lifestyle (non-core) vaccines</h3>
+      <p>These depend on your pet's environment and activities:</p>
+      <ul>
+        <li><strong>Dogs:</strong> Bordetella (kennel cough), Leptospirosis</li>
+        <li><strong>Cats:</strong> FeLV (Feline Leukaemia Virus) — especially for outdoor cats</li>
+      </ul>
+      <h3>How often?</h3>
+      <p>After the initial puppy or kitten series, most core vaccines are boosted at 1 year and then every 3 years. Kennel cough requires annual boosters. We'll recommend the right schedule based on your pet's individual risk.</p>
+      <p>Call <a href="tel:+27312666310" style="color:#4A7058">031 266 6310</a> to review your pet's vaccine history.</p>
+    `
+  },
+  'emergency-signs': {
+    tag: 'Emergency Care',
+    title: 'Signs Your Pet Needs Emergency Vet Attention',
+    body: `
+      <p>It's one of the most stressful moments as a pet owner — something seems wrong but you're not sure if it's serious. Here are the signs that need immediate attention.</p>
+      <h3>Call us immediately if your pet shows:</h3>
+      <ul>
+        <li>Difficulty breathing, gasping, or blue/grey gums</li>
+        <li>Collapse or sudden inability to stand</li>
+        <li>Suspected ingestion of a toxin (chocolate, rat poison, plants, medications)</li>
+        <li>Severe trauma — hit by car, fall from height, dog attack</li>
+        <li>Uncontrolled or heavy bleeding</li>
+        <li>Repeated vomiting or diarrhoea with blood</li>
+        <li>Swollen or painful abdomen — especially in large breed dogs (possible bloat)</li>
+        <li>Seizures, especially prolonged or clustered</li>
+        <li>Eye injuries or sudden loss of vision</li>
+        <li>Unable to urinate — especially in male cats (this is life-threatening)</li>
+      </ul>
+      <h3>Signs that need attention within 24 hours</h3>
+      <ul>
+        <li>Loss of appetite for more than 24 hours</li>
+        <li>Persistent limping or lameness</li>
+        <li>Unusual lethargy or behaviour changes</li>
+        <li>Vomiting or diarrhoea that isn't severe but isn't resolving</li>
+      </ul>
+      <p>When in doubt, call us. We'd rather hear from you. Reach Maryvale Vet at <a href="tel:+27312666310" style="color:#4A7058">031 266 6310</a> or <a href="tel:+27834487807" style="color:#4A7058">083 448 7807</a>.</p>
+    `
+  },
+  'dental-health': {
+    tag: 'Dental Health',
+    title: 'Pet Dental Health — Why It Matters More Than You Think',
+    body: `
+      <p>Dental disease is the single most common health problem seen in adult dogs and cats. By the time most pets show obvious signs — bad breath, difficulty eating, drooling — disease is already well advanced.</p>
+      <h3>Why it matters beyond the mouth</h3>
+      <p>Bacteria from periodontal disease can enter the bloodstream and affect the heart, kidneys, and liver over time. Research links chronic dental disease directly to organ damage, particularly kidney disease in cats.</p>
+      <h3>Signs of dental problems to watch for</h3>
+      <ul>
+        <li>Bad breath (not all "dog breath" is normal)</li>
+        <li>Yellow or brown tartar build-up on teeth</li>
+        <li>Red, swollen, or bleeding gums</li>
+        <li>Dropping food or chewing on one side</li>
+        <li>Pawing at the mouth</li>
+        <li>Reluctance to eat hard food or toys</li>
+      </ul>
+      <h3>What we can do</h3>
+      <p>Professional dental scaling and polishing under anaesthetic removes tartar above and below the gum line — far more effective than any home product. We assess every tooth and extract only those that genuinely need to come out.</p>
+      <h3>What you can do at home</h3>
+      <p>Daily tooth brushing with pet-safe toothpaste is the gold standard. We can show you exactly how to make this easy and stress-free for your pet.</p>
+      <p>Ask about dental care at your next visit or call <a href="tel:+27312666310" style="color:#4A7058">031 266 6310</a> to book a dedicated dental check.</p>
+    `
+  },
+  'senior-pets': {
+    tag: 'Senior Care',
+    title: 'Senior Pets — How Their Health Needs Change With Age',
+    body: `
+      <p>As our pets age, their bodies change — and so do their health needs. Understanding what to expect helps you give your senior pet the quality of life they deserve.</p>
+      <h3>When is a pet considered "senior"?</h3>
+      <ul>
+        <li><strong>Small dogs and cats:</strong> Around 10–11 years</li>
+        <li><strong>Medium dogs:</strong> Around 8–9 years</li>
+        <li><strong>Large and giant breeds:</strong> As early as 6–7 years</li>
+      </ul>
+      <h3>Common age-related health changes</h3>
+      <ul>
+        <li><strong>Arthritis and joint pain</strong> — often subtle at first; watch for stiffness after rest, reluctance to jump</li>
+        <li><strong>Dental disease</strong> — more prevalent with age</li>
+        <li><strong>Kidney disease</strong> — especially common in older cats; often detected on routine blood tests</li>
+        <li><strong>Thyroid problems</strong> — hyperthyroidism in cats, hypothyroidism in dogs</li>
+        <li><strong>Cognitive changes</strong> — disorientation, restlessness, changed sleep patterns</li>
+        <li><strong>Cancer</strong> — risk increases significantly with age in all breeds</li>
+      </ul>
+      <h3>What we recommend for seniors</h3>
+      <p>Bi-annual check-ups for pets over 7 years, including a blood profile and urinalysis. This allows us to detect changes early — when they're most treatable. Nutrition adjustments, appropriate exercise, pain management, and environmental adaptations can all make a significant difference.</p>
+      <p>Call <a href="tel:+27312666310" style="color:#4A7058">031 266 6310</a> to book your senior pet's health screen.</p>
+    `
+  }
+};
+
+/* ── modal logic ── */
+const overlay  = document.getElementById('modal-overlay');
+const mTag     = document.getElementById('modal-tag');
+const mTitle   = document.getElementById('modal-title');
+const mBody    = document.getElementById('modal-body');
+
+function openModal(id) {
+  const a = ARTICLES[id]; if (!a) return;
+  mTag.textContent   = a.tag;
+  mTitle.textContent = a.title;
+  mBody.innerHTML    = a.body;
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.querySelectorAll('.journal-card').forEach(c => {
+  c.addEventListener('click', () => openModal(c.dataset.article));
+});
+document.getElementById('modal-close').addEventListener('click', closeModal);
+overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+/* ── nav scroll ── */
+const mainNav = document.getElementById('main-nav');
+window.addEventListener('scroll', () => {
+  mainNav.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+/* ── reveal on scroll ── */
+const revEls = document.querySelectorAll('.reveal');
+const revIO = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); revIO.unobserve(e.target); } });
+}, { threshold: 0.10 });
+revEls.forEach(el => revIO.observe(el));
+
+/* ── canvas drift ── */
+(function() {
+  const canvas = document.getElementById('drift');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const MQ = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (MQ.matches) { canvas.style.display = 'none'; return; }
+
+  const COLORS = ['#1C3329','#4A7058','#2E5C3E','#C07A2F','#B89660','#3A5C44','#1C3329','#4A7058'];
+  let W, H, motes = [];
+
+  function resize() {
+    W = canvas.width  = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+
+  function makeMote() {
+    return {
+      x:          Math.random() * W,
+      y:          H + Math.random() * 200,
+      r:          2.5 + Math.random() * 8,
+      vx:         (Math.random() - .5) * .35,
+      vy:         -.22 - Math.random() * .5,
+      alpha:      .04 + Math.random() * .08,
+      color:      COLORS[Math.floor(Math.random() * COLORS.length)],
+      wobble:     Math.random() * Math.PI * 2,
+      wobbleSpeed:.008 + Math.random() * .012
+    };
+  }
+
+  function init() {
+    motes = Array.from({ length: 28 }, () => {
+      const m = makeMote();
+      m.y = Math.random() * H; /* scatter initial y */
+      return m;
+    });
+  }
+
+  function tick() {
+    ctx.clearRect(0, 0, W, H);
+    motes.forEach(m => {
+      m.wobble += m.wobbleSpeed;
+      m.x      += m.vx + Math.sin(m.wobble) * .28;
+      m.y      += m.vy;
+      if (m.y < -20) { Object.assign(m, makeMote()); m.y = H + 20; }
+      ctx.beginPath();
+      ctx.arc(m.x, m.y, m.r, 0, Math.PI * 2);
+      ctx.fillStyle    = m.color;
+      ctx.globalAlpha  = m.alpha;
+      ctx.fill();
+    });
+    ctx.globalAlpha = 1;
+    requestAnimationFrame(tick);
+  }
+
+  resize(); init(); tick();
+  window.addEventListener('resize', resize, { passive: true });
+})();
+</script>
+
+</body>
+</html>

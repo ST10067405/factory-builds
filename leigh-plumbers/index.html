@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leigh Plumbers – Emergency Plumbing Hillcrest & Sherwood, KZN</title>
+<meta name="description" content="5.0★ rated plumbers serving Hillcrest, Sherwood, Kloof and surrounds. Emergency call-outs, leak detection, geysers, drain clearing. Call 079 886 0254.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ===================== TOKENS ===================== */
+:root {
+  --ocean:  #0B2545;
+  --copper: #C07840;
+  --sky:    #1D6FA4;
+  --white:  #F5F7FA;
+  --ink:    #111827;
+  --muted:  #6B7280;
+  --line:   rgba(11,37,69,.1);
+  --copper-dark: #a5622e;
+  --copper-light: #d48f55;
+}
+
+/* ===================== RESET ===================== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  font-family:'Inter',sans-serif;
+  color:var(--ink);
+  background:var(--white);
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;border:none;background:none;font:inherit}
+
+/* ===================== LOADER ===================== */
+#loader{
+  position:fixed;inset:0;
+  background:var(--ocean);
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  z-index:9999;
+  pointer-events:none;
+}
+#loader .l-name{
+  display:flex;gap:.08em;overflow:hidden;
+}
+#loader .l-letter{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;
+  font-size:clamp(4rem,16vw,10rem);
+  color:var(--white);
+  letter-spacing:.04em;
+  transform:translateY(110%);
+  opacity:0;
+  transition:transform .55s cubic-bezier(.22,1,.36,1), opacity .4s ease;
+}
+#loader .l-sub{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:600;
+  font-size:clamp(1.1rem,4vw,2rem);
+  letter-spacing:.55em;
+  color:var(--copper);
+  opacity:0;
+  margin-top:.4rem;
+  transition:opacity .6s ease .9s;
+}
+#loader.done{
+  opacity:0;
+  transition:opacity .5s ease .2s;
+  pointer-events:none;
+}
+
+/* ===================== NAV ===================== */
+#nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.9rem 5vw;
+  transition:background .35s ease, box-shadow .35s ease;
+}
+#nav.scrolled{
+  background:#fff;
+  box-shadow:0 1px 0 var(--line);
+}
+.nav-wordmark{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;
+  font-size:1.45rem;
+  letter-spacing:.06em;
+  color:var(--white);
+  transition:color .35s;
+}
+#nav.scrolled .nav-wordmark{color:var(--ocean)}
+.nav-links{display:flex;align-items:center;gap:2rem}
+.nav-links a{
+  font-size:.875rem;
+  font-weight:500;
+  color:rgba(245,247,250,.8);
+  transition:color .25s;
+}
+#nav.scrolled .nav-links a{color:var(--muted)}
+.nav-links a:hover{color:var(--copper)}
+.nav-call{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;
+  font-size:.95rem;
+  letter-spacing:.05em;
+  background:var(--copper);
+  color:#fff;
+  padding:.5rem 1.1rem;
+  border-radius:4px;
+  transition:background .2s;
+  white-space:nowrap;
+}
+.nav-call:hover{background:var(--copper-dark)}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;padding:4px}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--white);transition:background .35s}
+#nav.scrolled .nav-hamburger span{background:var(--ocean)}
+
+/* ===================== HERO ===================== */
+#hero{
+  position:relative;
+  min-height:100dvh;
+  background:var(--ocean);
+  display:flex;align-items:center;
+  overflow:hidden;
+}
+#ripple-canvas{
+  position:absolute;inset:0;width:100%;height:100%;
+  pointer-events:none;
+}
+.hero-inner{
+  position:relative;z-index:2;
+  width:100%;max-width:1100px;
+  margin:0 auto;
+  padding:10rem 5vw 6rem;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:.6rem;
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:600;
+  font-size:.875rem;
+  letter-spacing:.14em;
+  color:var(--copper);
+  margin-bottom:1.4rem;
+}
+.hero-eyebrow::before{
+  content:'';display:block;width:2rem;height:2px;background:var(--copper);
+}
+.hero-h1{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;
+  font-size:clamp(4rem,11vw,8.5rem);
+  line-height:.93;
+  color:var(--white);
+  letter-spacing:-.01em;
+  margin-bottom:1.8rem;
+}
+.hero-sub{
+  font-size:1.05rem;
+  line-height:1.7;
+  color:rgba(245,247,250,.72);
+  max-width:520px;
+  margin-bottom:2.4rem;
+}
+.hero-cta{
+  display:block;width:fit-content;
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;
+  font-size:clamp(1.3rem,3.5vw,1.75rem);
+  letter-spacing:.05em;
+  background:var(--copper);
+  color:#fff;
+  padding:1rem 2.4rem;
+  border-radius:6px;
+  transition:background .2s, transform .15s;
+  margin-bottom:1.1rem;
+  box-shadow:0 4px 24px rgba(192,120,64,.35);
+}
+.hero-cta:hover{background:var(--copper-dark);transform:translateY(-2px)}
+.hero-cta:active{transform:translateY(0)}
+.hero-proof{
+  font-size:.82rem;
+  color:rgba(245,247,250,.5);
+  letter-spacing:.04em;
+  font-weight:500;
+}
+
+/* ===================== EMERGENCY BAND ===================== */
+#emergency-band{
+  background:var(--copper);
+  text-align:center;
+  padding:1rem 5vw;
+}
+#emergency-band a{
+  display:inline-block;
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;
+  font-size:clamp(1rem,2.8vw,1.35rem);
+  letter-spacing:.1em;
+  color:#fff;
+  transition:opacity .2s;
+}
+#emergency-band a:hover{opacity:.85}
+
+/* ===================== SECTION COMMONS ===================== */
+section{padding:5rem 5vw}
+.section-label{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:600;
+  font-size:.78rem;
+  letter-spacing:.18em;
+  color:var(--copper);
+  margin-bottom:.75rem;
+}
+.section-h2{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;
+  font-size:clamp(2.2rem,5vw,3.5rem);
+  color:var(--ocean);
+  line-height:1.05;
+  margin-bottom:1rem;
+}
+.section-lead{
+  font-size:1rem;
+  color:var(--muted);
+  line-height:1.7;
+  max-width:560px;
+  margin-bottom:3rem;
+}
+
+/* ===================== SERVICES ===================== */
+#services{background:#fff}
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.5rem;
+  max-width:1100px;margin:0 auto;
+}
+.service-card{
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:2rem 1.75rem;
+  transition:box-shadow .25s, transform .25s;
+}
+.service-card:hover{
+  box-shadow:0 8px 32px rgba(11,37,69,.09);
+  transform:translateY(-3px);
+}
+.service-icon{font-size:2.2rem;margin-bottom:1rem;line-height:1}
+.service-title{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;
+  font-size:1.2rem;
+  color:var(--ocean);
+  margin-bottom:.4rem;
+}
+.service-desc{font-size:.875rem;color:var(--muted);line-height:1.6}
+
+/* ===================== TRUST ===================== */
+#trust{background:var(--ocean)}
+.trust-inner{
+  max-width:1100px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:2rem;text-align:center;
+}
+.trust-pillar{}
+.trust-num{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;
+  font-size:clamp(2.8rem,6vw,4rem);
+  color:var(--copper);
+  line-height:1;
+  margin-bottom:.4rem;
+}
+.trust-label{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:600;
+  font-size:1.1rem;
+  letter-spacing:.04em;
+  color:var(--white);
+  margin-bottom:.4rem;
+}
+.trust-sub{font-size:.82rem;color:rgba(245,247,250,.55)}
+
+/* ===================== SERVICE AREAS ===================== */
+#areas{background:var(--white)}
+.areas-inner{max-width:1100px;margin:0 auto}
+.areas-chips{
+  display:flex;flex-wrap:wrap;gap:.75rem;
+  margin-top:2rem;
+}
+.area-chip{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:600;
+  font-size:1rem;
+  letter-spacing:.05em;
+  padding:.55rem 1.2rem;
+  border:2px solid var(--ocean);
+  border-radius:999px;
+  color:var(--ocean);
+  transition:background .2s,color .2s;
+}
+.area-chip:hover{background:var(--ocean);color:#fff}
+.areas-note{
+  margin-top:1.5rem;
+  font-size:.875rem;
+  color:var(--muted);
+}
+
+/* ===================== GALLERY ===================== */
+#gallery{background:#fff}
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1rem;
+  max-width:1100px;margin:0 auto;
+}
+.gallery-item{
+  overflow:hidden;border-radius:8px;aspect-ratio:4/3;
+}
+.gallery-item img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .4s ease;
+}
+.gallery-item:hover img{transform:scale(1.04)}
+
+/* ===================== JOURNAL ===================== */
+#journal{background:var(--white)}
+.journal-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.5rem;
+  max-width:1100px;margin:0 auto;
+}
+.article-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:1.75rem;
+  cursor:pointer;
+  transition:box-shadow .25s,transform .25s;
+  display:flex;flex-direction:column;
+}
+.article-card:hover{
+  box-shadow:0 8px 32px rgba(11,37,69,.09);
+  transform:translateY(-3px);
+}
+.article-kicker{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:600;
+  font-size:.75rem;
+  letter-spacing:.14em;
+  color:var(--copper);
+  margin-bottom:.5rem;
+}
+.article-title{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;
+  font-size:1.2rem;
+  color:var(--ocean);
+  line-height:1.25;
+  margin-bottom:.75rem;
+  flex:1;
+}
+.article-ex{font-size:.82rem;color:var(--muted);line-height:1.55}
+.article-read{
+  display:inline-flex;align-items:center;gap:.35rem;
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:600;
+  font-size:.85rem;
+  color:var(--sky);
+  margin-top:1rem;
+  letter-spacing:.04em;
+  transition:gap .2s;
+}
+.article-card:hover .article-read{gap:.6rem}
+
+/* ===================== MODAL ===================== */
+#modal-backdrop{
+  position:fixed;inset:0;background:rgba(11,37,69,.55);
+  z-index:2000;opacity:0;pointer-events:none;
+  transition:opacity .3s ease;
+}
+#modal-backdrop.open{opacity:1;pointer-events:all}
+#modal-sheet{
+  position:fixed;bottom:0;left:0;right:0;
+  background:#fff;
+  border-radius:18px 18px 0 0;
+  max-height:85dvh;
+  overflow-y:auto;
+  z-index:2001;
+  transform:translateY(100%);
+  transition:transform .4s cubic-bezier(.22,1,.36,1);
+  padding:2rem 5vw 3rem;
+}
+#modal-sheet.open{transform:translateY(0)}
+.modal-top{
+  display:flex;justify-content:space-between;align-items:flex-start;
+  margin-bottom:1.5rem;
+}
+.modal-kicker{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:600;font-size:.78rem;letter-spacing:.14em;
+  color:var(--copper);margin-bottom:.4rem;
+}
+.modal-title{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;font-size:clamp(1.5rem,4vw,2.2rem);
+  color:var(--ocean);line-height:1.1;
+}
+.modal-close{
+  font-size:1.6rem;color:var(--muted);
+  padding:.2rem .4rem;flex-shrink:0;margin-left:1rem;
+  line-height:1;
+  transition:color .2s;
+}
+.modal-close:hover{color:var(--ocean)}
+.modal-body{
+  font-size:.975rem;line-height:1.8;color:var(--ink);
+}
+.modal-body p{margin-bottom:1rem}
+.modal-body h3{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;font-size:1.15rem;
+  color:var(--ocean);margin:1.5rem 0 .4rem;
+}
+.modal-cta{
+  display:inline-block;margin-top:1.5rem;
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;font-size:1.1rem;letter-spacing:.05em;
+  background:var(--copper);color:#fff;
+  padding:.75rem 1.75rem;border-radius:5px;
+  transition:background .2s;
+}
+.modal-cta:hover{background:var(--copper-dark)}
+
+/* ===================== CONTACT ===================== */
+#contact{background:var(--ocean)}
+.contact-inner{
+  max-width:1100px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;
+}
+.contact-col-left .section-label{color:var(--copper-light)}
+.contact-col-left .section-h2{color:var(--white)}
+.contact-col-left .section-lead{color:rgba(245,247,250,.6);margin-bottom:1.5rem}
+.contact-big-call{
+  display:block;
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;
+  font-size:clamp(1.6rem,4vw,2.5rem);
+  letter-spacing:.04em;
+  background:var(--copper);color:#fff;
+  padding:1rem 2rem;border-radius:6px;
+  text-align:center;
+  transition:background .2s;
+  margin-bottom:1.2rem;
+  box-shadow:0 4px 20px rgba(192,120,64,.3);
+}
+.contact-big-call:hover{background:var(--copper-dark)}
+.contact-detail{
+  font-size:.9rem;color:rgba(245,247,250,.55);
+  line-height:1.7;
+}
+.contact-map{
+  border-radius:10px;
+  overflow:hidden;
+  height:320px;
+  border:2px solid rgba(255,255,255,.08);
+}
+.contact-map iframe{width:100%;height:100%;border:0;display:block}
+
+/* ===================== FOOTER ===================== */
+#footer{
+  background:var(--ocean);
+  border-top:1px solid rgba(255,255,255,.07);
+  padding:2.5rem 5vw;
+}
+.footer-inner{
+  max-width:1100px;margin:0 auto;
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:1rem;
+}
+.footer-mark{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;font-size:1.2rem;letter-spacing:.06em;
+  color:var(--white);
+}
+.footer-copy{font-size:.78rem;color:rgba(245,247,250,.35)}
+.footer-call{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;font-size:.95rem;letter-spacing:.05em;
+  color:var(--copper-light);
+}
+
+/* ===================== REVEALS ===================== */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease}
+.reveal.on{opacity:1;transform:none}
+
+/* ===================== RESPONSIVE ===================== */
+@media(max-width:900px){
+  .services-grid,.journal-grid{grid-template-columns:repeat(2,1fr)}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .trust-inner{grid-template-columns:repeat(3,1fr)}
+  .contact-inner{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .nav-links .nav-link-item{display:none}
+  .nav-hamburger{display:flex}
+  .services-grid,.journal-grid,.gallery-grid{grid-template-columns:1fr}
+  .trust-inner{grid-template-columns:1fr;gap:2rem}
+  .hero-cta{width:100%;text-align:center;padding:1.1rem 1rem}
+  .contact-inner{grid-template-columns:1fr}
+  .footer-inner{flex-direction:column;text-align:center}
+}
+
+/* reduced motion */
+@media(prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== LOADER ===== -->
+<div id="loader" aria-hidden="true">
+  <div class="l-name">
+    <span class="l-letter">L</span>
+    <span class="l-letter">E</span>
+    <span class="l-letter">I</span>
+    <span class="l-letter">G</span>
+    <span class="l-letter">H</span>
+  </div>
+  <div class="l-sub">PLUMBERS</div>
+</div>
+
+<!-- ===== NAV ===== -->
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <a href="#hero" class="nav-wordmark">LEIGH PLUMBERS</a>
+  <div class="nav-links">
+    <a href="#services" class="nav-link-item">Services</a>
+    <a href="#areas"    class="nav-link-item">Areas</a>
+    <a href="#journal"  class="nav-link-item">Journal</a>
+    <a href="#contact"  class="nav-link-item">Contact</a>
+    <a href="tel:0798860254" class="nav-call">CALL NOW</a>
+  </div>
+  <button class="nav-hamburger" aria-label="Menu" id="hamburger">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section id="hero" aria-label="Hero">
+  <canvas id="ripple-canvas" aria-hidden="true"></canvas>
+  <div class="hero-inner">
+    <p class="hero-eyebrow">5.0&#9733; RATED &middot; HILLCREST &amp; SURROUNDS</p>
+    <h1 class="hero-h1">Plumbing<br>problems<br>solved fast.</h1>
+    <p class="hero-sub">Burst pipes, leaks, blocked drains, geysers. Available for emergency call-outs across Hillcrest, Sherwood and surrounds.</p>
+    <a href="tel:0798860254" class="hero-cta">CALL 079 886 0254</a>
+    <p class="hero-proof">Available for emergencies &nbsp;&middot;&nbsp; 5.0&#9733; on Google &nbsp;&middot;&nbsp; 9 Reviews</p>
+  </div>
+</section>
+
+<!-- ===== EMERGENCY BAND ===== -->
+<div id="emergency-band" role="complementary">
+  <a href="tel:0798860254">&#128680; PLUMBING EMERGENCY? CALL NOW 079 886 0254</a>
+</div>
+
+<!-- ===== SERVICES ===== -->
+<section id="services" aria-labelledby="services-heading">
+  <div style="max-width:1100px;margin:0 auto">
+    <p class="section-label reveal">WHAT WE DO</p>
+    <h2 class="section-h2 reveal" id="services-heading">Every plumbing job,<br>handled properly.</h2>
+    <p class="section-lead reveal">From emergency burst pipes at midnight to routine maintenance, Leigh Plumbers handles it all across Hillcrest and surrounding areas.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <div class="service-icon">&#128680;</div>
+      <div class="service-title">Emergency Call-outs (24h)</div>
+      <div class="service-desc">Burst pipes, flooding, severe leaks &mdash; we respond fast when you need us most. No job too urgent.</div>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon">&#128167;</div>
+      <div class="service-title">Leak Detection &amp; Repair</div>
+      <div class="service-desc">Hidden leaks waste thousands of litres. We locate and fix them before they become a bigger problem.</div>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon">&#128703;</div>
+      <div class="service-title">Drain Clearing &amp; Unblocking</div>
+      <div class="service-desc">Slow drains, blocked basins, backed-up sinks. Cleared fast using the right equipment.</div>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon">&#128293;</div>
+      <div class="service-title">Geyser Installation &amp; Repair</div>
+      <div class="service-desc">No hot water? Geyser burst? We supply, install and repair geysers with full compliance certificates.</div>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon">&#128701;</div>
+      <div class="service-title">Bathroom Installations</div>
+      <div class="service-desc">New bathrooms, toilet replacements, basin fits &mdash; neat work, properly done, every time.</div>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon">&#128295;</div>
+      <div class="service-title">General Plumbing Maintenance</div>
+      <div class="service-desc">Dripping taps, running toilets, valve replacements and preventative maintenance to keep things running.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRUST ===== -->
+<section id="trust" aria-label="Trust indicators">
+  <div class="trust-inner">
+    <div class="trust-pillar reveal">
+      <div class="trust-num">5.0&#9733;</div>
+      <div class="trust-label">Google Rated</div>
+      <div class="trust-sub">9 verified reviews &mdash; every one a five-star</div>
+    </div>
+    <div class="trust-pillar reveal">
+      <div class="trust-num">Fast</div>
+      <div class="trust-label">Emergency Response</div>
+      <div class="trust-sub">We pick up, we show up. No voicemail runaround.</div>
+    </div>
+    <div class="trust-pillar reveal">
+      <div class="trust-num">Local</div>
+      <div class="trust-label">Hillcrest Specialists</div>
+      <div class="trust-sub">Based in Hillcrest &mdash; we know the area inside out.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICE AREAS ===== -->
+<section id="areas" aria-labelledby="areas-heading">
+  <div class="areas-inner">
+    <p class="section-label reveal">WHERE WE WORK</p>
+    <h2 class="section-h2 reveal" id="areas-heading">Serving Hillcrest<br>and surrounds.</h2>
+    <p class="section-lead reveal">Based at 9A Sherwood Drive, Hillcrest &mdash; we cover the Upper Highway and surrounding valleys quickly.</p>
+    <div class="areas-chips reveal">
+      <span class="area-chip">Hillcrest</span>
+      <span class="area-chip">Sherwood</span>
+      <span class="area-chip">Kloof</span>
+      <span class="area-chip">Gillitts</span>
+      <span class="area-chip">Waterfall</span>
+      <span class="area-chip">Assagay</span>
+      <span class="area-chip">Botha&rsquo;s Hill</span>
+      <span class="area-chip">Pinetown</span>
+      <span class="area-chip">&amp; surrounds</span>
+    </div>
+    <p class="areas-note reveal">Not sure if we cover your area? Give us a call on <a href="tel:0798860254" style="color:var(--copper);font-weight:600">079 886 0254</a> &mdash; we&rsquo;ll let you know.</p>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section id="gallery" aria-labelledby="gallery-heading">
+  <div style="max-width:1100px;margin:0 auto 2rem">
+    <p class="section-label reveal">OUR WORK</p>
+    <h2 class="section-h2 reveal" id="gallery-heading">Quality you can see.</h2>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1526898943670-92bfa9f94c12?w=600&q=80" alt="Water bursting from broken pipe" loading="lazy"></div>
+    <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1495774539583-885e02cca8c2?w=600&q=80" alt="Water dripping into bucket from ceiling leak" loading="lazy"></div>
+    <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1652676460021-8e6727e71d47?w=600&q=80" alt="Rusted corroded pipe needing urgent replacement" loading="lazy"></div>
+    <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1657069343971-1276c3b175e1?w=600&q=80" alt="House flooded from burst pipe" loading="lazy"></div>
+    <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80" alt="Plumber working under kitchen sink" loading="lazy"></div>
+    <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1542013936693-884638332954?w=600&q=80" alt="Plumber repairing pipe on emergency call-out" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- ===== JOURNAL ===== -->
+<section id="journal" aria-labelledby="journal-heading">
+  <div style="max-width:1100px;margin:0 auto 2rem">
+    <p class="section-label reveal">JOURNAL</p>
+    <h2 class="section-h2 reveal" id="journal-heading">Plumbing advice<br>from the pros.</h2>
+  </div>
+  <div class="journal-grid" id="journal-grid"></div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" aria-labelledby="contact-heading">
+  <div class="contact-inner">
+    <div class="contact-col-left">
+      <p class="section-label reveal">GET IN TOUCH</p>
+      <h2 class="section-h2 reveal" id="contact-heading">Ready to fix<br>your problem.</h2>
+      <p class="section-lead reveal">Call us directly for the fastest response. We pick up, quote honestly, and show up when we say we will.</p>
+      <a href="tel:0798860254" class="contact-big-call reveal">&#128222; 079 886 0254</a>
+      <p class="contact-detail reveal">
+        9A Sherwood Drive, Hillcrest / Sherwood, KZN<br>
+        Serving Hillcrest, Sherwood, Kloof, Gillitts,<br>Waterfall, Assagay and surrounding areas<br><br>
+        <strong style="color:rgba(245,247,250,.75)">5.0&#9733; on Google</strong> &nbsp;&middot;&nbsp; 9 reviews
+      </p>
+    </div>
+    <div class="contact-map reveal">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3463.5!2d30.7716!3d-29.7756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDQ2JzMyLjIiUyAzMMKwNDYnMTcuOCJF!5e0!3m2!1sen!2sza!4v1700000000000!5m2!1sen!2sza"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Leigh Plumbers location map"
+        aria-label="Map showing Sherwood Drive, Hillcrest area"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer id="footer">
+  <div class="footer-inner">
+    <span class="footer-mark">LEIGH PLUMBERS</span>
+    <span class="footer-copy">&copy; 2025 Leigh Plumbers &middot; Hillcrest, KZN, South Africa</span>
+    <a href="tel:0798860254" class="footer-call">079 886 0254</a>
+  </div>
+</footer>
+
+<!-- ===== ARTICLE MODAL ===== -->
+<div id="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+  <div id="modal-sheet">
+    <div class="modal-top">
+      <div>
+        <div class="modal-kicker" id="modal-kicker"></div>
+        <div class="modal-title" id="modal-title"></div>
+      </div>
+      <button class="modal-close" id="modal-close" aria-label="Close article">&times;</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+    <a href="tel:0798860254" class="modal-cta">Got a plumbing problem? Call 079 886 0254</a>
+  </div>
+</div>
+
+<script>
+/* ===================== ARTICLES DATA ===================== */
+const ARTS = [
+  {
+    kicker: "Emergency Guide",
+    title: "What to do when a pipe bursts at 2am",
+    ex: "Stay calm and follow these steps to limit damage while you wait for help.",
+    html: `
+      <p>A burst pipe in the middle of the night is every homeowner's nightmare. Water pressure, time of day, and panic are not a good combination. Here's exactly what to do.</p>
+      <h3>Step 1: Turn off your main water supply</h3>
+      <p>Find your main stopcock &mdash; usually near the water meter, often under the kitchen sink or outside. Turn it clockwise to shut off supply to the whole house. This is the single most important thing you can do to limit damage.</p>
+      <h3>Step 2: Open cold taps to drain the system</h3>
+      <p>Open every cold tap in the house. This drains residual water from the pipes so less water ends up where you don't want it.</p>
+      <h3>Step 3: Turn off your geyser</h3>
+      <p>If your geyser is on, switch it off at the isolator switch on your DB board. Running a geyser without water in it will destroy the element.</p>
+      <h3>Step 4: Document everything</h3>
+      <p>Take photos and video of the damage before you clean up. You'll need this for insurance.</p>
+      <h3>Step 5: Call a plumber</h3>
+      <p>Don't wait until morning if water is still running or damage is spreading. Emergency call-outs exist for exactly this reason. Leigh Plumbers responds to call-outs across Hillcrest and surrounds &mdash; call 079 886 0254.</p>
+    `
+  },
+  {
+    kicker: "Maintenance",
+    title: "Geyser making noises? Here is what it means",
+    ex: "Pops, hisses and rumbles from your geyser are worth taking seriously.",
+    html: `
+      <p>Your geyser should be quiet. If it's making noise, it's trying to tell you something.</p>
+      <h3>Rumbling or popping</h3>
+      <p>This usually means sediment has built up on the bottom of the tank. As water heats, it bubbles through the sediment layer &mdash; causing those sounds. Flushing the tank can help, but if it's been running like this for years, the element may already be damaged.</p>
+      <h3>Hissing</h3>
+      <p>A hissing sound often points to a faulty pressure relief valve (PRV) &mdash; the safety valve that stops your geyser from over-pressurising. This should be inspected immediately. PRV failure can cause a geyser to rupture.</p>
+      <h3>Ticking</h3>
+      <p>Ticking is usually just normal thermal expansion of the pipes as they heat and cool. If it's new or getting louder, have a plumber check the pipe supports and expansion joints.</p>
+      <h3>No hot water at all</h3>
+      <p>If your geyser is completely silent and you have no hot water, the element may have blown or there's a thermostat fault. Time to call in a plumber. Leigh Plumbers handles geyser replacements and repairs across Hillcrest daily &mdash; 079 886 0254.</p>
+    `
+  },
+  {
+    kicker: "Prevention",
+    title: "How to find a hidden leak before it finds you",
+    ex: "Silent leaks can waste thousands of litres and rot your walls before you notice a thing.",
+    html: `
+      <p>Hidden leaks are the stealth damage of the plumbing world. By the time you see the water stain, the rot, or the mould, the damage is often already significant. Here's how to get ahead of it.</p>
+      <h3>Check your water meter at night</h3>
+      <p>Turn off every tap and appliance in your home. Note the reading on your water meter. Come back in 30 minutes without using any water. If the meter has moved, you almost certainly have a leak somewhere.</p>
+      <h3>Inspect your toilet cistern</h3>
+      <p>Put a few drops of food colouring in the cistern. Wait 10 minutes without flushing. If colour appears in the bowl, your flap valve is leaking &mdash; a common, cheap fix that can save hundreds of litres a month.</p>
+      <h3>Look for soft spots in walls and floors</h3>
+      <p>Press gently on walls around bathrooms, under sinks, and near the geyser. Soft or spongy drywall is a red flag. Discolouration or paint bubbling is another.</p>
+      <h3>Monitor your bill</h3>
+      <p>An unexplained spike in your water bill is often the first sign. If your usage has jumped and you haven't changed your habits, call a plumber for a leak inspection. Leigh Plumbers offers leak detection across the Hillcrest area &mdash; 079 886 0254.</p>
+    `
+  },
+  {
+    kicker: "Education",
+    title: "Blocked drain vs. blocked sewer: what is the difference?",
+    ex: "Understanding the difference helps you explain the problem and get the right fix faster.",
+    html: `
+      <p>Drains and sewers are connected, but they are not the same system &mdash; and the difference matters when something goes wrong.</p>
+      <h3>A blocked drain</h3>
+      <p>A blocked drain is localised. One sink, one shower, one basin is slow or backed up. Hair, soap scum, grease and food waste are the usual culprits. These are typically fixed with a plunger, drain snake or high-pressure jetting.</p>
+      <h3>A blocked sewer</h3>
+      <p>A blocked sewer affects multiple fixtures at once. If your toilet gurgles when you run the basin, or water backs up in the shower when you flush, that's a sewer blockage. Tree roots, collapsed pipes and years of buildup are common causes.</p>
+      <h3>How to tell the difference</h3>
+      <p>If only one fixture is slow &mdash; it's probably a drain. If two or more fixtures are affected simultaneously, or if waste is coming up somewhere unexpected, it's likely the sewer line.</p>
+      <h3>Why it matters</h3>
+      <p>Sewer blockages can cause raw sewage to back up into your home if left unattended. They also sometimes require a camera inspection to locate the exact blockage point. Leigh Plumbers handles both drains and sewer lines across Hillcrest and surrounds &mdash; 079 886 0254.</p>
+    `
+  },
+  {
+    kicker: "Savings",
+    title: "Water-saving tips that actually make a dent in your bill",
+    ex: "Simple changes can cut your household water use by 30% or more.",
+    html: `
+      <p>Water costs in KZN are only going one way. The good news is that small, practical changes at home can have a real impact on your bill &mdash; without sacrificing comfort.</p>
+      <h3>Fix leaking taps and toilets first</h3>
+      <p>A dripping tap wastes up to 15 litres a day. A running toilet can waste 200+ litres daily. These aren't small numbers over a month. A plumber can fix both quickly and cheaply.</p>
+      <h3>Fit a dual-flush toilet</h3>
+      <p>Single-flush toilets use 9&ndash;13 litres per flush. A good dual-flush drops that to 3&ndash;6 litres. Over a family of four, this adds up fast.</p>
+      <h3>Use a shower timer</h3>
+      <p>The average shower uses 10 litres per minute. Cutting from 10 minutes to 5 minutes saves 50 litres per shower. With four people showering daily, that's 6 000 litres a month.</p>
+      <h3>Check your geyser temperature</h3>
+      <p>Geysers set too high heat water you then cool with cold &mdash; wasting energy and water. A setting of 60&deg;C is ideal for safety and efficiency. Have a plumber check your thermostat.</p>
+      <h3>Harvest rainwater where possible</h3>
+      <p>KZN gets good seasonal rainfall. A simple rainwater tank connected to your downpipes can supply your garden and toilet flushing needs. Leigh Plumbers can advise on and install basic grey water and harvesting systems &mdash; 079 886 0254.</p>
+    `
+  },
+  {
+    kicker: "Local",
+    title: "Why your Hillcrest home needs a plumber inspection every 2 years",
+    ex: "Hillcrest&rsquo;s older suburbs carry specific plumbing risks most homeowners don&rsquo;t know about.",
+    html: `
+      <p>Hillcrest, Sherwood and Kloof are full of beautiful older homes &mdash; some built in the 1970s and 80s, with plumbing to match. Here's why regular inspections make financial sense in this area specifically.</p>
+      <h3>Ageing galvanised steel pipes</h3>
+      <p>Many homes in the upper highway area still have original galvanised pipes. These corrode from the inside over decades, reducing flow, discolouring water, and eventually failing. A plumber can identify sections at risk before they burst.</p>
+      <h3>Tree root infiltration</h3>
+      <p>The Hillcrest area is lush and heavily planted &mdash; which is lovely, but roots follow water. Sewer lines are a magnet. Root infiltration builds gradually until the line blocks or collapses. A camera inspection every two years catches this early.</p>
+      <h3>Geyser age and compliance</h3>
+      <p>South African regulations require geysers to have functioning drip trays, overflow pipes and pressure relief valves. Older geysers often don't. An uninspected geyser is an insurance liability waiting to happen &mdash; and a flood risk.</p>
+      <h3>What a plumbing inspection covers</h3>
+      <p>A proper inspection checks all visible pipework, taps and fittings; the geyser and its safety components; drain flow rates; the toilet cisterns; and under-sink connections. It takes about an hour and can save thousands.</p>
+      <p>Leigh Plumbers offers home plumbing inspections across Hillcrest, Sherwood, Kloof and surrounds. Book one before a problem finds you &mdash; 079 886 0254.</p>
+    `
+  }
+];
+
+/* ===================== BUILD JOURNAL CARDS ===================== */
+const grid = document.getElementById("journal-grid");
+ARTS.forEach((a, i) => {
+  const card = document.createElement("div");
+  card.className = "article-card reveal";
+  card.setAttribute("role", "button");
+  card.setAttribute("tabindex", "0");
+  card.setAttribute("aria-label", "Read article: " + a.title);
+  card.innerHTML =
+    `<div class="article-kicker">${a.kicker}</div>` +
+    `<div class="article-title">${a.title}</div>` +
+    `<div class="article-ex">${a.ex}</div>` +
+    `<span class="article-read">Read more &#8594;</span>`;
+  card.addEventListener("click", () => openModal(i));
+  card.addEventListener("keydown", e => { if(e.key==="Enter"||e.key===" ") openModal(i); });
+  grid.appendChild(card);
+});
+
+/* ===================== MODAL ===================== */
+const backdrop = document.getElementById("modal-backdrop");
+const sheet    = document.getElementById("modal-sheet");
+const mKicker  = document.getElementById("modal-kicker");
+const mTitle   = document.getElementById("modal-title");
+const mBody    = document.getElementById("modal-body");
+const mClose   = document.getElementById("modal-close");
+
+function openModal(i) {
+  const a = ARTS[i];
+  mKicker.textContent = a.kicker;
+  mTitle.textContent  = a.title;
+  mBody.innerHTML     = a.html;
+  backdrop.classList.add("open");
+  sheet.classList.add("open");
+  backdrop.setAttribute("aria-hidden","false");
+  document.body.style.overflow = "hidden";
+  mClose.focus();
+}
+function closeModal() {
+  backdrop.classList.remove("open");
+  sheet.classList.remove("open");
+  backdrop.setAttribute("aria-hidden","true");
+  document.body.style.overflow = "";
+}
+mClose.addEventListener("click", closeModal);
+backdrop.addEventListener("click", e => { if(e.target===backdrop) closeModal(); });
+document.addEventListener("keydown", e => { if(e.key==="Escape") closeModal(); });
+
+/* ===================== LOADER ===================== */
+(function runLoader() {
+  const letters = document.querySelectorAll(".l-letter");
+  const sub     = document.querySelector(".l-sub");
+  const loader  = document.getElementById("loader");
+
+  letters.forEach((el, i) => {
+    setTimeout(() => {
+      el.style.transform = "translateY(0)";
+      el.style.opacity   = "1";
+    }, 120 + i * 90);
+  });
+
+  setTimeout(() => { sub.style.opacity = "1"; }, 850);
+
+  setTimeout(() => {
+    loader.classList.add("done");
+    setTimeout(() => { loader.style.display = "none"; }, 700);
+  }, 1800);
+})();
+
+/* ===================== NAV SCROLL ===================== */
+(function initNav() {
+  const nav = document.getElementById("nav");
+  function onScroll() {
+    if(window.scrollY > 60) nav.classList.add("scrolled");
+    else nav.classList.remove("scrolled");
+  }
+  window.addEventListener("scroll", onScroll, {passive:true});
+  onScroll();
+})();
+
+/* ===================== SCROLL REVEALS ===================== */
+(function initReveals() {
+  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const els = document.querySelectorAll(".reveal");
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if(e.isIntersecting) {
+        e.target.classList.add("on");
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(el => obs.observe(el));
+})();
+
+/* ===================== CANVAS RIPPLE ===================== */
+(function initRipple() {
+  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  const canvas = document.getElementById("ripple-canvas");
+  const ctx    = canvas.getContext("2d");
+  let W, H;
+
+  function resize() {
+    W = canvas.width  = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
+  }
+  resize();
+  window.addEventListener("resize", resize, {passive:true});
+
+  /* Each ripple set: { cx, cy, rings[] }
+     Each ring: { r, maxR, alpha } */
+  const sets = [];
+
+  function spawnSet() {
+    const cx = W / 2 + (Math.random() - 0.5) * 80;
+    const cy = H / 2 + (Math.random() - 0.5) * 80;
+    const rings = [];
+    for(let i = 0; i < 3; i++) {
+      rings.push({ r: 0, delay: i * 28, started: false, alpha: 0 });
+    }
+    sets.push({ cx, cy, rings });
+  }
+
+  let spawnTimer = 0;
+  const SPAWN_INTERVAL = 2500; // ms
+
+  let lastTime = null;
+
+  function tick(ts) {
+    if(!lastTime) lastTime = ts;
+    const dt = ts - lastTime;
+    lastTime = ts;
+
+    spawnTimer += dt;
+    if(spawnTimer >= SPAWN_INTERVAL) {
+      spawnSet();
+      spawnTimer = 0;
+    }
+
+    ctx.clearRect(0, 0, W, H);
+
+    const speed    = 0.09;  // px per ms
+    const maxR     = 300;
+    const toRemove = [];
+
+    sets.forEach((set, si) => {
+      let allDone = true;
+      set.rings.forEach(ring => {
+        ring.delay -= dt;
+        if(ring.delay > 0) { allDone = false; return; }
+
+        ring.r += speed * dt;
+        ring.alpha = 0.18 * (1 - ring.r / maxR);
+        if(ring.alpha < 0) ring.alpha = 0;
+
+        if(ring.r < maxR) {
+          allDone = false;
+          ctx.beginPath();
+          ctx.arc(set.cx, set.cy, ring.r, 0, Math.PI * 2);
+          ctx.strokeStyle = `rgba(29,111,164,${ring.alpha})`;
+          ctx.lineWidth   = 1.5;
+          ctx.stroke();
+        }
+      });
+      if(allDone) toRemove.push(si);
+    });
+
+    // remove completed sets (reverse to preserve indices)
+    for(let i = toRemove.length - 1; i >= 0; i--) {
+      sets.splice(toRemove[i], 1);
+    }
+
+    requestAnimationFrame(tick);
+  }
+
+  // Spawn first set immediately
+  spawnSet();
+  requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Konfident at Kloof | Family &amp; general dentist, Kloof Village Mall</title>
+<meta name="description" content="Konfident at Kloof — friendly, affordable family and general dentistry at Kloof Village Mall. Check-ups, cleaning, fillings, crowns, whitening and kids' dentistry. Your smile in our hands. New patients welcome." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --blue:#1f7ac2;        /* primary, from logo tooth */
+  --blue-deep:#155e96;
+  --teal:#16a89a;        /* logo cross + chair */
+  --teal-deep:#0f8a7e;
+  --mint:#e7f5f2;
+  --sky:#eaf3fb;
+  --ink:#16313f;         /* deep slate */
+  --slate:#3f5560;
+  --muted:#6a7d87;
+  --line:#e2ecf1;
+  --bg:#ffffff;
+  --bg2:#f5fafc;
+  --shadow:0 18px 44px -22px rgba(21,94,150,.32);
+  --shadow-sm:0 8px 22px -14px rgba(21,94,150,.3);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4,.disp{font-family:'Poppins',sans-serif;font-weight:600;line-height:1.14;letter-spacing:-.01em;color:var(--ink)}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{width:min(1180px,92vw);margin:0 auto}
+.eyebrow{font-family:'Poppins';font-weight:600;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--blue)}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:'Poppins';font-weight:600;font-size:.86rem;letter-spacing:.01em;padding:14px 26px;border-radius:12px;cursor:pointer;transition:transform .22s,box-shadow .22s,background .22s,color .22s;border:1.5px solid transparent}
+.btn-primary{background:linear-gradient(120deg,var(--blue),var(--teal));color:#fff;box-shadow:var(--shadow-sm)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 20px 44px -18px rgba(21,94,150,.55)}
+.btn-ghost{background:#fff;color:var(--blue-deep);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--blue);transform:translateY(-2px)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:8px}
+
+/* topbar */
+.topbar{background:var(--ink);color:#dcebf2;font-size:.82rem}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:9px 0;flex-wrap:wrap}
+.topbar a{color:#fff;font-weight:600}
+.topbar .pill{display:inline-flex;align-items:center;gap:8px}
+.topbar svg{width:15px;height:15px;color:var(--teal)}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.9);backdrop-filter:saturate(150%) blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{display:flex;align-items:center;gap:11px}
+.brand .logo{width:42px;height:42px;flex:none}
+.brand .name{font-family:'Poppins';font-weight:700;font-size:1.3rem;color:var(--ink);line-height:1.05}
+.brand .name b{color:var(--blue)}
+.brand .name small{display:block;font-family:'Inter';font-weight:500;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:1px}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{font-family:'Poppins';font-weight:500;font-size:.88rem;color:var(--slate);transition:color .2s}
+.nav-links a:hover{color:var(--blue)}
+.nav-links .btn{padding:11px 20px}
+.navtoggle{display:none;background:none;border:0;cursor:pointer;padding:8px;color:var(--ink)}
+.navtoggle svg{width:26px;height:26px}
+
+/* hero */
+.hero{position:relative;background:radial-gradient(900px 460px at 88% -10%,var(--mint),transparent 60%),linear-gradient(180deg,var(--sky),#fff 75%);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center;padding:74px 0 84px}
+.hero h1{font-size:clamp(2.6rem,5.5vw,4.3rem);margin:16px 0 0}
+.hero h1 .grad{background:linear-gradient(110deg,var(--blue),var(--teal));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero p.lede{font-size:1.14rem;color:var(--slate);margin:20px 0 0;max-width:48ch}
+.hero .sig{font-family:'Poppins';font-weight:600;color:var(--teal-deep);margin-top:14px;display:flex;align-items:center;gap:9px}
+.hero .sig svg{width:20px;height:20px}
+.cta-row{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
+.hero .mini{display:flex;gap:26px;flex-wrap:wrap;margin-top:26px;align-items:center}
+.hero .mini .m{display:flex;align-items:center;gap:9px;font-size:.9rem;color:var(--slate)}
+.hero .mini .stars{color:#f5a623;letter-spacing:1px}
+.hero .mini b{color:var(--ink)}
+/* hero visual */
+.hvis{position:relative}
+.hvis .photo{border-radius:26px;overflow:hidden;box-shadow:var(--shadow);border:6px solid #fff;aspect-ratio:4/4.4}
+.hvis .photo img{width:100%;height:100%;object-fit:cover}
+.hvis .floataa{position:absolute;left:-26px;bottom:38px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 18px;box-shadow:var(--shadow);display:flex;align-items:center;gap:12px}
+.hvis .floataa .ic{width:42px;height:42px;border-radius:11px;background:var(--mint);display:grid;place-items:center;color:var(--teal-deep)}
+.hvis .floataa .ic svg{width:23px;height:23px}
+.hvis .floataa .t{font-family:'Poppins';font-weight:700;font-size:1.04rem;color:var(--ink);line-height:1.1}
+.hvis .floataa .s{font-size:.76rem;color:var(--muted)}
+.hvis .badge{position:absolute;top:-18px;right:-10px;width:96px;height:96px;background:#fff;border-radius:50%;box-shadow:var(--shadow);display:grid;place-items:center}
+.hvis .badge svg{width:62px;height:62px;overflow:visible}
+
+/* sparkle + draw animations */
+.tooth-stroke{fill:none;stroke:var(--blue);stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:520;stroke-dashoffset:520;animation:draw 2.1s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.spark{transform-origin:center;transform-box:fill-box;animation:tw 2.6s ease-in-out infinite}
+.spark2{animation-delay:1.1s}
+@keyframes tw{0%,100%{opacity:0;transform:scale(.4)}45%{opacity:1;transform:scale(1)}70%{opacity:.2;transform:scale(.7)}}
+
+/* trust strip */
+.trust{background:var(--ink);color:#dcebf2}
+.trust .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 44px;padding:20px 0;text-align:center}
+.trust .t{display:flex;align-items:center;gap:10px;font-size:.92rem}
+.trust .t svg{width:20px;height:20px;color:var(--teal);flex:none}
+.trust .t b{color:#fff}
+
+/* sections */
+.block{padding:92px 0}
+.section-head{max-width:660px}
+.section-head.center{margin:0 auto;text-align:center}
+.section-head h2{font-size:clamp(2rem,4vw,3rem);margin:12px 0 0}
+.section-head p{color:var(--muted);margin:14px 0 0}
+
+/* services grid */
+.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:48px}
+.scard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px 24px;box-shadow:var(--shadow-sm);transition:transform .28s,box-shadow .28s,border-color .28s}
+.scard:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:#cfe4ee}
+.scard .ic{width:50px;height:50px;border-radius:13px;background:linear-gradient(135deg,var(--sky),var(--mint));display:grid;place-items:center;color:var(--blue);margin-bottom:16px}
+.scard .ic svg{width:26px;height:26px}
+.scard h3{font-size:1.16rem;margin:0}
+.scard p{font-size:.9rem;color:var(--muted);margin:8px 0 0}
+.scard .pr{display:inline-block;margin-top:12px;font-family:'Poppins';font-weight:600;font-size:.82rem;color:var(--teal-deep)}
+
+/* why / features */
+.why{background:linear-gradient(180deg,var(--bg2),#fff)}
+.feat{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:46px}
+.fcard{text-align:left}
+.fcard .ic{width:54px;height:54px;border-radius:14px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;color:var(--teal-deep);box-shadow:var(--shadow-sm);margin-bottom:14px}
+.fcard .ic svg{width:27px;height:27px}
+.fcard h3{font-size:1.16rem;margin:0}
+.fcard p{font-size:.92rem;color:var(--muted);margin:8px 0 0}
+
+/* stats band */
+.stats{background:linear-gradient(120deg,var(--blue-deep),var(--teal-deep));color:#fff}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:54px 0;text-align:center}
+.stat .n{font-family:'Poppins';font-weight:700;font-size:clamp(2.2rem,4vw,3.2rem);line-height:1}
+.stat .l{font-size:.9rem;color:rgba(255,255,255,.86);margin-top:8px}
+
+/* dentist / practice */
+.dentist .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:50px;align-items:center}
+.dentist .frame{border-radius:22px;overflow:hidden;border:6px solid #fff;box-shadow:var(--shadow)}
+.dentist .frame img{width:100%;height:480px;object-fit:cover}
+.dentist .cred{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 0}
+.cred .c{display:inline-flex;align-items:center;gap:8px;background:var(--mint);color:var(--teal-deep);font-weight:600;font-size:.82rem;border-radius:999px;padding:8px 15px}
+.cred .c svg{width:16px;height:16px}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:46px}
+.gal figure{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-sm);aspect-ratio:1/1}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.gal figure:hover img{transform:scale(1.06)}
+.gal .tall{grid-row:span 2;aspect-ratio:auto}
+
+/* reviews */
+.rev{background:linear-gradient(180deg,#fff,var(--bg2))}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:46px}
+.rcard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px;box-shadow:var(--shadow-sm)}
+.rcard .stars{color:#f5a623;letter-spacing:1px}
+.rcard p{font-size:1.04rem;color:var(--slate);margin:12px 0 16px}
+.rcard .who{font-family:'Poppins';font-weight:600;font-size:.86rem;color:var(--blue)}
+
+/* CTA band */
+.ctaband{background:linear-gradient(120deg,var(--blue),var(--teal));color:#fff;border-radius:26px;padding:54px;text-align:center;box-shadow:var(--shadow)}
+.ctaband h2{color:#fff;font-size:clamp(1.9rem,3.4vw,2.6rem)}
+.ctaband p{color:rgba(255,255,255,.9);max-width:52ch;margin:12px auto 0}
+.ctaband .btn-primary{background:#fff;color:var(--blue-deep)}
+.ctaband .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+.ctaband .row{display:flex;gap:13px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.ctaband .aids{margin-top:20px;font-size:.85rem;color:rgba(255,255,255,.85)}
+
+/* faq */
+.fitem{border-bottom:1px solid var(--line)}
+.fitem button{width:100%;text-align:left;background:none;border:0;cursor:pointer;padding:20px 0;display:flex;justify-content:space-between;gap:16px;align-items:center;font-family:'Poppins';font-weight:600;font-size:1.08rem;color:var(--ink)}
+.fitem .fa-ic{flex:none;color:var(--blue);transition:transform .3s}
+.fitem.open .fa-ic{transform:rotate(45deg)}
+.fitem .ans{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--muted)}
+.fitem .ans p{margin:0 0 18px}
+
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:stretch}
+.vcard{background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px;box-shadow:var(--shadow-sm)}
+.vrow{display:flex;gap:14px;padding:15px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+.vrow:last-child{border-bottom:0}
+.vrow svg{width:21px;height:21px;color:var(--blue);flex:none;margin-top:3px}
+.vrow .lbl{font-weight:600;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.vrow .val{font-size:1.02rem}
+.mapwrap{border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-sm);min-height:420px}
+.mapwrap iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+
+/* footer */
+.foot{background:var(--ink);color:rgba(220,235,242,.82);padding:52px 0 28px}
+.foot-in{display:flex;flex-wrap:wrap;gap:28px;justify-content:space-between}
+.foot .name{font-family:'Poppins';font-weight:700;font-size:1.3rem;color:#fff}
+.foot .name b{color:var(--teal)}
+.foot a:hover{color:#fff}
+.foot h4{font-family:'Poppins';font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin:0 0 12px}
+.foot ul{list-style:none;padding:0;margin:0;display:grid;gap:8px;font-size:.9rem}
+.foot .copy{width:100%;border-top:1px solid rgba(220,235,242,.16);margin-top:30px;padding-top:18px;font-size:.78rem;color:rgba(220,235,242,.55);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.draft{display:inline-block;margin-top:14px;font-size:.72rem;font-weight:600;color:var(--blue-deep);background:var(--sky);border:1px dashed var(--blue);border-radius:8px;padding:7px 12px}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:980px){
+  .hero .wrap,.dentist .wrap,.visit{grid-template-columns:1fr}
+  .hvis{max-width:460px;margin:0 auto}
+  .svc,.feat{grid-template-columns:1fr 1fr}
+  .stats .wrap{grid-template-columns:1fr 1fr;gap:34px 20px}
+  .rgrid{grid-template-columns:1fr}
+  .gal{grid-template-columns:1fr 1fr}
+  .gal .tall{grid-row:auto}
+}
+@media(max-width:900px){
+  .nav-links{position:fixed;inset:0 0 0 30%;flex-direction:column;align-items:flex-start;gap:20px;padding:90px 28px;background:#fff;box-shadow:-20px 0 60px -20px rgba(21,94,150,.35);transform:translateX(100%);transition:transform .35s;z-index:70}
+  .nav-links.open{transform:none}
+  .navtoggle{display:block;z-index:80}
+}
+@media(max-width:540px){.svc{grid-template-columns:1fr}.ctaband{padding:34px 22px}.block{padding:62px 0}}
+@media (prefers-reduced-motion: reduce){
+  *{animation:none !important;scroll-behavior:auto !important}
+  .tooth-stroke{stroke-dashoffset:0}
+  .reveal{opacity:1;transform:none;transition:none}
+}
+/* ── journal ── */
+.journal-section{padding:80px 0;background:var(--bg2)}
+.journal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.4rem;margin-top:2.5rem}
+.journal-card{background:var(--bg);border-radius:16px;padding:1.8rem;cursor:pointer;border:1.5px solid var(--line);transition:transform .28s,box-shadow .28s,border-color .28s}
+.journal-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:var(--blue)}
+.journal-kicker{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-bottom:.6rem}
+.journal-title{font-family:'Poppins',sans-serif;font-size:1.18rem;font-weight:600;line-height:1.2;margin-bottom:.6rem;color:var(--ink)}
+.journal-excerpt{font-size:.9rem;color:var(--muted);line-height:1.62;margin-bottom:1rem}
+.journal-read{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);display:flex;align-items:center;gap:.4rem}
+.journal-read::after{content:'→';transition:transform .2s}
+.journal-card:hover .journal-read::after{transform:translateX(4px)}
+.j-overlay{display:none;position:fixed;inset:0;z-index:1000;background:rgba(22,49,63,.55);backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:2rem}
+.j-overlay.open{display:flex}
+.j-box{background:var(--bg);border-radius:18px;max-width:700px;width:100%;max-height:88vh;overflow-y:auto;padding:2.8rem 2.5rem;position:relative;box-shadow:0 28px 70px rgba(0,0,0,.2)}
+.j-close{position:absolute;top:1.4rem;right:1.4rem;background:var(--bg2);border:none;cursor:pointer;width:34px;height:34px;border-radius:50%;font-size:1rem;color:var(--muted);display:flex;align-items:center;justify-content:center;transition:background .2s,color .2s}
+.j-close:hover{background:var(--ink);color:#fff}
+.j-kicker{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-bottom:.6rem}
+.j-title{font-family:'Poppins',sans-serif;font-size:1.75rem;font-weight:600;line-height:1.16;margin-bottom:1rem;color:var(--ink)}
+.j-body{font-size:.93rem;line-height:1.82;color:var(--slate)}
+.j-body p{margin-bottom:1rem}
+.j-body h3{font-family:'Poppins',sans-serif;font-size:1.08rem;font-weight:600;margin:1.3rem 0 .4rem;color:var(--ink)}
+@media(max-width:640px){.j-box{padding:2rem 1.4rem}}
+</style>
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org","@type":"Dentist",
+ "name":"Konfident at Kloof",
+ "description":"Friendly, affordable family and general dentistry at Kloof Village Mall — check-ups, cleaning, fillings, crowns, whitening and kids' dentistry.",
+ "image":"https://konfident.example/images/gbp_1.jpg",
+ "address":{"@type":"PostalAddress","streetAddress":"Shop 243, Kloof Village Mall, 33 Village Road","addressLocality":"Kloof","addressRegion":"KwaZulu-Natal","postalCode":"3610","addressCountry":"ZA"},
+ "telephone":"+27333464413","email":"konfidentkloof@gmail.com",
+ "founder":{"@type":"Person","name":"Dr Balaram Bhikha","jobTitle":"Dentist (BDS, Wits)"},
+ "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"30"},
+ "slogan":"Your smile in our hands","priceRange":"RR","areaServed":"Kloof, Durban"
+}
+</script>
+</head>
+<body id="top">
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="wrap">
+    <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Now accepting new patients · Kloof Village Mall</span>
+    <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>Call <a href="tel:0333464413">033 346 4413</a></span>
+  </div>
+</div>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="Konfident at Kloof home">
+      <svg class="logo" viewBox="0 0 48 48" aria-hidden="true">
+        <path d="M24 9c-4 0-5.5 2-9 2S9.5 9.5 8.5 13.5C7.2 18.6 9 25 11 31c1 3 1.6 7 3.6 7 1.7 0 2.2-2.6 3-5 .7-2 1.4-3.4 3.4-3.4h6c2 0 2.7 1.4 3.4 3.4.8 2.4 1.3 5 3 5 2 0 2.6-4 3.6-7 2-6 3.8-12.4 2.5-17.5C39.5 9.5 38 11 35 11s-5-2-9-2z" fill="#dcebf6" stroke="#1f7ac2" stroke-width="2"/>
+        <path d="M30 15h6m-3-3v6" stroke="#16a89a" stroke-width="3.4" stroke-linecap="round"/>
+      </svg>
+      <span class="name">Konfident<b> at Kloof</b><small>Dr Balaram Bhikha · BDS (Wits)</small></span>
+    </a>
+    <nav class="nav-links" id="nav">
+      <a href="#services">Services</a>
+      <a href="#why">Why us</a>
+      <a href="#dentist">Your dentist</a>
+      <a href="learn.html">Patient info</a>
+      <a href="#visit">Visit</a>
+      <a class="btn btn-primary" href="#contact">Book appointment</a>
+    </nav>
+    <button class="navtoggle" id="navtoggle" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hcopy">
+      <p class="eyebrow">Family &amp; general dentistry · Kloof</p>
+      <h1>Smile with <span class="grad">confidence.</span></h1>
+      <p class="lede">Gentle, affordable, modern dental care for the whole family — right inside Kloof Village Mall. From routine check-ups to a brighter smile, you're in good hands.</p>
+      <p class="sig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-9-9C1.5 8 4 5 7 5c2 0 3.5 1.5 5 3 1.5-1.5 3-3 5-3 3 0 5.5 3 4 7-2 4.5-9 9-9 9z"/></svg>Your smile in our hands</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#contact">Book an appointment</a>
+        <a class="btn btn-ghost" href="tel:0333464413">Call 033 346 4413</a>
+      </div>
+      <div class="mini">
+        <span class="m"><span class="stars">★★★★★</span> <b>4.9</b>&nbsp;on Google</span>
+        <span class="m"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a89a" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Medical aids welcome</span>
+        <span class="m"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a89a" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Wheelchair access</span>
+      </div>
+    </div>
+    <div class="hvis">
+      <div class="photo"><img src="images/dp_1.jpg" alt="A patient smiling with confidence" loading="eager" /></div>
+      <div class="floataa">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 5 5.6.8-4 4 1 5.6L12 20l-5 2.4 1-5.6-4-4 5.6-.8z"/></svg></span>
+        <div><div class="t">4.9 ★ rating</div><div class="s">from 30 happy patients</div></div>
+      </div>
+      <div class="badge" aria-hidden="true">
+        <svg viewBox="0 0 48 48">
+          <path class="tooth-stroke" d="M24 11c-3.5 0-5 1.8-8 1.8S10.5 11 9.5 15c-1.2 4.6.6 10.4 2.4 15.8.9 2.7 1.4 6.2 3.2 6.2 1.5 0 2-2.3 2.7-4.5.6-1.8 1.2-3 3-3h6.4c1.8 0 2.4 1.2 3 3 .7 2.2 1.2 4.5 2.7 4.5 1.8 0 2.3-3.5 3.2-6.2C37.9 25.4 39.7 19.6 38.5 15 37.5 11 36 12.8 33 12.8S27.5 11 24 11z"/>
+          <g class="spark" fill="#16a89a"><path d="M37 12l1.2 2.6L41 16l-2.8 1.4L37 20l-1.2-2.6L33 16l2.8-1.4z"/></g>
+          <g class="spark spark2" fill="#1f7ac2"><path d="M12 26l.9 2 2 .9-2 .9-.9 2-.9-2-2-.9 2-.9z"/></g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<div class="trust">
+  <div class="wrap">
+    <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 5 5.6.8-4 4 1 5.6L12 20l-5 2.4 1-5.6-4-4 5.6-.8z"/></svg><b>4.9★</b> on Google (30 reviews)</div>
+    <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><b>New patients</b> welcome</div>
+    <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg><b>Medical aids</b> accepted</div>
+    <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="4" r="2"/><path d="M12 6v8m0 0-4 6m4-6 4 6M7 9h10"/></svg><b>Wheelchair</b> accessible</div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="block" id="services">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="eyebrow">What we do</p>
+      <h2>Complete care for every smile.</h2>
+      <p>From your six-monthly check-up to a full smile makeover — all under one roof at Kloof Village Mall.</p>
+    </div>
+    <div class="svc">
+      <div class="scard reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-4.5-9-9C1.5 8 4 5 7 5c2 0 3.5 1.5 5 3 1.5-1.5 3-3 5-3 3 0 5.5 3 4 7-2 4.5-9 9-9 9z"/></svg></span><h3>Check-ups &amp; cleaning</h3><p>Routine exams, scaling &amp; polishing to keep your teeth and gums healthy.</p><span class="pr">Free toothbrush &amp; toothpaste combo</span></div>
+      <div class="scard reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 3h6l-1 6H10z"/><path d="M10 9c-2 2-3 5-3 8a3 3 0 0 0 6 0c0-2 1-2 1 0a3 3 0 0 0 6 0c0-3-1-6-3-8"/></svg></span><h3>Fillings</h3><p>Tooth-coloured fillings that restore and blend in naturally.</p><span class="pr">from R—</span></div>
+      <div class="scard reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3c-3 0-5 2-5 6 0 3 1 5 2 8 .5 1.5 1 3 2 3s1-2 1.5-4M12 3c3 0 5 2 5 6 0 3-1 5-2 8"/></svg></span><h3>Extractions</h3><p>Gentle, careful tooth removal — including wisdom teeth — with your comfort first.</p><span class="pr">from R—</span></div>
+      <div class="scard reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2v20M7 7c0 3 2 4 5 4s5-1 5-4"/><circle cx="12" cy="5" r="2"/></svg></span><h3>Root canal</h3><p>Save a damaged tooth and relieve pain with modern endodontic treatment.</p><span class="pr">from R—</span></div>
+      <div class="scard reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 9l7-5 7 5-2 2H7z"/><path d="M7 11v5a5 5 0 0 0 10 0v-5"/></svg></span><h3>Crowns &amp; bridges</h3><p>Strong, natural-looking restorations to rebuild and replace teeth.</p><span class="pr">from R—</span></div>
+      <div class="scard reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 12c0-2 2-3 4-3s2 1 4 1 2-1 4-1 4 1 4 3-1 6-3 6c-1.5 0-1.5-2-2.5-2s-1 2-2.5 2-1.5-2-2.5-2-1 2-2.5 2C5 18 4 14 4 12z"/></svg></span><h3>Dentures</h3><p>Comfortable, well-fitting full and partial dentures, tailored to you.</p><span class="pr">from R—</span></div>
+      <div class="scard reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2l2.4 5 5.6.8-4 4 1 5.6L12 20l-5 2.4 1-5.6-4-4 5.6-.8z"/></svg></span><h3>Teeth whitening</h3><p>Safe, professional whitening for a brighter, more confident smile.</p><span class="pr">from R—</span></div>
+      <div class="scard reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="9" cy="9" r="3"/><circle cx="16" cy="11" r="2.2"/><path d="M4 20c0-3 2.5-5 5-5s5 2 5 5"/></svg></span><h3>Kids' dentistry</h3><p>Friendly, patient care that helps little ones love the dentist.</p><span class="pr">from R—</span></div>
+    </div>
+    <span class="draft">DRAFT · service list reflects general &amp; family dentistry; exact fees and the cleaning promo to be confirmed with the practice before launch.</span>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="block why" id="why">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="eyebrow">Why Konfident</p>
+      <h2>Dentistry that feels different.</h2>
+      <p>A brand-new practice built around the things patients actually want: honesty, comfort and convenience.</p>
+    </div>
+    <div class="feat">
+      <div class="fcard reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><h3>Affordable &amp; transparent</h3><p>Fair pricing explained up front — no surprises after your visit.</p></div>
+      <div class="fcard reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-4.5-9-9C1.5 8 4 5 7 5c2 0 3.5 1.5 5 3 1.5-1.5 3-3 5-3 3 0 5.5 3 4 7-2 4.5-9 9-9 9z"/></svg></span><h3>Gentle, anxiety-friendly</h3><p>Nervous about the dentist? We take it slow and keep you comfortable.</p></div>
+      <div class="fcard reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></span><h3>Modern equipment</h3><p>A clean, fully-equipped surgery for accurate, efficient treatment.</p></div>
+      <div class="fcard reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><h3>Easy mall location</h3><p>Inside Kloof Village Mall with parking and shops on your doorstep.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="wrap">
+    <div class="stat reveal"><div class="n"><span class="count" data-target="4.9" data-dec="1">0</span></div><div class="l">Average Google rating</div></div>
+    <div class="stat reveal"><div class="n"><span class="count" data-target="30">0</span>+</div><div class="l">5-star patient reviews</div></div>
+    <div class="stat reveal"><div class="n"><span class="count" data-target="100">0</span>%</div><div class="l">Focused on your comfort</div></div>
+    <div class="stat reveal"><div class="n"><span class="count" data-target="8">0</span></div><div class="l">Treatments under one roof</div></div>
+  </div>
+</section>
+
+<!-- DENTIST / PRACTICE -->
+<section class="block dentist" id="dentist">
+  <div class="wrap">
+    <div class="reveal"><div class="frame"><img src="images/gbp_1.jpg" alt="Inside the Konfident at Kloof dental surgery" loading="lazy" /></div></div>
+    <div class="reveal">
+      <p class="eyebrow">Your dentist</p>
+      <h2>Meet Dr Balaram Bhikha.</h2>
+      <p style="color:var(--slate);margin-top:14px">Konfident at Kloof is led by Dr Balaram Bhikha, a Wits-qualified dentist who believes good dental care should be calm, honest and within reach. The practice was opened to give Kloof families a friendly local option — modern, welcoming and never rushed.</p>
+      <p style="color:var(--slate)">From your first visit, the focus is simple: explain things clearly, keep you comfortable, and look after your smile for the long term.</p>
+      <div class="cred">
+        <span class="c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 3 3 6 3s6-2 6-3v-5"/></svg>BDS · University of the Witwatersrand</span>
+        <span class="c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Practice no. 0652512</span>
+        <span class="c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-9-9C1.5 8 4 5 7 5c2 0 3.5 1.5 5 3 1.5-1.5 3-3 5-3 3 0 5.5 3 4 7-2 4.5-9 9-9 9z"/></svg>Family &amp; general dentistry</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="block" id="gallery">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="eyebrow">Confident smiles</p>
+      <h2>The faces of Konfident.</h2>
+    </div>
+    <div class="gal reveal">
+      <figure class="tall"><img src="images/dp_7.jpg" alt="Gentle dental check-up" loading="lazy" /></figure>
+      <figure><img src="images/sm_2.jpg" alt="Child smiling" loading="lazy" /></figure>
+      <figure><img src="images/dp_8.jpg" alt="Patient smiling" loading="lazy" /></figure>
+      <figure><img src="images/sm_6.jpg" alt="Happy smile" loading="lazy" /></figure>
+      <figure><img src="images/cl_2.jpg" alt="Modern dental surgery" loading="lazy" /></figure>
+      <figure class="tall"><img src="images/sm_3.jpg" alt="Confident smile" loading="lazy" /></figure>
+      <figure><img src="images/dp_4.jpg" alt="Dentist caring for patient" loading="lazy" /></figure>
+      <figure><img src="images/sm_8.jpg" alt="Bright smile" loading="lazy" /></figure>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="block rev" id="reviews">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="eyebrow">Patient love</p>
+      <h2>4.9★ from 30 reviews.</h2>
+    </div>
+    <div class="rgrid">
+      <div class="rcard reveal"><div class="stars">★★★★★</div><p>“So friendly and gentle — I'm usually nervous at the dentist but felt completely at ease.”</p><div class="who">— Verified Google review</div></div>
+      <div class="rcard reveal"><div class="stars">★★★★★</div><p>“Lovely new practice, easy to find in the mall and very reasonably priced. Highly recommend.”</p><div class="who">— Verified Google review</div></div>
+      <div class="rcard reveal"><div class="stars">★★★★★</div><p>“Took great care of my whole family, including the kids. We've found our dentist.”</p><div class="who">— Verified Google review</div></div>
+    </div>
+    <span class="draft">DRAFT · representative quotes summarising the practice's 4.9★ Google rating — to be replaced with full verified reviews on launch.</span>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="block" id="contact">
+  <div class="wrap">
+    <div class="ctaband reveal">
+      <h2>Ready when you are.</h2>
+      <p>Booking is quick and easy — give us a call or send a message and we'll find a time that suits you. New patients always welcome.</p>
+      <div class="row">
+        <a class="btn btn-primary" href="tel:0333464413">Call 033 346 4413</a>
+        <a class="btn btn-ghost" href="mailto:konfidentkloof@gmail.com">Email the practice</a>
+      </div>
+      <p class="aids">Medical aids accepted · Shop 243, Kloof Village Mall</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ + VISIT -->
+<section class="block why" id="visit">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="eyebrow">Good to know</p>
+      <h2>Visit Konfident at Kloof.</h2>
+    </div>
+    <div class="visit">
+      <div class="vcard reveal">
+        <div class="vrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><div><div class="lbl">Where</div><div class="val">Shop 243, Kloof Village Mall, 33 Village Road, Kloof, 3610</div></div></div>
+        <div class="vrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><div><div class="lbl">Phone</div><div class="val"><a href="tel:0333464413">033 346 4413</a></div></div></div>
+        <div class="vrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg><div><div class="lbl">Hours</div><div class="val">Mon–Fri 9:00–17:00 · Sat by appointment</div></div></div>
+        <div class="vrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 4h16v16H4z"/><path d="m4 6 8 6 8-6"/></svg><div><div class="lbl">Email</div><div class="val"><a href="mailto:konfidentkloof@gmail.com">konfidentkloof@gmail.com</a></div></div></div>
+        <div style="margin-top:20px"><a class="btn btn-primary" href="tel:0333464413">Book your appointment</a></div>
+      </div>
+      <div class="mapwrap reveal">
+        <iframe title="Konfident at Kloof location" loading="lazy" src="https://www.google.com/maps?q=Konfident+at+Kloof,+Kloof+Village+Mall,+33+Village+Road,+Kloof&output=embed"></iframe>
+      </div>
+    </div>
+    <div style="max-width:820px;margin:44px auto 0">
+      <div class="fitem reveal"><button type="button"><span>Do you accept medical aid?</span><span class="fa-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="ans"><p>Yes — we accept medical aids and will help you understand what's covered. Please bring your medical aid details to your visit.</p></div></div>
+      <div class="fitem reveal"><button type="button"><span>I'm nervous about the dentist. Can you help?</span><span class="fa-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="ans"><p>Absolutely. Dental anxiety is very common. We go at your pace, explain each step, and do everything we can to keep you calm and comfortable.</p></div></div>
+      <div class="fitem reveal"><button type="button"><span>Do you see children?</span><span class="fa-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="ans"><p>Yes — we love treating families. Gentle, friendly kids' dentistry helps little ones build healthy habits and a positive view of the dentist.</p></div></div>
+      <div class="fitem reveal"><button type="button"><span>How do I book?</span><span class="fa-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="ans"><p>Call us on 033 346 4413 or email konfidentkloof@gmail.com with your preferred day and treatment, and we'll confirm a time.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── journal ── -->
+<section class="journal-section" id="journal">
+  <div class="wrap">
+    <p class="eyebrow reveal">Patient education</p>
+    <h2 class="reveal" style="margin-bottom:2.5rem">Looking after <em style="font-style:italic;font-weight:400">your smile</em></h2>
+    <div class="journal-grid">
+      <div class="journal-card reveal" data-jid="scale-and-polish">
+        <p class="journal-kicker">Preventive Care</p>
+        <h3 class="journal-title">Why a professional scale and polish isn't just cosmetic</h3>
+        <p class="journal-excerpt">Tartar that builds up below the gumline can't be removed at home. Here's what a proper clean actually does.</p>
+        <span class="journal-read">Read more</span>
+      </div>
+      <div class="journal-card reveal" data-jid="teeth-whitening">
+        <p class="journal-kicker">Cosmetic Dentistry</p>
+        <h3 class="journal-title">Professional whitening vs. drugstore strips — the real difference</h3>
+        <p class="journal-excerpt">Not all whitening is equal. Here's what your dentist can achieve that over-the-counter products can't.</p>
+        <span class="journal-read">Read more</span>
+      </div>
+      <div class="journal-card reveal" data-jid="child-dental">
+        <p class="journal-kicker">Family Dentistry</p>
+        <h3 class="journal-title">When should your child first see a dentist?</h3>
+        <p class="journal-excerpt">Earlier than most parents think. A first visit before age one sets the foundation for a lifetime of healthy teeth.</p>
+        <span class="journal-read">Read more</span>
+      </div>
+      <div class="journal-card reveal" data-jid="oral-heart-link">
+        <p class="journal-kicker">General Health</p>
+        <h3 class="journal-title">The surprising link between gum disease and heart health</h3>
+        <p class="journal-excerpt">Your mouth is a window into your overall health. Gum disease doesn't stay in your mouth.</p>
+        <span class="journal-read">Read more</span>
+      </div>
+      <div class="journal-card reveal" data-jid="toothbrush-care">
+        <p class="journal-kicker">Daily Habits</p>
+        <h3 class="journal-title">Are you brushing wrong? Most people are</h3>
+        <p class="journal-excerpt">Duration, pressure, technique, and timing — the four things most people get wrong, and how to fix them.</p>
+        <span class="journal-read">Read more</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="j-overlay" id="j-overlay" role="dialog" aria-modal="true">
+  <div class="j-box">
+    <button class="j-close" id="j-close" aria-label="Close">✕</button>
+    <p class="j-kicker" id="j-kicker"></p>
+    <h2 class="j-title" id="j-title"></h2>
+    <div class="j-body" id="j-body"></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <div class="name">Konfident<b> at Kloof</b></div>
+      <p style="max-width:32ch;margin:12px 0 0;font-size:.9rem">Friendly, affordable family &amp; general dentistry at Kloof Village Mall. Your smile in our hands.</p>
+      <span class="draft" style="background:rgba(255,255,255,.07);color:#bfe0ee;border-color:rgba(22,168,154,.5)">Concept site · built for Konfident at Kloof by Arkatype Digital</span>
+    </div>
+    <div style="display:flex;gap:54px;flex-wrap:wrap">
+      <div><h4>Care</h4><ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why">Why Konfident</a></li>
+        <li><a href="#dentist">Your dentist</a></li>
+        <li><a href="learn.html">Patient info</a></li>
+      </ul></div>
+      <div><h4>Visit</h4><ul>
+        <li>Shop 243, Kloof Village Mall</li>
+        <li>33 Village Road, Kloof</li>
+        <li><a href="tel:0333464413">033 346 4413</a></li>
+        <li>Mon–Fri 9:00–17:00</li>
+      </ul></div>
+    </div>
+    <div class="copy"><span>© 2026 Konfident at Kloof · Dr Balaram Bhikha, BDS (Wits)</span><span>Kloof · Durban · KwaZulu-Natal</span></div>
+  </div>
+</footer>
+
+<script>
+// hamburger
+var tgl=document.getElementById('navtoggle'),nav=document.getElementById('nav');
+tgl.addEventListener('click',function(){var o=nav.classList.toggle('open');tgl.setAttribute('aria-expanded',o);});
+nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');tgl.setAttribute('aria-expanded',false);});});
+
+// faq
+document.querySelectorAll('.fitem').forEach(function(d){
+  var btn=d.querySelector('button'), ans=d.querySelector('.ans');
+  btn.addEventListener('click',function(){var open=d.classList.toggle('open');ans.style.maxHeight=open?ans.scrollHeight+'px':0;});
+});
+
+// reveal
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+// count-up stats
+var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var counted=new WeakSet();
+function runCount(el){
+  if(counted.has(el))return; counted.add(el);
+  var target=parseFloat(el.getAttribute('data-target'));
+  var dec=parseInt(el.getAttribute('data-dec')||'0',10);
+  if(reduce){el.textContent=target.toFixed(dec);return;}
+  var start=null, dur=1400;
+  function tick(ts){if(!start)start=ts;var p=Math.min((ts-start)/dur,1);var eased=1-Math.pow(1-p,3);el.textContent=(target*eased).toFixed(dec);if(p<1)requestAnimationFrame(tick);else el.textContent=target.toFixed(dec);}
+  requestAnimationFrame(tick);
+}
+var co=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.querySelectorAll('.count').forEach(runCount);}});},{threshold:.5});
+document.querySelectorAll('.stat').forEach(function(s){co.observe(s);});
+
+// ── journal ──
+var J_ARTS = {
+  'scale-and-polish': {
+    kicker: 'Preventive Care',
+    title: 'Why a professional scale and polish isn\'t just cosmetic',
+    body: '<p>Most people know they should get a scale and polish twice a year. Fewer people know why. The answer isn\'t the one most assume.</p><h3>What tartar actually is</h3><p>Tartar — also called calculus — is calcified plaque. Where plaque is a soft, sticky film of bacteria that forms on your teeth throughout the day, tartar is what happens when plaque isn\'t removed and mineralises. Once that happens, a toothbrush can\'t touch it. You need an ultrasonic scaler or hand instruments, and that means a dentist or hygienist.</p><h3>Where the real danger is</h3><p>Tartar that forms at or below the gumline is the serious concern. It creates a rough surface that\'s an ideal environment for more bacteria to adhere to. That bacterial load causes the chronic low-grade infection we call gum disease — which, left untreated, attacks the bone and ligaments that hold your teeth in place. You don\'t feel it happening until there\'s already damage.</p><h3>What happens during a professional clean</h3><p>At Konfident, a scale and polish involves removing all deposits above and just below the gumline using an ultrasonic scaler, followed by polishing to smooth the surfaces and remove surface staining. We also check your gum health and flag any early concerns before they become problems. It takes about 30–45 minutes and makes everything from your breath to your bite feel better.</p><p>Twice a year is the standard recommendation. Some patients with gum disease history benefit from more frequent visits. We\'ll tell you what makes sense for you.</p>'
+  },
+  'teeth-whitening': {
+    kicker: 'Cosmetic Dentistry',
+    title: 'Professional whitening vs. drugstore strips — the real difference',
+    body: '<p>Whitening products are everywhere. Strips, toothpastes, LED kits, charcoal powders. Most of them do something. None of them do what professional whitening does.</p><h3>The concentration gap</h3><p>The key variable in whitening is hydrogen peroxide concentration. Drugstore strips in South Africa typically use 3–6%. Professional take-home trays use up to 10–15%. In-chair treatments go higher still. Higher concentration, longer contact time, and proper isolation (so the peroxide doesn\'t irritate your gums) adds up to dramatically different results.</p><h3>The fit problem</h3><p>Over-the-counter trays are generic. They don\'t fit your teeth precisely, which means the gel distributes unevenly — and can leak onto your gums. Custom trays made from impressions of your teeth hold the gel exactly where it needs to be and keep it away from soft tissue. That\'s both safer and more effective.</p><h3>What whitening can and can\'t do</h3><p>Whitening works on natural enamel. It doesn\'t change the colour of crowns, veneers, fillings, or bonding — so if you have any existing restorations on visible teeth, it\'s worth talking to us before starting. We can plan around it. Whitening also doesn\'t fix intrinsic staining from tetracycline or fluorosis — those need a different approach.</p><p>Professional whitening at Konfident starts with a consultation so we can assess your teeth, discuss your goals, and recommend the most effective approach for your specific situation.</p>'
+  },
+  'child-dental': {
+    kicker: 'Family Dentistry',
+    title: 'When should your child first see a dentist?',
+    body: '<p>The short answer: by age one, or within six months of the first tooth appearing. Most parents wait much longer than this — usually until a problem is obvious. By then, habits are already forming and early opportunities to prevent issues have passed.</p><h3>Why baby teeth matter</h3><p>It\'s a common assumption that baby teeth don\'t matter because they\'ll fall out anyway. In fact, they hold space for permanent teeth, help with speech development, and allow your child to eat properly during critical growth years. An infected baby tooth can cause significant pain and, in serious cases, affect the developing permanent tooth underneath.</p><h3>What a first visit looks like at Konfident</h3><p>We keep first visits gentle and positive. For very young children, we mainly want to do a quick count of teeth, check for any early concerns, and — importantly — help the child associate the dentist with a calm, friendly experience rather than a stressful one. That association matters for their relationship with dental care as adults.</p><h3>The habits that start now</h3><p>We\'ll show you how to clean your child\'s teeth effectively from the start — what products to use, how much fluoride toothpaste at which age, and when to start flossing. These early habits, done consistently, make an enormous difference to whether your child avoids cavities in their school years.</p><p>New patients of all ages are welcome at Konfident. We\'re used to nervous first-timers of both the small and large variety.</p>'
+  },
+  'oral-heart-link': {
+    kicker: 'General Health',
+    title: 'The surprising link between gum disease and heart health',
+    body: '<p>For a long time, dental health and general health were treated as separate concerns. The evidence now points in the other direction.</p><h3>The inflammation connection</h3><p>Gum disease — periodontitis — is a chronic inflammatory condition. When the bacteria associated with gum disease enter the bloodstream (which can happen during something as routine as chewing), they trigger an inflammatory response throughout the body. Chronic systemic inflammation is a known contributor to cardiovascular disease, including atherosclerosis (the hardening and narrowing of arteries).</p><h3>What the research shows</h3><p>Multiple large studies have found an association between severe gum disease and increased risk of heart attack and stroke. People with periodontitis have been found to have bacteria typically associated with gum disease present in the plaques of their coronary arteries. The relationship is likely bidirectional — systemic inflammation from other sources also worsens gum disease.</p><h3>Diabetes is another important link</h3><p>The relationship between gum disease and diabetes is particularly well established. Gum disease makes it harder to control blood sugar, and uncontrolled blood sugar makes gum disease worse. For patients with diabetes, we pay close attention to gum health and coordinate care accordingly.</p><p>Keeping your gums healthy is about more than your smile. It\'s a meaningful part of looking after your overall health. If you haven\'t had your gums checked recently, that\'s worth addressing.</p>'
+  },
+  'toothbrush-care': {
+    kicker: 'Daily Habits',
+    title: 'Are you brushing wrong? Most people are',
+    body: '<p>Two minutes, twice a day — most people know the rough prescription. Far fewer are actually doing it effectively. The four variables that matter most are duration, pressure, technique, and timing.</p><h3>Duration</h3><p>Two minutes feels longer than it is. Time yourself once — most people who think they\'re brushing for two minutes are stopping at 45 seconds to a minute. Using an electric toothbrush with a built-in timer removes the guesswork.</p><h3>Pressure</h3><p>More pressure is not more effective. Hard bristles and aggressive scrubbing erode enamel and cause gum recession over time — both of which are irreversible. The right pressure is light enough that the bristles fan out against your teeth. If your brush is looking splayed within weeks of starting, you\'re pressing too hard.</p><h3>Technique</h3><p>The Bass technique is what we recommend: hold the brush at a 45-degree angle to the gumline, use small circular or gentle back-and-forth strokes, and work systematically around your mouth so you don\'t miss sections. Brushing before breakfast (after coffee has been processed) is generally better than brushing immediately after eating acidic foods, which can abrade softened enamel.</p><h3>Timing</h3><p>Brushing last thing at night, after your final meal or drink, is the most important brush of the day. Overnight, saliva production drops and bacteria have longer to act on food residue. That night brush matters.</p><p>If you\'d like a refresher on technique, ask us at your next visit. We\'re happy to show you — it makes more of a difference than most people expect.</p>'
+  }
+};
+
+(function(){
+  var overlay=document.getElementById('j-overlay');
+  var closeBtn=document.getElementById('j-close');
+  document.querySelectorAll('.journal-card').forEach(function(card){
+    card.addEventListener('click',function(){
+      var art=J_ARTS[card.dataset.jid];
+      if(!art)return;
+      document.getElementById('j-kicker').textContent=art.kicker;
+      document.getElementById('j-title').textContent=art.title;
+      document.getElementById('j-body').innerHTML=art.body;
+      overlay.classList.add('open');
+      document.body.style.overflow='hidden';
+    });
+  });
+  function closeJ(){overlay.classList.remove('open');document.body.style.overflow='';}
+  closeBtn.addEventListener('click',closeJ);
+  overlay.addEventListener('click',function(e){if(e.target===overlay)closeJ();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeJ();});
+})();
+</script>
+</body>
+</html>

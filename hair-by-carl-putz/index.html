@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hair by Carl Putz — Kloof's Boutique Hairdresser</title>
+<meta name="description" content="Hair by Carl Putz — 40+ years of expert hair and nail care in Kloof. Boutique appointments, complimentary drinks, head massage included. Book via WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ── reset & tokens ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --espresso:#2C1A10;
+  --espresso-mid:#3D2415;
+  --gold:#C9973A;
+  --gold-light:#D4A96A;
+  --blush:#E8D5C4;
+  --cream:#F5EFE6;
+  --parchment:#FAF7F3;
+  --muted:#8A7060;
+  --ink:#1E100A;
+  --line:rgba(201,151,58,.18);
+  --r:14px;
+  --font-h:'Cormorant Garamond',Georgia,serif;
+  --font-b:'Inter',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-b);background:var(--parchment);color:var(--ink);overflow-x:hidden;line-height:1.7}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+
+/* ── utilities ── */
+.wrap{max-width:1140px;margin:0 auto;padding:0 1.5rem}
+.eyebrow{font-family:var(--font-b);font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.9rem}
+.btn{display:inline-flex;align-items:center;gap:.55rem;padding:.75rem 1.75rem;border-radius:50px;font-size:.85rem;font-weight:600;letter-spacing:.04em;cursor:pointer;border:none;transition:all .28s}
+.btn-primary{background:var(--gold);color:#fff}
+.btn-primary:hover{background:#b4842e;transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,151,58,.35)}
+.btn-outline{background:transparent;color:var(--espresso);border:1.5px solid var(--espresso)}
+.btn-outline:hover{background:var(--espresso);color:#fff;transform:translateY(-2px)}
+.btn-light{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.3);backdrop-filter:blur(4px)}
+.btn-light:hover{background:rgba(255,255,255,.22);transform:translateY(-2px)}
+.wa-icon{width:18px;height:18px;fill:currentColor;flex-shrink:0}
+
+/* ── reveal ── */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ── nav ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:900;padding:1.1rem 0;transition:background .35s,box-shadow .35s}
+nav.scrolled{background:var(--espresso);box-shadow:0 2px 24px rgba(0,0,0,.25)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1140px;margin:0 auto;padding:0 1.5rem}
+.nav-logo{font-family:var(--font-h);font-size:1.25rem;color:#fff;line-height:1.2;letter-spacing:.01em}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-size:.82rem;font-weight:500;letter-spacing:.06em;color:rgba(255,255,255,.82);transition:color .22s}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{font-size:.8rem;font-weight:600;letter-spacing:.06em;padding:.55rem 1.3rem}
+.navtoggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.navtoggle span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;transition:all .3s}
+@media(max-width:780px){
+  .nav-links,.nav-cta{display:none}
+  .navtoggle{display:flex}
+  .nav-links.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--espresso);padding:1.5rem;gap:1.2rem}
+  .nav-links.open a{font-size:.95rem}
+}
+
+/* ── hero ── */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;background:var(--espresso);overflow:hidden}
+#hero-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.28;filter:saturate(.7)}
+.hero-content{position:relative;z-index:2;max-width:680px;padding:8rem 1.5rem 5rem;margin:0 auto 0 max(1.5rem, calc(50vw - 570px))}
+.hero-tag{display:inline-flex;align-items:center;gap:.5rem;background:rgba(201,151,58,.18);border:1px solid rgba(201,151,58,.35);border-radius:50px;padding:.35rem 1rem;font-size:.72rem;font-weight:600;letter-spacing:.14em;color:var(--gold);text-transform:uppercase;margin-bottom:1.4rem}
+.hero-h{font-family:var(--font-h);font-size:clamp(3rem,7vw,5.5rem);font-weight:400;line-height:1.05;color:#fff;margin-bottom:1.2rem}
+.hero-h em{color:var(--gold);font-style:italic}
+.hero-sub{font-size:clamp(.95rem,2vw,1.1rem);color:rgba(255,255,255,.72);line-height:1.75;max-width:520px;margin-bottom:2.2rem}
+.hero-btns{display:flex;flex-wrap:wrap;gap:.9rem}
+.hero-stat{position:absolute;right:5%;bottom:12%;background:rgba(255,255,255,.07);border:1px solid rgba(201,151,58,.25);backdrop-filter:blur(12px);border-radius:var(--r);padding:1.1rem 1.4rem;text-align:center}
+.hero-stat-num{font-family:var(--font-h);font-size:2.2rem;color:var(--gold);line-height:1}
+.hero-stat-lab{font-size:.72rem;color:rgba(255,255,255,.6);letter-spacing:.1em;text-transform:uppercase;margin-top:.25rem}
+@media(max-width:600px){.hero-stat{display:none}}
+
+/* ── services ── */
+.services-section{padding:90px 0;background:var(--parchment)}
+.services-intro{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:end;margin-bottom:3.5rem}
+.services-intro h2{font-family:var(--font-h);font-size:clamp(2.2rem,4vw,3.2rem);font-weight:400;line-height:1.18;color:var(--ink)}
+.services-intro h2 em{color:var(--gold);font-style:italic}
+.services-intro p{color:var(--muted);line-height:1.8;font-size:.97rem}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.2rem}
+.service-card{background:var(--cream);border-radius:var(--r);padding:2rem 1.5rem;border:1.5px solid var(--line);transition:transform .28s,border-color .28s,box-shadow .28s}
+.service-card:hover{transform:translateY(-5px);border-color:var(--gold);box-shadow:0 12px 32px rgba(201,151,58,.12)}
+.service-icon{width:44px;height:44px;background:var(--espresso);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem;font-size:1.4rem}
+.service-name{font-family:var(--font-h);font-size:1.22rem;font-weight:500;color:var(--ink);margin-bottom:.5rem}
+.service-desc{font-size:.86rem;color:var(--muted);line-height:1.65}
+@media(max-width:680px){.services-intro{grid-template-columns:1fr}}
+
+/* ── experience ── */
+.experience-section{padding:100px 0;background:var(--espresso);position:relative;overflow:hidden}
+.experience-section::before{content:'';position:absolute;top:-80px;right:-120px;width:500px;height:500px;background:radial-gradient(circle,rgba(201,151,58,.12),transparent 70%);border-radius:50%;pointer-events:none}
+.experience-inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.exp-img-wrap{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/5}
+.exp-img-wrap img{width:100%;height:100%;object-fit:cover}
+.exp-badge{position:absolute;bottom:1.5rem;left:1.5rem;background:var(--espresso);border:1px solid rgba(201,151,58,.35);border-radius:10px;padding:.8rem 1.1rem;display:flex;align-items:center;gap:.7rem}
+.exp-badge-num{font-family:var(--font-h);font-size:2rem;color:var(--gold);line-height:1}
+.exp-badge-txt{font-size:.73rem;color:rgba(255,255,255,.7);letter-spacing:.07em;text-transform:uppercase;line-height:1.4}
+.exp-text .eyebrow{margin-bottom:.9rem}
+.exp-text h2{font-family:var(--font-h);font-size:clamp(2rem,3.5vw,3rem);font-weight:400;color:#fff;line-height:1.18;margin-bottom:1.4rem}
+.exp-text h2 em{color:var(--gold);font-style:italic}
+.exp-text p{color:rgba(255,255,255,.7);line-height:1.85;margin-bottom:1.1rem;font-size:.97rem}
+.exp-perks{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-top:2rem}
+.perk{display:flex;align-items:flex-start;gap:.75rem}
+.perk-dot{width:22px;height:22px;background:rgba(201,151,58,.18);border:1px solid rgba(201,151,58,.4);border-radius:50%;flex-shrink:0;margin-top:2px;display:flex;align-items:center;justify-content:center;font-size:.65rem;color:var(--gold)}
+.perk-txt{font-size:.86rem;color:rgba(255,255,255,.72);line-height:1.5}
+@media(max-width:780px){.experience-inner{grid-template-columns:1fr;gap:3rem}.exp-img-wrap{aspect-ratio:16/9}}
+
+/* ── team ── */
+.team-section{padding:90px 0;background:var(--cream)}
+.team-header{text-align:center;max-width:560px;margin:0 auto 3.5rem}
+.team-header h2{font-family:var(--font-h);font-size:clamp(2rem,4vw,3rem);font-weight:400;color:var(--ink);line-height:1.2}
+.team-header h2 em{color:var(--gold);font-style:italic}
+.team-header p{color:var(--muted);margin-top:.8rem;line-height:1.75}
+.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:800px;margin:0 auto}
+.team-card{background:var(--parchment);border-radius:var(--r);overflow:hidden;border:1.5px solid var(--line);transition:transform .28s,box-shadow .28s}
+.team-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(44,26,16,.1)}
+.team-photo{aspect-ratio:3/4;overflow:hidden}
+.team-photo img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.team-card:hover .team-photo img{transform:scale(1.04)}
+.team-info{padding:1.5rem}
+.team-name{font-family:var(--font-h);font-size:1.45rem;font-weight:500;color:var(--ink);margin-bottom:.2rem}
+.team-role{font-size:.76rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.7rem}
+.team-bio{font-size:.87rem;color:var(--muted);line-height:1.7}
+@media(max-width:600px){.team-grid{grid-template-columns:1fr}}
+
+/* ── gallery ── */
+.gallery-section{padding:80px 0;background:var(--parchment)}
+.gallery-head{text-align:center;margin-bottom:2.5rem}
+.gallery-head h2{font-family:var(--font-h);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:400;color:var(--ink)}
+.gallery-head h2 em{color:var(--gold);font-style:italic}
+.gallery-grid{display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:240px 240px;gap:.8rem}
+.g-cell{overflow:hidden;border-radius:var(--r)}
+.g-cell img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.g-cell:hover img{transform:scale(1.05)}
+.g-cell:nth-child(1){grid-column:1/6;grid-row:1/3}
+.g-cell:nth-child(2){grid-column:6/10;grid-row:1/2}
+.g-cell:nth-child(3){grid-column:10/13;grid-row:1/2}
+.g-cell:nth-child(4){grid-column:6/9;grid-row:2/3}
+.g-cell:nth-child(5){grid-column:9/13;grid-row:2/3}
+@media(max-width:680px){
+  .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .g-cell,.g-cell:nth-child(n){grid-column:auto;grid-row:auto;aspect-ratio:1}
+}
+
+/* ── reviews ── */
+.reviews-section{padding:90px 0;background:var(--espresso)}
+.reviews-head{text-align:center;margin-bottom:3rem}
+.reviews-head .eyebrow{color:var(--gold)}
+.reviews-head h2{font-family:var(--font-h);font-size:clamp(2rem,4vw,3rem);font-weight:400;color:#fff}
+.reviews-head h2 em{color:var(--gold);font-style:italic}
+.reviews-stars{color:var(--gold);font-size:1.1rem;letter-spacing:.1em;margin-top:.5rem}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.4rem}
+.review-card{background:rgba(255,255,255,.06);border:1px solid rgba(201,151,58,.2);border-radius:var(--r);padding:2rem;transition:border-color .28s,background .28s}
+.review-card:hover{border-color:rgba(201,151,58,.5);background:rgba(255,255,255,.09)}
+.review-stars{color:var(--gold);font-size:.85rem;letter-spacing:.05em;margin-bottom:1rem}
+.review-body{font-family:var(--font-h);font-size:1.13rem;font-style:italic;color:rgba(255,255,255,.85);line-height:1.7;margin-bottom:1.2rem}
+.review-author{font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-light)}
+
+/* ── booking cta ── */
+.booking-section{padding:90px 0;background:var(--gold);text-align:center}
+.booking-section h2{font-family:var(--font-h);font-size:clamp(2rem,4vw,3.2rem);font-weight:400;color:#fff;margin-bottom:.8rem}
+.booking-section h2 em{font-style:italic;color:var(--espresso)}
+.booking-section p{color:rgba(255,255,255,.82);font-size:1rem;margin-bottom:2rem;line-height:1.7}
+.booking-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem}
+.btn-booking-wa{background:var(--espresso);color:#fff;border-radius:50px;padding:.85rem 2rem;font-size:.9rem;font-weight:600;display:inline-flex;align-items:center;gap:.6rem;transition:all .28s}
+.btn-booking-wa:hover{background:#1a0e08;transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,0,0,.3)}
+.btn-booking-fresha{background:rgba(255,255,255,.2);color:#fff;border:2px solid rgba(255,255,255,.45);border-radius:50px;padding:.85rem 2rem;font-size:.9rem;font-weight:600;display:inline-flex;align-items:center;gap:.6rem;transition:all .28s}
+.btn-booking-fresha:hover{background:rgba(255,255,255,.3);transform:translateY(-2px)}
+
+/* ── journal ── */
+.journal-section{padding:90px 0;background:var(--parchment)}
+.journal-section .eyebrow{color:var(--gold)}
+.journal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.4rem;margin-top:2.5rem}
+.journal-card{background:var(--cream);border-radius:var(--r);padding:1.8rem;cursor:pointer;border:1.5px solid var(--line);transition:transform .28s,box-shadow .28s,border-color .28s}
+.journal-card:hover{transform:translateY(-5px);box-shadow:0 14px 36px rgba(201,151,58,.14);border-color:var(--gold)}
+.journal-kicker{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem;font-weight:600}
+.journal-title{font-family:var(--font-h);font-size:1.2rem;font-weight:500;color:var(--ink);line-height:1.35;margin-bottom:.7rem}
+.journal-excerpt{font-size:.88rem;color:var(--muted);line-height:1.65;margin-bottom:1rem}
+.journal-read{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:.4rem;font-weight:600}
+.journal-read::after{content:'→';transition:transform .2s}
+.journal-card:hover .journal-read::after{transform:translateX(4px)}
+.j-overlay{display:none;position:fixed;inset:0;z-index:1000;background:rgba(28,10,2,.7);backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:2rem}
+.j-overlay.open{display:flex}
+.j-box{background:var(--parchment);border-radius:var(--r);max-width:700px;width:100%;max-height:88vh;overflow-y:auto;padding:2.8rem 2.5rem;position:relative;box-shadow:0 32px 80px rgba(0,0,0,.35)}
+.j-close{position:absolute;top:1.4rem;right:1.4rem;background:var(--cream);border:1px solid var(--line);color:var(--muted);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;cursor:pointer;transition:all .22s;font-family:var(--font-b)}
+.j-close:hover{background:var(--espresso);color:#fff;border-color:var(--espresso)}
+.j-kicker{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:.6rem}
+.j-title{font-family:var(--font-h);font-size:clamp(1.5rem,3vw,2.1rem);font-weight:500;color:var(--ink);line-height:1.25;margin-bottom:1.6rem;padding-bottom:1.4rem;border-bottom:1px solid var(--line)}
+.j-body p{margin-bottom:1rem;color:var(--muted);line-height:1.8;font-size:.96rem}
+.j-body h3{font-family:var(--font-h);font-size:1.25rem;font-weight:500;color:var(--espresso);margin:1.5rem 0 .6rem}
+@media(max-width:640px){.j-box{padding:2rem 1.4rem}}
+
+/* ── find us ── */
+.findus-section{padding:90px 0;background:var(--cream)}
+.findus-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.findus-text h2{font-family:var(--font-h);font-size:clamp(1.9rem,3.5vw,2.8rem);font-weight:400;color:var(--ink);margin-bottom:1.4rem;line-height:1.2}
+.findus-text h2 em{color:var(--gold);font-style:italic}
+.contact-item{display:flex;align-items:flex-start;gap:.9rem;padding:.8rem 0;border-bottom:1px solid var(--line)}
+.contact-item:last-of-type{border-bottom:none}
+.ci-label{font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);width:72px;flex-shrink:0;padding-top:.15rem}
+.ci-val{font-size:.94rem;color:var(--ink);line-height:1.6}
+.ci-val a{color:var(--espresso);font-weight:500;transition:color .22s}
+.ci-val a:hover{color:var(--gold)}
+.findus-map{border-radius:var(--r);overflow:hidden;height:380px;border:1.5px solid var(--line)}
+.findus-map iframe{width:100%;height:100%;border:none;display:block}
+@media(max-width:720px){.findus-inner{grid-template-columns:1fr}.findus-map{height:300px}}
+
+/* ── footer ── */
+footer{background:var(--ink);color:rgba(255,255,255,.6);padding:3rem 0 2rem;text-align:center}
+.foot-logo{font-family:var(--font-h);font-size:1.4rem;color:#fff;margin-bottom:.4rem}
+.foot-logo span{color:var(--gold)}
+.foot-tagline{font-size:.83rem;margin-bottom:1.5rem;opacity:.6}
+.foot-links{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8rem;margin-bottom:1.8rem}
+.foot-links a{color:rgba(255,255,255,.55);transition:color .22s}
+.foot-links a:hover{color:var(--gold)}
+.foot-line{border:none;border-top:1px solid rgba(255,255,255,.08);margin:1.5rem 0}
+.foot-copy{font-size:.76rem;opacity:.45}
+
+/* ── reduced motion ── */
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .g-cell img,.team-photo img{transition:none}
+  #hero-canvas{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ── nav ── -->
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Carl <span>Putz</span></a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#experience">Our Ethos</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#journal">Journal</a></li>
+      <li><a href="#findus">Find Us</a></li>
+    </ul>
+    <a href="https://wa.me/27726407185" class="btn btn-primary nav-cta" target="_blank" rel="noopener">
+      <svg class="wa-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Book Now
+    </a>
+    <button class="navtoggle" id="navtoggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── hero ── -->
+<section class="hero" id="home">
+  <canvas id="hero-canvas"></canvas>
+  <img class="hero-img" src="photos/g1.jpg" alt="Hair by Carl Putz salon" loading="eager">
+  <div class="hero-content">
+    <div class="hero-tag">✦ The Bowtie Man · Kloof</div>
+    <h1 class="hero-h">Where hair care<br>becomes an <em>experience</em></h1>
+    <p class="hero-sub">40+ years of mastery. Unhurried appointments. Complimentary drinks, a warm head massage, and a stylist who listens — every single visit.</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/27726407185" class="btn btn-primary" target="_blank" rel="noopener">
+        <svg class="wa-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp to Book
+      </a>
+      <a href="https://www.fresha.com/book-now/hair-by-carl-putz" class="btn btn-light" target="_blank" rel="noopener">Book via Fresha</a>
+    </div>
+  </div>
+  <div class="hero-stat">
+    <div class="hero-stat-num">4.9★</div>
+    <div class="hero-stat-lab">59 Google Reviews</div>
+  </div>
+</section>
+
+<!-- ── services ── -->
+<section class="services-section" id="services">
+  <div class="wrap">
+    <div class="services-intro">
+      <div>
+        <p class="eyebrow reveal">What We Offer</p>
+        <h2 class="reveal">Services crafted<br>with <em>care</em></h2>
+      </div>
+      <p class="reveal">From a classic cut to full bridal styling, every service is delivered at Carl's pace — unhurried, attentive, and tailored to you. Nail care by Pretty is also available on-site.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon">✂️</div>
+        <div class="service-name">Haircuts &amp; Styling</div>
+        <p class="service-desc">Precision cuts shaped around your face, lifestyle, and personal vision. Carl takes the time to understand exactly what you want.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🎨</div>
+        <div class="service-name">Colour &amp; Highlights</div>
+        <p class="service-desc">Full colour, balayage, highlights and toning — rich, lasting results built on 40+ years of colourist expertise.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">💅</div>
+        <div class="service-name">Nail Treatments</div>
+        <p class="service-desc">On-site nail care by Pretty. Manicures, shapes and polish changes — the perfect companion to your salon visit.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🙌</div>
+        <div class="service-name">Head Massage</div>
+        <p class="service-desc">Every appointment includes a relaxing scalp and head massage. It's not an add-on — it's simply part of the experience.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">👰</div>
+        <div class="service-name">Bridal &amp; Event Hair</div>
+        <p class="service-desc">Elegant updos, trial sessions and on-the-day styling for weddings and special occasions in and around Kloof.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── experience ── -->
+<section class="experience-section" id="experience">
+  <div class="wrap">
+    <div class="experience-inner">
+      <div class="exp-img-wrap reveal">
+        <img src="photos/g2.jpg" alt="Carl Putz at work" loading="lazy">
+        <div class="exp-badge">
+          <div class="exp-badge-num">40+</div>
+          <div class="exp-badge-txt">Years of<br>mastery</div>
+        </div>
+      </div>
+      <div class="exp-text">
+        <p class="eyebrow reveal">Our Ethos</p>
+        <h2 class="reveal">You are a guest,<br>not a <em>number</em></h2>
+        <p class="reveal">Carl Putz — known in Kloof simply as The Bowtie Man — has been doing hair for over four decades. In a world of back-to-back, rush-through appointments, Carl made a different choice: every client gets his full attention, for as long as it takes.</p>
+        <p class="reveal">Your visit begins the moment you walk in. A drink is offered, conversation is easy, and your opinion is asked — not assumed. The head massage isn't an extra; it's just what happens here.</p>
+        <p class="reveal">33 Village Road, Kloof. Secure parking. Monday to Saturday, closing at 3pm — because quality work deserves a reasonable pace.</p>
+        <div class="exp-perks reveal">
+          <div class="perk"><div class="perk-dot">✓</div><div class="perk-txt">Complimentary drinks every visit</div></div>
+          <div class="perk"><div class="perk-dot">✓</div><div class="perk-txt">Relaxing head massage included</div></div>
+          <div class="perk"><div class="perk-dot">✓</div><div class="perk-txt">Your input genuinely heard</div></div>
+          <div class="perk"><div class="perk-dot">✓</div><div class="perk-txt">Secure on-site parking</div></div>
+          <div class="perk"><div class="perk-dot">✓</div><div class="perk-txt">Nail care by Pretty, in-house</div></div>
+          <div class="perk"><div class="perk-dot">✓</div><div class="perk-txt">40+ years colourist expertise</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── team ── -->
+<section class="team-section" id="team">
+  <div class="wrap">
+    <div class="team-header">
+      <p class="eyebrow reveal">The People Behind the Magic</p>
+      <h2 class="reveal">Meet the <em>team</em></h2>
+      <p class="reveal">Two specialists, one address, and a shared commitment to making you feel properly looked after.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <div class="team-photo">
+          <img src="photos/g3.jpg" alt="Carl Putz, hairdresser" loading="lazy">
+        </div>
+        <div class="team-info">
+          <div class="team-name">Carl Putz</div>
+          <div class="team-role">Senior Stylist &amp; Colourist</div>
+          <p class="team-bio">With over 40 years behind the chair, Carl brings a rare combination of classical technique and personal warmth. His signature bowtie has become a symbol of the care and precision you can expect from every appointment.</p>
+        </div>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-photo">
+          <img src="photos/g4.jpg" alt="Pretty, nail technician" loading="lazy">
+        </div>
+        <div class="team-info">
+          <div class="team-name">Pretty</div>
+          <div class="team-role">Nail Technician</div>
+          <p class="team-bio">Pretty's nail care is the perfect companion to your hair appointment. From manicures to polish changes and nail shaping, she brings meticulous attention to detail — making it easy to leave feeling completely refreshed.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── gallery ── -->
+<section class="gallery-section">
+  <div class="wrap">
+    <div class="gallery-head">
+      <p class="eyebrow reveal">The Salon</p>
+      <h2 class="reveal">A space that feels like <em>yours</em></h2>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="g-cell"><img src="photos/g1.jpg" alt="Salon interior" loading="lazy"></div>
+      <div class="g-cell"><img src="photos/g2.jpg" alt="Hair styling" loading="lazy"></div>
+      <div class="g-cell"><img src="photos/g3.jpg" alt="Carl Putz" loading="lazy"></div>
+      <div class="g-cell"><img src="photos/g5.jpg" alt="Results" loading="lazy"></div>
+      <div class="g-cell"><img src="photos/g4.jpg" alt="Nail care" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── reviews ── -->
+<section class="reviews-section" id="reviews">
+  <div class="wrap">
+    <div class="reviews-head">
+      <p class="eyebrow">What Clients Say</p>
+      <h2>Loved by <em>Kloof</em></h2>
+      <div class="reviews-stars">★★★★★ 4.9 from 59 Google Reviews</div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-body">"Carl is the most professional and caring hairdresser I have ever been to. I never feel rushed and he always asks what I want. I leave feeling like a completely new person."</p>
+        <div class="review-author">— Google Reviewer</div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-body">"What a gem this place is. The complimentary drinks, the head massage, the unhurried pace — it felt like being a guest in someone's home rather than just a customer."</p>
+        <div class="review-author">— Google Reviewer</div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-body">"Carl has been doing my hair for years and I wouldn't go anywhere else. His experience with colour is unmatched, and Pretty's nail care is the perfect bonus. Highly recommend."</p>
+        <div class="review-author">— Google Reviewer</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── booking cta ── -->
+<section class="booking-section" id="book">
+  <div class="wrap">
+    <p class="eyebrow" style="color:rgba(255,255,255,.7)">Ready When You Are</p>
+    <h2>Book your appointment — it's <em>easy</em></h2>
+    <p>Send Carl a WhatsApp and he'll confirm your slot. Prefer to book online? Use Fresha for instant availability.</p>
+    <div class="booking-btns">
+      <a href="https://wa.me/27726407185" class="btn-booking-wa" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp Carl
+      </a>
+      <a href="https://www.fresha.com/book-now/hair-by-carl-putz" class="btn-booking-fresha" target="_blank" rel="noopener">Book on Fresha</a>
+    </div>
+    <p style="font-size:.8rem;color:rgba(255,255,255,.55);margin-top:1.5rem">Mon–Sat · Closes 3pm · 33 Village Rd, Kloof · 072 640 7185</p>
+  </div>
+</section>
+
+<!-- ── journal ── -->
+<section class="journal-section" id="journal">
+  <div class="wrap">
+    <p class="eyebrow reveal">From Carl's Chair</p>
+    <h2 class="reveal" style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:400;color:var(--ink);line-height:1.2;margin-bottom:2.5rem">Hair wisdom, honestly <em style="color:var(--gold);font-style:italic">shared</em></h2>
+    <div class="journal-grid">
+      <div class="journal-card reveal" data-jid="hair-care">
+        <p class="journal-kicker">Hair Care</p>
+        <h3 class="journal-title">The 5-Minute Morning Ritual That Changes Everything</h3>
+        <p class="journal-excerpt">Most hair damage doesn't happen at the salon — it happens at home, in the rush of a Tuesday morning. Here's what to do instead.</p>
+        <span class="journal-read">Read more</span>
+      </div>
+      <div class="journal-card reveal" data-jid="colour-longevity">
+        <p class="journal-kicker">Colour</p>
+        <h3 class="journal-title">How to Make Your Colour Last Twice as Long</h3>
+        <p class="journal-excerpt">Small habits make a big difference. Carl shares the four things clients do that unknowingly shorten their colour's life — and how to fix them.</p>
+        <span class="journal-read">Read more</span>
+      </div>
+      <div class="journal-card reveal" data-jid="nail-health">
+        <p class="journal-kicker">Nail Care</p>
+        <h3 class="journal-title">What Your Nails Are Trying to Tell You</h3>
+        <p class="journal-excerpt">Brittle, peeling, or slow-growing nails aren't just cosmetic. Pretty shares what the most common nail complaints actually mean.</p>
+        <span class="journal-read">Read more</span>
+      </div>
+      <div class="journal-card reveal" data-jid="booking-tips">
+        <p class="journal-kicker">Booking Tips</p>
+        <h3 class="journal-title">How to Talk to Your Stylist (And Get the Result You Want)</h3>
+        <p class="journal-excerpt">The gap between what you imagine and what you leave with often comes down to one conversation. Here's how to have it well.</p>
+        <span class="journal-read">Read more</span>
+      </div>
+      <div class="journal-card reveal" data-jid="hairdresser-experience">
+        <p class="journal-kicker">The Visit</p>
+        <h3 class="journal-title">Why a Salon Visit Should Feel Like a Proper Treat</h3>
+        <p class="journal-excerpt">Not a chore. Not a quick fix. A genuine hour or two of being looked after. This is what Carl has always believed — and why it matters.</p>
+        <span class="journal-read">Read more</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="j-overlay" id="j-overlay" role="dialog" aria-modal="true">
+  <div class="j-box">
+    <button class="j-close" id="j-close" aria-label="Close">✕</button>
+    <p class="j-kicker" id="j-kicker"></p>
+    <h2 class="j-title" id="j-title"></h2>
+    <div class="j-body" id="j-body"></div>
+  </div>
+</div>
+
+<!-- ── find us ── -->
+<section class="findus-section" id="findus">
+  <div class="wrap">
+    <div class="findus-inner">
+      <div class="findus-text">
+        <p class="eyebrow reveal">Find Us</p>
+        <h2 class="reveal">33 Village Road,<br><em>Kloof</em></h2>
+        <div class="contact-item reveal">
+          <span class="ci-label">Address</span>
+          <span class="ci-val">33 Village Rd, Kloof, 3610<br>Secure on-site parking available</span>
+        </div>
+        <div class="contact-item reveal">
+          <span class="ci-label">Phone</span>
+          <span class="ci-val"><a href="tel:+27726407185">072 640 7185</a></span>
+        </div>
+        <div class="contact-item reveal">
+          <span class="ci-label">WhatsApp</span>
+          <span class="ci-val"><a href="https://wa.me/27726407185" target="_blank" rel="noopener">Message Carl directly →</a></span>
+        </div>
+        <div class="contact-item reveal">
+          <span class="ci-label">Hours</span>
+          <span class="ci-val">Monday – Saturday<br>Closes 3:00 pm<br><em style="font-size:.85em;color:var(--muted)">Appointments recommended</em></span>
+        </div>
+        <div class="contact-item reveal">
+          <span class="ci-label">Social</span>
+          <span class="ci-val">
+            <a href="https://www.facebook.com/hairbycarlputz" target="_blank" rel="noopener">Facebook</a> ·
+            <a href="https://www.instagram.com/hairbycarlputz" target="_blank" rel="noopener">Instagram @hairbycarlputz</a>
+          </span>
+        </div>
+      </div>
+      <div class="findus-map reveal">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13843.3!2d30.8328828!3d-29.7920847!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef6fd38f8750d8d%3A0xc41739014e556be3!2sHair%20by%20Carl%20Putz!5e0!3m2!1sen!2sza!4v1719000000000!5m2!1sen!2sza"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Hair by Carl Putz on Google Maps">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── footer ── -->
+<footer>
+  <div class="wrap">
+    <div class="foot-logo">Hair by <span>Carl Putz</span></div>
+    <div class="foot-tagline">Boutique Hair &amp; Nail Care · Kloof · Est. 40+ years</div>
+    <div class="foot-links">
+      <a href="#services">Services</a>
+      <a href="#experience">Our Ethos</a>
+      <a href="#team">Team</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#journal">Journal</a>
+      <a href="#findus">Find Us</a>
+      <a href="https://wa.me/27726407185" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <hr class="foot-line">
+    <p class="foot-copy">© 2025 Hair by Carl Putz · 33 Village Rd, Kloof · 072 640 7185</p>
+  </div>
+</footer>
+
+<script>
+// ── gold dust canvas animation ──
+(function(){
+  var canvas=document.getElementById('hero-canvas');
+  if(!canvas)return;
+  var ctx=canvas.getContext('2d');
+  var particles=[];
+  var N=90;
+
+  function resize(){canvas.width=canvas.offsetWidth;canvas.height=canvas.offsetHeight;}
+  resize();
+  window.addEventListener('resize',resize);
+
+  function rnd(a,b){return a+(b-a)*Math.random();}
+
+  for(var i=0;i<N;i++){
+    particles.push({
+      x:rnd(0,1),
+      y:rnd(0,1),
+      r:rnd(.6,2.2),
+      vx:rnd(-.0003,.0003),
+      vy:rnd(-.0006,-.0002),
+      o:rnd(.15,.55),
+      phase:rnd(0,Math.PI*2)
+    });
+  }
+
+  var start=performance.now();
+  function draw(){
+    var W=canvas.width,H=canvas.height;
+    var t=(performance.now()-start)/1000;
+    ctx.clearRect(0,0,W,H);
+    for(var i=0;i<particles.length;i++){
+      var p=particles[i];
+      p.x+=p.vx;
+      p.y+=p.vy;
+      if(p.y<-0.02){p.y=1.02;p.x=Math.random();}
+      if(p.x<-0.02)p.x=1.02;
+      if(p.x>1.02)p.x=-0.02;
+      var flicker=Math.sin(t*1.4+p.phase)*0.18;
+      ctx.beginPath();
+      ctx.arc(p.x*W,p.y*H,p.r,0,Math.PI*2);
+      ctx.fillStyle='rgba(201,151,58,'+(Math.max(0,p.o+flicker))+')';
+      ctx.fill();
+    }
+    requestAnimationFrame(draw);
+  }
+  if(!window.matchMedia('(prefers-reduced-motion:reduce)').matches){draw();}
+})();
+
+// ── nav scroll ──
+(function(){
+  var nav=document.getElementById('main-nav');
+  function onScroll(){
+    if(window.scrollY>60)nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+})();
+
+// ── nav toggle ──
+(function(){
+  var btn=document.getElementById('navtoggle');
+  var links=document.getElementById('nav-links');
+  if(!btn||!links)return;
+  btn.addEventListener('click',function(){links.classList.toggle('open');});
+  links.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){links.classList.remove('open');});
+  });
+})();
+
+// ── reveal on scroll ──
+(function(){
+  function checkReveals(){
+    document.querySelectorAll('.reveal:not(.in)').forEach(function(el){
+      var r=el.getBoundingClientRect();
+      if(r.top<window.innerHeight-60&&r.bottom>0)el.classList.add('in');
+    });
+  }
+  window.addEventListener('scroll',checkReveals,{passive:true});
+  // Also fire on load and after a short delay for above-fold + initial paint
+  checkReveals();
+  setTimeout(checkReveals,100);
+  setTimeout(checkReveals,400);
+})();
+
+// ── journal modal ──
+const J_ARTS = {
+  'hair-care': {
+    kicker: 'Hair Care',
+    title: 'The 5-Minute Morning Ritual That Changes Everything',
+    body: `<p>Most hair damage doesn't happen at the salon. It happens at home — in the rushed minutes before school or work, when a wet brush is dragged through knotted hair or a hot iron is pressed without heat protectant.</p>
+<h3>Start with a dry brush</h3>
+<p>Before your shower, run a wide-tooth comb or a soft paddle brush through your hair from ends to roots. This removes shed strands gently and prevents them from tangling into knots during washing — which is when most breakage occurs.</p>
+<h3>Cool the water down</h3>
+<p>Hot water lifts the hair cuticle, allowing moisture to escape and colour to fade faster. A cool or lukewarm rinse at the end of your wash (even 20 seconds) seals the cuticle back down and adds noticeable shine within a week.</p>
+<h3>Pat, don't rub</h3>
+<p>Towel-drying by scrubbing creates friction that roughens the cuticle and causes frizz. Instead, gently squeeze water from your hair and press a soft towel or microfibre wrap against it. The difference is visible immediately.</p>
+<h3>Leave-in before the heat</h3>
+<p>A small amount of leave-in conditioner or heat protectant applied while hair is still damp creates a barrier between your strands and your hairdryer or tong. Without it, repeated heat use causes cumulative damage that no conditioning treatment can fully reverse.</p>
+<p>These four steps take about five minutes total. Over a month, the improvement in texture, shine, and strength is remarkable — and it means your next salon visit starts from a much better base.</p>`
+  },
+  'colour-longevity': {
+    kicker: 'Colour',
+    title: 'How to Make Your Colour Last Twice as Long',
+    body: `<p>A good colour appointment can last beautifully for six to ten weeks — or it can look washed out within three. The difference almost always comes down to what happens in the days immediately after you leave the salon.</p>
+<h3>Wait before you wash</h3>
+<p>Most colourists recommend waiting at least 48 hours after a colour appointment before shampooing. The colour molecules are still binding to the hair shaft during this time, and washing too early can disrupt the process and cause premature fading.</p>
+<h3>Switch to a colour-safe shampoo</h3>
+<p>Regular shampoos often contain sulfates — strong cleansing agents that strip colour along with dirt. A sulfate-free or colour-specific shampoo makes a significant difference to how long your tone holds. If you've just had highlights, a purple or blue toning shampoo used once a week will keep brassiness at bay.</p>
+<h3>Protect from the sun</h3>
+<p>UV radiation bleaches and alters hair colour in the same way it affects fabric. A UV-protective hair oil or a simple hat when you're outdoors for extended periods is one of the easiest ways to protect your investment in colour.</p>
+<h3>Cold water for rinsing</h3>
+<p>As with general hair care, a cool final rinse seals the cuticle and locks colour in. It only takes a few seconds, but the cumulative effect over several weeks is genuinely noticeable.</p>
+<p>Colour is an investment — both financially and in your appearance. These small habits ensure you get full value from every appointment.</p>`
+  },
+  'nail-health': {
+    kicker: 'Nail Care',
+    title: 'What Your Nails Are Trying to Tell You',
+    body: `<p>We often think of nail care as purely cosmetic — a polish, a shape, a tidy cuticle. But nails are actually a useful indicator of what's happening inside the body, and many common complaints have straightforward solutions.</p>
+<h3>Brittle or peeling nails</h3>
+<p>The most common culprit is moisture imbalance. Nails that are repeatedly wet and then allowed to dry — through washing up, frequent hand washing, or swimming — expand and contract repeatedly, eventually causing layers to separate. Wearing gloves for household tasks and applying a nail-strengthening oil regularly makes a significant difference.</p>
+<h3>Slow growth</h3>
+<p>Nail growth slows in cold weather, during illness, and with age — this is normal. But persistently slow growth can also indicate low biotin (vitamin B7) intake. Foods like eggs, nuts, and leafy greens support nail growth, as does a biotin supplement if your diet is limited.</p>
+<h3>White spots</h3>
+<p>Often thought to indicate calcium deficiency, white spots (leukonychia) are almost always caused by minor trauma to the nail matrix — a bump or knock that happened weeks before the spot became visible. They're harmless and grow out naturally.</p>
+<h3>Ridges</h3>
+<p>Vertical ridges that run from cuticle to tip become more common with age and are generally cosmetic. Horizontal ridges (called Beau's lines) can indicate a period of stress or illness. If they appear suddenly or across multiple nails, it's worth mentioning to a doctor.</p>
+<p>Most nail concerns are easy to address with the right products and habits. Pretty is happy to chat through your specific nail questions during your appointment — it's all part of the visit.</p>`
+  },
+  'booking-tips': {
+    kicker: 'Booking Tips',
+    title: 'How to Talk to Your Stylist (And Get the Result You Want)',
+    body: `<p>The gap between what a client imagines and what they leave with is almost never about skill. It's almost always about communication — and it's a gap that closes easily once you know how to bridge it.</p>
+<h3>Bring reference photos — but not just one</h3>
+<p>A single photo gives a stylist limited information. Three or four photos, even from different people, let them identify what you're drawn to: the tone, the texture, the length, the way it falls. Show what you love and, equally useful, show what you don't like.</p>
+<h3>Describe your lifestyle, not just the look</h3>
+<p>A cut that photographs beautifully may require 25 minutes of daily styling to look that way. If you have five minutes in the morning, say so. A good stylist will give you a cut that suits both the look you want and the reality of how much time you have for it.</p>
+<h3>Talk about maintenance</h3>
+<p>How often are you prepared to come back? How do you feel about root regrowth showing? Do you want to be able to stretch a colour for 10 weeks, or are you happy to refresh it every six? These answers shape the best technical approach.</p>
+<h3>Say what's bothering you</h3>
+<p>If your hair has a particular behaviour you dislike — a stubborn cowlick, a tendency to go flat at the crown, frizziness in humidity — mention it. Your stylist can factor it into how they cut and finish your hair, rather than fighting the same battle you've been losing at home.</p>
+<p>Carl always asks. But the more you bring to the conversation, the better the result — every time.</p>`
+  },
+  'hairdresser-experience': {
+    kicker: 'The Visit',
+    title: 'Why a Salon Visit Should Feel Like a Proper Treat',
+    body: `<p>There's a version of a salon visit that most people have had too many times: arrive, wait, be processed, leave. Hair looks fine. You'll come back in six weeks because it's time, not because you're looking forward to it.</p>
+<p>Carl has never been interested in that version.</p>
+<h3>The unhurried appointment</h3>
+<p>When you book with Carl, you get his full attention for the duration. Not divided attention — full attention. He isn't thinking about the next client or rushing to clear the chair. The appointment takes as long as it needs to take, and not a minute less.</p>
+<h3>A drink, because you're a guest</h3>
+<p>When you sit down, you're offered a drink. Tea, coffee, something cold — whatever you'd like. It's a small thing, but it changes the entire atmosphere of the visit. You're not being serviced. You're being looked after.</p>
+<h3>The head massage</h3>
+<p>Every appointment includes a proper scalp and head massage during the shampoo. Again, not an add-on, not something you request. Just part of what happens here. Clients often say this alone is worth the visit.</p>
+<h3>Your input, genuinely considered</h3>
+<p>Carl will show you what he's doing, ask how you feel about it, and adjust. If something changes mid-appointment — if the cut reveals a different shape than expected — you'll know, and you'll be part of the decision. This is rarer than it should be in most salons.</p>
+<p>Leaving a Carl Putz appointment, clients consistently say some version of the same thing: they feel like a different person. That's not just the hair. It's the whole experience of being properly looked after for an hour or two.</p>
+<p>That's what it should always feel like. Carl has been making it feel that way for forty years.</p>`
+  }
+};
+
+(function(){
+  var overlay=document.getElementById('j-overlay');
+  var closeBtn=document.getElementById('j-close');
+  document.querySelectorAll('.journal-card').forEach(function(card){
+    card.addEventListener('click',function(){
+      var art=J_ARTS[card.dataset.jid];
+      if(!art)return;
+      document.getElementById('j-kicker').textContent=art.kicker;
+      document.getElementById('j-title').textContent=art.title;
+      document.getElementById('j-body').innerHTML=art.body;
+      overlay.classList.add('open');
+      document.body.style.overflow='hidden';
+    });
+  });
+  function closeJ(){overlay.classList.remove('open');document.body.style.overflow='';}
+  closeBtn.addEventListener('click',closeJ);
+  overlay.addEventListener('click',function(e){if(e.target===overlay)closeJ();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeJ();});
+})();
+</script>
+</body>
+</html>
