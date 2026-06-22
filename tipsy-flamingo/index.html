@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tipsy Flamingo SA | Cocktail Bar & Restaurant · Kloof, Durban</title>
+<meta name="description" content="Kloof's most vibey cocktail bar and restaurant. Craft cocktails, incredible food, live music, ladies nights and unforgettable private functions. Kloof Village Mall · Open daily 10am–2am · 083 556 5851.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+
+:root{
+  --black:#0D0A0B;
+  --panel:#181014;
+  --panel2:#221722;
+  --panel3:#2C1F28;
+  --flamingo:#E8547A;
+  --coral:#FF7A96;
+  --gold:#D4A853;
+  --cream:#F5EDE4;
+  --muted:#9A8890;
+  --border:rgba(232,84,122,.18);
+  --font-h:'Playfair Display',Georgia,serif;
+  --font-b:'DM Sans',system-ui,sans-serif;
+  --ease:cubic-bezier(.22,.68,0,1.2);
+}
+
+body{font-family:var(--font-b);background:var(--black);color:var(--cream);overflow-x:hidden}
+
+/* ── nav ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.4rem 2.8rem;transition:background .4s,box-shadow .4s}
+nav.scrolled{background:rgba(13,10,11,.94);backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(232,84,122,.12)}
+.nav-brand{display:flex;align-items:center;gap:.7rem;font-family:var(--font-h);font-size:1.25rem;font-weight:400;letter-spacing:.04em;color:var(--cream)}
+.nav-flamingo{font-size:1.4rem}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(245,237,228,.65);transition:color .2s}
+.nav-links a:hover{color:var(--flamingo)}
+.nav-book{background:var(--flamingo)!important;color:#fff!important;padding:.42rem 1.2rem;border-radius:2rem;font-size:.76rem!important;letter-spacing:.08em!important;transition:background .2s!important}
+.nav-book:hover{background:var(--coral)!important}
+
+/* ── hero ── */
+#hero{position:relative;height:100dvh;min-height:640px;overflow:hidden;display:flex;align-items:center;padding:0 2.8rem}
+#hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%}
+#hero::after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,rgba(13,10,11,.82) 0%,rgba(13,10,11,.45) 55%,rgba(13,10,11,.15) 100%)}
+.hero-content{position:relative;z-index:2;max-width:640px}
+.hero-kicker{display:inline-flex;align-items:center;gap:.6rem;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--flamingo);margin-bottom:1.4rem}
+.hero-kicker::before{content:'';display:block;width:28px;height:1px;background:var(--flamingo)}
+.hero-title{font-family:var(--font-h);font-size:clamp(2.8rem,6vw,5.4rem);font-weight:700;color:var(--cream);line-height:1.05;margin-bottom:.6rem}
+.hero-title em{color:var(--flamingo);font-style:italic}
+.hero-sub{font-size:1.05rem;color:rgba(245,237,228,.72);line-height:1.65;margin-bottom:2.2rem;max-width:480px}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{background:var(--flamingo);color:#fff;padding:.85rem 2rem;border-radius:2rem;font-size:.88rem;letter-spacing:.06em;font-weight:600;transition:background .2s,transform .2s;display:inline-flex;align-items:center;gap:.5rem}
+.btn-primary:hover{background:var(--coral);transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid rgba(245,237,228,.4);color:var(--cream);padding:.82rem 1.8rem;border-radius:2rem;font-size:.88rem;letter-spacing:.06em;transition:all .2s}
+.btn-ghost:hover{border-color:var(--flamingo);color:var(--flamingo)}
+.hero-badge{position:absolute;bottom:2.5rem;right:2.8rem;z-index:2;background:rgba(13,10,11,.7);backdrop-filter:blur(10px);border:1px solid var(--border);border-radius:1rem;padding:.9rem 1.4rem;text-align:center}
+.hero-badge-val{font-family:var(--font-h);font-size:1.6rem;color:var(--flamingo)}
+.hero-badge-label{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:.1rem}
+
+/* ── ticker ── */
+#ticker{background:var(--flamingo);padding:.6rem 0;overflow:hidden}
+.ticker-track{display:flex;gap:3rem;white-space:nowrap;animation:ticker 28s linear infinite}
+.ticker-track span{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:#fff;flex-shrink:0}
+.ticker-track span::before{content:'🦩 '}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── sections ── */
+section{padding:5.5rem 2.8rem}
+.section-kicker{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--flamingo);margin-bottom:.8rem}
+.section-title{font-family:var(--font-h);font-size:clamp(2rem,4vw,3.2rem);font-weight:400;color:var(--cream);line-height:1.1;margin-bottom:1.2rem}
+.section-title em{color:var(--flamingo);font-style:italic}
+.section-body{font-size:.95rem;color:var(--muted);line-height:1.75;max-width:580px}
+.inner{max-width:1200px;margin:0 auto}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .65s var(--ease),transform .65s var(--ease)}
+.reveal.vis{opacity:1;transform:none}
+
+/* ── about ── */
+#about{background:var(--panel)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.about-img-wrap{position:relative;border-radius:1.2rem;overflow:hidden;aspect-ratio:4/5}
+.about-img-wrap img{width:100%;height:100%;object-fit:cover}
+.about-img-badge{position:absolute;bottom:1.5rem;left:1.5rem;background:var(--flamingo);color:#fff;border-radius:.8rem;padding:.8rem 1.2rem}
+.about-img-badge p{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;opacity:.85}
+.about-img-badge strong{font-family:var(--font-h);font-size:1.1rem;display:block;margin-top:.1rem}
+.about-quote{font-family:var(--font-h);font-size:1.5rem;font-style:italic;color:var(--cream);line-height:1.5;margin:1.6rem 0;padding-left:1.4rem;border-left:3px solid var(--flamingo)}
+.about-detail{display:flex;gap:1rem;margin-top:2rem}
+.about-pill{background:var(--panel2);border:1px solid var(--border);border-radius:2rem;padding:.5rem 1.1rem;font-size:.76rem;color:var(--muted)}
+
+/* ── menu ── */
+#menu{background:var(--black)}
+.menu-intro{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end;margin-bottom:3.5rem}
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.menu-card{background:var(--panel);border-radius:1rem;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.menu-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(232,84,122,.12)}
+.menu-card-img{height:200px;overflow:hidden}
+.menu-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.menu-card:hover .menu-card-img img{transform:scale(1.06)}
+.menu-card-body{padding:1.4rem}
+.menu-tag{font-size:.67rem;letter-spacing:.16em;text-transform:uppercase;color:var(--flamingo);margin-bottom:.5rem}
+.menu-card-body h3{font-family:var(--font-h);font-size:1.15rem;color:var(--cream);margin-bottom:.5rem}
+.menu-card-body p{font-size:.84rem;color:var(--muted);line-height:1.6}
+.menu-price{font-size:.82rem;color:var(--gold);font-weight:600;margin-top:.8rem}
+
+/* ── events ── */
+#events{background:var(--panel)}
+.events-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;margin-top:3rem}
+.event-card{position:relative;border-radius:1.2rem;overflow:hidden;aspect-ratio:16/9;cursor:default}
+.event-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.event-card:hover img{transform:scale(1.05)}
+.event-card::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(13,10,11,.85) 0%,rgba(13,10,11,.25) 60%,transparent 100%)}
+.event-info{position:absolute;bottom:0;left:0;right:0;z-index:2;padding:1.8rem}
+.event-tag{font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:var(--flamingo);margin-bottom:.4rem}
+.event-name{font-family:var(--font-h);font-size:1.4rem;color:var(--cream);margin-bottom:.4rem}
+.event-desc{font-size:.8rem;color:rgba(245,237,228,.7);line-height:1.5}
+
+/* ── gallery ── */
+#gallery{background:var(--black)}
+.gallery-header{text-align:center;margin-bottom:3rem}
+.gallery-header .section-body{margin:0 auto}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:.6rem}
+.gallery-item{overflow:hidden;border-radius:.5rem}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.gallery-item:hover img{transform:scale(1.08)}
+.gallery-item.tall{grid-row:span 2}
+.gallery-item.wide{grid-column:span 2}
+
+/* ── functions ── */
+#functions{background:var(--panel2);position:relative;overflow:hidden}
+#functions::before{content:'🦩';position:absolute;right:-2rem;top:50%;transform:translateY(-50%);font-size:18rem;opacity:.04;pointer-events:none}
+.functions-inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.functions-img{border-radius:1.2rem;overflow:hidden;aspect-ratio:4/3}
+.functions-img img{width:100%;height:100%;object-fit:cover}
+.functions-list{list-style:none;margin:1.8rem 0}
+.functions-list li{display:flex;align-items:flex-start;gap:.9rem;padding:.9rem 0;border-bottom:1px solid rgba(232,84,122,.1);font-size:.88rem;color:var(--muted)}
+.functions-list li:last-child{border:none}
+.functions-list li span{font-size:1.1rem;flex-shrink:0;margin-top:.05rem}
+.functions-list strong{color:var(--cream);display:block;margin-bottom:.2rem}
+
+/* ── journal ── */
+#journal{background:var(--panel)}
+.journal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem;margin-top:3rem}
+.journal-card{background:var(--panel2);border-radius:1rem;padding:2rem;cursor:pointer;transition:transform .3s,box-shadow .3s}
+.journal-card:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(232,84,122,.1)}
+.journal-tag{font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:var(--flamingo);margin-bottom:.7rem}
+.journal-title{font-family:var(--font-h);font-size:1.15rem;color:var(--cream);line-height:1.3;margin-bottom:.8rem}
+.journal-excerpt{font-size:.83rem;color:var(--muted);line-height:1.65;flex:1}
+.journal-read{display:inline-flex;align-items:center;gap:.4rem;margin-top:1.2rem;font-size:.78rem;color:var(--flamingo);letter-spacing:.05em}
+.journal-read::after{content:'→';transition:transform .2s}
+.journal-card:hover .journal-read::after{transform:translateX(4px)}
+
+/* ── article overlay ── */
+.article-overlay{position:fixed;inset:0;z-index:500;background:rgba(13,10,11,.92);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:2rem;opacity:0;pointer-events:none;transition:opacity .3s}
+.article-overlay.open{opacity:1;pointer-events:all}
+.article-box{background:var(--panel);border-radius:1.4rem;max-width:680px;width:100%;max-height:82vh;overflow-y:auto;padding:2.8rem;position:relative}
+.article-box h2{font-family:var(--font-h);font-size:1.8rem;color:var(--cream);margin-bottom:1.2rem}
+.article-box p{font-size:.9rem;color:var(--muted);line-height:1.8;margin-bottom:1rem}
+.article-close{position:absolute;top:1.2rem;right:1.2rem;background:none;border:none;color:var(--muted);cursor:pointer;font-size:1.4rem;line-height:1}
+
+/* ── faq ── */
+#faq{background:var(--black)}
+.faq-inner{max-width:800px;margin:0 auto}
+.faq-list{margin-top:3rem}
+.faq-item{border-bottom:1px solid rgba(232,84,122,.12)}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:1.4rem 0;cursor:pointer;font-size:.95rem;color:var(--cream);font-weight:500;gap:1rem}
+.faq-icon{color:var(--flamingo);font-size:1.2rem;transition:transform .3s;flex-shrink:0}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-item.open .faq-a{max-height:300px}
+.faq-a-inner{padding-bottom:1.4rem;font-size:.88rem;color:var(--muted);line-height:1.75}
+
+/* ── find us ── */
+#find-us{background:var(--panel2)}
+.findus-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-top:3rem}
+.hours-list{list-style:none}
+.hours-list li{display:flex;justify-content:space-between;padding:.7rem 0;border-bottom:1px solid rgba(232,84,122,.1);font-size:.88rem}
+.hours-list li:last-child{border:none}
+.hours-list .day{color:var(--muted)}
+.hours-list .time{color:var(--cream);font-weight:500}
+.contact-items{margin-top:1.8rem;display:flex;flex-direction:column;gap:.9rem}
+.contact-item{display:flex;align-items:center;gap:.9rem;font-size:.88rem;color:var(--muted)}
+.contact-item span{width:36px;height:36px;background:var(--panel3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.map-wrap{border-radius:1.2rem;overflow:hidden;aspect-ratio:4/3}
+.map-wrap iframe{width:100%;height:100%;border:none}
+
+/* ── footer ── */
+footer{background:var(--black);border-top:1px solid var(--border);padding:3rem 2.8rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem}
+.footer-brand{font-family:var(--font-h);font-size:1.1rem;color:var(--cream)}
+.footer-links{display:flex;gap:1.8rem;list-style:none}
+.footer-links a{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);transition:color .2s}
+.footer-links a:hover{color:var(--flamingo)}
+.footer-legal{font-size:.72rem;color:var(--muted);opacity:.6}
+
+/* ── chatbot ── */
+#cb-btn{position:fixed;bottom:1.6rem;right:1.6rem;z-index:1100;width:58px;height:58px;border-radius:50%;background:var(--flamingo);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(232,84,122,.45);transition:transform .25s,box-shadow .25s}
+#cb-btn:hover{transform:scale(1.08);box-shadow:0 10px 32px rgba(232,84,122,.55)}
+#cb-btn.open #cb-icon-chat{opacity:0;position:absolute}
+#cb-icon-close{opacity:0}
+#cb-panel{position:fixed;bottom:5.2rem;right:1.6rem;z-index:1099;width:340px;max-width:calc(100vw - 2rem);background:var(--panel);border:1px solid var(--border);border-radius:1.2rem;box-shadow:0 20px 60px rgba(13,10,11,.5);opacity:0;transform:translateY(12px) scale(.97);pointer-events:none;transition:opacity .3s,transform .3s;display:flex;flex-direction:column;overflow:hidden}
+#cb-panel.open{opacity:1;transform:none;pointer-events:all}
+#cb-head{background:var(--flamingo);padding:1rem 1.2rem;display:flex;align-items:center;gap:.8rem}
+#cb-avatar{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+#cb-head-info .cb-name{font-weight:600;font-size:.9rem;color:#fff}
+#cb-head-info .cb-status{font-size:.72rem;color:rgba(255,255,255,.8)}
+#cb-msgs{height:220px;overflow-y:auto;padding:1rem;display:flex;flex-direction:column;gap:.6rem;background:var(--panel)}
+.cb-msg{max-width:85%;padding:.65rem .9rem;border-radius:1rem;font-size:.83rem;line-height:1.5}
+.cb-msg.bot{background:var(--panel2);color:var(--cream);align-self:flex-start;border-radius:.3rem 1rem 1rem 1rem}
+.cb-msg.user{background:var(--flamingo);color:#fff;align-self:flex-end;border-radius:1rem 1rem .3rem 1rem}
+#cb-typing{display:none;padding:.4rem 1rem;align-self:flex-start}
+#cb-typing.show{display:flex;gap:.3rem}
+#cb-typing span{width:7px;height:7px;border-radius:50%;background:var(--flamingo);animation:cb-bounce .8s ease-in-out infinite}
+#cb-typing span:nth-child(2){animation-delay:.15s}
+#cb-typing span:nth-child(3){animation-delay:.3s}
+@keyframes cb-bounce{0%,100%{transform:translateY(0)}40%{transform:translateY(-5px)}}
+#cb-quick{padding:.6rem .8rem;display:flex;flex-wrap:wrap;gap:.4rem;border-top:1px solid var(--border)}
+.cb-q{background:var(--panel2);border:1px solid var(--border);color:var(--muted);padding:.35rem .75rem;border-radius:2rem;font-size:.74rem;cursor:pointer;transition:all .2s;white-space:nowrap}
+.cb-q:hover{background:var(--flamingo);border-color:var(--flamingo);color:#fff}
+#cb-form{display:flex;align-items:center;gap:.5rem;padding:.8rem;border-top:1px solid var(--border)}
+#cb-input{flex:1;background:var(--panel2);border:1px solid var(--border);border-radius:2rem;padding:.55rem 1rem;font-size:.83rem;color:var(--cream);outline:none;font-family:var(--font-b)}
+#cb-input::placeholder{color:var(--muted)}
+#cb-input:focus{border-color:var(--flamingo)}
+#cb-send{width:34px;height:34px;background:var(--flamingo);border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s}
+#cb-send:hover{background:var(--coral)}
+#cb-send svg{width:15px;height:15px;fill:#fff}
+
+@media(max-width:768px){
+  nav{padding:1.1rem 1.4rem}
+  .nav-links{display:none}
+  section{padding:4rem 1.4rem}
+  .about-grid,.menu-intro,.functions-inner,.findus-grid{grid-template-columns:1fr}
+  .menu-grid{grid-template-columns:1fr 1fr}
+  .events-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .journal-grid{grid-template-columns:1fr}
+  footer{flex-direction:column;text-align:center}
+  .about-img-wrap{aspect-ratio:16/9}
+}
+</style>
+</head>
+<body>
+
+<!-- nav -->
+<nav id="nav">
+  <a href="#" class="nav-brand"><span class="nav-flamingo">🦩</span> Tipsy Flamingo SA</a>
+  <ul class="nav-links">
+    <li><a href="#menu">Food & Cocktails</a></li>
+    <li><a href="#events">Events</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#functions">Functions</a></li>
+    <li><a href="#find-us">Find Us</a></li>
+  </ul>
+  <a href="tel:0835565851" class="nav-links nav-book" style="list-style:none">📞 Book a Table</a>
+</nav>
+
+<!-- hero -->
+<section id="hero">
+  <img id="hero-img" src="photos/g1.jpg" alt="Tipsy Flamingo SA cocktail bar interior" loading="eager">
+  <div class="hero-content">
+    <p class="hero-kicker">Kloof Village Mall · Open Daily 10am – 2am</p>
+    <h1 class="hero-title">Cocktails,<br><em>Celebrations</em><br>& Good Times.</h1>
+    <p class="hero-sub">Kloof's best-kept secret. Craft cocktails with personality, food worth talking about, and nights you'll actually remember.</p>
+    <div class="hero-actions">
+      <a href="tel:0835565851" class="btn-primary">🦩 Book a Function</a>
+      <a href="#menu" class="btn-ghost">View Menu</a>
+    </div>
+  </div>
+  <div class="hero-badge">
+    <div class="hero-badge-val">4.7★</div>
+    <div class="hero-badge-label">Google Rating</div>
+  </div>
+</section>
+
+<!-- ticker -->
+<div id="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Ladies Nights Every Week</span>
+    <span>Complimentary Champagne</span>
+    <span>Live Music Fridays & Saturdays</span>
+    <span>Private Functions & Birthday Celebrations</span>
+    <span>R55 Cocktails · Happy Hour 7–8pm</span>
+    <span>Half-Price Pizzas Fri & Sat</span>
+    <span>Open Until 2am · Kloof Village Mall</span>
+    <span>Ladies Nights Every Week</span>
+    <span>Complimentary Champagne</span>
+    <span>Live Music Fridays & Saturdays</span>
+    <span>Private Functions & Birthday Celebrations</span>
+    <span>R55 Cocktails · Happy Hour 7–8pm</span>
+    <span>Half-Price Pizzas Fri & Sat</span>
+    <span>Open Until 2am · Kloof Village Mall</span>
+  </div>
+</div>
+
+<!-- about -->
+<section id="about">
+  <div class="inner about-grid">
+    <div class="about-text reveal">
+      <p class="section-kicker">Our story</p>
+      <h2 class="section-title">A <em>little gem</em> in the heart of Kloof</h2>
+      <p class="section-body">Tucked inside Kloof Village Mall, Tipsy Flamingo SA is the suburb's most talked-about secret. We craft cocktails with personality, cook food worth the trip, and host celebrations that people come back for — again and again.</p>
+      <blockquote class="about-quote">"Where every occasion deserves a flamingo." 🦩💕</blockquote>
+      <p class="section-body">Whether it's ladies night, a birthday dinner, live music, or just a Tuesday that deserves a good drink — we're your spot. Owner Mandy and her team bring warmth, flair and a bit of flockin' magic to every visit.</p>
+      <div class="about-detail">
+        <span class="about-pill">🍸 Signature Cocktails</span>
+        <span class="about-pill">🎵 Live Music</span>
+        <span class="about-pill">🎂 Private Functions</span>
+      </div>
+    </div>
+    <div class="about-img-wrap reveal">
+      <img src="photos/g4.jpg" alt="Tipsy Flamingo bar interior atmosphere" loading="lazy">
+      <div class="about-img-badge">
+        <p>Open daily</p>
+        <strong>10am – 2am</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- menu -->
+<section id="menu">
+  <div class="inner">
+    <div class="menu-intro">
+      <div class="reveal">
+        <p class="section-kicker">Food & Cocktails</p>
+        <h2 class="section-title">Food worth <em>talking about</em></h2>
+      </div>
+      <div class="reveal">
+        <p class="section-body">From Caribbean pizzas to a Tipsy Fillet Steak that regulars rave about — we cook food that pairs perfectly with our signature cocktails. R200–R300 per person.</p>
+        <a href="tel:0835565851" class="btn-primary" style="margin-top:1.4rem;display:inline-flex">WhatsApp to Reserve</a>
+      </div>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-card reveal">
+        <div class="menu-card-img"><img src="photos/g3.jpg" alt="Signature craft cocktail" loading="lazy"></div>
+        <div class="menu-card-body">
+          <p class="menu-tag">Signature Cocktails</p>
+          <h3>The Tipsy Classics</h3>
+          <p>Our craft cocktail menu is what keeps people coming back. Unique, balanced, and made with personality — every drink tells a story.</p>
+          <p class="menu-price">R55 selected · Happy Hour 7–8pm</p>
+        </div>
+      </div>
+      <div class="menu-card reveal">
+        <div class="menu-card-img"><img src="photos/s2.jpg" alt="Caribbean Pizza" loading="lazy"></div>
+        <div class="menu-card-body">
+          <p class="menu-tag">Mains</p>
+          <h3>Caribbean Pizza</h3>
+          <p>A house favourite with bold tropical flavours — perfectly baked and shareable. Half-price on Fridays and Saturdays.</p>
+          <p class="menu-price">Half-price Fri & Sat</p>
+        </div>
+      </div>
+      <div class="menu-card reveal">
+        <div class="menu-card-img"><img src="photos/s6.jpg" alt="Tipsy Fillet Steak" loading="lazy"></div>
+        <div class="menu-card-body">
+          <p class="menu-tag">Mains</p>
+          <h3>Tipsy Fillet Steak</h3>
+          <p>Our signature fillet — tender, expertly prepared, and finished with a sauce that earns its name. A celebration dish on any night.</p>
+          <p class="menu-price">Dine-in · Takeaway · Delivery</p>
+        </div>
+      </div>
+      <div class="menu-card reveal">
+        <div class="menu-card-img"><img src="photos/s4.jpg" alt="Champagne celebration" loading="lazy"></div>
+        <div class="menu-card-body">
+          <p class="menu-tag">Celebrations</p>
+          <h3>Complimentary Champagne</h3>
+          <p>Ladies nights include a complimentary bottle — because arriving should feel like an occasion. Book ahead to secure your spot.</p>
+          <p class="menu-price">Ladies Nights · Complimentary</p>
+        </div>
+      </div>
+      <div class="menu-card reveal">
+        <div class="menu-card-img"><img src="photos/g7.jpg" alt="Cocktails on the table" loading="lazy"></div>
+        <div class="menu-card-body">
+          <p class="menu-tag">Drinks</p>
+          <h3>Doubles, Mixes & More</h3>
+          <p>R50 doubles, mix included. R99 burger and beer specials on Thursdays. Something for everyone, every night of the week.</p>
+          <p class="menu-price">From R50</p>
+        </div>
+      </div>
+      <div class="menu-card reveal">
+        <div class="menu-card-img"><img src="photos/s1.jpg" alt="Cocktail being poured" loading="lazy"></div>
+        <div class="menu-card-body">
+          <p class="menu-tag">Zulu Boy Sandwich</p>
+          <h3>Street-Inspired Plates</h3>
+          <p>The Zulu Boy Sandwich is one of those menu items you'll tell your friends about. Big flavours, honest ingredients, local soul.</p>
+          <p class="menu-price">Lunch · Dinner · Late Night</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- events -->
+<section id="events">
+  <div class="inner">
+    <div class="reveal">
+      <p class="section-kicker">What's on</p>
+      <h2 class="section-title">Every night is an <em>occasion</em></h2>
+    </div>
+    <div class="events-grid">
+      <div class="event-card reveal">
+        <img src="photos/g10.jpg" alt="Ladies night cocktails" loading="lazy">
+        <div class="event-info">
+          <p class="event-tag">Weekly · Ladies Night</p>
+          <h3 class="event-name">Ladies Night 🦩</h3>
+          <p class="event-desc">Complimentary champagne on arrival. Signature cocktails, music and a crowd that knows how to celebrate. WhatsApp to book: 083 556 5851.</p>
+        </div>
+      </div>
+      <div class="event-card reveal">
+        <img src="photos/g6.jpg" alt="Live music performer" loading="lazy">
+        <div class="event-info">
+          <p class="event-tag">Fri & Sat · Live Music</p>
+          <h3 class="event-name">Live Music Nights 🎵</h3>
+          <p class="event-desc">Local artists, great sound and the energy only Tipsy Flamingo can deliver. Check our Instagram @tipsyflamingosa for this week's lineup.</p>
+        </div>
+      </div>
+      <div class="event-card reveal">
+        <img src="photos/g5.jpg" alt="Birthday celebration group" loading="lazy">
+        <div class="event-info">
+          <p class="event-tag">Anytime · Birthdays</p>
+          <h3 class="event-name">Birthday Celebrations 🎂</h3>
+          <p class="event-desc">Make your birthday unforgettable. We do private setups, dedicated service and experiences your people will talk about for years.</p>
+        </div>
+      </div>
+      <div class="event-card reveal">
+        <img src="photos/s5.jpg" alt="DJ entertainment" loading="lazy">
+        <div class="event-info">
+          <p class="event-tag">Thu · Flamingo Bingo</p>
+          <h3 class="event-name">Flamingo Bingo 🎱</h3>
+          <p class="event-desc">Midweek fun with awesome prizes, great food, cocktails and a little healthy competition. Happy Hour 7–8pm: double brandy or vodka + mix for R50.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- gallery -->
+<section id="gallery">
+  <div class="inner">
+    <div class="gallery-header reveal">
+      <p class="section-kicker">The vibe</p>
+      <h2 class="section-title">See it before you <em>feel it</em></h2>
+      <p class="section-body">Follow @tipsyflamingosa on Instagram for daily updates on events, specials and the moments that make Tipsy Flamingo unforgettable.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item tall reveal"><img src="photos/g2.jpg" alt="Women celebrating at Tipsy Flamingo" loading="lazy"></div>
+      <div class="gallery-item reveal"><img src="photos/g9.jpg" alt="Friends night out" loading="lazy"></div>
+      <div class="gallery-item reveal"><img src="photos/s9.jpg" alt="Cocktail being prepared" loading="lazy"></div>
+      <div class="gallery-item tall reveal"><img src="photos/s10.jpg" alt="Neon bar atmosphere" loading="lazy"></div>
+      <div class="gallery-item wide reveal"><img src="photos/s7.jpg" alt="Couple on a date at Tipsy Flamingo" loading="lazy"></div>
+      <div class="gallery-item reveal"><img src="photos/s3.jpg" alt="Bar counter" loading="lazy"></div>
+      <div class="gallery-item reveal"><img src="photos/s8.jpg" alt="Bar glasses bokeh" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- private functions -->
+<section id="functions">
+  <div class="inner functions-inner">
+    <div class="reveal">
+      <p class="section-kicker">Host your event</p>
+      <h2 class="section-title">Private Functions at <em>Tipsy Flamingo</em></h2>
+      <p class="section-body">The biggest opportunity most people miss? You can hire Tipsy Flamingo for your private event — and we make it extraordinary. Birthday dinners, hens parties, corporate dos, year-end functions.</p>
+      <ul class="functions-list">
+        <li><span>🎂</span><div><strong>Birthday & Hen Celebrations</strong>Dedicated space, personal service and a champagne welcome for the guest of honour.</div></li>
+        <li><span>🏢</span><div><strong>Corporate & Year-End Events</strong>Intimate venue with food, drinks and entertainment sorted — you just show up.</div></li>
+        <li><span>🎵</span><div><strong>Live Entertainment Add-On</strong>Add a live performer to your function for a night nobody forgets.</div></li>
+        <li><span>📋</span><div><strong>Bespoke Menus</strong>Tell us what you need and we'll build a package around your event and budget.</div></li>
+      </ul>
+      <a href="tel:0835565851" class="btn-primary">📞 Enquire About Functions</a>
+    </div>
+    <div class="functions-img reveal">
+      <img src="photos/g5.jpg" alt="Private birthday function at Tipsy Flamingo" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- journal -->
+<section id="journal">
+  <div class="inner">
+    <div class="reveal">
+      <p class="section-kicker">The Flamingo Journal</p>
+      <h2 class="section-title">Cocktails, culture & <em>good times</em></h2>
+    </div>
+    <div class="journal-grid">
+      <div class="journal-card reveal" data-article="cocktail-types">
+        <p class="journal-tag">Cocktails</p>
+        <h3 class="journal-title">The 5 Cocktail Styles You Need to Know (Before You Order)</h3>
+        <p class="journal-excerpt">Sour, stirred, built, blended, or effervescent — understanding the style changes everything about what ends up in your glass.</p>
+        <span class="journal-read">Read article</span>
+      </div>
+      <div class="journal-card reveal" data-article="ladies-night">
+        <p class="journal-tag">Events</p>
+        <h3 class="journal-title">How to Plan the Perfect Ladies Night in Kloof</h3>
+        <p class="journal-excerpt">Group logistics, the right venue, champagne on arrival — everything that turns a girls' night out from fine to unforgettable.</p>
+        <span class="journal-read">Read article</span>
+      </div>
+      <div class="journal-card reveal" data-article="birthday-venue">
+        <p class="journal-tag">Celebrations</p>
+        <h3 class="journal-title">Choosing a Birthday Venue in Kloof: What Actually Matters</h3>
+        <p class="journal-excerpt">Atmosphere beats capacity. Vibe beats menu length. Here's how to pick a venue that makes the night — not just the meal.</p>
+        <span class="journal-read">Read article</span>
+      </div>
+      <div class="journal-card reveal" data-article="pairing">
+        <p class="journal-tag">Food</p>
+        <h3 class="journal-title">Cocktail & Food Pairing: What to Order at a Cocktail Bar</h3>
+        <p class="journal-excerpt">The right cocktail with the right dish is a flavour combination that makes both better. A practical guide for your next night out.</p>
+        <span class="journal-read">Read article</span>
+      </div>
+      <div class="journal-card reveal" data-article="live-music">
+        <p class="journal-tag">Nightlife</p>
+        <h3 class="journal-title">Why Live Music Makes Every Night Better (Science Agrees)</h3>
+        <p class="journal-excerpt">Live performance releases oxytocin, lowers cortisol, and synchronises people in a crowd. Here's what that means for your Friday night.</p>
+        <span class="journal-read">Read article</span>
+      </div>
+      <div class="journal-card reveal" data-article="kloof-nightlife">
+        <p class="journal-tag">Local Guide</p>
+        <h3 class="journal-title">Kloof After Dark: The Upper Highway's Nightlife Scene</h3>
+        <p class="journal-excerpt">Kloof has quietly built one of KZN's best after-dark scenes. Here's everything worth knowing about the suburb's social calendar.</p>
+        <span class="journal-read">Read article</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- article overlays -->
+<div class="article-overlay" id="ao-cocktail-types">
+  <div class="article-box">
+    <button class="article-close" onclick="closeArt()">✕</button>
+    <p style="font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--flamingo);margin-bottom:.6rem">Cocktails</p>
+    <h2>The 5 Cocktail Styles You Need to Know</h2>
+    <p>Not all cocktails are built the same — and knowing the difference will change how you order forever. The five core styles are sour, stirred, built, blended, and effervescent, and each has a completely different character.</p>
+    <p><strong style="color:var(--cream)">Sours</strong> are shaken with citrus and a sweetener — think Margarita, Whiskey Sour, Daiquiri. The shake aerates the drink and the citrus brightens everything. These are crowd-pleasers for a reason.</p>
+    <p><strong style="color:var(--cream)">Stirred cocktails</strong> are spirit-forward — Martini, Negroni, Old Fashioned. No shaking, no dilution beyond a careful stir. Smooth, sophisticated, and usually strong.</p>
+    <p><strong style="color:var(--cream)">Built cocktails</strong> go straight into the glass — G&T, Rum and Coke, Aperol Spritz. Simple, fast, and refreshing. The carbonation does the work.</p>
+    <p><strong style="color:var(--cream)">Blended</strong> means ice is blended into the drink itself — frozen Margaritas, Piña Coladas. Perfect for a hot KZN night.</p>
+    <p><strong style="color:var(--cream)">Effervescent</strong> cocktails use champagne, prosecco or sparkling wine as a base or topper. Light, celebratory — the kind of thing you order when arriving at Tipsy Flamingo with the girls. 🦩</p>
+    <p>Next time you visit, ask one of our bartenders what they'd recommend in each category — they love talking cocktails as much as they love making them.</p>
+  </div>
+</div>
+<div class="article-overlay" id="ao-ladies-night">
+  <div class="article-box">
+    <button class="article-close" onclick="closeArt()">✕</button>
+    <p style="font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--flamingo);margin-bottom:.6rem">Events</p>
+    <h2>How to Plan the Perfect Ladies Night in Kloof</h2>
+    <p>A great ladies night doesn't happen by accident — it's the result of a few simple decisions made well in advance. Here's what actually matters.</p>
+    <p><strong style="color:var(--cream)">Book ahead.</strong> The best venues in Kloof fill up on ladies nights. At Tipsy Flamingo, we can hold space for your group, arrange a champagne welcome, and make sure you're not standing at the bar waiting when you arrive. One WhatsApp at 083 556 5851 is all it takes.</p>
+    <p><strong style="color:var(--cream)">Pick a venue with the right energy.</strong> You want somewhere intimate enough to actually talk, lively enough to feel the night out. Tipsy Flamingo's layout is exactly that — not a sports bar, not a nightclub. A proper cocktail bar where every table feels like the best table.</p>
+    <p><strong style="color:var(--cream)">Complimentary champagne changes everything.</strong> Arriving to a waiting glass signals to the group that this is a real night, not just dinner. Our ladies nights include a complimentary bottle — it sets the tone from the first moment.</p>
+    <p><strong style="color:var(--cream)">Don't overthink the menu.</strong> Our cocktail menu is designed to have something for everyone — sours, spritzes, fruity, spirit-forward. The food is equally crowd-pleasing. Caribbean Pizza, steak, and lighter bites. Nobody goes home hungry or unsatisfied.</p>
+    <p>Ready to book? WhatsApp us at 083 556 5851 and tell us your date, your group size, and we'll handle everything else.</p>
+  </div>
+</div>
+<div class="article-overlay" id="ao-birthday-venue">
+  <div class="article-box">
+    <button class="article-close" onclick="closeArt()">✕</button>
+    <p style="font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--flamingo);margin-bottom:.6rem">Celebrations</p>
+    <h2>Choosing a Birthday Venue in Kloof: What Actually Matters</h2>
+    <p>Birthday venue selection in Kloof usually comes down to the same four or five spots. But the difference between a good night and a great one comes down to factors most people don't think to ask about.</p>
+    <p><strong style="color:var(--cream)">Atmosphere over capacity.</strong> A big, empty room feels cold. An intimate, well-designed space with the right lighting and music makes everyone feel like they're somewhere special. Tipsy Flamingo is purposefully not a massive venue — which is exactly what makes it work for celebrations.</p>
+    <p><strong style="color:var(--cream)">Personal service.</strong> On your birthday, you shouldn't have to flag someone down at the bar. A good venue ensures someone on the floor knows it's your night and treats it accordingly.</p>
+    <p><strong style="color:var(--cream)">Entertainment built in.</strong> If the venue has live music, DJ nights, or bingo — you have a ready-made event. If not, you're relying entirely on your group to generate the energy. Tipsy Flamingo's Fridays and Saturdays already have live acts; your birthday becomes part of the programme.</p>
+    <p><strong style="color:var(--cream)">Flexible packages.</strong> The best venues let you build around your budget. Call us — we'll tell you exactly what we can do for your group, your date, and your price point. No packages forced on you that don't fit.</p>
+    <p>For birthdays, WhatsApp 083 556 5851 — ask for Mandy.</p>
+  </div>
+</div>
+<div class="article-overlay" id="ao-pairing">
+  <div class="article-box">
+    <button class="article-close" onclick="closeArt()">✕</button>
+    <p style="font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--flamingo);margin-bottom:.6rem">Food</p>
+    <h2>Cocktail & Food Pairing: What to Order at a Cocktail Bar</h2>
+    <p>The rule that works every time: match the weight of the drink to the weight of the food. Light cocktails with light food; bold cocktails with rich, hearty dishes.</p>
+    <p><strong style="color:var(--cream)">Sour cocktails with fried or rich food.</strong> The citrus and acidity cut through fat the same way lemon does on a fish dish. Our Caribbean Pizza with a Margarita or citrus-forward cocktail is a combination worth trying.</p>
+    <p><strong style="color:var(--cream)">Spirit-forward drinks with steak.</strong> The Tipsy Fillet Steak wants something that can stand up to it. An Old Fashioned, a classic Whiskey Sour, or something with a dark base will complement rather than compete with the richness of the meat.</p>
+    <p><strong style="color:var(--cream)">Bubbles and champagne with lighter plates.</strong> The Zulu Boy Sandwich or a starter board pairs beautifully with something effervescent — it doesn't overpower but it keeps the palate fresh between bites.</p>
+    <p><strong style="color:var(--cream)">Sweet cocktails at the end, not the beginning.</strong> The dessert equivalent in cocktail form — a chocolate martini, a baileys-based drink — works best as a finishing note rather than an opener. Start with something crisp and acidic.</p>
+    <p>Ask your bartender what they'd pair with what you're eating. At Tipsy Flamingo, that conversation is always welcome.</p>
+  </div>
+</div>
+<div class="article-overlay" id="ao-live-music">
+  <div class="article-box">
+    <button class="article-close" onclick="closeArt()">✕</button>
+    <p style="font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--flamingo);margin-bottom:.6rem">Nightlife</p>
+    <h2>Why Live Music Makes Every Night Better</h2>
+    <p>It's not just your imagination — a night with live music genuinely feels different. The science backs it up.</p>
+    <p>Live performance triggers the release of oxytocin — the same bonding hormone released during close social contact. When you're in a room with a live act, your body chemistry actually shifts. You feel warmer towards the people around you. Conversations flow faster. People laugh more.</p>
+    <p>Cortisol — the stress hormone — drops measurably in music-listening environments. Which is why a night at a venue with a live act always seems to dissolve the week faster than one without.</p>
+    <p>Beyond the biology: live music creates a shared reference point in the room. Everyone hears the same song at the same moment. That shared experience — whether it's a single that brings the crowd together or a performer mid-solo — creates the kind of memory that sticks.</p>
+    <p>At Tipsy Flamingo, we book live acts on Fridays and Saturdays. Our performers play everything from acoustic pop to soul to Afro beats — artists that know how to read the room and take it somewhere special.</p>
+    <p>Follow @tipsyflamingosa on Instagram to see this week's lineup before you book.</p>
+  </div>
+</div>
+<div class="article-overlay" id="ao-kloof-nightlife">
+  <div class="article-box">
+    <button class="article-close" onclick="closeArt()">✕</button>
+    <p style="font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--flamingo);margin-bottom:.6rem">Local Guide</p>
+    <h2>Kloof After Dark: The Upper Highway's Nightlife Scene</h2>
+    <p>Kloof has built one of the most underrated after-dark scenes in KwaZulu-Natal. Concentrated along the Old Main Road corridor and anchored at Kloof Village Mall, the suburb's evening economy punches significantly above its weight.</p>
+    <p>The Upper Highway area — which includes Kloof, Hillcrest and Waterfall — has a high concentration of young professionals, families with disposable income, and a strong sense of local identity. Residents prefer to stay local rather than drive to Durban or Umhlanga, which has created a genuinely thriving local hospitality sector.</p>
+    <p>What makes Tipsy Flamingo SA the centrepiece of Kloof's nightlife is simple: it's the only venue in the suburb that combines a serious cocktail programme, quality food, live entertainment and a consistent event calendar in a space designed to feel intimate. It's not a bar that happens to serve food — it's a destination.</p>
+    <p>The flamingo brand has become recognisable enough that @tipsyflamingosa has amassed 7,000+ Instagram followers entirely from word-of-mouth and local loyalty. In a suburb the size of Kloof, that's a remarkable social footprint.</p>
+    <p>If you're new to the area or visiting KZN and looking for somewhere with genuine character — not a chain, not a sports bar — Tipsy Flamingo is where you start. And usually where you end up staying. 🦩</p>
+  </div>
+</div>
+
+<!-- faq -->
+<section id="faq">
+  <div class="inner faq-inner">
+    <div class="reveal" style="text-align:center;margin-bottom:0">
+      <p class="section-kicker">FAQs</p>
+      <h2 class="section-title">Good questions, <em>great answers</em></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span>Do I need to book a table?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a"><p class="faq-a-inner">Walk-ins are always welcome, but we strongly recommend booking for groups of 4+ and especially for ladies nights, live music nights and weekends. WhatsApp us at 083 556 5851 and we'll hold a table for you.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span>What are your opening hours?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a"><p class="faq-a-inner">We're open daily from 10am until 2am. Kitchen hours may vary — WhatsApp us to confirm food service times for your visit, especially for late-night dining.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span>When is ladies night?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a"><p class="faq-a-inner">Ladies nights run regularly throughout the week. Check our Instagram @tipsyflamingosa for the current schedule, or WhatsApp us at 083 556 5851 to find out the next one. Complimentary champagne is included on ladies night bookings.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span>Can I book a private function or hire the venue?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a"><p class="faq-a-inner">Absolutely. We host birthday dinners, hens parties, corporate events and private celebrations. Call or WhatsApp us at 083 556 5851 to discuss your date, group size and requirements — we'll build a package around your event.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span>Where exactly are you located?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a"><p class="faq-a-inner">We're inside Kloof Village Mall at 15 Old Main Rd, Kloof, Durban 4001. There's ample mall parking available. If you can't find us, call 083 556 5851 and we'll guide you in.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span>Do you have live music? When?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a"><p class="faq-a-inner">Yes — live acts perform on Fridays and Saturdays, with special midweek events like Flamingo Bingo on Wednesdays and Thursdays. Follow @tipsyflamingosa on Instagram for the weekly entertainment schedule.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span>What's the price range for food and drinks?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a"><p class="faq-a-inner">Expect to spend R200–R300 per person including drinks. Happy Hour runs 7–8pm with selected cocktails at R55 and R50 doubles with a mix included. Half-price pizzas on Fridays and Saturdays. Burger and beer specials on Thursdays for R99.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span>Do you offer takeaway and delivery?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a"><p class="faq-a-inner">Yes — we offer dine-in, takeaway and delivery. Contact us via WhatsApp at 083 556 5851 to arrange your order, or check our social media for delivery platform listings.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- find us -->
+<section id="find-us">
+  <div class="inner">
+    <div class="reveal" style="text-align:center;margin-bottom:3rem">
+      <p class="section-kicker">Find us</p>
+      <h2 class="section-title">Kloof Village Mall · <em>10am – 2am daily</em></h2>
+    </div>
+    <div class="findus-grid">
+      <div class="reveal">
+        <h3 style="font-family:var(--font-h);font-size:1.3rem;color:var(--cream);margin-bottom:1.4rem">Hours & Contact</h3>
+        <ul class="hours-list">
+          <li><span class="day">Monday – Thursday</span><span class="time">10:00am – 12:00am</span></li>
+          <li><span class="day">Friday</span><span class="time">10:00am – 2:00am</span></li>
+          <li><span class="day">Saturday</span><span class="time">10:00am – 2:00am</span></li>
+          <li><span class="day">Sunday</span><span class="time">10:00am – 11:00pm</span></li>
+        </ul>
+        <div class="contact-items">
+          <div class="contact-item"><span>📞</span><div><strong style="color:var(--cream);display:block">Phone / WhatsApp</strong><a href="tel:0835565851">083 556 5851</a></div></div>
+          <div class="contact-item"><span>📍</span><div><strong style="color:var(--cream);display:block">Address</strong>Kloof Village Mall, 15 Old Main Rd, Kloof, 4001</div></div>
+          <div class="contact-item"><span>📱</span><div><strong style="color:var(--cream);display:block">Instagram</strong><a href="https://instagram.com/tipsyflamingosa" target="_blank">@tipsyflamingosa</a></div></div>
+          <div class="contact-item"><span>✉️</span><div><strong style="color:var(--cream);display:block">Email</strong><a href="mailto:mandy@tipsyflamingo.co.za">mandy@tipsyflamingo.co.za</a></div></div>
+        </div>
+      </div>
+      <div class="map-wrap reveal">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3459.8!2d30.8258!3d-29.8001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef6f9a2b2b2b2b2%3A0x0!2sKloof+Village+Mall!5e0!3m2!1sen!2sza!4v1718870000000" allowfullscreen loading="lazy" title="Tipsy Flamingo SA location map"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- footer -->
+<footer>
+  <div class="footer-brand">🦩 Tipsy Flamingo SA</div>
+  <ul class="footer-links">
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#events">Events</a></li>
+    <li><a href="#functions">Functions</a></li>
+    <li><a href="#find-us">Find Us</a></li>
+    <li><a href="https://instagram.com/tipsyflamingosa" target="_blank">Instagram</a></li>
+  </ul>
+  <p class="footer-legal">© 2025 Tipsy Flamingo SA · Kloof Village Mall · 083 556 5851</p>
+</footer>
+
+<!-- chatbot -->
+<button id="cb-btn" aria-label="Chat with Tipsy Flamingo">
+  <svg id="cb-icon-chat" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  <svg id="cb-icon-close" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="position:absolute"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+</button>
+<div id="cb-panel" role="dialog" aria-label="Tipsy Flamingo chat">
+  <div id="cb-head">
+    <div id="cb-avatar">🦩</div>
+    <div id="cb-head-info">
+      <p class="cb-name">Tipsy Flamingo</p>
+      <p class="cb-status">🟢 Online now · Kloof Village Mall</p>
+    </div>
+  </div>
+  <div id="cb-msgs"></div>
+  <div id="cb-typing"><span></span><span></span><span></span></div>
+  <div id="cb-quick">
+    <button class="cb-q">🍸 Cocktails</button>
+    <button class="cb-q">🦩 Ladies Night</button>
+    <button class="cb-q">🎂 Functions</button>
+    <button class="cb-q">🕒 Hours</button>
+    <button class="cb-q">📍 Location</button>
+  </div>
+  <form id="cb-form">
+    <input id="cb-input" type="text" placeholder="Ask us anything..." autocomplete="off">
+    <button id="cb-send" type="submit" aria-label="Send">
+      <svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+    </button>
+  </form>
+</div>
+
+<script>
+// ── nav scroll ──
+(function(){
+  var nav=document.getElementById('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>60);},{ passive:true });
+})();
+
+// ── reveal on scroll ──
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}});},{threshold:.12});
+  els.forEach(function(el){io.observe(el);});
+})();
+
+// ── journal overlays ──
+var currentArt=null;
+document.querySelectorAll('.journal-card[data-article]').forEach(function(c){
+  c.addEventListener('click',function(){
+    var id='ao-'+c.dataset.article;
+    var el=document.getElementById(id);
+    if(el){currentArt=el;el.classList.add('open');}
+  });
+});
+function closeArt(){if(currentArt){currentArt.classList.remove('open');currentArt=null;}}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeArt();});
+document.querySelectorAll('.article-overlay').forEach(function(o){
+  o.addEventListener('click',function(e){if(e.target===o)closeArt();});
+});
+
+// ── faq ──
+function toggleFaq(el){
+  var item=el.closest('.faq-item');
+  var wasOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');});
+  if(!wasOpen)item.classList.add('open');
+}
+
+// ── chatbot ──
+(function(){
+  var btn=document.getElementById('cb-btn');
+  var panel=document.getElementById('cb-panel');
+  var msgs=document.getElementById('cb-msgs');
+  var input=document.getElementById('cb-input');
+  var form=document.getElementById('cb-form');
+  var typing=document.getElementById('cb-typing');
+  var opened=false;
+
+  var KB=[
+    {k:['cocktail','drink','what do you serve','signature','menu','order'],r:'Our cocktail menu is packed with personality 🍸 From R55 selected cocktails to signature craft drinks — each one made with care. Happy Hour is 7–8pm: R55 selected cocktails, R50 doubles + mix. WhatsApp us to ask what\'s on tonight: <a href="tel:0835565851" style="color:var(--flamingo)">083 556 5851</a>'},
+    {k:['ladies','women','girls','hens'],r:'Ladies nights are weekly magic 🦩 Complimentary champagne on arrival, signature cocktails, and a crowd that knows how to celebrate. WhatsApp us at <a href="tel:0835565851" style="color:var(--flamingo)">083 556 5851</a> to find the next date and book your table.'},
+    {k:['function','private','hire','venue','birthday','corporate','event','party','bachelorette','bach'],r:'Yes — we host private functions! Birthday dinners, hens parties, corporate events, year-end dos. We\'ll build a package around your group, date and budget. Call or WhatsApp Mandy: <a href="tel:0835565851" style="color:var(--flamingo)">083 556 5851</a> 🎂'},
+    {k:['book','reserve','reservation','table'],r:'To book a table or enquire about functions, WhatsApp us at <a href="tel:0835565851" style="color:var(--flamingo)">083 556 5851</a> — we\'ll hold your spot and sort all the details. Walk-ins are always welcome but bookings are recommended for groups and weekends! 🦩'},
+    {k:['hour','open','close','time','when'],r:'We\'re open daily from 10am — Mon to Thu until midnight, Fri & Sat until 2am, Sunday until 11pm. Kitchen hours may vary — WhatsApp <a href="tel:0835565851" style="color:var(--flamingo)">083 556 5851</a> to confirm for your visit 🕒'},
+    {k:['location','where','address','find','mall','kloof village','directions','parking'],r:'We\'re inside Kloof Village Mall at 15 Old Main Rd, Kloof 4001. Ample mall parking. Can\'t find us? Call <a href="tel:0835565851" style="color:var(--flamingo)">083 556 5851</a> and we\'ll guide you in 📍'},
+    {k:['food','eat','pizza','steak','sandwich','fillet','caribbean','zulu','menu','hungry'],r:'Our food is as good as the cocktails 🍕 Highlights include the Caribbean Pizza (half-price Fri & Sat!), Tipsy Fillet Steak, and the Zulu Boy Sandwich. R200–R300 per person. Dine-in, takeaway and delivery available.'},
+    {k:['music','live','dj','entertainment','band','performer','bingo','quiz','events'],r:'We have live music on Fridays and Saturdays, Flamingo Bingo midweek (awesome prizes!), and Music Quiz Nights on Thursdays 🎵 Follow <a href="https://instagram.com/tipsyflamingosa" target="_blank" style="color:var(--flamingo)">@tipsyflamingosa</a> for this week\'s entertainment lineup.'},
+    {k:['price','cost','how much','charge','specials','happy hour','deal'],r:'Happy Hour 7–8pm: R55 selected cocktails, R50 doubles + mix. Thursday: R99 burger & beer special. Fri & Sat: half-price pizzas. Expect R200–R300pp overall. Great value for the vibe! 💕'},
+    {k:['instagram','social','follow'],r:'Follow us at <a href="https://instagram.com/tipsyflamingosa" target="_blank" style="color:var(--flamingo)">@tipsyflamingosa</a> — 7,000+ followers, daily posts on events, cocktails and the Tipsy Flamingo life 🦩'},
+    {k:['delivery','takeaway','takeout'],r:'Yes! We offer dine-in, takeaway and delivery. WhatsApp <a href="tel:0835565851" style="color:var(--flamingo)">083 556 5851</a> to arrange your order or check our socials for delivery platform details 🛵'},
+  ];
+  var DEFAULT='Hey there! 🦩 We\'re Tipsy Flamingo — Kloof\'s favourite cocktail bar. Ask about our cocktails, ladies nights, live music, or functions. Or WhatsApp us directly: <a href="tel:0835565851" style="color:var(--flamingo)">083 556 5851</a>';
+
+  function addMsg(t,r){var d=document.createElement('div');d.className='cb-msg '+r;d.innerHTML=t;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;}
+  function match(text){var t=text.toLowerCase();for(var i=0;i<KB.length;i++){for(var j=0;j<KB[i].k.length;j++){if(t.indexOf(KB[i].k[j])!==-1)return KB[i].r;}}return DEFAULT;}
+  function botReply(text){typing.classList.add('show');setTimeout(function(){typing.classList.remove('show');addMsg(match(text),'bot');},700+Math.random()*500);}
+  function send(text){text=text.trim();if(!text)return;addMsg(text,'user');input.value='';botReply(text);}
+
+  form.addEventListener('submit',function(e){e.preventDefault();send(input.value);});
+  document.querySelectorAll('.cb-q').forEach(function(q){q.addEventListener('click',function(){send(q.textContent.replace(/[^\w\s]/g,'').trim());});});
+  btn.addEventListener('click',function(){
+    opened=!opened;
+    btn.classList.toggle('open',opened);
+    panel.classList.toggle('open',opened);
+    if(opened&&msgs.children.length===0){setTimeout(function(){addMsg('Hey! 🦩 Welcome to <strong>Tipsy Flamingo SA</strong> — Kloof\'s favourite cocktail bar. Craft cocktails, amazing food, live music and unforgettable nights. How can we help?','bot');},300);}
+    if(opened)setTimeout(function(){input.focus();},350);
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&opened){opened=false;btn.classList.remove('open');panel.classList.remove('open');}});
+})();
+</script>
+</body>
+</html>
