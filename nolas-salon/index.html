@@ -695,6 +695,30 @@ function toggleFaq(el){var item=el.closest('.faq-item');var wasOpen=item.classLi
   });
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&opened){opened=false;btn.classList.remove('open');panel.classList.remove('open');}});
 })();
+// rose gold sparkle burst — tiny glitter dots scatter from cursor movement
+(function(){
+  var cols=['#C9967A','#E8C5B5','#D4A88C','#F5EAE1','#B8856A'],lx=0,ly=0;
+  document.addEventListener('mousemove',function(e){
+    var dx=e.clientX-lx,dy=e.clientY-ly;
+    if(dx*dx+dy*dy<900)return;
+    lx=e.clientX;ly=e.clientY;
+    for(var i=0;i<4;i++){(function(i){
+      setTimeout(function(){
+        var el=document.createElement('span');
+        var sz=Math.random()*5+3;
+        var ox=(Math.random()-.5)*26,oy=(Math.random()-.5)*26;
+        var tx=(Math.random()-.5)*52,ty=-(Math.random()*44+8);
+        el.style.cssText='position:fixed;left:'+(e.clientX+ox)+'px;top:'+(e.clientY+oy)+'px;width:'+sz+'px;height:'+sz+'px;border-radius:50%;background:'+cols[Math.floor(Math.random()*cols.length)]+';pointer-events:none;z-index:9999;opacity:1;transition:opacity .75s ease,transform .75s ease;transform:scale(1) translate(0,0)';
+        document.body.appendChild(el);
+        requestAnimationFrame(function(){requestAnimationFrame(function(){
+          el.style.opacity='0';
+          el.style.transform='scale(0) translate('+tx+'px,'+ty+'px)';
+        });});
+        setTimeout(function(){if(el.parentNode)el.parentNode.removeChild(el);},850);
+      },i*55);
+    })(i);}
+  },{passive:true});
+})();
 </script>
 </body>
 </html>
