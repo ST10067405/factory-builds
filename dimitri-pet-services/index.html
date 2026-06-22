@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dimitri Pet Services | Dog Grooming & Pet Care · Hillcrest, Durban</title>
+<meta name="description" content="Hillcrest's trusted pet care specialist. Dog grooming, bathing, nail trimming, dog walking and pet sitting — hands-on care from a passionate team with a 4.8★ Google rating. Call 079 989 8197.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+
+:root{
+  --dark:#141A0F;
+  --panel:#1C2415;
+  --forest:#2A3D20;
+  --sage:#6B8F56;
+  --sage-light:#9BB882;
+  --cream:#F5F0E8;
+  --parchment:#EDE8DC;
+  --warm:#D4936B;
+  --amber:#E8B055;
+  --muted:#8A9080;
+  --border:rgba(107,143,86,.22);
+  --font-h:'Oswald',sans-serif;
+  --font-b:'DM Sans',system-ui,sans-serif;
+  --ease:cubic-bezier(.22,.68,0,1.2);
+}
+
+body{font-family:var(--font-b);background:var(--dark);color:var(--cream);overflow-x:hidden}
+
+/* ── nav ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.4rem 2.8rem;transition:background .4s,box-shadow .4s}
+nav.scrolled{background:rgba(20,26,15,.95);backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(107,143,86,.15)}
+.nav-brand{font-family:var(--font-h);font-size:1.15rem;font-weight:400;letter-spacing:.08em;color:var(--cream);text-transform:uppercase;transition:color .3s}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(245,240,232,.65);transition:color .2s}
+.nav-links a:hover{color:var(--sage-light)}
+.nav-cta{background:var(--sage)!important;color:var(--dark)!important;padding:.42rem 1.3rem;border-radius:2rem;font-size:.72rem!important;letter-spacing:.1em!important;font-weight:600!important;transition:background .2s!important}
+.nav-cta:hover{background:var(--sage-light)!important}
+
+/* ── hero ── */
+#hero{position:relative;height:100dvh;min-height:640px;overflow:hidden;display:flex;align-items:center;padding:0 2.8rem}
+#hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%}
+#hero::after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,rgba(20,26,15,.88) 0%,rgba(20,26,15,.55) 55%,rgba(20,26,15,.1) 100%)}
+.hero-content{position:relative;z-index:2;max-width:600px}
+.hero-kicker{display:inline-flex;align-items:center;gap:.7rem;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sage-light);margin-bottom:1.3rem}
+.hero-kicker::before{content:'';display:block;width:28px;height:1.5px;background:var(--sage-light)}
+.hero-title{font-family:var(--font-h);font-size:clamp(2.8rem,6vw,5.4rem);font-weight:400;color:var(--cream);line-height:1.05;text-transform:uppercase;letter-spacing:.02em;margin-bottom:1.4rem}
+.hero-title span{color:var(--sage-light)}
+.hero-sub{font-size:1rem;color:rgba(245,240,232,.75);line-height:1.75;margin-bottom:2rem;max-width:460px}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{background:var(--sage);color:var(--dark);padding:.9rem 2rem;border-radius:2rem;font-size:.88rem;letter-spacing:.06em;font-weight:700;transition:background .2s,transform .2s}
+.btn-primary:hover{background:var(--sage-light);transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid rgba(245,240,232,.35);color:var(--cream);padding:.87rem 1.8rem;border-radius:2rem;font-size:.88rem;letter-spacing:.06em;transition:all .2s}
+.btn-ghost:hover{border-color:var(--sage-light);color:var(--sage-light)}
+.hero-badge{position:absolute;bottom:2.6rem;right:2.8rem;z-index:2;display:flex;align-items:center;gap:.8rem;background:rgba(20,26,15,.8);backdrop-filter:blur(12px);border:1px solid var(--border);padding:.9rem 1.4rem;border-radius:1rem}
+.hero-badge-val{font-family:var(--font-h);font-size:1.8rem;font-weight:300;color:var(--amber);line-height:1}
+.hero-badge-text{font-size:.68rem;letter-spacing:.08em;color:rgba(245,240,232,.7);line-height:1.4}
+
+/* ── ticker ── */
+#ticker{background:var(--sage);padding:.7rem 0;overflow:hidden;white-space:nowrap}
+.ticker-inner{display:inline-flex;gap:3rem;animation:ticker 28s linear infinite}
+.ticker-item{font-family:var(--font-h);font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dark);font-weight:400}
+.ticker-dot{color:rgba(20,26,15,.5)}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── sections ── */
+section{padding:5.5rem 2.8rem}
+.section-kicker{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sage-light);margin-bottom:.8rem}
+.section-title{font-family:var(--font-h);font-size:clamp(2rem,4.5vw,3.4rem);font-weight:400;text-transform:uppercase;color:var(--cream);line-height:1.05;letter-spacing:.02em;margin-bottom:1.2rem}
+.section-title span{color:var(--sage-light)}
+.section-body{font-size:.93rem;color:var(--muted);line-height:1.8;max-width:560px}
+.inner{max-width:1200px;margin:0 auto}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .65s var(--ease),transform .65s var(--ease)}
+.reveal.vis{opacity:1;transform:none}
+
+/* ── about ── */
+#about{background:var(--panel)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.about-img-wrap{position:relative;border-radius:1rem;overflow:hidden;aspect-ratio:4/5}
+.about-img-wrap img{width:100%;height:100%;object-fit:cover}
+.about-tag{position:absolute;bottom:1.5rem;left:1.5rem;background:var(--sage);color:var(--dark);padding:.45rem 1rem;border-radius:2rem;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+.about-quote{font-size:1.2rem;color:rgba(245,240,232,.85);line-height:1.7;margin:1.8rem 0;padding-left:1.4rem;border-left:3px solid var(--sage);font-style:italic}
+.about-stats{display:flex;gap:2rem;margin-top:1.8rem;flex-wrap:wrap}
+.stat{text-align:center}
+.stat-val{font-family:var(--font-h);font-size:2rem;font-weight:300;color:var(--amber);line-height:1}
+.stat-label{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:.3rem}
+
+/* ── services ── */
+#services{background:var(--dark)}
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-top:3rem}
+.svc-card{background:var(--panel);border:1px solid var(--border);border-radius:1rem;overflow:hidden;display:flex;gap:0;flex-direction:column;transition:transform .3s,border-color .3s}
+.svc-card:hover{transform:translateY(-5px);border-color:var(--sage)}
+.svc-img{height:220px;overflow:hidden}
+.svc-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.svc-card:hover .svc-img img{transform:scale(1.06)}
+.svc-body{padding:1.8rem}
+.svc-icon{font-size:1.5rem;margin-bottom:.6rem}
+.svc-body h3{font-family:var(--font-h);font-size:1.25rem;font-weight:400;text-transform:uppercase;letter-spacing:.05em;color:var(--cream);margin-bottom:.7rem}
+.svc-body p{font-size:.86rem;color:var(--muted);line-height:1.7}
+.svc-tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem}
+.svc-tag{background:rgba(107,143,86,.12);border:1px solid var(--border);color:var(--sage-light);padding:.3rem .8rem;border-radius:2rem;font-size:.7rem;letter-spacing:.06em}
+
+/* ── gallery ── */
+#gallery{background:var(--panel)}
+.gallery-header{text-align:center;margin-bottom:3rem}
+.gallery-header .section-body{margin:0 auto}
+.gallery-masonry{columns:4;gap:.7rem}
+.gallery-masonry img{width:100%;margin-bottom:.7rem;border-radius:.5rem;break-inside:avoid;transition:transform .4s,filter .4s}
+.gallery-masonry img:hover{transform:scale(1.02);filter:brightness(1.1)}
+
+/* ── cta / booking ── */
+#booking{background:var(--forest);position:relative;overflow:hidden;text-align:center}
+#booking::before{content:'🐾';position:absolute;right:4rem;top:50%;transform:translateY(-50%);font-size:18rem;opacity:.04;pointer-events:none;line-height:1}
+.booking-inner{position:relative;z-index:1;max-width:640px;margin:0 auto}
+#booking .section-title{color:var(--cream)}
+#booking .section-body{color:rgba(245,240,232,.65);margin:0 auto 2rem}
+.booking-contact{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-bottom:2rem}
+.b-card{background:rgba(20,26,15,.5);border:1px solid rgba(155,184,130,.2);border-radius:.9rem;padding:1.3rem 2rem;text-align:center}
+.b-card span{font-size:.67rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:.5rem}
+.b-card a{font-family:var(--font-h);font-size:1.6rem;font-weight:300;color:var(--sage-light);letter-spacing:.04em}
+.b-card a:hover{color:var(--cream)}
+.booking-note{font-size:.78rem;color:rgba(245,240,232,.4);letter-spacing:.06em;margin-top:1.5rem}
+
+/* ── journal ── */
+#journal{background:var(--dark)}
+.journal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem;margin-top:3rem}
+.journal-card{background:var(--panel);border:1px solid var(--border);border-radius:1rem;padding:2rem;cursor:pointer;transition:transform .3s,border-color .3s;display:flex;flex-direction:column}
+.journal-card:hover{transform:translateY(-5px);border-color:var(--sage)}
+.journal-tag{font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sage-light);margin-bottom:.7rem}
+.journal-title{font-family:var(--font-h);font-size:1.15rem;font-weight:400;text-transform:uppercase;color:var(--cream);line-height:1.2;margin-bottom:.8rem;letter-spacing:.02em}
+.journal-excerpt{font-size:.83rem;color:var(--muted);line-height:1.65;flex:1}
+.journal-read{display:inline-flex;align-items:center;gap:.4rem;margin-top:1.2rem;font-size:.77rem;color:var(--sage-light);letter-spacing:.05em}
+.journal-read::after{content:'→';transition:transform .2s}
+.journal-card:hover .journal-read::after{transform:translateX(4px)}
+
+/* ── article overlay ── */
+.article-overlay{position:fixed;inset:0;z-index:500;background:rgba(14,18,10,.92);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;padding:2rem;opacity:0;pointer-events:none;transition:opacity .3s}
+.article-overlay.open{opacity:1;pointer-events:all}
+.article-box{background:var(--panel);border:1px solid var(--border);border-radius:1.4rem;max-width:680px;width:100%;max-height:82vh;overflow-y:auto;padding:2.8rem;position:relative}
+.article-box h2{font-family:var(--font-h);font-size:1.7rem;font-weight:400;text-transform:uppercase;color:var(--cream);margin-bottom:1.2rem;line-height:1.1;letter-spacing:.02em}
+.article-box p{font-size:.9rem;color:var(--muted);line-height:1.8;margin-bottom:1rem}
+.article-close{position:absolute;top:1.2rem;right:1.2rem;background:none;border:none;color:var(--muted);cursor:pointer;font-size:1.4rem;line-height:1}
+
+/* ── faq ── */
+#faq{background:var(--panel)}
+.faq-inner{max-width:800px;margin:0 auto}
+.faq-list{margin-top:3rem}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:1.3rem 0;cursor:pointer;font-size:.91rem;color:var(--cream);font-weight:500;gap:1rem}
+.faq-icon{color:var(--sage-light);font-size:1.2rem;transition:transform .3s;flex-shrink:0}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-item.open .faq-a{max-height:300px}
+.faq-a-inner{padding-bottom:1.3rem;font-size:.87rem;color:var(--muted);line-height:1.75}
+
+/* ── find us ── */
+#find-us{background:var(--dark)}
+.findus-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-top:3rem}
+.hours-list{list-style:none}
+.hours-list li{display:flex;justify-content:space-between;padding:.7rem 0;border-bottom:1px solid var(--border);font-size:.86rem}
+.hours-list li:last-child{border:none}
+.hours-list .day{color:var(--muted)}
+.hours-list .time{color:var(--cream);font-weight:500}
+.contact-items{margin-top:1.8rem;display:flex;flex-direction:column;gap:.9rem}
+.contact-item{display:flex;align-items:center;gap:.9rem;font-size:.86rem;color:var(--muted)}
+.contact-item span{width:34px;height:34px;background:var(--sage);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0;color:var(--dark)}
+.map-wrap{border-radius:1rem;overflow:hidden;aspect-ratio:4/3}
+.map-wrap iframe{width:100%;height:100%;border:none;filter:grayscale(.3)}
+
+/* ── footer ── */
+footer{background:var(--panel);border-top:1px solid var(--border);padding:2.8rem 2.8rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem}
+.footer-brand{font-family:var(--font-h);font-size:1rem;font-weight:400;text-transform:uppercase;letter-spacing:.1em;color:var(--cream)}
+.footer-links{display:flex;gap:1.8rem;list-style:none}
+.footer-links a{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);transition:color .2s}
+.footer-links a:hover{color:var(--sage-light)}
+.footer-legal{font-size:.7rem;color:rgba(245,240,232,.3)}
+
+/* ── chatbot ── */
+#cb-btn{position:fixed;bottom:1.6rem;right:1.6rem;z-index:1100;width:56px;height:56px;border-radius:50%;background:var(--sage);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(107,143,86,.35);transition:transform .25s,box-shadow .25s}
+#cb-btn:hover{transform:scale(1.08);box-shadow:0 10px 32px rgba(107,143,86,.45)}
+#cb-panel{position:fixed;bottom:5rem;right:1.6rem;z-index:1099;width:340px;max-width:calc(100vw - 2rem);background:var(--panel);border:1px solid var(--border);border-radius:1.2rem;box-shadow:0 20px 60px rgba(0,0,0,.4);opacity:0;transform:translateY(12px) scale(.97);pointer-events:none;transition:opacity .3s,transform .3s;display:flex;flex-direction:column;overflow:hidden}
+#cb-panel.open{opacity:1;transform:none;pointer-events:all}
+#cb-head{background:var(--forest);padding:1rem 1.2rem;display:flex;align-items:center;gap:.8rem;border-bottom:1px solid var(--border)}
+#cb-avatar{width:36px;height:36px;border-radius:50%;background:var(--sage);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;color:var(--dark)}
+#cb-head-info .cb-name{font-weight:600;font-size:.88rem;color:var(--cream)}
+#cb-head-info .cb-status{font-size:.7rem;color:rgba(245,240,232,.6)}
+#cb-msgs{height:220px;overflow-y:auto;padding:1rem;display:flex;flex-direction:column;gap:.6rem;background:var(--panel)}
+.cb-msg{max-width:86%;padding:.65rem .9rem;border-radius:1rem;font-size:.82rem;line-height:1.5}
+.cb-msg.bot{background:var(--forest);color:var(--cream);align-self:flex-start;border-radius:.3rem 1rem 1rem 1rem}
+.cb-msg.user{background:var(--sage);color:var(--dark);align-self:flex-end;border-radius:1rem 1rem .3rem 1rem;font-weight:600}
+#cb-typing{display:none;padding:.4rem 1rem;align-self:flex-start}
+#cb-typing.show{display:flex;gap:.3rem}
+#cb-typing span{width:7px;height:7px;border-radius:50%;background:var(--sage);animation:cb-bounce .8s ease-in-out infinite}
+#cb-typing span:nth-child(2){animation-delay:.15s}
+#cb-typing span:nth-child(3){animation-delay:.3s}
+@keyframes cb-bounce{0%,100%{transform:translateY(0)}40%{transform:translateY(-5px)}}
+#cb-quick{padding:.6rem .8rem;display:flex;flex-wrap:wrap;gap:.4rem;border-top:1px solid var(--border)}
+.cb-q{background:rgba(107,143,86,.1);border:1px solid var(--border);color:var(--sage-light);padding:.35rem .75rem;border-radius:2rem;font-size:.73rem;cursor:pointer;transition:all .2s;white-space:nowrap}
+.cb-q:hover{background:var(--sage);border-color:var(--sage);color:var(--dark);font-weight:600}
+#cb-form{display:flex;align-items:center;gap:.5rem;padding:.8rem;border-top:1px solid var(--border)}
+#cb-input{flex:1;background:rgba(107,143,86,.08);border:1px solid var(--border);border-radius:2rem;padding:.5rem .9rem;font-size:.82rem;color:var(--cream);outline:none;font-family:var(--font-b)}
+#cb-input::placeholder{color:var(--muted)}
+#cb-input:focus{border-color:var(--sage)}
+#cb-send{width:34px;height:34px;background:var(--sage);border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s}
+#cb-send:hover{background:var(--sage-light)}
+#cb-send svg{width:14px;height:14px;fill:var(--dark)}
+
+@media(max-width:768px){
+  nav{padding:1rem 1.4rem}
+  .nav-links{display:none}
+  section{padding:4rem 1.4rem}
+  .about-grid,.findus-grid{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:1fr}
+  .gallery-masonry{columns:2}
+  .journal-grid{grid-template-columns:1fr}
+  footer{flex-direction:column;text-align:center}
+  #booking::before{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- nav -->
+<nav id="nav">
+  <a href="#" class="nav-brand">Dimitri Pet Services</a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#booking">Contact</a></li>
+    <li><a href="#journal">Journal</a></li>
+    <li><a href="#find-us">Find Us</a></li>
+  </ul>
+  <a href="tel:0799898197" class="nav-links nav-cta" style="list-style:none">Call Now</a>
+</nav>
+
+<!-- hero -->
+<section id="hero">
+  <img id="hero-img" src="photos/g1.jpg" alt="Happy dog at Dimitri Pet Services Hillcrest" loading="eager">
+  <div class="hero-content">
+    <p class="hero-kicker">Hillcrest · Upper Highway, Durban</p>
+    <h1 class="hero-title">Your pet's<br><span>best care,</span><br>always.</h1>
+    <p class="hero-sub">Grooming, bathing, nail trimming, dog walking and pet sitting — hands-on care by people who genuinely love animals. Hillcrest's most trusted pet services team.</p>
+    <div class="hero-actions">
+      <a href="tel:0799898197" class="btn-primary">📞 Call 079 989 8197</a>
+      <a href="#services" class="btn-ghost">Our Services</a>
+    </div>
+  </div>
+  <div class="hero-badge">
+    <div class="hero-badge-val">4.8★</div>
+    <div class="hero-badge-text">Google Rating<br>31 happy clients</div>
+  </div>
+</section>
+
+<!-- ticker -->
+<div id="ticker">
+  <div class="ticker-inner">
+    <span class="ticker-item">🐾 Dog Grooming</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">🛁 Full Bath & Blow Dry</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">✂️ Nail Trimming</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">🦮 Dog Walking</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">🏠 Pet Sitting</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">😺 Cat Care</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">📍 Hillcrest, Durban</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">⭐ 4.8 Google Rating</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">🐾 Dog Grooming</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">🛁 Full Bath & Blow Dry</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">✂️ Nail Trimming</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">🦮 Dog Walking</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">🏠 Pet Sitting</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">😺 Cat Care</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">📍 Hillcrest, Durban</span><span class="ticker-dot">·</span>
+    <span class="ticker-item">⭐ 4.8 Google Rating</span><span class="ticker-dot">·</span>
+  </div>
+</div>
+
+<!-- about -->
+<section id="about">
+  <div class="inner about-grid">
+    <div class="about-img-wrap reveal">
+      <img src="photos/g4.jpg" alt="Dimitri caring for a pet" loading="lazy">
+      <span class="about-tag">4.8★ · 31 Reviews</span>
+    </div>
+    <div class="reveal">
+      <p class="section-kicker">About Dimitri Pet Services</p>
+      <h2 class="section-title">Hillcrest's<br><span>pet care</span><br>specialists</h2>
+      <p class="section-body">We're a passionate pet care team based in Hillcrest, Upper Highway — and every animal that comes through our doors gets the same level of attention we'd give our own. From full grooming sessions to daily dog walks and overnight sitting, we handle it all with care and consistency.</p>
+      <blockquote class="about-quote">"Pets deserve the same care and respect as every other member of the family."</blockquote>
+      <p class="section-body">31 Google reviews. A 4.8-star rating. And a growing community of Hillcrest pet owners who trust us with their animals every week. That trust means everything to us — and it shows in how we work.</p>
+      <div class="about-stats">
+        <div class="stat"><div class="stat-val">4.8★</div><p class="stat-label">Google Rating</p></div>
+        <div class="stat"><div class="stat-val">31</div><p class="stat-label">Happy Clients</p></div>
+        <div class="stat"><div class="stat-val">5+</div><p class="stat-label">Services Offered</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- services -->
+<section id="services">
+  <div class="inner">
+    <div class="reveal" style="text-align:center;margin-bottom:0">
+      <p class="section-kicker">What We Do</p>
+      <h2 class="section-title">Full-service<br><span>pet care</span></h2>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card reveal">
+        <div class="svc-img"><img src="photos/s1.jpg" alt="Dog grooming service" loading="lazy"></div>
+        <div class="svc-body">
+          <div class="svc-icon">🐕</div>
+          <h3>Dog Grooming & Bath</h3>
+          <p>Full grooming service including a relaxing bath, blow dry, brushing, de-shedding and a breed-appropriate cut. We work at a calm pace — no rush, no stress for your dog.</p>
+          <div class="svc-tags"><span class="svc-tag">Bath</span><span class="svc-tag">Blow Dry</span><span class="svc-tag">Trim</span><span class="svc-tag">De-shed</span></div>
+        </div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-img"><img src="photos/s2.jpg" alt="Nail trimming for pets" loading="lazy"></div>
+        <div class="svc-body">
+          <div class="svc-icon">✂️</div>
+          <h3>Nail Trimming & Ear Cleaning</h3>
+          <p>Quick, safe nail trims done with care — especially important for anxious dogs. We also offer ear cleaning and paw pad care to keep your pet comfortable and healthy between full grooming sessions.</p>
+          <div class="svc-tags"><span class="svc-tag">Nail Trim</span><span class="svc-tag">Ear Clean</span><span class="svc-tag">Paw Care</span></div>
+        </div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-img"><img src="photos/g7.jpg" alt="Dog walking in Hillcrest" loading="lazy"></div>
+        <div class="svc-body">
+          <div class="svc-icon">🦮</div>
+          <h3>Dog Walking</h3>
+          <p>Regular walks keep dogs physically active and mentally stimulated. We offer solo and small-group walks in the Hillcrest/Upper Highway area, with updates sent to you so you always know your dog is safe and happy.</p>
+          <div class="svc-tags"><span class="svc-tag">Solo Walks</span><span class="svc-tag">Group Walks</span><span class="svc-tag">Updates</span></div>
+        </div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-img"><img src="photos/s4.jpg" alt="Pet sitting at home" loading="lazy"></div>
+        <div class="svc-body">
+          <div class="svc-icon">🏠</div>
+          <h3>Pet Sitting & Home Visits</h3>
+          <p>Travelling or working long hours? We come to your home for feeding, playtime, medication administration and company — so your pet stays in their own environment, stress-free. Also available for cats and small animals.</p>
+          <div class="svc-tags"><span class="svc-tag">Dogs</span><span class="svc-tag">Cats</span><span class="svc-tag">Home Visits</span><span class="svc-tag">Overnight</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- gallery -->
+<section id="gallery">
+  <div class="inner">
+    <div class="gallery-header reveal">
+      <p class="section-kicker">Our Pets</p>
+      <h2 class="section-title">Happy animals,<br><span>happy owners</span></h2>
+      <p class="section-body">The animals we care for every week — fluffy, muddy, sleepy, excited and everything in between.</p>
+    </div>
+    <div class="gallery-masonry">
+      <img src="photos/g2.jpg" alt="Dog running happy" loading="lazy">
+      <img src="photos/s3.jpg" alt="Cat being groomed" loading="lazy">
+      <img src="photos/g5.jpg" alt="Puppy portrait" loading="lazy">
+      <img src="photos/s5.jpg" alt="Dog in nature" loading="lazy">
+      <img src="photos/g6.jpg" alt="Two dogs playing" loading="lazy">
+      <img src="photos/s6.jpg" alt="Cat portrait" loading="lazy">
+      <img src="photos/g8.jpg" alt="Dog in grass" loading="lazy">
+      <img src="photos/s7.jpg" alt="Dog being walked" loading="lazy">
+      <img src="photos/g9.jpg" alt="Golden retriever" loading="lazy">
+      <img src="photos/s8.jpg" alt="Happy dog" loading="lazy">
+      <img src="photos/g10.jpg" alt="Cat relaxing" loading="lazy">
+      <img src="photos/s9.jpg" alt="Dog portrait" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- booking -->
+<section id="booking">
+  <div class="inner booking-inner reveal">
+    <p class="section-kicker">Get in Touch</p>
+    <h2 class="section-title">Ready to book?</h2>
+    <p class="section-body">Call or WhatsApp us directly to book a grooming session, arrange a dog walk, or ask about our pet sitting availability.</p>
+    <div class="booking-contact">
+      <div class="b-card">
+        <span>Call or WhatsApp</span>
+        <a href="tel:0799898197">079 989 8197</a>
+      </div>
+    </div>
+    <a href="tel:0799898197" class="btn-primary">📞 Call Dimitri Now</a>
+    <p class="booking-note">Serving Hillcrest · Kloof · Waterfall · Assagay · Upper Highway, KZN</p>
+  </div>
+</section>
+
+<!-- journal -->
+<section id="journal">
+  <div class="inner">
+    <div class="reveal">
+      <p class="section-kicker">Pet Care Journal</p>
+      <h2 class="section-title">Advice from<br><span>people who care</span></h2>
+    </div>
+    <div class="journal-grid">
+      <div class="journal-card reveal" data-article="grooming-frequency">
+        <p class="journal-tag">Grooming</p>
+        <h3 class="journal-title">How Often Should You Groom Your Dog?</h3>
+        <p class="journal-excerpt">Breed, coat type and lifestyle all affect how often your dog needs professional grooming. Here's the practical guide we give every new client.</p>
+        <span class="journal-read">Read article</span>
+      </div>
+      <div class="journal-card reveal" data-article="nail-health">
+        <p class="journal-tag">Health</p>
+        <h3 class="journal-title">Why Nail Length Matters More Than You Think</h3>
+        <p class="journal-excerpt">Overgrown nails affect your dog's posture, gait and joint health. Most owners don't realise how much damage long nails cause over time.</p>
+        <span class="journal-read">Read article</span>
+      </div>
+      <div class="journal-card reveal" data-article="dog-walks">
+        <p class="journal-tag">Wellness</p>
+        <h3 class="journal-title">How Much Exercise Does Your Dog Actually Need?</h3>
+        <p class="journal-excerpt">It depends far more on breed and age than most owners realise. Under-exercised dogs develop anxiety, destructive behaviour and weight problems.</p>
+        <span class="journal-read">Read article</span>
+      </div>
+      <div class="journal-card reveal" data-article="separation-anxiety">
+        <p class="journal-tag">Behaviour</p>
+        <h3 class="journal-title">Pet Sitting vs. Kennels: What's Better for Your Dog?</h3>
+        <p class="journal-excerpt">Kennels work for some dogs and are stressful for others. Here's how to decide which option is right for your pet's personality and needs.</p>
+        <span class="journal-read">Read article</span>
+      </div>
+      <div class="journal-card reveal" data-article="hillcrest-walks">
+        <p class="journal-tag">Local</p>
+        <h3 class="journal-title">Best Dog-Walking Spots in Hillcrest & Upper Highway</h3>
+        <p class="journal-excerpt">The best trails, parks and open spaces within a short drive of Hillcrest — rated for off-lead freedom, terrain and how dog-friendly the area is.</p>
+        <span class="journal-read">Read article</span>
+      </div>
+      <div class="journal-card reveal" data-article="senior-pets">
+        <p class="journal-tag">Care</p>
+        <h3 class="journal-title">Caring for an Older Dog: What Changes and Why</h3>
+        <p class="journal-excerpt">Senior dogs need adjusted grooming routines, gentler handling and more regular check-ins. Here's what to watch for as your dog gets older.</p>
+        <span class="journal-read">Read article</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- article overlays -->
+<div class="article-overlay" id="ao-grooming-frequency">
+  <div class="article-box">
+    <button class="article-close" onclick="closeArt()">✕</button>
+    <p style="font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-light);margin-bottom:.6rem">Grooming</p>
+    <h2>How Often Should You Groom Your Dog?</h2>
+    <p>The answer depends on three things: breed, coat type and lifestyle. Most owners either groom too infrequently (matting, skin issues) or are unsure whether they're overgrooming. Here's the simple breakdown.</p>
+    <p><strong style="color:var(--cream)">Short-coated dogs (Labradors, Boxers, Dachshunds)</strong> need a professional groom every 8–12 weeks. Regular bathing at home between visits keeps them clean. Their coats don't mat but they do shed — a de-shedding treatment every few months makes a real difference.</p>
+    <p><strong style="color:var(--cream)">Medium-coated dogs (Golden Retrievers, Spaniels, Border Collies)</strong> need grooming every 6–8 weeks. Their coats tangle behind the ears and under the legs particularly quickly. Don't wait until you can feel matting — it's painful to remove and can require shaving.</p>
+    <p><strong style="color:var(--cream)">Long-coated or curly dogs (Maltese, Poodles, Bichon Frise)</strong> need professional grooming every 4–6 weeks. These breeds don't shed but their coats grow continuously and mat quickly. Regular brushing at home between visits is essential.</p>
+    <p><strong style="color:var(--cream)">Double-coated dogs (Huskies, German Shepherds, Malamutes)</strong> need grooming every 8 weeks and particularly benefit from a professional de-shedding treatment twice a year. Never shave a double coat — it doesn't reduce shedding and damages the coat permanently.</p>
+    <p>Contact Dimitri Pet Services to discuss the right grooming schedule for your breed — 079 989 8197.</p>
+  </div>
+</div>
+<div class="article-overlay" id="ao-nail-health">
+  <div class="article-box">
+    <button class="article-close" onclick="closeArt()">✕</button>
+    <p style="font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-light);margin-bottom:.6rem">Health</p>
+    <h2>Why Nail Length Matters More Than You Think</h2>
+    <p>Most pet owners think of nail trimming as a cosmetic service. It isn't. Long nails affect every aspect of how your dog moves — and the damage accumulates over years.</p>
+    <p><strong style="color:var(--cream)">The posture problem.</strong> When nails are too long, they push against hard floors and force your dog's feet to splay outward. To compensate, the dog shifts its weight backward. Over months and years, this creates pressure on the joints, hips and spine — and is a contributor to premature arthritis in older dogs.</p>
+    <p><strong style="color:var(--cream)">The pain problem.</strong> Long nails hit the ground with every step. On hard floors, this constant pressure sends a signal up through the nail into the quick — the nerve and blood vessel inside. It's a low-grade, constant discomfort that many owners never see directly but that affects their dog's mood and activity levels.</p>
+    <p><strong style="color:var(--cream)">The snagging problem.</strong> Long nails snag on carpet, grass and their own bedding. This can lead to torn nails — one of the most painful injuries a dog can experience, and one that often requires veterinary treatment.</p>
+    <p><strong style="color:var(--cream)">How often?</strong> Most dogs need their nails trimmed every 4–6 weeks. Active dogs who walk on hard surfaces regularly may need less frequent trimming. Dogs who spend most time indoors or on grass may need more.</p>
+    <p>We include nail trimming in all our full grooming packages and offer standalone nail trim appointments — call 079 989 8197.</p>
+  </div>
+</div>
+<div class="article-overlay" id="ao-dog-walks">
+  <div class="article-box">
+    <button class="article-close" onclick="closeArt()">✕</button>
+    <p style="font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-light);margin-bottom:.6rem">Wellness</p>
+    <h2>How Much Exercise Does Your Dog Actually Need?</h2>
+    <p>The generic advice of "30 minutes a day" is almost useless — a Border Collie and a Basset Hound have completely different needs. Here's how to think about it properly.</p>
+    <p><strong style="color:var(--cream)">High-energy working breeds</strong> (Huskies, Border Collies, German Shepherds, Vizslas) need 1.5–2 hours of vigorous exercise per day. A short walk simply isn't enough. These dogs need to run, fetch, swim or work. Without adequate exercise, they develop anxiety, destructive behaviour and become very hard to manage.</p>
+    <p><strong style="color:var(--cream)">Medium-energy dogs</strong> (Labradors, Golden Retrievers, Spaniels, Standard Poodles) do well with 45–60 minutes of brisk walking per day, split into two sessions. They enjoy swimming, fetch and off-lead time in safe areas.</p>
+    <p><strong style="color:var(--cream)">Lower-energy breeds</strong> (Bulldogs, Basset Hounds, Shih Tzus, older dogs) are happy with 20–30 minutes a day in two short sessions. In KZN's heat, these breeds especially should walk in the early morning or evening only.</p>
+    <p><strong style="color:var(--cream)">Puppies</strong> need less exercise than adult dogs — not more. The rule of thumb is 5 minutes per month of age, twice per day. Too much exercise on developing joints causes long-term damage.</p>
+    <p>We offer solo and small group dog walks in Hillcrest and the Upper Highway area. WhatsApp 079 989 8197 to arrange regular walks.</p>
+  </div>
+</div>
+<div class="article-overlay" id="ao-separation-anxiety">
+  <div class="article-box">
+    <button class="article-close" onclick="closeArt()">✕</button>
+    <p style="font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-light);margin-bottom:.6rem">Behaviour</p>
+    <h2>Pet Sitting vs. Kennels: What's Better for Your Dog?</h2>
+    <p>Both have a place — but they're not interchangeable. The right choice depends entirely on your dog's personality, and most owners make the decision based on cost or convenience rather than what actually suits their animal.</p>
+    <p><strong style="color:var(--cream)">When kennels work well:</strong> confident, sociable dogs who don't show separation anxiety tend to do fine in kennels. The constant activity and company of other dogs can actually be enriching for an extroverted, resilient dog. A dog who has stayed at a kennel before and returned happy is usually fine going back.</p>
+    <p><strong style="color:var(--cream)">When kennels cause stress:</strong> anxious dogs, dogs who have never experienced kennels, senior dogs, dogs with health conditions, and dogs who are closely bonded to one person all tend to struggle with kennel environments. The noise, unfamiliar smells, strange animals and loss of routine combine to create a stressful experience that can take weeks to recover from behaviorally.</p>
+    <p><strong style="color:var(--cream)">What pet sitting offers:</strong> your dog stays in their own environment, on their own schedule, with someone they meet and can smell a few times before you leave. The transition is gradual and familiar. For anxious or older dogs, this difference is significant.</p>
+    <p>We offer home visit pet sitting in Hillcrest and the Upper Highway area. Introductory visits are always arranged before your travel dates — call 079 989 8197.</p>
+  </div>
+</div>
+<div class="article-overlay" id="ao-hillcrest-walks">
+  <div class="article-box">
+    <button class="article-close" onclick="closeArt()">✕</button>
+    <p style="font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-light);margin-bottom:.6rem">Local</p>
+    <h2>Best Dog-Walking Spots in Hillcrest & Upper Highway</h2>
+    <p>One of the best things about living in the Upper Highway area is the access to green space. Here's where we take our clients' dogs most often.</p>
+    <p><strong style="color:var(--cream)">Krantzkloof Nature Reserve</strong> — The crown jewel of Upper Highway walking. Numerous trails ranging from easy valley walks to more challenging ridge hikes. Dogs on leash only in some sections, but the off-lead areas on certain trails are beautiful and safe. Spectacular views into the gorge. Watch for baboons.</p>
+    <p><strong style="color:var(--cream)">Hillcrest Open Space/Firebreaks</strong> — The open grassland and firebreak areas around the Hillcrest Bowl and surrounds offer good space for energetic dogs. Informal, easy access, good for early morning walks before the heat kicks in.</p>
+    <p><strong style="color:var(--cream)">Assagay trails</strong> — Quiet residential roads and some farm-adjacent paths make Assagay excellent for longer relaxed walks. Lower traffic and large properties mean more breathing room. Good for dogs who don't do well around traffic noise.</p>
+    <p><strong style="color:var(--cream)">Waterfall Greenways</strong> — The newer residential areas have some well-maintained open spaces and paths. Excellent for early morning walks and good underfoot conditions year-round.</p>
+    <p>All our dog walking routes are chosen for safety, shade and off-lead options where appropriate. Call 079 989 8197 to arrange regular walks.</p>
+  </div>
+</div>
+<div class="article-overlay" id="ao-senior-pets">
+  <div class="article-box">
+    <button class="article-close" onclick="closeArt()">✕</button>
+    <p style="font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-light);margin-bottom:.6rem">Care</p>
+    <h2>Caring for an Older Dog: What Changes and Why</h2>
+    <p>Dogs are considered senior from around 7–10 years depending on their size. Large breeds age faster — a Great Dane at 7 is elderly; a small Terrier at 7 is barely middle-aged. Understanding what changes, and why, helps you give your older dog the best possible quality of life.</p>
+    <p><strong style="color:var(--cream)">Grooming adjustments.</strong> Senior dogs often have drier, thinner skin and may have lumps, bumps or arthritic joints that make standard grooming positions uncomfortable. A good groomer adapts to this — working around tender spots, using gentler products, and taking more breaks if needed. We always ask about health changes before grooming older clients.</p>
+    <p><strong style="color:var(--cream)">Exercise changes.</strong> Older dogs still need movement, but shorter, more frequent, lower-impact sessions are better than long exhausting walks. Swimming is excellent for arthritic joints. Hard concrete and uneven terrain become harder on aging bodies — grass surfaces are preferable.</p>
+    <p><strong style="color:var(--cream)">Nail trimming becomes more important.</strong> As dogs age and move less, their nails wear down less naturally. Combined with the posture changes that often come with arthritis, overgrown nails in senior dogs are a real welfare concern. Monthly nail trims are reasonable for many older dogs.</p>
+    <p><strong style="color:var(--cream)">Routine matters more.</strong> Older dogs adapt poorly to sudden changes. If you need to travel, starting home visit pet sitting well before your trip (so your dog meets and recognises the sitter) reduces stress significantly.</p>
+    <p>We work gently and patiently with senior dogs — call Dimitri at 079 989 8197.</p>
+  </div>
+</div>
+
+<!-- faq -->
+<section id="faq">
+  <div class="inner faq-inner">
+    <div class="reveal" style="text-align:center">
+      <p class="section-kicker">FAQs</p>
+      <h2 class="section-title">Your questions,<br><span>answered</span></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span>What areas do you service?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a"><p class="faq-a-inner">We're based in Hillcrest and primarily service the Upper Highway area — including Hillcrest, Kloof, Waterfall, Assagay, Gillitts and surrounding neighbourhoods. Contact us at 079 989 8197 to confirm availability in your area.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span>What's included in a full grooming session?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a"><p class="faq-a-inner">A full groom includes a bath using quality shampoo suited to your dog's coat, blow dry, brushing, a breed-appropriate cut or tidy, nail trimming, ear cleaning and paw pad check. We'll discuss what your dog needs at the time of booking.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span>Can you handle anxious or reactive dogs?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a"><p class="faq-a-inner">Yes — we have experience with dogs who are nervous around grooming, handling or new environments. We work at a slow pace, take breaks when needed, and never force a dog into a stressful position. If your dog has had bad experiences before, please let us know upfront so we can prepare properly.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span>How do I book a dog walk?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a"><p class="faq-a-inner">Call or WhatsApp us on 079 989 8197. For regular walks, we'll arrange a meet-and-greet with you and your dog first. We offer solo walks (one dog, full attention) and small group walks (2–3 dogs max). You'll receive a message when we pick up and drop off your dog.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span>Do you do home visits for cats?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a"><p class="faq-a-inner">Yes. We offer home visit pet sitting for cats — feeding, fresh water, litter box, playtime and general company. Most cats prefer staying at home while you travel, and we're experienced with cats across all temperaments, including those who hide at first.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span>How far in advance should I book?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a"><p class="faq-a-inner">For grooming: 1–2 weeks is usually enough. For peak holiday periods (December, Easter, school holidays) we recommend booking 3–4 weeks in advance as availability fills quickly. For regular weekly dog walks, contact us to discuss your schedule and we'll fit you into our route.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span>What do I need to bring for grooming?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a"><p class="faq-a-inner">Just your dog. Make sure vaccinations are up to date (we may ask for proof for first-time clients). If your dog has any medical conditions, allergies or is on any medication, please let us know before the appointment. A familiar toy or blanket can help nervous dogs settle.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span>Where are you located?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a"><p class="faq-a-inner">We're based in Hillcrest in the Upper Highway area of Durban, KwaZulu-Natal. Contact us on 079 989 8197 for our exact address and directions. We're easy to reach from Kloof, Waterfall, Assagay and surrounding areas.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- find us -->
+<section id="find-us">
+  <div class="inner">
+    <div class="reveal" style="text-align:center;margin-bottom:3rem">
+      <p class="section-kicker">Find Us</p>
+      <h2 class="section-title">Hillcrest,<br><span>Upper Highway</span></h2>
+    </div>
+    <div class="findus-grid">
+      <div class="reveal">
+        <h3 style="font-family:var(--font-h);font-size:1.2rem;font-weight:400;text-transform:uppercase;letter-spacing:.04em;color:var(--cream);margin-bottom:1.4rem">Hours & Contact</h3>
+        <ul class="hours-list">
+          <li><span class="day">Monday – Friday</span><span class="time">07:00 – 17:00</span></li>
+          <li><span class="day">Saturday</span><span class="time">08:00 – 14:00</span></li>
+          <li><span class="day">Sunday</span><span class="time">By Arrangement</span></li>
+        </ul>
+        <div class="contact-items">
+          <div class="contact-item"><span>📞</span><div><strong style="color:var(--cream);display:block;font-size:.85rem">Call or WhatsApp</strong><a href="tel:0799898197" style="color:var(--sage-light)">079 989 8197</a></div></div>
+          <div class="contact-item"><span>📍</span><div><strong style="color:var(--cream);display:block;font-size:.85rem">Area</strong>Hillcrest / Upper Highway, Durban, KZN</div></div>
+          <div class="contact-item"><span>🐾</span><div><strong style="color:var(--cream);display:block;font-size:.85rem">Serving</strong>Hillcrest · Kloof · Waterfall · Assagay · Gillitts</div></div>
+          <div class="contact-item"><span>⭐</span><div><strong style="color:var(--cream);display:block;font-size:.85rem">Google Rating</strong>4.8★ from 31 reviews</div></div>
+        </div>
+      </div>
+      <div class="map-wrap reveal">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56946.4!2d30.7749!3d-29.7782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef6f9b0f0a0a0a0%3A0x0!2sHillcrest%2C+KwaZulu-Natal!5e0!3m2!1sen!2sza!4v1718870000000" allowfullscreen loading="lazy" title="Hillcrest Upper Highway location"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- footer -->
+<footer>
+  <div class="footer-brand">Dimitri Pet Services</div>
+  <ul class="footer-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#journal">Journal</a></li>
+    <li><a href="#find-us">Find Us</a></li>
+  </ul>
+  <p class="footer-legal">© 2025 Dimitri Pet Services · Hillcrest, KZN · 079 989 8197</p>
+</footer>
+
+<!-- chatbot -->
+<button id="cb-btn" aria-label="Chat with Dimitri Pet Services">
+  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="var(--dark)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+</button>
+<div id="cb-panel" role="dialog" aria-label="Dimitri Pet Services chat">
+  <div id="cb-head">
+    <div id="cb-avatar">🐾</div>
+    <div id="cb-head-info">
+      <p class="cb-name">Dimitri Pet Services</p>
+      <p class="cb-status">🟢 Hillcrest · Upper Highway</p>
+    </div>
+  </div>
+  <div id="cb-msgs"></div>
+  <div id="cb-typing"><span></span><span></span><span></span></div>
+  <div id="cb-quick">
+    <button class="cb-q">🐕 Grooming</button>
+    <button class="cb-q">🦮 Dog Walks</button>
+    <button class="cb-q">🏠 Pet Sitting</button>
+    <button class="cb-q">🕒 Hours</button>
+    <button class="cb-q">📍 Area</button>
+  </div>
+  <form id="cb-form">
+    <input id="cb-input" type="text" placeholder="Ask about our services..." autocomplete="off">
+    <button id="cb-send" type="submit" aria-label="Send">
+      <svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+    </button>
+  </form>
+</div>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>60);},{passive:true});
+})();
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}});},{threshold:.12});
+  els.forEach(function(el){io.observe(el);});
+})();
+var currentArt=null;
+document.querySelectorAll('.journal-card[data-article]').forEach(function(c){
+  c.addEventListener('click',function(){var id='ao-'+c.dataset.article;var el=document.getElementById(id);if(el){currentArt=el;el.classList.add('open');}});
+});
+function closeArt(){if(currentArt){currentArt.classList.remove('open');currentArt=null;}}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeArt();});
+document.querySelectorAll('.article-overlay').forEach(function(o){o.addEventListener('click',function(e){if(e.target===o)closeArt();});});
+function toggleFaq(el){var item=el.closest('.faq-item');var wasOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');});if(!wasOpen)item.classList.add('open');}
+(function(){
+  var btn=document.getElementById('cb-btn'),panel=document.getElementById('cb-panel'),msgs=document.getElementById('cb-msgs'),input=document.getElementById('cb-input'),form=document.getElementById('cb-form'),typing=document.getElementById('cb-typing'),opened=false;
+  var KB=[
+    {k:['groom','bath','wash','shampoo','cut','trim','blowdry','blow','shed','deshed'],r:'We offer full dog grooming — bath, blow dry, brushing, breed cut, nail trim and ear clean. We\'re experienced with all coat types including anxious dogs. Call or WhatsApp to book: <a href="tel:0799898197" style="color:var(--sage-light)">079 989 8197</a> 🐕'},
+    {k:['walk','exercise','run','jog','daily'],r:'We offer solo and small group dog walks in Hillcrest and the Upper Highway area 🦮 Great for dogs who need more movement than their owners can provide. Call <a href="tel:0799898197" style="color:var(--sage-light)">079 989 8197</a> to discuss your schedule!'},
+    {k:['sit','sitting','visit','holiday','travel','vacation','away','board','kennel','overnight'],r:'We offer home visit pet sitting and overnight care — your pet stays in their own environment while you travel. Available for dogs, cats and small animals. WhatsApp <a href="tel:0799898197" style="color:var(--sage-light)">079 989 8197</a> to discuss your dates 🏠'},
+    {k:['nail','claw','paw','trim','clip'],r:'Nail trimming is included in all full grooming sessions, and we offer standalone nail trim appointments too. Regular trimming keeps your dog healthy and comfortable — call <a href="tel:0799898197" style="color:var(--sage-light)">079 989 8197</a> ✂️'},
+    {k:['cat','feline','kitten'],r:'We provide home visit care for cats while you\'re away — feeding, fresh water, litter and playtime. Most cats prefer staying home rather than going to a cattery. WhatsApp us: <a href="tel:0799898197" style="color:var(--sage-light)">079 989 8197</a> 😺'},
+    {k:['anxious','nervous','reactive','scared','afraid','bad','past'],r:'We have plenty of experience with anxious and reactive dogs 🐾 We work slowly and patiently, never force anything, and take breaks when needed. Let us know about your dog\'s history when you book: <a href="tel:0799898197" style="color:var(--sage-light)">079 989 8197</a>'},
+    {k:['price','cost','how much','rate','charge','fee'],r:'Pricing depends on your dog\'s breed, size and coat condition. Call or WhatsApp us for a quote: <a href="tel:0799898197" style="color:var(--sage-light)">079 989 8197</a> — we\'ll give you an honest estimate based on what your pet needs.'},
+    {k:['book','appoint','schedule','reserve','slot'],r:'Call or WhatsApp to book: <a href="tel:0799898197" style="color:var(--sage-light)">079 989 8197</a> 📱 For grooming 1–2 weeks notice is usually fine. Booking earlier helps for school holidays and December.'},
+    {k:['hour','open','time','when','monday','saturday','sunday'],r:'We\'re open Mon–Fri 7am–5pm and Saturday 8am–2pm. Sundays by arrangement. Call or WhatsApp: <a href="tel:0799898197" style="color:var(--sage-light)">079 989 8197</a> 🕒'},
+    {k:['where','location','address','hillcrest','kloof','waterfall','area','serve','cover','reach'],r:'We\'re based in Hillcrest and service the Upper Highway area — Hillcrest, Kloof, Waterfall, Assagay, Gillitts and surrounds. Call to confirm your area: <a href="tel:0799898197" style="color:var(--sage-light)">079 989 8197</a> 📍'},
+  ];
+  var DEFAULT='Hey there! 🐾 Welcome to Dimitri Pet Services — Hillcrest\'s trusted pet care team. Grooming, dog walking, pet sitting and more. What can we help you with?';
+  function addMsg(t,r){var d=document.createElement('div');d.className='cb-msg '+r;d.innerHTML=t;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;}
+  function match(text){var t=text.toLowerCase();for(var i=0;i<KB.length;i++){for(var j=0;j<KB[i].k.length;j++){if(t.indexOf(KB[i].k[j])!==-1)return KB[i].r;}}return DEFAULT;}
+  function botReply(text){typing.classList.add('show');setTimeout(function(){typing.classList.remove('show');addMsg(match(text),'bot');},700+Math.random()*500);}
+  function send(text){text=text.trim();if(!text)return;addMsg(text,'user');input.value='';botReply(text);}
+  form.addEventListener('submit',function(e){e.preventDefault();send(input.value);});
+  document.querySelectorAll('.cb-q').forEach(function(q){q.addEventListener('click',function(){send(q.textContent.replace(/[^\w\s]/g,'').trim());});});
+  btn.addEventListener('click',function(){
+    opened=!opened;panel.classList.toggle('open',opened);
+    if(opened&&msgs.children.length===0){setTimeout(function(){addMsg('Hey there! 🐾 Welcome to <strong>Dimitri Pet Services</strong> — Hillcrest\'s trusted pet care specialists. Grooming, walking, sitting and more. How can we help?','bot');},300);}
+    if(opened)setTimeout(function(){input.focus();},350);
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&opened){opened=false;panel.classList.remove('open');}});
+})();
+</script>
+</body>
+</html>
