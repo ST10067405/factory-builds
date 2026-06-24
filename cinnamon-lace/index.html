@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cinnamon & Lace | Floral Studio · Windermere, Durban</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --forest: #1B2E1E;
+  --sage:   #6B8F72;
+  --sage-light: #9AB59E;
+  --rose:   #C4776E;
+  --blush:  #E8C5C0;
+  --champagne: #D4B08C;
+  --cream:  #F8F2EC;
+  --bark:   #8C7A6B;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--forest);overflow-x:hidden}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;height:72px;background:rgba(248,242,236,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(196,119,110,.15)}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:500;letter-spacing:.04em;color:var(--forest);text-decoration:none}
+.nav-logo span{color:var(--rose)}
+.nav-links{display:flex;gap:2.2rem;list-style:none}
+.nav-links a{font-size:.82rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--bark);text-decoration:none;transition:color .25s}
+.nav-links a:hover{color:var(--rose)}
+.nav-cta{background:var(--rose);color:#fff;padding:.55rem 1.4rem;border-radius:2px;font-size:.8rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:background .25s}
+.nav-cta:hover{background:var(--forest)}
+
+/* ── HERO ── */
+.hero{height:100vh;min-height:600px;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;margin-top:0}
+.hero-bg{position:absolute;inset:0;background:url('photos/s1.jpg') center/cover no-repeat}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(27,46,30,.55) 0%,rgba(27,46,30,.35) 60%,rgba(27,46,30,.72) 100%)}
+.hero-content{position:relative;z-index:1;color:#fff;max-width:780px;padding:0 2rem}
+.hero-tag{font-size:.72rem;font-weight:400;letter-spacing:.25em;text-transform:uppercase;color:var(--blush);margin-bottom:1.4rem;display:block}
+.hero-content h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:300;line-height:1.1;letter-spacing:.02em;margin-bottom:.6rem}
+.hero-content h1 em{font-style:italic;color:var(--blush)}
+.hero-sub{font-size:1rem;font-weight:300;color:rgba(255,255,255,.82);margin:1.2rem 0 2.4rem;line-height:1.65}
+.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-primary{background:var(--rose);color:#fff;padding:.75rem 2rem;border-radius:2px;font-size:.82rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:background .25s,transform .2s}
+.btn-primary:hover{background:#a85e56;transform:translateY(-2px)}
+.btn-ghost{border:1px solid rgba(255,255,255,.6);color:#fff;padding:.75rem 2rem;border-radius:2px;font-size:.82rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:all .25s}
+.btn-ghost:hover{background:rgba(255,255,255,.12);border-color:#fff}
+.hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;color:rgba(255,255,255,.55);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase}
+.scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,transparent,rgba(255,255,255,.55));animation:scrollPulse 2s ease-in-out infinite}
+@keyframes scrollPulse{0%,100%{opacity:.3;transform:scaleY(.6)}50%{opacity:1;transform:scaleY(1)}}
+
+/* ── SERVICES STRIP ── */
+.strip{background:var(--forest);padding:3rem 5vw;display:grid;grid-template-columns:repeat(4,1fr);gap:1px}
+.strip-item{text-align:center;padding:2rem 1rem;border-right:1px solid rgba(255,255,255,.08)}
+.strip-item:last-child{border-right:none}
+.strip-icon{font-size:1.6rem;display:block;margin-bottom:.8rem}
+.strip-item h3{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:400;color:#fff;letter-spacing:.05em;margin-bottom:.4rem}
+.strip-item p{font-size:.78rem;color:rgba(255,255,255,.55);line-height:1.5}
+
+/* ── ABOUT ── */
+.about{padding:7rem 5vw;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;max-width:1200px;margin:0 auto}
+.about-img{position:relative}
+.about-img img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:2px}
+.about-img::before{content:'';position:absolute;top:-16px;left:-16px;width:100%;height:100%;border:1px solid var(--blush);border-radius:2px;z-index:-1}
+.about-tag{font-size:.72rem;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:var(--rose);margin-bottom:1rem;display:block}
+.about-text h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:300;line-height:1.25;color:var(--forest);margin-bottom:1.4rem}
+.about-text h2 em{font-style:italic;color:var(--sage)}
+.about-text p{font-size:.9rem;color:var(--bark);line-height:1.85;margin-bottom:1rem}
+.about-sig{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;color:var(--rose);margin-top:1.5rem;display:block}
+
+/* ── SERVICE CARDS ── */
+.services{padding:5rem 5vw;background:#fff}
+.services-header{text-align:center;margin-bottom:3.5rem}
+.section-tag{font-size:.72rem;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:var(--rose);display:block;margin-bottom:.8rem}
+.services-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:300;color:var(--forest)}
+.services-header h2 em{font-style:italic;color:var(--sage)}
+.cards-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;max-width:1300px;margin:0 auto}
+.scard{position:relative;overflow:hidden;border-radius:2px;cursor:default}
+.scard-img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;transition:transform .6s ease}
+.scard:hover .scard-img{transform:scale(1.05)}
+.scard-overlay{position:absolute;bottom:0;left:0;right:0;padding:1.8rem 1.4rem;background:linear-gradient(to top,rgba(27,46,30,.9) 0%,transparent 100%)}
+.scard-label{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--blush);display:block;margin-bottom:.4rem}
+.scard h3{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:400;color:#fff;line-height:1.3;margin-bottom:.35rem}
+.scard p{font-size:.75rem;color:rgba(255,255,255,.65);line-height:1.5}
+
+/* ── GALLERY ── */
+.gallery{padding:5rem 5vw}
+.gallery-header{text-align:center;margin-bottom:3rem}
+.gallery-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:300;color:var(--forest)}
+.masonry{columns:4;gap:1rem}
+.masonry-item{break-inside:avoid;margin-bottom:1rem;overflow:hidden;border-radius:2px}
+.masonry-item img{width:100%;display:block;transition:transform .5s ease}
+.masonry-item:hover img{transform:scale(1.04)}
+
+/* ── CTA BANNER ── */
+.cta-banner{position:relative;padding:6rem 5vw;text-align:center;overflow:hidden;background:var(--forest)}
+.cta-wm{position:absolute;font-size:18rem;color:rgba(255,255,255,.03);font-family:'Cormorant Garamond',serif;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;white-space:nowrap;user-select:none}
+.cta-banner .section-tag{color:var(--blush)}
+.cta-banner h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;color:#fff;margin:.8rem 0 1rem}
+.cta-banner h2 em{font-style:italic;color:var(--blush)}
+.cta-banner p{font-size:.92rem;color:rgba(255,255,255,.65);margin-bottom:2.2rem;max-width:500px;margin-left:auto;margin-right:auto}
+.btn-champagne{background:var(--champagne);color:var(--forest);padding:.8rem 2.2rem;border-radius:2px;font-size:.82rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;display:inline-block;transition:all .25s}
+.btn-champagne:hover{background:#c09a76;transform:translateY(-2px)}
+
+/* ── JOURNAL ── */
+.journal{padding:5rem 5vw;background:#fff}
+.journal-header{text-align:center;margin-bottom:3rem}
+.journal-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:300;color:var(--forest)}
+.journal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem;max-width:1200px;margin:0 auto}
+.jcard{background:var(--cream);border-radius:2px;overflow:hidden;cursor:pointer;transition:transform .3s,box-shadow .3s}
+.jcard:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(27,46,30,.1)}
+.jcard-img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.jcard-body{padding:1.4rem}
+.jcard-tag{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--rose);display:block;margin-bottom:.5rem}
+.jcard h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:400;color:var(--forest);line-height:1.35;margin-bottom:.5rem}
+.jcard p{font-size:.8rem;color:var(--bark);line-height:1.65}
+.jcard-read{display:inline-flex;align-items:center;gap:.4rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--rose);margin-top:.9rem;font-weight:500}
+.jcard-read::after{content:'→'}
+
+/* ── ARTICLE OVERLAY ── */
+.article-overlay{display:none;position:fixed;inset:0;background:rgba(27,46,30,.65);z-index:2000;align-items:center;justify-content:center;padding:2rem}
+.article-overlay.open{display:flex}
+.article-box{background:#fff;border-radius:2px;max-width:680px;width:100%;max-height:88vh;overflow-y:auto;padding:3rem;position:relative}
+.article-close{position:absolute;top:1.2rem;right:1.4rem;background:none;border:none;font-size:1.6rem;cursor:pointer;color:var(--bark);line-height:1}
+.article-tag{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--rose);display:block;margin-bottom:.8rem}
+.article-box h2{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:400;color:var(--forest);line-height:1.3;margin-bottom:1.2rem}
+.article-box p{font-size:.88rem;color:var(--bark);line-height:1.85;margin-bottom:1rem}
+.article-box h4{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--forest);margin:1.4rem 0 .5rem}
+
+/* ── FAQ ── */
+.faq{padding:5rem 5vw;max-width:820px;margin:0 auto}
+.faq-header{text-align:center;margin-bottom:3rem}
+.faq-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:300;color:var(--forest)}
+.faq-item{border-bottom:1px solid rgba(27,46,30,.1)}
+.faq-q{width:100%;background:none;border:none;display:flex;justify-content:space-between;align-items:center;padding:1.3rem 0;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.92rem;font-weight:500;color:var(--forest);text-align:left}
+.faq-icon{font-size:1.2rem;color:var(--rose);flex-shrink:0;margin-left:1rem;transition:transform .3s}
+.faq-a{max-height:0;overflow:hidden;font-size:.85rem;color:var(--bark);line-height:1.8;transition:max-height .4s ease,padding .3s}
+.faq-item.open .faq-a{max-height:300px;padding-bottom:1.2rem}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+
+/* ── FIND US ── */
+.find-us{padding:5rem 5vw;background:var(--forest);display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;max-width:1200px;margin:0 auto}
+.find-label{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--blush);display:block;margin-bottom:.6rem}
+.find-us h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;color:#fff;margin-bottom:2rem;line-height:1.3}
+.find-us h2 em{font-style:italic;color:var(--blush)}
+.hours-list{list-style:none;display:flex;flex-direction:column;gap:.75rem;margin-bottom:2rem}
+.hours-list li{display:flex;justify-content:space-between;font-size:.85rem;color:rgba(255,255,255,.75);border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:.75rem}
+.hours-list li span:first-child{color:rgba(255,255,255,.5);font-size:.78rem;letter-spacing:.05em}
+.hours-list li span:last-child{color:#fff;font-weight:500}
+.find-address{font-size:.88rem;color:rgba(255,255,255,.65);line-height:1.8;margin-bottom:1.4rem}
+.find-address strong{color:var(--blush);display:block;margin-bottom:.3rem}
+.find-links{display:flex;gap:1rem;flex-wrap:wrap}
+.find-link{padding:.55rem 1.3rem;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.8);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:all .25s}
+.find-link:hover{background:var(--rose);border-color:var(--rose);color:#fff}
+.find-map{border-radius:2px;overflow:hidden;height:320px;border:1px solid rgba(255,255,255,.1)}
+.find-map iframe{width:100%;height:100%;border:none;filter:grayscale(30%)}
+
+/* ── FOOTER ── */
+footer{background:#111a12;padding:2.5rem 5vw;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:rgba(255,255,255,.55);letter-spacing:.05em}
+.footer-copy{font-size:.75rem;color:rgba(255,255,255,.35)}
+.footer-links{display:flex;gap:1.5rem}
+.footer-links a{font-size:.75rem;color:rgba(255,255,255,.4);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;transition:color .2s}
+.footer-links a:hover{color:var(--blush)}
+
+/* ── CHATBOT ── */
+.chat-bubble{position:fixed;bottom:1.8rem;right:1.8rem;width:52px;height:52px;border-radius:50%;background:var(--rose);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.4rem;box-shadow:0 4px 20px rgba(196,119,110,.4);z-index:900;transition:transform .2s}
+.chat-bubble:hover{transform:scale(1.08)}
+.chat-window{display:none;position:fixed;bottom:5rem;right:1.8rem;width:320px;background:#fff;border-radius:8px;box-shadow:0 12px 48px rgba(27,46,30,.18);z-index:900;overflow:hidden;flex-direction:column}
+.chat-window.open{display:flex}
+.chat-header{background:var(--forest);padding:1rem 1.2rem;display:flex;align-items:center;gap:.75rem}
+.chat-avatar{width:36px;height:36px;border-radius:50%;background:var(--rose);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.chat-header-info h4{color:#fff;font-size:.85rem;font-weight:500}
+.chat-header-info p{color:rgba(255,255,255,.55);font-size:.72rem}
+.chat-messages{padding:1rem;display:flex;flex-direction:column;gap:.75rem;max-height:260px;overflow-y:auto}
+.msg{max-width:82%;padding:.65rem .9rem;border-radius:12px;font-size:.82rem;line-height:1.5}
+.msg.bot{background:var(--cream);color:var(--forest);align-self:flex-start;border-bottom-left-radius:3px}
+.msg.user{background:var(--rose);color:#fff;align-self:flex-end;border-bottom-right-radius:3px}
+.chat-typing{display:none;padding:.65rem .9rem;background:var(--cream);border-radius:12px;border-bottom-left-radius:3px;align-self:flex-start;font-size:.75rem;color:var(--bark)}
+.chat-pills{padding:.5rem 1rem;display:flex;flex-wrap:wrap;gap:.4rem}
+.pill{background:var(--cream);border:1px solid rgba(196,119,110,.25);color:var(--rose);font-size:.72rem;padding:.3rem .7rem;border-radius:20px;cursor:pointer;transition:all .2s}
+.pill:hover{background:var(--rose);color:#fff}
+.chat-input-row{display:flex;gap:.5rem;padding:.8rem 1rem;border-top:1px solid rgba(27,46,30,.08)}
+.chat-input{flex:1;border:1px solid rgba(27,46,30,.15);border-radius:20px;padding:.45rem .9rem;font-size:.8rem;font-family:'DM Sans',sans-serif;outline:none}
+.chat-input:focus{border-color:var(--rose)}
+.chat-send{background:var(--rose);border:none;border-radius:50%;width:32px;height:32px;cursor:pointer;color:#fff;font-size:.95rem;display:flex;align-items:center;justify-content:center}
+
+/* ── REVEAL ── */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+@media(max-width:900px){
+  .strip{grid-template-columns:repeat(2,1fr)}
+  .about{grid-template-columns:1fr;gap:2.5rem}
+  .cards-grid{grid-template-columns:repeat(2,1fr)}
+  .masonry{columns:2}
+  .journal-grid{grid-template-columns:1fr}
+  .find-us{grid-template-columns:1fr}
+  .nav-links{display:none}
+}
+@media(max-width:600px){
+  .cards-grid{grid-template-columns:1fr}
+  .masonry{columns:1}
+  .strip{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Cinnamon <span>&</span> Lace</a>
+  <ul class="nav-links">
+    <li><a href="#gallery">Our Work</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#journal">Journal</a></li>
+    <li><a href="#find-us">Find Us</a></li>
+  </ul>
+  <a href="https://wa.me/27662194009" class="nav-cta">Get a Quote</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <span class="hero-tag">Windermere, Durban · Luxury Floral Studio</span>
+    <h1>Where Flowers <em>Tell<br>Your Story.</em></h1>
+    <p class="hero-sub">Hand-crafted florals for weddings, events & everyday moments.<br>Designed with intention. Bloomed with love.</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/27662194009" class="btn-primary">Book a Consultation</a>
+      <a href="#gallery" class="btn-ghost">View Gallery</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="scroll-line"></div>Scroll</div>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+  <div class="strip-item">
+    <span class="strip-icon">💍</span>
+    <h3>Wedding Florals</h3>
+    <p>Bridal bouquets, aisle décor & reception centrepieces</p>
+  </div>
+  <div class="strip-item">
+    <span class="strip-icon">✨</span>
+    <h3>Event Styling</h3>
+    <p>Intimate dinners to large-scale corporate functions</p>
+  </div>
+  <div class="strip-item">
+    <span class="strip-icon">🎁</span>
+    <h3>Gift Arrangements</h3>
+    <p>Same-day gifting available across select Durban areas</p>
+  </div>
+  <div class="strip-item">
+    <span class="strip-icon">🌿</span>
+    <h3>Floral Workshops</h3>
+    <p>Seasonal hands-on sessions — no experience needed</p>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-img reveal">
+    <img src="photos/g4.jpg" alt="Cinnamon & Lace floral studio">
+  </div>
+  <div class="about-text reveal">
+    <span class="about-tag">Our Story</span>
+    <h2>Flowers as an <em>art form.<br>Love</em> as the medium.</h2>
+    <p>Cinnamon & Lace was born from a passion for the extraordinary — for flowers that don't just fill a room, but change it. Based at our studio in Windermere, Durban, we create bespoke floral arrangements for life's most meaningful moments.</p>
+    <p>From intimate bridal bouquets to sprawling event installations, each piece is hand-crafted with seasonal blooms, fresh from the market. No two arrangements are ever the same — because no two moments ever are.</p>
+    <p>We work closely with every client to understand the feeling they want to evoke, then design something that goes beyond expectation. WhatsApp us to start your floral story.</p>
+    <span class="about-sig">— The Cinnamon & Lace Studio</span>
+  </div>
+</section>
+
+<!-- SERVICE CARDS -->
+<section class="services" id="services">
+  <div class="services-header">
+    <span class="section-tag">What We Do</span>
+    <h2>Florals for Every <em>Chapter</em></h2>
+  </div>
+  <div class="cards-grid">
+    <div class="scard reveal">
+      <img class="scard-img" src="photos/s2.jpg" alt="Bridal bouquet">
+      <div class="scard-overlay">
+        <span class="scard-label">Signature Service</span>
+        <h3>Bridal Bouquets</h3>
+        <p>Custom-designed for your palette, season & vibe</p>
+      </div>
+    </div>
+    <div class="scard reveal">
+      <img class="scard-img" src="photos/s4.jpg" alt="Table centrepiece">
+      <div class="scard-overlay">
+        <span class="scard-label">Events & Functions</span>
+        <h3>Table Centrepieces</h3>
+        <p>Lush, layered arrangements that anchor the room</p>
+      </div>
+    </div>
+    <div class="scard reveal">
+      <img class="scard-img" src="photos/s3.jpg" alt="Gift bouquet">
+      <div class="scard-overlay">
+        <span class="scard-label">Gifting</span>
+        <h3>Wrapped Bouquets</h3>
+        <p>Beautifully packaged, same-day Durban delivery</p>
+      </div>
+    </div>
+    <div class="scard reveal">
+      <img class="scard-img" src="photos/s5.jpg" alt="Corporate florals">
+      <div class="scard-overlay">
+        <span class="scard-label">Corporate</span>
+        <h3>Office & Event Styling</h3>
+        <p>Weekly arrangements & bespoke event florals</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="gallery-header">
+    <span class="section-tag">The Studio Portfolio</span>
+    <h2>Made With <em>Hands & Heart</em></h2>
+  </div>
+  <div class="masonry">
+    <div class="masonry-item reveal"><img src="photos/g1.jpg" alt="Floral arrangement" loading="lazy"></div>
+    <div class="masonry-item reveal"><img src="photos/g2.jpg" alt="Pink roses" loading="lazy"></div>
+    <div class="masonry-item reveal"><img src="photos/g3.jpg" alt="Wedding bouquet" loading="lazy"></div>
+    <div class="masonry-item reveal"><img src="photos/s6.jpg" alt="Floral detail" loading="lazy"></div>
+    <div class="masonry-item reveal"><img src="photos/g5.jpg" alt="Peonies" loading="lazy"></div>
+    <div class="masonry-item reveal"><img src="photos/g6.jpg" alt="Flower arrangement" loading="lazy"></div>
+    <div class="masonry-item reveal"><img src="photos/g7.jpg" alt="Flowers in vase" loading="lazy"></div>
+    <div class="masonry-item reveal"><img src="photos/s7.jpg" alt="Boutonniere" loading="lazy"></div>
+    <div class="masonry-item reveal"><img src="photos/g8.jpg" alt="Florals" loading="lazy"></div>
+    <div class="masonry-item reveal"><img src="photos/g9.jpg" alt="Flower close-up" loading="lazy"></div>
+    <div class="masonry-item reveal"><img src="photos/s8.jpg" alt="Bouquet" loading="lazy"></div>
+    <div class="masonry-item reveal"><img src="photos/g10.jpg" alt="Event florals" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <div class="cta-wm">✿</div>
+  <span class="section-tag">Let's Create Together</span>
+  <h2>Ready to Make Something <em>Beautiful?</em></h2>
+  <p>Whether it's a wedding, a dinner party, a gift, or just because — we'd love to hear about your vision.</p>
+  <a href="https://wa.me/27662194009" class="btn-champagne">WhatsApp Us</a>
+</section>
+
+<!-- JOURNAL -->
+<section class="journal" id="journal">
+  <div class="journal-header">
+    <span class="section-tag">Floral Notes</span>
+    <h2>From Our <em>Studio Journal</em></h2>
+  </div>
+  <div class="journal-grid">
+    <div class="jcard reveal" onclick="openArticle('a1')">
+      <img class="jcard-img" src="photos/s9.jpg" alt="Wedding flowers" loading="lazy">
+      <div class="jcard-body">
+        <span class="jcard-tag">Weddings</span>
+        <h3>How to Choose Your Wedding Flowers</h3>
+        <p>From season to palette — a guide to making floral decisions that feel like you.</p>
+        <span class="jcard-read">Read More</span>
+      </div>
+    </div>
+    <div class="jcard reveal" onclick="openArticle('a2')">
+      <img class="jcard-img" src="photos/s10.jpg" alt="Seasonal flowers" loading="lazy">
+      <div class="jcard-body">
+        <span class="jcard-tag">Seasonal</span>
+        <h3>What's Blooming in Durban Right Now</h3>
+        <p>A seasonal guide to the freshest, most beautiful stems available in KZN.</p>
+        <span class="jcard-read">Read More</span>
+      </div>
+    </div>
+    <div class="jcard reveal" onclick="openArticle('a3')">
+      <img class="jcard-img" src="photos/g1.jpg" alt="Flower symbolism" loading="lazy">
+      <div class="jcard-body">
+        <span class="jcard-tag">The Language of Flowers</span>
+        <h3>What Your Favourite Bloom Really Means</h3>
+        <p>Roses, peonies, ranunculus — every flower carries a story. Learn the language.</p>
+        <span class="jcard-read">Read More</span>
+      </div>
+    </div>
+    <div class="jcard reveal" onclick="openArticle('a4')">
+      <img class="jcard-img" src="photos/g3.jpg" alt="Fresh bouquet" loading="lazy">
+      <div class="jcard-body">
+        <span class="jcard-tag">Care Tips</span>
+        <h3>5 Tips to Keep Your Bouquet Fresh Longer</h3>
+        <p>Simple, practical advice to make your blooms last days longer than expected.</p>
+        <span class="jcard-read">Read More</span>
+      </div>
+    </div>
+    <div class="jcard reveal" onclick="openArticle('a5')">
+      <img class="jcard-img" src="photos/s5.jpg" alt="Event florals" loading="lazy">
+      <div class="jcard-body">
+        <span class="jcard-tag">Trends</span>
+        <h3>Trending Floral Styles for 2026 Events</h3>
+        <p>Wild, abundant, and deeply personal — here's what's defining event florals this year.</p>
+        <span class="jcard-read">Read More</span>
+      </div>
+    </div>
+    <div class="jcard reveal" onclick="openArticle('a6')">
+      <img class="jcard-img" src="photos/g6.jpg" alt="Studio behind the scenes" loading="lazy">
+      <div class="jcard-body">
+        <span class="jcard-tag">Behind the Blooms</span>
+        <h3>A Day in Our Windermere Studio</h3>
+        <p>Early starts, market runs, and the quiet magic of arranging stems before the world wakes up.</p>
+        <span class="jcard-read">Read More</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLE OVERLAYS -->
+<div class="article-overlay" id="a1">
+  <div class="article-box">
+    <button class="article-close" onclick="closeArticle('a1')">×</button>
+    <span class="article-tag">Weddings</span>
+    <h2>How to Choose Your Wedding Flowers</h2>
+    <p>Your wedding flowers are one of the most personal elements of your day — they'll appear in every photograph, frame every memory, and travel with you down the aisle. Getting them right is about more than picking a colour.</p>
+    <h4>Start With the Season</h4>
+    <p>Flowers that are in season are fresher, more available, and more affordable. In Durban's subtropical climate, we have blooms available year-round — but summer brings proteas and tropical varieties, while autumn gifts us with lush peonies and garden roses.</p>
+    <h4>Build Around One Hero Bloom</h4>
+    <p>Choose one statement flower that speaks to you, then build complementary texture and colour around it. Peonies with eucalyptus. Roses with dried pampas grass. Ranunculus with soft ruscus. The hero does the talking; the supporting cast sets the scene.</p>
+    <h4>Consider the Venue First</h4>
+    <p>A garden ceremony calls for loose, romantic arrangements. A sleek ballroom suits sculptural, architectural flowers. Your venue's architecture, light and colour palette should guide the floral direction before your own preferences come in.</p>
+    <p>Book a consultation with us at least 3–6 months before your date. WhatsApp us on 066 219 4009 to start the conversation.</p>
+  </div>
+</div>
+
+<div class="article-overlay" id="a2">
+  <div class="article-box">
+    <button class="article-close" onclick="closeArticle('a2')">×</button>
+    <span class="article-tag">Seasonal</span>
+    <h2>What's Blooming in Durban Right Now</h2>
+    <p>One of the great joys of working with fresh flowers is that the palette changes with the seasons. Durban's warm, humid climate means something beautiful is always available — but what's at peak freshness shifts month to month.</p>
+    <h4>Summer (Nov–Feb)</h4>
+    <p>This is the season of tropical abundance. Strelitzias, ginger flowers, anthurium, and vivid proteas thrive in the heat. Colours run bold — deep reds, burnt oranges, electric yellows. Hydrangeas are available and lush.</p>
+    <h4>Autumn & Winter (Mar–Aug)</h4>
+    <p>As temperatures ease, so do the palettes. Roses, peonies, lisianthus and ranunculus come into their own. Soft blush, dusty mauve and warm champagne tones dominate. This is peak wedding season for a reason.</p>
+    <h4>Spring (Sep–Oct)</h4>
+    <p>The market explodes with tulips, anemones and garden carnations. Greenery is lush and varied. Spring weddings and events are some of our favourites to design — the mix of options is extraordinary.</p>
+    <p>Ask us what's freshest when you book. We design around what's truly exceptional that week, not what's on a fixed menu.</p>
+  </div>
+</div>
+
+<div class="article-overlay" id="a3">
+  <div class="article-box">
+    <button class="article-close" onclick="closeArticle('a3')">×</button>
+    <span class="article-tag">The Language of Flowers</span>
+    <h2>What Your Favourite Bloom Really Means</h2>
+    <p>Flowers have carried meaning for centuries — a language called floriography that allowed people to communicate feelings that words couldn't hold. When you choose a bloom, you're choosing a message.</p>
+    <h4>The Rose</h4>
+    <p>Red for passionate love. White for purity and new beginnings. Blush for gratitude and admiration. Pink for joy. Choosing a rose is choosing the shade of feeling you want to send.</p>
+    <h4>The Peony</h4>
+    <p>In Eastern tradition, peonies represent prosperity and good fortune. In the West, they're the flower of romance and bashfulness. We think they're simply the most luxurious bloom in existence.</p>
+    <h4>The Protea</h4>
+    <p>South Africa's national flower speaks of diversity, change, and courage. It's bold, architectural, and unmistakably us — we love including South African varieties in local events.</p>
+    <h4>Lavender</h4>
+    <p>Calm, serenity, devotion. Lavender is perfect for spaces where you want to soften the energy — a boardroom arrangement, a bedroom posy, or a late-afternoon wedding ceremony.</p>
+    <p>When we design for you, we think about meaning as much as aesthetics. Your flowers should feel intentional.</p>
+  </div>
+</div>
+
+<div class="article-overlay" id="a4">
+  <div class="article-box">
+    <button class="article-close" onclick="closeArticle('a4')">×</button>
+    <span class="article-tag">Care Tips</span>
+    <h2>5 Tips to Keep Your Bouquet Fresh Longer</h2>
+    <p>Fresh flowers are a living thing — with a little care, you can extend their life significantly. Here's what we tell every client when they leave with an arrangement.</p>
+    <h4>1. Cut the Stems Immediately</h4>
+    <p>As soon as you get home, recut each stem at a 45-degree angle underwater. This removes the air bubble that forms and allows the flower to drink properly. Repeat every two days.</p>
+    <h4>2. Use the Right Water Temperature</h4>
+    <p>Most flowers prefer lukewarm water — not cold, not hot. The exception is bulb flowers like tulips, which prefer cold. Add a sachet of flower food if one was provided.</p>
+    <h4>3. Keep Away From Heat & Direct Sun</h4>
+    <p>The enemy of fresh flowers is warmth. Avoid placing arrangements near sunny windows, above heat vents, or next to fruit bowls (ethylene gas from ripening fruit accelerates wilting).</p>
+    <h4>4. Remove Dying Leaves & Petals</h4>
+    <p>As individual blooms or leaves begin to fade, remove them. They introduce bacteria into the water that shortens the life of everything around them.</p>
+    <h4>5. Mist Delicate Petals</h4>
+    <p>For peonies, roses and ranunculus, a light daily mist on the petals helps them stay open and hydrated. Don't overdo it — just a fine spray each morning.</p>
+  </div>
+</div>
+
+<div class="article-overlay" id="a5">
+  <div class="article-box">
+    <button class="article-close" onclick="closeArticle('a5')">×</button>
+    <span class="article-tag">Trends</span>
+    <h2>Trending Floral Styles for 2026 Events</h2>
+    <p>The world of event florals is always moving — and 2026 has brought some of the most interesting directions we've seen in years. Here's what's defining the aesthetic right now.</p>
+    <h4>Abundance, Not Minimalism</h4>
+    <p>The tight, spherical arrangements of the 2010s have given way to wild, abundant designs that feel like they've just been cut from a garden. Overflowing, asymmetrical, layered — the look is intentionally imperfect.</p>
+    <h4>Earth Tones & Moody Palettes</h4>
+    <p>Burnt terracotta, deep burgundy, chocolate, and dusty sage have overtaken the blush-and-white aesthetic. Events feel grounded, warm, and cinematic. We're loving it.</p>
+    <h4>Dried & Fresh Mixed</h4>
+    <p>Pampas grass, dried proteas, and preserved eucalyptus mixed with fresh blooms adds texture and longevity to arrangements. The contrast creates something timeless.</p>
+    <h4>Structural, Architectural Centrepieces</h4>
+    <p>Tall, dramatic arrangements that create theatre at the dinner table — sculptural branches, cascading greenery, dramatic focal blooms. The centrepiece as conversation piece.</p>
+    <p>Want to incorporate any of these styles into your next event? Let's talk. WhatsApp us on 066 219 4009.</p>
+  </div>
+</div>
+
+<div class="article-overlay" id="a6">
+  <div class="article-box">
+    <button class="article-close" onclick="closeArticle('a6')">×</button>
+    <span class="article-tag">Behind the Blooms</span>
+    <h2>A Day in Our Windermere Studio</h2>
+    <p>Most people see the finished arrangement. Few see what goes into it. Here's a glimpse into our studio — the early starts, the decisions, the details that make Cinnamon & Lace what it is.</p>
+    <h4>4:30am — The Market Run</h4>
+    <p>The flower market in Durban opens before dawn. We arrive early to get first pick of the freshest stems — roses still tightly budded, peonies just beginning to open, greenery still dewy from overnight cold storage.</p>
+    <h4>7:00am — Studio Setup</h4>
+    <p>Back at the studio, we sort, recut and condition every stem before it's arranged. Flowers need time to rest in water after transport. We use this time to plan the day's designs.</p>
+    <h4>9:00am — Arranging Begins</h4>
+    <p>The best part. Each arrangement is built by hand — no floristry foam, no shortcuts. We work intuitively, adjusting height, direction and texture as we go.</p>
+    <h4>12:00pm — Client Pickups & Deliveries</h4>
+    <p>Fresh arrangements go out to clients across Durban. There's something deeply satisfying about delivering flowers — the reaction on someone's face when they open the door is worth every early morning.</p>
+    <p>Want to be part of a studio workshop day? Follow us on Instagram @cinnamon_lace for upcoming dates.</p>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="faq-header">
+    <span class="section-tag">Questions</span>
+    <h2>Things People <em>Ask Us</em></h2>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-q" onclick="toggleFaq(this)">What areas do you deliver to? <span class="faq-icon">+</span></button>
+    <div class="faq-a">We deliver to most Durban areas including Windermere, Glenwood, Berea, Umhlanga, Morningside, Westville, Hillcrest and surrounding suburbs. Same-day delivery is available for orders placed before 10am. Contact us for areas outside this range.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q" onclick="toggleFaq(this)">How far in advance should I book for a wedding? <span class="faq-icon">+</span></button>
+    <div class="faq-a">We recommend booking 3–6 months before your wedding date. Peak season (April–September) books up fast. We do occasionally accept last-minute bookings for smaller orders — WhatsApp us and we'll do our best.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q" onclick="toggleFaq(this)">Do you offer same-day gift arrangements? <span class="faq-icon">+</span></button>
+    <div class="faq-a">Yes! Order before 10am Monday–Saturday and we can usually arrange same-day delivery within select Durban suburbs. WhatsApp us on 066 219 4009 to confirm availability and place your order.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q" onclick="toggleFaq(this)">Can I customise the flowers in my arrangement? <span class="faq-icon">+</span></button>
+    <div class="faq-a">Absolutely — almost everything we do is custom. We work with you on colour palette, stems, size and style. The only limit is seasonal availability, which we'll always advise you on upfront.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q" onclick="toggleFaq(this)">Do you run floral workshops? <span class="faq-icon">+</span></button>
+    <div class="faq-a">Yes! We run seasonal workshops where you'll learn to build your own hand-tied bouquet from scratch. No experience needed — just a love of flowers. Follow us on Instagram @cinnamon_lace for upcoming dates and bookings.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q" onclick="toggleFaq(this)">What's the pricing like? <span class="faq-icon">+</span></button>
+    <div class="faq-a">Gift bouquets start from R250. Table arrangements from R450. Wedding packages are custom-quoted based on your brief — we work across all budgets and will always be transparent about what's achievable. WhatsApp us for a personalised quote.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q" onclick="toggleFaq(this)">Where do you source your flowers? <span class="faq-icon">+</span></button>
+    <div class="faq-a">We buy from the Durban fresh flower market several times per week, and from selected local growers for seasonal specialties. We prioritise freshness and quality above everything — which means we only design with what's at its best.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q" onclick="toggleFaq(this)">Do you offer weekly or recurring arrangements? <span class="faq-icon">+</span></button>
+    <div class="faq-a">Yes — we offer weekly and fortnightly subscriptions for homes and offices. It's a wonderful way to keep fresh blooms in your space without the hassle of ordering each time. Contact us to set up a plan that works for you.</div>
+  </div>
+</section>
+
+<!-- FIND US -->
+<section style="background:var(--forest);padding:5rem 5vw" id="find-us">
+  <div class="find-us" style="padding:0">
+    <div>
+      <span class="find-label">Visit the Studio</span>
+      <h2>Come find us in <em>Windermere.</em></h2>
+      <div class="find-address">
+        <strong>Cinnamon & Lace Floral Studio</strong>
+        222 Lilian Ngoyi Road<br>Windermere, Durban, 4001
+      </div>
+      <ul class="hours-list">
+        <li><span>Monday – Friday</span><span>8:00am – 5:00pm</span></li>
+        <li><span>Saturday</span><span>8:00am – 2:00pm</span></li>
+        <li><span>Sunday</span><span>By appointment only</span></li>
+      </ul>
+      <div class="find-links">
+        <a href="https://wa.me/27662194009" class="find-link">WhatsApp Us</a>
+        <a href="https://www.instagram.com/cinnamon_lace/" class="find-link">@cinnamon_lace</a>
+      </div>
+    </div>
+    <div class="find-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3460.05!2d30.995!3d-29.855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDUxJzE4LjAiUyAzMMKwNTknNDIuMCJF!5e0!3m2!1sen!2sza!4v1700000000000!5m2!1sen!2sza" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">Cinnamon & Lace · Floral Studio</span>
+  <span class="footer-copy">© 2026 Cinnamon & Lace. All rights reserved.</span>
+  <div class="footer-links">
+    <a href="https://www.instagram.com/cinnamon_lace/">Instagram</a>
+    <a href="https://wa.me/27662194009">WhatsApp</a>
+  </div>
+</footer>
+
+<!-- CHATBOT -->
+<button class="chat-bubble" onclick="toggleChat()">✿</button>
+<div class="chat-window" id="chatWindow">
+  <div class="chat-header">
+    <div class="chat-avatar">✿</div>
+    <div class="chat-header-info">
+      <h4>Cinnamon & Lace</h4>
+      <p>Usually replies instantly</p>
+    </div>
+  </div>
+  <div class="chat-messages" id="chatMessages">
+    <div class="msg bot">Hi there! 🌸 Welcome to Cinnamon & Lace. Are you planning a wedding, looking for a gift, or something else? I'm happy to help!</div>
+  </div>
+  <div class="chat-typing" id="chatTyping">typing…</div>
+  <div class="chat-pills" id="chatPills">
+    <button class="pill" onclick="sendPill('💍 Weddings')">💍 Weddings</button>
+    <button class="pill" onclick="sendPill('🎉 Events')">🎉 Events</button>
+    <button class="pill" onclick="sendPill('🎁 Gifting')">🎁 Gifting</button>
+    <button class="pill" onclick="sendPill('💼 Corporate')">💼 Corporate</button>
+    <button class="pill" onclick="sendPill('🕒 Hours')">🕒 Hours</button>
+  </div>
+  <div class="chat-input-row">
+    <input class="chat-input" id="chatInput" placeholder="Ask us anything…" onkeydown="if(event.key==='Enter')sendMsg()">
+    <button class="chat-send" onclick="sendMsg()">→</button>
+  </div>
+</div>
+
+<script>
+// CHATBOT
+var kb=[
+  {k:['wedding','bridal','bride','bouquet','aisle','ceremony'],r:'We create beautiful custom bridal bouquets, buttonholes, aisle arrangements and reception centrepieces — all designed just for you. We recommend booking 3–6 months ahead. WhatsApp us on 066 219 4009 to start planning your vision! 💍'},
+  {k:['event','function','party','birthday','dinner','table','centrepiece'],r:'From intimate dinner parties to large corporate functions, we style every event with fresh florals tailored to your theme and budget. Table centrepieces from R450. WhatsApp us on 066 219 4009 for a quote! 🌿'},
+  {k:['gift','deliver','delivery','same day','birthday','anniversary'],r:'We do gorgeous wrapped bouquets and same-day Durban delivery for orders before 10am (Monday–Saturday). Gift arrangements from R250. WhatsApp 066 219 4009 to order! 🎁'},
+  {k:['corporate','office','weekly','subscription','recurring'],r:'We offer weekly and fortnightly floral subscriptions for offices and homes — fresh blooms on a schedule that suits you. Contact us on 066 219 4009 to set it up! 💼'},
+  {k:['workshop','class','lesson','learn','course'],r:'Yes! We run seasonal floral workshops where you\'ll make your own hand-tied bouquet. No experience needed. Follow @cinnamon_lace on Instagram for upcoming dates 🌸'},
+  {k:['price','cost','how much','pricing','rates','minimum'],r:'Gift bouquets from R250 · Table arrangements from R450 · Wedding packages quoted custom. WhatsApp us on 066 219 4009 for a personalised quote — we work across all budgets! 💛'},
+  {k:['hour','open','time','close','when'],r:'We\'re open Monday–Friday 8am–5pm and Saturday 8am–2pm. Sundays by appointment. WhatsApp us anytime — we check messages regularly! ⏰'},
+  {k:['where','location','address','find','directions'],r:'Find us at 222 Lilian Ngoyi Road, Windermere, Durban. We\'re in the heart of Windermere — easy to spot! 📍'},
+  {k:['instagram','social','follow','photos'],r:'Find our portfolio on Instagram @cinnamon_lace — 19K+ followers and growing! We post daily work, behind-the-scenes and upcoming workshops there 🌸'},
+];
+function getBotReply(t){
+  var l=t.toLowerCase();
+  for(var i=0;i<kb.length;i++){
+    for(var j=0;j<kb[i].k.length;j++){
+      if(l.indexOf(kb[i].k[j])>-1)return kb[i].r;
+    }
+  }
+  return 'Thanks for your message! For the fastest response, WhatsApp us directly on 066 219 4009 or DM us on Instagram @cinnamon_lace. We\'d love to help! 🌸';
+}
+function toggleChat(){
+  document.getElementById('chatWindow').classList.toggle('open');
+}
+function addMsg(txt,type){
+  var m=document.createElement('div');
+  m.className='msg '+type;
+  m.textContent=txt;
+  var msgs=document.getElementById('chatMessages');
+  msgs.appendChild(m);
+  msgs.scrollTop=msgs.scrollHeight;
+}
+function sendMsg(){
+  var inp=document.getElementById('chatInput');
+  var t=inp.value.trim();
+  if(!t)return;
+  inp.value='';
+  addMsg(t,'user');
+  var ty=document.getElementById('chatTyping');
+  ty.style.display='block';
+  setTimeout(function(){
+    ty.style.display='none';
+    addMsg(getBotReply(t),'bot');
+  },900);
+}
+function sendPill(t){
+  addMsg(t,'user');
+  var ty=document.getElementById('chatTyping');
+  ty.style.display='block';
+  setTimeout(function(){
+    ty.style.display='none';
+    addMsg(getBotReply(t),'bot');
+  },900);
+}
+
+// FAQ
+function toggleFaq(btn){
+  var item=btn.parentElement;
+  item.classList.toggle('open');
+}
+
+// ARTICLES
+function openArticle(id){document.getElementById(id).classList.add('open')}
+function closeArticle(id){document.getElementById(id).classList.remove('open')}
+document.querySelectorAll('.article-overlay').forEach(function(o){
+  o.addEventListener('click',function(e){if(e.target===o)o.classList.remove('open')});
+});
+
+// REVEAL
+var obs=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el)});
+
+// PETAL DRIFT EFFECT
+(function(){
+  var lx=0,ly=0;
+  var colors=['#C4776E','#E8C5C0','#D4B08C','#9AB59E','#F8F2EC'];
+  document.addEventListener('mousemove',function(e){
+    var dx=e.clientX-lx,dy=e.clientY-ly;
+    if(dx*dx+dy*dy<1400)return;
+    lx=e.clientX;ly=e.clientY;
+    var el=document.createElement('div');
+    var sz=Math.random()*10+7;
+    var color=colors[Math.floor(Math.random()*colors.length)];
+    var rot=Math.random()*360;
+    var driftX=(Math.random()-.5)*70;
+    var driftY=Math.random()*90+50;
+    el.style.cssText='position:fixed;left:'+(e.clientX-sz/2)+'px;top:'+(e.clientY-sz/2)+'px;width:'+sz+'px;height:'+(sz*1.6)+'px;border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;background:'+color+';pointer-events:none;z-index:9999;opacity:.65;transform:rotate('+rot+'deg);transition:opacity 2.2s ease,transform 2.2s ease';
+    document.body.appendChild(el);
+    requestAnimationFrame(function(){requestAnimationFrame(function(){
+      el.style.opacity='0';
+      el.style.transform='rotate('+(rot+130)+'deg) translate('+driftX+'px,'+driftY+'px)';
+    });});
+    setTimeout(function(){if(el.parentNode)el.parentNode.removeChild(el);},2400);
+  },{passive:true});
+})();
+</script>
+</body>
+</html>
