@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Moto Cafe | Umhlanga Rocks, Durban</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FAF1E2;
+  --cream-deep:#F2E1C4;
+  --card:#FFFCF5;
+  --border:#E5D2AE;
+  --espresso:#2C1B12;
+  --coffee:#5C4330;
+  --terracotta:#C8703F;
+  --terracotta-deep:#A85730;
+  --latte:#E8C9A0;
+  --gold:#B8895A;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--coffee);font-family:'Inter',sans-serif;font-size:16px;line-height:1.65;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Fraunces',serif;font-weight:500;color:var(--espresso)}
+em{font-style:italic;color:var(--terracotta)}
+a{text-decoration:none;color:inherit}
+img{display:block;width:100%;height:100%;object-fit:cover}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;width:100%;z-index:900;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 5vw;background:transparent;transition:background .4s,backdrop-filter .4s}
+.nav.scrolled{background:rgba(250,241,226,.94);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--border)}
+.nav-logo{font-family:'Fraunces',serif;font-size:1.35rem;font-weight:500;letter-spacing:.01em;color:var(--espresso)}
+.nav-logo span{color:var(--terracotta)}
+.nav-links{display:flex;gap:2.4rem;list-style:none;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--coffee)}
+.nav-links a:hover{color:var(--terracotta)}
+.nav-cta{background:var(--terracotta);border:1px solid var(--terracotta);color:#fff;font-family:'Inter',sans-serif;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;padding:.55rem 1.5rem;cursor:pointer;transition:all .25s}
+.nav-cta:hover{background:var(--terracotta-deep);border-color:var(--terracotta-deep)}
+
+/* HERO */
+.hero{position:relative;height:100vh;min-height:600px;display:flex;align-items:flex-end;overflow:hidden}
+.hero-img{position:absolute;inset:0;z-index:0}
+.hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(165deg,rgba(44,27,18,.55) 0%,rgba(44,27,18,.25) 45%,rgba(44,27,18,.88) 100%)}
+.hero-content{position:relative;z-index:2;padding:0 5vw 7rem;max-width:700px}
+.hero-kicker{display:block;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--latte);margin-bottom:1.2rem}
+.hero h1{font-size:clamp(3rem,7vw,5.5rem);line-height:1.08;color:#FAF1E2;margin-bottom:1.4rem}
+.hero h1 em{color:var(--terracotta)}
+.hero p{font-size:1.05rem;color:#E8DAC4;max-width:480px;margin-bottom:2.5rem}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{background:var(--terracotta);color:#fff;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;padding:.75rem 2rem;border:none;cursor:pointer;transition:background .25s}
+.btn-primary:hover{background:var(--terracotta-deep)}
+.btn-ghost{border:1px solid rgba(250,241,226,.45);color:#FAF1E2;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;padding:.75rem 2rem;transition:border-color .25s}
+.btn-ghost:hover{border-color:#FAF1E2}
+.hero-scroll{position:absolute;bottom:2rem;right:5vw;z-index:2;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:#E8DAC4;display:flex;flex-direction:column;align-items:center;gap:.5rem}
+.hero-scroll::before{content:'';display:block;width:1px;height:50px;background:linear-gradient(var(--terracotta),transparent)}
+
+/* STRIP */
+.strip{display:grid;grid-template-columns:repeat(4,1fr)}
+.strip-item{padding:2rem 1.8rem;background:var(--card);border-right:1px solid var(--border)}
+.strip-item:last-child{border-right:none}
+.strip-num{font-size:.7rem;letter-spacing:.15em;color:var(--terracotta);margin-bottom:.7rem}
+.strip-item h3{font-size:1rem;font-weight:500;margin-bottom:.4rem}
+.strip-item p{font-size:.82rem;color:var(--coffee);line-height:1.5}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:1fr 1fr;min-height:600px}
+.about-img{overflow:hidden;position:relative}
+.about-text{background:var(--cream-deep);padding:5rem 6vw;display:flex;flex-direction:column;justify-content:center}
+.section-tag{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--terracotta);display:block;margin-bottom:1.2rem}
+.about-text h2{font-size:clamp(2rem,3.5vw,3rem);line-height:1.2;margin-bottom:1.8rem}
+.about-text p{font-size:.95rem;color:var(--coffee);margin-bottom:1rem;max-width:480px}
+.about-sig{font-family:'Fraunces',serif;font-style:italic;color:var(--terracotta-deep);font-size:1.1rem;margin-top:1.5rem}
+
+/* SERVICES */
+.services{padding:5rem 5vw;background:var(--cream)}
+.services-header{text-align:center;margin-bottom:3.5rem}
+.services-header h2{font-size:clamp(2rem,3.5vw,2.8rem);margin-top:.8rem}
+.cards-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border)}
+.scard{position:relative;aspect-ratio:3/4;overflow:hidden;cursor:pointer;background:var(--card)}
+.scard-img{position:absolute;inset:0;transition:transform .6s ease}
+.scard:hover .scard-img{transform:scale(1.07)}
+.scard-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(44,27,18,.92) 0%,rgba(44,27,18,.15) 60%);display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem}
+.scard-label{font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:var(--terracotta);margin-bottom:.4rem}
+.scard h3{font-size:1.1rem;color:#FAF1E2;margin-bottom:.3rem}
+.scard p{font-size:.78rem;color:#E8DAC4}
+
+/* GALLERY */
+.gallery{padding:5rem 5vw;background:var(--cream-deep)}
+.gallery-header{text-align:center;margin-bottom:3rem}
+.gallery-header h2{font-size:clamp(2rem,3.5vw,2.8rem);margin-top:.8rem}
+.masonry{columns:3;column-gap:6px}
+.masonry-item{break-inside:avoid;margin-bottom:6px;overflow:hidden;background:var(--card)}
+.masonry-item img{width:100%;display:block;transition:transform .5s ease}
+.masonry-item:hover img{transform:scale(1.04)}
+
+/* CTA BANNER */
+.cta-banner{background:var(--terracotta);padding:4rem 5vw;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.cta-banner h2{font-size:clamp(1.8rem,3vw,2.5rem);color:#fff;font-style:italic}
+.cta-banner a{background:#fff;color:var(--terracotta-deep);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;padding:.8rem 2.2rem;font-family:'Inter',sans-serif;transition:opacity .2s;white-space:nowrap}
+.cta-banner a:hover{opacity:.88}
+
+/* JOURNAL */
+.journal{padding:5rem 5vw;background:var(--cream)}
+.journal-header{text-align:center;margin-bottom:3rem}
+.journal-header h2{font-size:clamp(2rem,3.5vw,2.8rem);margin-top:.8rem}
+.journal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border)}
+.jcard{background:var(--card);cursor:pointer;transition:background .25s}
+.jcard:hover{background:#FFF8EC}
+.jcard-img{aspect-ratio:16/9;overflow:hidden}
+.jcard-img img{transition:transform .5s ease}
+.jcard:hover .jcard-img img{transform:scale(1.05)}
+.jcard-body{padding:1.5rem}
+.jcard-tag{font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:var(--terracotta);margin-bottom:.5rem}
+.jcard h3{font-size:1.05rem;margin-bottom:.5rem;line-height:1.35}
+.jcard p{font-size:.8rem;color:var(--coffee);line-height:1.5;margin-bottom:1rem}
+.read-more{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--terracotta-deep)}
+
+/* ARTICLE OVERLAYS */
+.article-overlay{display:none;position:fixed;inset:0;background:rgba(28,17,11,.82);z-index:9000;overflow-y:auto;padding:2rem 1rem}
+.article-overlay.open{display:flex;align-items:flex-start;justify-content:center}
+.article-box{background:var(--card);max-width:720px;width:100%;padding:3rem;position:relative;margin:auto}
+.article-box h2{font-size:1.8rem;margin-bottom:1.2rem}
+.article-box p{font-size:.9rem;color:var(--coffee);line-height:1.75;margin-bottom:.8rem}
+.article-close{position:absolute;top:1rem;right:1.2rem;font-size:1.5rem;color:var(--coffee);cursor:pointer;line-height:1;background:none;border:none}
+.article-close:hover{color:var(--espresso)}
+
+/* FAQ */
+.faq{padding:5rem 5vw;background:var(--cream-deep)}
+.faq-header{text-align:center;margin-bottom:3rem}
+.faq-header h2{font-size:clamp(2rem,3.5vw,2.8rem);margin-top:.8rem}
+.faq-list{max-width:780px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--border);padding:1.2rem 0}
+.faq-q{display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-size:.95rem;color:var(--espresso);font-family:'Inter',sans-serif}
+.faq-q span{font-size:1.3rem;color:var(--terracotta);transition:transform .3s}
+.faq-q.open span{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;font-size:.88rem;color:var(--coffee);line-height:1.7}
+.faq-a.open{max-height:300px}
+.faq-a p{padding:.7rem 0}
+
+/* FIND US */
+.find-us-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.find-us-text .section-tag{margin-bottom:1rem}
+.find-us-text h2{font-size:clamp(1.8rem,3vw,2.8rem);margin-bottom:2rem;line-height:1.2}
+.find-info{margin-bottom:1.5rem}
+.find-info strong{display:block;color:var(--espresso);font-size:.88rem;margin-bottom:.3rem}
+.find-info p,.find-info a{font-size:.85rem;color:var(--coffee)}
+.hours-row{display:flex;justify-content:space-between;border-bottom:1px solid var(--border);padding:.6rem 0;font-size:.85rem;color:var(--coffee)}
+.hours-row span:first-child{color:var(--espresso)}
+.find-btns{display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap}
+.find-btn{border:1px solid var(--border);color:var(--coffee);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;padding:.6rem 1.4rem;transition:all .25s}
+.find-btn:hover{border-color:var(--terracotta);color:var(--terracotta-deep)}
+.find-map{border-radius:2px;overflow:hidden;aspect-ratio:4/3;background:var(--card)}
+.find-map iframe{width:100%;height:100%;border:none;filter:sepia(.25) saturate(1.1);opacity:.92}
+
+/* FOOTER */
+footer{background:var(--espresso);border-top:1px solid #3A271A;padding:2rem 5vw;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-logo{font-family:'Fraunces',serif;font-size:1rem;color:var(--latte)}
+.footer-logo span{color:var(--terracotta)}
+footer p{font-size:.78rem;color:#7A5A40}
+.footer-links{display:flex;gap:2rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--latte)}
+.footer-links a:hover{color:#fff}
+
+/* CHATBOT */
+.chat-btn{position:fixed;bottom:2rem;right:2rem;z-index:800;width:52px;height:52px;border-radius:50%;background:var(--terracotta);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(200,112,63,.45);transition:transform .2s}
+.chat-btn:hover{transform:scale(1.08)}
+.chat-btn svg{width:24px;height:24px;fill:#fff}
+.chat-window{display:none;position:fixed;bottom:6rem;right:2rem;z-index:800;width:340px;background:var(--card);border:1px solid var(--border);box-shadow:0 8px 40px rgba(44,27,18,.3);flex-direction:column}
+.chat-window.open{display:flex}
+.chat-header{background:var(--terracotta);padding:1rem 1.2rem;display:flex;justify-content:space-between;align-items:center}
+.chat-header span{font-size:.88rem;color:#fff;font-weight:500}
+.chat-header button{background:none;border:none;color:rgba(255,255,255,.75);font-size:1.2rem;cursor:pointer;line-height:1}
+.chat-messages{padding:1rem;height:220px;overflow-y:auto;display:flex;flex-direction:column;gap:.6rem}
+.chat-msg{padding:.6rem .9rem;border-radius:2px;font-size:.83rem;max-width:85%;line-height:1.45}
+.chat-msg.bot{background:var(--cream-deep);color:var(--coffee);align-self:flex-start}
+.chat-msg.user{background:var(--terracotta);color:#fff;align-self:flex-end}
+.chat-typing{padding:.4rem 1rem;font-size:.78rem;color:var(--coffee);display:none}
+.chat-pills{padding:.5rem 1rem;display:flex;flex-wrap:wrap;gap:.4rem}
+.chat-pill{background:transparent;border:1px solid var(--border);color:var(--coffee);font-size:.72rem;padding:.3rem .7rem;cursor:pointer;border-radius:2px;transition:all .2s}
+.chat-pill:hover{border-color:var(--terracotta);color:var(--terracotta-deep)}
+.chat-input-row{display:flex;border-top:1px solid var(--border)}
+.chat-input{flex:1;background:transparent;border:none;padding:.75rem 1rem;color:var(--espresso);font-family:'Inter',sans-serif;font-size:.83rem;outline:none}
+.chat-input::placeholder{color:#B89B7C}
+.chat-send{background:var(--terracotta);border:none;color:#fff;padding:.75rem 1rem;cursor:pointer;font-size:.8rem;transition:opacity .2s}
+.chat-send:hover{opacity:.88}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="#" class="nav-logo">Moto <span>Cafe</span></a>
+  <ul class="nav-links">
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#journal">Journal</a></li>
+    <li><a href="#find-us">Find Us</a></li>
+  </ul>
+  <a href="https://wa.me/27727159926" target="_blank" class="nav-cta">WhatsApp Us</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-overlay"></div>
+  <img class="hero-img" src="photos/s1.jpg" alt="Moto Cafe coffee counter">
+  <div class="hero-content">
+    <span class="hero-kicker">Umhlanga Rocks · All-Day Breakfast &amp; Specialty Coffee</span>
+    <h1>Your Daily <em>Ritual.</em></h1>
+    <p>Owner-run, artisan coffee and all-day breakfast tucked into Umhlanga's Outlet Park. Good coffee, good food, good people — every single day.</p>
+    <div class="hero-btns">
+      <a href="#menu" class="btn-primary">View Our Menu</a>
+      <a href="#find-us" class="btn-ghost">Find Us</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+  <div class="strip-item">
+    <div class="strip-num">01</div>
+    <h3>Specialty Coffee</h3>
+    <p>Carefully sourced beans, pulled and poured with care.</p>
+  </div>
+  <div class="strip-item">
+    <div class="strip-num">02</div>
+    <h3>All-Day Breakfast</h3>
+    <p>Eggs your way, served from open until close.</p>
+  </div>
+  <div class="strip-item">
+    <div class="strip-num">03</div>
+    <h3>Fresh Pastries</h3>
+    <p>Baked daily — croissants, cakes &amp; something sweet.</p>
+  </div>
+  <div class="strip-item">
+    <div class="strip-num">04</div>
+    <h3>Private Events</h3>
+    <p>Host your next gathering in our space.</p>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-img">
+    <img src="photos/s6.jpg" alt="Barista pulling espresso at Moto Cafe">
+  </div>
+  <div class="about-text">
+    <span class="section-tag">Our Story</span>
+    <h2>Behind every <em>cup,</em><br>a community.</h2>
+    <p>Moto Cafe is owner-run, through and through. Tucked into Umhlanga's Outlet Park, we've built our reputation one coffee at a time — on consistency, warmth, and a menu that's just as good at 7am as it is at 2pm.</p>
+    <p>Specialty coffee, all-day breakfast, fresh bakes and a regulars' table that's always full — that's Moto. We're proud to be part of this community's daily rhythm.</p>
+    <p>Come say hello — we're open every day.</p>
+    <div class="about-sig">— The Moto Cafe Family</div>
+  </div>
+</section>
+
+<!-- MENU HIGHLIGHTS -->
+<section class="services" id="menu">
+  <div class="services-header reveal">
+    <span class="section-tag">On The Menu</span>
+    <h2>Something for Every <em>Hour</em></h2>
+  </div>
+  <div class="cards-grid">
+    <div class="scard reveal">
+      <img class="scard-img" src="photos/s2.jpg" alt="Specialty coffee latte art">
+      <div class="scard-overlay">
+        <span class="scard-label">Coffee</span>
+        <h3>Specialty Coffee</h3>
+        <p>Espresso, filter &amp; everything in between</p>
+      </div>
+    </div>
+    <div class="scard reveal">
+      <img class="scard-img" src="photos/s3.jpg" alt="All-day breakfast plate">
+      <div class="scard-overlay">
+        <span class="scard-label">Breakfast</span>
+        <h3>All-Day Breakfast</h3>
+        <p>Eggs, avocado &amp; the classics, any hour</p>
+      </div>
+    </div>
+    <div class="scard reveal">
+      <img class="scard-img" src="photos/s4.jpg" alt="Fresh pastries and bakes">
+      <div class="scard-overlay">
+        <span class="scard-label">Bakery</span>
+        <h3>Brunch &amp; Pastries</h3>
+        <p>Baked fresh, displayed daily</p>
+      </div>
+    </div>
+    <div class="scard reveal">
+      <img class="scard-img" src="photos/s5.jpg" alt="Private event table at Moto Cafe">
+      <div class="scard-overlay">
+        <span class="scard-label">Events</span>
+        <h3>Private Events</h3>
+        <p>Book our space for your next gathering</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="gallery-header reveal">
+    <span class="section-tag">A Look Inside</span>
+    <h2>Moments at <em>Moto</em></h2>
+  </div>
+  <div class="masonry">
+    <div class="masonry-item reveal"><img src="photos/g1.jpg" alt="Barista pouring latte art" loading="lazy"></div>
+    <div class="masonry-item reveal"><img src="photos/g2.jpg" alt="Roasted coffee beans" loading="lazy"></div>
+    <div class="masonry-item reveal"><img src="photos/g3.jpg" alt="Avocado toast" loading="lazy"></div>
+    <div class="masonry-item reveal"><img src="photos/g4.jpg" alt="Pastry display counter" loading="lazy"></div>
+    <div class="masonry-item reveal"><img src="photos/g5.jpg" alt="Friends laughing over brunch" loading="lazy"></div>
+    <div class="masonry-item reveal"><img src="photos/g6.jpg" alt="Cosy seating area with plants" loading="lazy"></div>
+    <div class="masonry-item reveal"><img src="photos/g7.jpg" alt="Hands holding a warm coffee cup" loading="lazy"></div>
+    <div class="masonry-item reveal"><img src="photos/g8.jpg" alt="Working with coffee at Moto" loading="lazy"></div>
+    <div class="masonry-item reveal"><img src="photos/g9.jpg" alt="Latte art close up" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<div class="cta-banner">
+  <h2>Pull up a <em>chair.</em></h2>
+  <a href="https://wa.me/27727159926" target="_blank">WhatsApp Moto Cafe</a>
+</div>
+
+<!-- JOURNAL -->
+<section class="journal" id="journal">
+  <div class="journal-header reveal">
+    <span class="section-tag">Moto Journal</span>
+    <h2>From Our <em>Kitchen</em></h2>
+  </div>
+  <div class="journal-grid">
+    <div class="jcard reveal" onclick="openArticle('a1')">
+      <div class="jcard-img"><img src="photos/g2.jpg" alt="Coffee sourcing" loading="lazy"></div>
+      <div class="jcard-body">
+        <div class="jcard-tag">Coffee</div>
+        <h3>The Story Behind Our Beans</h3>
+        <p>Why we're particular about sourcing and roasting — and what it means for the cup in your hands.</p>
+        <div class="read-more">Read more →</div>
+      </div>
+    </div>
+    <div class="jcard reveal" onclick="openArticle('a2')">
+      <div class="jcard-img"><img src="photos/g3.jpg" alt="Brunch plate" loading="lazy"></div>
+      <div class="jcard-body">
+        <div class="jcard-tag">Food</div>
+        <h3>Building the Perfect Brunch Plate</h3>
+        <p>How we think about balance, freshness and flavour when putting together our all-day breakfast menu.</p>
+        <div class="read-more">Read more →</div>
+      </div>
+    </div>
+    <div class="jcard reveal" onclick="openArticle('a3')">
+      <div class="jcard-img"><img src="photos/g5.jpg" alt="Group event at Moto Cafe" loading="lazy"></div>
+      <div class="jcard-body">
+        <div class="jcard-tag">Events</div>
+        <h3>Hosting Your Next Event at Moto</h3>
+        <p>From birthdays to baby showers — here's how to book our space and what to expect on the day.</p>
+        <div class="read-more">Read more →</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLE OVERLAYS -->
+<div class="article-overlay" id="a1">
+  <div class="article-box">
+    <button class="article-close" onclick="closeArticle('a1')">×</button>
+    <h2>The Story Behind Our Beans</h2>
+    <div class="jcard-tag" style="margin-bottom:1.2rem">Coffee</div>
+    <p>Specialty coffee is about more than caffeine — it's about consistency, care, and respect for where the bean came from. At Moto, every cup starts long before it reaches your table.</p>
+    <p><strong style="color:var(--espresso)">Sourcing.</strong> We work with roasters who can tell us exactly where a bean comes from, how it was processed, and why it tastes the way it does. That traceability matters — it's the difference between "coffee" and a cup with a story.</p>
+    <p><strong style="color:var(--espresso)">Dialing in.</strong> Our baristas calibrate the grind and extraction throughout the day as humidity and bean freshness shift. It's a small, constant adjustment most guests never notice — but it's why your flat white tastes the same brilliant way every time.</p>
+    <p><strong style="color:var(--espresso)">Why it matters.</strong> A great cup of coffee should taste intentional. That's the standard we hold ourselves to, every single morning.</p>
+    <p>Pop in and ask your barista what's on pour — we love talking coffee.</p>
+  </div>
+</div>
+<div class="article-overlay" id="a2">
+  <div class="article-box">
+    <button class="article-close" onclick="closeArticle('a2')">×</button>
+    <h2>Building the Perfect Brunch Plate</h2>
+    <div class="jcard-tag" style="margin-bottom:1.2rem">Food</div>
+    <p>All-day breakfast sounds simple until you've tried to keep it consistently great from 7am to close. Here's how we think about it.</p>
+    <p><strong style="color:var(--espresso)">Balance first.</strong> Every plate we serve balances something rich (eggs, avocado, halloumi) with something bright (lemon, herbs, tomato) and something with texture (toasted sourdough, crisp bacon). That contrast is what makes a plate satisfying rather than heavy.</p>
+    <p><strong style="color:var(--espresso)">Freshness, always.</strong> We prep in small batches throughout the day rather than holding large quantities — it's more work, but it means your 2pm breakfast tastes as fresh as the 7am order.</p>
+    <p><strong style="color:var(--espresso)">Built for sharing.</strong> Our brunch menu is designed for tables that order three different plates and pass them around. That's the Moto way — communal, generous, unhurried.</p>
+    <p>Come hungry — we'll take care of the rest.</p>
+  </div>
+</div>
+<div class="article-overlay" id="a3">
+  <div class="article-box">
+    <button class="article-close" onclick="closeArticle('a3')">×</button>
+    <h2>Hosting Your Next Event at Moto</h2>
+    <div class="jcard-tag" style="margin-bottom:1.2rem">Events</div>
+    <p>Birthdays, baby showers, work catch-ups, baby moon brunches — our space has hosted all of it. Here's what to know if you're thinking of booking Moto for your next gathering.</p>
+    <p><strong style="color:var(--espresso)">Group bookings.</strong> We can accommodate groups for breakfast or brunch sittings — just give us a heads up via WhatsApp so we can prep the right amount of space and staff.</p>
+    <p><strong style="color:var(--espresso)">Menus for groups.</strong> For larger parties we can put together a set menu or pre-order system so everyone's order arrives together — no one waiting while the rest of the table eats.</p>
+    <p><strong style="color:var(--espresso)">Make it yours.</strong> Bring your own decor, cake, or balloons — we're happy to help make the space feel right for your occasion.</p>
+    <p>WhatsApp us with your date and headcount and we'll sort the rest.</p>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="faq-header reveal">
+    <span class="section-tag">Common Questions</span>
+    <h2>Good to <em>Know</em></h2>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-text">Do you take reservations for groups?</span><span>+</span></div>
+      <div class="faq-a"><p>We welcome group bookings — WhatsApp us your date and headcount and we'll make sure there's space and staff ready for you.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-text">Are you dog-friendly?</span><span>+</span></div>
+      <div class="faq-a"><p>Yes — well-behaved pups are always welcome on our outdoor seating.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-text">Do you have vegan or gluten-free options?</span><span>+</span></div>
+      <div class="faq-a"><p>Yes — our menu includes plant-based and gluten-free choices. Just ask your server and we'll point you in the right direction.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-text">Is there parking?</span><span>+</span></div>
+      <div class="faq-a"><p>Yes, there's parking available right at Outlet Park where we're based.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-text">Do you do takeaway and delivery?</span><span>+</span></div>
+      <div class="faq-a"><p>Absolutely — pop in for takeaway, or order delivery through Uber Eats.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-text">Can you host private events?</span><span>+</span></div>
+      <div class="faq-a"><p>Yes — we've hosted birthdays, baby showers and work catch-ups. WhatsApp us with your date and group size to start planning.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-text">Do you have wifi?</span><span>+</span></div>
+      <div class="faq-a"><p>Yes, free wifi is available for guests — just ask your barista for the password.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-text">What are your trading hours?</span><span>+</span></div>
+      <div class="faq-a"><p>Monday – Friday: 7:00am – 3:30pm. Saturday & Sunday: 7:00am – 2:00pm.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FIND US -->
+<section style="background:var(--cream);padding:5rem 5vw" id="find-us">
+  <div class="find-us-inner">
+    <div class="find-us-text reveal">
+      <span class="section-tag">Visit Us</span>
+      <h2>Find us in <em>Umhlanga.</em></h2>
+      <div class="find-info">
+        <strong>Moto Cafe</strong>
+        <p>Shop 8, Outlet Park</p>
+        <p>59 Meridian Drive</p>
+        <p>Umhlanga Rocks, Durban</p>
+      </div>
+      <div class="find-info">
+        <div class="hours-row"><span>Monday – Friday</span><span>7:00am – 3:30pm</span></div>
+        <div class="hours-row"><span>Saturday – Sunday</span><span>7:00am – 2:00pm</span></div>
+      </div>
+      <div class="find-btns">
+        <a href="https://wa.me/27727159926" target="_blank" class="find-btn">WhatsApp +27 72 715 9926</a>
+        <a href="https://instagram.com/moto_cafe_dbn" target="_blank" class="find-btn">@moto_cafe_dbn</a>
+      </div>
+    </div>
+    <div class="find-map reveal">
+      <iframe src="https://maps.google.com/maps?q=59+Meridian+Drive+Umhlanga+Rocks+Outlet+Park&output=embed" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Moto <span>Cafe</span></div>
+  <p>© 2026 Moto Cafe. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="https://instagram.com/moto_cafe_dbn" target="_blank">Instagram</a>
+    <a href="https://wa.me/27727159926" target="_blank">WhatsApp</a>
+  </div>
+</footer>
+
+<!-- CHATBOT -->
+<button class="chat-btn" onclick="toggleChat()" title="Chat with us">
+  <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+</button>
+<div class="chat-window" id="chatWindow">
+  <div class="chat-header">
+    <span>Moto Cafe · Chat</span>
+    <button onclick="toggleChat()">×</button>
+  </div>
+  <div class="chat-messages" id="chatMessages">
+    <div class="chat-msg bot">Hey 👋 Welcome to Moto Cafe. How can we help you today?</div>
+  </div>
+  <div class="chat-typing" id="chatTyping">typing…</div>
+  <div class="chat-pills" id="chatPills">
+    <button class="chat-pill" onclick="quickReply('☕ Menu')">☕ Menu</button>
+    <button class="chat-pill" onclick="quickReply('🕒 Hours')">🕒 Hours</button>
+    <button class="chat-pill" onclick="quickReply('📍 Location')">📍 Location</button>
+    <button class="chat-pill" onclick="quickReply('🎉 Book Event')">🎉 Book Event</button>
+  </div>
+  <div class="chat-input-row">
+    <input class="chat-input" id="chatInput" placeholder="Ask us anything…" onkeydown="if(event.key==='Enter')sendMsg()">
+    <button class="chat-send" onclick="sendMsg()">Send</button>
+  </div>
+</div>
+
+<script>
+// NAV scroll
+window.addEventListener('scroll',function(){
+  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60);
+},{passive:true});
+
+// REVEAL
+var ro=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');ro.unobserve(e.target);}});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){ro.observe(el);});
+
+// FAQ
+function toggleFaq(el){
+  el.classList.toggle('open');
+  var ans=el.nextElementSibling;
+  ans.classList.toggle('open');
+}
+
+// ARTICLES
+function openArticle(id){document.getElementById(id).classList.add('open');}
+function closeArticle(id){document.getElementById(id).classList.remove('open');}
+document.querySelectorAll('.article-overlay').forEach(function(ov){
+  ov.addEventListener('click',function(e){if(e.target===ov)ov.classList.remove('open');});
+});
+
+// CHATBOT
+var KB=[
+  {k:['menu','food','eat','breakfast','brunch','coffee','pastry'],r:'We serve specialty coffee, all-day breakfast, brunch and fresh-baked pastries — all day, every day. Pop in and ask your barista what\'s fresh today! ☕'},
+  {k:['hours','open','close','time','monday','saturday','sunday'],r:'Monday–Friday: 7:00am–3:30pm | Saturday & Sunday: 7:00am–2:00pm.'},
+  {k:['location','address','where','directions','umhlanga','outlet park','meridian'],r:'We\'re at <strong>Shop 8, Outlet Park, 59 Meridian Drive, Umhlanga Rocks</strong>. Parking is right there at the centre.'},
+  {k:['event','party','birthday','book','group','booking','shower'],r:'We love hosting! WhatsApp us on <strong>+27 72 715 9926</strong> with your date and group size and we\'ll help you plan it. 🎉'},
+  {k:['vegan','gluten','dietary','allergy'],r:'Yes — we have vegan and gluten-free options on our menu. Just ask your server when you order.'},
+  {k:['dog','pet','dog-friendly'],r:'Well-behaved pups are always welcome on our outdoor seating! 🐾'},
+  {k:['wifi','internet'],r:'Yes, free wifi for guests — ask your barista for the password.'},
+  {k:['delivery','uber','takeaway','take away'],r:'Yes — grab takeaway in-store or order delivery via Uber Eats.'},
+  {k:['parking'],r:'Yes, there\'s parking available right at Outlet Park.'},
+  {k:['instagram','social'],r:'Follow us @moto_cafe_dbn on Instagram for our latest specials!'},
+];
+function toggleChat(){
+  var w=document.getElementById('chatWindow');
+  w.classList.toggle('open');
+}
+function sendMsg(){
+  var input=document.getElementById('chatInput');
+  var txt=input.value.trim();
+  if(!txt)return;
+  addMsg(txt,'user');
+  input.value='';
+  document.getElementById('chatPills').style.display='none';
+  var typing=document.getElementById('chatTyping');
+  typing.style.display='block';
+  setTimeout(function(){
+    typing.style.display='none';
+    var low=txt.toLowerCase();
+    var resp='Thanks for reaching out! For the fastest response, WhatsApp us on <strong>+27 72 715 9926</strong>. ☕';
+    for(var i=0;i<KB.length;i++){
+      var hit=KB[i].k.some(function(kw){return low.indexOf(kw)>-1;});
+      if(hit){resp=KB[i].r;break;}
+    }
+    addMsg(resp,'bot');
+  },900);
+}
+function quickReply(txt){
+  addMsg(txt,'user');
+  document.getElementById('chatPills').style.display='none';
+  var typing=document.getElementById('chatTyping');
+  typing.style.display='block';
+  setTimeout(function(){
+    typing.style.display='none';
+    var low=txt.toLowerCase();
+    var resp='Thanks for reaching out! WhatsApp us on <strong>+27 72 715 9926</strong> for the fastest reply.';
+    for(var i=0;i<KB.length;i++){
+      var hit=KB[i].k.some(function(kw){return low.indexOf(kw)>-1;});
+      if(hit){resp=KB[i].r;break;}
+    }
+    addMsg(resp,'bot');
+  },800);
+}
+function addMsg(txt,cls){
+  var msgs=document.getElementById('chatMessages');
+  var div=document.createElement('div');
+  div.className='chat-msg '+cls;
+  div.innerHTML=txt;
+  msgs.appendChild(div);
+  msgs.scrollTop=msgs.scrollHeight;
+}
+
+// STEAM PARTICLE CURSOR EFFECT
+(function(){
+  var lx=0,ly=0;
+  document.addEventListener('mousemove',function(e){
+    var dx=e.clientX-lx,dy=e.clientY-ly;
+    if(dx*dx+dy*dy<1600)return;
+    lx=e.clientX;ly=e.clientY;
+    var el=document.createElement('div');
+    var sz=Math.random()*16+10;
+    var driftX=(Math.random()-.5)*40;
+    el.style.cssText='position:fixed;left:'+(e.clientX-sz/2)+'px;top:'+(e.clientY-sz/2)+'px;width:'+sz+'px;height:'+sz+'px;border-radius:50%;background:radial-gradient(circle,rgba(250,241,226,.55),rgba(250,241,226,0));filter:blur(3px);pointer-events:none;z-index:9999;opacity:.75;transform:translateY(0) scale(1);transition:opacity 1.8s ease,transform 1.8s ease';
+    document.body.appendChild(el);
+    requestAnimationFrame(function(){requestAnimationFrame(function(){
+      el.style.opacity='0';
+      el.style.transform='translateY(-70px) translateX('+driftX+'px) scale(2.2)';
+    });});
+    setTimeout(function(){if(el.parentNode)el.parentNode.removeChild(el);},1900);
+  },{passive:true});
+})();
+</script>
+</body>
+</html>
