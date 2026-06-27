@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Azalea Ink | Tattoo Studio · Hillcrest, Durban</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --void:#080810;
+  --deep:#0F0F18;
+  --mid:#18181F;
+  --card:#1E1E28;
+  --border:#2A2A38;
+  --magenta:#BF1F72;
+  --rose:#E04A90;
+  --silver:#9090A8;
+  --frost:#EEE8F5;
+  --gold:#C4A55A;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--void);color:var(--frost);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.65;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:400}
+em{font-style:italic;color:var(--rose)}
+a{text-decoration:none;color:inherit}
+img{display:block;width:100%;height:100%;object-fit:cover}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;width:100%;z-index:900;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 5vw;background:transparent;transition:background .4s,backdrop-filter .4s}
+.nav.scrolled{background:rgba(8,8,16,.92);backdrop-filter:blur(12px)}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:500;letter-spacing:.04em;color:var(--frost)}
+.nav-logo span{color:var(--magenta)}
+.nav-links{display:flex;gap:2.4rem;list-style:none;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--silver)}
+.nav-links a:hover{color:var(--frost)}
+.nav-cta{background:transparent;border:1px solid var(--magenta);color:var(--magenta);font-family:'DM Sans',sans-serif;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:.55rem 1.5rem;cursor:pointer;transition:all .25s}
+.nav-cta:hover{background:var(--magenta);color:#fff}
+
+/* HERO */
+.hero{position:relative;height:100vh;min-height:600px;display:flex;align-items:flex-end;overflow:hidden}
+.hero-img{position:absolute;inset:0;z-index:0}
+.hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(160deg,rgba(8,8,16,.7) 0%,rgba(8,8,16,.3) 50%,rgba(8,8,16,.85) 100%)}
+.hero-content{position:relative;z-index:2;padding:0 5vw 7rem;max-width:700px}
+.hero-kicker{display:block;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--magenta);margin-bottom:1.2rem}
+.hero h1{font-size:clamp(3rem,7vw,5.5rem);line-height:1.08;color:var(--frost);margin-bottom:1.4rem}
+.hero p{font-size:1.05rem;color:var(--silver);max-width:480px;margin-bottom:2.5rem}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{background:var(--magenta);color:#fff;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;padding:.75rem 2rem;border:none;cursor:pointer;transition:background .25s}
+.btn-primary:hover{background:var(--rose)}
+.btn-ghost{border:1px solid rgba(255,255,255,.3);color:var(--frost);font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;padding:.75rem 2rem;transition:border-color .25s}
+.btn-ghost:hover{border-color:var(--frost)}
+.hero-scroll{position:absolute;bottom:2rem;right:5vw;z-index:2;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--silver);display:flex;flex-direction:column;align-items:center;gap:.5rem}
+.hero-scroll::before{content:'';display:block;width:1px;height:50px;background:linear-gradient(var(--magenta),transparent)}
+
+/* STRIP */
+.strip{display:grid;grid-template-columns:repeat(4,1fr)}
+.strip-item{padding:2rem 1.8rem;background:var(--mid);border-right:1px solid var(--border)}
+.strip-item:last-child{border-right:none}
+.strip-num{font-size:.7rem;letter-spacing:.15em;color:var(--magenta);margin-bottom:.7rem}
+.strip-item h3{font-size:1rem;font-family:'Playfair Display',serif;font-weight:400;color:var(--frost);margin-bottom:.4rem}
+.strip-item p{font-size:.82rem;color:var(--silver);line-height:1.5}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:1fr 1fr;min-height:600px}
+.about-img{overflow:hidden;position:relative}
+.about-img::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 60%,var(--deep))}
+.about-text{background:var(--deep);padding:5rem 6vw;display:flex;flex-direction:column;justify-content:center}
+.section-tag{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--magenta);display:block;margin-bottom:1.2rem}
+.about-text h2{font-size:clamp(2rem,3.5vw,3rem);color:var(--frost);line-height:1.2;margin-bottom:1.8rem}
+.about-text p{font-size:.95rem;color:var(--silver);margin-bottom:1rem;max-width:480px}
+.about-sig{font-family:'Playfair Display',serif;font-style:italic;color:var(--rose);font-size:1.1rem;margin-top:1.5rem}
+
+/* SERVICES */
+.services{padding:5rem 5vw;background:var(--void)}
+.services-header{text-align:center;margin-bottom:3.5rem}
+.services-header h2{font-size:clamp(2rem,3.5vw,2.8rem);color:var(--frost);margin-top:.8rem}
+.cards-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border)}
+.scard{position:relative;aspect-ratio:3/4;overflow:hidden;cursor:pointer;background:var(--mid)}
+.scard-img{position:absolute;inset:0;transition:transform .6s ease}
+.scard:hover .scard-img{transform:scale(1.07)}
+.scard-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,8,16,.9) 0%,rgba(8,8,16,.2) 60%);display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem}
+.scard-label{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--magenta);margin-bottom:.4rem}
+.scard h3{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--frost);margin-bottom:.3rem}
+.scard p{font-size:.78rem;color:var(--silver)}
+
+/* GALLERY */
+.gallery{padding:5rem 5vw;background:var(--deep)}
+.gallery-header{text-align:center;margin-bottom:3rem}
+.gallery-header h2{font-size:clamp(2rem,3.5vw,2.8rem);color:var(--frost);margin-top:.8rem}
+.masonry{columns:3;column-gap:6px}
+.masonry-item{break-inside:avoid;margin-bottom:6px;overflow:hidden;background:var(--mid)}
+.masonry-item img{width:100%;display:block;transition:transform .5s ease}
+.masonry-item:hover img{transform:scale(1.04)}
+
+/* CTA BANNER */
+.cta-banner{background:var(--magenta);padding:4rem 5vw;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.cta-banner h2{font-size:clamp(1.8rem,3vw,2.5rem);color:#fff;font-style:italic}
+.cta-banner a{background:#fff;color:var(--magenta);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:.8rem 2.2rem;font-family:'DM Sans',sans-serif;transition:opacity .2s;white-space:nowrap}
+.cta-banner a:hover{opacity:.88}
+
+/* JOURNAL */
+.journal{padding:5rem 5vw;background:var(--void)}
+.journal-header{text-align:center;margin-bottom:3rem}
+.journal-header h2{font-size:clamp(2rem,3.5vw,2.8rem);color:var(--frost);margin-top:.8rem}
+.journal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border)}
+.jcard{background:var(--mid);cursor:pointer;transition:background .25s}
+.jcard:hover{background:var(--card)}
+.jcard-img{aspect-ratio:16/9;overflow:hidden}
+.jcard-img img{transition:transform .5s ease}
+.jcard:hover .jcard-img img{transform:scale(1.05)}
+.jcard-body{padding:1.5rem}
+.jcard-tag{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--magenta);margin-bottom:.5rem}
+.jcard h3{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--frost);margin-bottom:.5rem;line-height:1.35}
+.jcard p{font-size:.8rem;color:var(--silver);line-height:1.5;margin-bottom:1rem}
+.read-more{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--rose)}
+
+/* ARTICLE OVERLAYS */
+.article-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:9000;overflow-y:auto;padding:2rem 1rem}
+.article-overlay.open{display:flex;align-items:flex-start;justify-content:center}
+.article-box{background:var(--mid);max-width:720px;width:100%;padding:3rem;position:relative;margin:auto}
+.article-box h2{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--frost);margin-bottom:1.2rem}
+.article-box p{font-size:.9rem;color:var(--silver);line-height:1.75;margin-bottom.8rem}
+.article-close{position:absolute;top:1rem;right:1.2rem;font-size:1.5rem;color:var(--silver);cursor:pointer;line-height:1;background:none;border:none}
+.article-close:hover{color:var(--frost)}
+
+/* FAQ */
+.faq{padding:5rem 5vw;background:var(--deep)}
+.faq-header{text-align:center;margin-bottom:3rem}
+.faq-header h2{font-size:clamp(2rem,3.5vw,2.8rem);color:var(--frost);margin-top:.8rem}
+.faq-list{max-width:780px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--border);padding:1.2rem 0}
+.faq-q{display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-size:.95rem;color:var(--frost);font-family:'DM Sans',sans-serif}
+.faq-q span{font-size:1.3rem;color:var(--magenta);transition:transform .3s}
+.faq-q.open span{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;font-size:.88rem;color:var(--silver);line-height:1.7}
+.faq-a.open{max-height:300px}
+.faq-a p{padding:.7rem 0}
+
+/* FIND US */
+.find-us{background:var(--mid);padding:5rem 5vw}
+.find-us-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.find-us-text .section-tag{margin-bottom:1rem}
+.find-us-text h2{font-size:clamp(1.8rem,3vw,2.8rem);color:var(--frost);margin-bottom:2rem;line-height:1.2}
+.find-info{margin-bottom:1.5rem}
+.find-info strong{display:block;color:var(--frost);font-size:.88rem;margin-bottom:.3rem}
+.find-info p,.find-info a{font-size:.85rem;color:var(--silver)}
+.hours-row{display:flex;justify-content:space-between;border-bottom:1px solid var(--border);padding:.6rem 0;font-size:.85rem;color:var(--silver)}
+.hours-row span:first-child{color:var(--frost)}
+.find-btns{display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap}
+.find-btn{border:1px solid var(--border);color:var(--silver);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;padding:.6rem 1.4rem;transition:all .25s}
+.find-btn:hover{border-color:var(--magenta);color:var(--magenta)}
+.find-map{border-radius:2px;overflow:hidden;aspect-ratio:4/3;background:var(--card)}
+.find-map iframe{width:100%;height:100%;border:none;filter:invert(1) hue-rotate(200deg);opacity:.85}
+
+/* FOOTER */
+footer{background:var(--void);border-top:1px solid var(--border);padding:2rem 5vw;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-logo{font-family:'Playfair Display',serif;font-size:1rem;color:var(--silver)}
+.footer-logo span{color:var(--magenta)}
+footer p{font-size:.78rem;color:var(--border)}
+.footer-links{display:flex;gap:2rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--silver)}
+.footer-links a:hover{color:var(--frost)}
+
+/* CHATBOT */
+.chat-btn{position:fixed;bottom:2rem;right:2rem;z-index:800;width:52px;height:52px;border-radius:50%;background:var(--magenta);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(191,31,114,.4);transition:transform .2s}
+.chat-btn:hover{transform:scale(1.08)}
+.chat-btn svg{width:24px;height:24px;fill:#fff}
+.chat-window{display:none;position:fixed;bottom:6rem;right:2rem;z-index:800;width:340px;background:var(--mid);border:1px solid var(--border);box-shadow:0 8px 40px rgba(0,0,0,.5);flex-direction:column}
+.chat-window.open{display:flex}
+.chat-header{background:var(--magenta);padding:1rem 1.2rem;display:flex;justify-content:space-between;align-items:center}
+.chat-header span{font-size:.88rem;color:#fff;font-weight:500}
+.chat-header button{background:none;border:none;color:rgba(255,255,255,.7);font-size:1.2rem;cursor:pointer;line-height:1}
+.chat-messages{padding:1rem;height:220px;overflow-y:auto;display:flex;flex-direction:column;gap:.6rem}
+.chat-msg{padding:.6rem .9rem;border-radius:2px;font-size:.83rem;max-width:85%;line-height:1.45}
+.chat-msg.bot{background:var(--card);color:var(--silver);align-self:flex-start}
+.chat-msg.user{background:var(--magenta);color:#fff;align-self:flex-end}
+.chat-typing{padding:.4rem 1rem;font-size:.78rem;color:var(--silver);display:none}
+.chat-pills{padding:.5rem 1rem;display:flex;flex-wrap:wrap;gap:.4rem}
+.chat-pill{background:transparent;border:1px solid var(--border);color:var(--silver);font-size:.72rem;padding:.3rem .7rem;cursor:pointer;border-radius:2px;transition:all .2s}
+.chat-pill:hover{border-color:var(--magenta);color:var(--magenta)}
+.chat-input-row{display:flex;border-top:1px solid var(--border)}
+.chat-input{flex:1;background:transparent;border:none;padding:.75rem 1rem;color:var(--frost);font-family:'DM Sans',sans-serif;font-size:.83rem;outline:none}
+.chat-input::placeholder{color:var(--border)}
+.chat-send{background:var(--magenta);border:none;color:#fff;padding:.75rem 1rem;cursor:pointer;font-size:.8rem;transition:opacity .2s}
+.chat-send:hover{opacity:.88}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="#" class="nav-logo">Azalea <span>&</span> Ink</a>
+  <ul class="nav-links">
+    <li><a href="#gallery">Portfolio</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#journal">Journal</a></li>
+    <li><a href="#find-us">Find Us</a></li>
+  </ul>
+  <a href="https://wa.me/27665472493" target="_blank" class="nav-cta">Book Now</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-overlay"></div>
+  <img class="hero-img" src="photos/s1.jpg" alt="Azalea Ink Studio Interior">
+  <div class="hero-content">
+    <span class="hero-kicker">Hillcrest, Durban · Fine Art Tattooing</span>
+    <h1>Where Skin Becomes <em>Canvas.</em></h1>
+    <p>Botanical fine lines. Neo-traditional colour. Blackwork bold. Custom pieces created for skin that tells your story.</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/27665472493" target="_blank" class="btn-primary">Book a Consultation</a>
+      <a href="#gallery" class="btn-ghost">View Portfolio</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+  <div class="strip-item">
+    <div class="strip-num">01</div>
+    <h3>Fine Line</h3>
+    <p>Delicate single-needle work. Botanicals, portraits & micro detail.</p>
+  </div>
+  <div class="strip-item">
+    <div class="strip-num">02</div>
+    <h3>Neo-Traditional</h3>
+    <p>Bold lines, rich colour, reimagined classic motifs.</p>
+  </div>
+  <div class="strip-item">
+    <div class="strip-num">03</div>
+    <h3>Blackwork</h3>
+    <p>Geometric precision. Mandalas, linework & deep ink fills.</p>
+  </div>
+  <div class="strip-item">
+    <div class="strip-num">04</div>
+    <h3>Cover-Up</h3>
+    <p>Expert reworks. Faded or regretted ink transformed.</p>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-img">
+    <img src="photos/s2.jpg" alt="Azalea Ink artist at work">
+  </div>
+  <div class="about-text">
+    <span class="section-tag">Our Story</span>
+    <h2>Art made with <em>intention,</em><br>ink made to last.</h2>
+    <p>Azalea Ink was built on one belief: that every tattoo should mean something. Based in Richdens Village Centre, Hillcrest, we're a boutique fine-art studio focused on detail, intention, and skin health.</p>
+    <p>Our artists specialise in work that ages beautifully — clean lines, considered colour, proper technique. No walk-ins, no rush. Every piece is consultation-first.</p>
+    <p>WhatsApp us to start your story.</p>
+    <div class="about-sig">— The Azalea Ink Studio</div>
+  </div>
+</section>
+
+<!-- SERVICE CARDS -->
+<section class="services" id="services">
+  <div class="services-header reveal">
+    <span class="section-tag">What We Do</span>
+    <h2>Styles for Every <em>Story</em></h2>
+  </div>
+  <div class="cards-grid">
+    <div class="scard reveal">
+      <img class="scard-img" src="photos/s3.jpg" alt="Fine line tattoo process">
+      <div class="scard-overlay">
+        <span class="scard-label">Signature Service</span>
+        <h3>Fine Line Florals</h3>
+        <p>Micro-detail botanical work, precisely placed</p>
+      </div>
+    </div>
+    <div class="scard reveal">
+      <img class="scard-img" src="photos/s4.jpg" alt="Neo-traditional tattoo">
+      <div class="scard-overlay">
+        <span class="scard-label">Neo-Traditional</span>
+        <h3>Bold & Colourful</h3>
+        <p>Classic motifs with a contemporary palette</p>
+      </div>
+    </div>
+    <div class="scard reveal">
+      <img class="scard-img" src="photos/s5.jpg" alt="Blackwork tattoo">
+      <div class="scard-overlay">
+        <span class="scard-label">Blackwork</span>
+        <h3>Geometric & Mandalas</h3>
+        <p>Sacred geometry meets dark precision</p>
+      </div>
+    </div>
+    <div class="scard reveal">
+      <img class="scard-img" src="photos/s6.jpg" alt="Custom tattoo design">
+      <div class="scard-overlay">
+        <span class="scard-label">Custom</span>
+        <h3>Your Concept</h3>
+        <p>Full custom designs from your vision</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="gallery-header reveal">
+    <span class="section-tag">The Studio Portfolio</span>
+    <h2>Ink We're <em>Proud Of</em></h2>
+  </div>
+  <div class="masonry">
+    <div class="masonry-item reveal"><img src="photos/g1.jpg" alt="Anchor tattoo" loading="lazy"></div>
+    <div class="masonry-item reveal"><img src="photos/g2.jpg" alt="Tattoo artist at work" loading="lazy"></div>
+    <div class="masonry-item reveal"><img src="photos/g3.jpg" alt="Tattoo studio" loading="lazy"></div>
+    <div class="masonry-item reveal"><img src="photos/s3.jpg" alt="Tattoo process" loading="lazy"></div>
+    <div class="masonry-item reveal"><img src="photos/g4.jpg" alt="Tattooed arm" loading="lazy"></div>
+    <div class="masonry-item reveal"><img src="photos/g5.jpg" alt="Compass tattoo" loading="lazy"></div>
+    <div class="masonry-item reveal"><img src="photos/g6.jpg" alt="Tattoo art" loading="lazy"></div>
+    <div class="masonry-item reveal"><img src="photos/g7.jpg" alt="Hand tattoo" loading="lazy"></div>
+    <div class="masonry-item reveal"><img src="photos/s4.jpg" alt="Bold tattoo" loading="lazy"></div>
+    <div class="masonry-item reveal"><img src="photos/g8.jpg" alt="Tattoo lifestyle" loading="lazy"></div>
+    <div class="masonry-item reveal"><img src="photos/g9.jpg" alt="Tattoo close up" loading="lazy"></div>
+    <div class="masonry-item reveal"><img src="photos/s5.jpg" alt="Tattoo detail" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<div class="cta-banner">
+  <h2>Ready to start your <em>next piece?</em></h2>
+  <a href="https://wa.me/27665472493" target="_blank">WhatsApp to Book</a>
+</div>
+
+<!-- JOURNAL -->
+<section class="journal" id="journal">
+  <div class="journal-header reveal">
+    <span class="section-tag">Studio Journal</span>
+    <h2>Ink <em>Insights</em></h2>
+  </div>
+  <div class="journal-grid">
+    <div class="jcard reveal" onclick="openArticle('a1')">
+      <div class="jcard-img"><img src="photos/g2.jpg" alt="Aftercare" loading="lazy"></div>
+      <div class="jcard-body">
+        <div class="jcard-tag">Aftercare</div>
+        <h3>How to Care for Fresh Ink</h3>
+        <p>The first two weeks are everything. Here's the exact routine our artists recommend for every new piece.</p>
+        <div class="read-more">Read more →</div>
+      </div>
+    </div>
+    <div class="jcard reveal" onclick="openArticle('a2')">
+      <div class="jcard-img"><img src="photos/g5.jpg" alt="Placement guide" loading="lazy"></div>
+      <div class="jcard-body">
+        <div class="jcard-tag">Placement</div>
+        <h3>Choosing Where to Put Your Tattoo</h3>
+        <p>Placement affects how a piece ages, how it reads, and how much it hurts. A guide from our studio.</p>
+        <div class="read-more">Read more →</div>
+      </div>
+    </div>
+    <div class="jcard reveal" onclick="openArticle('a3')">
+      <div class="jcard-img"><img src="photos/g6.jpg" alt="Fine line guide" loading="lazy"></div>
+      <div class="jcard-body">
+        <div class="jcard-tag">Style Guide</div>
+        <h3>Why Fine Line Tattoos Age the Way They Do</h3>
+        <p>Everything you need to know about fine-line longevity — and how to choose an artist who does it right.</p>
+        <div class="read-more">Read more →</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLE OVERLAYS -->
+<div class="article-overlay" id="a1">
+  <div class="article-box">
+    <button class="article-close" onclick="closeArticle('a1')">×</button>
+    <h2>How to Care for Fresh Ink</h2>
+    <div class="jcard-tag" style="margin-bottom:1.2rem">Aftercare</div>
+    <p>Getting a tattoo is only half the story. What happens in the first two weeks determines how your piece heals, how vibrant the colour stays, and how cleanly the lines settle. At Azalea Ink, we give every client a full aftercare rundown — but here's the core of it.</p>
+    <p><strong style="color:var(--frost)">Days 1–3: Protect.</strong> Keep the wrap on for the first few hours. When you remove it, wash gently with unscented soap and warm water. Pat dry — never rub. Apply a thin layer of unscented moisturiser or dedicated tattoo balm. Repeat twice daily.</p>
+    <p><strong style="color:var(--frost)">Days 4–14: Heal.</strong> Your tattoo will peel and flake — this is normal. Do not pick or scratch. Keep it moisturised. Avoid direct sunlight, swimming pools, ocean water, and anything abrasive against the skin.</p>
+    <p><strong style="color:var(--frost)">Long-term.</strong> SPF is your best friend. UV exposure fades ink faster than anything else. Once healed, apply sunscreen whenever the tattoo is exposed. A well-protected tattoo holds its detail for decades.</p>
+    <p>If you ever have questions about how your piece is healing, WhatsApp us — we're always here.</p>
+  </div>
+</div>
+<div class="article-overlay" id="a2">
+  <div class="article-box">
+    <button class="article-close" onclick="closeArticle('a2')">×</button>
+    <h2>Choosing Where to Put Your Tattoo</h2>
+    <div class="jcard-tag" style="margin-bottom:1.2rem">Placement</div>
+    <p>Placement is one of the most important decisions in the tattoo process — and one of the most overlooked. It affects how the design reads, how it ages, the pain level, and whether you can conceal it when needed. Here's how we think about it at Azalea Ink.</p>
+    <p><strong style="color:var(--frost)">Design follows form.</strong> The best tattoos work with the body's natural lines and contours. A piece designed for your forearm shouldn't just be slapped onto your calf — it should be reworked to flow with that placement.</p>
+    <p><strong style="color:var(--frost)">Ageing matters.</strong> Areas that stretch, crease, or experience sun exposure age faster. Inner arm, ribs, and collarbone tend to hold detail well. Hands, fingers, and feet fade quickest.</p>
+    <p><strong style="color:var(--frost)">Pain tolerance.</strong> Bony areas and zones close to nerves hurt more — ribs, spine, ditch of the elbow, tops of feet. Fleshier areas like outer thigh, upper arm, and calf are more comfortable. Your first tattoo? Go somewhere manageable.</p>
+    <p>Our consultations are free — come in, show us your idea, and we'll help you find the perfect placement.</p>
+  </div>
+</div>
+<div class="article-overlay" id="a3">
+  <div class="article-box">
+    <button class="article-close" onclick="closeArticle('a3')">×</button>
+    <h2>Why Fine Line Tattoos Age the Way They Do</h2>
+    <div class="jcard-tag" style="margin-bottom:1.2rem">Style Guide</div>
+    <p>Fine line tattooing has exploded in popularity — and with it, a lot of confusion about what's realistic long-term. Here's an honest breakdown from the Azalea Ink studio.</p>
+    <p><strong style="color:var(--frost)">The truth about thin lines.</strong> Fine line tattoos are beautiful precisely because of their delicacy. But delicate means they require exceptional technique to execute — and even then, they will soften over time. Lines spread slightly as the skin ages. This isn't failure; it's physics.</p>
+    <p><strong style="color:var(--frost)">What affects longevity.</strong> Artist skill is the biggest factor — proper depth and needle choice matter enormously. Placement is second — areas that stretch or see friction fade faster. Aftercare is third — sun exposure accelerates fading significantly.</p>
+    <p><strong style="color:var(--frost)">Choosing the right artist.</strong> Not every tattooist is trained in fine line work. Look for a healed portfolio, not just fresh photos. Ask how long they've been doing single-needle work. At Azalea Ink, we only take on work we're confident we can execute correctly.</p>
+    <p>Ready to book? WhatsApp us and let's chat about your design.</p>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="faq-header reveal">
+    <span class="section-tag">Common Questions</span>
+    <h2>Before You <em>Book</em></h2>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-text">Do you take walk-ins?</span><span>+</span></div>
+      <div class="faq-a"><p>No — all our work is by appointment only. This allows us to give each client our full attention and ensure your design is properly prepared. Book via WhatsApp.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-text">How do I book a consultation?</span><span>+</span></div>
+      <div class="faq-a"><p>WhatsApp us on +27 66 547 2493 with a brief description of what you have in mind, your preferred placement, and any reference images. We'll set up a free consultation to discuss the design.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-text">What's your deposit policy?</span><span>+</span></div>
+      <div class="faq-a"><p>We require a non-refundable deposit to secure your appointment. This deposit goes toward the cost of your tattoo. Deposits are forfeited if you cancel with less than 48 hours notice.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-text">How much does a tattoo cost?</span><span>+</span></div>
+      <div class="faq-a"><p>Pricing is based on size, detail, placement, and style. Small pieces start from R800. Custom and large-scale work is quoted per piece. We never compromise on quality to cut costs — you get what you pay for with tattooing.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-text">How should I prepare for my appointment?</span><span>+</span></div>
+      <div class="faq-a"><p>Eat a good meal beforehand. Stay hydrated. Wear loose, comfortable clothing that gives easy access to the area being tattooed. Avoid alcohol for 24 hours before. Don't come sunburned.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-text">Can you do cover-up tattoos?</span><span>+</span></div>
+      <div class="faq-a"><p>Yes — we specialise in cover-up work. We'll need to assess the existing tattoo in person to advise on what's possible. Some pieces may require laser lightening sessions first. WhatsApp us with a photo for an initial assessment.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-text">Do you do colour tattoos?</span><span>+</span></div>
+      <div class="faq-a"><p>Yes — we work in full colour, black and grey, and everything in between. Our neo-traditional style particularly lends itself to rich, long-lasting colour work.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-text">Where exactly are you located?</span><span>+</span></div>
+      <div class="faq-a"><p>We're at 9 Old Main Road, Richdens Village Centre, Hillcrest, Durban. Parking is available in the centre. Look for the dark studio with the azalea logo in the window.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FIND US -->
+<section style="background:var(--void);padding:5rem 5vw" id="find-us">
+  <div class="find-us-inner">
+    <div class="find-us-text reveal">
+      <span class="section-tag">Visit the Studio</span>
+      <h2>Find us in <em>Hillcrest.</em></h2>
+      <div class="find-info">
+        <strong>Azalea Ink Tattoo Studio</strong>
+        <p>9 Old Main Road</p>
+        <p>Richdens Village Centre, Hillcrest</p>
+        <p>Durban, 3610</p>
+      </div>
+      <div class="find-info">
+        <div class="hours-row"><span>Tuesday – Friday</span><span>10:00am – 6:00pm</span></div>
+        <div class="hours-row"><span>Saturday</span><span>9:00am – 4:00pm</span></div>
+        <div class="hours-row"><span>Sunday & Monday</span><span>Closed</span></div>
+      </div>
+      <div class="find-btns">
+        <a href="https://wa.me/27665472493" target="_blank" class="find-btn">WhatsApp +27 66 547 2493</a>
+        <a href="https://instagram.com/azaleainkza" target="_blank" class="find-btn">@azaleainkza</a>
+      </div>
+    </div>
+    <div class="find-map reveal">
+      <iframe src="https://maps.google.com/maps?q=9+Old+Main+Road+Hillcrest+Durban&output=embed" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Azalea <span>&</span> Ink · Tattoo Studio</div>
+  <p>© 2026 Azalea Ink. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="https://instagram.com/azaleainkza" target="_blank">Instagram</a>
+    <a href="https://wa.me/27665472493" target="_blank">WhatsApp</a>
+  </div>
+</footer>
+
+<!-- CHATBOT -->
+<button class="chat-btn" onclick="toggleChat()" title="Chat with us">
+  <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+</button>
+<div class="chat-window" id="chatWindow">
+  <div class="chat-header">
+    <span>Azalea Ink · Studio Chat</span>
+    <button onclick="toggleChat()">×</button>
+  </div>
+  <div class="chat-messages" id="chatMessages">
+    <div class="chat-msg bot">Hey 👋 Welcome to Azalea Ink. How can we help you today?</div>
+  </div>
+  <div class="chat-typing" id="chatTyping">typing…</div>
+  <div class="chat-pills" id="chatPills">
+    <button class="chat-pill" onclick="quickReply('🗓️ Book')">🗓️ Book</button>
+    <button class="chat-pill" onclick="quickReply('💰 Pricing')">💰 Pricing</button>
+    <button class="chat-pill" onclick="quickReply('📍 Location')">📍 Location</button>
+    <button class="chat-pill" onclick="quickReply('🕒 Hours')">🕒 Hours</button>
+  </div>
+  <div class="chat-input-row">
+    <input class="chat-input" id="chatInput" placeholder="Ask us anything…" onkeydown="if(event.key==='Enter')sendMsg()">
+    <button class="chat-send" onclick="sendMsg()">Send</button>
+  </div>
+</div>
+
+<script>
+// NAV scroll
+window.addEventListener('scroll',function(){
+  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60);
+},{passive:true});
+
+// REVEAL
+var ro=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');ro.unobserve(e.target);}});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){ro.observe(el);});
+
+// FAQ
+function toggleFaq(el){
+  el.classList.toggle('open');
+  var ans=el.nextElementSibling;
+  ans.classList.toggle('open');
+}
+
+// ARTICLES
+function openArticle(id){document.getElementById(id).classList.add('open');}
+function closeArticle(id){document.getElementById(id).classList.remove('open');}
+document.querySelectorAll('.article-overlay').forEach(function(ov){
+  ov.addEventListener('click',function(e){if(e.target===ov)ov.classList.remove('open');});
+});
+
+// CHATBOT
+var KB=[
+  {k:['book','appointment','consult','consultation','session'],r:'To book, WhatsApp us on <strong>+27 66 547 2493</strong> with your idea and we\'ll arrange a free consultation. 🖊️'},
+  {k:['price','cost','pricing','charge','rate','how much','r800'],r:'Small pieces start from R800. Larger or custom work is quoted per piece. WhatsApp us for a quote specific to your design.'},
+  {k:['location','address','where','directions','hillcrest','richdens'],r:'We\'re at <strong>9 Old Main Road, Richdens Village Centre, Hillcrest</strong>. Parking available in centre.'},
+  {k:['hours','open','close','time','tuesday','saturday'],r:'Tuesday–Friday: 10am–6pm | Saturday: 9am–4pm | Sunday & Monday: Closed.'},
+  {k:['fine line','fineline','botanical','botanical'],r:'Fine line is one of our specialties — delicate single-needle work including botanicals, micro-detail pieces, and portraits. WhatsApp us to discuss! 🌿'},
+  {k:['walk','walk-in'],r:'We don\'t take walk-ins — all work is by appointment. WhatsApp us to book your slot!'},
+  {k:['cover','cover-up','coverup','rework'],r:'Yes, we do cover-up work! Send us a photo of the existing tattoo via WhatsApp and we\'ll let you know what\'s possible.'},
+  {k:['aftercare','care','heal','healing'],r:'After your tattoo: wash gently, moisturise, avoid sun, don\'t pick the peel. We\'ll give you a full aftercare sheet at your appointment. 🌿'},
+  {k:['instagram','social'],r:'Follow us @azaleainkza on Instagram for our latest work!'},
+  {k:['deposit'],r:'We require a deposit to secure your appointment. It goes toward the cost of your tattoo. Non-refundable with less than 48hrs notice.'},
+];
+function toggleChat(){
+  var w=document.getElementById('chatWindow');
+  w.classList.toggle('open');
+}
+function sendMsg(){
+  var input=document.getElementById('chatInput');
+  var txt=input.value.trim();
+  if(!txt)return;
+  addMsg(txt,'user');
+  input.value='';
+  document.getElementById('chatPills').style.display='none';
+  var typing=document.getElementById('chatTyping');
+  typing.style.display='block';
+  setTimeout(function(){
+    typing.style.display='none';
+    var low=txt.toLowerCase();
+    var resp='Thanks for reaching out! For the fastest response, WhatsApp us on <strong>+27 66 547 2493</strong>. 🖊️';
+    for(var i=0;i<KB.length;i++){
+      var hit=KB[i].k.some(function(kw){return low.indexOf(kw)>-1;});
+      if(hit){resp=KB[i].r;break;}
+    }
+    addMsg(resp,'bot');
+  },900);
+}
+function quickReply(txt){
+  addMsg(txt,'user');
+  document.getElementById('chatPills').style.display='none';
+  var typing=document.getElementById('chatTyping');
+  typing.style.display='block';
+  setTimeout(function(){
+    typing.style.display='none';
+    var low=txt.toLowerCase();
+    var resp='Thanks for reaching out! WhatsApp us on <strong>+27 66 547 2493</strong> for the fastest reply.';
+    for(var i=0;i<KB.length;i++){
+      var hit=KB[i].k.some(function(kw){return low.indexOf(kw)>-1;});
+      if(hit){resp=KB[i].r;break;}
+    }
+    addMsg(resp,'bot');
+  },800);
+}
+function addMsg(txt,cls){
+  var msgs=document.getElementById('chatMessages');
+  var div=document.createElement('div');
+  div.className='chat-msg '+cls;
+  div.innerHTML=txt;
+  msgs.appendChild(div);
+  msgs.scrollTop=msgs.scrollHeight;
+}
+
+// INK DRIP CURSOR EFFECT
+(function(){
+  var lx=0,ly=0;
+  var colors=['#BF1F72','#E04A90','#9090A8','#C4A55A'];
+  document.addEventListener('mousemove',function(e){
+    var dx=e.clientX-lx,dy=e.clientY-ly;
+    if(dx*dx+dy*dy<1000)return;
+    lx=e.clientX;ly=e.clientY;
+    var el=document.createElement('div');
+    var h=Math.random()*40+15;
+    var w=Math.random()*4+2;
+    var color=colors[Math.floor(Math.random()*colors.length)];
+    el.style.cssText='position:fixed;left:'+(e.clientX-w/2)+'px;top:'+e.clientY+'px;width:'+w+'px;height:0;border-radius:0 0 '+w+'px '+w+'px;background:'+color+';pointer-events:none;z-index:9999;opacity:.9;transition:height .3s ease,opacity 1.6s ease';
+    document.body.appendChild(el);
+    requestAnimationFrame(function(){requestAnimationFrame(function(){
+      el.style.height=h+'px';
+      setTimeout(function(){el.style.opacity='0';},250);
+    });});
+    setTimeout(function(){if(el.parentNode)el.parentNode.removeChild(el);},2000);
+  },{passive:true});
+})();
+</script>
+</body>
+</html>
