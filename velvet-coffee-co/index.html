@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VELVET. coffee co — Specialty Coffee, Kloof</title>
+<meta name="description" content="Specialty slow-brew coffee in the Maytime Centre, Kloof. V60, AeroPress, flat whites and the friendliest baristas on the Upper Highway.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "VELVET. coffee co",
+  "telephone": "+27 72 449 5228",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Shop 8, Maytime Centre, Charles Way",
+    "addressLocality": "Kloof",
+    "addressRegion": "KwaZulu-Natal",
+    "postalCode": "3610",
+    "addressCountry": "ZA"
+  },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "145" },
+  "servesCuisine": "Coffee",
+  "priceRange": "R"
+}
+</script>
+<style>
+:root{
+  --void:#120B10;
+  --plum:#1D1119;
+  --plum-2:#271722;
+  --velvet:#8E2A4B;
+  --velvet-hot:#C84D74;
+  --cream:#F2E9E4;
+  --fog:rgba(242,233,228,.55);
+  --line:rgba(242,233,228,.12);
+  --mono:'JetBrains Mono',monospace;
+  --sans:'Space Grotesk',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--void);color:var(--cream);font-family:var(--sans);line-height:1.6;overflow-x:hidden}
+::selection{background:var(--velvet);color:var(--cream)}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* draft ribbon */
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--velvet);color:var(--cream);font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px}
+
+/* grain */
+.grain{position:fixed;inset:0;pointer-events:none;z-index:2;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E")}
+
+/* nav */
+nav{position:fixed;top:28px;left:0;right:0;z-index:50;transition:background .3s,box-shadow .3s}
+nav.scrolled{background:rgba(18,11,16,.92);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;max-width:1180px;margin:0 auto}
+.logo{font-weight:700;font-size:20px;letter-spacing:.02em;text-decoration:none}
+.logo span{color:var(--velvet-hot)}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{text-decoration:none;font-size:13px;font-family:var(--mono);letter-spacing:.1em;text-transform:lowercase;color:var(--fog);transition:color .2s}
+.nav-links a:hover,.nav-links a:focus-visible{color:var(--cream)}
+.nav-cta{font-family:var(--mono);font-size:12px;letter-spacing:.08em;border:1px solid var(--velvet);color:var(--cream);padding:9px 18px;border-radius:99px;text-decoration:none;transition:background .25s}
+.nav-cta:hover,.nav-cta:focus-visible{background:var(--velvet)}
+@media(max-width:760px){.nav-links{display:none}}
+
+/* hero */
+header{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.sheen{position:absolute;inset:-20%;background:
+  radial-gradient(60% 50% at 70% 30%,rgba(142,42,75,.35),transparent 65%),
+  radial-gradient(50% 45% at 25% 75%,rgba(200,77,116,.16),transparent 60%),
+  radial-gradient(45% 40% at 50% 50%,rgba(39,23,34,.9),transparent 70%);
+  animation:sheen 14s ease-in-out infinite alternate;filter:blur(8px)}
+@keyframes sheen{from{transform:translate3d(-3%,-2%,0) scale(1)}to{transform:translate3d(3%,3%,0) scale(1.08)}}
+.hero-in{position:relative;z-index:3;padding-top:120px}
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--velvet-hot);margin-bottom:22px}
+h1{font-size:clamp(52px,10vw,132px);font-weight:700;line-height:.95;letter-spacing:-.03em}
+h1 .dot{color:var(--velvet-hot)}
+.hero-sub{max-width:520px;margin-top:28px;color:var(--fog);font-size:17px;font-weight:300}
+.hero-meta{display:flex;flex-wrap:wrap;gap:26px;margin-top:42px;font-family:var(--mono);font-size:12.5px;color:var(--fog)}
+.hero-meta strong{color:var(--cream);font-weight:500}
+.stars{color:var(--velvet-hot);letter-spacing:2px}
+
+/* marquee */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:16px 0;background:var(--plum)}
+.marquee-track{display:flex;gap:56px;white-space:nowrap;animation:slide 28s linear infinite;font-family:var(--mono);font-size:13px;letter-spacing:.18em;text-transform:lowercase;color:var(--fog)}
+.marquee-track em{color:var(--velvet-hot);font-style:normal}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* sections */
+section{padding:110px 0}
+.sec-kicker{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--velvet-hot);margin-bottom:16px}
+h2{font-size:clamp(32px,5vw,56px);font-weight:700;letter-spacing:-.02em;line-height:1.05;margin-bottom:22px}
+.lede{color:var(--fog);max-width:560px;font-weight:300}
+
+/* story split */
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+@media(max-width:860px){.split{grid-template-columns:1fr}}
+.frame{position:relative;border-radius:20px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.frame img{width:100%;height:520px;object-fit:cover;transition:transform .8s ease}
+.frame:hover img{transform:scale(1.04)}
+.frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(18,11,16,.55))}
+.story-points{margin-top:34px;display:grid;gap:20px}
+.point{display:flex;gap:16px;align-items:flex-start}
+.point svg{flex:none;margin-top:3px}
+.point b{display:block;font-weight:500}
+.point span{color:var(--fog);font-size:14.5px;font-weight:300}
+
+/* brew methods */
+.brews{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:56px}
+@media(max-width:960px){.brews{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.brews{grid-template-columns:1fr}}
+.brew{background:var(--plum);border:1px solid var(--line);border-radius:18px;padding:30px 26px;transition:transform .3s,border-color .3s}
+.brew:hover{transform:translateY(-6px);border-color:var(--velvet)}
+.brew .num{font-family:var(--mono);font-size:11px;color:var(--velvet-hot);letter-spacing:.2em}
+.brew h3{font-size:20px;font-weight:500;margin:14px 0 8px}
+.brew p{color:var(--fog);font-size:14px;font-weight:300}
+
+/* menu */
+.menu-note{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;color:var(--velvet-hot);border:1px dashed var(--velvet);border-radius:10px;display:inline-block;padding:8px 14px;margin-bottom:38px}
+.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 64px;margin-top:8px}
+@media(max-width:760px){.menu-grid{grid-template-columns:1fr}}
+.mi{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:17px 0;border-bottom:1px solid var(--line)}
+.mi b{font-weight:500}
+.mi small{display:block;color:var(--fog);font-weight:300;font-size:13px;margin-top:3px}
+.mi .dots{flex:1;border-bottom:1px dotted rgba(242,233,228,.25);transform:translateY(-4px)}
+.mi .price{font-family:var(--mono);font-size:13px;color:var(--velvet-hot);white-space:nowrap}
+
+/* reviews */
+.reviews{background:var(--plum);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
+@media(max-width:900px){.rev-grid{grid-template-columns:1fr}}
+.rev{background:var(--plum-2);border:1px solid var(--line);border-radius:18px;padding:30px 28px;display:flex;flex-direction:column;gap:16px}
+.rev p{font-weight:300;font-size:15.5px}
+.rev footer{font-family:var(--mono);font-size:12px;color:var(--fog)}
+.badge-row{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-top:48px;font-family:var(--mono);font-size:12.5px;color:var(--fog)}
+.gbadge{display:flex;align-items:center;gap:10px;border:1px solid var(--line);padding:12px 20px;border-radius:99px}
+.gbadge b{color:var(--cream);font-size:16px}
+
+/* visit */
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+@media(max-width:860px){.visit-grid{grid-template-columns:1fr}}
+.vitem{display:flex;gap:16px;padding:20px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+.vitem svg{flex:none;margin-top:4px}
+.vitem b{display:block;font-weight:500;margin-bottom:3px}
+.vitem span,.vitem a{color:var(--fog);font-size:14.5px;font-weight:300;text-decoration:none}
+.vitem a:hover,.vitem a:focus-visible{color:var(--velvet-hot)}
+.cta-big{display:inline-block;margin-top:36px;background:var(--velvet);color:var(--cream);text-decoration:none;font-family:var(--mono);font-size:13px;letter-spacing:.1em;padding:16px 34px;border-radius:99px;transition:background .25s,transform .25s}
+.cta-big:hover,.cta-big:focus-visible{background:var(--velvet-hot);transform:translateY(-2px)}
+
+/* footer */
+footer.site{border-top:1px solid var(--line);padding:44px 0;color:var(--fog);font-family:var(--mono);font-size:12px}
+.foot-in{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+a:focus-visible,button:focus-visible{outline:2px solid var(--velvet-hot);outline-offset:3px;border-radius:4px}
+
+@media (prefers-reduced-motion: reduce){
+  .sheen,.marquee-track{animation:none}
+  .reveal{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+  .frame:hover img,.brew:hover{transform:none}
+}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for VELVET. coffee co by Arkatype Digital · not yet live</div>
+<div class="grain" aria-hidden="true"></div>
+
+<nav id="nav" aria-label="Main">
+  <div class="nav-in">
+    <a class="logo" href="#top">velvet<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#story">story</a></li>
+      <li><a href="#brews">slow brew</a></li>
+      <li><a href="#menu">menu</a></li>
+      <li><a href="#reviews">people</a></li>
+      <li><a href="#visit">visit</a></li>
+    </ul>
+    <a class="nav-cta" href="tel:+27724495228">072 449 5228</a>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="sheen" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <p class="kicker">specialty coffee · maytime centre · kloof</p>
+    <h1>velvet<span class="dot">.</span><br>coffee co</h1>
+    <p class="hero-sub">Slow-brew specialty coffee poured with actual care — V60, AeroPress and a flat white people drive across the Upper Highway for.</p>
+    <div class="hero-meta">
+      <div><span class="stars">★★★★★</span>&nbsp; <strong>4.8</strong> · 145 Google reviews</div>
+      <div>dine-in · takeaway · delivery</div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>v60 pour-over <em>·</em> aeropress <em>·</em> flat white <em>·</em> single origin <em>·</em> slow brew <em>·</em> cappuccino <em>·</em> filter <em>·</em> cold brew <em>·</em></span>
+    <span>v60 pour-over <em>·</em> aeropress <em>·</em> flat white <em>·</em> single origin <em>·</em> slow brew <em>·</em> cappuccino <em>·</em> filter <em>·</em> cold brew <em>·</em></span>
+  </div>
+</div>
+
+<section id="story">
+  <div class="wrap split">
+    <div class="reveal">
+      <p class="sec-kicker">the spot</p>
+      <h2>Coffee taken seriously.<br>Nothing else is.</h2>
+      <p class="lede">Tucked into the Maytime Centre on Charles Way, VELVET. is the kind of counter where the barista remembers your order before you say it — and where slow-brew methods aren't a gimmick, they're the point.</p>
+      <div class="story-points">
+        <div class="point">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C84D74" stroke-width="2" stroke-linecap="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/></svg>
+          <div><b>Slow brew, done properly</b><span>V60, AeroPress and pour-over on the menu daily — rare finds this side of Durban.</span></div>
+        </div>
+        <div class="point">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C84D74" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <div><b>Baristas people review by name</b><span>Read the Google reviews — the team here gets called out for warmth, one cup at a time.</span></div>
+        </div>
+        <div class="point">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C84D74" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
+          <div><b>In, out, or delivered</b><span>Sit down, grab and go, or get it delivered — your call.</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="frame reveal">
+      <img src="images/pourover.jpg" alt="Pour-over coffee being brewed slowly" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section id="brews" style="padding-top:0">
+  <div class="wrap">
+    <p class="sec-kicker reveal">the craft</p>
+    <h2 class="reveal">Four ways to take it slow</h2>
+    <div class="brews">
+      <div class="brew reveal"><span class="num">01</span><h3>V60 pour-over</h3><p>Bright, clean, tea-like clarity. The reviewer favourite.</p></div>
+      <div class="brew reveal"><span class="num">02</span><h3>AeroPress</h3><p>Full-bodied and smooth — pressure-brewed to order.</p></div>
+      <div class="brew reveal"><span class="num">03</span><h3>Flat white</h3><p>Velvet by name. Silky microfoam over a double shot.</p></div>
+      <div class="brew reveal"><span class="num">04</span><h3>Filter</h3><p>Unhurried batch brew for unhurried mornings.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="menu" style="padding-top:0">
+  <div class="wrap">
+    <p class="sec-kicker reveal">menu</p>
+    <h2 class="reveal">From the counter</h2>
+    <p class="menu-note reveal">sample layout — final menu &amp; prices supplied by velvet.</p>
+    <div class="menu-grid reveal">
+      <div class="mi"><div><b>Flat white</b><small>double shot, silky microfoam</small></div><span class="dots"></span><span class="price">R —</span></div>
+      <div class="mi"><div><b>Cappuccino</b><small>regular or large</small></div><span class="dots"></span><span class="price">R —</span></div>
+      <div class="mi"><div><b>V60 pour-over</b><small>single origin, brewed to order</small></div><span class="dots"></span><span class="price">R —</span></div>
+      <div class="mi"><div><b>AeroPress</b><small>smooth, full-bodied</small></div><span class="dots"></span><span class="price">R —</span></div>
+      <div class="mi"><div><b>Iced &amp; non-coffee options</b><small>praised in reviews — ask the counter</small></div><span class="dots"></span><span class="price">R —</span></div>
+      <div class="mi"><div><b>Sourdough panini</b><small>toasted fresh</small></div><span class="dots"></span><span class="price">R —</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <p class="sec-kicker reveal">people</p>
+    <h2 class="reveal">What Kloof says</h2>
+    <div class="rev-grid">
+      <blockquote class="rev reveal">
+        <p>"I was specifically looking for V60, or AeroPress or any slow-brew coffee method and Velvet delivered! I'd highly recommend this place for coffee!"</p>
+        <footer>— Charl N. · Google review</footer>
+      </blockquote>
+      <blockquote class="rev reveal">
+        <p>"Velvet is wonderfully relaxing. Great non-coffee options. Good prices."</p>
+        <footer>— Renette A. · Google review</footer>
+      </blockquote>
+      <blockquote class="rev reveal">
+        <p>"The friendliest barista I have ever encountered. He gave us all the warmth and kindness."</p>
+        <footer>— Zazi · Google review</footer>
+      </blockquote>
+    </div>
+    <div class="badge-row reveal">
+      <div class="gbadge"><svg width="18" height="18" viewBox="0 0 24 24" fill="#C84D74"><path d="M12 2l2.9 6.26L21 9.27l-5 4.14L17.8 20 12 16.55 6.2 20 8 13.41l-5-4.14 6.1-1.01z"/></svg><span><b>4.8</b> / 5</span></div>
+      <span>145 reviews on Google · Maytime Centre, Kloof</span>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap visit-grid">
+    <div class="reveal">
+      <p class="sec-kicker">visit</p>
+      <h2>Come find the counter</h2>
+      <div class="vitem">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C84D74" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div><b>Where</b><span>Shop 8, Maytime Centre, Charles Way, Kloof</span></div>
+      </div>
+      <div class="vitem">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C84D74" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <div><b>Call</b><a href="tel:+27724495228">072 449 5228</a></div>
+      </div>
+      <div class="vitem">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C84D74" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <div><b>Hours</b><span>Open mornings until mid-afternoon — confirm on the day <em style="font-family:var(--mono);font-size:11px;color:var(--velvet-hot)">(draft — hours to be confirmed)</em></span></div>
+      </div>
+      <div class="vitem">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C84D74" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#C84D74" stroke="none"/></svg>
+        <div><b>Follow</b><a href="https://www.instagram.com/velvet.coffee.co" rel="noopener" target="_blank">@velvet.coffee.co</a></div>
+      </div>
+      <a class="cta-big" href="tel:+27724495228">order ahead → 072 449 5228</a>
+    </div>
+    <div class="frame reveal">
+      <img src="images/flatwhite.jpg" alt="Flat white with latte art on a dark counter" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap foot-in">
+    <span>velvet. coffee co · maytime centre · kloof</span>
+    <span>concept by arkatype digital · draft — awaiting client sign-off</span>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 40), {passive:true});
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
