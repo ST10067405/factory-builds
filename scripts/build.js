@@ -34,7 +34,7 @@ function saveSlugs(slugs) {
 function listBuildFolders() {
   return fs
     .readdirSync(ROOT, { withFileTypes: true })
-    .filter((entry) => entry.isDirectory() && !EXCLUDED_DIRS.has(entry.name))
+    .filter((entry) => entry.isDirectory() && !EXCLUDED_DIRS.has(entry.name) && !entry.name.startsWith("."))
     .map((entry) => entry.name);
 }
 
