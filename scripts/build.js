@@ -18,6 +18,7 @@ const EXCLUDED_DIRS = new Set([
   ".git",
   ".vercel",
   "node_modules",
+  "_template",
 ]);
 
 function loadSlugs() {
