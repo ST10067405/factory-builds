@@ -310,7 +310,13 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--velvet-hot);outline
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C84D74" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#C84D74" stroke="none"/></svg>
         <div><b>Follow</b><a href="https://www.instagram.com/velvet.coffee.co" rel="noopener" target="_blank">@velvet.coffee.co</a></div>
       </div>
-      <a class="cta-big" href="tel:+27724495228">order ahead → 072 449 5228</a>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center">
+        <a class="cta-big" href="tel:+27724495228">order ahead → 072 449 5228</a>
+        <a class="cta-big" style="background:transparent;border:1px solid var(--velvet)" href="https://www.google.com/maps/search/?api=1&query=VELVET+coffee+co+Maytime+Centre+Charles+Way+Kloof" target="_blank" rel="noopener">navigate → google maps</a>
+      </div>
+      <div style="margin-top:28px;border-radius:16px;overflow:hidden;border:1px solid var(--line)">
+        <iframe title="Map to VELVET. coffee co" src="https://maps.google.com/maps?q=VELVET%20coffee%20co%20Maytime%20Centre%20Charles%20Way%20Kloof&output=embed" width="100%" height="220" style="border:0;display:block;filter:grayscale(.4) contrast(1.05)" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </div>
     <div class="frame reveal">
       <img src="images/flatwhite.jpg" alt="Flat white with latte art on a dark counter" loading="lazy">
@@ -325,11 +331,71 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--velvet-hot);outline
   </div>
 </footer>
 
+<!-- Comms Bridge: WhatsApp + Q&A chat -->
+<style>
+.fab-stack{position:fixed;right:20px;bottom:20px;z-index:80;display:flex;flex-direction:column;gap:12px;align-items:flex-end}
+.fab{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;cursor:pointer;border:none;box-shadow:0 10px 30px rgba(0,0,0,.45);transition:transform .2s}
+.fab:hover,.fab:focus-visible{transform:scale(1.08)}
+.fab-wa{background:#25D366}
+.fab-chat{background:var(--velvet)}
+.chatbox{position:fixed;right:20px;bottom:150px;z-index:81;width:min(340px,calc(100vw - 40px));background:var(--plum);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:none;flex-direction:column;box-shadow:0 24px 60px rgba(0,0,0,.55)}
+.chatbox.open{display:flex}
+.chat-head{background:var(--velvet);padding:14px 18px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;display:flex;justify-content:space-between;align-items:center}
+.chat-head button{background:none;border:none;color:var(--cream);cursor:pointer;font-size:16px;line-height:1}
+.chat-log{padding:16px;display:flex;flex-direction:column;gap:10px;max-height:280px;overflow-y:auto}
+.msg{max-width:85%;padding:10px 14px;border-radius:14px;font-size:13.5px;font-weight:300;line-height:1.5}
+.msg.bot{background:var(--plum-2);border:1px solid var(--line);align-self:flex-start}
+.msg.user{background:var(--velvet);align-self:flex-end}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0 16px 16px}
+.chip{font-family:var(--mono);font-size:11px;letter-spacing:.06em;border:1px solid var(--velvet);background:none;color:var(--cream);border-radius:99px;padding:7px 13px;cursor:pointer;transition:background .2s}
+.chip:hover,.chip:focus-visible{background:var(--velvet)}
+@media (prefers-reduced-motion: reduce){.fab:hover{transform:none}}
+</style>
+<div class="fab-stack">
+  <a class="fab fab-wa" href="https://wa.me/27724495228?text=Hi%20VELVET.%20%E2%80%94%20saw%20your%20site%2C%20quick%20question" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.5 14.1c-.2.7-1.4 1.3-1.9 1.4-.5.1-1.1.2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.3 1.4 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2.2 1c.3.1.5.2.5.3.1.1.1.5-.1 1.1z"/></svg>
+  </a>
+  <button class="fab fab-chat" id="chatToggle" aria-label="Ask a question" aria-expanded="false">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#F2E9E4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+</div>
+<div class="chatbox" id="chatbox" role="dialog" aria-label="Quick questions">
+  <div class="chat-head"><span>velvet. — quick answers</span><button id="chatClose" aria-label="Close chat">✕</button></div>
+  <div class="chat-log" id="chatLog">
+    <div class="msg bot">hey ☕ ask me anything about velvet. — or tap a question below.</div>
+  </div>
+  <div class="chips" id="chatChips"></div>
+</div>
 <script>
 const nav = document.getElementById('nav');
 addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 40), {passive:true});
 const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12});
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// --- Comms Bridge chat (rules-based v1; booking-platform hook-in on upgrade) ---
+const QA = [
+  { q: 'where are you?', a: 'Shop 8, Maytime Centre, Charles Way, Kloof. Tap "navigate" in the visit section and your Maps app will bring you straight to us.' },
+  { q: 'what are your hours?', a: 'Mornings until mid-afternoon (around 4:30pm) — best to confirm on the day: 072 449 5228. (draft — final hours from VELVET.)' },
+  { q: 'what do you serve?', a: 'Specialty slow brew — V60 pour-over, AeroPress, filter — plus flat whites, cappuccinos and non-coffee options. Dine-in, takeaway or delivery.' },
+  { q: 'how do i order or book?', a: 'Call or WhatsApp 072 449 5228 and we will have it ready. Online booking is coming to this site soon.' }
+];
+const box = document.getElementById('chatbox'), log = document.getElementById('chatLog'), chips = document.getElementById('chatChips'), toggle = document.getElementById('chatToggle');
+QA.forEach((item, i) => {
+  const b = document.createElement('button');
+  b.className = 'chip'; b.textContent = item.q;
+  b.onclick = () => {
+    log.insertAdjacentHTML('beforeend', '<div class="msg user">' + item.q + '</div>');
+    setTimeout(() => { log.insertAdjacentHTML('beforeend', '<div class="msg bot">' + item.a + '</div>'); log.scrollTop = log.scrollHeight; }, 350);
+    log.scrollTop = log.scrollHeight;
+  };
+  chips.appendChild(b);
+});
+const wa = document.createElement('a');
+wa.className = 'chip'; wa.textContent = 'something else → whatsapp us';
+wa.href = 'https://wa.me/27724495228'; wa.target = '_blank'; wa.rel = 'noopener'; wa.style.textDecoration = 'none'; wa.style.display = 'inline-block';
+chips.appendChild(wa);
+toggle.onclick = () => { const open = box.classList.toggle('open'); toggle.setAttribute('aria-expanded', open); };
+document.getElementById('chatClose').onclick = () => { box.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); };
 </script>
 </body>
 </html>
