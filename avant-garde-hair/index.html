@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avant Garde Hair Hillcrest — Arty Colour &amp; Cutting Salon</title>
+<meta name="description" content="Avant Garde Hair Hillcrest — a 4.9-star, 98-review women-owned, LGBTQ+ friendly salon at Fig Tree Farm. Amber and her team are known for colour-correction, precise cuts, and genuinely caring service.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "Avant Garde Hair Hillcrest",
+  "telephone": "+27641173763",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Fig Tree Farm, 56 Inanda Rd",
+    "addressLocality": "Hillcrest",
+    "addressRegion": "KwaZulu-Natal",
+    "addressCountry": "ZA"
+  },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "98" }
+}
+</script>
+<style>
+/* ===== THEME — the ONLY block you re-style per client ===== */
+:root{
+  --bg:#F6F0EA;
+  --surface:#FFFFFF;
+  --ink:#2B1B2E;
+  --mut:rgba(43,27,46,.62);
+  --brand:#2B1B2E;
+  --accent:#FF6B6B;
+  --line:rgba(43,27,46,.14);
+  --display:'Syne',sans-serif;
+  --body:'Inter',sans-serif;
+}
+/* ===== BASE (rarely touched) ===== */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65;overflow-x:hidden}
+img{display:block;max-width:100%}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand);color:var(--bg);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600}
+nav{position:fixed;top:28px;left:0;right:0;z-index:50;transition:background .3s,box-shadow .3s}
+nav.scrolled{background:var(--bg);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1140px;margin:0 auto}
+.logo{font-family:var(--display);font-size:22px;font-weight:700;text-decoration:none;color:var(--brand)}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{text-decoration:none;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);transition:color .2s}
+.nav-links a:hover,.nav-links a:focus-visible{color:var(--accent)}
+.nav-cta{font-size:13px;font-weight:600;background:var(--accent);color:var(--bg);padding:10px 20px;border-radius:99px;text-decoration:none}
+@media(max-width:760px){.nav-links{display:none}}
+header{min-height:92svh;display:flex;flex-direction:column;justify-content:center;padding-top:110px;position:relative;overflow:hidden}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(44px,7.5vw,90px);line-height:1.03;color:var(--ink)}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--accent);margin-bottom:20px}
+.hero-sub{max-width:520px;margin-top:24px;color:var(--mut);font-size:17px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:24px;margin-top:36px;font-size:13.5px;color:var(--mut)}
+.stars{color:var(--accent);letter-spacing:2px}
+section{padding:100px 0}
+h2{font-family:var(--display);font-weight:700;font-size:clamp(32px,5vw,54px);line-height:1.08;margin-bottom:20px}
+.sec-kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--accent);margin-bottom:14px}
+.lede{color:var(--mut);max-width:560px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
+@media(max-width:900px){.cards{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:32px 28px;transition:transform .3s}
+.card:hover{transform:translateY(-6px)}
+.card h3{font-family:var(--display);font-weight:700;font-size:22px;margin-bottom:10px}
+.card p{color:var(--mut);font-size:14.5px}
+.menu-note{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--accent);border:1px dashed var(--accent);border-radius:10px;display:inline-block;padding:8px 14px;margin-bottom:34px}
+.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 60px}
+@media(max-width:760px){.menu-grid{grid-template-columns:1fr}}
+.mi{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.mi b{font-weight:600}
+.mi small{display:block;color:var(--mut);font-size:13px}
+.mi .dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-4px)}
+.mi .price{font-size:13.5px;font-weight:600;color:var(--accent);white-space:nowrap}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+@media(max-width:900px){.rev-grid{grid-template-columns:1fr}}
+.rev{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:32px 30px}
+.rev p{font-family:var(--display);font-weight:600;font-size:19px;font-style:italic;line-height:1.45}
+.rev footer{margin-top:16px;font-size:13px;color:var(--mut)}
+.gallery{display:grid;grid-template-columns:1.3fr 1fr;gap:22px}
+@media(max-width:760px){.gallery{grid-template-columns:1fr}}
+.gallery img{width:100%;height:100%;min-height:260px;object-fit:cover;border-radius:20px}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+@media(max-width:860px){.visit-grid{grid-template-columns:1fr}}
+.vitem{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.vitem b{display:block;font-weight:600}
+.vitem span,.vitem a{color:var(--mut);font-size:14.5px;text-decoration:none}
+.cta-big{display:inline-block;margin-top:32px;background:var(--accent);color:var(--bg);text-decoration:none;font-size:14px;font-weight:600;padding:15px 32px;border-radius:99px;transition:transform .25s}
+.cta-big:hover{transform:translateY(-2px)}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px}
+.foot-in{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+/* real-work gallery */
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:52px}
+@media(max-width:820px){.work-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.work-grid{grid-template-columns:1fr}}
+.work-grid figure{position:relative;border-radius:20px;overflow:hidden;margin:0}
+.work-grid img{width:100%;height:300px;object-fit:cover;transition:transform .7s ease}
+.work-grid figure:hover img{transform:scale(1.05)}
+.work-grid figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 18px 14px;font-size:12.5px;color:#fff;background:linear-gradient(transparent,rgba(43,27,46,.72))}
+.work-note{font-size:12px;color:var(--mut);margin-top:16px;font-style:italic}
+/* journal teaser */
+.journal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+@media(max-width:820px){.journal-grid{grid-template-columns:1fr}}
+.jpost{display:block;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:30px 26px;text-decoration:none;color:inherit;transition:transform .3s,box-shadow .3s}
+.jpost:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(43,27,46,.1)}
+.jpost .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.jpost h3{font-family:var(--display);font-weight:700;font-size:22px;margin:12px 0 8px}
+.jpost p{color:var(--mut);font-size:14px}
+.jpost .more{margin-top:14px;font-size:13px;font-weight:700;color:var(--accent)}
+/* ===== SIGNATURE MOTION: animated gradient-mesh colour-sweep behind hero (nod to colour work) ===== */
+.mesh{position:absolute;inset:-20%;z-index:0;pointer-events:none;opacity:.65;filter:blur(60px);background:
+  radial-gradient(circle at 20% 30%, #FF6B6B 0%, transparent 45%),
+  radial-gradient(circle at 80% 20%, #9C5FFF 0%, transparent 45%),
+  radial-gradient(circle at 50% 80%, #FFC15E 0%, transparent 45%),
+  radial-gradient(circle at 85% 75%, #2B1B2E 0%, transparent 50%);
+  background-size:180% 180%;
+  animation:meshSweep 22s ease-in-out infinite;
+}
+@keyframes meshSweep{
+  0%{background-position:0% 0%}
+  50%{background-position:100% 60%}
+  100%{background-position:0% 0%}
+}
+header .wrap{position:relative;z-index:1}
+/* ===== COMMS BRIDGE (standard on every build) ===== */
+.fab-stack{position:fixed;right:20px;bottom:20px;z-index:80;display:flex;flex-direction:column;gap:12px;align-items:flex-end}
+.fab{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;cursor:pointer;border:none;box-shadow:0 10px 30px rgba(0,0,0,.3);transition:transform .2s}
+.fab:hover,.fab:focus-visible{transform:scale(1.08)}
+.fab-wa{background:#25D366}
+.fab-chat{background:var(--brand)}
+.chatbox{position:fixed;right:20px;bottom:150px;z-index:81;width:min(340px,calc(100vw - 40px));background:var(--bg);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:none;flex-direction:column;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.chatbox.open{display:flex}
+.chat-head{background:var(--brand);color:var(--bg);padding:14px 18px;font-size:13px;font-weight:600;display:flex;justify-content:space-between;align-items:center}
+.chat-head button{background:none;border:none;color:var(--bg);cursor:pointer;font-size:16px}
+.chat-log{padding:16px;display:flex;flex-direction:column;gap:10px;max-height:280px;overflow-y:auto}
+.msg{max-width:85%;padding:10px 14px;border-radius:14px;font-size:13.5px;line-height:1.5}
+.msg.bot{background:var(--surface);align-self:flex-start;border:1px solid var(--line)}
+.msg.user{background:var(--accent);color:var(--bg);align-self:flex-end}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0 16px 16px}
+.chip{font-size:12px;font-weight:600;border:1px solid var(--accent);background:none;color:var(--accent);border-radius:99px;padding:7px 13px;cursor:pointer;transition:background .2s,color .2s}
+.chip:hover,.chip:focus-visible{background:var(--accent);color:var(--bg)}
+@media (prefers-reduced-motion: reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+  .card:hover,.fab:hover,.cta-big:hover{transform:none}
+  .mesh{animation:none;background-position:0% 0%}
+}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for Avant Garde Hair Hillcrest by Arkatype Digital · not yet live</div>
+
+<nav id="nav" aria-label="Main">
+  <div class="nav-in">
+    <a class="logo" href="#top">Avant Garde Hair</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Our Work</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#journal">Journal</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a class="nav-cta" href="tel:+27641173763">064 117 3763</a>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="mesh" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="kicker">Hair Salon · Hillcrest</p>
+    <h1>Colour Is Our<br>Language</h1>
+    <p class="hero-sub">Amber and her team run an arty, women-owned, LGBTQ+ friendly salon at Fig Tree Farm — loved for colour-correction that actually corrects, precise cuts, and never double-booking your time.</p>
+    <div class="hero-meta">
+      <div><span class="stars">★★★★★</span>&nbsp; <strong>4.9</strong> · 98 Google reviews</div>
+      <div>Fig Tree Farm, 56 Inanda Rd, Hillcrest</div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <p class="sec-kicker reveal">about</p>
+    <h2 class="reveal">Led By Amber, Made For You</h2>
+    <p class="lede reveal">Set at Fig Tree Farm in Hillcrest, Avant Garde Hair is a women-owned, LGBTQ+ friendly salon with an arty, editorial edge. Amber and her team are known across dozens of reviews for colour expertise, precise cutting, and genuinely caring about you and your hair.</p>
+    <div class="cards">
+      <div class="card reveal"><h3>Colour &amp; Correction</h3><p>"Amber is absolutely amazing with colour work and a precise cut. She colour-corrected my hair perfectly." Reviewers consistently single out her colour eye.</p></div>
+      <div class="card reveal"><h3>Never Double-Booked</h3><p>"Always on time, no double-up appointments wasting your time!" Your slot is your slot — no rushing, no waiting.</p></div>
+      <div class="card reveal"><h3>Genuinely Cares</h3><p>"Not only does she have years of experience, but she genuinely cares about you and your hair." That's the reputation, visit after visit.</p></div>
+    </div>
+    <div class="gallery reveal" style="margin-top:52px">
+      <img src="images/hero-salon.jpg" alt="Avant Garde Hair styling area" loading="lazy">
+      <img src="images/about-colour.jpg" alt="Hair colour work in progress" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section id="work" style="padding-top:0">
+  <div class="wrap">
+    <p class="sec-kicker reveal">our work</p>
+    <h2 class="reveal">Colour With An Edge</h2>
+    <p class="lede reveal">A glimpse of the arty, editorial energy Amber and her team bring to the chair — precise cutting and colour work with real personality.</p>
+    <div class="work-grid reveal">
+      <figure><img src="images/hero-salon.jpg" alt="Styling area at Avant Garde Hair Hillcrest" loading="lazy"><figcaption>The studio at Fig Tree Farm</figcaption></figure>
+      <figure><img src="images/about-colour.jpg" alt="Colour work in progress at Avant Garde Hair" loading="lazy"><figcaption>Colour work in progress</figcaption></figure>
+      <figure><img src="images/visit-interior.jpg" alt="Salon interior at Avant Garde Hair Hillcrest" loading="lazy"><figcaption>Cut &amp; finish</figcaption></figure>
+    </div>
+    <p class="work-note reveal">Studio imagery shown here; full client gallery supplied by Avant Garde Hair Hillcrest.</p>
+  </div>
+</section>
+
+<section id="services" style="padding-top:0">
+  <div class="wrap">
+    <p class="sec-kicker reveal">services</p>
+    <h2 class="reveal">Cuts, Colour &amp; Care</h2>
+    <p class="menu-note reveal">sample layout — final service list and prices supplied by Avant Garde Hair Hillcrest</p>
+    <div class="menu-grid reveal">
+      <div class="mi"><div><b>Precision Cut</b><small>Shaped and finished to suit you</small></div><span class="dots"></span><span class="price">R —</span></div>
+      <div class="mi"><div><b>Colour &amp; Colour-Correction</b><small>Amber's specialty — full colour or correction work</small></div><span class="dots"></span><span class="price">R —</span></div>
+      <div class="mi"><div><b>Head Massage</b><small>A relaxing touch reviewers rave about</small></div><span class="dots"></span><span class="price">R —</span></div>
+      <div class="mi"><div><b>Blow Wave &amp; Styling</b><small>Wash, blow dry &amp; finish</small></div><span class="dots"></span><span class="price">R —</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" style="padding-top:0">
+  <div class="wrap">
+    <p class="sec-kicker reveal">reviews</p>
+    <h2 class="reveal">98 Reviews, 4.9 Stars</h2>
+    <div class="rev-grid">
+      <blockquote class="rev reveal"><p>"Amber is one of a kind — not only does she have years of experience, but she genuinely cares about you and your hair."</p><footer>— Morgan M. · Google review</footer></blockquote>
+      <blockquote class="rev reveal"><p>"Always on time, no double-up appointments wasting your time! Amber and her team are amazing!"</p><footer>— Demi K. · Google review</footer></blockquote>
+      <blockquote class="rev reveal"><p>"Amber is absolutely amazing with colour work and a precise cut. She colour-corrected my hair perfectly."</p><footer>— Shraddha R. · Google review</footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="journal" style="padding-top:0">
+  <div class="wrap">
+    <p class="sec-kicker reveal">journal</p>
+    <h2 class="reveal">The Edit — Hair Journal</h2>
+    <p class="lede reveal">Tips Amber and her team share with clients: making colour last, caring for hair between visits, and getting the most from your appointment.</p>
+    <div class="journal-grid reveal">
+      <a class="jpost" href="learn.html"><span class="tag">Vivid</span><h3>Living with vivid & fashion colour</h3><p>Keep bold tones saturated between visits.</p><div class="more">Read in the journal &rarr;</div></a>
+      <a class="jpost" href="learn.html"><span class="tag">Correction</span><h3>What a colour correction really involves</h3><p>Why fixing colour safely takes more than one sitting.</p><div class="more">Read in the journal &rarr;</div></a>
+      <a class="jpost" href="learn.html"><span class="tag">Aftercare</span><h3>Aftercare for lightened hair</h3><p>Keep lightened hair glossy and strong.</p><div class="more">Read in the journal &rarr;</div></a>
+    </div>
+  </div>
+</section>
+
+<section id="visit" style="padding-top:0">
+  <div class="wrap visit-grid">
+    <div class="reveal">
+      <p class="sec-kicker">visit</p>
+      <h2>Come Say Hello</h2>
+      <div class="vitem"><div><b>Where</b><span>Fig Tree Farm, 56 Inanda Rd, Hillcrest, 3610</span></div></div>
+      <div class="vitem"><div><b>Call</b><a href="tel:+27641173763">064 117 3763</a></div></div>
+      <div class="vitem"><div><b>Hours</b><span>Hours to be confirmed <em style="font-size:11px;color:var(--accent)">(draft — hours to be confirmed)</em></span></div></div>
+      <div class="vitem"><div><b>Follow</b><a href="https://www.instagram.com/amberatavantgarde" rel="noopener" target="_blank">@amberatavantgarde</a></div></div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center">
+        <a class="cta-big" href="tel:+27641173763">Call to book → 064 117 3763</a>
+        <a class="cta-big" style="background:transparent;border:1px solid var(--brand);color:var(--brand)" href="https://www.google.com/maps/search/?api=1&query=Avant%20Garde%20Hair%20Fig%20Tree%20Farm%2056%20Inanda%20Rd%20Hillcrest" target="_blank" rel="noopener">Navigate → Google Maps</a>
+      </div>
+      <div style="margin-top:28px;border-radius:16px;overflow:hidden;border:1px solid var(--line)">
+        <iframe title="Map to Avant Garde Hair Hillcrest" src="https://maps.google.com/maps?q=Avant%20Garde%20Hair%20Fig%20Tree%20Farm%2056%20Inanda%20Rd%20Hillcrest&output=embed" width="100%" height="220" style="border:0;display:block" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    <div class="reveal" style="border-radius:20px;overflow:hidden">
+      <img src="images/visit-interior.jpg" alt="Avant Garde Hair salon interior" loading="lazy" style="width:100%;height:500px;object-fit:cover">
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap foot-in">
+    <span>Avant Garde Hair Hillcrest · Hillcrest</span>
+    <span>Concept by Arkatype Digital · draft — awaiting client sign-off</span>
+  </div>
+</footer>
+
+<!-- Comms Bridge (standard) -->
+<div class="fab-stack">
+  <a class="fab fab-wa" href="https://wa.me/27641173763?text=Hi%20Avant%20Garde%20Hair%2C%20I%20have%20a%20quick%20question" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.5 14.1c-.2.7-1.4 1.3-1.9 1.4-.5.1-1.1.2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.3 1.4 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2.2 1c.3.1.5.2.5.3.1.1.1.5-.1 1.1z"/></svg>
+  </a>
+  <button class="fab fab-chat" id="chatToggle" aria-label="Ask a question" aria-expanded="false">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+</div>
+<div class="chatbox" id="chatbox" role="dialog" aria-label="Quick questions">
+  <div class="chat-head"><span>Avant Garde Hair — quick answers</span><button id="chatClose" aria-label="Close chat">✕</button></div>
+  <div class="chat-log" id="chatLog"><div class="msg bot">Hi! Ask me about location, hours, services, or booking.</div></div>
+  <div class="chips" id="chatChips"></div>
+</div>
+
+<script>
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 40), {passive:true});
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// Comms Bridge chat — answers use REAL data only; booking answer is the Tier 1 upsell hook
+const QA = [
+  { q: 'Where are you?', a: 'We\'re at Fig Tree Farm, 56 Inanda Rd, Hillcrest, 3610 — use the Navigate button below to get directions.' },
+  { q: 'What are your hours?', a: 'Our hours are still being confirmed for this site (draft — final hours from Avant Garde Hair Hillcrest.)' },
+  { q: 'What services do you offer?', a: 'Cuts, colour and colour-correction, styling, and a relaxing head massage — see the Services section above for the full list.' },
+  { q: 'How do I book?', a: 'Call or WhatsApp 064 117 3763. Online booking is coming to this site soon.' }
+];
+const box = document.getElementById('chatbox'), log = document.getElementById('chatLog'), chips = document.getElementById('chatChips'), toggle = document.getElementById('chatToggle');
+QA.forEach(item => {
+  const b = document.createElement('button');
+  b.className = 'chip'; b.textContent = item.q;
+  b.onclick = () => {
+    log.insertAdjacentHTML('beforeend', '<div class="msg user">' + item.q + '</div>');
+    setTimeout(() => { log.insertAdjacentHTML('beforeend', '<div class="msg bot">' + item.a + '</div>'); log.scrollTop = log.scrollHeight; }, 350);
+    log.scrollTop = log.scrollHeight;
+  };
+  chips.appendChild(b);
+});
+const wa = document.createElement('a');
+wa.className = 'chip'; wa.textContent = 'Something else → WhatsApp us';
+wa.href = 'https://wa.me/27641173763'; wa.target = '_blank'; wa.rel = 'noopener'; wa.style.textDecoration = 'none'; wa.style.display = 'inline-block';
+chips.appendChild(wa);
+toggle.onclick = () => { const open = box.classList.toggle('open'); toggle.setAttribute('aria-expanded', open); };
+document.getElementById('chatClose').onclick = () => { box.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); };
+</script>
+</body>
+</html>

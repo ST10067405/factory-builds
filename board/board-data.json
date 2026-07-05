@@ -1,0 +1,143 @@
+{
+  "projects": {
+    "synergy-hair-kloof": {
+      "title": "Synergy Hair Kloof",
+      "status": "gate_passed",
+      "priority": "hot",
+      "notes": "Warm lead � Jaime is on their WhatsApp. Has an existing basic site (synergyhair.co.za), so pitch is a rebuild/upgrade, not greenfield. 2 real client colour-work photos on the build.",
+      "nextAction": "Deploy demo + send rebuild pitch",
+      "caveats": [
+        "Existing basic site — pitch as REBUILD",
+        "WhatsApp confirmed: 072 469 7969"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "hair",
+        "kloof",
+        "colour-specialist"
+      ]
+    },
+    "avant-garde-hair": {
+      "title": "Avant Garde Hair Hillcrest",
+      "status": "gate_passed",
+      "priority": "warm",
+      "notes": "Arty, women-owned, colour-correction salon (stylist Amber). Mobile number = good WhatsApp. No real photos indexed anywhere — using unique stock with on-page 'client to supply' note.",
+      "nextAction": "Verify listed site is dead, then outreach",
+      "caveats": [
+        "Listed site avantgarde.za.live is DEAD — verify before outreach",
+        "No real photos available — client to supply"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "hair",
+        "hillcrest",
+        "colour-correction"
+      ]
+    },
+    "village-pet-parlour": {
+      "title": "Village Pet Parlour",
+      "status": "gate_passed",
+      "priority": "hot",
+      "notes": "Dog grooming, Kloof. Pet-care journal (not hair). No real photos indexed (only competitors/logos) — unique stock + disclosure.",
+      "nextAction": "Confirm WhatsApp mobile, then outreach",
+      "caveats": [
+        "Phone is a LANDLINE — confirm WhatsApp mobile before go-live",
+        "No real photos available — client to supply"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "pet-grooming",
+        "kloof"
+      ]
+    },
+    "integrity-hair": {
+      "title": "Integrity Hair",
+      "status": "gate_passed",
+      "priority": "warm",
+      "notes": "Intimate home-based salon (Nikki), Waterfall. Budget/low-maintenance journal angle. Home salon = thin photo footprint; using stock with disclosure.",
+      "nextAction": "Outreach — affordable home-salon angle",
+      "caveats": [
+        "Home-based — few indexed photos; client to supply real gallery"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "hair",
+        "waterfall",
+        "home-based",
+        "budget"
+      ]
+    },
+    "charlies-hair-salon": {
+      "title": "Charlie's Hair Salon",
+      "status": "gate_passed",
+      "priority": "warm",
+      "notes": "Homely, pampering (tea + cupcakes + head massage), Waterfall. Pampering/wellbeing journal. 1 real Fresha photo used.",
+      "nextAction": "Confirm owner (Charlie vs Anne) before pitching",
+      "caveats": [
+        "Ownership transition Charlie -> Anne — confirm who to pitch",
+        "Only 1 real photo available"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "hair",
+        "waterfall",
+        "pampering"
+      ]
+    }
+  },
+  "documents": [
+    {
+      "id": "sop-process",
+      "label": "Web Design Process Flow (SOP)",
+      "path": "C:/Users/jaime/Desktop/obsidian-vault/sops/Web Design Process Flow.md",
+      "type": "sop"
+    },
+    {
+      "id": "sop-clients",
+      "label": "Client Management & Retainer Structure (SOP)",
+      "path": "C:/Users/jaime/Desktop/obsidian-vault/sops/Client Management & Retainer Structure.md",
+      "type": "sop"
+    },
+    {
+      "id": "sop-sidehustle",
+      "label": "Side-Hustle Scout — Facebook Segment (SOP)",
+      "path": "C:/Users/jaime/Desktop/obsidian-vault/sops/Side-Hustle Scout — Facebook Segment.md",
+      "type": "sop"
+    },
+    {
+      "id": "doc-pricing",
+      "label": "Web Design & Digital Strategy (pricing)",
+      "path": "C:/Users/jaime/Desktop/obsidian-vault/income-pillars/Web Design & Digital Strategy.md",
+      "type": "doc"
+    },
+    {
+      "id": "doc-international",
+      "label": "International Rollout Plan",
+      "path": "C:/Users/jaime/Desktop/obsidian-vault/income-pillars/International Rollout Plan.md",
+      "type": "doc"
+    },
+    {
+      "id": "doc-agreement",
+      "label": "Service Agreement (Tier 0) — Draft",
+      "path": "C:/Users/jaime/Desktop/obsidian-vault/sops/Web Design Service Agreement (Tier 0) — Draft.md",
+      "type": "doc"
+    },
+    {
+      "id": "db-leads",
+      "label": "Leads DB (Notion)",
+      "url": "https://app.notion.com/p/8c668bf44140464e9a66242df372ce5a",
+      "type": "db"
+    },
+    {
+      "id": "db-clients",
+      "label": "Clients DB (Notion)",
+      "url": "https://app.notion.com/p/391fe00de7228191a62ce50f91fefe2d",
+      "type": "db"
+    }
+  ]
+}

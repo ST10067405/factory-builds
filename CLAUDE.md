@@ -1,5 +1,25 @@
 # Factory Builds — deployment notes
 
+## ⛔ STRUCTURAL SOP GATE (read first)
+
+Rules in this doc are not enough — they get skipped at scale. The enforcement is a
+script: **`node scripts/preflight.js`**. It is MANDATORY:
+
+- **Before presenting ANY site for review** — run it; only present if it prints `PASS`.
+- **On every deploy** — it runs automatically as the first step of `scripts/build.js`
+  (the Vercel buildCommand). A failing gate aborts the build, so a non-compliant site
+  **cannot deploy**. Do not remove or bypass this wiring.
+
+It mechanically enforces: no cross-client duplicate images, no reused journal articles,
+no broken image refs (all builds); and for builds listed in `current-builds.txt`: a
+unique journal (`learn.html` with FAQPage + 6 article modals), Comms Bridge, Our Work
+section, no invented prices, no unfilled tokens, noindex + draft ribbon + reduced-motion.
+Add a slug to `current-builds.txt` when you bring it up to standard.
+
+If preflight fails, FIX the reported items — never present or deploy around it.
+
+
+
 This repo is deployed as a **single Vercel project**. Each top-level folder (e.g.
 `dimitri-pet-services/`, `tipsy-flamingo/`) is a self-contained concept site for one
 customer, and each customer must only be able to reach their own site.
@@ -36,7 +56,38 @@ see `velvet-coffee-co/` or `the-coffee-minista/` for the reference implementatio
 
 All three are plain HTML/CSS/JS inside the single file — no external services, no keys, $0.
 
+4. **Real photos (required — never stock-only).** Pull the business's actual photos
+   with `node scripts/pull-photos.js "Name Town keywords" <slug> 10` (Serper image
+   search → GBP/Facebook/Instagram/Fresha), **Read-vet** each `real_NN.jpg`, and use
+   the good ones in the "Our Work" gallery + About/Visit, mixed with a little stock.
+   If a business has fewer than ~2 good indexed photos, use what's good + stock and
+   note it. Reference exemplar: `synergy-hair-kloof/` (real colour-work + interior).
+5. **Journal (`learn.html`, required).** An educational, audience-matched content hub
+   (6 article pop-up modals + a `FAQPage` JSON-LD), linked from a "Journal" section
+   and nav on index.html. Build it from `_template/learn.html`. Reference exemplars:
+   `synergy-hair-kloof/learn.html`, `konfident-kloof-dental/learn.html`.
+
+The `_template/` folder (index.html + learn.html) already contains 1–5. A build is not
+complete until it has real photos and a journal — not just the homepage.
+
 ## Adding a new concept site
+
+0. **Web-presence gate (MANDATORY — run before building).** Google Maps' "has
+   website" flag and snippet-level enrichment are unreliable — they miss real sites
+   and WhatsApp numbers that live on a business's own site / FB / IG posts. Before
+   building, run:
+   ```
+   node scripts/presence-check.js "Business Name" "Town"
+   ```
+   - `VERDICT: HAS_SITE` → the business already has a working site. **Do NOT build a
+     Tier-0 "you have no website" demo.** Reclassify the lead as SEO/GEO or a rebuild.
+   - `VERDICT: POSSIBLE_SITE` → a name-ish domain is live but not geo-confirmed
+     (often a foreign business sharing the name). Glance manually, then decide.
+   - `VERDICT: BUILDABLE` → no working site found. Proceed. The script also prints any
+     WhatsApp number it found in the socials — use it for the Comms Bridge instead of
+     the (usually landline) Maps number.
+   Batch re-check the whole Leads DB anytime with `node scripts/presence-check.js --batch`
+   (add `--fix` to write confirmed sites back to Notion).
 
 1. Add the new folder at repo root (same shape as existing folders: an `index.html`
    plus an assets folder, all internal links/asset paths relative).

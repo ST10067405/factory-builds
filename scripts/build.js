@@ -7,6 +7,7 @@
 const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
+const { execFileSync } = require("child_process");
 
 const ROOT = path.join(__dirname, "..");
 const DIST = path.join(ROOT, "dist");
@@ -19,6 +20,7 @@ const EXCLUDED_DIRS = new Set([
   ".vercel",
   "node_modules",
   "_template",
+  "board",
 ]);
 
 function loadSlugs() {
@@ -53,6 +55,17 @@ function copyDir(src, dest) {
 }
 
 function main() {
+  // STRUCTURAL SOP GATE: a non-compliant build cannot deploy. preflight.js exits
+  // non-zero on any violation (cross-client duplicate assets, reused journals,
+  // missing journal/Comms Bridge, invented data, broken refs), which aborts the
+  // Vercel build here. Do not remove or bypass.
+  try {
+    execFileSync("node", [path.join(__dirname, "preflight.js")], { stdio: "inherit" });
+  } catch (e) {
+    console.error("\nBuild aborted: preflight SOP gate failed. Fix the violations above before deploying.");
+    process.exit(1);
+  }
+
   const folders = listBuildFolders();
   const slugs = loadSlugs();
 

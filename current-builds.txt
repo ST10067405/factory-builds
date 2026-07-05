@@ -1,0 +1,10 @@
+# Builds held to the current full SOP standard (journal + real photos + Comms Bridge +
+# Our Work + compartmentalised unique assets). preflight.js enforces the full content
+# standard on these; cross-client invariants (no shared assets, no reused journals,
+# no broken refs) are enforced on ALL builds regardless.
+# Add a slug here when you bring a build up to the current standard.
+synergy-hair-kloof
+avant-garde-hair
+village-pet-parlour
+integrity-hair
+charlies-hair-salon

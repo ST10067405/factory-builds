@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Parlour Journal — Dog Grooming Tips | Village Pet Parlour</title>
+<meta name="description" content="Dog grooming and coat-care tips from Village Pet Parlour — grooming frequency, brushing between visits, nervous dogs, puppy first grooms, nail care and coat types.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How often should I get my dog groomed?", "acceptedAnswer": { "@type": "Answer", "text": "Most dogs do well with a full groom every 4–8 weeks, though it depends on coat type and lifestyle. Short, smooth coats can often stretch to 8–12 weeks, while curly, double or long coats that mat easily are usually best every 4–6 weeks. Ask us at your next visit and we'll suggest a schedule for your dog's coat." } },
+    { "@type": "Question", "name": "My dog is nervous — can you still groom them?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, absolutely — it's something we're known for. We go at your dog's pace, use plenty of breaks and reassurance, and never rush a nervous pup. Many of the dogs we see regularly started out anxious and are now completely relaxed on the table." } },
+    { "@type": "Question", "name": "What should I bring to my dog's grooming appointment?", "acceptedAnswer": { "@type": "Answer", "text": "Just your dog, their lead, and any vaccination or health details we don't already have on file. If your dog has a favourite treat or toy that helps them settle, feel free to bring that along too." } },
+    { "@type": "Question", "name": "How do I book an appointment?", "acceptedAnswer": { "@type": "Answer", "text": "Call or WhatsApp 031 655 1252 to book. Online booking is coming to this site soon." } }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#F7F1E6;--surface:#FFFFFF;--ink:#1F2A44;--mut:rgba(31,42,68,.65);
+  --brand:#1F2A44;--accent:#E0A83D;--line:rgba(31,42,68,.14);
+  --display:'Baloo 2',sans-serif;--body:'Nunito Sans',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand);color:var(--bg);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:rgba(247,241,230,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-size:22px;font-weight:700;color:var(--brand);text-decoration:none}
+.nav-back{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-decoration:none}
+.nav-back:hover{color:var(--accent)}
+header{padding:90px 0 60px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--accent);margin-bottom:18px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(38px,6vw,68px);line-height:1.05}
+.intro{max-width:600px;margin:22px auto 0;color:var(--mut);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:30px 26px;cursor:pointer;transition:transform .3s,box-shadow .3s;text-align:left}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(31,42,68,.1);outline:none}
+.post .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.post h3{font-family:var(--display);font-weight:600;font-size:23px;margin:12px 0 8px;line-height:1.2}
+.post p{color:var(--mut);font-size:14.5px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);font-weight:700;font-size:clamp(28px,4vw,44px);margin-bottom:28px;text-align:center}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent);font-size:22px;font-weight:400}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+/* article modal */
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(31,42,68,.55);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--bg);max-width:680px;width:100%;border-radius:22px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(0,0,0,.4)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut);line-height:1}
+.asheet .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.asheet h2{font-family:var(--display);font-weight:700;font-size:clamp(26px,4vw,38px);margin:12px 0 20px;line-height:1.15}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;color:var(--ink);font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--brand);color:var(--bg);text-decoration:none;font-weight:600;font-size:14px;padding:13px 26px;border-radius:99px}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for Village Pet Parlour by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">Village Pet Parlour</a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">The Parlour Journal · Dog Care</p>
+    <h1>Happy dogs, well cared for</h1>
+    <p class="intro">Grooming tips the team at Village Pet Parlour shares with pet parents — simple, practical advice to keep your dog comfortable between visits.</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="grid" id="postGrid">
+    <!-- posts injected + clickable -->
+  </div>
+</div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="qa">
+      <details><summary>How often should I get my dog groomed?</summary><p>Most dogs do well with a full groom every 4–8 weeks, though it depends on coat type and lifestyle. Short, smooth coats can often stretch to 8–12 weeks, while curly, double or long coats that mat easily are usually best every 4–6 weeks. Ask us at your next visit and we'll suggest a schedule for your dog's coat.</p></details>
+      <details><summary>My dog is nervous — can you still groom them?</summary><p>Yes, absolutely — it's something we're known for. We go at your dog's pace, use plenty of breaks and reassurance, and never rush a nervous pup. Many of the dogs we see regularly started out anxious and are now completely relaxed on the table.</p></details>
+      <details><summary>What should I bring to my dog's grooming appointment?</summary><p>Just your dog, their lead, and any vaccination or health details we don't already have on file. If your dog has a favourite treat or toy that helps them settle, feel free to bring that along too.</p></details>
+      <details><summary>How do I book an appointment?</summary><p>Call or WhatsApp 031 655 1252 to book. Online booking is coming to this site soon.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">Village Pet Parlour · Suite 101, 2 St Mary's Road, Kloof · Concept by Arkatype Digital — draft, awaiting client sign-off</div>
+</footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#visit">Book your visit →</a>
+  </div>
+</div>
+
+<script>
+const POSTS = [
+  { tag: 'Grooming', title: 'How often should you groom your dog?', teaser: 'A simple guide to grooming frequency by coat type, so your dog stays comfortable between visits.',
+    body: `<p>There's no single answer for every dog — coat type and lifestyle both play a part. As a general guide:</p>
+    <ul>
+      <li><strong>Short, smooth coats</strong> (like Labradors or Boxers): a full groom every 8–12 weeks, with regular brushing at home.</li>
+      <li><strong>Curly or wool coats</strong> (like Poodles or Poodle crosses): every 4–6 weeks — these coats mat quickly if left too long.</li>
+      <li><strong>Long or double coats</strong> (like Shih Tzus or Border Collies): every 4–8 weeks, depending on how well the coat is maintained between visits.</li>
+      <li><strong>Wiry coats</strong> (like Schnauzers or Terriers): every 6–8 weeks, often with hand-stripping for show-quality coats.</li>
+    </ul>
+    <p class="mut">If in doubt, ask us at your next visit — we'll recommend a schedule based on your dog's specific coat and how it's holding up.</p>` },
+  { tag: 'Coat Care', title: 'Brushing and matting between grooms', teaser: 'A few minutes of brushing a week prevents most of the mats we see on the table.',
+    body: `<p>Matting is one of the biggest reasons grooming visits take longer — or feel uncomfortable for the dog. A little home care goes a long way:</p>
+    <ul>
+      <li><strong>Brush 2–3 times a week</strong> for medium and long coats, daily during heavy shedding seasons.</li>
+      <li><strong>Focus on friction zones</strong> — behind the ears, under the collar, armpits and britches mat first.</li>
+      <li><strong>Line-brush, don't just skim the top.</strong> Part the coat in sections and brush down to the skin.</li>
+      <li><strong>Never brush over a mat with a slicker brush alone</strong> — it can pull on the skin. A dematting comb or a wide-tooth comb from underneath the mat works better.</li>
+    </ul>
+    <p class="mut">If mats are severe by the time we see your dog, the safest option is sometimes a shorter clip — we'll always explain why before we go ahead.</p>` },
+  { tag: 'Anxious Dogs', title: 'Helping a nervous dog enjoy grooming', teaser: 'How we keep anxious pups calm — and what you can do at home to help.',
+    body: `<p>A calm, unhurried approach makes all the difference to a nervous dog. Here's what helps:</p>
+    <ul>
+      <li><strong>Short, positive early visits.</strong> For very anxious dogs, a quick "meet and greet" visit with no grooming at all can help them get used to the space.</li>
+      <li><strong>No rushing.</strong> We build in breaks and go at the dog's pace rather than working to the clock.</li>
+      <li><strong>Familiar scents help.</strong> A blanket or toy from home can be reassuring on the table.</li>
+      <li><strong>Consistency.</strong> Seeing the same groomer regularly builds trust faster than switching parlours.</li>
+    </ul>
+    <p class="mut">This is genuinely something we care about — reviewers often tell us their "normally nervous" dog came back calm and relaxed, and that's exactly the experience we aim for.</p>` },
+  { tag: 'First Groom', title: "Your puppy's first groom", teaser: "What to expect, when to start, and how to set your puppy up for a lifetime of stress-free grooming.",
+    body: `<p>Early, positive grooming experiences make every future visit easier. A few things to know:</p>
+    <ul>
+      <li><strong>Start early.</strong> Once your puppy has had their full course of vaccinations, a gentle introductory groom — bath, brush, nail trim, tidy face and feet — helps them get used to the routine.</li>
+      <li><strong>Keep it short and positive.</strong> First visits focus on a calm experience rather than a full, precise cut.</li>
+      <li><strong>Handle paws and ears at home.</strong> Gently getting your puppy used to being touched on their paws, ears and mouth makes grooming far less stressful later.</li>
+      <li><strong>Expect some wriggling.</strong> It's completely normal — we're patient, and puppies settle in with practice.</li>
+    </ul>
+    <p class="mut">A good first experience is the best investment you can make in stress-free grooming for the rest of your dog's life.</p>` },
+  { tag: 'Nail & Paw Care', title: 'Nail and paw care between visits', teaser: "Overgrown nails affect posture and comfort — here's how to keep on top of them.",
+    body: `<p>Nails and paws are easy to overlook, but they matter for your dog's comfort and gait:</p>
+    <ul>
+      <li><strong>Listen for clicking</strong> on hard floors — that's usually a sign nails are due for a trim.</li>
+      <li><strong>Trim little and often</strong> if you do it at home, to avoid cutting the quick. When in doubt, leave it to us.</li>
+      <li><strong>Check between the pads</strong> for matted fur, grass seeds or small stones, especially after walks in longer grass.</li>
+      <li><strong>Overgrown nails can change how a dog stands</strong>, putting strain on their joints over time — regular trims aren't just cosmetic.</li>
+    </ul>
+    <p class="mut">Nail trims and paw tidy-ups are quick, so it's worth adding them between full grooms if your dog's nails grow quickly.</p>` },
+  { tag: 'Coat Types', title: 'Coat types and what suits them', teaser: 'Understanding your dog\'s coat helps you choose the right groom and home routine.',
+    body: `<p>Not all coats are groomed the same way. Knowing your dog's coat type helps set the right expectations:</p>
+    <ul>
+      <li><strong>Double coats</strong> (like Huskies or German Shepherds) shed heavily and should never be shaved — a deshedding treatment keeps the undercoat under control while protecting them from sun and cold.</li>
+      <li><strong>Curly/non-shedding coats</strong> (like Poodles) grow continuously and need regular clipping to a manageable length.</li>
+      <li><strong>Silky long coats</strong> (like Maltese or Yorkies) look best kept brushed daily, or clipped shorter for an easier-care routine.</li>
+      <li><strong>Wiry coats</strong> (like Schnauzers) can be clipped for convenience or hand-stripped to preserve the coat's texture and colour.</li>
+    </ul>
+    <p class="mut">Tell us your dog's lifestyle — swimming, hiking, mostly indoors — and we'll suggest a cut and coat routine that actually suits them.</p>` }
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

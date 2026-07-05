@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arkatype Factory Board</title>
+<style>
+:root{
+  --bg:#0d0f13; --panel:#151922; --panel2:#1c212c; --line:#262d3a;
+  --ink:#e7eaf0; --mut:#8b93a4; --faint:#5b6474;
+  --accent:#4ecab0; --accent2:#6ea8fe; --hot:#ff6b6b; --warm:#f0a350; --cold:#6b7688;
+  --good:#3ecf8e; --bad:#ff6b6b;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.5;font-size:14px}
+a{color:inherit}
+button,select,textarea,input{font-family:inherit;font-size:13px}
+.wrap{max-width:1600px;margin:0 auto;padding:22px 26px 80px}
+/* header */
+header{position:sticky;top:0;z-index:30;background:rgba(13,15,19,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:14px 26px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.brand{font-weight:700;font-size:16px;letter-spacing:.02em}
+.brand span{color:var(--accent)}
+.pf-badge{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;padding:6px 12px;border-radius:99px;cursor:pointer;border:1px solid var(--line)}
+.pf-pass{background:rgba(62,207,142,.12);color:var(--good);border-color:rgba(62,207,142,.3)}
+.pf-fail{background:rgba(255,107,107,.12);color:var(--bad);border-color:rgba(255,107,107,.35)}
+.counts{display:flex;gap:14px;font-size:12px;color:var(--mut);flex-wrap:wrap}
+.counts b{color:var(--ink)}
+.grow{flex:1}
+.search{background:var(--panel2);border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:8px 12px;width:230px;outline:none}
+.search:focus{border-color:var(--accent)}
+.filters{display:flex;gap:8px;align-items:center;margin:18px 0 6px;flex-wrap:wrap}
+.chip{background:var(--panel);border:1px solid var(--line);color:var(--mut);padding:6px 13px;border-radius:99px;cursor:pointer;font-size:12px;transition:.15s}
+.chip:hover{color:var(--ink)}
+.chip.on{background:var(--accent);color:#062018;border-color:var(--accent);font-weight:600}
+.docs{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 4px}
+.doc{display:inline-flex;align-items:center;gap:7px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:7px 12px;cursor:pointer;font-size:12px;color:var(--mut)}
+.doc:hover{color:var(--ink);border-color:var(--accent2)}
+.doc .dt{font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:var(--faint);border:1px solid var(--line);border-radius:4px;padding:1px 5px}
+/* grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:18px;margin-top:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:.15s}
+.card:hover{border-color:#33405480}
+.card.legacy{opacity:.9}
+.preview{position:relative;height:200px;overflow:hidden;background:#0a0c10;border-bottom:1px solid var(--line)}
+.preview iframe{position:absolute;top:0;left:0;width:1200px;height:900px;border:0;transform-origin:top left;pointer-events:none;background:#fff}
+.preview .ph{position:absolute;inset:0;display:grid;place-items:center;color:var(--faint);font-size:12px}
+.preview .open-ov{position:absolute;inset:0;cursor:pointer}
+.preview .badges{position:absolute;top:10px;left:10px;display:flex;gap:6px;z-index:2}
+.tag{font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:6px;backdrop-filter:blur(4px)}
+.tag.active{background:rgba(78,202,176,.9);color:#062018}
+.tag.legacy{background:rgba(107,118,136,.85);color:#0d0f13}
+.tag.hot{background:rgba(255,107,107,.9);color:#fff}
+.tag.warm{background:rgba(240,163,80,.9);color:#241400}
+.tag.cold{background:rgba(107,118,136,.85);color:#0d0f13}
+.body{padding:14px 15px;display:flex;flex-direction:column;gap:10px;flex:1}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.title{font-weight:650;font-size:15px}
+.meta{font-size:11px;color:var(--mut);display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.meta .ok{color:var(--good)} .meta .no{color:var(--faint)}
+.selrow{display:flex;gap:8px}
+.sel{flex:1;background:var(--panel2);border:1px solid var(--line);color:var(--ink);border-radius:7px;padding:7px 9px;cursor:pointer}
+.caveats{display:flex;flex-direction:column;gap:5px}
+.cav{font-size:11.5px;color:#ffb4b4;background:rgba(255,107,107,.08);border:1px solid rgba(255,107,107,.2);border-radius:6px;padding:5px 9px}
+.lbl{font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:var(--faint);margin-bottom:3px}
+textarea.notes{background:var(--panel2);border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:9px 11px;resize:vertical;min-height:60px;outline:none;width:100%}
+textarea.notes:focus,input.na:focus{border-color:var(--accent)}
+input.na{background:var(--panel2);border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:8px 11px;outline:none;width:100%}
+.actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:2px}
+.act{background:var(--panel2);border:1px solid var(--line);color:var(--mut);border-radius:7px;padding:7px 11px;cursor:pointer;font-size:11.5px;transition:.15s;display:inline-flex;align-items:center;gap:5px}
+.act:hover{color:var(--ink);border-color:var(--accent2)}
+.act.primary{color:var(--accent);border-color:rgba(78,202,176,.35)}
+.foot{font-size:11px;color:var(--faint);display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:9px}
+.slug-copy{cursor:pointer;color:var(--mut);font-family:ui-monospace,monospace}
+.slug-copy:hover{color:var(--accent)}
+/* violations panel */
+.viol{display:none;position:fixed;top:70px;right:26px;width:min(520px,90vw);max-height:70vh;overflow:auto;background:var(--panel);border:1px solid var(--bad);border-radius:12px;padding:18px;z-index:40;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.viol.show{display:block}
+.viol h3{color:var(--bad);font-size:14px;margin-bottom:10px}
+.viol div{font-size:12px;color:#ffc9c9;padding:6px 0;border-top:1px solid var(--line)}
+/* toast */
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--accent);color:#062018;font-weight:600;font-size:13px;padding:10px 20px;border-radius:99px;opacity:0;transition:.25s;z-index:50;pointer-events:none}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.gv-link{margin-left:auto}
+.link-btn{background:var(--panel);border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:8px 14px;cursor:pointer;text-decoration:none;font-size:12.5px;font-weight:600}
+.link-btn:hover{border-color:var(--accent)}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">Arkatype <span>Factory Board</span></div>
+  <div id="pfBadge" class="pf-badge">checking…</div>
+  <div class="counts" id="counts"></div>
+  <div class="grow"></div>
+  <input class="search" id="search" placeholder="Search projects, tags, notes…">
+  <a class="link-btn" href="graph.html">◕ Graph view</a>
+</header>
+
+<div class="wrap">
+  <div class="docs" id="docs"></div>
+  <div class="filters" id="filters">
+    <span style="color:var(--faint);font-size:11px;text-transform:uppercase;letter-spacing:.08em">Scope</span>
+    <span class="chip on" data-scope="all">All</span>
+    <span class="chip" data-scope="active">Active (standard)</span>
+    <span class="chip" data-scope="legacy">Legacy</span>
+    <span style="width:12px"></span>
+    <span style="color:var(--faint);font-size:11px;text-transform:uppercase;letter-spacing:.08em">Status</span>
+    <select class="sel" id="statusFilter" style="max-width:170px;flex:0"></select>
+    <select class="sel" id="prioFilter" style="max-width:140px;flex:0"></select>
+  </div>
+  <div class="grid" id="grid"></div>
+</div>
+
+<div class="viol" id="viol"></div>
+<div class="toast" id="toast"></div>
+
+<script>
+const STATUSES = ['built','gate_passed','deployed','outreach_sent','replied','won','cold'];
+const STATUS_LABEL = {built:'Built',gate_passed:'Gate passed',deployed:'Deployed',outreach_sent:'Outreach sent',replied:'Replied',won:'Won',cold:'Cold'};
+const PRIOS = ['hot','warm','cold'];
+let STATE = null, filterScope='all', filterStatus='', filterPrio='';
+
+const $ = s => document.querySelector(s);
+function toast(m){ const t=$('#toast'); t.textContent=m; t.classList.add('show'); clearTimeout(t._t); t._t=setTimeout(()=>t.classList.remove('show'),1400); }
+
+async function load(){
+  const r = await fetch('/api/state'); STATE = await r.json();
+  renderHeader(); renderDocs(); renderFilters(); render();
+}
+function renderHeader(){
+  const pf = STATE.preflight;
+  const b = $('#pfBadge');
+  b.className = 'pf-badge ' + (pf.pass?'pf-pass':'pf-fail');
+  b.innerHTML = pf.pass ? '● PREFLIGHT PASS' : ('✗ PREFLIGHT FAIL · '+pf.violations.length+' issue'+(pf.violations.length!=1?'s':''));
+  b.onclick = ()=>{ const v=$('#viol'); if(pf.pass){toast('All SOP checks passing');return;} v.classList.toggle('show'); v.innerHTML='<h3>SOP gate violations — fix before deploying</h3>'+pf.violations.map(x=>'<div>✗ '+esc(x)+'</div>').join(''); };
+  const by = {}; STATE.projects.forEach(p=>by[p.status]=(by[p.status]||0)+1);
+  const active = STATE.projects.filter(p=>p.active).length;
+  $('#counts').innerHTML = '<span><b>'+STATE.projects.length+'</b> projects</span>'+'<span><b>'+active+'</b> active</span>'+
+    STATUSES.filter(s=>by[s]).map(s=>'<span>'+STATUS_LABEL[s]+': <b>'+by[s]+'</b></span>').join('');
+}
+function renderDocs(){
+  $('#docs').innerHTML = STATE.documents.map(d=>
+    '<div class="doc" data-doc="'+d.id+'"><span class="dt">'+d.type+'</span>'+esc(d.label)+'</div>').join('');
+  $('#docs').querySelectorAll('.doc').forEach(el=>{
+    const d = STATE.documents.find(x=>x.id===el.dataset.doc);
+    el.onclick = ()=>{ if(d.url) window.open(d.url,'_blank'); else openPath(d.path); };
+  });
+}
+function renderFilters(){
+  const sf=$('#statusFilter'); sf.innerHTML='<option value="">All statuses</option>'+STATUSES.map(s=>'<option value="'+s+'">'+STATUS_LABEL[s]+'</option>').join('');
+  const pf=$('#prioFilter'); pf.innerHTML='<option value="">All priorities</option>'+PRIOS.map(p=>'<option value="'+p+'">'+p[0].toUpperCase()+p.slice(1)+'</option>').join('');
+  sf.onchange=()=>{filterStatus=sf.value;render()};
+  pf.onchange=()=>{filterPrio=pf.value;render()};
+  document.querySelectorAll('#filters .chip').forEach(c=>c.onclick=()=>{
+    document.querySelectorAll('#filters .chip').forEach(x=>x.classList.remove('on'));
+    c.classList.add('on'); filterScope=c.dataset.scope; render();
+  });
+  $('#search').oninput = ()=>render();
+}
+function esc(s){ return (s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+
+function render(){
+  const q = $('#search').value.trim().toLowerCase();
+  const grid = $('#grid'); grid.innerHTML='';
+  const items = STATE.projects.filter(p=>{
+    if(filterScope==='active' && !p.active) return false;
+    if(filterScope==='legacy' && p.active) return false;
+    if(filterStatus && p.status!==filterStatus) return false;
+    if(filterPrio && p.priority!==filterPrio) return false;
+    if(q){ const hay=(p.title+' '+p.slug+' '+(p.tags||[]).join(' ')+' '+p.notes+' '+p.nextAction).toLowerCase(); if(!hay.includes(q)) return false; }
+    return true;
+  });
+  // active + hot first
+  items.sort((a,b)=> (b.active-a.active) || (PRIOS.indexOf(a.priority)-PRIOS.indexOf(b.priority)) || a.title.localeCompare(b.title));
+  items.forEach(p=>grid.appendChild(card(p)));
+  setupLazy();
+}
+
+function card(p){
+  const el=document.createElement('div'); el.className='card'+(p.active?'':' legacy');
+  const photo = p.realCount>0 ? ('📷 '+p.realCount+' real / '+p.stockCount+' stock') : ('🖼 '+p.imgCount+' stock');
+  el.innerHTML = `
+    <div class="preview">
+      <div class="badges">
+        <span class="tag ${p.active?'active':'legacy'}">${p.active?'Standard':'Legacy'}</span>
+        <span class="tag ${p.priority}">${p.priority}</span>
+      </div>
+      <div class="ph">loading preview…</div>
+      <iframe data-src="/${p.slug}/" title="${esc(p.title)} preview" loading="lazy"></iframe>
+      <div class="open-ov" title="Open site"></div>
+    </div>
+    <div class="body">
+      <div class="top"><div class="title">${esc(p.title)}</div></div>
+      <div class="meta">
+        <span>${photo}</span>
+        <span class="${p.hasLearn?'ok':'no'}">${p.hasLearn?'✓ journal':'✗ no journal'}</span>
+      </div>
+      <div class="selrow">
+        <select class="sel st">${STATUSES.map(s=>`<option value="${s}"${s===p.status?' selected':''}>${STATUS_LABEL[s]}</option>`).join('')}</select>
+        <select class="sel pr">${PRIOS.map(s=>`<option value="${s}"${s===p.priority?' selected':''}>${s[0].toUpperCase()+s.slice(1)}</option>`).join('')}</select>
+      </div>
+      ${p.caveats&&p.caveats.length?`<div class="caveats">${p.caveats.map(c=>`<div class="cav">⚠ ${esc(c)}</div>`).join('')}</div>`:''}
+      <div><div class="lbl">Notes</div><textarea class="notes" placeholder="Add a note…">${esc(p.notes)}</textarea></div>
+      <div><div class="lbl">Next action</div><input class="na" placeholder="Next action…" value="${esc(p.nextAction)}"></div>
+      <div class="actions">
+        <a class="act primary" href="/${p.slug}/" target="_blank">↗ Open site</a>
+        ${p.hasLearn?`<a class="act" href="/${p.slug}/learn.html" target="_blank">📓 Journal</a>`:''}
+        <button class="act openAssets">📁 Assets</button>
+        ${p.notionUrl?`<a class="act" href="${p.notionUrl}" target="_blank">◆ Notion</a>`:''}
+      </div>
+      <div class="foot">
+        <span class="slug-copy" title="Copy public URL path">/${p.publicSlug||'—'}/</span>
+        <span>${p.active?'active standard':'legacy build'}</span>
+      </div>
+    </div>`;
+  // wiring
+  const save = patch => fetch('/api/project/'+p.slug,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(patch)}).then(()=>toast('Saved'));
+  el.querySelector('.st').onchange = e=>{ p.status=e.target.value; save({status:p.status}); renderHeader(); };
+  el.querySelector('.pr').onchange = e=>{ p.priority=e.target.value; save({priority:p.priority}); };
+  const ta=el.querySelector('.notes'); ta.onblur=()=>{ if(ta.value!==p.notes){ p.notes=ta.value; save({notes:ta.value}); } };
+  const na=el.querySelector('.na'); na.onblur=()=>{ if(na.value!==p.nextAction){ p.nextAction=na.value; save({nextAction:na.value}); } };
+  el.querySelector('.open-ov').onclick=()=>window.open('/'+p.slug+'/','_blank');
+  el.querySelector('.openAssets').onclick=()=>openSlug(p.slug);
+  el.querySelector('.slug-copy').onclick=()=>{ navigator.clipboard.writeText(location.origin.replace(':8105','')+'/'+(p.publicSlug||'')+'/'); toast('Public slug path copied'); };
+  el._preview = el.querySelector('.preview'); el._iframe = el.querySelector('iframe');
+  return el;
+}
+
+// lazy iframe previews (don't load 28 at once) + scale to card width — scroll-based, deterministic
+function loadCard(card){
+  const ifr=card._iframe; if(!ifr) return;
+  if(!ifr.src){ ifr.src=ifr.dataset.src; ifr.onload=()=>{ const ph=card.querySelector('.ph'); if(ph)ph.style.display='none'; }; }
+  scalePrev(card);
+}
+function loadInView(){
+  const vh = window.innerHeight || document.documentElement.clientHeight || 900;
+  document.querySelectorAll('.card').forEach(card=>{
+    const r=card.getBoundingClientRect();
+    if(r.top < vh+500 && r.bottom > -500) loadCard(card);
+  });
+}
+function setupLazy(){
+  // eager-load the first screenful (bulletproof regardless of viewport quirks), rest on scroll
+  document.querySelectorAll('.card').forEach((c,i)=>{ if(i<9) loadCard(c); });
+  requestAnimationFrame(loadInView);
+}
+function scalePrev(card){ const p=card._preview; if(!p||!card._iframe)return; card._iframe.style.transform='scale('+(p.clientWidth/1200)+')'; }
+let _st; addEventListener('scroll',()=>{ clearTimeout(_st); _st=setTimeout(loadInView,120); },{passive:true});
+addEventListener('resize',()=>document.querySelectorAll('.card').forEach(scalePrev));
+
+async function openPath(path){ const r=await fetch('/api/open',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({path})}); toast(r.ok?'Opened in Explorer':'Could not open'); }
+async function openSlug(slug){ const r=await fetch('/api/open',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({slug,sub:'images'})}); const j=await r.json(); toast(j.ok?'Opened assets folder':'Could not open'); }
+
+load();
+</script>
+</body>
+</html>

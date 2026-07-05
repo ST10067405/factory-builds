@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ============================================================
+  JOURNAL TEMPLATE (learn.html) — REQUIRED on every build.
+  - 6 audience-matched educational articles (hair-care for a salon,
+    pet-care for a groomer, oral-health for a dentist, etc.) as pop-up modals.
+  - A FAQPage JSON-LD block (4 Q&As) — keep the visible <details> FAQ and the
+    JSON-LD in sync.
+  - Match THIS build's theme (copy the :root palette + font links from index.html).
+  - Educational copy is generic advice, NOT claims about the business — safe to write.
+  - Keep draft ribbon, noindex, reduced-motion guard.
+  ============================================================ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{JOURNAL_TITLE e.g. "The Chair — Hair Journal"}} | {{BUSINESS_NAME}}</title>
+<meta name="description" content="{{JOURNAL_META}}">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family={{FONT_DISPLAY}}&family={{FONT_BODY}}&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "{{FAQ_Q1}}", "acceptedAnswer": { "@type": "Answer", "text": "{{FAQ_A1}}" } },
+    { "@type": "Question", "name": "{{FAQ_Q2}}", "acceptedAnswer": { "@type": "Answer", "text": "{{FAQ_A2}}" } },
+    { "@type": "Question", "name": "{{FAQ_Q3}}", "acceptedAnswer": { "@type": "Answer", "text": "{{FAQ_A3}}" } },
+    { "@type": "Question", "name": "How do I book?", "acceptedAnswer": { "@type": "Answer", "text": "Call or WhatsApp {{PHONE_DISPLAY}}. Online booking is coming to this site soon." } }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#FFFFFF;--surface:#F5F5F5;--ink:#1A1A1A;--mut:rgba(26,26,26,.6);
+  --brand:#333;--accent:#888;--line:rgba(0,0,0,.12);
+  --display:'{{FONT_DISPLAY_NAME}}',serif;--body:'{{FONT_BODY_NAME}}',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand);color:var(--bg);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-size:22px;color:var(--brand);text-decoration:none}
+.nav-back{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-decoration:none}
+.nav-back:hover{color:var(--accent)}
+header{padding:90px 0 60px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--accent);margin-bottom:18px}
+h1{font-family:var(--display);font-size:clamp(38px,6vw,68px);line-height:1.05}
+.intro{max-width:600px;margin:22px auto 0;color:var(--mut);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:30px 26px;cursor:pointer;transition:transform .3s,box-shadow .3s;text-align:left}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.1);outline:none}
+.post .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.post h3{font-family:var(--display);font-size:23px;margin:12px 0 8px;line-height:1.2}
+.post p{color:var(--mut);font-size:14.5px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);font-size:clamp(28px,4vw,44px);margin-bottom:28px;text-align:center}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent);font-size:22px}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(0,0,0,.55);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--bg);max-width:680px;width:100%;border-radius:22px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(0,0,0,.4)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut)}
+.asheet .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.asheet h2{font-family:var(--display);font-size:clamp(26px,4vw,38px);margin:12px 0 20px;line-height:1.15}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:600;font-size:14px;padding:13px 26px;border-radius:99px}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for {{BUSINESS_NAME}} by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">{{BUSINESS_NAME}}</a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">{{JOURNAL_KICKER}}</p>
+    <h1>{{JOURNAL_H1}}</h1>
+    <p class="intro">{{JOURNAL_INTRO}}</p>
+  </div>
+</header>
+
+<div class="wrap"><div class="grid" id="postGrid"></div></div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="qa">
+      <details><summary>{{FAQ_Q1}}</summary><p>{{FAQ_A1}}</p></details>
+      <details><summary>{{FAQ_Q2}}</summary><p>{{FAQ_A2}}</p></details>
+      <details><summary>{{FAQ_Q3}}</summary><p>{{FAQ_A3}}</p></details>
+      <details><summary>How do I book?</summary><p>Call or WhatsApp {{PHONE_DISPLAY}}. Online booking is coming to this site soon.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap">{{BUSINESS_NAME}} · {{ADDRESS_SHORT}} · Concept by Arkatype Digital — draft, awaiting client sign-off</div></footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#visit">Book your visit →</a>
+  </div>
+</div>
+
+<script>
+/* Fill 6 audience-matched articles. body = HTML string (use <ul><li> for tips).
+   Generic educational advice only — no invented claims about the business. */
+const POSTS = [
+  { tag: '{{A1_TAG}}', title: '{{A1_TITLE}}', teaser: '{{A1_TEASER}}', body: `{{A1_BODY_HTML}}` },
+  { tag: '{{A2_TAG}}', title: '{{A2_TITLE}}', teaser: '{{A2_TEASER}}', body: `{{A2_BODY_HTML}}` },
+  { tag: '{{A3_TAG}}', title: '{{A3_TITLE}}', teaser: '{{A3_TEASER}}', body: `{{A3_BODY_HTML}}` },
+  { tag: '{{A4_TAG}}', title: '{{A4_TITLE}}', teaser: '{{A4_TEASER}}', body: `{{A4_BODY_HTML}}` },
+  { tag: '{{A5_TAG}}', title: '{{A5_TITLE}}', teaser: '{{A5_TEASER}}', body: `{{A5_BODY_HTML}}` },
+  { tag: '{{A6_TAG}}', title: '{{A6_TITLE}}', teaser: '{{A6_TEASER}}', body: `{{A6_BODY_HTML}}` }
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

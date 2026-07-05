@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Cosy Chair — Hair Journal | Charlie's Hair Salon</title>
+<meta name="description" content="Hair-care tips from Charlie's Hair Salon in Waterfall — making colour last, caring for hair between visits, heat styling without the damage, and more.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Is it really as relaxing as the reviews say?", "acceptedAnswer": { "@type": "Answer", "text": "We hope so — the head massage, the tea and the cupcakes are all part of the visit. Plenty of regulars come as much for the hour as the haircut." } },
+    { "@type": "Question", "name": "Do you cater for special occasions?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — book early and we will do a trial so the big day feels effortless. Bring a picture of the outfit neckline." } },
+    { "@type": "Question", "name": "Can I bring the family?", "acceptedAnswer": { "@type": "Answer", "text": "Of course — little ones are welcome, and it stays relaxed and unhurried." } },
+    { "@type": "Question", "name": "How do I book?", "acceptedAnswer": { "@type": "Answer", "text": "Call or WhatsApp 071 891 0605. Online booking is coming to this site soon." } }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#F5EFE7;--surface:#FFFFFF;--ink:#2B2320;--mut:rgba(43,35,32,.62);
+  --brand:#3E6E6A;--accent:#D98BA0;--line:rgba(43,35,32,.12);
+  --display:'Playfair Display',serif;--body:'Lora',serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand);color:var(--bg);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:rgba(245,239,231,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-size:22px;font-weight:600;color:var(--brand);text-decoration:none}
+.nav-back{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-decoration:none}
+.nav-back:hover{color:var(--accent)}
+header{padding:90px 0 60px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--accent);margin-bottom:18px}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(38px,6vw,68px);line-height:1.05;color:var(--ink)}
+.intro{max-width:600px;margin:22px auto 0;color:var(--mut);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:30px 26px;cursor:pointer;transition:transform .3s,box-shadow .3s;text-align:left}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(43,35,32,.1);outline:none}
+.post .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.post h3{font-family:var(--display);font-weight:600;font-size:23px;margin:12px 0 8px;line-height:1.2;color:var(--brand)}
+.post p{color:var(--mut);font-size:14.5px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);font-weight:600;font-size:clamp(28px,4vw,44px);margin-bottom:28px;text-align:center;color:var(--ink)}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent);font-size:22px;font-weight:400}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+/* article modal */
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(43,35,32,.55);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--bg);max-width:680px;width:100%;border-radius:22px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(0,0,0,.4)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut);line-height:1}
+.asheet .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.asheet h2{font-family:var(--display);font-weight:600;font-size:clamp(26px,4vw,38px);margin:12px 0 20px;line-height:1.15;color:var(--ink)}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;color:var(--ink);font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--brand);color:var(--bg);text-decoration:none;font-weight:600;font-size:14px;padding:13px 26px;border-radius:99px}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for Charlie's Hair Salon by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">Charlie's Hair Salon</a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">The Cosy Chair · Journal</p>
+    <h1>An hour that is all yours</h1>
+    <p class="intro">Cupcakes, tea, and a proper head massage — Charlie's is as much about the pause as the hair. A few gentle notes on making the most of both.</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="grid" id="postGrid">
+    <!-- posts injected + clickable -->
+  </div>
+</div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="qa">
+      <details><summary>Is it really as relaxing as the reviews say?</summary><p>We hope so — the head massage, the tea and the cupcakes are all part of the visit. Plenty of regulars come as much for the hour as the haircut.</p></details>
+      <details><summary>Do you cater for special occasions?</summary><p>Yes — book early and we will do a trial so the big day feels effortless. Bring a picture of the outfit neckline.</p></details>
+      <details><summary>Can I bring the family?</summary><p>Of course — little ones are welcome, and it stays relaxed and unhurried.</p></details>
+      <details><summary>How do I book?</summary><p>Call or WhatsApp 071 891 0605. Online booking is coming to this site soon.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">Charlie's Hair Salon · 22 Link Rd, Waterfall · Concept by Arkatype Digital — draft, awaiting client sign-off</div>
+</footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#visit">Book your visit →</a>
+  </div>
+</div>
+
+<script>
+const POSTS = [
+  { tag: 'Ritual', title: "Turning a haircut into an hour for yourself", teaser: "Sometimes the chair is the calmest hour of the week — let it be.", body: `<p>Sometimes the chair is the calmest hour of the week — let it be.</p><ul><li>Arrive a few minutes early and actually sit down.</li><li>Put the phone away; this hour is not for the to-do list.</li><li>Say yes to the tea and the cupcake — it is part of it.</li><li>Let yourself be looked after. That is the whole point.</li></ul>` },
+  { tag: 'Wellbeing', title: "The head massage — more than a nice touch", teaser: "That scalp massage does a lot more than simply feel lovely.", body: `<p>That scalp massage does a lot more than simply feel lovely.</p><ul><li>It eases the tension we all carry in the scalp and neck.</li><li>A little massage boosts circulation to the roots.</li><li>It is genuinely calming — a mini reset mid-week.</li><li>It helps treatments and conditioners work in properly.</li></ul>` },
+  { tag: 'Classic', title: "Classic styles that never go out of fashion", teaser: "Trends come and go; a great classic always suits.", body: `<p>Trends come and go; a great classic always suits.</p><ul><li>Soft layers flatter almost everyone and grow out kindly.</li><li>A well-cut bob is forever — and forgiving.</li><li>Gentle, natural colour beats anything harsh or trend-chasing.</li><li>A timeless shape still looks lovely in photos years later.</li></ul>` },
+  { tag: 'Occasion', title: "Getting occasion-ready: hair for the big day", teaser: "A little planning makes the big day feel effortless.", body: `<p>A little planning makes the big day feel effortless.</p><ul><li>Book early — good dates go fast around weddings and matric dances.</li><li>Do a trial run so there are no surprises on the day.</li><li>Bring a photo of the outfit neckline; it changes what suits.</li><li>Wash the night before, not the morning of, for the best hold.</li></ul>` },
+  { tag: 'At Home', title: "Little at-home luxuries between visits", teaser: "Small rituals keep the salon feeling going a little longer.", body: `<p>Small rituals keep the salon feeling going a little longer.</p><ul><li>A weekly mask and five quiet minutes is a proper treat.</li><li>A drop of scalp oil and a gentle massage before bed.</li><li>Take your time washing — make it feel like a spa, not a chore.</li><li>Wrap in a warm towel and let conditioner really soak in.</li></ul>` },
+  { tag: 'Welcome', title: "A salon that feels like home", teaser: "The tea, the cupcakes, and a genuinely warm welcome.", body: `<p>The tea, the cupcakes, and a genuinely warm welcome.</p><ul><li>Familiar faces who remember you and your hair.</li><li>A relaxed pace — you are never rushed out the door.</li><li>The little ones are welcome too.</li><li>Lovely hair and lovely value, without the fuss.</li></ul>` }
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
