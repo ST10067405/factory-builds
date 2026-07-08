@@ -1057,7 +1057,7 @@ document.addEventListener("keydown", e => { if(e.key==="Escape") closeModal(); }
 <!-- ── chatbot ── -->
 <button id="cb-btn" aria-label="Chat with us"><svg id="cb-icon-chat" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.956 9.956 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm4.293 13.293c-.232-.116-1.373-.677-1.586-.754-.213-.078-.368-.116-.522.116-.155.232-.598.754-.733.909-.135.155-.27.174-.502.058-.232-.116-.98-.361-1.867-1.151-.69-.615-1.155-1.374-1.29-1.606-.136-.232-.015-.357.101-.473.104-.104.232-.27.348-.406.116-.135.155-.232.232-.387.078-.155.039-.29-.019-.406-.058-.116-.522-1.259-.715-1.723-.19-.453-.38-.39-.522-.398-.136-.006-.29-.008-.445-.008s-.406.058-.619.29c-.213.232-.812.793-.812 1.934 0 1.141.832 2.244.948 2.399.116.155 1.638 2.5 3.969 3.506.555.24.988.383 1.326.49.557.178 1.064.153 1.464.093.447-.067 1.373-.561 1.566-1.103.193-.542.193-1.007.135-1.103-.058-.097-.213-.155-.445-.271z"/></svg><svg id="cb-icon-close" viewBox="0 0 24 24" style="position:absolute"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></button>
 <div id="cb-panel" role="dialog">
-  <div id="cb-head"><div id="cb-avatar">🔧</div><div id="cb-head-info"><div id="cb-head-name">Leigh Plumbers</div><div id="cb-head-status">Online — 24h emergency</div></div></div>
+  <div id="cb-head"><div id="cb-avatar">🔧</div><div id="cb-head-info"><div id="cb-head-name">Leigh Plumbers</div><div id="cb-head-status">Online, 24h emergency</div></div></div>
   <div id="cb-msgs"></div>
   <div id="cb-typing"><span></span><span></span><span></span></div>
   <div id="cb-quick"><button class="cb-q">🚨 Emergency</button><button class="cb-q">⚙️ Services</button><button class="cb-q">💧 Leak</button><button class="cb-q">🌡️ Geyser</button><button class="cb-q">📍 Area</button></div>
@@ -1068,26 +1068,26 @@ document.addEventListener("keydown", e => { if(e.key==="Escape") closeModal(); }
 (function(){
   var btn=document.getElementById('cb-btn'),panel=document.getElementById('cb-panel'),msgs=document.getElementById('cb-msgs'),input=document.getElementById('cb-input'),form=document.getElementById('cb-form'),typing=document.getElementById('cb-typing'),opened=false;
   var KB=[
-    {k:['emergency','urgent','burst','flood','pipe','no water','water off','leaking bad'],r:'🚨 PLUMBING EMERGENCY? Call <a href="tel:0798860254"><strong>079 886 0254</strong></a> immediately — we respond fast, 24 hours. Don\'t wait.'},
+    {k:['emergency','urgent','burst','flood','pipe','no water','water off','leaking bad'],r:'🚨 PLUMBING EMERGENCY? Call <a href="tel:0798860254"><strong>079 886 0254</strong></a> immediately. We respond fast, 24 hours. Don\'t wait.'},
     {k:['service','offer','fix','provide','speciali'],r:'We handle: <strong>Emergency Call-outs (24h)</strong> · <strong>Leak Detection & Repair</strong> · <strong>Geyser Repair & Replacement</strong> · <strong>Blocked Drains</strong> · <strong>Full Plumbing Installations</strong>. Call <a href="tel:0798860254">079 886 0254</a>. 🔧'},
-    {k:['leak','drip','water bill','hidden leak','damp'],r:'Hidden leaks waste thousands of litres — and your money. We locate and fix them before they become a bigger problem. Call <a href="tel:0798860254">079 886 0254</a>. 💧'},
-    {k:['geyser','hot water','no hot water','burst geyser','water heater'],r:'No hot water or burst geyser? Call <a href="tel:0798860254"><strong>079 886 0254</strong></a> — we repair and replace geysers across Hillcrest and surrounds. Fast response. 🌡️'},
+    {k:['leak','drip','water bill','hidden leak','damp'],r:'Hidden leaks waste thousands of litres, and your money. We locate and fix them before they become a bigger problem. Call <a href="tel:0798860254">079 886 0254</a>. 💧'},
+    {k:['geyser','hot water','no hot water','burst geyser','water heater'],r:'No hot water or burst geyser? Call <a href="tel:0798860254"><strong>079 886 0254</strong></a>. We repair and replace geysers across Hillcrest and surrounds. Fast response. 🌡️'},
     {k:['drain','block','toilet','clog','sewer','overflow'],r:'Blocked drains and toilets sorted fast. Call <a href="tel:0798860254">079 886 0254</a> for same-day assistance where available. 🚽'},
     {k:['area','where','cover','hillcrest','sherwood','kloof','gillitts','service area'],r:'We serve <strong>Hillcrest, Sherwood, Kloof, Gillitts</strong> and surrounding areas in the greater Hillcrest region, KZN. 📍'},
-    {k:['price','cost','how much','rate','quote','call out fee'],r:'Call us on <a href="tel:0798860254">079 886 0254</a> for a quote. We\'re upfront about pricing — no surprises. 💰'},
+    {k:['price','cost','how much','rate','quote','call out fee'],r:'Call us on <a href="tel:0798860254">079 886 0254</a> for a quote. We\'re upfront about pricing, no surprises. 💰'},
     {k:['rating','review','star','google','reputation'],r:'Leigh Plumbers has a <strong>perfect 5.0★ Google rating</strong>. We earn every job on reputation. 🌟'},
-    {k:['call','phone','contact','number','reach'],r:'Call us any time on <a href="tel:0798860254"><strong>079 886 0254</strong></a> — available 24 hours for emergencies. 📞'},
+    {k:['call','phone','contact','number','reach'],r:'Call us any time on <a href="tel:0798860254"><strong>079 886 0254</strong></a>, available 24 hours for emergencies. 📞'},
     {k:['hello','hi','hey','howzit','morning','afternoon'],r:'Hi! 🔧 Welcome to Leigh Plumbers. Emergency or general plumbing across Hillcrest & surrounds. Call <a href="tel:0798860254">079 886 0254</a> any time. What can I help with?'},
     {k:['thank','thanks','great','perfect'],r:'Happy to help! Keep our number handy: <a href="tel:0798860254">079 886 0254</a>. 🔧'},
   ];
-  var DEFAULT='For any plumbing question — call <a href="tel:0798860254">079 886 0254</a>. We are available 24 hours for emergencies. 🔧';
+  var DEFAULT='For any plumbing question, call <a href="tel:0798860254">079 886 0254</a>. We are available 24 hours for emergencies. 🔧';
   function addMsg(t,r){var d=document.createElement('div');d.className='cb-msg '+r;d.innerHTML=t;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;}
   function match(text){var t=text.toLowerCase();for(var i=0;i<KB.length;i++){for(var j=0;j<KB[i].k.length;j++){if(t.indexOf(KB[i].k[j])!==-1)return KB[i].r;}}return DEFAULT;}
   function botReply(text){typing.classList.add('show');msgs.scrollTop=msgs.scrollHeight;setTimeout(function(){typing.classList.remove('show');addMsg(match(text),'bot');},700+Math.random()*500);}
   function send(text){text=text.trim();if(!text)return;addMsg(text,'user');input.value='';botReply(text);}
   form.addEventListener('submit',function(e){e.preventDefault();send(input.value);});
   document.querySelectorAll('.cb-q').forEach(function(q){q.addEventListener('click',function(){send(q.textContent.replace(/[^\w\s]/g,'').trim());});});
-  btn.addEventListener('click',function(){opened=!opened;btn.classList.toggle('open',opened);panel.classList.toggle('open',opened);if(opened&&msgs.children.length===0){setTimeout(function(){addMsg('Hi! 🔧 Welcome to <strong>Leigh Plumbers</strong> — 5.0★ plumbers serving Hillcrest, Sherwood & surrounds. Emergency call-outs, leaks, geysers, drains. Available 24h on <a href="tel:0798860254">079 886 0254</a>. How can I help?','bot');},300);}if(opened)setTimeout(function(){input.focus();},350);});
+  btn.addEventListener('click',function(){opened=!opened;btn.classList.toggle('open',opened);panel.classList.toggle('open',opened);if(opened&&msgs.children.length===0){setTimeout(function(){addMsg('Hi! 🔧 Welcome to <strong>Leigh Plumbers</strong>, 5.0★ plumbers serving Hillcrest, Sherwood & surrounds. Emergency call-outs, leaks, geysers, drains. Available 24h on <a href="tel:0798860254">079 886 0254</a>. How can I help?','bot');},300);}if(opened)setTimeout(function(){input.focus();},350);});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&opened){opened=false;btn.classList.remove('open');panel.classList.remove('open');}});
 })();
 </script>
