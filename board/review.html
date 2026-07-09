@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Review — Arkatype Board</title>
+<style>
+:root{--bg:#0d0f13;--panel:#151922;--panel2:#1c212c;--line:#262d3a;--ink:#e7eaf0;--mut:#8b93a4;--faint:#5b6474;--accent:#4ecab0;--accent2:#6ea8fe;--good:#3ecf8e;--bad:#ff6b6b;--warm:#f0a350}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,Segoe UI,sans-serif;height:100vh;display:flex;flex-direction:column;overflow:hidden}
+header{display:flex;align-items:center;gap:14px;padding:10px 16px;background:var(--panel);border-bottom:1px solid var(--line);flex:none}
+.back{color:var(--mut);text-decoration:none;font-size:13px;border:1px solid var(--line);padding:6px 12px;border-radius:8px}
+.back:hover{color:var(--ink);border-color:var(--accent)}
+.title{font-weight:700;font-size:15px}
+.chip{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 8px;border-radius:6px;background:rgba(62,207,142,.15);color:var(--good)}
+.grow{flex:1}
+.btn{background:var(--panel2);border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:7px 12px;cursor:pointer;font-size:12.5px;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{color:var(--accent);border-color:rgba(78,202,176,.4)}
+main{flex:1;display:flex;min-height:0}
+.site{flex:1;min-width:0;background:#fff;border:0}
+.panel{width:380px;flex:none;background:var(--panel);border-left:1px solid var(--line);overflow-y:auto;transition:width .2s}
+.panel.collapsed{width:0;overflow:hidden}
+.sec{padding:16px 16px 6px;border-bottom:1px solid var(--line)}
+.sec h3{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--faint);margin-bottom:12px;display:flex;justify-content:space-between;align-items:center}
+.src{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.src .badge{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:4px 8px;border-radius:6px;min-width:76px;text-align:center}
+.b-instagram{background:linear-gradient(45deg,#833ab4,#fd1d1d,#fcb045);color:#fff}
+.b-facebook{background:#1877f2;color:#fff}
+.b-website{background:#333b4a;color:#cbd2df}
+.b-maps{background:#0f9d58;color:#fff}
+.b-search{background:#4a3f2a;color:#f0c674}
+.b-fresha{background:#f0506e;color:#fff}
+.src a{flex:1;text-decoration:none;color:var(--mut);font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.src a:hover{color:var(--ink)}
+.src .dock{background:var(--panel2);border:1px solid var(--line);color:var(--accent);border-radius:6px;padding:5px 8px;cursor:pointer;font-size:11px;white-space:nowrap}
+.src .dock:hover{border-color:var(--accent)}
+.drop{margin:4px 0 14px;border:1.5px dashed var(--line);border-radius:12px;padding:22px 14px;text-align:center;color:var(--mut);font-size:12.5px;cursor:pointer;transition:.15s}
+.drop:hover,.drop.over{border-color:var(--accent);color:var(--ink);background:var(--panel2)}
+.drop b{color:var(--accent)}
+.thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-bottom:12px}
+.thumb{position:relative;border-radius:8px;overflow:hidden;border:1px solid var(--line);aspect-ratio:1}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.thumb.real::after{content:"REAL";position:absolute;top:3px;left:3px;font-size:8px;font-weight:700;background:rgba(62,207,142,.9);color:#062018;padding:1px 4px;border-radius:3px}
+.thumb .fn{position:absolute;bottom:0;left:0;right:0;font-size:8px;color:#fff;background:rgba(0,0,0,.6);padding:2px 3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+textarea{width:100%;background:var(--panel2);border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:11px 12px;resize:vertical;min-height:120px;outline:none;font-size:13px;font-family:inherit}
+textarea:focus{border-color:var(--accent)}
+.cav{font-size:11.5px;color:#ffb4b4;background:rgba(255,107,107,.08);border:1px solid rgba(255,107,107,.2);border-radius:6px;padding:6px 9px;margin-bottom:6px}
+.hint{font-size:11px;color:var(--faint);padding:12px 16px}
+.saved{font-size:10px;color:var(--good);opacity:0;transition:.2s}.saved.on{opacity:1}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--accent);color:#062018;font-weight:600;font-size:13px;padding:10px 20px;border-radius:99px;opacity:0;transition:.25s;z-index:50;pointer-events:none}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+</style>
+</head>
+<body>
+<header>
+  <a class="back" href="index.html">← Board</a>
+  <span class="title" id="title">…</span>
+  <span class="chip" id="statusChip"></span>
+  <div class="grow"></div>
+  <a class="btn" id="openSite" target="_blank">Open site ↗</a>
+  <button class="btn" id="togglePanel">⇥ Panel</button>
+</header>
+<main>
+  <iframe class="site" id="site" title="Live site preview"></iframe>
+  <aside class="panel" id="panel">
+    <div class="sec">
+      <h3>Source media <span style="color:var(--faint);text-transform:none;letter-spacing:0">open to compare</span></h3>
+      <div id="sources"></div>
+      <p class="hint" style="padding:0 0 4px">Socials can't embed here (they block it). Snap this window left (Win+←), then <b style="color:var(--accent)">Dock&nbsp;→</b> a source to compare side-by-side.</p>
+    </div>
+    <div class="sec">
+      <h3>Add to assets folder <button class="dock" id="openFolder" style="background:var(--panel2);border:1px solid var(--line);color:var(--accent);border-radius:6px;padding:4px 8px;cursor:pointer;font-size:11px">Open folder</button></h3>
+      <div class="drop" id="drop">Drag an image here, <b>paste</b> (Ctrl+V), or <b>click</b> to pick — saves straight into this client's <code>images/</code> folder.</div>
+      <input type="file" id="file" accept="image/*" multiple hidden>
+      <div class="thumbs" id="thumbs"></div>
+    </div>
+    <div class="sec" style="border-bottom:0">
+      <h3>Change notes <span class="saved" id="saved">saved ✓</span></h3>
+      <textarea id="changeNotes" placeholder="Notes on what to change while comparing the site to their socials…"></textarea>
+      <div id="caveats" style="margin-top:12px"></div>
+    </div>
+  </aside>
+</main>
+<div class="toast" id="toast"></div>
+<script>
+const slug = new URLSearchParams(location.search).get('slug');
+const $ = s=>document.querySelector(s);
+let PROJ=null;
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('show'),1500);}
+
+async function load(){
+  const st = await fetch('/api/state').then(r=>r.json());
+  PROJ = st.projects.find(p=>p.slug===slug);
+  if(!PROJ){ document.body.innerHTML='<p style="padding:40px">Unknown project: '+slug+'</p>'; return; }
+  $('#title').textContent = PROJ.title;
+  $('#statusChip').textContent = PROJ.status.replace(/_/g,' ');
+  $('#site').src = '/'+slug+'/';
+  $('#openSite').href = '/'+slug+'/';
+  renderSources();
+  $('#changeNotes').value = PROJ.changeNotes || '';
+  $('#caveats').innerHTML = (PROJ.caveats||[]).map(c=>'<div class="cav">⚠ '+esc(c)+'</div>').join('');
+  loadThumbs();
+}
+function esc(s){return (s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+
+function renderSources(){
+  const el=$('#sources');
+  if(!PROJ.sources||!PROJ.sources.length){ el.innerHTML='<p style="color:var(--faint);font-size:12px">No source links yet.</p>'; return; }
+  el.innerHTML = PROJ.sources.map(s=>{
+    const host = (()=>{try{return new URL(s.url).pathname.replace(/^\//,'')||new URL(s.url).hostname}catch(e){return s.url}})();
+    return '<div class="src"><span class="badge b-'+s.type+'">'+s.type+'</span>'+
+      '<a href="'+s.url+'" target="_blank" title="'+esc(s.url)+'">'+esc(host)+'</a>'+
+      '<button class="dock" data-url="'+esc(s.url)+'">Dock →</button></div>';
+  }).join('');
+  el.querySelectorAll('.dock').forEach(b=>b.onclick=()=>dockRight(b.dataset.url));
+}
+function dockRight(url){
+  const w=Math.floor(screen.availWidth/2), h=screen.availHeight;
+  window.open(url,'_blank','width='+w+',height='+h+',left='+(screen.availWidth-w)+',top=0');
+}
+
+// ---- assets: upload + thumbnails ----
+async function loadThumbs(){
+  const {images} = await fetch('/api/images/'+slug).then(r=>r.json());
+  $('#thumbs').innerHTML = images.map(f=>
+    '<div class="thumb'+(/^real_/i.test(f)?' real':'')+'"><img src="/'+slug+'/images/'+f+'" loading="lazy"><div class="fn">'+esc(f)+'</div></div>').join('')
+    || '<p style="color:var(--faint);font-size:12px;grid-column:1/-1">No images yet.</p>';
+}
+function uploadDataUrl(dataUrl, filename){
+  return fetch('/api/upload/'+slug,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({dataUrl,filename})})
+    .then(r=>r.json()).then(j=>{ if(j.ok){toast('Added '+j.filename);loadThumbs();} else toast(j.error||'upload failed'); });
+}
+function handleFiles(files){
+  [...files].filter(f=>f.type.startsWith('image/')).forEach(f=>{
+    const r=new FileReader(); r.onload=()=>uploadDataUrl(r.result,f.name); r.readAsDataURL(f);
+  });
+}
+const drop=$('#drop');
+drop.onclick=()=>$('#file').click();
+$('#file').onchange=e=>handleFiles(e.target.files);
+drop.addEventListener('dragover',e=>{e.preventDefault();drop.classList.add('over');});
+drop.addEventListener('dragleave',()=>drop.classList.remove('over'));
+drop.addEventListener('drop',e=>{e.preventDefault();drop.classList.remove('over');handleFiles(e.dataTransfer.files);});
+addEventListener('paste',e=>{
+  const items=[...(e.clipboardData?.items||[])].filter(i=>i.type.startsWith('image/'));
+  if(!items.length) return;
+  items.forEach(it=>{ const f=it.getAsFile(); const r=new FileReader(); r.onload=()=>uploadDataUrl(r.result,'pasted'); r.readAsDataURL(f); });
+  toast('Pasting image…');
+});
+$('#openFolder').onclick=()=>fetch('/api/open',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({slug,sub:'images'})}).then(()=>toast('Opened folder'));
+
+// ---- change notes autosave ----
+const ta=$('#changeNotes');
+ta.onblur=()=>{
+  fetch('/api/project/'+slug,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({changeNotes:ta.value})})
+    .then(()=>{const s=$('#saved');s.classList.add('on');setTimeout(()=>s.classList.remove('on'),1200);});
+};
+// ---- panel toggle ----
+$('#togglePanel').onclick=()=>$('#panel').classList.toggle('collapsed');
+
+load();
+</script>
+</body>
+</html>

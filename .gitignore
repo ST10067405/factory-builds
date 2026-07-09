@@ -1,2 +1,8 @@
 dist/
 .vercel/
+board/board.config.json
+node_modules/
+package.json
+package-lock.json
+.claude/skills/
+.impeccable/

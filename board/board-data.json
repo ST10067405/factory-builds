@@ -4,7 +4,7 @@
       "title": "Synergy Hair Kloof",
       "status": "gate_passed",
       "priority": "hot",
-      "notes": "Warm lead � Jaime is on their WhatsApp. Has an existing basic site (synergyhair.co.za), so pitch is a rebuild/upgrade, not greenfield. 2 real client colour-work photos on the build.",
+      "notes": "Warm lead - Jaime is on their WhatsApp. Has an existing basic site (synergyhair.co.za), so pitch is a rebuild/upgrade, not greenfield. 2 real client colour-work photos on the build.",
       "nextAction": "Deploy demo + send rebuild pitch",
       "caveats": [
         "Existing basic site — pitch as REBUILD",
@@ -16,7 +16,26 @@
         "hair",
         "kloof",
         "colour-specialist"
-      ]
+      ],
+      "sources": [
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/synergyhairkloof"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/synergyhairkloof"
+        },
+        {
+          "type": "website",
+          "url": "https://synergyhair.co.za"
+        },
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Synergy+Hair+Kloof+Village+Mall"
+        }
+      ],
+      "changeNotes": ""
     },
     "avant-garde-hair": {
       "title": "Avant Garde Hair Hillcrest",
@@ -34,7 +53,22 @@
         "hair",
         "hillcrest",
         "colour-correction"
-      ]
+      ],
+      "sources": [
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/amberatavantgarde"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/avantgarde42"
+        },
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Avant+Garde+Hair+Fig+Tree+Farm+Inanda+Rd+Hillcrest"
+        }
+      ],
+      "changeNotes": ""
     },
     "village-pet-parlour": {
       "title": "Village Pet Parlour",
@@ -51,7 +85,18 @@
       "tags": [
         "pet-grooming",
         "kloof"
-      ]
+      ],
+      "sources": [
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/villagepetparlour"
+        },
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Village+Pet+Parlour+2+St+Marys+Rd+Kloof"
+        }
+      ],
+      "changeNotes": ""
     },
     "integrity-hair": {
       "title": "Integrity Hair",
@@ -69,7 +114,22 @@
         "waterfall",
         "home-based",
         "budget"
-      ]
+      ],
+      "sources": [
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/integrityhairniki"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/integrityhairniki"
+        },
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Integrity+Hair+6+Rowles+Ave+Waterfall"
+        }
+      ],
+      "changeNotes": ""
     },
     "charlies-hair-salon": {
       "title": "Charlie's Hair Salon",
@@ -87,44 +147,55 @@
         "hair",
         "waterfall",
         "pampering"
-      ]
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Charlie's+Hair+Salon+22+Link+Rd+Waterfall"
+        },
+        {
+          "type": "search",
+          "url": "https://www.google.com/search?q=Charlie's+Hair+Salon+Waterfall+instagram+facebook"
+        }
+      ],
+      "changeNotes": ""
     }
   },
   "documents": [
     {
       "id": "sop-process",
       "label": "Web Design Process Flow (SOP)",
-      "path": "C:/Users/jaime/Desktop/obsidian-vault/sops/Web Design Process Flow.md",
+      "vaultRel": "sops/Web Design Process Flow.md",
       "type": "sop"
     },
     {
       "id": "sop-clients",
       "label": "Client Management & Retainer Structure (SOP)",
-      "path": "C:/Users/jaime/Desktop/obsidian-vault/sops/Client Management & Retainer Structure.md",
+      "vaultRel": "sops/Client Management & Retainer Structure.md",
       "type": "sop"
     },
     {
       "id": "sop-sidehustle",
       "label": "Side-Hustle Scout — Facebook Segment (SOP)",
-      "path": "C:/Users/jaime/Desktop/obsidian-vault/sops/Side-Hustle Scout — Facebook Segment.md",
+      "vaultRel": "sops/Side-Hustle Scout — Facebook Segment.md",
       "type": "sop"
     },
     {
       "id": "doc-pricing",
       "label": "Web Design & Digital Strategy (pricing)",
-      "path": "C:/Users/jaime/Desktop/obsidian-vault/income-pillars/Web Design & Digital Strategy.md",
+      "vaultRel": "income-pillars/Web Design & Digital Strategy.md",
       "type": "doc"
     },
     {
       "id": "doc-international",
       "label": "International Rollout Plan",
-      "path": "C:/Users/jaime/Desktop/obsidian-vault/income-pillars/International Rollout Plan.md",
+      "vaultRel": "income-pillars/International Rollout Plan.md",
       "type": "doc"
     },
     {
       "id": "doc-agreement",
       "label": "Service Agreement (Tier 0) — Draft",
-      "path": "C:/Users/jaime/Desktop/obsidian-vault/sops/Web Design Service Agreement (Tier 0) — Draft.md",
+      "vaultRel": "sops/Web Design Service Agreement (Tier 0) — Draft.md",
       "type": "doc"
     },
     {

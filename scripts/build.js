@@ -41,14 +41,19 @@ function listBuildFolders() {
     .map((entry) => entry.name);
 }
 
+// Internal design/brief docs live co-located in each client folder but must NEVER
+// deploy to the public site (they hold strategy, anti-references, pitch notes).
+const SKIP_DEPLOY_FILES = new Set(["PRODUCT.md", "DESIGN.md"]);
+
 function copyDir(src, dest) {
   fs.mkdirSync(dest, { recursive: true });
   for (const entry of fs.readdirSync(src, { withFileTypes: true })) {
     const srcPath = path.join(src, entry.name);
     const destPath = path.join(dest, entry.name);
     if (entry.isDirectory()) {
+      if (entry.name.startsWith(".")) continue; // skip nested .claude etc.
       copyDir(srcPath, destPath);
-    } else {
+    } else if (!SKIP_DEPLOY_FILES.has(entry.name)) {
       fs.copyFileSync(srcPath, destPath);
     }
   }

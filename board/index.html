@@ -36,6 +36,8 @@ header{position:sticky;top:0;z-index:30;background:rgba(13,15,19,.92);backdrop-f
 .doc{display:inline-flex;align-items:center;gap:7px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:7px 12px;cursor:pointer;font-size:12px;color:var(--mut)}
 .doc:hover{color:var(--ink);border-color:var(--accent2)}
 .doc .dt{font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:var(--faint);border:1px solid var(--line);border-radius:4px;padding:1px 5px}
+.doc.unavailable{opacity:.4;cursor:not-allowed}
+.doc.unavailable:hover{color:var(--mut);border-color:var(--line)}
 /* grid */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:18px;margin-top:16px}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:.15s}
@@ -57,6 +59,15 @@ header{position:sticky;top:0;z-index:30;background:rgba(13,15,19,.92);backdrop-f
 .title{font-weight:650;font-size:15px}
 .meta{font-size:11px;color:var(--mut);display:flex;gap:12px;flex-wrap:wrap;align-items:center}
 .meta .ok{color:var(--good)} .meta .no{color:var(--faint)}
+.srcrow{display:flex;gap:6px;flex-wrap:wrap}
+.srcbadge{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;padding:3px 7px;border-radius:5px;text-decoration:none;opacity:.9}
+.srcbadge:hover{opacity:1}
+.b-instagram{background:linear-gradient(45deg,#833ab4,#fd1d1d,#fcb045);color:#fff}
+.b-facebook{background:#1877f2;color:#fff}
+.b-website{background:#333b4a;color:#cbd2df}
+.b-maps{background:#0f9d58;color:#fff}
+.b-search{background:#4a3f2a;color:#f0c674}
+.b-fresha{background:#f0506e;color:#fff}
 .selrow{display:flex;gap:8px}
 .sel{flex:1;background:var(--panel2);border:1px solid var(--line);color:var(--ink);border-radius:7px;padding:7px 9px;cursor:pointer}
 .caveats{display:flex;flex-direction:column;gap:5px}
@@ -139,10 +150,13 @@ function renderHeader(){
 }
 function renderDocs(){
   $('#docs').innerHTML = STATE.documents.map(d=>
-    '<div class="doc" data-doc="'+d.id+'"><span class="dt">'+d.type+'</span>'+esc(d.label)+'</div>').join('');
+    '<div class="doc'+(d.available?'':' unavailable')+'" data-doc="'+d.id+'" title="'+(d.available?'':'Not found on this machine — check board.config.json')+'"><span class="dt">'+d.type+'</span>'+esc(d.label)+'</div>').join('');
   $('#docs').querySelectorAll('.doc').forEach(el=>{
     const d = STATE.documents.find(x=>x.id===el.dataset.doc);
-    el.onclick = ()=>{ if(d.url) window.open(d.url,'_blank'); else openPath(d.path); };
+    el.onclick = ()=>{
+      if(!d.available){ toast('Not found on this machine — edit board/board.config.json'); return; }
+      if(d.url) window.open(d.url,'_blank'); else openPath(d.path);
+    };
   });
 }
 function renderFilters(){
@@ -194,6 +208,7 @@ function card(p){
         <span>${photo}</span>
         <span class="${p.hasLearn?'ok':'no'}">${p.hasLearn?'✓ journal':'✗ no journal'}</span>
       </div>
+      ${p.sources&&p.sources.length?`<div class="srcrow">${p.sources.map(s=>`<a class="srcbadge b-${s.type}" href="${s.url}" target="_blank" title="${esc(s.url)}">${s.type}</a>`).join('')}</div>`:''}
       <div class="selrow">
         <select class="sel st">${STATUSES.map(s=>`<option value="${s}"${s===p.status?' selected':''}>${STATUS_LABEL[s]}</option>`).join('')}</select>
         <select class="sel pr">${PRIOS.map(s=>`<option value="${s}"${s===p.priority?' selected':''}>${s[0].toUpperCase()+s.slice(1)}</option>`).join('')}</select>
@@ -202,7 +217,8 @@ function card(p){
       <div><div class="lbl">Notes</div><textarea class="notes" placeholder="Add a note…">${esc(p.notes)}</textarea></div>
       <div><div class="lbl">Next action</div><input class="na" placeholder="Next action…" value="${esc(p.nextAction)}"></div>
       <div class="actions">
-        <a class="act primary" href="/${p.slug}/" target="_blank">↗ Open site</a>
+        <button class="act primary review">🔍 Review</button>
+        <a class="act" href="/${p.slug}/" target="_blank">↗ Site</a>
         ${p.hasLearn?`<a class="act" href="/${p.slug}/learn.html" target="_blank">📓 Journal</a>`:''}
         <button class="act openAssets">📁 Assets</button>
         ${p.notionUrl?`<a class="act" href="${p.notionUrl}" target="_blank">◆ Notion</a>`:''}
@@ -219,6 +235,7 @@ function card(p){
   const ta=el.querySelector('.notes'); ta.onblur=()=>{ if(ta.value!==p.notes){ p.notes=ta.value; save({notes:ta.value}); } };
   const na=el.querySelector('.na'); na.onblur=()=>{ if(na.value!==p.nextAction){ p.nextAction=na.value; save({nextAction:na.value}); } };
   el.querySelector('.open-ov').onclick=()=>window.open('/'+p.slug+'/','_blank');
+  el.querySelector('.review').onclick=()=>{ location.href='review.html?slug='+p.slug; };
   el.querySelector('.openAssets').onclick=()=>openSlug(p.slug);
   el.querySelector('.slug-copy').onclick=()=>{ navigator.clipboard.writeText(location.origin.replace(':8105','')+'/'+(p.publicSlug||'')+'/'); toast('Public slug path copied'); };
   el._preview = el.querySelector('.preview'); el._iframe = el.querySelector('iframe');

@@ -47,12 +47,13 @@ fetch('/api/state').then(r=>r.json()).then(state=>{
   // document / db / sop nodes (hubs) near centre
   state.documents.forEach((d,i)=>{
     const a=(i/state.documents.length)*Math.PI*2;
-    const n={id:d.id,label:d.label,type:d.type,r:d.type==='db'?16:12,
-      x:cx+Math.cos(a)*120,y:cy+Math.sin(a)*120,vx:0,vy:0,open:()=>d.url?window.open(d.url,'_blank'):openPath(d.path)};
+    const n={id:d.id,label:d.label,type:d.type,r:d.type==='db'?16:12,available:d.available,
+      x:cx+Math.cos(a)*120,y:cy+Math.sin(a)*120,vx:0,vy:0,
+      open:()=>{ if(!d.available){toast('Not found on this machine — edit board/board.config.json');return;} d.url?window.open(d.url,'_blank'):openPath(d.path); }};
     nodes.push(n);nById[d.id]=n;
   });
   // template node
-  const tpl={id:'_template',label:'_template',type:'template',r:11,x:cx,y:cy-160,vx:0,vy:0,open:()=>openPath(ROOT()+'/_template')};
+  const tpl={id:'_template',label:'_template',type:'template',r:11,x:cx,y:cy-160,vx:0,vy:0,open:()=>openPath(state.root+'/_template')};
   nodes.push(tpl);nById._template=tpl;
   // project nodes ring
   state.projects.forEach((p,i)=>{
@@ -78,8 +79,8 @@ fetch('/api/state').then(r=>r.json()).then(state=>{
     +'<span><i style="background:'+TYPE_COLOR.db+'"></i>Notion DB</span><span><i style="background:'+TYPE_COLOR.doc+'"></i>Docs/SOPs</span>';
   requestAnimationFrame(loop);
 });
-function ROOT(){return 'C:/Users/jaime/_factory_audit/builds';}
 function openPath(p){fetch('/api/open',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({path:p})});}
+function toast(m){ let t=document.getElementById('toast'); if(!t){ t=document.createElement('div'); t.id='toast'; t.style.cssText='position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#4ecab0;color:#062018;font-weight:600;font-size:13px;padding:10px 20px;border-radius:99px;opacity:0;transition:.25s;z-index:50;pointer-events:none'; document.body.appendChild(t); } t.textContent=m; t.style.opacity='1'; clearTimeout(t._h); t._h=setTimeout(()=>t.style.opacity='0',1400); }
 
 // physics
 function step(){
@@ -111,7 +112,7 @@ function draw(){
     ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();});
   // nodes
   nodes.forEach(n=>{
-    const lit=!hi||n.label.toLowerCase().includes(hi);
+    const lit=(!hi||n.label.toLowerCase().includes(hi)) && n.available!==false;
     ctx.globalAlpha=lit?1:.25;
     ctx.beginPath();ctx.arc(n.x,n.y,n.r,0,7);ctx.fillStyle=color(n);ctx.fill();
     if(n.type==='project'&&n.active){ctx.lineWidth=2;ctx.strokeStyle='#e7eaf0';ctx.stroke();}

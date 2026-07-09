@@ -4,7 +4,19 @@
 > `http://localhost:8105/board/`. Files: `scripts/board-server.js` (API + static, port 8105,
 > excluded from build.js/preflight.js), `board/index.html` (brand-card CRM), `board/graph.html`
 > (force-graph), `board/board-data.json` (persisted notes/status; git-tracked). Start it with
-> `node scripts/board-server.js` or preview config `factory-board`. A continuing agent should
+> `node scripts/board-server.js` or preview config `factory-board`. **Portable (2026-07-05, later
+> same day):** double-click `start-board.bat` at repo root to run on any PC with Node installed —
+> no npm install needed. Per-machine vault path lives in `board/board.config.json` (gitignored,
+> copy from `board.config.example.json`); `board-data.json` stores vault doc links as
+> `vaultRel` (relative), never an absolute path, so it's portable. Missing/wrong vault degrades
+> gracefully (those doc chips just grey out) — verified by simulating a bad vaultPath. See
+> `board/PORTABLE.md` for the copy-to-another-PC instructions. **Review workspace (2026-07-05):**
+> `board/review.html?slug=<slug>` — split screen (live site iframe + panel) with per-client
+> `sources` links (IG/FB/website/Maps in board-data.json), "Dock →" to open a social in a
+> right-half popup for side-by-side compare (socials can't iframe — platform block), a
+> drop/paste image zone that POSTs to `/api/upload/<slug>` (saves into the client's images/ as
+> `real_added_*`), `/api/images/<slug>` to list assets, and an autosaving `changeNotes` field.
+> Opened via the "🔍 Review" button on each card. A continuing agent should
 > POLISH/EXTEND (not rebuild): e.g. kanban view, Notion per-lead deep-links, board committed to
 > git after Jaime approves. The plan below is the original spec, kept for reference.
 
