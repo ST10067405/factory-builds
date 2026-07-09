@@ -2,7 +2,7 @@
   "projects": {
     "synergy-hair-kloof": {
       "title": "Synergy Hair Kloof",
-      "status": "gate_passed",
+      "status": "deployed",
       "priority": "hot",
       "notes": "Warm lead - Jaime is on their WhatsApp. Has an existing basic site (synergyhair.co.za), so pitch is a rebuild/upgrade, not greenfield. 2 real client colour-work photos on the build.",
       "nextAction": "Deploy demo + send rebuild pitch",
@@ -35,11 +35,11 @@
           "url": "https://www.google.com/maps/search/Synergy+Hair+Kloof+Village+Mall"
         }
       ],
-      "changeNotes": ""
+      "changeNotes": "2026-07-09 — /impeccable + /ui-ux-pro-max pass: image-led split hero (real colour-work photo + review caption + Call/WhatsApp CTAs), WCAG-AA contrast split (--accent-ink), 44px touch targets, ambient motion with reduced-motion guard. Preflight PASS, redeployed."
     },
     "avant-garde-hair": {
       "title": "Avant Garde Hair Hillcrest",
-      "status": "gate_passed",
+      "status": "deployed",
       "priority": "warm",
       "notes": "Arty, women-owned, colour-correction salon (stylist Amber). Mobile number = good WhatsApp. No real photos indexed anywhere — using unique stock with on-page 'client to supply' note.",
       "nextAction": "Verify listed site is dead, then outreach",
@@ -68,11 +68,11 @@
           "url": "https://www.google.com/maps/search/Avant+Garde+Hair+Fig+Tree+Farm+Inanda+Rd+Hillcrest"
         }
       ],
-      "changeNotes": ""
+      "changeNotes": "2026-07-09 — /impeccable + /ui-ux-pro-max pass: image-led split hero (colour photo + Shraddha R. review caption + Call/WhatsApp CTAs) over the coral→lavender mesh, WCAG-AA contrast split (--accent-ink), 44px touch targets, reduced-motion guard. Preflight PASS, redeployed."
     },
     "village-pet-parlour": {
       "title": "Village Pet Parlour",
-      "status": "gate_passed",
+      "status": "deployed",
       "priority": "hot",
       "notes": "Dog grooming, Kloof. Pet-care journal (not hair). No real photos indexed (only competitors/logos) — unique stock + disclosure.",
       "nextAction": "Confirm WhatsApp mobile, then outreach",
@@ -96,11 +96,11 @@
           "url": "https://www.google.com/maps/search/Village+Pet+Parlour+2+St+Marys+Rd+Kloof"
         }
       ],
-      "changeNotes": ""
+      "changeNotes": "2026-07-09 — /impeccable polish + hero redo + animated hero background (drifting glows, pointer parallax); ui-ux-pro-max 44px touch targets + zero-CLS aspect ratios; reduced-motion guard. Preflight PASS, redeployed."
     },
     "integrity-hair": {
       "title": "Integrity Hair",
-      "status": "gate_passed",
+      "status": "deployed",
       "priority": "warm",
       "notes": "Intimate home-based salon (Nikki), Waterfall. Budget/low-maintenance journal angle. Home salon = thin photo footprint; using stock with disclosure.",
       "nextAction": "Outreach — affordable home-salon angle",
@@ -129,11 +129,11 @@
           "url": "https://www.google.com/maps/search/Integrity+Hair+6+Rowles+Ave+Waterfall"
         }
       ],
-      "changeNotes": ""
+      "changeNotes": "2026-07-09 — /impeccable + /ui-ux-pro-max pass: image-led split hero (warm portrait + Samantha P. review caption + Call/WhatsApp CTAs), WCAG-AA contrast split (--accent-ink), 44px touch targets, reduced-motion guard. Preflight PASS, redeployed."
     },
     "charlies-hair-salon": {
       "title": "Charlie's Hair Salon",
-      "status": "gate_passed",
+      "status": "deployed",
       "priority": "warm",
       "notes": "Homely, pampering (tea + cupcakes + head massage), Waterfall. Pampering/wellbeing journal. 1 real Fresha photo used.",
       "nextAction": "Confirm owner (Charlie vs Anne) before pitching",
@@ -158,7 +158,7 @@
           "url": "https://www.google.com/search?q=Charlie's+Hair+Salon+Waterfall+instagram+facebook"
         }
       ],
-      "changeNotes": ""
+      "changeNotes": "2026-07-09 — /impeccable + /ui-ux-pro-max pass: image-led split hero (real salon photo + review caption + Call/WhatsApp CTAs) over signature drifting bokeh, WCAG-AA contrast split (--accent-ink), 44px touch targets, reduced-motion guard. Preflight PASS, redeployed."
     }
   },
   "documents": [

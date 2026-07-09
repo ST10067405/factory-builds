@@ -31,9 +31,10 @@
   --bg:#F6F0EA;
   --surface:#FFFFFF;
   --ink:#2B1B2E;
-  --mut:rgba(43,27,46,.62);
+  --mut:rgba(43,27,46,.7);     /* muted body — AA (5.67:1 cream, 6.03:1 white) */
   --brand:#2B1B2E;
-  --accent:#FF6B6B;
+  --accent:#FF6B6B;            /* coral — FILLS, borders, decorative/mesh only */
+  --accent-ink:#B03A47;        /* deep raspberry — accent-coloured TEXT/icons on light (AA: 5.24:1 cream, 5.93:1 white) */
   --line:rgba(43,27,46,.14);
   --display:'Syne',sans-serif;
   --body:'Inter',sans-serif;
@@ -51,33 +52,51 @@ nav.scrolled{background:var(--bg);backdrop-filter:blur(10px);box-shadow:0 1px 0 
 .logo{font-family:var(--display);font-size:22px;font-weight:700;text-decoration:none;color:var(--brand)}
 .nav-links{display:flex;gap:28px;list-style:none}
 .nav-links a{text-decoration:none;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);transition:color .2s}
-.nav-links a:hover,.nav-links a:focus-visible{color:var(--accent)}
-.nav-cta{font-size:13px;font-weight:600;background:var(--accent);color:var(--bg);padding:10px 20px;border-radius:99px;text-decoration:none}
+.nav-links a:hover,.nav-links a:focus-visible{color:var(--accent-ink)}
+.nav-cta{font-size:13px;font-weight:600;background:var(--accent);color:var(--ink);padding:10px 20px;border-radius:99px;text-decoration:none;min-height:44px;display:inline-flex;align-items:center;touch-action:manipulation}
 @media(max-width:760px){.nav-links{display:none}}
-header{min-height:92svh;display:flex;flex-direction:column;justify-content:center;padding-top:110px;position:relative;overflow:hidden}
-h1{font-family:var(--display);font-weight:800;font-size:clamp(44px,7.5vw,90px);line-height:1.03;color:var(--ink)}
-.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--accent);margin-bottom:20px}
-.hero-sub{max-width:520px;margin-top:24px;color:var(--mut);font-size:17px}
-.hero-meta{display:flex;flex-wrap:wrap;gap:24px;margin-top:36px;font-size:13.5px;color:var(--mut)}
-.stars{color:var(--accent);letter-spacing:2px}
-section{padding:100px 0}
-h2{font-family:var(--display);font-weight:700;font-size:clamp(32px,5vw,54px);line-height:1.08;margin-bottom:20px}
-.sec-kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--accent);margin-bottom:14px}
-.lede{color:var(--mut);max-width:560px}
+header{position:relative;overflow:hidden;padding:128px 0 72px}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(30px,5vw,60px);align-items:center;max-width:1140px;margin:0 auto;padding:0 24px}
+.hero-text>*{animation:hero-rise .7s cubic-bezier(.22,1,.36,1) backwards}
+.hero-text>*:nth-child(2){animation-delay:.03s}.hero-text>*:nth-child(3){animation-delay:.08s}
+.hero-text>*:nth-child(4){animation-delay:.13s}.hero-text>*:nth-child(5){animation-delay:.18s}.hero-text>*:nth-child(6){animation-delay:.23s}
+@keyframes hero-rise{from{transform:translateY(14px)}to{transform:translateY(0)}}
+@keyframes hero-scale{from{transform:scale(1.05)}to{transform:scale(1)}}
+@media(max-width:900px){header{padding:116px 0 52px}.hero-grid{grid-template-columns:1fr;gap:32px}}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(44px,7.5vw,88px);line-height:1.03;letter-spacing:-.01em;text-wrap:balance;color:var(--ink)}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--accent-ink);margin-bottom:20px}
+.hero-sub{max-width:48ch;margin-top:24px;color:var(--mut);font-size:17px;text-wrap:pretty}
+.hero-proof{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:30px;font-size:13.5px;color:var(--mut)}
+.trust-pill{display:inline-flex;align-items:center;gap:7px;background:rgba(176,58,71,.12);color:var(--accent-ink);font-weight:700;padding:6px 13px;border-radius:99px;font-size:12.5px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14.5px;padding:14px 26px;min-height:44px;border-radius:99px;text-decoration:none;transition:transform .2s cubic-bezier(.22,1,.36,1);touch-action:manipulation}
+.btn-primary{background:var(--brand);color:var(--bg);box-shadow:0 12px 26px -10px rgba(43,27,46,.55)}
+.btn-primary:hover,.btn-primary:focus-visible{transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--brand);border:1.5px solid var(--line)}
+.btn-ghost:hover,.btn-ghost:focus-visible{border-color:var(--brand)}
+.hero-loc{margin-top:20px;font-size:13px;color:var(--mut)}
+.hero-photo{position:relative;border-radius:28px;overflow:hidden;box-shadow:0 34px 64px -26px rgba(43,27,46,.5)}
+.hero-photo img{width:100%;aspect-ratio:5/4;object-fit:cover;display:block;animation:hero-scale .9s cubic-bezier(.22,1,.36,1)}
+.hero-cap{position:absolute;left:0;right:0;bottom:0;padding:42px 22px 16px;color:#fff;font-size:13px;font-weight:600;background:linear-gradient(transparent,rgba(43,27,46,.82))}
+.hero-cap .stars{color:var(--accent);letter-spacing:1px;margin-right:7px}
+.stars{color:var(--accent-ink);letter-spacing:2px}
+section{padding:clamp(72px,9vw,116px) 0}
+h2{font-family:var(--display);font-weight:700;font-size:clamp(32px,5vw,54px);line-height:1.08;letter-spacing:-.005em;text-wrap:balance;margin-bottom:20px}
+.lede{color:var(--mut);max-width:60ch;text-wrap:pretty}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
 @media(max-width:900px){.cards{grid-template-columns:1fr}}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:32px 28px;transition:transform .3s}
 .card:hover{transform:translateY(-6px)}
 .card h3{font-family:var(--display);font-weight:700;font-size:22px;margin-bottom:10px}
-.card p{color:var(--mut);font-size:14.5px}
-.menu-note{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--accent);border:1px dashed var(--accent);border-radius:10px;display:inline-block;padding:8px 14px;margin-bottom:34px}
+.card p{color:var(--mut);font-size:14.5px;text-wrap:pretty}
+.menu-note{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--accent-ink);border:1px dashed var(--accent);border-radius:10px;display:inline-block;padding:8px 14px;margin-bottom:34px}
 .menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 60px}
 @media(max-width:760px){.menu-grid{grid-template-columns:1fr}}
 .mi{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
 .mi b{font-weight:600}
 .mi small{display:block;color:var(--mut);font-size:13px}
 .mi .dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-4px)}
-.mi .price{font-size:13.5px;font-weight:600;color:var(--accent);white-space:nowrap}
+.mi .price{font-size:13.5px;font-weight:600;color:var(--accent-ink);white-space:nowrap}
 .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
 @media(max-width:900px){.rev-grid{grid-template-columns:1fr}}
 .rev{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:32px 30px}
@@ -85,25 +104,25 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(32px,5vw,54px);lin
 .rev footer{margin-top:16px;font-size:13px;color:var(--mut)}
 .gallery{display:grid;grid-template-columns:1.3fr 1fr;gap:22px}
 @media(max-width:760px){.gallery{grid-template-columns:1fr}}
-.gallery img{width:100%;height:100%;min-height:260px;object-fit:cover;border-radius:20px}
+.gallery img{width:100%;height:100%;min-height:260px;aspect-ratio:4/3;object-fit:cover;border-radius:20px}
 .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
 @media(max-width:860px){.visit-grid{grid-template-columns:1fr}}
 .vitem{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
 .vitem b{display:block;font-weight:600}
 .vitem span,.vitem a{color:var(--mut);font-size:14.5px;text-decoration:none}
-.cta-big{display:inline-block;margin-top:32px;background:var(--accent);color:var(--bg);text-decoration:none;font-size:14px;font-weight:600;padding:15px 32px;border-radius:99px;transition:transform .25s}
+.cta-big{display:inline-flex;align-items:center;margin-top:32px;background:var(--accent);color:var(--ink);text-decoration:none;font-size:14px;font-weight:600;padding:15px 32px;min-height:44px;border-radius:99px;transition:transform .25s;touch-action:manipulation}
 .cta-big:hover{transform:translateY(-2px)}
 footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px}
 .foot-in{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
 .reveal.in{opacity:1;transform:none}
-a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent-ink);outline-offset:3px;border-radius:4px}
 /* real-work gallery */
 .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:52px}
 @media(max-width:820px){.work-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.work-grid{grid-template-columns:1fr}}
 .work-grid figure{position:relative;border-radius:20px;overflow:hidden;margin:0}
-.work-grid img{width:100%;height:300px;object-fit:cover;transition:transform .7s ease}
+.work-grid img{width:100%;height:300px;aspect-ratio:1/1;object-fit:cover;transition:transform .7s ease}
 .work-grid figure:hover img{transform:scale(1.05)}
 .work-grid figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 18px 14px;font-size:12.5px;color:#fff;background:linear-gradient(transparent,rgba(43,27,46,.72))}
 .work-note{font-size:12px;color:var(--mut);margin-top:16px;font-style:italic}
@@ -112,28 +131,32 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 @media(max-width:820px){.journal-grid{grid-template-columns:1fr}}
 .jpost{display:block;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:30px 26px;text-decoration:none;color:inherit;transition:transform .3s,box-shadow .3s}
 .jpost:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(43,27,46,.1)}
-.jpost .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.jpost .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);font-weight:700}
 .jpost h3{font-family:var(--display);font-weight:700;font-size:22px;margin:12px 0 8px}
 .jpost p{color:var(--mut);font-size:14px}
-.jpost .more{margin-top:14px;font-size:13px;font-weight:700;color:var(--accent)}
+.jpost .more{margin-top:14px;font-size:13px;font-weight:700;color:var(--accent-ink)}
 /* ===== SIGNATURE MOTION: animated gradient-mesh colour-sweep behind hero (nod to colour work) ===== */
-.mesh{position:absolute;inset:-20%;z-index:0;pointer-events:none;opacity:.65;filter:blur(60px);background:
+.mesh{position:absolute;inset:-20%;z-index:0;pointer-events:none;opacity:.5;filter:blur(60px);background:
   radial-gradient(circle at 20% 30%, #FF6B6B 0%, transparent 45%),
   radial-gradient(circle at 80% 20%, #9C5FFF 0%, transparent 45%),
   radial-gradient(circle at 50% 80%, #FFC15E 0%, transparent 45%),
   radial-gradient(circle at 85% 75%, #2B1B2E 0%, transparent 50%);
   background-size:180% 180%;
-  animation:meshSweep 22s ease-in-out infinite;
+  animation:meshSweep 30s ease-in-out infinite;
 }
+.mesh-drift{position:absolute;inset:-10%;z-index:0;pointer-events:none;opacity:.22;filter:blur(80px);background:radial-gradient(circle at 65% 65%, #FF6B6B 0%, transparent 55%);animation:meshDrift 38s ease-in-out infinite alternate}
 @keyframes meshSweep{
   0%{background-position:0% 0%}
   50%{background-position:100% 60%}
   100%{background-position:0% 0%}
 }
-header .wrap{position:relative;z-index:1}
+@keyframes meshDrift{
+  from{transform:translate3d(0,0,0) scale(1)}
+  to{transform:translate3d(-4vw,3vw,0) scale(1.1)}
+}
 /* ===== COMMS BRIDGE (standard on every build) ===== */
 .fab-stack{position:fixed;right:20px;bottom:20px;z-index:80;display:flex;flex-direction:column;gap:12px;align-items:flex-end}
-.fab{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;cursor:pointer;border:none;box-shadow:0 10px 30px rgba(0,0,0,.3);transition:transform .2s}
+.fab{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;cursor:pointer;border:none;box-shadow:0 10px 30px rgba(0,0,0,.3);transition:transform .2s;touch-action:manipulation}
 .fab:hover,.fab:focus-visible{transform:scale(1.08)}
 .fab-wa{background:#25D366}
 .fab-chat{background:var(--brand)}
@@ -144,15 +167,16 @@ header .wrap{position:relative;z-index:1}
 .chat-log{padding:16px;display:flex;flex-direction:column;gap:10px;max-height:280px;overflow-y:auto}
 .msg{max-width:85%;padding:10px 14px;border-radius:14px;font-size:13.5px;line-height:1.5}
 .msg.bot{background:var(--surface);align-self:flex-start;border:1px solid var(--line)}
-.msg.user{background:var(--accent);color:var(--bg);align-self:flex-end}
+.msg.user{background:var(--accent);color:var(--ink);align-self:flex-end}
 .chips{display:flex;flex-wrap:wrap;gap:8px;padding:0 16px 16px}
-.chip{font-size:12px;font-weight:600;border:1px solid var(--accent);background:none;color:var(--accent);border-radius:99px;padding:7px 13px;cursor:pointer;transition:background .2s,color .2s}
-.chip:hover,.chip:focus-visible{background:var(--accent);color:var(--bg)}
+.chip{font-size:12px;font-weight:600;border:1px solid var(--accent);background:none;color:var(--accent-ink);border-radius:99px;padding:7px 13px;min-height:32px;cursor:pointer;transition:background .2s,color .2s;touch-action:manipulation}
+.chip:hover,.chip:focus-visible{background:var(--accent);color:var(--ink)}
 @media (prefers-reduced-motion: reduce){
   .reveal{opacity:1;transform:none;transition:none}
   html{scroll-behavior:auto}
-  .card:hover,.fab:hover,.cta-big:hover{transform:none}
-  .mesh{animation:none;background-position:0% 0%}
+  .card:hover,.fab:hover,.cta-big:hover,.btn-primary:hover{transform:none}
+  .mesh,.mesh-drift{animation:none;background-position:0% 0%}
+  .hero-text>*,.hero-photo img{animation:none}
 }
 </style>
 </head>
@@ -175,20 +199,30 @@ header .wrap{position:relative;z-index:1}
 
 <header id="top">
   <div class="mesh" aria-hidden="true"></div>
-  <div class="wrap">
-    <p class="kicker">Hair Salon · Hillcrest</p>
-    <h1>Colour Is Our<br>Language</h1>
-    <p class="hero-sub">Amber and her team run an arty, women-owned, LGBTQ+ friendly salon at Fig Tree Farm — loved for colour-correction that actually corrects, precise cuts, and never double-booking your time.</p>
-    <div class="hero-meta">
-      <div><span class="stars">★★★★★</span>&nbsp; <strong>4.9</strong> · 98 Google reviews</div>
-      <div>Fig Tree Farm, 56 Inanda Rd, Hillcrest</div>
+  <div class="hero-grid">
+    <div class="hero-text">
+      <p class="kicker">Hair Salon · Hillcrest</p>
+      <h1>Colour Is Our<br>Language</h1>
+      <p class="hero-sub">Amber and her team run an arty, women-owned, LGBTQ+ friendly salon at Fig Tree Farm — loved for colour-correction that actually corrects, precise cuts, and never double-booking your time.</p>
+      <div class="hero-proof">
+        <span><span class="stars">★★★★★</span>&nbsp;<strong style="color:var(--ink)">4.9</strong> · 98 Google reviews</span>
+        <span class="trust-pill">Colour-correction specialists</span>
+      </div>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:+27641173763">Call to book</a>
+        <a class="btn btn-ghost" href="https://wa.me/27641173763?text=Hi%20Avant%20Garde%20Hair%2C%20I%27d%20like%20to%20book%20an%20appointment" target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+      <p class="hero-loc">Fig Tree Farm, 56 Inanda Rd, Hillcrest · 064 117 3763</p>
+    </div>
+    <div class="hero-photo">
+      <img src="images/about-colour.jpg" alt="Vivid salon colour work in progress" loading="eager">
+      <div class="hero-cap"><span class="stars">★★★★★</span>"…amazing with colour work and a precise cut. She colour-corrected my hair perfectly." — Shraddha R.</div>
     </div>
   </div>
 </header>
 
 <section id="about">
   <div class="wrap">
-    <p class="sec-kicker reveal">about</p>
     <h2 class="reveal">Led By Amber, Made For You</h2>
     <p class="lede reveal">Set at Fig Tree Farm in Hillcrest, Avant Garde Hair is a women-owned, LGBTQ+ friendly salon with an arty, editorial edge. Amber and her team are known across dozens of reviews for colour expertise, precise cutting, and genuinely caring about you and your hair.</p>
     <div class="cards">
@@ -205,7 +239,6 @@ header .wrap{position:relative;z-index:1}
 
 <section id="work" style="padding-top:0">
   <div class="wrap">
-    <p class="sec-kicker reveal">our work</p>
     <h2 class="reveal">Colour With An Edge</h2>
     <p class="lede reveal">A glimpse of the arty, editorial energy Amber and her team bring to the chair — precise cutting and colour work with real personality.</p>
     <div class="work-grid reveal">
@@ -219,7 +252,6 @@ header .wrap{position:relative;z-index:1}
 
 <section id="services" style="padding-top:0">
   <div class="wrap">
-    <p class="sec-kicker reveal">services</p>
     <h2 class="reveal">Cuts, Colour &amp; Care</h2>
     <p class="menu-note reveal">sample layout — final service list and prices supplied by Avant Garde Hair Hillcrest</p>
     <div class="menu-grid reveal">
@@ -233,7 +265,6 @@ header .wrap{position:relative;z-index:1}
 
 <section id="reviews" style="padding-top:0">
   <div class="wrap">
-    <p class="sec-kicker reveal">reviews</p>
     <h2 class="reveal">98 Reviews, 4.9 Stars</h2>
     <div class="rev-grid">
       <blockquote class="rev reveal"><p>"Amber is one of a kind — not only does she have years of experience, but she genuinely cares about you and your hair."</p><footer>— Morgan M. · Google review</footer></blockquote>
@@ -245,7 +276,6 @@ header .wrap{position:relative;z-index:1}
 
 <section id="journal" style="padding-top:0">
   <div class="wrap">
-    <p class="sec-kicker reveal">journal</p>
     <h2 class="reveal">The Edit — Hair Journal</h2>
     <p class="lede reveal">Tips Amber and her team share with clients: making colour last, caring for hair between visits, and getting the most from your appointment.</p>
     <div class="journal-grid reveal">
@@ -259,11 +289,10 @@ header .wrap{position:relative;z-index:1}
 <section id="visit" style="padding-top:0">
   <div class="wrap visit-grid">
     <div class="reveal">
-      <p class="sec-kicker">visit</p>
       <h2>Come Say Hello</h2>
       <div class="vitem"><div><b>Where</b><span>Fig Tree Farm, 56 Inanda Rd, Hillcrest, 3610</span></div></div>
       <div class="vitem"><div><b>Call</b><a href="tel:+27641173763">064 117 3763</a></div></div>
-      <div class="vitem"><div><b>Hours</b><span>Hours to be confirmed <em style="font-size:11px;color:var(--accent)">(draft — hours to be confirmed)</em></span></div></div>
+      <div class="vitem"><div><b>Hours</b><span>Hours to be confirmed <em style="font-size:11px;color:var(--accent-ink)">(draft — hours to be confirmed)</em></span></div></div>
       <div class="vitem"><div><b>Follow</b><a href="https://www.instagram.com/amberatavantgarde" rel="noopener" target="_blank">@amberatavantgarde</a></div></div>
       <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center">
         <a class="cta-big" href="tel:+27641173763">Call to book → 064 117 3763</a>

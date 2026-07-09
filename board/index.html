@@ -125,6 +125,7 @@ input.na{background:var(--panel2);border:1px solid var(--line);color:var(--ink);
 <div class="toast" id="toast"></div>
 
 <script>
+const PROD_BASE = 'https://arkatype-concepts.vercel.app'; // live Vercel production domain (git-connected, auto-deploys on push)
 const STATUSES = ['built','gate_passed','deployed','outreach_sent','replied','won','cold'];
 const STATUS_LABEL = {built:'Built',gate_passed:'Gate passed',deployed:'Deployed',outreach_sent:'Outreach sent',replied:'Replied',won:'Won',cold:'Cold'};
 const PRIOS = ['hot','warm','cold'];
@@ -219,6 +220,7 @@ function card(p){
       <div class="actions">
         <button class="act primary review">🔍 Review</button>
         <a class="act" href="/${p.slug}/" target="_blank">↗ Site</a>
+        ${p.publicSlug?`<a class="act" href="${PROD_BASE}/${p.publicSlug}/" target="_blank">🌐 Live</a>`:''}
         ${p.hasLearn?`<a class="act" href="/${p.slug}/learn.html" target="_blank">📓 Journal</a>`:''}
         <button class="act openAssets">📁 Assets</button>
         ${p.notionUrl?`<a class="act" href="${p.notionUrl}" target="_blank">◆ Notion</a>`:''}
@@ -237,7 +239,7 @@ function card(p){
   el.querySelector('.open-ov').onclick=()=>window.open('/'+p.slug+'/','_blank');
   el.querySelector('.review').onclick=()=>{ location.href='review.html?slug='+p.slug; };
   el.querySelector('.openAssets').onclick=()=>openSlug(p.slug);
-  el.querySelector('.slug-copy').onclick=()=>{ navigator.clipboard.writeText(location.origin.replace(':8105','')+'/'+(p.publicSlug||'')+'/'); toast('Public slug path copied'); };
+  el.querySelector('.slug-copy').onclick=()=>{ if(!p.publicSlug){toast('No public slug yet');return;} navigator.clipboard.writeText(PROD_BASE+'/'+p.publicSlug+'/'); toast('Live URL copied'); };
   el._preview = el.querySelector('.preview'); el._iframe = el.querySelector('iframe');
   return el;
 }
