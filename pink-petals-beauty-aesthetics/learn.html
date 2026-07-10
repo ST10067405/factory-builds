@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Petal Room — Beauty Journal | Pink Petals Beauty &amp; Aesthetics</title>
+<meta name="description" content="Beauty know-how from Pink Petals in Kloof — making lash sets last, choosing the right brow treatment, getting the most from a facial, and looking after your skin between visits.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Where is Pink Petals?", "acceptedAnswer": { "@type": "Answer", "text": "We're at Shop 231/232, Village Mall, Kloof. Directions are on the Visit section of the main site." } },
+    { "@type": "Question", "name": "How long do lash extensions take?", "acceptedAnswer": { "@type": "Answer", "text": "A full new set is a relaxed appointment — set aside a couple of hours. Infills are quicker. The studio confirms exact timing when you book." } },
+    { "@type": "Question", "name": "Which brow treatment is right for me?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on your natural brows and the look you want — shaping and tint tidy and define, while lamination gives a fuller, brushed-up finish. We talk it through at your appointment." } },
+    { "@type": "Question", "name": "How do I book?", "acceptedAnswer": { "@type": "Answer", "text": "Call or WhatsApp 071 224 8108. Online booking is coming to this site soon." } }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#FBF4F2;--surface:#FFFFFF;--ink:#2A1F26;--mut:rgba(42,31,38,.72);
+  --brand:#7A2E4A;--accent:#E8A0B4;--accent-ink:#9A3755;--line:rgba(42,31,38,.11);
+  --display:'Fraunces',serif;--body:'Karla',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand);color:var(--bg);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:rgba(251,244,242,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-size:22px;font-weight:600;color:var(--brand);text-decoration:none;letter-spacing:-.01em}
+.nav-back{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-decoration:none}
+.nav-back:hover{color:var(--brand)}
+header{padding:90px 0 60px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--accent-ink);margin-bottom:18px}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(38px,6vw,66px);line-height:1.05;color:var(--ink);letter-spacing:-.02em}
+.intro{max-width:600px;margin:22px auto 0;color:var(--mut);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:30px 26px;cursor:pointer;transition:transform .3s,box-shadow .3s;text-align:left}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(42,31,38,.1);outline:none}
+.post .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);font-weight:700}
+.post h3{font-family:var(--display);font-weight:600;font-size:23px;margin:12px 0 8px;line-height:1.2;color:var(--brand)}
+.post p{color:var(--mut);font-size:14.5px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);font-weight:600;font-size:clamp(28px,4vw,44px);margin-bottom:28px;text-align:center;color:var(--ink)}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent-ink);font-size:22px;font-weight:400}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+/* article modal */
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(42,31,38,.55);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--bg);max-width:680px;width:100%;border-radius:22px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(0,0,0,.4)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut);line-height:1}
+.asheet .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);font-weight:700}
+.asheet h2{font-family:var(--display);font-weight:600;font-size:clamp(26px,4vw,38px);margin:12px 0 20px;line-height:1.15;color:var(--ink)}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;color:var(--ink);font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--brand);color:var(--bg);text-decoration:none;font-weight:600;font-size:14px;padding:13px 26px;border-radius:99px;min-height:44px}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--accent-ink);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for Pink Petals Beauty &amp; Aesthetics by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">Pink Petals</a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">The Petal Room · Journal</p>
+    <h1>Beauty that lasts between visits</h1>
+    <p class="intro">Little bits of studio know-how from Pink Petals — how to make a lash set go the distance, pick the right brow treatment, and keep your skin happy in Kloof's weather.</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="grid" id="postGrid">
+    <!-- posts injected + clickable -->
+  </div>
+</div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="qa">
+      <details><summary>Where is Pink Petals?</summary><p>We're at Shop 231/232, Village Mall, Kloof. Directions are on the Visit section of the main site.</p></details>
+      <details><summary>How long do lash extensions take?</summary><p>A full new set is a relaxed appointment — set aside a couple of hours. Infills are quicker. The studio confirms exact timing when you book.</p></details>
+      <details><summary>Which brow treatment is right for me?</summary><p>It depends on your natural brows and the look you want — shaping and tint tidy and define, while lamination gives a fuller, brushed-up finish. We talk it through at your appointment.</p></details>
+      <details><summary>How do I book?</summary><p>Call or WhatsApp 071 224 8108. Online booking is coming to this site soon.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">Pink Petals Beauty &amp; Aesthetics · Shop 231/232, Village Mall, Kloof · Concept by Arkatype Digital — draft, awaiting client sign-off</div>
+</footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#visit">Book your visit →</a>
+  </div>
+</div>
+
+<script>
+const POSTS = [
+  { tag: 'Lashes', title: "Making a fresh lash set go the distance", teaser: "A good set can last weeks — if you treat it kindly in the first 48 hours.", body: `<p>A good lash set can last weeks — the trick is how you treat it, especially in the first two days.</p><ul><li>Keep them dry for the first 24–48 hours while the adhesive fully cures.</li><li>Skip oil-based cleansers and makeup removers near the lash line.</li><li>Brush gently with a clean spoolie each morning to keep them neat.</li><li>Resist rubbing your eyes — and let them dry naturally, no tugging.</li><li>Book infills before they look sparse, not after.</li></ul>` },
+  { tag: 'Brows', title: "Lamination, tint or shape — which brow is for you", teaser: "Three very different finishes. Here's how to pick the right one.", body: `<p>\"Brows\" covers a few very different treatments. The right one depends on what you're starting with and the look you want.</p><ul><li><b>Shape &amp; tidy:</b> cleans up stray hairs and defines your natural line.</li><li><b>Tint:</b> darkens fine or fair hairs so brows read fuller without makeup.</li><li><b>Lamination:</b> brushes hairs up and sets them for a fuller, fluffy finish.</li><li>Sparse brows often love a tint; unruly brows love lamination.</li><li>Not sure? We'll look at your brows together and choose at your visit.</li></ul>` },
+  { tag: 'Skin', title: "Getting the most out of your facial", teaser: "A little before-and-after care makes a facial work much harder.", body: `<p>A facial does more when you set it up well and look after your skin afterwards.</p><ul><li>Come with clean skin and skip heavy makeup on the day.</li><li>Mention any reactions, retinoids or recent sun — it changes what's safe.</li><li>Afterwards, keep it simple: gentle cleanser, moisturiser, SPF.</li><li>Give actives (like exfoliants) a day or two off post-facial.</li><li>Regular, spaced-out facials beat one big rescue mission.</li></ul>` },
+  { tag: 'Lashes', title: "Lash lift versus extensions: how to choose", teaser: "Want low-maintenance, or want drama? That's really the question.", body: `<p>Both open up the eyes — they just get there differently.</p><ul><li><b>Lash lift &amp; tint:</b> curls and darkens your own lashes, very low-maintenance, grows out naturally.</li><li><b>Extensions:</b> add length and volume for a fuller, more dramatic look, with infills every few weeks.</li><li>Love mascara-free mornings but happy with your natural length? Lift.</li><li>Want noticeable volume for an event or every day? Extensions.</li><li>We'll match the look to your natural lashes so nothing feels heavy.</li></ul>` },
+  { tag: 'Aftercare', title: "Keeping your skin happy between appointments", teaser: "The at-home basics that protect the work we do in the chair.", body: `<p>What you do at home between visits matters as much as the appointment itself.</p><ul><li>Cleanse morning and night — never sleep in makeup.</li><li>Moisturise to keep the barrier strong, especially in dry Highway winters.</li><li>Wear SPF daily; it's the single biggest anti-ageing step there is.</li><li>Introduce actives slowly, one at a time, to avoid irritation.</li><li>Drink water and be patient — skin changes over weeks, not days.</li></ul>` },
+  { tag: 'First Visit', title: "What to expect at your first Pink Petals visit", teaser: "A few small things make your first appointment run beautifully.", body: `<p>First time in? Here's how to make it easy and get the best result.</p><ul><li>Arrive with clean lashes/brows and minimal eye makeup.</li><li>Bring a reference photo if you have a look in mind.</li><li>Flag allergies, sensitivities or past reactions up front.</li><li>Set aside a little extra time so nothing feels rushed.</li><li>Ask about aftercare before you leave — we're happy to walk you through it.</li></ul>` }
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

@@ -159,6 +159,57 @@
         }
       ],
       "changeNotes": "2026-07-09 — /impeccable + /ui-ux-pro-max pass: image-led split hero (real salon photo + review caption + Call/WhatsApp CTAs) over signature drifting bokeh, WCAG-AA contrast split (--accent-ink), 44px touch targets, reduced-motion guard. Preflight PASS, redeployed."
+    },
+    "pink-petals-beauty-aesthetics": {
+      "title": "Pink Petals Beauty & Aesthetics",
+      "status": "deployed",
+      "priority": "warm",
+      "notes": "Beauty & aesthetics (lashes, brows, facials), Village Mall, Kloof. Greenfield — verified no live site. 4.8★ / 87 Google reviews. WhatsApp 071 224 8108. 2 real client photos (lash close-up + real treatment room); no fabricated review quotes.",
+      "nextAction": "Outreach — treatment-menu + gallery + booking angle",
+      "caveats": [
+        "Only 2 real photos available — studio to supply full before/after gallery",
+        "Review quotes not sourced — only aggregate 4.8/87 used (real)"
+      ],
+      "notionUrl": "https://app.notion.com/p/Pink-Petals-Beauty-Aesthetics-370fe00de722814e9523d104e628d814",
+      "docs": [],
+      "tags": [
+        "beauty",
+        "kloof",
+        "lashes-brows"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Pink+Petals+Beauty+%26+Aesthetics+Village+Mall+Kloof"
+        }
+      ],
+      "changeNotes": "2026-07-10 — NEW build from Lead Scout pipeline (score 72). Presence-gate verified greenfield. Image-led split hero (real lash/brow photo + Call/WhatsApp CTAs), drifting-petals motion, blush/berry palette (Fraunces + Karla), WCAG-AA --accent-ink, unique 6-article beauty journal. Preflight PASS."
+    },
+    "sylvias-hair-beauty": {
+      "title": "Sylvia's Hair & Beauty Salon",
+      "status": "deployed",
+      "priority": "warm",
+      "notes": "Hair & beauty salon, 72 Pitlochry Rd, Chiltern Hills, Westville. Verified greenfield (Fresha booking only, no real site). 4.9 Google rating. Phone 082 320 8384. Real brand logo used; work photos are disclosed illustrative stock (no genuine salon photos exist).",
+      "nextAction": "Outreach — proper site wrapping the Fresha booking",
+      "caveats": [
+        "No real work photos exist — only the brand logo; styling shots are disclosed stock",
+        "Review count unknown — only 4.9 rating shown (real), count TBC"
+      ],
+      "notionUrl": "https://app.notion.com/p/Sylvia-s-Hair-Beauty-Salon-37ffe00de72281e992f9c574b2a0854d",
+      "docs": [],
+      "tags": [
+        "hair",
+        "beauty",
+        "westville",
+        "fresha"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Sylvia's+Hair+%26+Beauty+Salon+72+Pitlochry+Rd+Westville"
+        }
+      ],
+      "changeNotes": "2026-07-10 — NEW build from Lead Scout pipeline (score 65, verified greenfield). Logo-forward luxe identity (real SS Beauty logo), image-led split hero w/ disclosed stock + honest 4.9 rating caption, gold-shimmer motion, ivory/charcoal/gold palette (Cormorant + Jost), WCAG-AA --accent-ink, unique 6-article hair-&-beauty journal. Preflight PASS."
     }
   },
   "documents": [

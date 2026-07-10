@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Chair — Hair &amp; Beauty Notes | Sylvia's Hair &amp; Beauty Salon</title>
+<meta name="description" content="Hair and beauty know-how from Sylvia's in Westville — keeping colour bright, making a blow-dry last, booking smartly on Fresha, and caring for hair and nails between visits.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Where is Sylvia's?", "acceptedAnswer": { "@type": "Answer", "text": "We're at 72 Pitlochry Rd, Chiltern Hills, Westville. Directions are on the Visit section of the main site." } },
+    { "@type": "Question", "name": "Can I book online?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — Sylvia's is set up on Fresha, so you can see availability and book instantly, any time of day." } },
+    { "@type": "Question", "name": "Do you do hair and beauty?", "acceptedAnswer": { "@type": "Answer", "text": "Both — hair (cuts, colour, styling, treatments) and beauty (nails, waxing and more), so one visit can do more than one thing." } },
+    { "@type": "Question", "name": "How do I get hold of you?", "acceptedAnswer": { "@type": "Answer", "text": "Call or WhatsApp 082 320 8384, or book directly on the Fresha page." } }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#F7F3EC;--surface:#FFFFFF;--ink:#211D17;--mut:rgba(33,29,23,.72);
+  --brand:#211D17;--accent:#C9A227;--accent-ink:#6E5410;--line:rgba(33,29,23,.13);
+  --display:'Cormorant Garamond',serif;--body:'Jost',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand);color:#F7F3EC;font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:rgba(247,243,236,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-size:25px;font-weight:700;color:var(--ink);text-decoration:none}
+.logo b{color:var(--accent-ink)}
+.nav-back{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-decoration:none}
+.nav-back:hover{color:var(--accent-ink)}
+header{padding:90px 0 60px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:var(--accent-ink);margin-bottom:18px}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(40px,6vw,70px);line-height:1.02;color:var(--ink)}
+.intro{max-width:600px;margin:22px auto 0;color:var(--mut);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:10px;padding:30px 26px;cursor:pointer;transition:transform .3s,box-shadow .3s;text-align:left}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(33,29,23,.1);outline:none}
+.post .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);font-weight:600}
+.post h3{font-family:var(--display);font-weight:600;font-size:26px;margin:12px 0 8px;line-height:1.15;color:var(--ink)}
+.post p{color:var(--mut);font-size:14.5px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);font-weight:600;font-size:clamp(30px,4vw,48px);margin-bottom:28px;text-align:center;color:var(--ink)}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent-ink);font-size:22px;font-weight:400}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+/* article modal */
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(20,17,13,.6);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--bg);max-width:680px;width:100%;border-radius:12px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(0,0,0,.4);border-top:3px solid var(--accent)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut);line-height:1}
+.asheet .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);font-weight:600}
+.asheet h2{font-family:var(--display);font-weight:600;font-size:clamp(28px,4vw,42px);margin:12px 0 20px;line-height:1.1;color:var(--ink)}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;color:var(--ink);font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--brand);color:#F7F3EC;text-decoration:none;font-weight:600;font-size:14px;padding:13px 26px;border-radius:6px;min-height:44px}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--accent-ink);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for Sylvia's Hair &amp; Beauty Salon by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">Sylvia's<b>.</b></a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">The Chair · Journal</p>
+    <h1>Hair &amp; beauty that lasts</h1>
+    <p class="intro">A few useful notes from Sylvia's — keeping your colour bright, making a blow-dry go the distance, and getting the most out of booking hair and beauty in one place.</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="grid" id="postGrid">
+    <!-- posts injected + clickable -->
+  </div>
+</div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="qa">
+      <details><summary>Where is Sylvia's?</summary><p>We're at 72 Pitlochry Rd, Chiltern Hills, Westville. Directions are on the Visit section of the main site.</p></details>
+      <details><summary>Can I book online?</summary><p>Yes — Sylvia's is set up on Fresha, so you can see availability and book instantly, any time of day.</p></details>
+      <details><summary>Do you do hair and beauty?</summary><p>Both — hair (cuts, colour, styling, treatments) and beauty (nails, waxing and more), so one visit can do more than one thing.</p></details>
+      <details><summary>How do I get hold of you?</summary><p>Call or WhatsApp 082 320 8384, or book directly on the Fresha page.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">Sylvia's Hair &amp; Beauty Salon · 72 Pitlochry Rd, Chiltern Hills, Westville · Concept by Arkatype Digital — draft, awaiting client sign-off</div>
+</footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#visit">Book your visit →</a>
+  </div>
+</div>
+
+<script>
+const POSTS = [
+  { tag: 'Colour', title: "Keeping salon colour bright for longer", teaser: "Fresh colour fades fastest in the first two weeks — here's how to slow it.", body: `<p>Great colour is an investment; a few small habits protect it.</p><ul><li>Wait a full 48–72 hours after colour before your first wash.</li><li>Use a sulphate-free, colour-safe shampoo and wash less often.</li><li>Rinse cooler — hot water opens the cuticle and leaches colour.</li><li>Protect from strong sun and chlorine, which fade tone fast.</li><li>Book a gloss or toner between colours to refresh vibrancy.</li></ul>` },
+  { tag: 'Booking', title: "Grabbing the Fresha slot you actually want", teaser: "Popular times go first. A little planning gets you the good ones.", body: `<p>Sylvia's is on Fresha, so booking is quick — here's how to land the slot you want.</p><ul><li>Book your next appointment before you leave the current one.</li><li>Mid-week and mid-morning tend to have the most choice.</li><li>Turn on notifications so you catch cancellations that free up.</li><li>Add any notes (colour history, allergies) when you book.</li><li>Need hair and beauty together? Flag it so enough time is set aside.</li></ul>` },
+  { tag: 'Styling', title: "Making a blow-dry last past day one", teaser: "A good blow-dry can hold for days with the right aftercare.", body: `<p>A blow-dry doesn't have to be a one-day wonder.</p><ul><li>Let it cool fully set before tying or touching it too much.</li><li>Sleep on a silk pillowcase to cut friction and frizz.</li><li>Keep water and steam off it — shower caps are your friend.</li><li>Refresh roots with a little dry shampoo on day two or three.</li><li>Loosely pin it up overnight to protect the shape.</li></ul>` },
+  { tag: 'Hair Care', title: "Looking after hair through Highway winters", teaser: "Cooler, drier months ask a little more of your hair.", body: `<p>Upper Highway winters can leave hair drier and more static — adjust gently.</p><ul><li>Add a weekly nourishing mask while it's cold and dry.</li><li>Turn heat tools down a notch and always use heat protectant.</li><li>Trim regularly so dryness doesn't travel up as split ends.</li><li>Don't skip conditioner — mid-lengths and ends need the moisture.</li><li>Ask about an in-salon treatment for a bigger moisture boost.</li></ul>` },
+  { tag: 'Beauty', title: "Nails that survive real life", teaser: "A little care makes a manicure last well past the weekend.", body: `<p>Manicures last longer when you treat your hands kindly afterwards.</p><ul><li>Wear gloves for dishes and cleaning — water and chemicals lift polish.</li><li>Keep cuticle oil handy; hydrated nails chip less.</li><li>Reach for tools, not your nails, when opening things.</li><li>A fresh top coat every few days adds shine and life.</li><li>Book your refill before the grow-out gets awkward.</li></ul>` },
+  { tag: 'Planning', title: "Hair and beauty in one relaxed visit", teaser: "Why stacking your appointments is the quiet time-saver.", body: `<p>One of the perks of a hair-and-beauty salon is doing more in a single trip.</p><ul><li>Pair colour with a mani so your processing time isn't wasted.</li><li>Book back-to-back rather than two separate trips across the week.</li><li>Plan a full refresh before an event — hair, nails, brows in one go.</li><li>Tell us the occasion so we can advise on timing and order.</li><li>Set the whole thing up in a couple of taps on Fresha.</li></ul>` }
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
