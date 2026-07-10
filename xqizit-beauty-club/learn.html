@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Xqizit Journal — Beauty &amp; Membership Know-How | Xqizit Beauty Club</title>
+<meta name="description" content="Beauty know-how from Xqizit Beauty Club in Westville — keeping gel fresh between fills, prepping for waxing, the value of a beauty membership, brow upkeep, self-care routines and booking tips.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Where is Xqizit Beauty Club?", "acceptedAnswer": { "@type": "Answer", "text": "We're at 7 Harry Gwala Road, Westville, Durban. Directions are on the Visit section of the main site." } },
+    { "@type": "Question", "name": "How does the membership work?", "acceptedAnswer": { "@type": "Answer", "text": "Xqizit is a members' beauty club — one monthly membership covers your weekly gel hands and toes plus brow, lip, sides and underarm waxing, with optional wash and set add-ons. The club confirms the current membership details when you join." } },
+    { "@type": "Question", "name": "What is included in the membership?", "acceptedAnswer": { "@type": "Answer", "text": "Weekly gel manicure and pedicure, and brow, lip, sides and underarm waxing. Wash and set is an optional add-on. The final menu is set by the club." } },
+    { "@type": "Question", "name": "How do I join?", "acceptedAnswer": { "@type": "Answer", "text": "Call or WhatsApp 073 565 1752. Online joining is coming to this site soon." } }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#FBF6F1;--surface:#FFFFFF;--ink:#241A17;--mut:rgba(36,26,23,.72);
+  --brand:#D81E28;--accent:#C8A24A;--accent-ink:#B01822;--line:rgba(36,26,23,.11);
+  --display:'Outfit',sans-serif;--body:'Inter',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand);color:#fff;font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:rgba(251,246,241,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-size:23px;font-weight:800;color:var(--brand);text-decoration:none;letter-spacing:-.02em}
+.logo span{color:var(--ink);font-weight:500;font-size:14px}
+.nav-back{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);text-decoration:none;font-weight:500}
+.nav-back:hover{color:var(--brand)}
+header{padding:90px 0 60px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--accent-ink);margin-bottom:18px}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(38px,6vw,64px);line-height:1.04;color:var(--ink);letter-spacing:-.03em}
+.intro{max-width:600px;margin:22px auto 0;color:var(--mut);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:30px 26px;cursor:pointer;transition:transform .3s,box-shadow .3s;text-align:left}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(36,26,23,.1);outline:none}
+.post .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);font-weight:700}
+.post h3{font-family:var(--display);font-weight:700;font-size:22px;margin:12px 0 8px;line-height:1.2;color:var(--brand)}
+.post p{color:var(--mut);font-size:14.5px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);font-weight:700;font-size:clamp(28px,4vw,42px);margin-bottom:28px;text-align:center;color:var(--ink)}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent-ink);font-size:22px;font-weight:400}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+/* article modal */
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(36,26,23,.55);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--bg);max-width:680px;width:100%;border-radius:22px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(0,0,0,.4)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut);line-height:1}
+.asheet .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);font-weight:700}
+.asheet h2{font-family:var(--display);font-weight:700;font-size:clamp(26px,4vw,36px);margin:12px 0 20px;line-height:1.15;color:var(--ink)}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;color:var(--ink);font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--brand);color:#fff;text-decoration:none;font-weight:600;font-size:14px;padding:13px 26px;border-radius:99px;min-height:44px;touch-action:manipulation}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--accent-ink);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for Xqizit Beauty Club by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">Xqizit <span>Beauty Club</span></a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">The Xqizit Journal</p>
+    <h1>Beauty that stays handled</h1>
+    <p class="intro">Little bits of club know-how from Xqizit — how to keep gel looking fresh, prep for a smoother wax, and get the most out of being a member so you always look ready.</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="grid" id="postGrid">
+    <!-- posts injected + clickable -->
+  </div>
+</div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="qa">
+      <details><summary>Where is Xqizit Beauty Club?</summary><p>We're at 7 Harry Gwala Road, Westville, Durban. Directions are on the Visit section of the main site.</p></details>
+      <details><summary>How does the membership work?</summary><p>Xqizit is a members' beauty club — one monthly membership covers your weekly gel hands and toes plus brow, lip, sides and underarm waxing, with optional wash and set add-ons. The club confirms the current membership details when you join.</p></details>
+      <details><summary>What is included in the membership?</summary><p>Weekly gel manicure and pedicure, and brow, lip, sides and underarm waxing. Wash and set is an optional add-on. The final menu is set by the club.</p></details>
+      <details><summary>How do I join?</summary><p>Call or WhatsApp 073 565 1752. Online joining is coming to this site soon.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">Xqizit Beauty Club · 7 Harry Gwala Road, Westville, Durban · Concept by Arkatype Digital — draft, awaiting client sign-off</div>
+</footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#visit">Join the club →</a>
+  </div>
+</div>
+
+<script>
+const POSTS = [
+  { tag: 'Nails', title: "Keeping your gel fresh between fills", teaser: "A little day-to-day care buys your gel set extra life and shine.", body: `<p>Gel is tough, but how you treat your hands day to day decides how long it stays looking freshly done.</p><ul><li>Wear gloves for washing up and cleaning — hot water and chemicals dull the finish.</li><li>Rub a drop of cuticle oil in daily to stop lifting at the edges.</li><li>Treat your nails as tools' worst enemy: don't use them to pick or pry.</li><li>Pat hands dry rather than soaking them for long stretches.</li><li>Come in on your regular club day rather than waiting for chips to appear.</li></ul>` },
+  { tag: 'Waxing', title: "How to prep for a smoother wax", teaser: "A few simple steps before your appointment make all the difference.", body: `<p>Good prep makes waxing quicker, cleaner and far more comfortable — most of it happens before you arrive.</p><ul><li>Let hair grow to roughly a grain-of-rice length so it lifts properly.</li><li>Gently exfoliate a day before to free any trapped or ingrown hairs.</li><li>Come with clean, product-free skin — skip heavy lotions or oils that day.</li><li>Avoid sun beds and strong actives right beforehand, as skin is more sensitive.</li><li>Afterwards, keep the area cool and loose-clothed for a few hours.</li></ul>` },
+  { tag: 'Membership', title: "Why a beauty membership actually pays off", teaser: "The quiet value of never letting your upkeep slide again.", body: `<p>A membership isn't just a payment plan — it changes the way your beauty upkeep fits into your week.</p><ul><li>Your regular slot is already yours, so you never scramble for a booking.</li><li>Upkeep stays consistent instead of swinging between polished and overdue.</li><li>Bundling weekly care into one club is simpler than paying visit by visit.</li><li>You build a rhythm with people who know your nails and your preferences.</li><li>Looking put-together becomes the default, not a last-minute effort.</li></ul>` },
+  { tag: 'Brows', title: "Keeping your brows tidy between visits", teaser: "Small habits that hold your shape until your next club appointment.", body: `<p>Your brow shape is set in the chair, but a few gentle habits keep it looking sharp in between.</p><ul><li>Brush brows up and across daily with a clean spoolie to see the true shape.</li><li>Only tidy obvious strays well outside the line — leave the shaping to us.</li><li>Resist over-plucking; regrowth is what keeps brows full over time.</li><li>Keep the skin around them moisturised so waxing stays comfortable.</li><li>Note anything you'd tweak and mention it at your next visit.</li></ul>` },
+  { tag: 'Self-care', title: "Building an easy weekly self-care rhythm", teaser: "How a standing beauty routine frees up your mind, not just your look.", body: `<p>The value of a weekly routine isn't only how you look — it's the mental load it quietly removes.</p><ul><li>Anchor your beauty upkeep to the same day each week so it runs on autopilot.</li><li>Treat the visit as your pause — a set moment that's just for you.</li><li>Pair small home habits, like nightly cuticle oil, with your club visits.</li><li>Keep an emergency kit — a nail file and clear top coat — for quick touch-ups.</li><li>Let consistency do the heavy lifting; small and regular beats big and rare.</li></ul>` },
+  { tag: 'Booking', title: "Making the most of your standing slot", teaser: "Simple booking habits that keep your weekly visit running smoothly.", body: `<p>A membership works best when your visits run like clockwork — a little planning keeps it effortless.</p><ul><li>Keep the same weekly slot so it becomes a fixed part of your routine.</li><li>Let the club know in good time if you need to shift a week around.</li><li>Come with any add-ons in mind, like a wash and set, so time is set aside.</li><li>Flag new sensitivities or preferences before your appointment starts.</li><li>Save our WhatsApp — 073 565 1752 — for quick changes on the go.</li></ul>` }
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

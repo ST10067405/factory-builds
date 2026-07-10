@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Homeowner Electrical Guides | H.A.S. Solutions (Electrical)</title>
+<meta name="description" content="Plain-English electrical guides for Upper Highway homes from H.A.S. Solutions — when to call an electrician, what a Certificate of Compliance is, inverter vs generator, DB board warning signs, wiring for solar, and why circuits trip.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What areas does H.A.S. Solutions cover?", "acceptedAnswer": { "@type": "Answer", "text": "We serve Forest Hills, Hillcrest and the surrounding Upper Highway in Durban. If you're nearby and not sure, send a WhatsApp to 072 408 2155 and ask." } },
+    { "@type": "Question", "name": "Do you issue a Certificate of Compliance (COC)?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We carry out electrical work to standard and can issue a Certificate of Compliance where one is required, such as when a property is being sold." } },
+    { "@type": "Question", "name": "My DB board keeps tripping — is that dangerous?", "acceptedAnswer": { "@type": "Answer", "text": "A trip is a safety device doing its job, but repeated tripping means something needs attention. Switch off, avoid overloading, and call an electrician to find the real cause rather than just resetting it." } },
+    { "@type": "Question", "name": "How do I book H.A.S. Solutions?", "acceptedAnswer": { "@type": "Answer", "text": "Call or WhatsApp 072 408 2155. Tell us what's happening and we'll guide you from there." } }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#F5F6F8;--surface:#FFFFFF;--ink:#161B26;--mut:rgba(22,27,38,.68);
+  --brand:#1B2A4A;--accent:#F5B301;--accent-ink:#8A6100;--line:rgba(22,27,38,.11);
+  --display:'Space Grotesk',sans-serif;--body:'Inter',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand);color:#fff;font-size:11px;letter-spacing:.13em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:rgba(245,246,248,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-size:20px;font-weight:700;color:var(--brand);text-decoration:none;letter-spacing:-.01em;display:inline-flex;align-items:center;gap:9px}
+.logo svg{width:24px;height:24px}
+.nav-back{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);text-decoration:none}
+.nav-back:hover{color:var(--brand)}
+header{padding:96px 0 60px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--accent-ink);margin-bottom:18px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(36px,5.6vw,62px);line-height:1.06;color:var(--ink);letter-spacing:-.02em}
+.intro{max-width:620px;margin:22px auto 0;color:var(--mut);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding-bottom:40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:30px 26px;cursor:pointer;transition:transform .3s,box-shadow .3s;text-align:left}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(22,27,38,.09);outline:none}
+.post .tag{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent-ink);font-weight:700}
+.post h3{font-family:var(--display);font-weight:600;font-size:21px;margin:12px 0 8px;line-height:1.2;color:var(--brand)}
+.post p{color:var(--mut);font-size:14.5px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);font-weight:700;font-size:clamp(28px,4vw,42px);margin-bottom:28px;text-align:center;color:var(--ink)}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent-ink);font-size:22px;font-weight:400}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+/* article modal */
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(22,27,38,.55);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--bg);max-width:680px;width:100%;border-radius:22px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(0,0,0,.4)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut);line-height:1}
+.asheet .tag{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent-ink);font-weight:700}
+.asheet h2{font-family:var(--display);font-weight:700;font-size:clamp(25px,4vw,36px);margin:12px 0 20px;line-height:1.16;color:var(--ink)}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;color:var(--ink);font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--brand);color:#fff;text-decoration:none;font-weight:600;font-size:14px;padding:13px 26px;border-radius:99px;min-height:44px}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--accent-ink);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for H.A.S. Solutions (Electrical) by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      H.A.S. Solutions
+    </a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">Homeowner electrical guides</p>
+    <h1>Know your home's electrics</h1>
+    <p class="intro">Straight-talking guides from H.A.S. Solutions for Forest Hills, Hillcrest and the Upper Highway — so you know when to call, what to ask for, and how to keep your home safe.</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="grid" id="postGrid">
+    <!-- posts injected + clickable -->
+  </div>
+</div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="qa">
+      <details><summary>What areas does H.A.S. Solutions cover?</summary><p>We serve Forest Hills, Hillcrest and the surrounding Upper Highway in Durban. If you're nearby and not sure, send a WhatsApp to 072 408 2155 and ask.</p></details>
+      <details><summary>Do you issue a Certificate of Compliance (COC)?</summary><p>Yes. We carry out electrical work to standard and can issue a Certificate of Compliance where one is required, such as when a property is being sold.</p></details>
+      <details><summary>My DB board keeps tripping — is that dangerous?</summary><p>A trip is a safety device doing its job, but repeated tripping means something needs attention. Switch off, avoid overloading, and call an electrician to find the real cause rather than just resetting it.</p></details>
+      <details><summary>How do I book H.A.S. Solutions?</summary><p>Call or WhatsApp 072 408 2155. Tell us what's happening and we'll guide you from there.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">H.A.S. Solutions (Electrical) · Forest Hills, Hillcrest &amp; Upper Highway, Durban · Concept by Arkatype Digital — draft, awaiting client sign-off</div>
+</footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#visit">Get in touch →</a>
+  </div>
+</div>
+
+<script>
+const POSTS = [
+  { tag: 'Safety', title: "When to call an electrician instead of DIY", teaser: "Some jobs are fair game at home — others are a genuine hazard. Here's the line.", body: `<p>Plenty of small electrical jobs are fine to do yourself, but a few cross into hazard territory fast. Knowing the difference keeps your home and family safe.</p><ul><li>Swapping a like-for-like light bulb or plugging in an appliance is fine — opening up wiring is not.</li><li>Any burning smell, scorch marks, buzzing or warm switches means stop and call a professional.</li><li>Work behind the DB board, in the roof, or anything needing a Certificate of Compliance should be done by an electrician.</li><li>Water plus electricity — outdoor points, geysers, pool pumps — is never a DIY area.</li><li>If in doubt, switch it off at the board and get it looked at rather than guessing.</li></ul>` },
+  { tag: 'Compliance', title: "What a Certificate of Compliance is and why you need one", teaser: "The document that proves your home's wiring is legally safe — and when it's required.", body: `<p>A Certificate of Compliance (COC) is a legal document confirming that the fixed electrical installation in your home meets South African safety standards. It matters more often than people expect.</p><ul><li>It certifies the wiring, DB board, earthing and fixed points are safe and compliant.</li><li>You legally need a valid COC when you sell or transfer a property.</li><li>Insurers may ask for one, and can dispute a claim if the installation was non-compliant.</li><li>A COC is only valid if no changes have been made since it was issued — new work means a new certificate.</li><li>Only a registered person may issue one after a proper inspection and any needed repairs.</li></ul>` },
+  { tag: 'Backup power', title: "Inverter vs generator: load-shedding basics", teaser: "Two very different ways to keep the lights on. Here's how to choose.", body: `<p>When load-shedding hits, an inverter and a generator both keep you running — but they suit different homes and budgets.</p><ul><li><b>Inverter + battery:</b> silent, automatic and low-maintenance — it charges when power is on and switches over instantly.</li><li><b>Generator:</b> higher output for heavy loads, but noisy, needs fuel, and usually manual to start.</li><li>Inverters shine for lights, Wi-Fi, TV and small essentials during typical load-shedding.</li><li>Generators make sense for big draws like pool pumps, ovens or a whole workshop.</li><li>Whatever you choose, it must be installed correctly and safely isolated from the grid.</li></ul>` },
+  { tag: 'Warning signs', title: "Signs your DB board needs attention", teaser: "Your distribution board tells you when something's wrong — if you know what to look for.", body: `<p>The DB (distribution) board is the heart of your home's electrics. A few warning signs mean it's time to get it checked before a small issue becomes a big one.</p><ul><li>A breaker that trips repeatedly, or won't reset, is pointing at a real fault.</li><li>Buzzing, crackling or a faint burning smell from the board is a stop-now signal.</li><li>Warm or discoloured breakers and scorch marks indicate overheating connections.</li><li>An old board with no earth leakage protection is a safety gap worth closing.</li><li>Unlabelled circuits make faults harder and slower to trace safely.</li></ul>` },
+  { tag: 'Solar', title: "Preparing your home's wiring for solar", teaser: "Before the panels go up, your electrics need to be ready. Here's what that involves.", body: `<p>Solar and battery systems are a big step, and the groundwork in your existing wiring makes the difference between a smooth install and a costly headache.</p><ul><li>A sound, compliant DB board is the foundation — solar adds load and complexity.</li><li>Essential circuits (lights, plugs, Wi-Fi) are often split onto a backup supply.</li><li>Correct earthing and isolation protect both your system and anyone working on the grid.</li><li>Cable sizing and safe mounting points need planning before the panels arrive.</li><li>A pre-solar electrical check catches problems while they're still cheap to fix.</li></ul>` },
+  { tag: 'Fault finding', title: "Why circuits trip and what it actually means", teaser: "A trip isn't the fault — it's the warning. Here's what your board is telling you.", body: `<p>When a breaker trips, it's protecting you from something. Understanding the common causes helps you know whether it's a quick fix or a call-out.</p><ul><li><b>Overload:</b> too many appliances on one circuit — spread the load and see if it settles.</li><li><b>Short circuit:</b> live and neutral touching, often from a damaged cable or appliance.</li><li><b>Earth leakage:</b> current escaping to earth, frequently a faulty appliance like a kettle or geyser.</li><li>Unplug things one at a time to find the culprit before resetting repeatedly.</li><li>If it keeps tripping with nothing obvious plugged in, stop resetting and get it traced.</li></ul>` }
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

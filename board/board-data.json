@@ -210,6 +210,603 @@
         }
       ],
       "changeNotes": "2026-07-10 — NEW build from Lead Scout pipeline (score 65, verified greenfield). Logo-forward luxe identity (real SS Beauty logo), image-led split hero w/ disclosed stock + honest 4.9 rating caption, gold-shimmer motion, ivory/charcoal/gold palette (Cormorant + Jost), WCAG-AA --accent-ink, unique 6-article hair-&-beauty journal. Preflight PASS."
+    },
+    "azalea-ink": {
+      "title": "Azalea Ink",
+      "status": "deployed",
+      "priority": "cold",
+      "notes": "Concept build.",
+      "nextAction": "Review — legacy build, consider upgrading to current spec",
+      "caveats": [
+        "Predates current SOP standard (image-led hero / AA contrast / journal may differ) — review before pitching"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "azalea",
+        "ink"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Azalea%20Ink%20"
+        }
+      ],
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+    },
+    "cinnamon-lace": {
+      "title": "Cinnamon & Lace",
+      "status": "deployed",
+      "priority": "cold",
+      "notes": "Concept build.",
+      "nextAction": "Review — legacy build, consider upgrading to current spec",
+      "caveats": [
+        "Predates current SOP standard (image-led hero / AA contrast / journal may differ) — review before pitching"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "cinnamon",
+        "lace"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Cinnamon%20%26%20Lace%20"
+        }
+      ],
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+    },
+    "deacons-hair-salon": {
+      "title": "Deacons Hair Salon",
+      "status": "deployed",
+      "priority": "cold",
+      "notes": "Concept build.",
+      "nextAction": "Review — legacy build, consider upgrading to current spec",
+      "caveats": [
+        "Predates current SOP standard (image-led hero / AA contrast / journal may differ) — review before pitching"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "deacons",
+        "hair",
+        "salon"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Deacons%20Hair%20Salon%20"
+        }
+      ],
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+    },
+    "dimitri-pet-services": {
+      "title": "Dimitri Pet Services",
+      "status": "deployed",
+      "priority": "cold",
+      "notes": "Hillcrest's trusted pet care specialist. Dog grooming, bathing, nail trimming, dog walking and pet sitting: hands-on care from a passionate team with a 4.8★ Google rating. Call 079 989 8197.",
+      "nextAction": "Review — legacy build, consider upgrading to current spec",
+      "caveats": [
+        "Predates current SOP standard (image-led hero / AA contrast / journal may differ) — review before pitching"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "dimitri",
+        "pet",
+        "services"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Dimitri%20Pet%20Services%20"
+        }
+      ],
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+    },
+    "entropy-hair-studio": {
+      "title": "entropy HAIR DESIGNS STUDIO",
+      "status": "deployed",
+      "priority": "cold",
+      "notes": "entropy HAIR DESIGNS STUDIO: an editorial hair and barbering studio at Lillies Quarter, Hillcrest. Cuts, colour, blow waves and beard work by expert stylists.",
+      "nextAction": "Review — legacy build, consider upgrading to current spec",
+      "caveats": [
+        "Predates current SOP standard (image-led hero / AA contrast / journal may differ) — review before pitching"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "entropy",
+        "hair",
+        "studio"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/entropy%20HAIR%20DESIGNS%20STUDIO%20Hillcrest"
+        }
+      ],
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+    },
+    "hair-by-carl-putz": {
+      "title": "Hair by Carl Putz: Kloof's Boutique Hairdresser",
+      "status": "deployed",
+      "priority": "cold",
+      "notes": "Hair by Carl Putz: 40+ years of expert hair and nail care in Kloof. Boutique appointments, complimentary drinks, head massage included. Book via WhatsApp.",
+      "nextAction": "Review — legacy build, consider upgrading to current spec",
+      "caveats": [
+        "Predates current SOP standard (image-led hero / AA contrast / journal may differ) — review before pitching"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "hair",
+        "by",
+        "carl",
+        "putz"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Hair%20by%20Carl%20Putz%3A%20Kloof's%20Boutique%20Hairdresser%20"
+        }
+      ],
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+    },
+    "has-solutions-electrical": {
+      "title": "H.A.S. Solutions (Electrical)",
+      "status": "deployed",
+      "priority": "warm",
+      "notes": "Electrician / electrical contractor, Forest Hills, Hillcrest. Brand-new business (very few reviews) with no website — relies on referrals. Phone 072 408 2155. No real photos exist, so built icon/graphic-forward (honest).",
+      "nextAction": "Outreach — turn referrals into bookings with a trustworthy site + click-to-call",
+      "caveats": [
+        "Brand-new: no rating/review claims made (none available)",
+        "No real photos exist — built photo-free (icon/SVG-led), not faked"
+      ],
+      "notionUrl": "https://app.notion.com/p/H-A-S-Solutions-Electrical-381fe00de72281eea6b5df8a3b047658",
+      "docs": [],
+      "tags": [
+        "electrical",
+        "hillcrest",
+        "trades"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/H.A.S.+Solutions+Electrical+Forest+Hills+Hillcrest"
+        }
+      ],
+      "changeNotes": "2026-07-10 — NEW to-spec build from Lead Scout pipeline (score 55), replacing a stale legacy build. Icon-forward (no photos), navy/amber trust identity, unique 6-article journal. Preflight PASS."
+    },
+    "herspace-beauty-aesthetics": {
+      "title": "HerSpace Beauty & Aesthetics",
+      "status": "deployed",
+      "priority": "cold",
+      "notes": "A private ladies-only sanctuary in Westville for facials, microneedling, dermaplaning, chemical peels, massage and advanced skincare. Where relaxation meets luxury: book your glow-up.",
+      "nextAction": "Review — legacy build, consider upgrading to current spec",
+      "caveats": [
+        "Predates current SOP standard (image-led hero / AA contrast / journal may differ) — review before pitching"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "herspace",
+        "beauty",
+        "aesthetics"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/HerSpace%20Beauty%20%26%20Aesthetics%20Westville"
+        }
+      ],
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+    },
+    "jooma-coffee": {
+      "title": "Jooma Coffee: Artisan Coffee & Kitchen · Kloof, KZN",
+      "status": "deployed",
+      "priority": "cold",
+      "notes": "Kloof's favourite neighbourhood coffee shop. Artisan espresso, all-day breakfast, sarmies, bakes and catering. 2 Village Rd, Kloof, open daily.",
+      "nextAction": "Review — legacy build, consider upgrading to current spec",
+      "caveats": [
+        "Predates current SOP standard (image-led hero / AA contrast / journal may differ) — review before pitching"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "jooma",
+        "coffee"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Jooma%20Coffee%3A%20Artisan%20Coffee%20%26%20Kitchen%20%C2%B7%20Kloof%2C%20KZN%20"
+        }
+      ],
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+    },
+    "konfident-kloof-dental": {
+      "title": "Konfident at Kloof",
+      "status": "deployed",
+      "priority": "cold",
+      "notes": "Konfident at Kloof — friendly, affordable family and general dentistry at Kloof Village Mall. Check-ups, cleaning, fillings, crowns, whitening and kids' dentistry. Your smile in our hands. New patients welcome.",
+      "nextAction": "Review — legacy build, consider upgrading to current spec",
+      "caveats": [
+        "Predates current SOP standard (image-led hero / AA contrast / journal may differ) — review before pitching"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "konfident",
+        "kloof",
+        "dental"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Konfident%20at%20Kloof%20Kloof"
+        }
+      ],
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+    },
+    "leigh-plumbers": {
+      "title": "Leigh Plumbers – Emergency Plumbing Hillcrest & Sherwood, KZN",
+      "status": "deployed",
+      "priority": "cold",
+      "notes": "5.0★ rated plumbers serving Hillcrest, Sherwood, Kloof and surrounds. Emergency call-outs, leak detection, geysers, drain clearing. Call 079 886 0254.",
+      "nextAction": "Review — legacy build, consider upgrading to current spec",
+      "caveats": [
+        "Predates current SOP standard (image-led hero / AA contrast / journal may differ) — review before pitching"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "leigh",
+        "plumbers"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Leigh%20Plumbers%20%E2%80%93%20Emergency%20Plumbing%20Hillcrest%20%26%20Sherwood%2C%20KZN%20"
+        }
+      ],
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+    },
+    "maryvale-vet": {
+      "title": "Maryvale Veterinary Clinic, Westville, Durban",
+      "status": "deployed",
+      "priority": "cold",
+      "notes": "Concept build.",
+      "nextAction": "Review — legacy build, consider upgrading to current spec",
+      "caveats": [
+        "Predates current SOP standard (image-led hero / AA contrast / journal may differ) — review before pitching"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "maryvale",
+        "vet"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Maryvale%20Veterinary%20Clinic%2C%20Westville%2C%20Durban%20"
+        }
+      ],
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+    },
+    "moto-cafe": {
+      "title": "Moto Cafe",
+      "status": "deployed",
+      "priority": "cold",
+      "notes": "Concept build.",
+      "nextAction": "Review — legacy build, consider upgrading to current spec",
+      "caveats": [
+        "Predates current SOP standard (image-led hero / AA contrast / journal may differ) — review before pitching"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "moto",
+        "cafe"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Moto%20Cafe%20"
+        }
+      ],
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+    },
+    "nolas-salon": {
+      "title": "Nolas Salon",
+      "status": "deployed",
+      "priority": "cold",
+      "notes": "Westville's appointments-only beauty studio. Expert nail art, hair styling, beauty therapy and bridal makeup: three specialists, one beautiful address. 54A Dunkeld Rd · 072 128 9685.",
+      "nextAction": "Review — legacy build, consider upgrading to current spec",
+      "caveats": [
+        "Predates current SOP standard (image-led hero / AA contrast / journal may differ) — review before pitching"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "nolas",
+        "salon"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Nolas%20Salon%20"
+        }
+      ],
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+    },
+    "potter-shed-bistro": {
+      "title": "The Potter Shed Bistro",
+      "status": "deployed",
+      "priority": "cold",
+      "notes": "The Potter Shed Bistro: Hillcrest's favourite outdoor bistro. Fresh food, home-brewed craft beer, ziplines and nature walks at Morewood Activity Centre.",
+      "nextAction": "Review — legacy build, consider upgrading to current spec",
+      "caveats": [
+        "Predates current SOP standard (image-led hero / AA contrast / journal may differ) — review before pitching"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "potter",
+        "shed",
+        "bistro"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/The%20Potter%20Shed%20Bistro%20Hillcrest"
+        }
+      ],
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+    },
+    "shampooch-dog-parlour": {
+      "title": "Shampooch Dog Parlour",
+      "status": "deployed",
+      "priority": "cold",
+      "notes": "Shampooch Dog Parlour: much-loved dog grooming in Waterfall, Upper Highway. Full grooms, bath & tidy, nail care and puppy's first cut. Book by phone or enquiry.",
+      "nextAction": "Review — legacy build, consider upgrading to current spec",
+      "caveats": [
+        "Predates current SOP standard (image-led hero / AA contrast / journal may differ) — review before pitching"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "shampooch",
+        "dog",
+        "parlour"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Shampooch%20Dog%20Parlour%20"
+        }
+      ],
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+    },
+    "steam-and-cream": {
+      "title": "Steam and Cream Cafe",
+      "status": "deployed",
+      "priority": "cold",
+      "notes": "Steam and Cream, a much-loved café in Kloof, Upper Highway. Great coffee, all-day menu, and a warm space for catch-ups, catering and group bookings.",
+      "nextAction": "Review — legacy build, consider upgrading to current spec",
+      "caveats": [
+        "Predates current SOP standard (image-led hero / AA contrast / journal may differ) — review before pitching"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "steam",
+        "cream"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Steam%20and%20Cream%20Cafe%20"
+        }
+      ],
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+    },
+    "strands-hair-studio": {
+      "title": "STRANDS",
+      "status": "deployed",
+      "priority": "cold",
+      "notes": "STRANDS: precision cuts, honest colour and considered treatment at The Colony, Hillcrest. 4.9★ on Google.",
+      "nextAction": "Review — legacy build, consider upgrading to current spec",
+      "caveats": [
+        "Predates current SOP standard (image-led hero / AA contrast / journal may differ) — review before pitching"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "strands",
+        "hair",
+        "studio"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/STRANDS%20"
+        }
+      ],
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+    },
+    "studio-spa": {
+      "title": "Studio Spa: Hillcrest · Luxury Treatments & Massage",
+      "status": "deployed",
+      "priority": "cold",
+      "notes": "Hillcrest's sanctuary for body and mind. Massage therapy, facials, body rituals and nail treatments. Book your escape: 065 344 7994.",
+      "nextAction": "Review — legacy build, consider upgrading to current spec",
+      "caveats": [
+        "Predates current SOP standard (image-led hero / AA contrast / journal may differ) — review before pitching"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "studio",
+        "spa"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Studio%20Spa%3A%20Hillcrest%20%C2%B7%20Luxury%20Treatments%20%26%20Massage%20"
+        }
+      ],
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+    },
+    "the-coffee-minista": {
+      "title": "The Coffee Minista",
+      "status": "deployed",
+      "priority": "cold",
+      "notes": "A tranquil garden coffee stop on Old Main Road, Kloof. Friendly baristas who know your order, honest coffee, and pure quiet.",
+      "nextAction": "Review — legacy build, consider upgrading to current spec",
+      "caveats": [
+        "Predates current SOP standard (image-led hero / AA contrast / journal may differ) — review before pitching"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "coffee",
+        "minista"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/The%20Coffee%20Minista%20Kloof"
+        }
+      ],
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+    },
+    "the-elite-barbers": {
+      "title": "The Elite Barbers",
+      "status": "deployed",
+      "priority": "cold",
+      "notes": "The Elite Barbers, a premium black-and-gold barbershop in Westville, Upper Highway. Fresh fades, sharp beard work and hot-towel shaves. 4.8★ on Google.",
+      "nextAction": "Review — legacy build, consider upgrading to current spec",
+      "caveats": [
+        "Predates current SOP standard (image-led hero / AA contrast / journal may differ) — review before pitching"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "elite",
+        "barbers"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/The%20Elite%20Barbers%20"
+        }
+      ],
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+    },
+    "tipsy-flamingo": {
+      "title": "Tipsy Flamingo SA",
+      "status": "deployed",
+      "priority": "cold",
+      "notes": "Kloof's most vibey cocktail bar and restaurant. Craft cocktails, incredible food, live music, ladies nights and unforgettable private functions. Kloof Village Mall · Open daily 10am–2am · 083 556 5851.",
+      "nextAction": "Review — legacy build, consider upgrading to current spec",
+      "caveats": [
+        "Predates current SOP standard (image-led hero / AA contrast / journal may differ) — review before pitching"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "tipsy",
+        "flamingo"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Tipsy%20Flamingo%20SA%20"
+        }
+      ],
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+    },
+    "velvet-coffee-co": {
+      "title": "VELVET. coffee co",
+      "status": "deployed",
+      "priority": "cold",
+      "notes": "Specialty slow-brew coffee in the Maytime Centre, Kloof. V60, AeroPress, flat whites and the friendliest baristas on the Upper Highway.",
+      "nextAction": "Review — legacy build, consider upgrading to current spec",
+      "caveats": [
+        "Predates current SOP standard (image-led hero / AA contrast / journal may differ) — review before pitching"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "velvet",
+        "coffee",
+        "co"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/VELVET.%20coffee%20co%20Kloof"
+        }
+      ],
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+    },
+    "xqizit-beauty-club": {
+      "title": "Xqizit Beauty Club (Westville)",
+      "status": "deployed",
+      "priority": "warm",
+      "notes": "Beauty club / nail & beauty, membership-led. 7 Harry Gwala Road, Westville. 4.8★ / 21 Google reviews. Phone 073 565 1752. Real assets: their Westville interior photo, membership flyer, and official logo. Currently on a basic Wix subdomain.",
+      "nextAction": "Outreach — move off Wix onto their own domain (xqizitbeautyclub.co.za) + SEO",
+      "caveats": [
+        "Rebuild-off-Wix / domain-migration angle (they own xqizitbeautyclub.co.za but run a wixsite.com)",
+        "Membership prices shown as \"R —\" per SOP (real prices only in their own flyer image)"
+      ],
+      "notionUrl": "https://app.notion.com/p/Xqizit-Beauty-Club-Westville-37ffe00de72281f9a432ffbebc72fe5a",
+      "docs": [],
+      "tags": [
+        "beauty",
+        "westville",
+        "nails",
+        "membership"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Xqizit+Beauty+Club+7+Harry+Gwala+Road+Westville"
+        },
+        {
+          "type": "website",
+          "url": "https://xqizitbeautyclub.wixsite.com/home"
+        }
+      ],
+      "changeNotes": "2026-07-10 — NEW build from Lead Scout pipeline (score 72). Photo-led, red/gold/cream identity using real interior + membership flyer + logo. Presence-gate + enrichment reviewed (Wix/SEO case, built as rebuild). Preflight PASS."
+    },
+    "hudson-k-plumbing": {
+      "title": "Hudson K Plumbing",
+      "status": "deployed",
+      "priority": "warm",
+      "notes": "Plumber / plumbing contractor, Kloof. Brand-new business with only a Google pin — no website. Phone 031 764 3734. No real photos exist, so built icon/graphic-forward (honest).",
+      "nextAction": "Outreach — \"look established from day one\" simple trustworthy site + click-to-call",
+      "caveats": [
+        "Phone is a LANDLINE (031) — confirm a WhatsApp mobile before go-live",
+        "Brand-new: no rating/review claims; no real photos — built photo-free"
+      ],
+      "notionUrl": "https://app.notion.com/p/Hudson-K-Plumbing-381fe00de722812abc0ff4e883173bac",
+      "docs": [],
+      "tags": [
+        "plumbing",
+        "kloof",
+        "trades"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Hudson+K+Plumbing+Kloof"
+        }
+      ],
+      "changeNotes": "2026-07-10 — NEW to-spec build from Lead Scout pipeline (score 55). Icon-forward (no photos), teal/copper trust identity, unique 6-article journal. Preflight PASS."
     }
   },
   "documents": [
