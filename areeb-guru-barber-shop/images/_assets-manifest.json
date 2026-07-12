@@ -7,38 +7,23 @@
       "file": "real_01.jpg",
       "dim": "1280x855",
       "source": "Fresha",
-      "title": "Best Hot Towel Shaves near me in Durban, Kloof | Fresha"
-    },
-    {
-      "file": "real_02.jpg",
-      "dim": "1280x854",
-      "source": "Fresha",
-      "title": "Best Barbers near me in Kloof, Kloof | Fresha"
-    },
-    {
-      "file": "real_03.jpg",
-      "dim": "1280x854",
-      "source": "Fresha",
-      "title": "Best Barbers near me in Kloof, Kloof | Fresha"
-    },
-    {
-      "file": "real_04.jpg",
-      "dim": "1280x853",
-      "source": "Fresha",
-      "title": "Best Barbers near me in Kloof, Kloof | Fresha"
-    },
-    {
-      "file": "real_05.jpg",
-      "dim": "1280x853",
-      "source": "Fresha",
-      "title": "Best Barbers near me in Kloof, Kloof | Fresha"
-    },
-    {
-      "file": "real_06.jpg",
-      "dim": "1280x720",
-      "source": "Fresha",
-      "title": "Areeb Guru barber shop - 68 Pioneer Rd, Kloof, 3610, South A"
+      "title": "Best Hot Towel Shaves near me in Durban, Kloof | Fresha",
+      "vetted": true,
+      "reason": "Candid working barbershop scene (barber actively cutting a seated client's hair, striped cape), correct trade, no competing business branding/logos visible. Source title is a generic multi-business Kloof/Durban listicle, not tied specifically to 68 Pioneer Rd, so kept on barbershop-plausibility per brief guidance rather than on a confirmed address match. Consistent with sibling Kloof shop (Guru's Maytime Kloof) precedent, which kept photos from the same listicle page. Verified visually distinct (not a duplicate) from that sibling's kept photos."
     }
   ],
-  "note": "UNVETTED scout pool — Read-vet before using in a build (SOP)."
+  "rejected": [
+    { "file": "real_02.jpg", "reason": "Deleted by prior orchestrator pass — cross-client duplicate found in a sibling Guru barber folder." },
+    { "file": "real_03.jpg", "reason": "Deleted by prior orchestrator pass — cross-client duplicate found in a sibling Guru barber folder." },
+    { "file": "real_04.jpg", "reason": "Deleted by prior orchestrator pass — cross-client duplicate found in a sibling Guru barber folder." },
+    { "file": "real_05.jpg", "reason": "Deleted by prior orchestrator pass — cross-client duplicate found in a sibling Guru barber folder." },
+    { "file": "real_06.jpg", "reason": "Deleted by prior orchestrator pass — cross-client duplicate found in a sibling Guru barber folder." }
+  ],
+  "stock": [
+    { "file": "stock_01.jpg", "source": "https://images.unsplash.com/photo-1512690459411-b9245aed614b?w=1600&q=80", "desc": "Vintage barber chair, brass and brown leather, low-angle studio shot." },
+    { "file": "stock_02.jpg", "source": "https://images.unsplash.com/photo-1587909209111-5097ee578ec3?w=1600&q=80", "desc": "Barber grooming tools flat-lay — pomade tin, wooden comb, scissors, straight razor, soap bar." },
+    { "file": "stock_03.jpg", "source": "https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?w=1600&q=80", "desc": "Close-up of a tattooed barber using clippers on a client's neckline." },
+    { "file": "stock_04.jpg", "source": "https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=1600&q=80", "desc": "Black-and-white close-up of a barber trimming a client's beard with scissors, striped cape." }
+  ],
+  "note": "Only 1 of 6 scout photos survived the orchestrator's cross-client dedup pass; that survivor (real_01.jpg) was Read-vetted and kept on barbershop-plausibility (generic listicle source, no competing branding, correct trade). Kept real photos (1) < 2, so stock fill was required per SOP. 4 distinctive Unsplash stock photos added, chosen to avoid IDs already used in sibling builds (guru-g-barber-shop, justine-benjamins-barbershop) in this repo. Footer disclosure line added per brief: 'shop photos to follow.'"
 }

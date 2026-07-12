@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thul's Beauty Studio — Beauty salon in Westville</title>
+<meta name="description" content="Thul's Beauty Studio in Westville — Beauty salon. Rated 5 on Google. Get in touch to book.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0B0A08;--surface:#161310;--surface-2:#1D1812;--ink:#F4EEE2;--gold:#C9A24B;--gold-soft:#E4C98A;--gold-ink:#0B0A08;--mut:rgba(244,238,226,.68);--line:rgba(244,238,226,.14);--display:'Italiana',serif;--body:'Jost',sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65;overflow-x:hidden}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--gold);color:var(--gold-ink);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600}
+nav{position:fixed;top:28px;left:0;right:0;z-index:50;transition:background .3s,box-shadow .3s}
+nav.scrolled{background:rgba(11,10,8,.92);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1120px;margin:0 auto}
+.logo{font-family:var(--display);font-size:22px;letter-spacing:.02em;color:var(--gold-soft);text-decoration:none}
+.nav-links{display:flex;gap:26px;list-style:none}.nav-links a{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);text-decoration:none}
+.nav-links a:hover{color:var(--gold-soft)}
+.nav-cta{font-size:13px;font-weight:600;background:var(--gold);color:var(--gold-ink);padding:11px 20px;border-radius:8px;text-decoration:none;min-height:44px;display:inline-flex;align-items:center;touch-action:manipulation;transition:transform .3s cubic-bezier(0.22,1,0.36,1)}
+.nav-cta:hover{transform:translateY(-2px)}
+@media(max-width:820px){.nav-links{display:none}}
+header{position:relative;overflow:hidden;padding:132px 0 76px}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,56px);align-items:center}
+@media(max-width:900px){.hero{grid-template-columns:1fr;gap:28px}header{padding:116px 0 52px}}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--gold-soft);margin-bottom:18px}
+.htitle{position:relative;display:inline-block;overflow:hidden}
+h1{font-family:var(--display);font-size:clamp(38px,6vw,72px);line-height:1.06;letter-spacing:.01em;text-wrap:balance;font-weight:400}
+.htitle::after{content:'';position:absolute;top:-60%;left:-60%;width:34%;height:220%;background:linear-gradient(78deg,transparent,rgba(228,201,138,.55),transparent);transform:rotate(10deg);animation:sheen 9s ease-in-out infinite;pointer-events:none}
+@keyframes sheen{0%{left:-60%}42%{left:130%}100%{left:130%}}
+.sub{max-width:46ch;margin-top:20px;color:var(--mut);font-size:17px}
+.proof{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;font-size:13.5px;color:var(--mut);align-items:center}
+.pill{display:inline-flex;align-items:center;gap:7px;background:color-mix(in srgb,var(--gold) 18%,transparent);color:var(--gold-soft);font-weight:700;padding:6px 12px;border-radius:8px;font-size:12.5px;border:1px solid color-mix(in srgb,var(--gold) 35%,transparent)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:600;font-size:14.5px;padding:13px 26px;border-radius:8px;text-decoration:none;min-height:44px;touch-action:manipulation;transition:transform .3s cubic-bezier(0.22,1,0.36,1)}
+.btn-p{background:var(--gold);color:var(--gold-ink)}.btn-p:hover{transform:translateY(-2px)}
+.btn-g{background:transparent;color:var(--gold-soft);border:1.5px solid color-mix(in srgb,var(--gold) 55%,transparent)}.btn-g:hover{background:color-mix(in srgb,var(--gold) 12%,transparent)}
+.loc{margin-top:16px;font-size:13px;color:var(--mut)}
+.panel{position:relative;border-radius:16px;background:var(--surface);aspect-ratio:4/5;display:block;overflow:hidden;box-shadow:0 30px 60px -28px rgba(0,0,0,.7);border:1px solid var(--line)}
+@media(max-width:900px){.panel{aspect-ratio:16/10}}
+.panel img{width:100%;height:100%;object-fit:cover;display:block}
+.panel .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,10,8,0) 40%,rgba(11,10,8,.85) 100%)}
+.panel .badge{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:var(--gold-soft);font-size:13px;font-weight:600;letter-spacing:.04em}
+section{padding:clamp(64px,8vw,100px) 0}
+h2{font-family:var(--display);font-size:clamp(30px,4.6vw,48px);line-height:1.12;margin-bottom:16px;text-wrap:balance;font-weight:400}
+.lede{color:var(--mut);max-width:60ch}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+@media(max-width:820px){.cards{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:12px;padding:28px 24px}
+.card h3{font-family:var(--display);font-size:20px;margin-bottom:8px;color:var(--gold-soft);font-weight:400}.card p{color:var(--mut);font-size:14.5px}
+.svc{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;margin-top:20px}
+@media(max-width:640px){.svc{grid-template-columns:1fr}}
+.si{display:flex;justify-content:space-between;gap:14px;padding:15px 0;border-bottom:1px solid var(--line)}
+.si b{font-weight:500}.si .p{color:var(--gold-soft);font-weight:600;font-size:13.5px}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+@media(max-width:900px){.gallery{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.gallery{grid-template-columns:1fr}}
+.gitem{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:3/4;border:1px solid var(--line)}
+.gitem img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(0.22,1,0.36,1)}
+.gitem:hover img{transform:scale(1.05)}
+.gitem .cap{position:absolute;left:0;right:0;bottom:0;padding:12px 14px;font-size:12.5px;color:var(--gold-soft);background:linear-gradient(180deg,rgba(11,10,8,0),rgba(11,10,8,.9));letter-spacing:.03em}
+.journal{background:var(--surface-2);border:1px solid var(--line);border-radius:16px;padding:44px;display:flex;flex-wrap:wrap;gap:28px;align-items:center;justify-content:space-between}
+@media(max-width:640px){.journal{padding:30px 24px}}
+.journal .txt{max-width:52ch}
+.rate{display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center;margin-top:36px;background:var(--surface-2);border:1px solid var(--line);color:var(--ink);border-radius:14px;padding:38px}
+@media(max-width:600px){.rate{grid-template-columns:1fr;gap:16px;text-align:center}}
+.rate .n{font-family:var(--display);font-size:72px;line-height:1;color:var(--gold-soft);font-weight:400}
+.rate small{display:block;font-size:12.5px;opacity:.8;margin-top:6px}
+.rate p{opacity:.9;font-size:14.5px}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:48px}@media(max-width:820px){.visit{grid-template-columns:1fr}}
+.vi{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}.vi b{display:block}.vi span,.vi a{color:var(--mut);font-size:14.5px;text-decoration:none}
+iframe{border:0;display:block;width:100%;height:230px;border-radius:12px;border:1px solid var(--line);filter:grayscale(.2) invert(.92) contrast(.9)}
+footer{border-top:1px solid var(--line);padding:36px 0;color:var(--mut);font-size:12.5px;display:flex;flex-direction:column;gap:10px}
+footer .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer .disclosure{font-size:11.5px;opacity:.75}
+.reveal{opacity:0;transform:translateY(22px);transition:.6s cubic-bezier(0.22,1,0.36,1)}.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold-soft);outline-offset:3px}
+.fab-stack{position:fixed;right:20px;bottom:20px;z-index:80;display:flex;flex-direction:column;gap:12px;align-items:flex-end}
+.fab{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;cursor:pointer;border:none;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+.fab-wa{background:#25D366}.fab-chat{background:var(--gold)}
+.chatbox{position:fixed;right:20px;bottom:146px;z-index:81;width:min(330px,calc(100vw - 40px));background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:none;flex-direction:column;box-shadow:0 24px 60px rgba(0,0,0,.6)}
+.chatbox.open{display:flex}.chat-head{background:var(--gold);color:var(--gold-ink);padding:13px 16px;font-size:13px;font-weight:600;display:flex;justify-content:space-between}
+.chat-head button{background:none;border:none;color:var(--gold-ink);cursor:pointer;font-size:16px}
+.chat-log{padding:14px;display:flex;flex-direction:column;gap:9px;max-height:270px;overflow-y:auto}
+.msg{max-width:85%;padding:9px 13px;border-radius:12px;font-size:13.5px}.msg.bot{background:var(--surface-2);color:var(--ink)}.msg.user{background:var(--gold);color:var(--gold-ink);align-self:flex-end}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0 14px 14px}
+.chip{font-size:12px;font-weight:600;border:1px solid color-mix(in srgb,var(--gold) 55%,transparent);background:none;color:var(--gold-soft);border-radius:8px;padding:8px 13px;min-height:44px;display:inline-flex;align-items:center;cursor:pointer;touch-action:manipulation}
+.chip:hover{background:var(--gold);color:var(--gold-ink)}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.btn:hover,.nav-cta:hover{transform:none}.htitle::after{animation:none;display:none}.gitem:hover img{transform:none}}
+</style></head>
+<body>
+<div class="draft">Concept draft — built for Thul's Beauty Studio by Arkatype Digital · not yet live</div>
+<nav id="nav"><div class="nav-in">
+  <a class="logo" href="#top">Thul's Beauty Studio</a>
+  <ul class="nav-links"><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#work">Our Work</a></li><li><a href="learn.html">Journal</a></li><li><a href="#visit">Visit</a></li></ul>
+  <a class="nav-cta" href="tel:+27632720393">063 272 0393</a>
+</div></nav>
+<header id="top"><div class="wrap"><div class="hero">
+  <div>
+    <p class="kicker">Beauty salon · Westville</p>
+    <span class="htitle"><h1>Thul's Beauty Studio</h1></span>
+    <p class="sub">A beauty salon on Jan Hofmeyr Rd, Westville, in the Upper Highway — real, local, and easy to reach. This is a concept of what a proper website could do for the business.</p>
+    <div class="proof"><span>★★★★★&nbsp;5 &middot; 37 Google reviews</span><span class="pill">Local · Westville</span></div>
+    <div class="actions">
+      <a class="btn btn-p" href="tel:+27632720393">Call 063 272 0393</a>
+      <a class="btn btn-g" href="https://wa.me/27632720393?text=Hi%20Thul's%20Beauty%20Studio%2C%20I%20would%20like%20to%20book" target="_blank" rel="noopener">WhatsApp us</a>
+    </div>
+    <p class="loc">100 Jan Hofmeyr Rd, Westville, Durban, 3629 · 063 272 0393</p>
+  </div>
+  <div class="panel"><img src="images/stock_04.jpg" alt="Close warm-toned beauty portrait, glam mood" loading="lazy"><div class="shade"></div><div class="badge">Westville · 5 ★</div></div>
+</div></div></header>
+
+<section id="about"><div class="wrap">
+  <h2 class="reveal">Why Westville chooses Thul's Beauty Studio</h2>
+  <p class="lede reveal">A polished site with treatment menu, gallery and booking link to win new clients.</p>
+  <div class="cards">
+    <div class="card reveal"><h3>Truly local</h3><p>Based on Jan Hofmeyr Rd, Westville, on the Upper Highway — close by, familiar, and easy to reach.</p></div>
+    <div class="card reveal"><h3>Well-rated</h3><p>A 5★ Google rating from 37 reviews — steady, careful work locals come back for.</p></div>
+    <div class="card reveal"><h3>Easy to reach</h3><p>One call or message away, and active on Instagram &amp; Facebook — no hoops to book.</p></div>
+  </div>
+</div></section>
+
+<section id="services" style="padding-top:0"><div class="wrap">
+  <h2 class="reveal">What we do</h2>
+  <p class="lede reveal">A sample of typical treatments — the final list &amp; pricing are confirmed by Thul's Beauty Studio.</p>
+  <div class="svc reveal">
+    <div class="si"><div><b>Facials &amp; skin</b></div><span class="p">R —</span></div><div class="si"><div><b>Lashes</b></div><span class="p">R —</span></div><div class="si"><div><b>Brows</b></div><span class="p">R —</span></div><div class="si"><div><b>Waxing</b></div><span class="p">R —</span></div><div class="si"><div><b>Nails</b></div><span class="p">R —</span></div><div class="si"><div><b>Massage &amp; treatments</b></div><span class="p">R —</span></div>
+  </div>
+</div></section>
+
+<section id="work" style="padding-top:0"><div class="wrap">
+  <h2 class="reveal">Our work</h2>
+  <p class="lede reveal">A look at the kind of studio finish and treatments to expect — representative imagery while we gather Thul's own gallery.</p>
+  <div class="gallery">
+    <div class="gitem reveal"><img src="images/stock_01.jpg" alt="Studio styling stations at a mirror" loading="lazy"><span class="cap">Studio interior</span></div>
+    <div class="gitem reveal"><img src="images/stock_02.jpg" alt="Facial treatment being applied" loading="lazy"><span class="cap">Facials &amp; skin</span></div>
+    <div class="gitem reveal"><img src="images/stock_03.jpg" alt="Finished red nail polish detail" loading="lazy"><span class="cap">Nail finishing</span></div>
+    <div class="gitem reveal"><img src="images/stock_04.jpg" alt="Warm-toned glam beauty portrait" loading="lazy"><span class="cap">The finishing glow</span></div>
+  </div>
+</div></section>
+
+<section id="journal-teaser" style="padding-top:0"><div class="wrap">
+  <div class="journal reveal">
+    <div class="txt">
+      <h2 style="margin-bottom:10px">The Studio Journal</h2>
+      <p class="lede">Beauty education from Thul's Beauty Studio — skin, lash, brow and nail care guides for Westville and the Upper Highway. Six articles, no fluff.</p>
+    </div>
+    <a class="btn btn-p" href="learn.html">Read the journal →</a>
+  </div>
+</div></section>
+
+<section id="reviews" style="padding-top:0"><div class="wrap">
+  <h2 class="reveal">Rated 5 by locals</h2>
+  <div class="rate reveal">
+    <div class="n">5<small>★★★★★ · 37 Google reviews</small></div>
+    <p>Well-rated salon with no website — missing online booking, service menu and new-client discovery. <br><span style="opacity:.7;font-size:12.5px">Rating shown is from the business&rsquo;s live Google profile; review highlights to be added with Thul's Beauty Studio&rsquo;s sign-off.</span></p>
+  </div>
+</div></section>
+
+<section id="visit" style="padding-top:0"><div class="wrap"><div class="visit">
+  <div class="reveal">
+    <h2>Find Thul's Beauty Studio</h2>
+    <div class="vi"><div><b>Where</b><span>100 Jan Hofmeyr Rd, Westville, Durban, 3629</span></div></div>
+    <div class="vi"><div><b>Call</b><a href="tel:+27632720393">063 272 0393</a></div></div>
+    <div class="vi"><div><b>WhatsApp</b><a href="https://wa.me/27632720393" target="_blank" rel="noopener">063 272 0393</a></div></div>
+    <div class="vi"><div><b>Social</b><span><a href="https://www.instagram.com/beautyatstudio.s/" target="_blank" rel="noopener">Instagram</a> &middot; <a href="https://www.facebook.com/beautyatstudio.s/" target="_blank" rel="noopener">Facebook</a></span></div></div>
+    <div class="vi"><div><b>Hours</b><span>To be confirmed (draft)</span></div></div>
+    <p style="margin-top:16px"><a href="https://www.google.com/maps/search/?api=1&query=100+Jan+Hofmeyr+Rd%2C+Westville%2C+Durban%2C+3629" target="_blank" rel="noopener" style="color:var(--gold-soft);font-size:13.5px;text-decoration:none">Navigate to us →</a></p>
+    <iframe title="Map to Thul's Beauty Studio" src="https://maps.google.com/maps?q=100%20Jan%20Hofmeyr%20Rd%2C%20Westville%2C%20Durban%2C%203629&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="margin-top:16px"></iframe>
+  </div>
+  <div class="reveal panel" style="aspect-ratio:1/1"><img src="images/stock_01.jpg" alt="Studio interior styling stations" loading="lazy"><div class="shade"></div><div class="badge">Beauty salon</div></div>
+</div></div></section>
+
+<footer class="wrap">
+  <div class="row"><span>Thul's Beauty Studio · Westville</span><span>Concept by Arkatype Digital — draft, awaiting client sign-off</span></div>
+  <span class="disclosure">Some imagery is representative stock — Thul's Beauty Studio photos to follow.</span>
+</footer>
+
+<div class="fab-stack">
+  <a class="fab fab-wa" href="https://wa.me/27632720393" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.5 14.1c-.2.7-1.4 1.3-1.9 1.4-.5.1-1.1.2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.3 1.4 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2.2 1c.3.1.5.2.5.3.1.1.1.5-.1 1.1z"/></svg></a>
+  <button class="fab fab-chat" id="chatToggle" aria-label="Ask a question" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B0A08" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></button>
+</div>
+<div class="chatbox" id="chatbox" role="dialog" aria-label="Quick questions">
+  <div class="chat-head"><span>Thul's Beauty Studio — quick answers</span><button id="chatClose" aria-label="Close">✕</button></div>
+  <div class="chat-log" id="chatLog" aria-live="polite"><div class="msg bot">Hi! Ask me anything about Thul's Beauty Studio 👇</div></div>
+  <div class="chips" id="chatChips"></div>
+</div>
+<script>
+const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40),{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const QA=[["Where are you?","We&rsquo;re in Westville (100 Jan Hofmeyr Rd, Westville, Durban, 3629) — see the map in the Visit section for directions."],["What do you offer?","Facials and skin, Lashes, Brows, Waxing, Nails and Massage &amp; treatments. Final details confirmed with Thul's Beauty Studio."],["What are your hours?","Hours are being confirmed with Thul's Beauty Studio. (draft — final hours from Thul's Beauty Studio.)"],["How do I book?","Call or WhatsApp 063 272 0393. Online booking is coming to this site soon."],["Something else?","Message us directly on WhatsApp and we&rsquo;ll help — <a href=\"https://wa.me/27632720393\" target=\"_blank\" rel=\"noopener\" style=\"color:inherit;text-decoration:underline\">wa.me/27632720393</a>."]];
+const box=document.getElementById('chatbox'),log=document.getElementById('chatLog'),chips=document.getElementById('chatChips'),tg=document.getElementById('chatToggle');
+QA.forEach(([qq,aa])=>{const b=document.createElement('button');b.className='chip';b.innerHTML=qq;b.onclick=()=>{log.insertAdjacentHTML('beforeend','<div class="msg user">'+qq+'</div>');setTimeout(()=>{log.insertAdjacentHTML('beforeend','<div class="msg bot">'+aa+'</div>');log.scrollTop=log.scrollHeight},300);log.scrollTop=log.scrollHeight};chips.appendChild(b)});
+tg.onclick=()=>{const o=box.classList.toggle('open');tg.setAttribute('aria-expanded',o)};document.getElementById('chatClose').onclick=()=>box.classList.remove('open');
+</script>
+</body></html>

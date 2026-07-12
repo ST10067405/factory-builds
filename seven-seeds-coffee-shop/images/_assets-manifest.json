@@ -2,31 +2,47 @@
   "lead": "Seven Seeds Coffee Shop",
   "query": "Seven Seeds Coffee Shop 151 Josiah Gumede Rd coffee",
   "pulled": 4,
-  "kept": [
+  "kept": [],
+  "vetted": true,
+  "rejected": [
     {
       "file": "real_01.jpg",
-      "dim": "2880x2304",
-      "source": "Uber Eats",
-      "title": "Order Seven Seeds Coffee Shop | Menu & prices | Durban deliv"
+      "reason": "Rejected by a prior agent before this session; file already absent from folder, no reason recorded."
     },
     {
       "file": "real_02.jpg",
-      "dim": "850x850",
-      "source": "Seven Seeds",
-      "title": "Seven Seeds Locations"
+      "reason": "Mis-attribution risk: shows a large industrial-scale roastery cafe (signature coffee-cup pendant lights, extensive bakery case, high customer volume) inconsistent with a small 121-review Pinetown coffee shop; manifest source was generic 'Seven Seeds'/'Seven Seeds Locations' with no Pinetown reference, likely the internationally known Melbourne 'Seven Seeds Coffee' roastery of the same name."
     },
     {
       "file": "real_03.jpg",
-      "dim": "860x645",
-      "source": "Restaurant Guru",
-      "title": "Seven Seeds Coffee Shop, Pinetown - Restaurant menu, prices"
+      "reason": "2x2 collage/screenshot grid from a review-site gallery (not a single clean photo); one panel carries a visible cartoon mascot watermark belonging to the review site (Restaurant Guru), i.e. third-party site branding."
     },
     {
       "file": "real_04.jpg",
-      "dim": "549x412",
-      "source": "Restaurant Guru",
-      "title": "Seven Seeds Coffee Shop, Pinetown - Restaurant menu, prices"
+      "reason": "Visible cartoon mascot character with 'RG' laptop screen (Restaurant Guru branding/watermark) overlaid in the corner of the photo — third-party review-site branding, disqualifying per no-visible-other-branding rule."
     }
   ],
-  "note": "UNVETTED scout pool — Read-vet before using in a build (SOP)."
+  "stock": [
+    {
+      "file": "stock_01.jpg",
+      "source": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1600&q=80",
+      "desc": "Three coffees (latte art x2, iced) toasted together overhead"
+    },
+    {
+      "file": "stock_02.jpg",
+      "source": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=1600&q=80",
+      "desc": "Pour-over coffee brewing, kettle pouring into Chemex"
+    },
+    {
+      "file": "stock_03.jpg",
+      "source": "https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=1600&q=80",
+      "desc": "Cafe table with french press, cups and potted plant, glasshouse seating"
+    },
+    {
+      "file": "stock_04.jpg",
+      "source": "https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=1600&q=80",
+      "desc": "Espresso bar counter with pendant lights, grinders and chalkboard menu"
+    }
+  ],
+  "note": "All 4 scouted real photos rejected on vet (see 'rejected'). Page is stock-led; footer disclosure line required."
 }

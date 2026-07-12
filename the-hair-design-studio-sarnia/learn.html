@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Journal | The Hair Design Studio</title>
+<meta name="description" content="Hair-care notes from The Hair Design Studio — practical guidance on colour, curls, styling and aftercare for Farningham Ridge and Sarnia, Pinetown.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How often should I get a haircut to keep it healthy?", "acceptedAnswer": { "@type": "Answer", "text": "As a general guide, most hair benefits from a trim every 6–8 weeks to remove split ends before they travel up the shaft — finer or damaged hair may need it sooner, while longer, healthier hair can often stretch to 10–12 weeks." } },
+    { "@type": "Question", "name": "What's the difference between balayage and highlights?", "acceptedAnswer": { "@type": "Answer", "text": "Highlights are foiled sections lightened uniformly from root to tip, giving a more consistent, all-over effect. Balayage is hand-painted freehand, so colour is placed to look sun-kissed and grows out softly with less obvious regrowth lines." } },
+    { "@type": "Question", "name": "How can I protect my colour between salon visits?", "acceptedAnswer": { "@type": "Answer", "text": "Use a sulfate-free, colour-safe shampoo, wash in cooler water, and add a UV-protecting leave-in when you'll be in the sun. Reducing heat-styling frequency and using a heat protectant also slows fading noticeably." } },
+    { "@type": "Question", "name": "How do I book?", "acceptedAnswer": { "@type": "Answer", "text": "Call or WhatsApp 076 551 2243. Online booking is coming to this site soon." } }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#FAF3E9;--surface:#FFFFFF;--ink:#2E2019;--mut:rgba(46,32,25,.72);
+  --brand:#6B4428;--accent:#C97A4A;--accent-ink:#A2501F;--line:rgba(46,32,25,.13);
+  --display:'DM Serif Display',serif;--body:'DM Sans',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand);color:#fff;font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-size:21px;color:var(--brand);text-decoration:none}
+.nav-back{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-decoration:none}
+.nav-back:hover{color:var(--accent-ink)}
+header{padding:88px 0 58px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--accent-ink);margin-bottom:18px}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(38px,6vw,64px);line-height:1.08}
+.intro{max-width:600px;margin:22px auto 0;color:var(--mut);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px 24px;cursor:pointer;transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s;text-align:left}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(46,32,25,.1);outline:none}
+.post .tag{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent-ink);font-weight:700}
+.post h3{font-family:var(--display);font-weight:400;font-size:21px;margin:12px 0 8px;line-height:1.25}
+.post p{color:var(--mut);font-size:14.5px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);font-weight:400;font-size:clamp(28px,4vw,42px);margin-bottom:28px;text-align:center}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent-ink);font-size:22px}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(46,32,25,.55);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--bg);max-width:680px;width:100%;border-radius:20px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(46,32,25,.4)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut)}
+.asheet .tag{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent-ink);font-weight:700}
+.asheet h2{font-family:var(--display);font-weight:400;font-size:clamp(26px,4vw,36px);margin:12px 0 20px;line-height:1.2}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--brand);color:#fff;text-decoration:none;font-weight:600;font-size:14px;padding:13px 26px;border-radius:8px}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--accent-ink);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for The Hair Design Studio by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">The Hair Design Studio</a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">The Journal</p>
+    <h1>Hair Notes for Sarnia</h1>
+    <p class="intro">Practical, everyday hair-care guidance from The Hair Design Studio — written for Farningham Ridge, Sarnia and the wider Pinetown climate.</p>
+  </div>
+</header>
+
+<div class="wrap"><div class="grid" id="postGrid"></div></div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="qa">
+      <details><summary>How often should I get a haircut to keep it healthy?</summary><p>As a general guide, most hair benefits from a trim every 6–8 weeks to remove split ends before they travel up the shaft — finer or damaged hair may need it sooner, while longer, healthier hair can often stretch to 10–12 weeks.</p></details>
+      <details><summary>What's the difference between balayage and highlights?</summary><p>Highlights are foiled sections lightened uniformly from root to tip, giving a more consistent, all-over effect. Balayage is hand-painted freehand, so colour is placed to look sun-kissed and grows out softly with less obvious regrowth lines.</p></details>
+      <details><summary>How can I protect my colour between salon visits?</summary><p>Use a sulfate-free, colour-safe shampoo, wash in cooler water, and add a UV-protecting leave-in when you'll be in the sun. Reducing heat-styling frequency and using a heat protectant also slows fading noticeably.</p></details>
+      <details><summary>How do I book?</summary><p>Call or WhatsApp 076 551 2243. Online booking is coming to this site soon.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap">The Hair Design Studio · Farningham Ridge, Pinetown · Concept by Arkatype Digital — draft, awaiting client sign-off</div></footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#visit">Book your visit →</a>
+  </div>
+</div>
+
+<script>
+const POSTS = [
+  {
+    tag: 'Colour Care',
+    title: 'The Underwood Road hard-water guide to colour that doesn’t fade',
+    teaser: 'Why local water can dull colour faster — and how to slow it down.',
+    body: `<p>Hard, mineral-rich water is common across many Pinetown and Farningham Ridge homes, and it can leave a fine mineral film on hair that dulls shine and speeds up colour fade — especially on blondes and vivid tones.</p>
+      <ul>
+        <li>Use a chelating or clarifying shampoo once every 1–2 weeks to lift mineral build-up.</li>
+        <li>Follow with a deep conditioner to replace moisture the clarifying wash removes.</li>
+        <li>A showerhead filter can noticeably reduce mineral deposit over time.</li>
+        <li>Rinse colour-treated hair in cooler water — heat opens the cuticle and lets colour escape faster.</li>
+      </ul>
+      <p class="mut">General hair-care guidance — not a diagnosis of your specific water supply or hair condition.</p>`
+  },
+  {
+    tag: 'Curls & Coils',
+    title: 'Curls in Farningham Ridge: a KZN humidity survival guide',
+    teaser: 'Keeping curl definition through a humid Pinetown summer.',
+    body: `<p>KwaZulu-Natal's humidity is famously curl-unfriendly — it swells the hair cuticle and invites frizz, even on well-moisturised curls and coils.</p>
+      <ul>
+        <li>Seal wet hair with a lightweight oil or curl cream to slow moisture exchange with the air.</li>
+        <li>Avoid brushing dry curls — finger-detangle or use a wide-tooth comb on soaking-wet hair only.</li>
+        <li>An anti-humidity gel "cast" that you scrunch out once dry holds definition far longer than gel alone.</li>
+        <li>Satin or silk pillowcases reduce overnight friction and frizz.</li>
+      </ul>
+      <p class="mut">General curl-care guidance — results vary by curl pattern and porosity.</p>`
+  },
+  {
+    tag: 'Styling',
+    title: 'Load-shedding & blow-dries: a Pinetown styling game plan',
+    teaser: 'Simple ways to plan styling around the schedule.',
+    body: `<p>Power interruptions are a fact of life in Pinetown, and they don't have to derail your styling routine if you plan a step ahead.</p>
+      <ul>
+        <li>Check the schedule before washing hair — time your wash so drying happens in a powered window.</li>
+        <li>Heatless overnight styles (braid-outs, twist-outs, roller sets) need no power at all and often last longer.</li>
+        <li>A fully charged travel hairdryer or a battery pack for small styling tools is a handy backup.</li>
+        <li>Air-drying 70–80% of the way before finishing with heat tools cuts both drying time and heat damage.</li>
+      </ul>
+      <p class="mut">General styling guidance — not a substitute for a professional consultation.</p>`
+  },
+  {
+    tag: 'Bridal & Occasion',
+    title: 'Planning Sarnia wedding hair: a bride’s timeline from first trial to big day',
+    teaser: 'From first trial to the big day, without the last-minute rush.',
+    body: `<p>A calm bridal hair timeline usually starts well before the wedding date — giving time to test styles, adjust, and avoid surprises.</p>
+      <ul>
+        <li><b>2–3 months out:</b> book a trial appointment and bring photos of styles you like.</li>
+        <li><b>4–6 weeks out:</b> schedule any colour or cut changes so they've settled in before the big day.</li>
+        <li><b>1–2 weeks out:</b> a final trial with your veil, hair accessories or headpiece.</li>
+        <li><b>Wedding week:</b> confirm timing with your stylist, including travel time if hair is done on-site.</li>
+      </ul>
+      <p class="mut">General planning guidance — final timelines are agreed directly with your stylist.</p>`
+  },
+  {
+    tag: 'Colour Care',
+    title: 'Balayage for Pinetown’s sun: picking colour that grows out gracefully',
+    teaser: 'Choosing tones that fade softly instead of awkwardly.',
+    body: `<p>South African sun accelerates colour fade, so choosing a technique and tone that ages gracefully saves salon visits and frustration.</p>
+      <ul>
+        <li>Balayage's hand-painted placement grows out with a soft, sun-kissed line rather than a hard regrowth band.</li>
+        <li>Warmer, sun-adjacent tones (caramel, honey, bronze) tend to fade less noticeably than cool ash tones.</li>
+        <li>A UV-protecting hair mist or leave-in helps slow fading on days spent outdoors.</li>
+        <li>Gloss or toner top-ups between full colour visits refresh tone without a full lightening service.</li>
+      </ul>
+      <p class="mut">General colour guidance — the best technique for you depends on your natural base colour.</p>`
+  },
+  {
+    tag: 'Repair & Aftercare',
+    title: 'Durban beach days, Sarnia salon nights: repairing salt-and-chlorine hair',
+    teaser: 'Undoing the damage after a day of sun, salt and chlorine.',
+    body: `<p>A day at the nearby Durban beaches or a pool is hard on hair — salt and chlorine both strip moisture and roughen the cuticle.</p>
+      <ul>
+        <li>Rinse hair with fresh water before swimming — pre-soaked hair absorbs less salt water and chlorine.</li>
+        <li>Wash with a gentle, moisturising shampoo as soon as possible afterwards, followed by a rich conditioner.</li>
+        <li>A weekly deep-conditioning or protein treatment helps rebuild strength after repeated sun and salt exposure.</li>
+        <li>Leave-in conditioner or a light oil before swimming adds a protective barrier.</li>
+      </ul>
+      <p class="mut">General aftercare guidance — chemically treated hair may need extra care after sun and swimming.</p>`
+  }
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

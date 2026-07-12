@@ -7,38 +7,78 @@
       "file": "real_01.jpg",
       "dim": "909x515",
       "source": "Fresha",
-      "title": "Salon Highwaves - 1 Saint Margarets Road - Durban | Fresha"
-    },
+      "title": "Salon Highwaves - 1 Saint Margarets Road - Durban | Fresha",
+      "vetted": true,
+      "vet_note": "Fresha listing page title explicitly names Salon Highwaves; matches the same Fresha booking listing used for the brief's verified booking link. Address on the Fresha page differs from the brief's street address but the business name match is direct. Kept."
+    }
+  ],
+  "rejected": [
     {
       "file": "real_02.jpg",
-      "dim": "544x306",
-      "source": "Fresha",
-      "title": "Best Hair Salons near me in Hillcrest | Fresha"
+      "reason": "Source title is a generic 'Best Hair Salons near me in Hillcrest | Fresha' directory results page, not a Salon Highwaves-specific listing - cannot confirm which salon the photo belongs to."
     },
     {
       "file": "real_03.jpg",
-      "dim": "1080x1620",
-      "source": "Get It Magazine",
-      "title": "Sheer Perfection Hair Salon ... Love your hair! - Get it Hig"
+      "reason": "Source title 'Sheer Perfection Hair Salon ... Get It Hig[hway]' - visibly a different named business."
     },
     {
       "file": "real_04.jpg",
-      "dim": "828x964",
-      "source": "saltandwavessalon.com",
-      "title": "Home"
+      "reason": "Source saltandwavessalon.com - a different business (Salt and Waves Salon), not Salon Highwaves."
     },
     {
       "file": "real_05.jpg",
-      "dim": "768x1024",
-      "source": "Hairdressers In Kloof & Hillcrest | New Images",
-      "title": "Hillcrest Hair Salon | Hairdressers Hillcrest | New Images"
+      "reason": "Source title 'Hairdressers In Kloof & Hillcrest | New Images' - a different named business (New Images)."
     },
     {
       "file": "real_06.jpg",
-      "dim": "1024x768",
-      "source": "Hairdressers In Kloof & Hillcrest | New Images",
-      "title": "Hillcrest Hair Salon | Hairdressers Hillcrest | New Images"
+      "reason": "Photo is a storefront signage board reading 'New Images' with phone 073 549 5372 - explicitly a different business, not Salon Highwaves."
+    },
+    {
+      "file": "test1.jpg",
+      "reason": "Corrupt/junk file left by a prior agent run - not a valid image (HTML content), deleted as debris."
     }
   ],
-  "note": "UNVETTED scout pool — Read-vet before using in a build (SOP)."
+  "stock": [
+    {
+      "file": "stock_01.jpg",
+      "source_url": "https://images.unsplash.com/photo-1600948836101-f9ffda59d250?w=1600&q=80",
+      "desc": "Modern salon styling stations with round mirrors"
+    },
+    {
+      "file": "stock_02.jpg",
+      "source_url": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1600&q=80",
+      "desc": "Woman running hands through long balayage hair"
+    },
+    {
+      "file": "stock_03.jpg",
+      "source_url": "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=1600&q=80",
+      "desc": "Stylist blow-drying and brushing client's hair"
+    },
+    {
+      "file": "stock_04.jpg",
+      "source_url": "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=1600&q=80",
+      "desc": "Stylist smiling while finishing a client's blow-dry"
+    }
+  ],
+  "note": "Vetted 2026-07-12. Only 1 of 6 pulled real photos was verifiably Salon Highwaves (majority were mis-attributed to other salons: Sheer Perfection, Salt and Waves, New Images). Stock fill applied per Step 2 since kept real photos < 2.",
+  "dedupeReplacements": [
+    {
+      "file": "stock_02.jpg",
+      "source": "https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?w=1600&q=80",
+      "note": "coastal hair portrait (ocean)",
+      "reason": "previous file was a cross-client duplicate (or unverifiable shared \"real\" photo) — replaced with a distinct, orchestrator-vetted Unsplash stock image on 2026-07-12"
+    },
+    {
+      "file": "stock_03.jpg",
+      "source": "https://images.unsplash.com/photo-1523263685509-57c1d050d19b?w=1600&q=80",
+      "note": "bridal hair & makeup portrait",
+      "reason": "previous file was a cross-client duplicate (or unverifiable shared \"real\" photo) — replaced with a distinct, orchestrator-vetted Unsplash stock image on 2026-07-12"
+    },
+    {
+      "file": "stock_04.jpg",
+      "source": "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=1600&q=80",
+      "note": "makeup finishing touches (bridal prep)",
+      "reason": "previous file was a cross-client duplicate (or unverifiable shared \"real\" photo) — replaced with a distinct, orchestrator-vetted Unsplash stock image on 2026-07-12"
+    }
+  ]
 }

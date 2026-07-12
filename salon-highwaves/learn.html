@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Highwaves Journal — Hair Care for Hillcrest | Salon Highwaves</title>
+<meta name="description" content="Hair-care guidance for Hillcrest and the Upper Highway from Salon Highwaves — coastal humidity, colour care, and salon-visit tips.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How often should I get a trim in Hillcrest's humid climate?", "acceptedAnswer": { "@type": "Answer", "text": "Most people do well with a trim every 6–8 weeks, though coastal humidity can make ends feel rougher sooner. Regular trims keep style and shape looking sharp between visits." } },
+    { "@type": "Question", "name": "Will salt air and humidity affect my colour?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — coastal air and UV exposure can fade colour and dry out lengths faster than inland climates. A sulphate-free shampoo, UV-protecting spray, and regular gloss or toner top-ups help colour last longer near the coast." } },
+    { "@type": "Question", "name": "What should I bring to my first appointment?", "acceptedAnswer": { "@type": "Answer", "text": "Photos of styles or colours you like (and ones you don't), a sense of your hair's history (colour, chemical treatments), and a realistic idea of the upkeep you're willing to do at home." } },
+    { "@type": "Question", "name": "How do I book?", "acceptedAnswer": { "@type": "Answer", "text": "You can book online now on Fresha, or call 031 765 7635." } }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#F6F1E4;--surface:#FFFFFF;--ink:#0E2A36;--mut:rgba(14,42,54,.68);
+  --brand:#0B4A63;--accent:#1E7A67;--line:rgba(14,42,54,.12);
+  --display:'Prata',serif;--body:'Manrope',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand);color:var(--bg);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-size:21px;color:var(--brand);text-decoration:none}
+.nav-back{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-decoration:none}
+.nav-back:hover{color:var(--accent)}
+header{padding:90px 0 60px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--accent);margin-bottom:18px}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(38px,6vw,64px);line-height:1.08}
+.intro{max-width:600px;margin:22px auto 0;color:var(--mut);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:30px 26px;cursor:pointer;transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s cubic-bezier(.22,1,.36,1);text-align:left}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.1);outline:none}
+.post .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.post h3{font-family:var(--display);font-weight:400;font-size:22px;margin:12px 0 8px;line-height:1.25}
+.post p{color:var(--mut);font-size:14.5px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);font-weight:400;font-size:clamp(28px,4vw,44px);margin-bottom:28px;text-align:center}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent);font-size:22px}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(0,0,0,.55);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--bg);max-width:680px;width:100%;border-radius:22px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(0,0,0,.4)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut)}
+.asheet .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.asheet h2{font-family:var(--display);font-weight:400;font-size:clamp(26px,4vw,36px);margin:12px 0 20px;line-height:1.2}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;font-size:14px;padding:13px 26px;border-radius:99px}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s cubic-bezier(.22,1,.36,1),transform .6s cubic-bezier(.22,1,.36,1)}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for Salon Highwaves by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">Salon Highwaves</a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">The Highwaves Journal</p>
+    <h1>Hair care for Hillcrest &amp; the Upper Highway</h1>
+    <p class="intro">Practical, coastal-climate hair care from the Salon Highwaves team — for salt air, humidity, and everything Old Main Rd throws at your style.</p>
+  </div>
+</header>
+
+<div class="wrap"><div class="grid" id="postGrid"></div></div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="qa">
+      <details><summary>How often should I get a trim in Hillcrest's humid climate?</summary><p>Most people do well with a trim every 6–8 weeks, though coastal humidity can make ends feel rougher sooner. Regular trims keep style and shape looking sharp between visits.</p></details>
+      <details><summary>Will salt air and humidity affect my colour?</summary><p>Yes — coastal air and UV exposure can fade colour and dry out lengths faster than inland climates. A sulphate-free shampoo, UV-protecting spray, and regular gloss or toner top-ups help colour last longer near the coast.</p></details>
+      <details><summary>What should I bring to my first appointment?</summary><p>Photos of styles or colours you like (and ones you don't), a sense of your hair's history (colour, chemical treatments), and a realistic idea of the upkeep you're willing to do at home.</p></details>
+      <details><summary>How do I book?</summary><p>You can book online now on Fresha, or call 031 765 7635.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap">Salon Highwaves · 59 Old Main Rd, Hillcrest, 3610 · Concept by Arkatype Digital — draft, awaiting client sign-off</div></footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#visit">Book your visit →</a>
+  </div>
+</div>
+
+<script>
+const POSTS = [
+  { tag: 'Humidity', title: 'The Hillcrest Humidity Guide: Taming Frizz on the Upper Highway', teaser: 'Why coastal moisture behaves differently on hair here, and the simple routine that keeps frizz in check.', body: `
+    <p>Hillcrest sits close enough to the coast that humidity swings can undo a blow-dry before lunchtime. Hair naturally tries to absorb moisture from humid air, which lifts the outer cuticle layer and creates frizz — especially on wavy or colour-treated hair.</p>
+    <ul>
+      <li>Use a lightweight anti-humidity serum or cream on damp hair before styling, focusing on mid-lengths and ends.</li>
+      <li>Finish blow-drying with a cool-shot burst to help seal the cuticle flat.</li>
+      <li>Swap heavy oils for a fine mist finishing spray on humid days — oils can weigh hair down without controlling frizz.</li>
+      <li>A weekly smoothing treatment helps hair hold its shape for longer between salon visits.</li>
+    </ul>
+    <p class="mut">General hair-care guidance — always follow product instructions and a professional's advice for your specific hair type.</p>
+  `},
+  { tag: 'Colour Care', title: 'Salt Air & Balayage: Protecting Colour Near the Coast', teaser: 'Balayage and highlights are gorgeous — coastal air just asks for a bit more upkeep to keep them fresh.', body: `
+    <p>Living near the coast means more UV exposure and, for some, more time in salt water — both of which can fade colour and dry out lightened hair faster than an inland climate would.</p>
+    <ul>
+      <li>Rinse hair with fresh water before and after any dip in the sea or pool to reduce salt and chlorine absorption.</li>
+      <li>Choose a sulphate-free, colour-safe shampoo to slow fading between washes.</li>
+      <li>A leave-in UV protectant spray helps shield colour from sun exposure on bright Highway days.</li>
+      <li>Regular gloss or toner refreshes keep balayage looking bright rather than brassy.</li>
+    </ul>
+    <p class="mut">General hair-care guidance — a stylist can tailor a colour maintenance plan to your specific tone and hair condition.</p>
+  `},
+  { tag: 'Styling', title: 'Old Main Rd Blow-Dry Survival Kit for Hillcrest’s Weather', teaser: 'A short kit list for keeping a blow-dry alive through a full day on the Upper Highway.', body: `
+    <p>Between humidity, wind, and the odd afternoon shower, Hillcrest weather is not always kind to a fresh blow-dry. A few extras in your bag can make it last.</p>
+    <ul>
+      <li>A travel-size anti-humidity spray to touch up before meetings or errands.</li>
+      <li>A soft-bristle brush for gentle re-shaping without disturbing the style's root lift.</li>
+      <li>Small clear elastics for a quick half-up rescue if wind takes over.</li>
+      <li>A silk or satin scarf to protect the style if you're driving with the windows down.</li>
+    </ul>
+    <p class="mut">General styling guidance — product needs vary by hair type and the finish you're aiming for.</p>
+  `},
+  { tag: 'Curl Care', title: 'Highwaves Curl Care: A Coastal Wash-Day Routine', teaser: 'A simple wash-day order of operations for keeping natural texture defined in coastal humidity.', body: `
+    <p>Curly and coily textures can thrive in humid coastal air — or turn frizzy — depending on how wash day is handled. The order of products and how hair is dried both matter.</p>
+    <ul>
+      <li>Detangle in the shower with conditioner in, working from ends to roots.</li>
+      <li>Apply styling products to soaking-wet hair for better curl definition — not towel-dried hair.</li>
+      <li>Scrunch, don't rub, when removing excess water with a microfibre towel or old cotton t-shirt.</li>
+      <li>Diffuse on low heat or air-dry when time allows, to protect curl pattern and shine.</li>
+    </ul>
+    <p class="mut">General hair-care guidance — routines should be adjusted to your curl pattern and porosity.</p>
+  `},
+  { tag: 'Repair', title: 'From Upper Highway Sun to Salon Chair: Repairing Sun-Damaged Hair', teaser: 'Signs of sun and heat damage to watch for, and how a bond-repair routine helps hair bounce back.', body: `
+    <p>Strong sun, wind, and everyday heat styling all add up over time. Sun-damaged hair often feels rough, looks dull, and snaps more easily at the ends.</p>
+    <ul>
+      <li>Look out for straw-like texture, split ends, and colour that looks brassy rather than bright.</li>
+      <li>Bond-building treatments help rebuild internal hair structure weakened by sun and heat exposure.</li>
+      <li>Trimming split ends regularly stops damage travelling further up the hair shaft.</li>
+      <li>A wide-brimmed hat is still one of the simplest ways to protect hair on bright days.</li>
+    </ul>
+    <p class="mut">General hair-care guidance — a stylist can assess hair condition in person and recommend an appropriate treatment plan.</p>
+  `},
+  { tag: 'Planning', title: 'The Hillcrest Bride’s Timeline: Planning Your Big-Day Hair', teaser: 'A rough timeline for booking trials, treatments, and the big-day style itself.', body: `
+    <p>Bridal hair benefits from planning further ahead than a regular appointment, especially in a busy wedding season on the Upper Highway.</p>
+    <ul>
+      <li>Book a trial 6–8 weeks before the big day, ideally with a swatch of your dress fabric or a photo for reference.</li>
+      <li>Start any colour correction or deep-conditioning treatments at least a month out, so hair is in its best condition.</li>
+      <li>Confirm your big-day timeline with your stylist, including hair for any bridal party members.</li>
+      <li>Bring your veil, hairpiece, or accessories to the trial — not just on the day.</li>
+    </ul>
+    <p class="mut">General planning guidance — final scheduling and pricing are confirmed directly with Salon Highwaves.</p>
+  `}
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

@@ -807,6 +807,647 @@
         }
       ],
       "changeNotes": "2026-07-10 — NEW to-spec build from Lead Scout pipeline (score 55). Icon-forward (no photos), teal/copper trust identity, unique 6-article journal. Preflight PASS."
+    },
+    "dr-karmini-naidoo-dental-surgery": {
+      "title": "DR KARMINI NAIDOO DENTAL SURGERY",
+      "status": "gate_passed",
+      "priority": "hot",
+      "notes": "Dental clinic, Pinetown. 4.9★ / 169 Google reviews. Ph 083 790 6732. Local-scout lead (presence-gated, no website). First-pass icon-forward concept site.",
+      "nextAction": "Jaime review → commit/deploy done via factory pipeline → outreach draft (human send gate)",
+      "caveats": [
+        "All 5 pulled photos rejected as contaminated — fully stock-led with on-page disclosure; practice photos needed from client"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "dental",
+        "clinic",
+        "pinetown"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/DR%20KARMINI%20NAIDOO%20DENTAL%20SURGERY%20Pinetown"
+        },
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/drkarmini_n/"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/drkarmininaidoo/"
+        }
+      ],
+      "changeNotes": "2026-07-12 — NEW local-scout lead (score 74). Icon-forward concept site generated (real data, category theme, Comms Bridge, maps, noindex+draft+reduced-motion). Preflight PASS. | 2026-07-12 (late) — Upgraded to FULL SOP spec: photo-led premium rebuild, Our Work gallery, unique 6-article journal (learn.html, FAQPage JSON-LD), Comms Bridge kept, photos strictly Read-vetted (mis-attributed Serper/Fresha pulls rejected), stock fill disclosed where needed. Repo-wide preflight PASS."
+    },
+    "guru-g-barber-shop": {
+      "title": "Guru G Barber Shop",
+      "status": "gate_passed",
+      "priority": "hot",
+      "notes": "Barber shop, Westville. 4.5★ / 183 Google reviews. Ph 074 092 4460. Local-scout lead (presence-gated, no website). First-pass icon-forward concept site.",
+      "nextAction": "Jaime review → commit/deploy done via factory pipeline → outreach draft (human send gate)",
+      "caveats": [
+        "1 real photo (address-matched Fresha); rejected pulls belonged to Guru G's OTHER branches; stock-led with disclosure"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "barber",
+        "shop",
+        "westville"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Guru%20G%20Barber%20Shop%20Westville"
+        },
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/p/Cy255oHi3oZ/"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/WestvilleJunction/photos/dont-just-get-a-fresh-haircut-but-trim-your-beard-toofor-quality-haircuts-and-fr/3037311089726161/"
+        }
+      ],
+      "changeNotes": "2026-07-12 — NEW local-scout lead (score 73). Icon-forward concept site generated (real data, category theme, Comms Bridge, maps, noindex+draft+reduced-motion). Preflight PASS. | 2026-07-12 (late) — Upgraded to FULL SOP spec: photo-led premium rebuild, Our Work gallery, unique 6-article journal (learn.html, FAQPage JSON-LD), Comms Bridge kept, photos strictly Read-vetted (mis-attributed Serper/Fresha pulls rejected), stock fill disclosed where needed. Repo-wide preflight PASS."
+    },
+    "seven-seeds-coffee-shop": {
+      "title": "Seven Seeds Coffee Shop",
+      "status": "built",
+      "priority": "warm",
+      "notes": "Coffee shop, 151 Josiah Gumede Rd. 4.4★ / 121 Google reviews. Local-scout lead (presence-gated, no website). First-pass icon-forward concept site.",
+      "nextAction": "Get a real phone/WhatsApp number from the client (via IG DM), then add to current-builds.txt",
+      "caveats": [
+        "NO verified phone number — NOT in current-builds.txt until client provides one; Instagram DM is the contact channel",
+        "Fully stock-led with disclosure (one pull was likely the Melbourne Seven Seeds roastery)"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "coffee",
+        "shop",
+        "151 josiah gumede rd"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Seven%20Seeds%20Coffee%20Shop%20151%20Josiah%20Gumede%20Rd"
+        },
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/seven.seedscoffee_/"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/SevenSeedsCoffeeShop/posts/work-to-buy-coffee-buy-coffee-to-work-its-the-circle-of-life-pop-in-at-seven-see/766144192697403/"
+        }
+      ],
+      "changeNotes": "2026-07-12 — NEW local-scout lead (score 60). Icon-forward concept site generated (real data, category theme, Comms Bridge, maps, noindex+draft+reduced-motion). Preflight PASS. | 2026-07-12 (late) — Upgraded to FULL SOP spec: photo-led premium rebuild, Our Work gallery, unique 6-article journal (learn.html, FAQPage JSON-LD), Comms Bridge kept, photos strictly Read-vetted (mis-attributed Serper/Fresha pulls rejected), stock fill disclosed where needed. Repo-wide preflight PASS."
+    },
+    "durban-mobile-groomers": {
+      "title": "Durban Mobile Groomers",
+      "status": "gate_passed",
+      "priority": "warm",
+      "notes": "Pet groomer, Durban. 4.5★ / 122 Google reviews. Ph 068 334 7050. Local-scout lead (presence-gated, no website). First-pass icon-forward concept site.",
+      "nextAction": "Jaime review → commit/deploy done via factory pipeline → outreach draft (human send gate)",
+      "caveats": [
+        "Real branded-van photo in gallery (video-frame quality); stock-led hero with disclosure",
+        "4 pre-existing stock files lack recorded source URLs (flagged in manifest)"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "pet",
+        "groomer",
+        "durban"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Durban%20Mobile%20Groomers%20Durban"
+        },
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/durbanmobilegroomers/"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/DurbanMobileGroomers/"
+        }
+      ],
+      "changeNotes": "2026-07-12 — NEW local-scout lead (score 60). Icon-forward concept site generated (real data, category theme, Comms Bridge, maps, noindex+draft+reduced-motion). Preflight PASS. | 2026-07-12 (late) — Upgraded to FULL SOP spec: photo-led premium rebuild, Our Work gallery, unique 6-article journal (learn.html, FAQPage JSON-LD), Comms Bridge kept, photos strictly Read-vetted (mis-attributed Serper/Fresha pulls rejected), stock fill disclosed where needed. Repo-wide preflight PASS."
+    },
+    "elegant-dog-parlour": {
+      "title": "Elegant Dog Parlour",
+      "status": "gate_passed",
+      "priority": "warm",
+      "notes": "Pet groomer, Westville. 4.5★ / 121 Google reviews. Ph 031 266 5296. Local-scout lead (presence-gated, no website). First-pass icon-forward concept site.",
+      "nextAction": "Jaime review → commit/deploy done via factory pipeline → outreach draft (human send gate)",
+      "caveats": [
+        "Landline 031 266 5296 — wa.me link unconfirmed for WhatsApp, confirm before go-live (\"Message us\" label used)",
+        "Fully stock-led with disclosure — no verifiable client photos found"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "pet",
+        "groomer",
+        "westville"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Elegant%20Dog%20Parlour%20Westville"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/elegantdogparlour/"
+        }
+      ],
+      "changeNotes": "2026-07-12 — NEW local-scout lead (score 60). Icon-forward concept site generated (real data, category theme, Comms Bridge, maps, noindex+draft+reduced-motion). Preflight PASS. | 2026-07-12 (late) — Upgraded to FULL SOP spec: photo-led premium rebuild, Our Work gallery, unique 6-article journal (learn.html, FAQPage JSON-LD), Comms Bridge kept, photos strictly Read-vetted (mis-attributed Serper/Fresha pulls rejected), stock fill disclosed where needed. Repo-wide preflight PASS."
+    },
+    "chi-chis": {
+      "title": "Chi Chis",
+      "status": "gate_passed",
+      "priority": "warm",
+      "notes": "Hair salon, Westville. 4.9★ / 83 Google reviews. Ph 072 407 0658. Local-scout lead (presence-gated, no website). First-pass icon-forward concept site.",
+      "nextAction": "Jaime review → commit/deploy done via factory pipeline → outreach draft (human send gate)",
+      "caveats": [
+        "Original \"real\" photo was an exact duplicate of a Sarnia pull (Fresha mis-attribution) — removed from both; fully stock-led with disclosure"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "hair",
+        "salon",
+        "westville"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Chi%20Chis%20Westville"
+        },
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/chichihairstudio/"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/chichihairstudio/"
+        }
+      ],
+      "changeNotes": "2026-07-12 — NEW local-scout lead (score 57). Icon-forward concept site generated (real data, category theme, Comms Bridge, maps, noindex+draft+reduced-motion). Preflight PASS. | 2026-07-12 (late) — Upgraded to FULL SOP spec: photo-led premium rebuild, Our Work gallery, unique 6-article journal (learn.html, FAQPage JSON-LD), Comms Bridge kept, photos strictly Read-vetted (mis-attributed Serper/Fresha pulls rejected), stock fill disclosed where needed. Repo-wide preflight PASS."
+    },
+    "justine-benjamins-barbershop": {
+      "title": "Justine Benjamin's Barbershop",
+      "status": "gate_passed",
+      "priority": "warm",
+      "notes": "Barber shop, Durban. 4.6★ / 106 Google reviews. Ph 067 022 6042. Local-scout lead (presence-gated, no website). First-pass icon-forward concept site.",
+      "nextAction": "Jaime review → commit/deploy done via factory pipeline → outreach draft (human send gate)",
+      "caveats": [
+        "1 real photo kept (East Coast Barbers gear visible, name-matched source); 5 rejected incl. a different \"T. Benjamins\" business"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "barber",
+        "shop",
+        "durban"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Justine%20Benjamin's%20Barbershop%20Durban"
+        },
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/explore/locations/427337397664892/justine-benjamins-barbershop/"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/EastcoastbarbersSA/"
+        }
+      ],
+      "changeNotes": "2026-07-12 — NEW local-scout lead (score 57). Icon-forward concept site generated (real data, category theme, Comms Bridge, maps, noindex+draft+reduced-motion). Preflight PASS. | 2026-07-12 (late) — Upgraded to FULL SOP spec: photo-led premium rebuild, Our Work gallery, unique 6-article journal (learn.html, FAQPage JSON-LD), Comms Bridge kept, photos strictly Read-vetted (mis-attributed Serper/Fresha pulls rejected), stock fill disclosed where needed. Repo-wide preflight PASS."
+    },
+    "salon-highwaves": {
+      "title": "Salon Highwaves",
+      "status": "gate_passed",
+      "priority": "warm",
+      "notes": "Hair salon, Hillcrest. 4.6★ / 83 Google reviews. Ph 031 765 7635. Local-scout lead (presence-gated, no website). First-pass icon-forward concept site.",
+      "nextAction": "Jaime review → commit/deploy done via factory pipeline → outreach draft (human send gate)",
+      "caveats": [
+        "Real Fresha booking link used as primary CTA",
+        "Landline — wa.me unconfirmed, \"Message us\" label used; confirm before go-live",
+        "Fresha listing shows address \"1 Saint Margarets Road\" vs Maps \"59 Old Main Rd\" — verify before outreach"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "hair",
+        "salon",
+        "hillcrest"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Salon%20Highwaves%20Hillcrest"
+        },
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/explore/locations/1011418544/salon-highwaves/"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/salonhighwaveshillcrest/"
+        }
+      ],
+      "changeNotes": "2026-07-12 — NEW local-scout lead (score 53). Icon-forward concept site generated (real data, category theme, Comms Bridge, maps, noindex+draft+reduced-motion). Preflight PASS. | 2026-07-12 (late) — Upgraded to FULL SOP spec: photo-led premium rebuild, Our Work gallery, unique 6-article journal (learn.html, FAQPage JSON-LD), Comms Bridge kept, photos strictly Read-vetted (mis-attributed Serper/Fresha pulls rejected), stock fill disclosed where needed. Repo-wide preflight PASS."
+    },
+    "the-hair-design-studio-sarnia": {
+      "title": "The Hair Design Studio... Sarnia",
+      "status": "gate_passed",
+      "priority": "warm",
+      "notes": "Hair salon, Pinetown. 4.6★ / 71 Google reviews. Ph 076 551 2243. Local-scout lead (presence-gated, no website). First-pass icon-forward concept site.",
+      "nextAction": "Jaime review → commit/deploy done via factory pipeline → outreach draft (human send gate)",
+      "caveats": [
+        "Its one \"real\" photo turned out to be duplicated in chi-chis (Fresha mis-attribution) — removed; fully stock-led with disclosure"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "hair",
+        "salon",
+        "pinetown"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/The%20Hair%20Design%20Studio...%20Sarnia%20Pinetown"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/Hairdesignsarnia/"
+        }
+      ],
+      "changeNotes": "2026-07-12 — NEW local-scout lead (score 50). Icon-forward concept site generated (real data, category theme, Comms Bridge, maps, noindex+draft+reduced-motion). Preflight PASS. | 2026-07-12 (late) — Upgraded to FULL SOP spec: photo-led premium rebuild, Our Work gallery, unique 6-article journal (learn.html, FAQPage JSON-LD), Comms Bridge kept, photos strictly Read-vetted (mis-attributed Serper/Fresha pulls rejected), stock fill disclosed where needed. Repo-wide preflight PASS."
+    },
+    "gurus-barbershop-maytime-kloof": {
+      "title": "Guru's Barbershop Maytime Kloof",
+      "status": "gate_passed",
+      "priority": "warm",
+      "notes": "Barber shop, Kloof. 4.5★ / 70 Google reviews. Ph 074 842 7882. Local-scout lead (presence-gated, no website). First-pass icon-forward concept site.",
+      "nextAction": "Jaime review → commit/deploy done via factory pipeline → outreach draft (human send gate)",
+      "caveats": [
+        "5 kept photos come from the Fresha pool shared across the Guru listings — plausible but unbranded; confirm with client before outreach"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "barber",
+        "shop",
+        "kloof"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Guru's%20Barbershop%20Maytime%20Kloof%20Kloof"
+        },
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/p/Cy255oHi3oZ/"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/p/Gurus-Barbershop-100057699518222/"
+        }
+      ],
+      "changeNotes": "2026-07-12 — NEW local-scout lead (score 50). Icon-forward concept site generated (real data, category theme, Comms Bridge, maps, noindex+draft+reduced-motion). Preflight PASS. | 2026-07-12 (late) — Upgraded to FULL SOP spec: photo-led premium rebuild, Our Work gallery, unique 6-article journal (learn.html, FAQPage JSON-LD), Comms Bridge kept, photos strictly Read-vetted (mis-attributed Serper/Fresha pulls rejected), stock fill disclosed where needed. Repo-wide preflight PASS."
+    },
+    "vawda-plumbing-co": {
+      "title": "Vawda Plumbing Co.",
+      "status": "gate_passed",
+      "priority": "warm",
+      "notes": "Plumber, Durban. 5★ / 48 Google reviews. Ph 063 940 2591. Local-scout lead (presence-gated, no website). First-pass icon-forward concept site.",
+      "nextAction": "Jaime review → commit/deploy done via factory pipeline → outreach draft (human send gate)",
+      "caveats": [
+        "All 5 pulls were competitor plumbers (Drain Meister, Ganga, Academy) — rejected; fully stock-led with disclosure"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "plumber",
+        "durban"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Vawda%20Plumbing%20Co.%20Durban"
+        },
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/vawdacontractors/"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/vawdacontractors/"
+        }
+      ],
+      "changeNotes": "2026-07-12 — NEW local-scout lead (score 50). Icon-forward concept site generated (real data, category theme, Comms Bridge, maps, noindex+draft+reduced-motion). Preflight PASS. | 2026-07-12 (late) — Upgraded to FULL SOP spec: photo-led premium rebuild, Our Work gallery, unique 6-article journal (learn.html, FAQPage JSON-LD), Comms Bridge kept, photos strictly Read-vetted (mis-attributed Serper/Fresha pulls rejected), stock fill disclosed where needed. Repo-wide preflight PASS."
+    },
+    "cj-electrical-and-solar": {
+      "title": "CJ Electrical & Solar",
+      "status": "gate_passed",
+      "priority": "warm",
+      "notes": "Electrician, Durban. 5★ / 49 Google reviews. Ph 072 348 8289. Local-scout lead (presence-gated, no website). First-pass icon-forward concept site.",
+      "nextAction": "Jaime review → commit/deploy done via factory pipeline → outreach draft (human send gate)",
+      "caveats": [
+        "All 4 pulls belonged to an unrelated Australian company with the same name — rejected; fully stock-led with disclosure"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "electrician",
+        "durban"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/CJ%20Electrical%20%26%20Solar%20Durban"
+        },
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/cj_electrical17/"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/cjelectricalSolar/"
+        }
+      ],
+      "changeNotes": "2026-07-12 — NEW local-scout lead (score 50). Icon-forward concept site generated (real data, category theme, Comms Bridge, maps, noindex+draft+reduced-motion). Preflight PASS. | 2026-07-12 (late) — Upgraded to FULL SOP spec: photo-led premium rebuild, Our Work gallery, unique 6-article journal (learn.html, FAQPage JSON-LD), Comms Bridge kept, photos strictly Read-vetted (mis-attributed Serper/Fresha pulls rejected), stock fill disclosed where needed. Repo-wide preflight PASS."
+    },
+    "head-cutters-hair-design": {
+      "title": "Head Cutters Hair Design",
+      "status": "gate_passed",
+      "priority": "cold",
+      "notes": "Hair salon, Westville. 4.9★ / 43 Google reviews. Ph 083 789 8102. Local-scout lead (presence-gated, no website). First-pass icon-forward concept site.",
+      "nextAction": "Jaime review → commit/deploy done via factory pipeline → outreach draft (human send gate)",
+      "caveats": [
+        "1 name-matched real photo (hero); 3 Fresha directory pulls rejected; stock-led gallery with disclosure"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "hair",
+        "salon",
+        "westville"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Head%20Cutters%20Hair%20Design%20Westville"
+        },
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/headcutters_/"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/p/Headcutters-Hair-Design-100029350346329/"
+        }
+      ],
+      "changeNotes": "2026-07-12 — NEW local-scout lead (score 49). Icon-forward concept site generated (real data, category theme, Comms Bridge, maps, noindex+draft+reduced-motion). Preflight PASS. | 2026-07-12 (late) — Upgraded to FULL SOP spec: photo-led premium rebuild, Our Work gallery, unique 6-article journal (learn.html, FAQPage JSON-LD), Comms Bridge kept, photos strictly Read-vetted (mis-attributed Serper/Fresha pulls rejected), stock fill disclosed where needed. Repo-wide preflight PASS."
+    },
+    "before-n-after-unisex-hairdressing-salon": {
+      "title": "Before 'N After Unisex Hairdressing Salon",
+      "status": "gate_passed",
+      "priority": "cold",
+      "notes": "Hair salon, Westville. 4.8★ / 38 Google reviews. Ph 031 266 5389. Local-scout lead (presence-gated, no website). First-pass icon-forward concept site.",
+      "nextAction": "Jaime review → commit/deploy done via factory pipeline → outreach draft (human send gate)",
+      "caveats": [
+        "All 6 pulls rejected (mutually inconsistent venues); fully stock-led with disclosure",
+        "Landline — wa.me unconfirmed, \"Message us\" label",
+        "Enriched IG handle belonged to a different boutique — not linked; enriched email looked personal — not shown"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "hair",
+        "salon",
+        "westville"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Before%20'N%20After%20Unisex%20Hairdressing%20Salon%20Westville"
+        },
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/tessashair_boutique/"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/beforenafterhair/"
+        }
+      ],
+      "changeNotes": "2026-07-12 — NEW local-scout lead (score 48). Icon-forward concept site generated (real data, category theme, Comms Bridge, maps, noindex+draft+reduced-motion). Preflight PASS. | 2026-07-12 (late) — Upgraded to FULL SOP spec: photo-led premium rebuild, Our Work gallery, unique 6-article journal (learn.html, FAQPage JSON-LD), Comms Bridge kept, photos strictly Read-vetted (mis-attributed Serper/Fresha pulls rejected), stock fill disclosed where needed. Repo-wide preflight PASS."
+    },
+    "the-village-co-cafe-and-bistro": {
+      "title": "The Village Co Cafe & Bistro",
+      "status": "built",
+      "priority": "cold",
+      "notes": "Coffee shop, Durban. 4.5★ / 60 Google reviews. Local-scout lead (presence-gated, no website). First-pass icon-forward concept site.",
+      "nextAction": "Get a real phone/WhatsApp number from the client (via IG DM), then add to current-builds.txt",
+      "caveats": [
+        "NO verified phone — NOT in current-builds.txt until client provides one; Instagram DM is the contact channel",
+        "Both photo candidates were different \"Village\" cafés (Howick / Nottingham Rd) — rejected; fully stock-led with disclosure"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "coffee",
+        "shop",
+        "durban"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/The%20Village%20Co%20Cafe%20%26%20Bistro%20Durban"
+        },
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/_thevillageco/"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/p/The-Village-Co-61555222983607/"
+        }
+      ],
+      "changeNotes": "2026-07-12 — NEW local-scout lead (score 48). Icon-forward concept site generated (real data, category theme, Comms Bridge, maps, noindex+draft+reduced-motion). Preflight PASS. | 2026-07-12 (late) — Upgraded to FULL SOP spec: photo-led premium rebuild, Our Work gallery, unique 6-article journal (learn.html, FAQPage JSON-LD), Comms Bridge kept, photos strictly Read-vetted (mis-attributed Serper/Fresha pulls rejected), stock fill disclosed where needed. Repo-wide preflight PASS."
+    },
+    "salon-ash-blonde": {
+      "title": "Salon Ash Blonde",
+      "status": "gate_passed",
+      "priority": "cold",
+      "notes": "Beauty salon, Waterfall. 4.8★ / 35 Google reviews. Ph 031 762 1523. Local-scout lead (presence-gated, no website). First-pass icon-forward concept site.",
+      "nextAction": "Jaime review → commit/deploy done via factory pipeline → outreach draft (human send gate)",
+      "caveats": [
+        "All pulls rejected (\"Waterfall\" suburb vs hair-technique term confused the search); fully stock-led with disclosure",
+        "Landline — wa.me unconfirmed, \"Message us\" label; no owned socials found (IG reel/group post only — not linked)"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "beauty",
+        "salon",
+        "waterfall"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Salon%20Ash%20Blonde%20Waterfall"
+        },
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/reel/DUM_PHSjRai/"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/groups/WaterfallKZN/posts/1676707129438909/"
+        }
+      ],
+      "changeNotes": "2026-07-12 — NEW local-scout lead (score 47). Icon-forward concept site generated (real data, category theme, Comms Bridge, maps, noindex+draft+reduced-motion). Preflight PASS. | 2026-07-12 (late) — Upgraded to FULL SOP spec: photo-led premium rebuild, Our Work gallery, unique 6-article journal (learn.html, FAQPage JSON-LD), Comms Bridge kept, photos strictly Read-vetted (mis-attributed Serper/Fresha pulls rejected), stock fill disclosed where needed. Repo-wide preflight PASS."
+    },
+    "thuls-beauty-studio": {
+      "title": "THUL'S BEAUTY STUDIO",
+      "status": "gate_passed",
+      "priority": "cold",
+      "notes": "Beauty salon, Westville. 5★ / 37 Google reviews. Ph 063 272 0393. Local-scout lead (presence-gated, no website). First-pass icon-forward concept site.",
+      "nextAction": "Jaime review → commit/deploy done via factory pipeline → outreach draft (human send gate)",
+      "caveats": [
+        "All 6 pulls rejected — two were photos of EXISTING CLIENT Xqizit Beauty Club (caught before contamination); fully stock-led with disclosure",
+        "Enriched email looked mis-attributed — not shown on site"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "beauty",
+        "salon",
+        "westville"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/THUL'S%20BEAUTY%20STUDIO%20Westville"
+        },
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/beautyatstudio.s/"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/beautyatstudio.s/"
+        }
+      ],
+      "changeNotes": "2026-07-12 — NEW local-scout lead (score 47). Icon-forward concept site generated (real data, category theme, Comms Bridge, maps, noindex+draft+reduced-motion). Preflight PASS. | 2026-07-12 (late) — Upgraded to FULL SOP spec: photo-led premium rebuild, Our Work gallery, unique 6-article journal (learn.html, FAQPage JSON-LD), Comms Bridge kept, photos strictly Read-vetted (mis-attributed Serper/Fresha pulls rejected), stock fill disclosed where needed. Repo-wide preflight PASS."
+    },
+    "the-livingroom-at-summerhill-guest-estate": {
+      "title": "The LivingRoom at Summerhill Guest Estate",
+      "status": "built",
+      "priority": "cold",
+      "notes": "Fine Dining, Durban. 5★ / 37 Google reviews. Local-scout lead (presence-gated, no website). First-pass icon-forward concept site.",
+      "nextAction": "Get a real phone/WhatsApp number from the client (via IG DM), then add to current-builds.txt",
+      "caveats": [
+        "NO verified phone — NOT in current-builds.txt; Instagram DM reservations",
+        "5 real photos kept (some sourced from summerhillkzn.com — the ESTATE has a website; pitch = dedicated restaurant site, not \"no website\")"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "fine",
+        "dining",
+        "durban"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/The%20LivingRoom%20at%20Summerhill%20Guest%20Estate%20Durban"
+        },
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/thelivingroomatsummerhill/"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/summerhillestateculinaryretreat/"
+        }
+      ],
+      "changeNotes": "2026-07-12 — NEW local-scout lead (score 47). Icon-forward concept site generated (real data, category theme, Comms Bridge, maps, noindex+draft+reduced-motion). Preflight PASS. | 2026-07-12 (late) — Upgraded to FULL SOP spec: photo-led premium rebuild, Our Work gallery, unique 6-article journal (learn.html, FAQPage JSON-LD), Comms Bridge kept, photos strictly Read-vetted (mis-attributed Serper/Fresha pulls rejected), stock fill disclosed where needed. Repo-wide preflight PASS."
+    },
+    "areeb-guru-barber-shop": {
+      "title": "Areeb Guru barber shop",
+      "status": "gate_passed",
+      "priority": "cold",
+      "notes": "Barber shop, Kloof. 4.5★ / 52 Google reviews. Ph 062 480 2760. Local-scout lead (presence-gated, no website). First-pass icon-forward concept site.",
+      "nextAction": "Jaime review → commit/deploy done via factory pipeline → outreach draft (human send gate)",
+      "caveats": [
+        "Shared Guru/Fresha photo pool deduplicated — kept 1 plausible real photo; stock-led with disclosure"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "barber",
+        "shop",
+        "kloof"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/Areeb%20Guru%20barber%20shop%20Kloof"
+        },
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/p/Cy255oHi3oZ/"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/p/Gurus-Barbershop-100057699518222/"
+        }
+      ],
+      "changeNotes": "2026-07-12 — NEW local-scout lead (score 46). Icon-forward concept site generated (real data, category theme, Comms Bridge, maps, noindex+draft+reduced-motion). Preflight PASS. | 2026-07-12 (late) — Upgraded to FULL SOP spec: photo-led premium rebuild, Our Work gallery, unique 6-article journal (learn.html, FAQPage JSON-LD), Comms Bridge kept, photos strictly Read-vetted (mis-attributed Serper/Fresha pulls rejected), stock fill disclosed where needed. Repo-wide preflight PASS."
+    },
+    "bc-therapy-beauty-salon": {
+      "title": "BC Therapy - Beauty Salon",
+      "status": "gate_passed",
+      "priority": "cold",
+      "notes": "Beauty salon, Pinetown. 5★ / 25 Google reviews. Ph 083 595 2903. Local-scout lead (presence-gated, no website). First-pass icon-forward concept site.",
+      "nextAction": "Jaime review → commit/deploy done via factory pipeline → outreach draft (human send gate)",
+      "caveats": [
+        "1 real photo from their own Fresha listing (hero); 5 rejected incl. a Lumora Skin Studio room; confirmed WhatsApp number used"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "beauty",
+        "salon",
+        "pinetown"
+      ],
+      "sources": [
+        {
+          "type": "maps",
+          "url": "https://www.google.com/maps/search/BC%20Therapy%20-%20Beauty%20Salon%20Pinetown"
+        },
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/bc_therapy_bronwen/"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/BCTherapy/"
+        }
+      ],
+      "changeNotes": "2026-07-12 — NEW local-scout lead (score 45). Icon-forward concept site generated (real data, category theme, Comms Bridge, maps, noindex+draft+reduced-motion). Preflight PASS. | 2026-07-12 (late) — Upgraded to FULL SOP spec: photo-led premium rebuild, Our Work gallery, unique 6-article journal (learn.html, FAQPage JSON-LD), Comms Bridge kept, photos strictly Read-vetted (mis-attributed Serper/Fresha pulls rejected), stock fill disclosed where needed. Repo-wide preflight PASS."
     }
   },
   "documents": [

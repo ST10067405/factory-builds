@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Pipeline — Vawda Plumbing Co. Journal</title>
+<meta name="description" content="Plumbing know-how for Durban homes — burst pipes, geysers, drains and renovations, from Vawda Plumbing Co.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Do I need to close the mains stopcock during a burst pipe?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — closing the mains stopcock immediately is the single biggest thing that limits water damage during a burst pipe. Do that first, before anything else." } },
+    { "@type": "Question", "name": "Why do older Durban homes have plumbing problems more often?", "acceptedAnswer": { "@type": "Answer", "text": "Many older Durban homes still run on galvanised steel pipework from decades ago, which corrodes from the inside and eventually fails without much external warning — unlike modern copper or PVC." } },
+    { "@type": "Question", "name": "Should I worry about my drains before summer rains?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — Durban's heavy summer storms expose slow-draining or partially blocked drains fast. A check before the rainy season is far cheaper than a flooded yard during it." } },
+    { "@type": "Question", "name": "How do I book?", "acceptedAnswer": { "@type": "Answer", "text": "Call or WhatsApp 063 940 2591 — we'll confirm availability. Online booking is coming to this site soon." } }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#F7F4EC;--surface:#FFFFFF;--ink:#101A2E;--mut:rgba(16,26,46,.68);
+  --brand:#153E9C;--accent:#FF6A13;--accent-ink:#B3480D;--line:rgba(16,26,46,.12);
+  --display:'Anton',sans-serif;--body:'Roboto',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand);color:#fff;font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:700}
+nav{position:sticky;top:0;z-index:50;background:rgba(247,244,236,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);margin-top:28px}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);text-transform:uppercase;font-size:22px;color:var(--brand);text-decoration:none}
+.nav-back{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-decoration:none;font-weight:500}
+.nav-back:hover{color:var(--accent-ink)}
+header{padding:80px 0 56px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--accent-ink);margin-bottom:18px}
+h1{font-family:var(--display);text-transform:uppercase;font-size:clamp(36px,6vw,64px);line-height:1.02;color:var(--brand)}
+.intro{max-width:600px;margin:22px auto 0;color:var(--mut);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:14px;padding:30px 26px;cursor:pointer;transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s;text-align:left}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(16,26,46,.12);outline:none}
+.post .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);font-weight:700}
+.post h3{font-family:var(--display);text-transform:uppercase;font-size:20px;margin:12px 0 8px;line-height:1.2;color:var(--ink)}
+.post p{color:var(--mut);font-size:14.5px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);text-transform:uppercase;font-size:clamp(26px,4vw,42px);margin-bottom:28px;text-align:center;color:var(--brand)}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:700;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent);font-size:22px}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(16,26,46,.6);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--bg);max-width:680px;width:100%;border-radius:18px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(16,26,46,.4)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut)}
+.asheet .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);font-weight:700}
+.asheet h2{font-family:var(--display);text-transform:uppercase;font-size:clamp(24px,4vw,34px);margin:12px 0 20px;line-height:1.15;color:var(--brand)}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:13px 26px;border-radius:6px}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s cubic-bezier(.22,1,.36,1),transform .6s cubic-bezier(.22,1,.36,1)}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--accent-ink);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for Vawda Plumbing Co. by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">Vawda Plumbing</a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">The Journal</p>
+    <h1>The Pipeline</h1>
+    <p class="intro">Practical plumbing know-how for Durban homes — from old galvanised pipework to summer storm drains. Tap an article to read.</p>
+  </div>
+</header>
+
+<div class="wrap"><div class="grid" id="postGrid"></div></div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="qa">
+      <details><summary>Do I need to close the mains stopcock during a burst pipe?</summary><p>Yes — closing the mains stopcock immediately is the single biggest thing that limits water damage during a burst pipe. Do that first, before anything else.</p></details>
+      <details><summary>Why do older Durban homes have plumbing problems more often?</summary><p>Many older Durban homes still run on galvanised steel pipework from decades ago, which corrodes from the inside and eventually fails without much external warning — unlike modern copper or PVC.</p></details>
+      <details><summary>Should I worry about my drains before summer rains?</summary><p>Yes — Durban's heavy summer storms expose slow-draining or partially blocked drains fast. A check before the rainy season is far cheaper than a flooded yard during it.</p></details>
+      <details><summary>How do I book?</summary><p>Call or WhatsApp 063 940 2591 — we'll confirm availability. Online booking is coming to this site soon.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap">Vawda Plumbing Co. · Service area: greater Durban · Concept by Arkatype Digital — draft, awaiting client sign-off</div></footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#visit">Call or WhatsApp us →</a>
+  </div>
+</div>
+
+<script>
+const POSTS = [
+  { tag: 'Emergency', title: 'Burst Pipe On The Berea? Your First Five Minutes', teaser: "The first few minutes after a pipe bursts decide how bad the damage gets. Here's the order to work in.", body: `<p>A burst pipe in an older Berea or Morningside home can put litres of water into a ceiling or floor within minutes. Acting in the right order limits the damage far more than acting fast but randomly.</p><ul><li>Shut the mains stopcock first — this is the single most important step and stops the flow at the source.</li><li>If hot water is involved, switch the geyser off at the DB board before doing anything else.</li><li>Open the lowest taps in the house to drain the pressure and remaining water out of the pipes.</li><li>Move rugs, furniture and electronics clear of the water and mop up what you can.</li><li>Call a plumber and describe exactly where the water is coming from and how fast.</li></ul>` },
+  { tag: 'Old pipework', title: 'Why Durban’s Old Galvanised Pipes Fail Without Warning', teaser: 'A lot of Durban homes built last century still run on galvanised steel — and it corrodes from the inside out.', body: `<p>Many Durban homes built before the 1980s still have their original galvanised steel plumbing. Unlike copper or PVC, galvanised pipe corrodes from the inside, so the outside can look completely fine right up until it isn't.</p><ul><li>Discoloured or rusty-tasting water is often the first visible sign — by then corrosion is well advanced.</li><li>Falling water pressure over months, not days, usually means scale build-up narrowing the pipe.</li><li>Pinhole leaks tend to appear at joints and bends first, where corrosion concentrates.</li><li>A galvanised system nearing the end of its life is usually more cost-effective to re-pipe in sections than to keep patching.</li><li>If your home hasn't been re-plumbed since it was built, it's worth having the pipework assessed before a failure forces the issue.</li></ul>` },
+  { tag: 'Geysers', title: 'Geyser Trouble Before The Next Load-Shedding Stage: Warning Signs', teaser: 'Load-shedding cycles are hard on geysers — repeated heating and cooling stresses ageing elements and tanks.', body: `<p>Frequent power cuts mean Durban geysers cycle through heating and cooling far more often than they were designed for. That extra stress tends to bring existing faults forward.</p><ul><li>Water that's lukewarm instead of hot often means the element is struggling, not just that the power was recently off.</li><li>Popping or rumbling sounds as the geyser heats up point to scale build-up on the element.</li><li>A damp patch or drip near the geyser or on the ceiling below it should never wait for the next scheduled outage.</li><li>An overflow pipe that drips constantly, even when nothing's been used, suggests the pressure valve needs attention.</li><li>Older geysers are more vulnerable to load-shedding stress — a quick check before a run of outages can catch a failure early.</li></ul>` },
+  { tag: 'Drains', title: 'Durban’s Summer Storms And The Drains That Can’t Keep Up', teaser: 'KZN’s summer downpours find every weak point in a drainage system — usually all at once.', body: `<p>Durban's summer storms can drop more rain in an hour than a dry month sees altogether. Drains that cope fine on an ordinary day often can't keep up, and that's when existing problems become visible.</p><ul><li>Outside gullies clogged with leaves and grit are the most common cause of standing water after a storm.</li><li>A drain that gurgles or drains slowly in dry weather will very likely back up completely in heavy rain.</li><li>Repeated blockages in the same spot can mean a partially collapsed or root-invaded pipe underground.</li><li>Stormwater and sewer lines are separate systems — water backing up indoors during rain is a sign worth investigating quickly.</li><li>A pre-summer check of gullies, gutters and traps is far cheaper than a flooded yard mid-storm.</li></ul>` },
+  { tag: 'Renovations', title: 'Renovating An Upper Highway Bathroom? Get The Plumbing Right First', teaser: 'Tiles and fittings are the fun part — but the pipework decisions get made (and hidden) first.', body: `<p>Bathroom renovations in the Upper Highway area are popular, and it's tempting to focus on tiles and fittings. But the plumbing decisions happen first, and once the walls are closed up, mistakes are expensive to fix.</p><ul><li>Moving a basin, shower or toilet even slightly can mean rerouting supply and waste pipes — plan this before choosing fittings.</li><li>Older homes often still have galvanised supply lines behind the wall — a renovation is the easiest time to replace them.</li><li>Waterproofing and pipe placement both need to be right before tiling starts; redoing either afterwards is costly.</li><li>Modern mixer taps and rain showers often need different pressure and pipe sizing than old fittings — check compatibility early.</li><li>A plumber walking the renovation plan before demolition starts catches problems while they're still cheap to change.</li></ul>` },
+  { tag: 'Hard water', title: 'Hard Water In Durban Homes: What It’s Doing To Your Taps', teaser: "Scale build-up from Durban's water quietly shortens the life of taps, geysers and appliances.", body: `<p>Water hardness varies across greater Durban depending on supply source, and mineral-rich water leaves scale behind wherever it heats or sits. Over time that build-up wears down fittings that would otherwise last for years.</p><ul><li>White, chalky crusting around tap spouts and showerheads is the most visible early sign.</li><li>Stiff, dripping taps are often scale build-up around the internal washer, not just wear.</li><li>Scale coats a geyser's element, making it work harder and fail sooner than it should.</li><li>Kettles and washing machines show the same build-up — a descale routine helps everything, not just plumbing.</li><li>Persistent dripping or reduced flow despite full water pressure is worth having checked rather than just tightened.</li></ul>` }
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

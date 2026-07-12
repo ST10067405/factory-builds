@@ -1,14 +1,55 @@
 {
   "lead": "Elegant Dog Parlour",
-  "query": "Elegant Dog Parlour Westville pet",
+  "query": "Elegant Dog Parlour Westville dog grooming",
   "pulled": 2,
-  "kept": [
+  "kept": [],
+  "rejected": [
     {
-      "file": "real_02.jpg",
-      "dim": "642x608",
-      "source": "Garden Route and Klein Karoo App",
-      "title": "Wags & Whiskers Pet Parlour Stilbaai Professional Grooming s"
+      "file": "real_02.jpg (original scout pull)",
+      "reason": "Wrong business — visible signage for \"Wags & Whiskers Pet Parlour\", 10 Osler Str, Still Bay East (different town, different salon)."
+    },
+    {
+      "file": "real_01.jpg (top-up pull #1, 'Elegant Dog Parlour Westville dog grooming')",
+      "reason": "Mis-attributed — Serper source/title identifies this as \"Von Zwei Polokwane Dog Kennel Spa\" imagery, a different business in a different province."
+    },
+    {
+      "file": "real_02.jpg (top-up pull #1)",
+      "reason": "Wrong business — table sign reads \"SMOOCH YOUR POOCH\" and source is \"Smoochie Pooch\", a different Westville grooming salon, not Elegant Dog Parlour."
+    },
+    {
+      "file": "candidate_5.jpg (unattributed local file from a prior stopped agent)",
+      "reason": "Dropped from stock fill — studio French bulldog puppy on mustard-yellow background clashes with the brief's blush pink/charcoal/ivory palette and is not grooming-specific; redundant once 4 on-theme stock shots were kept."
+    },
+    {
+      "file": "real_02.png / real_03.png / real_04.png / real_06.png (top-up pull #2, 'dog spa bath tub grooming close up')",
+      "reason": "Generic grooming-tub product/catalog photography (Groomer's Best / Doggy Village) — large product-listing images, not a good lifestyle fit; dropped in favour of the two candid bath photos kept."
+    },
+    {
+      "file": "real_07.jpg / real_08.jpg / real_09.jpg / real_10.jpg (top-up pull #2)",
+      "reason": "Rejected — visible repeated \"Vecteezy\" watermark across the whole frame, unusable/unlicensed for a client-facing page even in draft."
     }
   ],
-  "note": "UNVETTED scout pool — Read-vet before using in a build (SOP)."
+  "stock": [
+    {
+      "file": "stock_01.jpg",
+      "desc": "Groomer bathing a golden retriever in a professional stainless steel grooming tub, brushes/shampoo visible — used as the hero photo.",
+      "source": "Serper image search, source site \"Groomers Online\" (pull-photos.js query: \"dog spa bath tub grooming close up\"). Re-verified by direct read this session; no business branding visible."
+    },
+    {
+      "file": "stock_02.jpg",
+      "desc": "Golden retriever puppy lying in grass with a toy — warm, well-groomed-coat feel for gallery use.",
+      "source": "Unsplash (file carried over from an earlier scouting pass in this same client folder; exact photo URL was not preserved before this session — content re-verified by direct read this session, no business branding present)."
+    },
+    {
+      "file": "stock_03.jpg",
+      "desc": "Two small dogs (terrier mix + corgi) walking together outdoors, tongues out, happy — community/multi-breed feel.",
+      "source": "Unsplash (same provenance note as stock_02.jpg)."
+    },
+    {
+      "file": "stock_04.jpg",
+      "desc": "Chihuahua being bathed and held gently by two groomers, close-up candid shot.",
+      "source": "Serper image search, source site \"PetHelpful\" (pull-photos.js query: \"dog spa bath tub grooming close up\"). Re-verified by direct read this session; no business branding visible."
+    }
+  ],
+  "note": "All Serper-sourced REAL-photo pulls for this specific lead (2 pulls under the business-name query) were mis-attributed to other grooming businesses and rejected — 0 kept real photos of Elegant Dog Parlour itself. A further top-up pull under a generic 'dog spa bath tub grooming close up' query was used for STOCK sourcing per SOP Step 2; two of its results (stock_01, stock_04) replaced two initially-kept candidates that preflight.js flagged as exact cross-client MD5 duplicates of durban-mobile-groomers/images/stock_01.jpg and stock_02.jpg. Replacements were hash-checked against every other client's images/ folder before being kept — no collisions found. Build is stock-led; footer disclosure added per SOP."
 }

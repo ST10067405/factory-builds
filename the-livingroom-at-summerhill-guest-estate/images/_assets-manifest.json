@@ -7,38 +7,49 @@
       "file": "real_01.jpg",
       "dim": "1440x1800",
       "source": "DineXp",
-      "title": "The LivingRoom at Summerhill Guest Estate Menu, Prices & 5☆"
-    },
-    {
-      "file": "real_02.jpg",
-      "dim": "1440x1800",
-      "source": "DineXp",
-      "title": "The LivingRoom at Summerhill Guest Estate Menu, Prices & 5☆"
+      "title": "The LivingRoom at Summerhill Guest Estate Menu, Prices & 5☆",
+      "vetted": true,
+      "verdict": "Candlelit fine-dining tablescape with tasting plates and wine — plating style matches real_03; consistent with a rustic-elegant estate dining room. Kept as hero image."
     },
     {
       "file": "real_03.jpg",
       "dim": "1920x1280",
       "source": "summerhillkzn.com",
-      "title": "Summerhill Guest Estate | Home of the Livingroom"
+      "title": "Summerhill Guest Estate | Home of the Livingroom",
+      "vetted": true,
+      "verdict": "Overhead plated dish, no branding conflicts; sourced directly from the official summerhillkzn.com domain. Kept."
     },
     {
       "file": "real_04.jpg",
       "dim": "1280x1920",
       "source": "Summerhill Guest Estate",
-      "title": "LivingRoom | Summerhill Guest Estate"
+      "title": "LivingRoom | Summerhill Guest Estate",
+      "vetted": true,
+      "verdict": "Chef harvesting chillies in front of the estate's colonial-style porch; sourced directly from the business. Kept."
     },
     {
       "file": "real_05.jpg",
       "dim": "1200x1600",
       "source": "African Travel Bird",
-      "title": "Summerhill Guest Estate - The night I finally experienced .."
+      "title": "Summerhill Guest Estate - The night I finally experienced ..",
+      "vetted": true,
+      "verdict": "Fireside lounge interior from a travel blog post specifically about visiting Summerhill Guest Estate. Kept."
     },
     {
       "file": "real_06.jpg",
       "dim": "1200x1600",
       "source": "African Travel Bird",
-      "title": "Summerhill Guest Estate - The night I finally experienced .."
+      "title": "Summerhill Guest Estate - The night I finally experienced ..",
+      "vetted": true,
+      "verdict": "Thatch-roof estate dining room in the evening, same blog post about Summerhill Guest Estate. Kept."
     }
   ],
-  "note": "UNVETTED scout pool — Read-vet before using in a build (SOP)."
+  "rejected": [
+    {
+      "file": "real_02.jpg",
+      "source": "DineXp",
+      "reason": "Ultra-modern urban restaurant interior (orange pendant lighting, corduroy booths, terrazzo floor) inconsistent with the rustic colonial-estate architecture seen in the verified Summerhill photos (thatch roof, brick fireplace, white-balustrade porch). Likely a DineXp aggregator mis-attribution to a different restaurant. Rejected and deleted."
+    }
+  ],
+  "note": "Vetted by build agent 2026-07-12. 5 of 6 kept, 1 rejected. Kept count >= 2 so stock fill was optional and skipped — real photos give good hero/gallery/experience coverage."
 }

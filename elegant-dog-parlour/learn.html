@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Parlour Journal | Elegant Dog Parlour</title>
+<meta name="description" content="Coat-care and grooming guidance for Westville dog owners, from Elegant Dog Parlour.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How can I tell if my dog has a double coat?", "acceptedAnswer": { "@type": "Answer", "text": "Double-coated breeds have a soft, insulating undercoat beneath a coarser topcoat. If you part the fur and see a dense, fluffy layer close to the skin, your dog likely has a double coat — common in breeds like Labradors, Huskies, Corgis and Border Collies." } },
+    { "@type": "Question", "name": "How should I prepare my dog before a grooming appointment?", "acceptedAnswer": { "@type": "Answer", "text": "A quick brush-through at home to loosen surface tangles, a toilet break beforehand, and arriving a few minutes early so your dog can settle in all help a grooming visit go smoothly." } },
+    { "@type": "Question", "name": "What should I expect at my dog's first grooming visit?", "acceptedAnswer": { "@type": "Answer", "text": "Expect an unhurried introduction, a check of coat and skin condition, and a groom paced to your dog's comfort. It's normal for a first visit to take a little longer than routine ones." } },
+    { "@type": "Question", "name": "How do I book?", "acceptedAnswer": { "@type": "Answer", "text": "Call 031 266 5296. Online booking is coming to this site soon." } }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#FBF3EE;
+  --surface:#FFFFFF;
+  --ink:#2B2320;
+  --mut:#6E5F5A;
+  --brand:#2B2320;
+  --accent:#E7AFC0;
+  --accent-ink:#9C4F65;
+  --line:rgba(43,35,32,.14);
+  --ease:cubic-bezier(.22,1,.36,1);
+  --display:'Cormorant Garamond',serif;
+  --body:'Nunito Sans',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand);color:var(--bg);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-size:23px;font-weight:700;color:var(--brand);text-decoration:none}
+.nav-back{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-decoration:none}
+.nav-back:hover{color:var(--accent-ink)}
+header{padding:88px 0 56px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--accent-ink);margin-bottom:18px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(38px,6vw,66px);line-height:1.06}
+.intro{max-width:600px;margin:22px auto 0;color:var(--mut);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:18px;padding:28px 24px;cursor:pointer;transition:transform .3s var(--ease),box-shadow .3s var(--ease);text-align:left}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(43,35,32,.1);outline:none}
+.post .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);font-weight:700}
+.post h3{font-family:var(--display);font-weight:600;font-size:22px;margin:12px 0 8px;line-height:1.2}
+.post p{color:var(--mut);font-size:14.5px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);font-weight:700;font-size:clamp(28px,4vw,44px);margin-bottom:28px;text-align:center}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent-ink);font-size:22px}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(43,35,32,.55);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--bg);max-width:680px;width:100%;border-radius:22px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(43,35,32,.4)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut)}
+.asheet .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);font-weight:700}
+.asheet h2{font-family:var(--display);font-weight:700;font-size:clamp(26px,4vw,38px);margin:12px 0 20px;line-height:1.15}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--accent-ink);color:var(--bg);text-decoration:none;font-weight:600;font-size:14px;padding:13px 26px;border-radius:99px;min-height:44px}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--accent-ink);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for Elegant Dog Parlour by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">Elegant Dog Parlour</a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">The Parlour Journal</p>
+    <h1>Coat Care &amp; Grooming Notes</h1>
+    <p class="intro">Practical guidance for Westville dog owners — written for pet parents in Dawncliffe and across the Upper Highway.</p>
+  </div>
+</header>
+
+<div class="wrap"><div class="grid" id="postGrid"></div></div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="qa">
+      <details><summary>How can I tell if my dog has a double coat?</summary><p>Double-coated breeds have a soft, insulating undercoat beneath a coarser topcoat. If you part the fur and see a dense, fluffy layer close to the skin, your dog likely has a double coat — common in breeds like Labradors, Huskies, Corgis and Border Collies.</p></details>
+      <details><summary>How should I prepare my dog before a grooming appointment?</summary><p>A quick brush-through at home to loosen surface tangles, a toilet break beforehand, and arriving a few minutes early so your dog can settle in all help a grooming visit go smoothly.</p></details>
+      <details><summary>What should I expect at my dog's first grooming visit?</summary><p>Expect an unhurried introduction, a check of coat and skin condition, and a groom paced to your dog's comfort. It's normal for a first visit to take a little longer than routine ones.</p></details>
+      <details><summary>How do I book?</summary><p>Call 031 266 5296. Online booking is coming to this site soon.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap">Elegant Dog Parlour · 39 Maryvale Rd, Dawncliffe, Westville · Concept by Arkatype Digital — draft, awaiting client sign-off</div></footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#visit">Book your visit →</a>
+  </div>
+</div>
+
+<script>
+/* 6 audience-matched articles — generic educational advice only, no invented claims about the business. */
+const POSTS = [
+  {
+    tag: 'Coat Care',
+    title: "Double-Coat Breeds and Westville's Humid Summers",
+    teaser: 'Why a double coat needs extra attention in our warm, humid climate — and what regular grooming does about it.',
+    body: `<p>Breeds like Labradors, Huskies, Border Collies and Corgis carry a dense undercoat beneath a coarser topcoat. That undercoat is brilliant insulation in a cold climate — but in Westville's warm, humid stretches it can trap heat and moisture against the skin if it isn't kept clean and thinned out.</p>
+    <p>A few things help between grooms:</p>
+    <ul>
+      <li>Brush down to the skin, not just over the topcoat, a few times a week in warmer months.</li>
+      <li>Rinse off sand, salt or garden debris after outdoor time — trapped debris in a thick undercoat can irritate skin.</li>
+      <li>Never shave a double coat down to the skin "to keep it cool" — it protects against sunburn and actually helps regulate temperature.</li>
+      <li>Book a proper de-shed during heavy shedding season so the undercoat doesn't build up into mats.</li>
+    </ul>
+    <p class="mut">General coat-care guidance — not a substitute for advice from your vet on your dog's specific coat or skin condition.</p>`
+  },
+  {
+    tag: 'Getting Ready',
+    title: 'Getting Parlour-Ready: Prepping Your Dog for Elegant Dog Parlour',
+    teaser: 'Small steps at home before your appointment that make grooming day calmer for you and your dog.',
+    body: `<p>A groomer can do their best work when a dog arrives settled rather than wound up. None of this needs to be perfect — it just smooths the visit.</p>
+    <ul>
+      <li>Give a gentle brush-through at home the night before, focusing on ears, armpits and behind the legs where mats hide.</li>
+      <li>Take your dog for a short walk or toilet break shortly before the appointment.</li>
+      <li>Skip a big meal right before grooming — a light stomach is more comfortable during handling.</li>
+      <li>Bring along any details about recent skin issues, sensitivities, or a coat style you have in mind.</li>
+      <li>Arrive a few minutes early rather than rushing in — a calm arrival sets the tone for the visit.</li>
+    </ul>
+    <p class="mut">General preparation tips for any grooming appointment, anywhere.</p>`
+  },
+  {
+    tag: 'First Visits',
+    title: "Your Dog's First Visit to Elegant Dog Parlour, Explained",
+    teaser: "What typically happens at a first grooming appointment, and how to help a nervous dog settle in.",
+    body: `<p>A first grooming visit is as much about your dog getting comfortable with the process as it is about the groom itself. It's completely normal for it to take a little longer than a routine visit.</p>
+    <p>What to expect, in general:</p>
+    <ul>
+      <li>A brief introduction so your dog can sniff around and settle before handling begins.</li>
+      <li>A check of the coat and skin to flag any mats, sensitivities or areas needing extra care.</li>
+      <li>A paced groom, with breaks if your dog needs them, rather than a rushed one-and-done session.</li>
+      <li>A debrief afterwards on how your dog handled it, and any notes for next time.</li>
+    </ul>
+    <p>If your dog is anxious about new places, a short "meet and greet" visit with no actual grooming can sometimes help before the real appointment.</p>
+    <p class="mut">General guidance on what a first grooming visit typically involves.</p>`
+  },
+  {
+    tag: 'Between Visits',
+    title: 'Dawncliffe Dog Walks Before and After a Groom',
+    teaser: 'Timing your walks around a grooming appointment so the coat — and the groom — stays looking its best.',
+    body: `<p>Where and when you walk your dog around a grooming appointment can make a real difference to how long a fresh groom actually looks fresh.</p>
+    <ul>
+      <li>A walk before the appointment burns off excess energy, which tends to make handling easier.</li>
+      <li>After a groom, stick to drier paths for the first outing or two — freshly clipped, clean coats pick up mud and grass seeds easily.</li>
+      <li>Rinse paws and belly after a walk through wet grass or puddles rather than letting them air-dry with debris in the coat.</li>
+      <li>Grass seeds and burrs are a real hazard for longer-coated breeds — a quick check of paws, ears and armpits after every walk catches them early.</li>
+    </ul>
+    <p class="mut">General advice for keeping a coat in good shape between grooming visits.</p>`
+  },
+  {
+    tag: 'Coat Care',
+    title: 'De-Shedding on the Upper Highway: A Westville Owner’s Guide',
+    teaser: 'What de-shedding actually does, which breeds benefit most, and how often it helps.',
+    body: `<p>De-shedding is a deeper treatment than a routine brush — it's aimed at loosening and removing the soft, dead undercoat that ordinary brushing often misses, especially on heavy-shedding breeds.</p>
+    <ul>
+      <li>Breeds with a thick double coat — Labradors, Huskies, German Shepherds, Golden Retrievers — tend to benefit most.</li>
+      <li>Shedding season usually means twice-yearly "coat blows" where de-shedding makes the biggest visible difference.</li>
+      <li>Between treatments, regular brushing at home helps keep loose fur from building up again.</li>
+      <li>De-shedding is not the same as shaving — the topcoat and coat length are preserved; it's the loose undercoat that's targeted.</li>
+    </ul>
+    <p class="mut">General information on de-shedding as a grooming treatment.</p>`
+  },
+  {
+    tag: 'Routine',
+    title: 'Maryvale Road Mornings: A Grooming Routine Your Dog Will Love',
+    teaser: 'Building a simple, low-stress coat-care routine at home between parlour visits.',
+    body: `<p>A short, predictable routine at home makes the difference between a dog who tolerates grooming and one who genuinely doesn't mind it.</p>
+    <ul>
+      <li>Keep home sessions short — five minutes of brushing is more effective than an occasional 40-minute battle.</li>
+      <li>Pick a consistent time of day, like a quiet morning before the day gets busy, so it becomes a predictable routine rather than a surprise.</li>
+      <li>Reward calm behaviour during brushing with a treat or praise, especially early on.</li>
+      <li>Check ears, nails and paw pads on the same schedule as brushing, so nothing gets overlooked between parlour visits.</li>
+    </ul>
+    <p class="mut">General routine-building advice — adjust to your own dog's coat, temperament and age.</p>`
+  }
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

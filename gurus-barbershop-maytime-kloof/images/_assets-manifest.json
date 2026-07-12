@@ -4,41 +4,46 @@
   "pulled": 6,
   "kept": [
     {
-      "file": "real_01.jpg",
-      "dim": "1280x854",
-      "source": "Fresha",
-      "title": "Best Barbers near me in Kloof, Kloof | Fresha"
-    },
-    {
       "file": "real_02.jpg",
       "dim": "1280x854",
       "source": "Fresha",
-      "title": "Best Hot Towel Shaves near me in Durban, Kloof | Fresha"
+      "title": "Best Hot Towel Shaves near me in Durban, Kloof | Fresha",
+      "vetted": true
     },
     {
       "file": "real_03.jpg",
       "dim": "1280x854",
       "source": "Fresha",
-      "title": "Best Barbers near me in Kloof, Kloof | Fresha"
+      "title": "Best Barbers near me in Kloof, Kloof | Fresha",
+      "vetted": true
     },
     {
       "file": "real_04.jpg",
       "dim": "1280x853",
       "source": "Fresha",
-      "title": "Best Barbers near me in Kloof, Kloof | Fresha"
+      "title": "Best Barbers near me in Kloof, Kloof | Fresha",
+      "vetted": true
     },
     {
       "file": "real_05.jpg",
       "dim": "1280x853",
       "source": "Fresha",
-      "title": "Best Barbers near me in Kloof, Kloof | Fresha"
+      "title": "Best Barbers near me in Kloof, Kloof | Fresha",
+      "vetted": true
     },
     {
       "file": "real_06.jpg",
       "dim": "1280x853",
       "source": "Fresha",
-      "title": "Best Barbers near me in Kloof, Kloof | Fresha"
+      "title": "Best Barbers near me in Kloof, Kloof | Fresha",
+      "vetted": true
     }
   ],
-  "note": "UNVETTED scout pool — Read-vet before using in a build (SOP)."
+  "rejected": [
+    {
+      "file": "real_01.jpg",
+      "reason": "Female stylist blow-drying a man's hair in a modern red/black-lit unisex salon setting — does not fit a Kloof village barbershop, could plausibly belong to any of several other Fresha-listed salons; rejected on uncertainty."
+    }
+  ],
+  "note": "Vetted 2026-07-12 for Tier-0 full-standard build. 5 real photos kept, all plausible for a men's barbershop, no competing branding visible."
 }

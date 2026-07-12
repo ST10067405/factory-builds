@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Pinetown Smile Journal | Dr Karmini Naidoo Dental Surgery</title>
+<meta name="description" content="Practical oral-health reading from Dr Karmini Naidoo Dental Surgery in Pinetown — everyday tooth care, gum health, kids' visits and more.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How often should I have a check-up?", "acceptedAnswer": { "@type": "Answer", "text": "Most dentists recommend a check-up and clean every six months, though some patients need more frequent visits depending on their oral health. Your dentist can advise a schedule that suits you." } },
+    { "@type": "Question", "name": "Why do my gums bleed when I brush?", "acceptedAnswer": { "@type": "Answer", "text": "Bleeding gums are often an early sign of gum inflammation (gingivitis), usually caused by plaque build-up along the gumline. It's common, but it's worth mentioning at your next check-up rather than ignoring it." } },
+    { "@type": "Question", "name": "What can I do about sensitive teeth?", "acceptedAnswer": { "@type": "Answer", "text": "Tooth sensitivity can come from worn enamel, gum recession, or a cavity. A desensitising toothpaste can help day to day, but a dentist should check the underlying cause." } },
+    { "@type": "Question", "name": "How do I book?", "acceptedAnswer": { "@type": "Answer", "text": "Call or WhatsApp 083 790 6732. Online booking is coming to this site soon." } }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#FBF7F0;--surface:#fff;--ink:#132E2A;
+  --brand:#0E3F3A;--accent:#C7A06B;--accent-ink:#8A6A3B;--mut:rgba(19,46,42,.70);--line:rgba(19,46,42,.12);
+  --display:'Libre Caslon Text',serif;--body:'Karla',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand);color:#fff;font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-weight:700;font-size:21px;color:var(--brand);text-decoration:none}
+.nav-back{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-decoration:none}
+.nav-back:hover{color:var(--accent-ink)}
+header{padding:90px 0 60px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--accent-ink);margin-bottom:18px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(36px,6vw,64px);line-height:1.08}
+.intro{max-width:600px;margin:22px auto 0;color:var(--mut);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:16px;padding:30px 26px;cursor:pointer;transition:transform .3s cubic-bezier(0.22,1,0.36,1),box-shadow .3s cubic-bezier(0.22,1,0.36,1);text-align:left}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(19,46,42,.12);outline:none}
+.post .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);font-weight:700}
+.post h3{font-family:var(--display);font-weight:700;font-size:22px;margin:12px 0 8px;line-height:1.22}
+.post p{color:var(--mut);font-size:14.5px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);font-weight:700;font-size:clamp(28px,4vw,44px);margin-bottom:28px;text-align:center}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent-ink);font-size:22px}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(10,22,20,.55);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--bg);max-width:680px;width:100%;border-radius:22px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(10,22,20,.4)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut)}
+.asheet .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);font-weight:700}
+.asheet h2{font-family:var(--display);font-weight:700;font-size:clamp(24px,4vw,36px);margin:12px 0 20px;line-height:1.18}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--brand);color:#fff;text-decoration:none;font-weight:600;font-size:14px;padding:13px 26px;border-radius:99px;transition:transform .3s cubic-bezier(0.22,1,0.36,1)}
+.book-cta:hover{transform:translateY(-2px)}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s cubic-bezier(0.22,1,0.36,1),transform .6s cubic-bezier(0.22,1,0.36,1)}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--accent-ink);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for Dr Karmini Naidoo Dental Surgery by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">Dr Karmini Naidoo</a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">The Pinetown Smile Journal</p>
+    <h1>Oral health, explained</h1>
+    <p class="intro">Practical, dentist-informed reading for Pinetown patients — six short articles on everyday tooth care, always free to read.</p>
+  </div>
+</header>
+
+<div class="wrap"><div class="grid" id="postGrid"></div></div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="qa">
+      <details><summary>How often should I have a check-up?</summary><p>Most dentists recommend a check-up and clean every six months, though some patients need more frequent visits depending on their oral health. Your dentist can advise a schedule that suits you.</p></details>
+      <details><summary>Why do my gums bleed when I brush?</summary><p>Bleeding gums are often an early sign of gum inflammation (gingivitis), usually caused by plaque build-up along the gumline. It's common, but it's worth mentioning at your next check-up rather than ignoring it.</p></details>
+      <details><summary>What can I do about sensitive teeth?</summary><p>Tooth sensitivity can come from worn enamel, gum recession, or a cavity. A desensitising toothpaste can help day to day, but a dentist should check the underlying cause.</p></details>
+      <details><summary>How do I book?</summary><p>Call or WhatsApp 083 790 6732. Online booking is coming to this site soon.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap">Dr Karmini Naidoo Dental Surgery · 49 Josiah Gumede Rd, Pinetown CBD · Concept by Arkatype Digital — draft, awaiting client sign-off</div></footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#visit">Book your visit →</a>
+  </div>
+</div>
+
+<script>
+/* 6 audience-matched articles — generic educational advice only, no claims about the business. */
+const POSTS = [
+  { tag: 'Everyday care', title: 'The Josiah Gumede Road Guide to Everyday Tooth Care', teaser: 'Simple daily habits that make the biggest difference between visits to your Pinetown dentist.', body: `<p>Good oral health is built in small, daily moments — not just at check-up time. A few habits go a long way between visits, wherever in Pinetown you call home.</p><ul><li>Brush twice a day for two minutes with a fluoride toothpaste, angling the brush gently towards the gumline.</li><li>Floss once a day — it reaches the roughly 40% of tooth surfaces a brush can't.</li><li>Rinse with water after sugary or acidic food and drink rather than brushing immediately, which can wear softened enamel.</li><li>Replace your toothbrush (or brush head) every three months, or sooner if the bristles fray.</li></ul><p class="mut">General guidance only — always follow advice specific to your own teeth from your dentist.</p>` },
+  { tag: 'Gum health', title: 'What Dr Karmini Naidoo Wants Pinetown Patients to Know About Gum Health', teaser: 'Bleeding gums are common — and usually an early, fixable warning sign, not something to ignore.', body: `<p>Healthy gums shouldn't bleed. If yours do when you brush or floss, it's most often a sign of gingivitis — inflammation caused by plaque sitting along the gumline for too long.</p><ul><li>Bleeding is often reversible with more thorough (not harder) brushing and regular flossing.</li><li>Left untreated over time, gum inflammation can progress to more serious gum disease.</li><li>Smoking, certain medications, and pregnancy can all increase gum sensitivity.</li></ul><p>If bleeding continues for more than a week or two despite good brushing, it's worth having a dentist take a look.</p>` },
+  { tag: 'Daily habits', title: 'Brushing & Flossing, Done Properly', teaser: 'Technique matters as much as frequency — a quick refresher on getting the basics right.', body: `<p>Most people brush every day, but technique is what actually protects your teeth.</p><ul><li>Hold the brush at a 45° angle to the gumline and use short, gentle strokes rather than scrubbing.</li><li>Don't forget the inner surfaces of your teeth and your tongue, where bacteria collect.</li><li>Floss before brushing at night — it loosens debris the brush can then clear away.</li><li>Electric brushes with a timer can help you brush for the full two minutes.</li></ul>` },
+  { tag: 'Cosmetic', title: 'Teeth Whitening: What Actually Works', teaser: 'A clear-eyed look at whitening options, from everyday toothpaste to professional treatments.', body: `<p>"Whitening" toothpastes mostly remove surface staining rather than changing the tooth's underlying colour — useful for upkeep, but limited on their own.</p><ul><li>Professional whitening, done under a dentist's supervision, uses stronger, controlled agents for a more noticeable and even result.</li><li>Results vary by tooth and cause of discolouration — some staining responds better than others.</li><li>Sensitivity is a common short-term side effect and usually settles within a few days.</li></ul><p class="mut">Always have whitening options assessed by a dentist first — not every case is suitable.</p>` },
+  { tag: 'Families', title: 'Helping Pinetown Kids Feel at Ease About the Dentist', teaser: 'A few ways parents can turn a first dental visit into a calm, even fun, experience.', body: `<p>Early, positive dental experiences shape how comfortable children feel about check-ups for life.</p><ul><li>Bring children along to a parent's routine check-up first, so the environment feels familiar.</li><li>Use simple, neutral language — avoid words like "pain" or "hurt" when describing a visit.</li><li>Praise calm behaviour during the visit rather than focusing on any nerves beforehand.</li><li>Keep first visits short and low-pressure; a look-and-count check-up is a good starting point.</li></ul>` },
+  { tag: 'Urgent care', title: 'Dental Emergencies in Pinetown CBD: What to Do First', teaser: 'Knocked-out tooth, sudden pain, or a lost filling — the first steps that protect your smile.', body: `<p>Dental emergencies are unsettling, but quick, calm first steps can make a real difference to the outcome.</p><ul><li><b>Knocked-out tooth:</b> handle it by the crown (not the root), rinse gently if dirty, and try to keep it moist — in milk if possible — while you get help urgently.</li><li><b>Severe toothache:</b> rinse with warm salt water and use a cold compress on the outside of the cheek; avoid placing aspirin directly on the gum.</li><li><b>Lost filling or crown:</b> keep the piece if you can, avoid chewing on that side, and seek care as soon as possible.</li></ul><p>For any dental emergency, contact your dentist as soon as you can rather than waiting for a routine appointment slot.</p>` }
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

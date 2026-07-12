@@ -2,25 +2,68 @@
   "lead": "Salon Ash Blonde",
   "query": "Salon Ash Blonde Waterfall beauty",
   "pulled": 3,
-  "kept": [
+  "kept": [],
+  "rejected": [
     {
       "file": "real_01.jpg",
-      "dim": "1200x630",
-      "source": "iVote",
-      "title": "Ash Blonde Unisex Salon in Waterfall, South Africa"
+      "reason": "Generic sun-flare glamour stock carrying a saYellow.com directory watermark; no salon setting visible, not verifiable as the business's own photography."
     },
     {
       "file": "real_02.jpg",
-      "dim": "736x736",
-      "source": "Pinterest",
-      "title": "10 Hair ideas | ashy lavender balayage, ash blonde with lave"
+      "reason": "Sourced from a Pinterest 'hair ideas' inspiration board, not attributable to this salon; uncertain provenance."
     },
     {
       "file": "real_03.jpg",
-      "dim": "600x780",
-      "source": "Fab Mood",
-      "title": "Rooted Ash Blonde with Sleek Waterfall Face-Framing Layers"
+      "reason": "Sourced from Fab Mood beauty/wedding blog as generic hairstyle inspiration content, not this business's own photo."
     }
   ],
-  "note": "UNVETTED scout pool — Read-vet before using in a build (SOP)."
+  "stock": [
+    {
+      "file": "stock_01.jpg",
+      "source_url": "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1600&q=80",
+      "desc": "Black-and-white salon interior with styling chairs, mirrors and product shelving; used as hero."
+    },
+    {
+      "file": "stock_02.jpg",
+      "source_url": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1600&q=80",
+      "desc": "Back-of-head shot of long balayage-coloured hair against a mauve wall; colour-work gallery image."
+    },
+    {
+      "file": "stock_03.jpg",
+      "source_url": "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=1600&q=80",
+      "desc": "Stylist washing a client's hair at a backwash basin; salon-service gallery image."
+    },
+    {
+      "file": "stock_04.jpg",
+      "source_url": "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=1600&q=80",
+      "desc": "Stylist round-brush blow-drying a client's hair; salon-service gallery image."
+    }
+  ],
+  "note": "All 3 pulled real photos rejected as unverifiable/mis-attributed (directory/Pinterest/blog stock, no salon setting). Page is stock-led per Step 2 of BUILD-SPEC; footer disclosure line added.",
+  "dedupeReplacements": [
+    {
+      "file": "stock_01.jpg",
+      "source": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=1600&q=80",
+      "note": "golden-hour blonde waves (hero)",
+      "reason": "previous file was a cross-client duplicate (or unverifiable shared \"real\" photo) — replaced with a distinct, orchestrator-vetted Unsplash stock image on 2026-07-12"
+    },
+    {
+      "file": "stock_02.jpg",
+      "source": "https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=1600&q=80",
+      "note": "silver-lavender colour portrait (ash tones)",
+      "reason": "previous file was a cross-client duplicate (or unverifiable shared \"real\" photo) — replaced with a distinct, orchestrator-vetted Unsplash stock image on 2026-07-12"
+    },
+    {
+      "file": "stock_03.jpg",
+      "source": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1600&q=80",
+      "note": "treatment massage (treatments menu)",
+      "reason": "previous file was a cross-client duplicate (or unverifiable shared \"real\" photo) — replaced with a distinct, orchestrator-vetted Unsplash stock image on 2026-07-12"
+    },
+    {
+      "file": "stock_04.jpg",
+      "source": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1600&q=80",
+      "note": "spa treatment still-life (towel, candle, tulips)",
+      "reason": "second-round dedupe: prior replacement still collided with another client's existing stock — swapped to a distinct orchestrator-vetted image on 2026-07-12"
+    }
+  ]
 }

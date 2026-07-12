@@ -7,8 +7,52 @@
       "file": "real_01.jpg",
       "dim": "1280x720",
       "source": "Fresha",
-      "title": "Chi Chis - 17 Burlington Dr, Dawncliffe, Westville, 3629, So"
+      "title": "Chi Chis - 17 Burlington Dr, Dawncliffe, Westville, 3629, So",
+      "vetted": true,
+      "verdict": "Genuine salon interior (styling chairs, mirrors, product shelves) sourced from Fresha listing whose title matches the exact business address — plausibly Chi Chi's own space. Kept, used as hero image."
     }
   ],
-  "note": "UNVETTED scout pool — Read-vet before using in a build (SOP)."
+  "rejected": [],
+  "stock": [
+    {
+      "file": "stock_01.jpg",
+      "source_url": "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1600&q=80",
+      "desc": "Black-and-white salon interior — styling chairs, mirrors, product shelving"
+    },
+    {
+      "file": "stock_02.jpg",
+      "source_url": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1600&q=80",
+      "desc": "Woman running hands through long wavy balayage hair against a rose-pink wall"
+    },
+    {
+      "file": "stock_03.jpg",
+      "source_url": "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=1600&q=80",
+      "desc": "Stylist round-brush blow-drying a client's hair, close-up"
+    },
+    {
+      "file": "stock_04.jpg",
+      "source_url": "https://images.unsplash.com/photo-1560869713-7d0a29430803?w=1600&q=80",
+      "desc": "Stylist curling a client's hair with a gold curling iron, close-up"
+    },
+    {
+      "file": "stock_05.jpg",
+      "source_url": "https://images.unsplash.com/photo-1595475884562-073c30d45670?w=1600&q=80",
+      "desc": "Flat-lay of raised hands holding hairdressing tools (brushes, scissors, tint brush, whisk) on a white background"
+    }
+  ],
+  "note": "Vetted 2026-07-12. Kept real_01 as hero. Stock top-up added (kept real < 2) — page carries the stock-led disclosure footer line. | real_-named file(s) listed in dedupeReplacements now contain STOCK content (original was an unverifiable Fresha duplicate shared with another client).",
+  "dedupeReplacements": [
+    {
+      "file": "real_01.jpg",
+      "source": "https://images.unsplash.com/photo-1554519515-242161756769?w=1600&q=80",
+      "note": "vivid colour-work back view (editorial)",
+      "reason": "previous file was a cross-client duplicate (or unverifiable shared \"real\" photo) — replaced with a distinct, orchestrator-vetted Unsplash stock image on 2026-07-12"
+    },
+    {
+      "file": "stock_02.jpg",
+      "source": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=1600&q=80",
+      "note": "brunette editorial portrait",
+      "reason": "previous file was a cross-client duplicate (or unverifiable shared \"real\" photo) — replaced with a distinct, orchestrator-vetted Unsplash stock image on 2026-07-12"
+    }
+  ]
 }

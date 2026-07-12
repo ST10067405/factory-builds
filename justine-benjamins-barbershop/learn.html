@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Chair — Grooming Journal | Justine Benjamin's Barbershop</title>
+<meta name="description" content="Grooming guides from Justine Benjamin's Barbershop, Durban — fades, beard care, and what to expect in the chair.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How often should I get a haircut?", "acceptedAnswer": { "@type": "Answer", "text": "Most short back-and-sides styles hold their shape for 3–4 weeks before the fade grows out and the lines soften. Tighter fades and skin fades show growth faster and are usually best topped up every 2–3 weeks." } },
+    { "@type": "Question", "name": "How do I keep a fade looking sharp between visits?", "acceptedAnswer": { "@type": "Answer", "text": "Brush hair in its natural direction daily to train it, use a light matte product rather than heavy grease which flattens the fade line, and avoid running clippers over it yourself — a fade is shaped in stages and is easy to flatten with a home trimmer." } },
+    { "@type": "Question", "name": "What should I expect at my first visit?", "acceptedAnswer": { "@type": "Answer", "text": "A quick chat about the style and length you want, reference photos are always welcome, then the cut itself followed by a tidy-up of the neckline and edges. Ask questions during the cut — a good barber will happily adjust as they go." } },
+    { "@type": "Question", "name": "How do I book?", "acceptedAnswer": { "@type": "Answer", "text": "Call or WhatsApp 067 022 6042. Online booking is coming to this site soon." } }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#F5F4F0;--surface:#fff;--ink:#0B1B33;--mut:rgba(11,27,51,.68);
+  --brand:#0B1B33;--accent:#2E75FF;--line:rgba(11,27,51,.12);
+  --display:'Oswald',sans-serif;--body:'Source Sans 3',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand);color:#fff;font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-weight:600;text-transform:uppercase;font-size:21px;color:var(--brand);text-decoration:none}
+.nav-back{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-decoration:none}
+.nav-back:hover{color:var(--accent)}
+header{padding:90px 0 60px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--accent);margin-bottom:18px}
+h1{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:clamp(34px,5.6vw,60px);line-height:1.05}
+.intro{max-width:600px;margin:22px auto 0;color:var(--mut);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:14px;padding:30px 26px;cursor:pointer;transition:transform .3s cubic-bezier(0.22,1,0.36,1),box-shadow .3s cubic-bezier(0.22,1,0.36,1);text-align:left}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(11,27,51,.12);outline:none}
+.post .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.post h3{font-family:var(--display);font-weight:600;text-transform:uppercase;font-size:21px;margin:12px 0 8px;line-height:1.25}
+.post p{color:var(--mut);font-size:14.5px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);font-weight:600;text-transform:uppercase;font-size:clamp(26px,4vw,40px);margin-bottom:28px;text-align:center}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent);font-size:22px}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(11,27,51,.55);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--bg);max-width:680px;width:100%;border-radius:22px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(11,27,51,.4)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut)}
+.asheet .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.asheet h2{font-family:var(--display);font-weight:600;text-transform:uppercase;font-size:clamp(24px,4vw,34px);margin:12px 0 20px;line-height:1.2}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;font-size:14px;padding:13px 26px;border-radius:99px}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s cubic-bezier(0.22,1,0.36,1),transform .6s cubic-bezier(0.22,1,0.36,1)}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for Justine Benjamin's Barbershop by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">Justine Benjamin's</a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">The Chair — Grooming Journal</p>
+    <h1>Notes from the chair</h1>
+    <p class="intro">Grooming guides for Durban's Upper Highway — fades in the humidity, beard care between visits, and what to expect from a proper barbershop trip.</p>
+  </div>
+</header>
+
+<div class="wrap"><div class="grid" id="postGrid"></div></div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="qa">
+      <details><summary>How often should I get a haircut?</summary><p>Most short back-and-sides styles hold their shape for 3–4 weeks before the fade grows out and the lines soften. Tighter fades and skin fades show growth faster and are usually best topped up every 2–3 weeks.</p></details>
+      <details><summary>How do I keep a fade looking sharp between visits?</summary><p>Brush hair in its natural direction daily to train it, use a light matte product rather than heavy grease which flattens the fade line, and avoid running clippers over it yourself — a fade is shaped in stages and is easy to flatten with a home trimmer.</p></details>
+      <details><summary>What should I expect at my first visit?</summary><p>A quick chat about the style and length you want, reference photos are always welcome, then the cut itself followed by a tidy-up of the neckline and edges. Ask questions during the cut — a good barber will happily adjust as they go.</p></details>
+      <details><summary>How do I book?</summary><p>Call or WhatsApp 067 022 6042. Online booking is coming to this site soon.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap">Justine Benjamin's Barbershop · Durban · Concept by Arkatype Digital — draft, awaiting client sign-off</div></footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#visit">Book your visit →</a>
+  </div>
+</div>
+
+<script>
+const POSTS = [
+  {
+    tag: 'Fades',
+    title: 'The Justine Benjamin’s Guide to a Durban-Ready Fade',
+    teaser: 'Why humidity on the Upper Highway changes how a fade should be cut and cared for.',
+    body: `<p>A fade that looks razor-sharp in a dry, air-conditioned salon can behave very differently once it meets Durban's coastal humidity. Moisture in the air makes hair swell and curl more than usual, which can soften a crisp fade line within days if it isn't cut and cared for with that in mind.</p>
+    <ul>
+      <li>Ask for a slightly firmer, more defined line if you know you'll be outdoors or sweating often — it gives more room before the humidity softens it.</li>
+      <li>Keep a light, water-based pomade in your bag rather than a heavy oil-based one, which tends to slide in the heat.</li>
+      <li>Rinse and re-set your style after a sweaty day rather than piling more product on top of the old layer.</li>
+      <li>Book your top-up before the fade line disappears completely — it's quicker (and cheaper in time) to refresh a fade than to recut one that's fully grown out.</li>
+    </ul>
+    <p class="mut">General grooming guidance — always chat to your barber about what suits your hair type and lifestyle.</p>`
+  },
+  {
+    tag: 'Beard Care',
+    title: 'Beard Care Between Visits to Justine Benjamin’s Barbershop',
+    teaser: 'Simple daily habits that keep a beard looking barbershop-fresh for longer.',
+    body: `<p>A great beard trim sets the shape, but what you do at home between visits decides how long that shape lasts.</p>
+    <ul>
+      <li>Wash your beard 2–3 times a week with a dedicated beard wash — regular shampoo can dry out both skin and hair.</li>
+      <li>Apply a few drops of beard oil daily, focused at the roots, to keep the skin underneath comfortable and reduce itch and flaking.</li>
+      <li>Comb or brush daily to train growth direction and catch split ends early.</li>
+      <li>Trim stray flyaways yourself between visits if needed, but leave the overall shaping and neckline to your barber — it's easy to overcorrect at home.</li>
+    </ul>
+    <p class="mut">General grooming guidance — always chat to your barber about what suits your hair type and lifestyle.</p>`
+  },
+  {
+    tag: 'Local Guide',
+    title: 'Durban Humidity and Your Haircut: What Upper Highway Clients Should Know',
+    teaser: 'How coastal humidity affects different hair types, and what to ask for in the chair.',
+    body: `<p>Durban's warm, humid climate treats different hair types differently, and knowing your hair's tendencies helps you get a cut that holds its shape for longer.</p>
+    <ul>
+      <li>Curlier and coilier hair types tend to shrink and spring up more in humidity — a length that looks right when dry-cut may sit shorter once it's out and about.</li>
+      <li>Straighter hair types are more prone to frizz and flyaways in humid air — a slightly shorter, more structured cut often holds neater.</li>
+      <li>Tell your barber if you're often outdoors, at the gym, or near the coast — it changes how tight a fade or how short a top should be cut to last.</li>
+      <li>A quick rinse-and-reset routine after a humid day keeps a style looking fresh without needing a full recut.</li>
+    </ul>
+    <p class="mut">General grooming guidance — always chat to your barber about what suits your hair type and lifestyle.</p>`
+  },
+  {
+    tag: 'Maintenance',
+    title: 'The East Coast Line-Up: Keeping Edges Sharp Between Trims',
+    teaser: 'What actually keeps a hairline and beard line crisp day to day, without overdoing it at home.',
+    body: `<p>A clean line-up is one of the first things people notice about a fresh cut — and one of the first things to soften as the days go by.</p>
+    <ul>
+      <li>Avoid touching up your own hairline with a razor between barber visits unless you're confident with one — a slightly uneven line is far easier for a barber to fix than a badly over-shaved one.</li>
+      <li>Keep the skin around your hairline and beard edge moisturised — dry skin makes small bumps and irritation more noticeable against a sharp line.</li>
+      <li>Sleep on a clean pillowcase and avoid tight caps or beanies rubbing directly on a fresh line-up for the first day or two.</li>
+      <li>If your line is growing out unevenly, ask your barber for a light "clean-up only" visit rather than waiting for a full cut — it's a quicker, lower-cost way to stay sharp.</li>
+    </ul>
+    <p class="mut">General grooming guidance — always chat to your barber about what suits your hair type and lifestyle.</p>`
+  },
+  {
+    tag: 'Kids’ Cuts',
+    title: 'A Durban Parent’s Guide to a Child’s First Barbershop Visit',
+    teaser: 'How to prepare a nervous first-timer for a smooth, stress-free first cut.',
+    body: `<p>A first barbershop visit can be exciting or nerve-wracking for a child, and a little preparation goes a long way.</p>
+    <ul>
+      <li>Bring a reference photo or describe the style simply — "short on the sides, longer on top" is easier for a young child to picture than technical terms.</li>
+      <li>Visit at a quiet time of day if your child is anxious about noise or crowds — barbershops are usually happy to suggest a calmer slot.</li>
+      <li>Let your child know the clippers will buzz and tickle a bit, but won't hurt — familiarity reduces surprise.</li>
+      <li>Praise stillness rather than perfection — a wriggly first cut is completely normal, and it gets easier with each visit.</li>
+    </ul>
+    <p class="mut">General grooming guidance — always chat to your barber about what suits your hair type and lifestyle.</p>`
+  },
+  {
+    tag: 'The Experience',
+    title: 'Hot Towel Shaves at Justine Benjamin’s: What First-Timers Should Expect',
+    teaser: 'A step-by-step look at what actually happens during a traditional hot towel shave.',
+    body: `<p>A hot towel shave is one of the more old-school barbershop rituals, and knowing the steps makes a first visit far less intimidating.</p>
+    <ul>
+      <li>A warm towel is applied to the face first to soften the beard and open the pores — this alone takes a few relaxing minutes.</li>
+      <li>A pre-shave oil or cream is worked in to protect the skin before the razor touches it.</li>
+      <li>The shave itself is usually done in two passes — with the grain first, then a closer pass against the grain for those who want it extra smooth.</li>
+      <li>A cooling aftershave balm or lotion finishes the service, calming the skin and closing the pores.</li>
+    </ul>
+    <p class="mut">General grooming guidance — always chat to your barber about what suits your hair type and lifestyle.</p>`
+  }
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

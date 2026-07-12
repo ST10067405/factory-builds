@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Pioneer Rd Journal | Areeb Guru Barber Shop</title>
+<meta name="description" content="Grooming guides and local reads from Areeb Guru Barber Shop on Pioneer Rd, Kloof.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How often should I get a haircut?", "acceptedAnswer": { "@type": "Answer", "text": "Most men do well with a cut every 3–4 weeks to keep a fade sharp; looser styles can stretch to 5–6 weeks." } },
+    { "@type": "Question", "name": "What's the difference between a fade and a taper?", "acceptedAnswer": { "@type": "Answer", "text": "A taper gradually shortens hair down to the skin at the neckline and sides with no hard line. A fade blends much more aggressively and higher up the head, often down to skin, for a sharper contrast." } },
+    { "@type": "Question", "name": "How do I keep my beard looking sharp between trims?", "acceptedAnswer": { "@type": "Answer", "text": "Wash it a few times a week, comb it daily to train the growth direction, and use a light oil or balm to stop dryness and stray hairs." } },
+    { "@type": "Question", "name": "How do I book?", "acceptedAnswer": { "@type": "Answer", "text": "Call or WhatsApp 062 480 2760. Online booking is coming to this site soon." } }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#15161A;--surface:#1F2024;--surface2:#26272C;--ink:#F3F1EA;--mut:rgba(243,241,234,.66);
+  --brand:#33353B;--accent:#E2A53E;--accent-ink:#F2C066;--line:rgba(255,255,255,.10);
+  --display:'Sora',sans-serif;--body:'Inter',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand);color:#fff;font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:rgba(21,22,26,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-size:20px;font-weight:700;color:var(--ink);text-decoration:none}
+.nav-back{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-decoration:none}
+.nav-back:hover{color:var(--accent-ink)}
+header{padding:90px 0 60px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--accent-ink);margin-bottom:18px}
+h1{font-family:var(--display);font-size:clamp(38px,6vw,64px);line-height:1.08;font-weight:700}
+.intro{max-width:600px;margin:22px auto 0;color:var(--mut);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:30px 26px;cursor:pointer;transition:transform .3s cubic-bezier(0.22,1,0.36,1),box-shadow .3s cubic-bezier(0.22,1,0.36,1);text-align:left;color:var(--ink);font-family:var(--body)}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.35);outline:none}
+.post .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);font-weight:700}
+.post h3{font-family:var(--display);font-size:21px;margin:12px 0 8px;line-height:1.25;font-weight:600}
+.post p{color:var(--mut);font-size:14.5px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);font-size:clamp(28px,4vw,44px);margin-bottom:28px;text-align:center;font-weight:700}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent-ink);font-size:22px}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(0,0,0,.65);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--surface);max-width:680px;width:100%;border-radius:22px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(0,0,0,.55);border:1px solid var(--line)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut)}
+.asheet .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);font-weight:700}
+.asheet h2{font-family:var(--display);font-size:clamp(26px,4vw,36px);margin:12px 0 20px;line-height:1.18;font-weight:700}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--accent);color:#1A1509;text-decoration:none;font-weight:600;font-size:14px;padding:13px 26px;border-radius:99px}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s cubic-bezier(0.22,1,0.36,1),transform .6s cubic-bezier(0.22,1,0.36,1)}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--accent-ink);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for Areeb Guru Barber Shop by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">Areeb Guru Barber Shop</a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">The Journal</p>
+    <h1>Pioneer Rd Reads</h1>
+    <p class="intro">Grooming guides, fade know-how and local notes from Areeb Guru Barber Shop on Pioneer Rd, Kloof.</p>
+  </div>
+</header>
+
+<div class="wrap"><div class="grid" id="postGrid"></div></div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="qa">
+      <details><summary>How often should I get a haircut?</summary><p>Most men do well with a cut every 3–4 weeks to keep a fade sharp; looser styles can stretch to 5–6 weeks.</p></details>
+      <details><summary>What's the difference between a fade and a taper?</summary><p>A taper gradually shortens hair down to the skin at the neckline and sides with no hard line. A fade blends much more aggressively and higher up the head, often down to skin, for a sharper contrast.</p></details>
+      <details><summary>How do I keep my beard looking sharp between trims?</summary><p>Wash it a few times a week, comb it daily to train the growth direction, and use a light oil or balm to stop dryness and stray hairs.</p></details>
+      <details><summary>How do I book?</summary><p>Call or WhatsApp 062 480 2760. Online booking is coming to this site soon.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap">Areeb Guru Barber Shop · 68 Pioneer Rd, Kloof, 3610 · Concept by Arkatype Digital — draft, awaiting client sign-off</div></footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#visit">Book your visit →</a>
+  </div>
+</div>
+
+<script>
+const POSTS = [
+  {
+    tag: 'Fades',
+    title: 'The Areeb Guru Fade Guide: Pioneer Rd’s Go-To Cuts',
+    teaser: 'Low, mid or high — a plain-English guide to the fade styles regulars ask for at the chair.',
+    body: `<p>A fade is defined by where the blend starts on the head, not just how short it gets.</p>
+    <ul>
+      <li><b>Low fade</b> — blend starts just above the ear, the most subtle option and easiest to grow out.</li>
+      <li><b>Mid fade</b> — blend starts around temple height, a balanced everyday choice.</li>
+      <li><b>High fade</b> — blend starts high on the side of the head for maximum contrast with the top.</li>
+    </ul>
+    <p class="mut">General grooming guidance — bring a reference photo to your visit so the exact style can be matched to your hair type.</p>`
+  },
+  {
+    tag: 'Shaves',
+    title: 'Hot-Towel Shaves on Pioneer Rd: What to Expect at Areeb Guru',
+    teaser: 'The steps behind a proper hot-towel shave, and why the heat matters as much as the blade.',
+    body: `<p>A hot-towel shave is built around softening the beard before the razor ever touches skin.</p>
+    <ul>
+      <li><b>Steam first</b> — a hot towel opens pores and softens coarse hair for an easier cut.</li>
+      <li><b>Lather properly</b> — a good pre-shave oil and cream cushion the skin against irritation.</li>
+      <li><b>Work with the grain</b> — shaving in the direction hair grows first reduces razor burn.</li>
+      <li><b>Cool down</b> — a final cold towel and aftercare balm close the pores and calm the skin.</li>
+    </ul>
+    <p class="mut">General grooming guidance — final treatment steps are confirmed at Areeb Guru Barber Shop.</p>`
+  },
+  {
+    tag: 'Beard Care',
+    title: 'Beard Maintenance Between Visits — Areeb Guru, Kloof',
+    teaser: 'Simple daily habits that keep a beard looking freshly trimmed for longer.',
+    body: `<p>The look of a fresh trim fades fast without a little upkeep at home.</p>
+    <ul>
+      <li><b>Wash, don't strip</b> — a dedicated beard wash a few times a week avoids drying out the skin underneath.</li>
+      <li><b>Comb daily</b> — trains hair to grow in one direction and catches tangles early.</li>
+      <li><b>Oil or balm</b> — a few drops worked in after washing controls frizz and itchiness.</li>
+      <li><b>Trim stray hairs</b> — small touch-ups at home stretch the time between full visits.</li>
+    </ul>
+    <p class="mut">General grooming guidance, not a substitute for a professional trim.</p>`
+  },
+  {
+    tag: 'Kids',
+    title: 'Kids’ First Haircuts at Areeb Guru Barber Shop, Kloof',
+    teaser: 'Making a first trip to the barber chair easy on nervous kids — and parents.',
+    body: `<p>A first haircut can be a big moment for a small child. A few things help it go smoothly.</p>
+    <ul>
+      <li><b>Time it right</b> — book earlier in the day, before nap time or a hunger dip.</li>
+      <li><b>Bring a distraction</b> — a phone, a toy or a favourite song helps keep little ones still.</li>
+      <li><b>Keep it short</b> — a simple, quick style is easier on a first visit than an intricate design.</li>
+      <li><b>Praise the process</b> — a positive first experience makes every visit after it easier.</li>
+    </ul>
+    <p class="mut">General guidance — chat to the team at Areeb Guru Barber Shop about the best time to bring a young first-timer in.</p>`
+  },
+  {
+    tag: 'Styling',
+    title: 'Pioneer Rd Grooming: Styling Products for Kloof’s Climate',
+    teaser: 'Matching pomade, clay or spray to Upper Highway humidity and everyday wear.',
+    body: `<p>The right product depends on hold, finish and how the local weather treats your hair.</p>
+    <ul>
+      <li><b>Clay</b> — strong, matte hold, good for textured styles that need to survive a humid day.</li>
+      <li><b>Pomade</b> — a classic shine finish, ideal for slicked-back and combed styles.</li>
+      <li><b>Sea salt spray</b> — light texture and volume for looser, more natural looks.</li>
+      <li><b>Light gel</b> — flexible hold for fine hair without stiffness.</li>
+    </ul>
+    <p class="mut">General grooming guidance — ask at the chair for a product suited to your hair type.</p>`
+  },
+  {
+    tag: 'First Visit',
+    title: 'Walking Into Areeb Guru: What First-Timers on Pioneer Rd Should Know',
+    teaser: 'A quick primer for anyone booking their first visit to the shop.',
+    body: `<p>New to the shop? Here's what tends to make a first visit easiest.</p>
+    <ul>
+      <li><b>Call or WhatsApp ahead</b> — confirming a time avoids a wasted trip.</li>
+      <li><b>Know roughly what you want</b> — a length, a fade type or a reference photo speeds things along.</li>
+      <li><b>Speak up mid-cut</b> — small adjustments are easiest to make before the final pass.</li>
+      <li><b>Ask about aftercare</b> — a quick tip on keeping the cut sharp until the next visit.</li>
+    </ul>
+    <p class="mut">Draft guidance — final walk-in vs. booking policy confirmed by Areeb Guru Barber Shop.</p>`
+  }
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

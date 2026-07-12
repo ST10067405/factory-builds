@@ -4,41 +4,87 @@
   "pulled": 6,
   "kept": [
     {
-      "file": "real_01.jpg",
-      "dim": "1280x854",
-      "source": "Fresha",
-      "title": "Best Hair Salons near me in Pinetown, Pinetown | Fresha"
-    },
-    {
-      "file": "real_02.jpg",
-      "dim": "1280x853",
-      "source": "Fresha",
-      "title": "Best Hair Salons near me in Sarnia, Pinetown | Fresha"
-    },
-    {
-      "file": "real_03.jpg",
-      "dim": "1280x853",
-      "source": "Fresha",
-      "title": "Best Hair Salons near me in Sarnia, Pinetown | Fresha"
-    },
-    {
-      "file": "real_04.jpg",
-      "dim": "1280x853",
-      "source": "Fresha",
-      "title": "Best Hair Salons near me in Pinetown | Fresha"
-    },
-    {
       "file": "real_05.jpg",
       "dim": "1280x720",
       "source": "Fresha",
-      "title": "Best Beauty Salons near me in Sarnia, Pinetown | Fresha"
+      "title": "Best Beauty Salons near me in Sarnia, Pinetown | Fresha",
+      "vetted": true,
+      "note": "Candid on-site interior photo (not staged stock), matches hair/beauty salon category and Sarnia location; no conflicting branding visible."
+    }
+  ],
+  "rejected": [
+    {
+      "file": "real_01.jpg",
+      "reason": "Generic staged/professional stock-photography aesthetic typical of a 'best salons near me' roundup; sourced from a generic category listing page, not this salon's own page; no branding ties it to this business."
+    },
+    {
+      "file": "real_02.jpg",
+      "reason": "Same generic staged-stock aesthetic sourced from a generic 'near me' listing page; unverifiable as this specific business."
+    },
+    {
+      "file": "real_03.jpg",
+      "reason": "Same generic staged-stock aesthetic; visible unrelated promotional wall poster in background; unverifiable as this business."
+    },
+    {
+      "file": "real_04.jpg",
+      "reason": "Same generic staged-stock aesthetic, bright generic studio setting; unverifiable as this business."
     },
     {
       "file": "real_06.jpg",
-      "dim": "1920x1280",
-      "source": "sshairdesign.co.za",
-      "title": "S and S Hair Design – we care about your hair"
+      "reason": "Source explicitly named a different business: 'S and S Hair Design' (sshairdesign.co.za) — wrong business branding."
     }
   ],
-  "note": "UNVETTED scout pool — Read-vet before using in a build (SOP)."
+  "stock": [
+    {
+      "file": "stock_01.jpg",
+      "source": "Unsplash",
+      "url": "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=1600&q=80",
+      "desc": "Stylist washing client's hair at basin"
+    },
+    {
+      "file": "stock_02.jpg",
+      "source": "Unsplash",
+      "url": "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=1600&q=80",
+      "desc": "Stylist blow-drying and brushing client's hair"
+    },
+    {
+      "file": "stock_03.jpg",
+      "source": "Unsplash",
+      "url": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=1600&q=80",
+      "desc": "Portrait, natural curly/coily hair texture"
+    },
+    {
+      "file": "stock_04.jpg",
+      "source": "Unsplash",
+      "url": "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=1600&q=80",
+      "desc": "Close-up of round-brush blow-dry styling"
+    }
+  ],
+  "note": "Vetted per SOP. Only 1 real photo kept (< 2) so stock fill is required (Step 2). 4 stock images added. | real_-named file(s) listed in dedupeReplacements now contain STOCK content (original was an unverifiable Fresha duplicate shared with another client).",
+  "dedupeReplacements": [
+    {
+      "file": "stock_01.jpg",
+      "source": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=1600&q=80",
+      "note": "relaxed top-bun portrait",
+      "reason": "previous file was a cross-client duplicate (or unverifiable shared \"real\" photo) — replaced with a distinct, orchestrator-vetted Unsplash stock image on 2026-07-12"
+    },
+    {
+      "file": "stock_02.jpg",
+      "source": "https://images.unsplash.com/photo-1605980776566-0486c3ac7617?w=1600&q=80",
+      "note": "studio grooming portrait",
+      "reason": "previous file was a cross-client duplicate (or unverifiable shared \"real\" photo) — replaced with a distinct, orchestrator-vetted Unsplash stock image on 2026-07-12"
+    },
+    {
+      "file": "stock_04.jpg",
+      "source": "https://images.unsplash.com/photo-1526045478516-99145907023c?w=1600&q=80",
+      "note": "makeup brushes (occasion prep)",
+      "reason": "previous file was a cross-client duplicate (or unverifiable shared \"real\" photo) — replaced with a distinct, orchestrator-vetted Unsplash stock image on 2026-07-12"
+    },
+    {
+      "file": "real_05.jpg",
+      "source": "https://images.unsplash.com/photo-1470259078422-826894b933aa?w=1600&q=80",
+      "note": "dramatic colour hair-flip portrait (hero)",
+      "reason": "second-round dedupe: prior replacement still collided with another client's existing stock — swapped to a distinct orchestrator-vetted image on 2026-07-12"
+    }
+  ]
 }

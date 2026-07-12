@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Village Journal | The Village Co Cafe &amp; Bistro</title>
+<meta name="description" content="Coffee and Durban bistro culture, brewing guides, and stories from The Village Co Cafe &amp; Bistro.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Do you take reservations?", "acceptedAnswer": { "@type": "Answer", "text": "Many neighbourhood cafes run mostly on walk-ins, with tables held for larger groups on request. Final policy confirmed by The Village Co Cafe & Bistro." } },
+    { "@type": "Question", "name": "Do you cater to dietary requirements?", "acceptedAnswer": { "@type": "Answer", "text": "Cafes typically offer vegetarian and lighter options alongside the standard menu — it's worth asking your server on the day. Final options confirmed by The Village Co Cafe & Bistro." } },
+    { "@type": "Question", "name": "Is there parking nearby?", "acceptedAnswer": { "@type": "Answer", "text": "Parking arrangements vary by location in Durban's café strips — details to be confirmed by The Village Co Cafe & Bistro." } },
+    { "@type": "Question", "name": "How do I order or get in touch?", "acceptedAnswer": { "@type": "Answer", "text": "DM us on Instagram @_thevillageco. Online ordering is coming to this site soon." } }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#F6F0E2;--surface:#FFFDF7;--ink:#26211A;--mut:rgba(38,33,26,.68);
+  --brand:#3A4327;--accent:#C1452E;--line:rgba(38,33,26,.13);
+  --display:'Lora',serif;--body:'Karla',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand);color:var(--bg);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-weight:700;font-size:21px;color:var(--brand);text-decoration:none}
+.nav-back{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-decoration:none}
+.nav-back:hover{color:var(--accent)}
+header{padding:90px 0 56px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--accent);margin-bottom:18px}
+h1{font-family:var(--display);font-size:clamp(38px,6vw,64px);line-height:1.06;color:var(--brand)}
+.intro{max-width:600px;margin:22px auto 0;color:var(--mut);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:30px 26px;cursor:pointer;transition:transform .3s cubic-bezier(0.22,1,0.36,1),box-shadow .3s cubic-bezier(0.22,1,0.36,1);text-align:left}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(38,33,26,.12);outline:none}
+.post .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.post h3{font-family:var(--display);font-size:22px;margin:12px 0 8px;line-height:1.22;color:var(--brand)}
+.post p{color:var(--mut);font-size:14.5px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);font-size:clamp(28px,4vw,42px);margin-bottom:28px;text-align:center;color:var(--brand)}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:700;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent);font-size:22px}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(38,33,26,.55);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--bg);max-width:680px;width:100%;border-radius:22px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(38,33,26,.4)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut)}
+.asheet .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.asheet h2{font-family:var(--display);font-size:clamp(26px,4vw,36px);margin:12px 0 20px;line-height:1.18;color:var(--brand)}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:13px 26px;border-radius:99px}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s cubic-bezier(0.22,1,0.36,1),transform .6s cubic-bezier(0.22,1,0.36,1)}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for The Village Co Cafe &amp; Bistro by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">The Village Co</a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">The Village Journal</p>
+    <h1>Coffee, bakes &amp; Durban bistro life</h1>
+    <p class="intro">Brewing guides, breakfast know-how and a bit of the story behind The Village Co Cafe &amp; Bistro — six reads to get you started.</p>
+  </div>
+</header>
+
+<div class="wrap"><div class="grid" id="postGrid"></div></div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="qa">
+      <details><summary>Do you take reservations?</summary><p>Many neighbourhood cafes run mostly on walk-ins, with tables held for larger groups on request. Final policy confirmed by The Village Co Cafe &amp; Bistro.</p></details>
+      <details><summary>Do you cater to dietary requirements?</summary><p>Cafes typically offer vegetarian and lighter options alongside the standard menu — it's worth asking your server on the day. Final options confirmed by The Village Co Cafe &amp; Bistro.</p></details>
+      <details><summary>Is there parking nearby?</summary><p>Parking arrangements vary by location in Durban's café strips — details to be confirmed by The Village Co Cafe &amp; Bistro.</p></details>
+      <details><summary>How do I order or get in touch?</summary><p>DM us on Instagram @_thevillageco. Online ordering is coming to this site soon.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap">The Village Co Cafe &amp; Bistro · Durban · Concept by Arkatype Digital — draft, awaiting client sign-off</div></footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#visit">Find The Village Co →</a>
+  </div>
+</div>
+
+<script>
+const POSTS = [
+  { tag: 'Breakfast', title: 'The Village Co Cafe’s Guide to a Proper Durban All-Day Breakfast', teaser: 'What separates a lazy morning plate from a proper all-day breakfast — and how to order like a regular.', body: `
+    <p>All-day breakfast is one of those menu categories that sounds simple but hides a lot of small decisions — eggs cooked which way, bread toasted or not, sides swapped in or out. Here's how to get the most out of it.</p>
+    <ul>
+      <li><b>Know your egg styles.</b> Fried, poached, scrambled or an omelette all change the texture of the plate — ask if you're unsure which suits the rest of your order.</li>
+      <li><b>Balance heavy and light.</b> A full breakfast is filling; pairing it with a black filter coffee rather than a milky one often sits better.</li>
+      <li><b>Ask about the daily extras.</b> Bakes and specials often rotate — a quick question to your server surfaces what's freshest that morning.</li>
+      <li><b>Pace yourself if you're staying a while.</b> All-day breakfast is built for lingering — order a top-up coffee rather than rushing the first cup.</li>
+    </ul>
+    <p class="mut">General guidance for enjoying an all-day breakfast menu — final dishes and pricing are confirmed by The Village Co Cafe &amp; Bistro.</p>
+  ` },
+  { tag: 'Coffee 101', title: 'Coffee, Durban Style: A First-Timer’s Guide to The Village Co Menu', teaser: 'Espresso, filter or cold brew — a short primer for anyone deciding what to order first.', body: `
+    <p>Walking up to a coffee counter with a long menu can be overwhelming. Here's a simple way to narrow it down.</p>
+    <ul>
+      <li><b>Milky and mellow:</b> a flat white or cappuccino is the easiest entry point if you're not sure what you like.</li>
+      <li><b>Straight and strong:</b> an espresso or Americano suits anyone who wants coffee flavour without the milk.</li>
+      <li><b>Slow and bright:</b> filter coffee tends to highlight fruitier, lighter notes — worth trying if you usually drink espresso-based drinks.</li>
+      <li><b>Cold and refreshing:</b> cold brew is brewed slowly over time rather than quickly under pressure, giving a smoother, less acidic cup.</li>
+    </ul>
+    <p class="mut">General coffee guidance, not a claim about specific beans or roasts used — see the Menu section on the homepage for what's currently on offer.</p>
+  ` },
+  { tag: 'Bakery', title: 'Bakes &amp; Bistro Bites: What ‘Fresh Daily’ Really Means at The Village Co', teaser: 'A short explainer on bakery turnover, and why the cabinet looks different depending on when you visit.', body: `
+    <p>"Fresh daily" is a phrase that gets used loosely — here's what it typically involves at a working bakery counter.</p>
+    <ul>
+      <li><b>Morning bakes go first.</b> Croissants and other laminated pastries are usually baked early and are best enjoyed before midday.</li>
+      <li><b>Cakes hold longer.</b> Loaf cakes and traybakes like carrot cake generally keep their texture well into the afternoon.</li>
+      <li><b>Cabinets rotate.</b> What's available late in the day is often different to the morning spread — arriving early gives you first pick.</li>
+      <li><b>Ask what's just come out.</b> Bakery counters are usually happy to point you to the freshest tray.</li>
+    </ul>
+    <p class="mut">General bakery-counter guidance — final bakes and availability are confirmed by The Village Co Cafe &amp; Bistro.</p>
+  ` },
+  { tag: 'Our Story', title: 'Village-Market Mornings: The Story Behind The Village Co’s Name', teaser: 'Why a "village" feel matters to a neighbourhood cafe, and what it means for how a space is run.', body: `
+    <p>A lot of neighbourhood cafes borrow the word "village" — it points to something specific: a place built around regulars, not just passing trade.</p>
+    <ul>
+      <li><b>Familiar faces.</b> Village-style cafes tend to lean on repeat visits — staff who recognise regulars and their usual order.</li>
+      <li><b>A gathering point.</b> These spaces often double as a meeting spot for the neighbourhood, not just a quick coffee stop.</li>
+      <li><b>Local first.</b> A village feel usually means sourcing and running things with the immediate area in mind, rather than a big chain playbook.</li>
+    </ul>
+    <p class="mut">General context on what a "village" cafe concept typically emphasises — not a specific claim about sourcing or suppliers.</p>
+  ` },
+  { tag: 'Coffee 101', title: 'Espresso vs Filter: Choosing Your Order at The Village Co Cafe &amp; Bistro', teaser: 'Two brewing methods, two very different cups — here's how to pick between them.', body: `
+    <p>Espresso and filter coffee come from the same beans but taste noticeably different because of how they're brewed.</p>
+    <ul>
+      <li><b>Espresso</b> is brewed fast under pressure, giving a concentrated, syrupy shot that's the base for milk drinks like flat whites and cappuccinos.</li>
+      <li><b>Filter coffee</b> is brewed slowly with gravity, producing a lighter body that lets subtler, often fruitier notes come through.</li>
+      <li><b>If you're deciding:</b> reach for espresso-based drinks when you want something rich and milk-friendly, and filter when you want to taste the coffee itself, black.</li>
+    </ul>
+    <p class="mut">General brewing guidance — see the Menu section on the homepage for what's currently on offer.</p>
+  ` },
+  { tag: 'Brunch Guide', title: 'A Durban Local’s Field Guide to Weekend Brunch at The Village Co', teaser: 'Timing, ordering and pacing tips for a proper weekend brunch outing.', body: `
+    <p>Weekend brunch has its own rhythm — different to a quick weekday coffee. A few tips for making the most of it.</p>
+    <ul>
+      <li><b>Go early or go late.</b> The middle of the morning is usually busiest — arriving right at opening or closer to lunch tends to mean shorter waits.</li>
+      <li><b>Order in rounds.</b> Start with coffee while you decide on food rather than ordering everything at once — it gives the kitchen a smoother flow.</li>
+      <li><b>Bring the table together.</b> Brunch menus are built for sharing — a mix of a sweet bake and a savoury plate covers more ground.</li>
+      <li><b>Stay for the second coffee.</b> Brunch is meant to be unhurried — a second round is part of the point.</li>
+    </ul>
+    <p class="mut">General weekend brunch guidance — final hours and availability are confirmed by The Village Co Cafe &amp; Bistro.</p>
+  ` }
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

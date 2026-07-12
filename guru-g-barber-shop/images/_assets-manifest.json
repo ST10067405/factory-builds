@@ -7,38 +7,24 @@
       "file": "real_01.jpg",
       "dim": "1280x720",
       "source": "Fresha",
-      "title": "Guru G Barber Shop - Shop 6B Westville Junction, Westville R"
-    },
-    {
-      "file": "real_02.jpg",
-      "dim": "1280x720",
-      "source": "Fresha",
-      "title": "Guru G Barbershop - Dischem Entrance, Westwood Mall, Shop #"
-    },
-    {
-      "file": "real_03.jpg",
-      "dim": "1280x720",
-      "source": "Fresha",
-      "title": "Guru G Barbershop - 141 Inanda Rd, Waterfall, 3652, South Af"
-    },
-    {
-      "file": "real_04.jpg",
-      "dim": "909x515",
-      "source": "Fresha",
-      "title": "Guru G Barber Shop - Shop 6B Westville Junction, Westville R"
-    },
-    {
-      "file": "real_05.jpg",
-      "dim": "909x515",
-      "source": "Fresha",
-      "title": "Guru G Barbershop - Dischem Entrance, Westwood Mall, Shop #"
-    },
-    {
-      "file": "real_06.jpg",
-      "dim": "909x515",
-      "source": "Fresha",
-      "title": "Guru G Barbershop Hillcrest Corner - Shop 01A, Upper Floor,"
+      "title": "Guru G Barber Shop - Shop 6B Westville Junction, Westville R",
+      "vetted": true,
+      "reason": "Title matches this shop's exact address (Shop 6B Westville Junction). Depicts a modest, candid two-chair barbershop interior consistent in scale with a small mall unit — plant, round mirrors, product shelf, tile floor. No competing branding or logos visible."
     }
   ],
-  "note": "UNVETTED scout pool — Read-vet before using in a build (SOP)."
+  "rejected": [
+    { "file": "real_02.jpg", "reason": "Manifest title says 'Dischem Entrance, Westwood Mall' — a different Guru G location, not Shop 6B Westville Junction. Image is also a highly stylized amber-lit render inconsistent with the shop's real scale." },
+    { "file": "real_03.jpg", "reason": "Manifest title says '141 Inanda Rd, Waterfall' — a different location. Image depicts a women's hair/beauty salon (model poster, colorful retail wall, red tile floor), not a barbershop at all." },
+    { "file": "real_04.jpg", "reason": "Title nominally matches the Westville Junction address, but the image is a polished, professionally-lit posed portrait with no shop-identifying features, stylistically inconsistent with the confirmed candid real_01 photo. High mis-attribution risk from Fresha scraping; rejected per 'when uncertain, reject'." },
+    { "file": "real_05.jpg", "reason": "Manifest title says 'Dischem Entrance, Westwood Mall' — a different location. Image is a staged portrait in an industrial exposed-brick setting inconsistent with the shop." },
+    { "file": "real_06.jpg", "reason": "Manifest title says 'Hillcrest Corner - Shop 01A, Upper Floor' — a different location. Image shows a large multi-chair venue with stage lighting and a staircase, inconsistent with a small 'Shop 6B' mall unit." }
+  ],
+  "stock": [
+    { "file": "stock_01.jpg", "source": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=1600&q=80", "desc": "Three-chair barbershop interior, exposed brick, hanging lamps" },
+    { "file": "stock_02.jpg", "source": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1600&q=80", "desc": "Barber trimming a client's beard with scissors" },
+    { "file": "stock_03.jpg", "source": "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=1600&q=80", "desc": "Close-up of barber fading a client's haircut" },
+    { "file": "stock_04.jpg", "source": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=1600&q=80", "desc": "Flat-lay of barber tools — clippers, scissors, comb, grooming products" },
+    { "file": "stock_05.jpg", "source": "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=1600&q=80", "desc": "Barber cutting a client's hair, shop counter in background" }
+  ],
+  "note": "Vetted per SOP 2026-07-12. Only 1 of 6 scout photos plausibly belongs to this Westville Junction shop; the other 5 titles resolve to three different Guru G branch locations (Westwood Mall, Waterfall, Hillcrest) or a mismatched venue type. Stock fill used to reach a full gallery."
 }

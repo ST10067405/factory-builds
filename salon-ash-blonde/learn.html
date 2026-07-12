@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Ash Blonde Journal | Salon Ash Blonde</title>
+<meta name="description" content="Ash blonde care, toning and colour advice from Salon Ash Blonde in Waterfall.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How long does ash blonde colour usually last?", "acceptedAnswer": { "@type": "Answer", "text": "Ash and cool-toned blondes typically hold their tone for 4–6 weeks before warmth starts to creep back in, depending on hair porosity, wash frequency and water hardness. A toning gloss between full colour visits helps stretch that window." } },
+    { "@type": "Question", "name": "Why does blonde hair turn brassy?", "acceptedAnswer": { "@type": "Answer", "text": "Blonde hair carries warm underlying pigment (yellow/orange) that shows through as the cool ash toner fades. UV exposure, chlorine, hard water and sulphate shampoos all speed up that fade, which is why aftercare matters as much as the initial colour service." } },
+    { "@type": "Question", "name": "What's the difference between balayage and foils?", "acceptedAnswer": { "@type": "Answer", "text": "Balayage is hand-painted freehand for a soft, sun-kissed graduation with minimal regrowth line. Foils isolate sections for more precise, consistent lightening — better for all-over brightness or a crisper contrast. Many colourists combine both in one service." } },
+    { "@type": "Question", "name": "How do I book?", "acceptedAnswer": { "@type": "Answer", "text": "Call 031 762 1523. Online booking is coming to this site soon." } }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#F7F3EE;--surface:#FFFFFF;--ink:#332F2A;--mut:rgba(51,47,42,.68);
+  --brand:#5B564C;--brand-dark:#413D36;--accent:#C9A66B;--accent-ink:#8A6A34;--line:rgba(51,47,42,.14);
+  --display:'Playfair Display',serif;--body:'Lato',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand-dark);color:#fff;font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:700}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-size:21px;color:var(--brand-dark);text-decoration:none;font-weight:600}
+.nav-back{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-decoration:none}
+.nav-back:hover{color:var(--accent-ink)}
+header{padding:90px 0 60px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--accent-ink);margin-bottom:18px}
+h1{font-family:var(--display);font-size:clamp(36px,6vw,62px);line-height:1.08;font-weight:600}
+.intro{max-width:600px;margin:22px auto 0;color:var(--mut);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:16px;padding:30px 26px;cursor:pointer;transition:transform .3s cubic-bezier(0.22,1,0.36,1),box-shadow .3s cubic-bezier(0.22,1,0.36,1);text-align:left}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(51,47,42,.14);outline:none}
+.post .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);font-weight:700}
+.post h3{font-family:var(--display);font-size:22px;margin:12px 0 8px;line-height:1.25;font-weight:600}
+.post p{color:var(--mut);font-size:14.5px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);font-size:clamp(28px,4vw,42px);margin-bottom:28px;text-align:center;font-weight:600}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:700;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent-ink);font-size:22px}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(38,35,30,.55);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--bg);max-width:680px;width:100%;border-radius:22px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(38,35,30,.4)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut)}
+.asheet .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);font-weight:700}
+.asheet h2{font-family:var(--display);font-size:clamp(26px,4vw,36px);margin:12px 0 20px;line-height:1.18;font-weight:600}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--accent);color:var(--brand-dark);text-decoration:none;font-weight:700;font-size:14px;padding:13px 26px;border-radius:99px}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--accent-ink);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for Salon Ash Blonde by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">Salon Ash Blonde</a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">The Journal · Waterfall</p>
+    <h1>Ash blonde, explained</h1>
+    <p class="intro">Colour, toning and aftercare notes from Salon Ash Blonde — written for Waterfall clients thinking about their next blonde appointment.</p>
+  </div>
+</header>
+
+<div class="wrap"><div class="grid" id="postGrid"></div></div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="qa">
+      <details><summary>How long does ash blonde colour usually last?</summary><p>Ash and cool-toned blondes typically hold their tone for 4–6 weeks before warmth starts to creep back in, depending on hair porosity, wash frequency and water hardness. A toning gloss between full colour visits helps stretch that window.</p></details>
+      <details><summary>Why does blonde hair turn brassy?</summary><p>Blonde hair carries warm underlying pigment (yellow/orange) that shows through as the cool ash toner fades. UV exposure, chlorine, hard water and sulphate shampoos all speed up that fade, which is why aftercare matters as much as the initial colour service.</p></details>
+      <details><summary>What's the difference between balayage and foils?</summary><p>Balayage is hand-painted freehand for a soft, sun-kissed graduation with minimal regrowth line. Foils isolate sections for more precise, consistent lightening — better for all-over brightness or a crisper contrast. Many colourists combine both in one service.</p></details>
+      <details><summary>How do I book?</summary><p>Call 031 762 1523. Online booking is coming to this site soon.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap">Salon Ash Blonde · 44 Yellowwood Dr, Waterfall · Concept by Arkatype Digital — draft, awaiting client sign-off</div></footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#visit">Book your visit →</a>
+  </div>
+</div>
+
+<script>
+const POSTS = [
+  {
+    tag: 'Colour care',
+    title: 'The Salon Ash Blonde Guide to Taming Brassy Tones in Waterfall',
+    teaser: 'Why warmth creeps back into ash blonde, and the routine that slows it down.',
+    body: `<p>Every blonde carries some underlying warm pigment — it's simply what's left once the natural colour has been lifted. Ash toner neutralises that warmth, but toner fades faster than the lightened hair underneath, which is why brassiness tends to reappear first at the ends and around the face.</p>
+    <ul>
+      <li>Wash less often, and with lukewarm rather than hot water — heat opens the cuticle and lets toner rinse out faster.</li>
+      <li>A purple or blue-toned shampoo, used sparingly, helps neutralise warmth between salon visits.</li>
+      <li>UV exposure and chlorinated pool water both accelerate brassiness — a leave-in with UV protection is worth it in summer.</li>
+      <li>A quick toning gloss between full colour appointments resets the ash without a full lightening service.</li>
+    </ul>
+    <p class="mut">General hair-care education — always ask your colourist for advice suited to your specific hair history.</p>`
+  },
+  {
+    tag: 'Technique',
+    title: 'Balayage or Foils? What We Tell Waterfall Clients at Salon Ash Blonde',
+    teaser: "Two lightening techniques, two very different regrowth timelines — how to choose.",
+    body: `<p>Balayage and foils both lighten hair, but they distribute colour differently. Balayage is painted on freehand, concentrated at the mid-lengths and ends, which grows out softly with barely a visible line. Foils section the hair more precisely, which gives stronger, more uniform lift — useful when the goal is an even, all-over blonde rather than a graduated one.</p>
+    <ul>
+      <li>Balayage suits clients who want lower-maintenance regrowth and a natural, sun-kissed graduation.</li>
+      <li>Foils suit clients chasing a brighter, more consistent blonde or a crisper contrast against a base colour.</li>
+      <li>The two aren't mutually exclusive — many ash blonde looks combine foiled panels with a balayage finish.</li>
+      <li>Either way, a bond-strengthening treatment afterward helps protect hair that's been lightened.</li>
+    </ul>
+    <p class="mut">General colour-technique education — your colourist will recommend the right approach for your hair's condition and starting colour.</p>`
+  },
+  {
+    tag: 'Maintenance',
+    title: 'How Often Ash Blonde Needs a Refresh — A Waterfall Colour Guide',
+    teaser: 'Roots, toner and full colour each fade on a different clock — here is the rough timeline.',
+    body: `<p>Ash blonde isn't a one-appointment colour — it's a few different elements that each fade at their own pace. Knowing the rough timeline makes it easier to plan visits and budget for upkeep.</p>
+    <ul>
+      <li><b>Roots:</b> usually need attention every 6–10 weeks, depending on how fast your natural colour grows through and how much contrast you're comfortable with.</li>
+      <li><b>Toner:</b> the coolest, ashiest stage of the colour — fades fastest, often needing a refresh every 4–6 weeks.</li>
+      <li><b>Overall lightness:</b> once you're at your target blonde, maintaining it is mostly about roots and toner rather than repeating a full lightening service.</li>
+    </ul>
+    <p class="mut">General maintenance guidance — actual timing varies with hair type, home care and how quickly your hair grows.</p>`
+  },
+  {
+    tag: 'Aftercare',
+    title: 'Purple Shampoo 101: Salon Ash Blonde’s Waterfall Aftercare Notes',
+    teaser: 'A little goes a long way — how to use a toning shampoo without overdoing it.',
+    body: `<p>Purple shampoo works by depositing violet pigment, which cancels out yellow tones on the colour wheel. It's a useful tool for stretching time between salon visits, but it's easy to overuse.</p>
+    <ul>
+      <li>Start with once or twice a week — using it every wash can leave a grey or lavender cast on very light blonde.</li>
+      <li>Leave it on for a few minutes rather than rinsing straight away, so the pigment has time to deposit evenly.</li>
+      <li>Follow with a moisturising conditioner — toning shampoos can be drying with regular use.</li>
+      <li>If hair starts looking dull or ashy-grey rather than bright, dial back the frequency.</li>
+    </ul>
+    <p class="mut">General product guidance — your colourist can recommend a routine matched to your specific tone.</p>`
+  },
+  {
+    tag: 'Between visits',
+    title: 'Root Touch-Ups Between Visits: A Salon Ash Blonde Waterfall Guide',
+    teaser: "What's safe to do at home when a full appointment isn't due yet — and what isn't.",
+    body: `<p>The stretch between colour appointments is when most at-home colour mishaps happen. A few honest guidelines help avoid an awkward fix later.</p>
+    <ul>
+      <li>Root touch-up sprays and powders are fine for a single event — they wash out and won't interfere with your next professional service.</li>
+      <li>Box dye "just for the roots" is risky on top of professionally lightened hair — the two products can react unpredictably and create noticeable banding.</li>
+      <li>A gentle, sulphate-free shampoo and regular conditioning treatment do more for how the colour looks day-to-day than anything applied at the root line.</li>
+      <li>If roots are bothering you well before your next booked visit, it's worth a quick call rather than reaching for a home fix.</li>
+    </ul>
+    <p class="mut">General aftercare education — for anything beyond temporary root cover, professional colour correction is safer than a home dye job.</p>`
+  },
+  {
+    tag: 'Choosing a shade',
+    title: 'Champagne Blonde vs Ash Blonde: Choosing Your Shade in Waterfall',
+    teaser: 'Cool grey-blonde or soft golden-beige — how the two tones differ and who they suit.',
+    body: `<p>"Ash" and "champagne" both describe blonde, but they sit on opposite sides of the colour wheel. Ash blonde is cool-toned — grey and smoky, deliberately stripped of warmth. Champagne blonde is a softer, low-warmth beige with a touch of gold, sitting between ash and a classic warm blonde.</p>
+    <ul>
+      <li>Ash blonde tends to suit cooler skin undertones and reads as crisp, modern and high-contrast against darker roots.</li>
+      <li>Champagne blonde is more forgiving as it grows out, and often flatters a wider range of skin tones with its soft warmth.</li>
+      <li>Both require a similar level of upkeep to stay true to tone — the difference is mostly about the finished look, not the maintenance effort.</li>
+      <li>A consultation is the easiest way to see swatches against your skin tone and current colour before committing.</li>
+    </ul>
+    <p class="mut">General colour-theory education — a consultation is the best way to find the shade that suits you.</p>`
+  }
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

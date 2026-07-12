@@ -2,43 +2,58 @@
   "lead": "Before 'N After Unisex Hairdressing Salon",
   "query": "Before 'N After Unisex Hairdressing Salon Westville hair",
   "pulled": 6,
-  "kept": [
+  "kept": [],
+  "rejected": [
     {
       "file": "real_01.jpg",
-      "dim": "1280x853",
-      "source": "Fresha",
-      "title": "Best Hair Coloring near me in Dawncliffe, Westville | Fresha"
+      "reason": "Fresha aggregator photo, generic 'near me' listing title (not this business), upscale loft-style interior inconsistent with a small strip-mall unit — uncertain provenance, rejected."
     },
     {
       "file": "real_02.jpg",
-      "dim": "1280x720",
-      "source": "Fresha",
-      "title": "Best Hair Braiding near me in Durban | Fresha"
+      "reason": "Fresha aggregator photo, generic 'near me' listing title, cannot be confirmed as this venue; setting inconsistent with other photos in the same pull — uncertain provenance, rejected."
     },
     {
       "file": "real_03.jpg",
-      "dim": "1280x663",
-      "source": "Fresha",
-      "title": "Best Hair Coloring near me in Dawncliffe, Westville | Fresha"
+      "reason": "Overly polished, cinematic stock-style photography, generic Fresha listing title, no confirming branding — reads as commercial stock, not an on-site photo."
     },
     {
       "file": "real_04.jpg",
-      "dim": "544x382",
-      "source": "Fresha",
-      "title": "Best Hair Salons near me in Durban | Fresha"
+      "reason": "Low-resolution generic stock/thumbnail image, blurry commercial styling, no salon-specific identification — uncertain provenance, rejected."
     },
     {
       "file": "real_05.jpg",
-      "dim": "544x363",
-      "source": "Fresha",
-      "title": "Best Hair Braiding near me in Durban | Fresha"
+      "reason": "Generic stock-style braiding photo (thumbnail-sized Fresha listing), no confirming branding — uncertain provenance, rejected."
     },
     {
       "file": "real_06.jpg",
-      "dim": "544x363",
-      "source": "Fresha",
-      "title": "Best Hair Salons near me in Durban | Fresha"
+      "reason": "Upscale gold-trimmed multi-chair salon, clearly a much larger/different venue than a small Shop 16 strip-mall salon — mis-attribution, rejected."
     }
   ],
-  "note": "UNVETTED scout pool — Read-vet before using in a build (SOP)."
+  "stock": [
+    {
+      "file": "stock_01.jpg",
+      "source": "Unsplash",
+      "url": "https://unsplash.com/photos/PtOfbGkU3uI",
+      "desc": "Three-chair salon styling station with mirror wall (interior, hero candidate)"
+    },
+    {
+      "file": "stock_02.jpg",
+      "source": "Unsplash",
+      "url": "https://unsplash.com/photos/TnyHlxVnyhk",
+      "desc": "Close-up of hair straightening with a flat iron (ladies styling detail)"
+    },
+    {
+      "file": "stock_03.jpg",
+      "source": "Unsplash",
+      "url": "https://unsplash.com/photos/z2qyry-n-PA",
+      "desc": "Close-up of hair colour/treatment application with a tint comb (gents/treatment detail)"
+    },
+    {
+      "file": "stock_04.jpg",
+      "source": "Unsplash",
+      "url": "https://unsplash.com/photos/M4R8iaqPVp8",
+      "desc": "Modern styling stations with chairs and mirrors (unisex interior, gallery)"
+    }
+  ],
+  "note": "All 6 scouted real photos rejected as unverifiable/mis-attributed (Fresha aggregator, generic listing titles, mutually inconsistent venues). Replaced with 4 vetted Unsplash stock images. Footer stock-disclosure line required on the site."
 }

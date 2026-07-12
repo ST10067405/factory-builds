@@ -2,13 +2,38 @@
   "lead": "The Village Co Cafe & Bistro",
   "query": "The Village Co Cafe & Bistro Durban coffee",
   "pulled": 3,
-  "kept": [
+  "kept": [],
+  "rejected": [
     {
       "file": "real_02.jpg",
-      "dim": "900x1200",
-      "source": "Coffee Magazine",
-      "title": "Cafe Focus: Village, Howick - Coffee Magazine"
+      "reason": "Mis-attributed: source titled 'Cafe Focus: Village, Howick - Coffee Magazine' — a different business ('Village') in Howick, KZN Midlands, not The Village Co Cafe & Bistro in Durban."
+    },
+    {
+      "file": "real_01.jpg",
+      "reason": "Mis-attributed: source titled 'The Village Cafe At Nottingham Road' — a different business/town (Nottingham Road, KZN Midlands, not Durban); image also shows another business's visible door signage reading 'THE VILLAGE CAFE — OPEN HOURS'."
     }
   ],
-  "note": "UNVETTED scout pool — Read-vet before using in a build (SOP)."
+  "stock": [
+    {
+      "file": "stock_01.jpg",
+      "source_url": "https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=1600&q=80",
+      "note": "Warm industrial cafe interior, wood floor, bakery counter — used for hero/gallery."
+    },
+    {
+      "file": "stock_02.jpg",
+      "source_url": "https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=1600&q=80",
+      "note": "Plant-filled village-market style cafe with wood beams — used for gallery."
+    },
+    {
+      "file": "stock_03.jpg",
+      "source_url": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1600&q=80",
+      "note": "Latte art cups on wooden table with plants — used for gallery."
+    },
+    {
+      "file": "stock_04.jpg",
+      "source_url": "https://images.unsplash.com/photo-1541167760496-1628856ab772?w=1600&q=80",
+      "note": "Barista pouring latte art, close-up — used for gallery."
+    }
+  ],
+  "note": "0 real photos kept (both pulled candidates were mis-attributed to other businesses/towns). Build is stock-led; footer disclosure added per SOP."
 }

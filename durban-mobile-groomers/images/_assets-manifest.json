@@ -2,6 +2,52 @@
   "lead": "Durban Mobile Groomers",
   "query": "Durban Mobile Groomers Durban pet",
   "pulled": 1,
-  "kept": [],
-  "note": "UNVETTED scout pool — Read-vet before using in a build (SOP)."
+  "vetted": true,
+  "kept": [
+    {
+      "file": "real_07.jpg",
+      "vetted": true,
+      "verdict": "Screenshot of an Instagram video of the business's own branded mobile grooming van/trailer — signage reads \"Durban Mobile Groomers\", washing/advising/styling services listed, and the phone number 068 334 7050 matches the brief exactly. Genuine, but the frame is a video thumbnail (centered play-button overlay, pillarboxed portrait crop) so it is used as a supporting gallery/fleet photo rather than the hero."
+    }
+  ],
+  "rejected": [],
+  "stock": [
+    {
+      "file": "stock_01.jpg",
+      "use": "hero",
+      "source_url": "Unsplash (exact photo URL not retained by the prior agent's pull — re-verify licence before production)",
+      "note": "Golden retriever being bathed/toweled in a tub — directly on-topic grooming action shot, used as the photo-led hero."
+    },
+    {
+      "file": "stock_02.jpg",
+      "use": "gallery",
+      "source_url": "Unsplash (exact photo URL not retained by the prior agent's pull — re-verify licence before production)",
+      "note": "Well-groomed dog with a soft toy, clean studio shot."
+    },
+    {
+      "file": "stock_03.jpg",
+      "use": "gallery",
+      "source_url": "Unsplash (exact photo URL not retained by the prior agent's pull — re-verify licence before production)",
+      "note": "Golden retriever puppy close portrait — supports the 'Puppy grooming' service line."
+    },
+    {
+      "file": "stock_04.jpg",
+      "use": "gallery",
+      "source_url": "https://images.unsplash.com/photo-1544568100-847a948585b9?w=1600&q=80",
+      "note": "Replaces a corrupted 29-byte download. Happy dog outdoors on a path, warm natural tones."
+    },
+    {
+      "file": "stock_05.jpg",
+      "use": "gallery",
+      "source_url": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1600&q=80",
+      "note": "Replaces a rejected Santa-costume shot (off-brand/seasonal, not evergreen). French Bulldog puppy on a warm yellow backdrop — matches the site's warm-yellow accent."
+    },
+    {
+      "file": "stock_06.jpg",
+      "use": "gallery",
+      "source_url": "Unsplash (exact photo URL not retained by the prior agent's pull — re-verify licence before production)",
+      "note": "Happy dog outdoors at the coast — fits the Durban/coastal setting."
+    }
+  ],
+  "note": "Vetted 2026-07-12: 1 real photo kept (business's own branded van, used in gallery not hero due to video-thumbnail artefacts). Page is stock-led — footer discloses representative stock imagery. stock_04.jpg (corrupted) and stock_05.jpg (off-brand Santa costume) were replaced; stock_01/02/03/06 were pre-existing from a prior agent and re-verified as on-topic and intact but their original source URLs were not recorded — flagged for follow-up before production."
 }

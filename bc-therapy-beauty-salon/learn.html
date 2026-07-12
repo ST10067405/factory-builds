@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The BC Therapy Journal — Skin &amp; Beauty Notes | BC Therapy - Beauty Salon</title>
+<meta name="description" content="Practical skincare and beauty reads from BC Therapy - Beauty Salon, Moseley Park, Pinetown — facials, waxing, nails and more.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How often should I get a facial?", "acceptedAnswer": { "@type": "Answer", "text": "As a general guide, every 4–6 weeks keeps most skin types in good condition, though this varies by skin goal and treatment type." } },
+    { "@type": "Question", "name": "What should I avoid before a waxing appointment?", "acceptedAnswer": { "@type": "Answer", "text": "Avoid sun exposure, retinol products and exfoliating for a few days beforehand, and make sure hair has enough length to be gripped properly." } },
+    { "@type": "Question", "name": "How do I make my nails last longer between visits?", "acceptedAnswer": { "@type": "Answer", "text": "Wear gloves for household chores, moisturise your cuticles daily, and avoid using your nails as tools." } },
+    { "@type": "Question", "name": "How do I book?", "acceptedAnswer": { "@type": "Answer", "text": "Call or WhatsApp 083 595 2903. Online booking is coming to this site soon." } }
+  ]
+}
+</script>
+<style>
+:root{--bg:#FAF5F6;--surface:#fff;--ink:#2B2130;--brand:#4E2748;--accent:#C7B3E6;--accent-ink:#6B4A93;--mut:rgba(43,33,48,.70);--line:rgba(43,33,48,.10);--display:'Marcellus',serif;--body:'Mulish',sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand);color:#fff;font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-size:21px;color:var(--brand);text-decoration:none}
+.nav-back{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-decoration:none}
+.nav-back:hover{color:var(--accent-ink)}
+header{padding:90px 0 60px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--accent-ink);margin-bottom:18px}
+h1{font-family:var(--display);font-size:clamp(38px,6vw,64px);line-height:1.05;color:var(--brand)}
+.intro{max-width:600px;margin:22px auto 0;color:var(--mut);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:16px;padding:30px 26px;cursor:pointer;transition:transform .3s cubic-bezier(0.22,1,0.36,1),box-shadow .3s cubic-bezier(0.22,1,0.36,1);text-align:left}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(43,33,48,.12);outline:none}
+.post .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);font-weight:700}
+.post h3{font-family:var(--display);font-size:22px;margin:12px 0 8px;line-height:1.25;color:var(--brand)}
+.post p{color:var(--mut);font-size:14.5px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);font-size:clamp(28px,4vw,42px);margin-bottom:28px;text-align:center;color:var(--brand)}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent-ink);font-size:22px}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(43,33,48,.55);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--bg);max-width:680px;width:100%;border-radius:22px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(43,33,48,.4)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut)}
+.asheet .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);font-weight:700}
+.asheet h2{font-family:var(--display);font-size:clamp(26px,4vw,36px);margin:12px 0 20px;line-height:1.2;color:var(--brand)}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--brand);color:#fff;text-decoration:none;font-weight:600;font-size:14px;padding:13px 26px;border-radius:99px}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--accent-ink);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for BC Therapy - Beauty Salon by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">BC Therapy - Beauty …</a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">The Journal</p>
+    <h1>Skin &amp; Beauty Notes</h1>
+    <p class="intro">Practical, honest reads on skincare and beauty treatments for Moseley Park and Pinetown, from the team at BC Therapy - Beauty Salon.</p>
+  </div>
+</header>
+
+<div class="wrap"><div class="grid" id="postGrid"></div></div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="qa">
+      <details><summary>How often should I get a facial?</summary><p>As a general guide, every 4–6 weeks keeps most skin types in good condition, though this varies by skin goal and treatment type.</p></details>
+      <details><summary>What should I avoid before a waxing appointment?</summary><p>Avoid sun exposure, retinol products and exfoliating for a few days beforehand, and make sure hair has enough length to be gripped properly.</p></details>
+      <details><summary>How do I make my nails last longer between visits?</summary><p>Wear gloves for household chores, moisturise your cuticles daily, and avoid using your nails as tools.</p></details>
+      <details><summary>How do I book?</summary><p>Call or WhatsApp 083 595 2903. Online booking is coming to this site soon.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap">BC Therapy - Beauty Salon · 4 Glen Pl, Moseley Park, Pinetown · Concept by Arkatype Digital — draft, awaiting client sign-off</div></footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#visit">Book your visit →</a>
+  </div>
+</div>
+
+<script>
+/* 6 audience-matched educational articles. Generic educational advice only — no invented claims about the business. */
+const POSTS = [
+  { tag: 'Facials', title: 'The BC Therapy Guide to Facials in Moseley Park', teaser: 'What a facial actually does for your skin, and how to choose the right one.', body: `<p>A facial is more than a relaxing hour — it's a structured treatment that cleanses, exfoliates and nourishes skin in ways daily home care can't quite match.</p>
+    <h4>What happens during a typical facial</h4>
+    <p>Most facials follow a similar rhythm: cleanse, analyse, exfoliate, extract (if needed), mask, then moisturise and protect. Each step targets a different part of skin health, from clearing congestion to boosting hydration.</p>
+    <h4>How to choose the right one</h4>
+    <ul>
+      <li>Oily or congested skin: look for a deep-cleansing or purifying facial.</li>
+      <li>Dry or dull skin: a hydrating, nourishing facial suits best.</li>
+      <li>Sensitive skin: ask about gentler, calming options.</li>
+    </ul>
+    <p>Whatever you choose, a good therapist will ask about your skin and adjust the treatment rather than running a one-size-fits-all routine.</p>` },
+
+  { tag: 'Skincare', title: 'Upper Highway Skin: Beating Pinetown’s Humidity and Dust', teaser: 'How the local climate affects skin, and what to do about it.', body: `<p>Living on the Upper Highway means warm, humid summers and a fair amount of dust from busy roads — both of which show up on skin if you're not adjusting your routine for them.</p>
+    <h4>Humidity and breakouts</h4>
+    <p>Higher humidity means more sweat and oil sitting on the skin's surface, which can clog pores. A lighter, non-comedogenic moisturiser and a proper double-cleanse in the evening help keep this in check.</p>
+    <h4>Dust, pollution and dullness</h4>
+    <p>Fine particles from traffic and dry conditions settle on skin throughout the day, contributing to a dull, tired look. A gentle exfoliation once or twice a week, alongside a proper evening cleanse, keeps skin brighter.</p>
+    <div class="tip" style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;color:var(--mut)">Sunscreen isn't optional here — daily SPF protects against both sun and the general wear of an outdoor lifestyle.</div>` },
+
+  { tag: 'Waxing', title: 'Waxing First-Timers: What to Expect at BC Therapy, Pinetown', teaser: 'A calm, practical guide for anyone booking their first wax.', body: `<p>If you've never had a professional wax before, a little preparation makes the whole experience far more comfortable.</p>
+    <h4>Before your appointment</h4>
+    <ul>
+      <li>Let hair grow to at least the length of a grain of rice so wax can grip it properly.</li>
+      <li>Avoid sun exposure, retinol products and heavy exfoliation for a few days beforehand.</li>
+      <li>Gently exfoliate the day before (not the day of) to help prevent ingrown hairs.</li>
+    </ul>
+    <h4>After your appointment</h4>
+    <p>Skin can be a little sensitive for a day or two. Avoid hot baths, saunas and tight clothing over the area, and keep it out of direct sun where possible.</p>
+    <p>Most first-time discomfort settles quickly, and each subsequent wax tends to feel easier as hair grows back finer.</p>` },
+
+  { tag: 'Nails', title: 'Keeping Your Nails Fresh Between Visits to BC Therapy', teaser: 'Small daily habits that make your manicure last.', body: `<p>A good manicure can last weeks with the right care — most of the damage happens through everyday habits rather than time itself.</p>
+    <h4>Protect first</h4>
+    <p>Gloves for washing dishes, gardening or cleaning products go a long way. Water and harsh chemicals are two of the biggest causes of early chipping and lifting.</p>
+    <h4>Moisturise daily</h4>
+    <p>Cuticle oil or a rich hand cream, worked in every day, keeps both nails and the surrounding skin flexible and less prone to cracking.</p>
+    <h4>Hands off the tools</h4>
+    <p>Try not to use your nails to open cans, scratch off labels or pry things apart — it's one of the fastest ways to weaken or break them.</p>` },
+
+  { tag: 'Treatments', title: 'Facial or Massage? Choosing Your Treatment at BC Therapy, Moseley Park', teaser: 'Two very different treatments, and how to decide between them.', body: `<p>Facials and massages both fall under "beauty treatments", but they address quite different things — and knowing the difference helps you book the right one.</p>
+    <h4>Facials: skin-focused</h4>
+    <p>A facial is about the health and appearance of your skin specifically — clearing congestion, hydrating, brightening and addressing concerns like dullness or breakouts.</p>
+    <h4>Massage: body-focused</h4>
+    <p>A massage targets muscle tension, circulation and general relaxation. It's less about how skin looks and more about how the body feels.</p>
+    <h4>Can't decide?</h4>
+    <p>If you're dealing with visible skin concerns, start with a facial. If it's tension, stress or tiredness you're carrying, a massage is usually the better fit. Many clients alternate between the two depending on the season or how they're feeling.</p>` },
+
+  { tag: 'First visit', title: 'Your First Appointment at BC Therapy — Beauty Salon, Glen Place', teaser: 'What to know before you walk through the door.', body: `<p>First appointments are always a little bit of an unknown — here's what generally helps things go smoothly.</p>
+    <h4>Arrive a few minutes early</h4>
+    <p>This gives you time to settle in and talk through what you're hoping to get from the treatment before it starts.</p>
+    <h4>Mention any sensitivities</h4>
+    <p>Skin conditions, allergies or products you react to are all useful to flag upfront, so your therapist can adjust the treatment accordingly.</p>
+    <h4>Know before you book</h4>
+    <p>The full treatment menu and current pricing are confirmed directly with BC Therapy - Beauty Salon — call or WhatsApp 083 595 2903 and the team will talk you through your options.</p>` }
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

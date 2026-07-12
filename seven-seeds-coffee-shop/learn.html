@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Journal | Seven Seeds Coffee Shop</title>
+<meta name="description" content="Coffee culture, brewing notes and ordering know-how from Seven Seeds Coffee Shop, Pinetown.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What's the difference between a flat white and a cappuccino?", "acceptedAnswer": { "@type": "Answer", "text": "Both start with espresso and steamed milk, but a flat white uses less milk with fine, glossy microfoam for a stronger coffee taste, while a cappuccino has more foam and a thicker, airier texture." } },
+    { "@type": "Question", "name": "What is pour-over coffee?", "acceptedAnswer": { "@type": "Answer", "text": "Pour-over is a manual filter brewing method where hot water is poured slowly and evenly over ground coffee in a paper or cloth filter, giving a cleaner, lighter cup than espresso." } },
+    { "@type": "Question", "name": "How should I store coffee beans at home?", "acceptedAnswer": { "@type": "Answer", "text": "Keep beans in an airtight container away from light, heat and moisture, and buy only what you'll use in a couple of weeks so they stay fresh." } },
+    { "@type": "Question", "name": "How do I order?", "acceptedAnswer": { "@type": "Answer", "text": "DM us on Instagram @seven.seedscoffee_. Online ordering is coming to this site soon." } }
+  ]
+}
+</script>
+<style>
+:root{--bg:#F7F1E4;--surface:#fff;--ink:#2A1C13;--mut:rgba(42,28,19,.7);--brand:#4A2E1D;--accent:#7C8F6E;--accent-ink:#4F5F44;--line:rgba(42,28,19,.12);--display:'Fraunces',serif;--body:'Work Sans',sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand);color:#fff;font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-size:22px;font-weight:700;color:var(--brand);text-decoration:none}
+.nav-back{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-decoration:none}
+.nav-back:hover{color:var(--accent-ink)}
+header{padding:90px 0 60px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--accent-ink);margin-bottom:18px}
+h1{font-family:var(--display);font-size:clamp(38px,6vw,68px);line-height:1.05}
+h1 em{font-style:italic;color:var(--accent-ink)}
+.intro{max-width:600px;margin:22px auto 0;color:var(--mut);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:20px;padding:30px 26px;cursor:pointer;transition:transform .3s cubic-bezier(0.22,1,0.36,1),box-shadow .3s;text-align:left}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.1);outline:none}
+.post .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);font-weight:700}
+.post h3{font-family:var(--display);font-size:22px;margin:12px 0 8px;line-height:1.25;color:var(--brand)}
+.post p{color:var(--mut);font-size:14.5px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);font-size:clamp(28px,4vw,44px);margin-bottom:28px;text-align:center}
+.faq h2 em{font-style:italic;color:var(--accent-ink)}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent-ink);font-size:22px}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(42,28,19,.55);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--bg);max-width:680px;width:100%;border-radius:22px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(0,0,0,.4)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut)}
+.asheet .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);font-weight:700}
+.asheet h2{font-family:var(--display);font-size:clamp(26px,4vw,38px);margin:12px 0 20px;line-height:1.15;color:var(--brand)}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--brand);color:#fff;text-decoration:none;font-weight:600;font-size:14px;padding:13px 26px;border-radius:99px}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--accent-ink);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for Seven Seeds Coffee Shop by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">Seven Seeds</a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">The Journal</p>
+    <h1>Coffee culture, from <em>Pinetown</em></h1>
+    <p class="intro">Brewing notes, ordering know-how and coffee-lore from the Seven Seeds counter on Josiah Gumede Rd.</p>
+  </div>
+</header>
+
+<div class="wrap"><div class="grid" id="postGrid"></div></div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common <em>questions</em></h2>
+    <div class="qa">
+      <details><summary>What's the difference between a flat white and a cappuccino?</summary><p>Both start with espresso and steamed milk, but a flat white uses less milk with fine, glossy microfoam for a stronger coffee taste, while a cappuccino has more foam and a thicker, airier texture.</p></details>
+      <details><summary>What is pour-over coffee?</summary><p>Pour-over is a manual filter brewing method where hot water is poured slowly and evenly over ground coffee in a paper or cloth filter, giving a cleaner, lighter cup than espresso.</p></details>
+      <details><summary>How should I store coffee beans at home?</summary><p>Keep beans in an airtight container away from light, heat and moisture, and buy only what you'll use in a couple of weeks so they stay fresh.</p></details>
+      <details><summary>How do I order?</summary><p>DM us on Instagram @seven.seedscoffee_. Online ordering is coming to this site soon.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap">Seven Seeds Coffee Shop · 151 Josiah Gumede Rd, Pinetown · Concept by Arkatype Digital — draft, awaiting client sign-off</div></footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#visit">Visit Seven Seeds →</a>
+  </div>
+</div>
+
+<script>
+const POSTS = [
+  { tag: 'Beans', title: 'The Seven Seeds Bean Journal: Where Pinetown’s Coffee Comes From', teaser: 'A short primer on origin, roast and why it matters in the cup.', body: `<p>Coffee grows in a band of countries close to the equator, often called the "coffee belt" — think East Africa, Central America and parts of Asia. Altitude, soil and climate in each origin shape the flavour long before the beans reach a roastery.</p><ul><li><b>Arabica</b> — smoother, more acidity and aromatic complexity, the more common choice for specialty coffee.</li><li><b>Robusta</b> — bolder, more bitter and higher in caffeine, often used for body in blends.</li><li><b>Roast level</b> — lighter roasts keep more origin character; darker roasts bring out chocolate and caramel notes.</li></ul><p class="mut">None of this changes what's on the counter day to day — it's just useful context for reading a bag of beans.</p>` },
+  { tag: 'Culture', title: 'Josiah Gumede Road Mornings: A Seven Seeds Coffee Primer', teaser: 'The basics of a good coffee order, for anyone new to the counter.', body: `<p>If the counter menu feels like a foreign language, it helps to know the handful of building blocks behind almost every drink.</p><ul><li><b>Espresso</b> — a small, concentrated shot pulled under pressure; the base of most milk drinks.</li><li><b>Milk ratio</b> — the main difference between a flat white, a latte and a cappuccino is how much milk (and how it's textured) goes on top.</li><li><b>Single vs double</b> — a double shot is simply two shots of espresso instead of one, for a stronger drink.</li></ul><p class="mut">Once you know the ratios, ordering with confidence is easy.</p>` },
+  { tag: 'Ordering', title: 'Flat White vs Cappuccino: Seven Seeds Breaks It Down', teaser: 'The real difference between the two, so you order with confidence.', body: `<p>These two are easy to mix up, but the difference comes down to texture and ratio.</p><ul><li><b>Flat white</b> — less milk, poured as fine, glossy "microfoam" — the coffee flavour stays forward.</li><li><b>Cappuccino</b> — more milk and a thicker, airier foam cap, traditionally served slightly larger.</li><li><b>Cup size</b> — a flat white is usually served in a smaller cup than a cappuccino, which helps explain the stronger taste.</li></ul><p class="mut">Neither is "better" — it's about how much milk and foam you enjoy with your espresso.</p>` },
+  { tag: 'Brewing', title: 'Why Seven Seeds Pours Slow: A Pinetown Guide to Filter Coffee', teaser: 'What pour-over and filter brewing actually change in the cup.', body: `<p>Filter (or "pour-over") coffee is a manual brewing method: hot water is poured slowly and evenly over ground coffee sitting in a paper or cloth filter.</p><ul><li><b>No pressure</b> — unlike espresso, gravity does the work, so extraction is gentler and slower.</li><li><b>Clarity</b> — the result is usually lighter-bodied with brighter, more distinct flavour notes.</li><li><b>Grind size</b> — filter coffee typically uses a coarser grind than espresso, which affects how quickly water passes through.</li></ul><p class="mut">It's a different experience to espresso-based drinks, not a replacement for them — worth trying if you haven't.</p>` },
+  { tag: 'Menu', title: 'Reading a Seven Seeds Menu Board Like a Regular', teaser: "Decode the shorthand — sizes, milk options and add-ons explained.", body: `<p>Coffee menu boards use a lot of shorthand. A quick glossary helps:</p><ul><li><b>Ristretto</b> — a "restricted" shot, pulled shorter for a more concentrated, less bitter flavour.</li><li><b>Decaf</b> — coffee with most of the caffeine removed, brewed the same way as regular coffee.</li><li><b>Extra shot</b> — an additional shot of espresso added to any milk-based drink.</li><li><b>Plant milk</b> — a general term for oat, soy, almond and other non-dairy milk options many cafés offer.</li></ul><p class="mut">Availability of any specific option is confirmed at the counter.</p>` },
+  { tag: 'Culture', title: 'The Upper Highway Coffee Crawl: Seven Seeds Edition', teaser: "A short guide to exploring Pinetown's coffee culture, one cup at a time.", body: `<p>A good local coffee spot is usually built on a few simple things: care in sourcing beans, consistency in how drinks are made, and a space that makes people want to stay a while.</p><ul><li><b>Freshness</b> — beans roasted recently and used within weeks, not months.</li><li><b>Consistency</b> — the same drink should taste the same, visit after visit.</li><li><b>Atmosphere</b> — good coffee culture is as much about the space and the people as it is about the cup.</li></ul><p class="mut">Worth keeping in mind wherever your coffee crawl takes you along the Upper Highway.</p>` }
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

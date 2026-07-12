@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Circuit — Electrical &amp; Solar Journal | CJ Electrical &amp; Solar</title>
+<meta name="description" content="Load-shedding stages, DB board trips, solar retrofits and more — straight electrical and solar answers for Durban homeowners, from CJ Electrical & Solar.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chivo:wght@500;600;700;900&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How many load-shedding stages does Durban see, and does it matter for my wiring?", "acceptedAnswer": { "@type": "Answer", "text": "Load-shedding stages control how often and how long the power cuts — the electrical impact comes from the repeated on/off switching itself, which is worth understanding regardless of the stage." } },
+    { "@type": "Question", "name": "Do I need an electrician to add solar to my home, or can I DIY it?", "acceptedAnswer": { "@type": "Answer", "text": "Connecting solar to your home's wiring and distribution board involves live electrical work, so it should be handled by a qualified electrician rather than as a DIY project." } },
+    { "@type": "Question", "name": "Why does my DB board keep tripping when the power comes back on?", "acceptedAnswer": { "@type": "Answer", "text": "Repeated switching during load-shedding can strain circuits and DB boards over time, which is a common reason boards trip more often as outages continue — an electrician can identify the specific cause." } },
+    { "@type": "Question", "name": "How do I book?", "acceptedAnswer": { "@type": "Answer", "text": "Call or WhatsApp 072 348 8289. Online booking is coming to this site soon." } }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#FFFFFF;--surface:#F7F6F2;--ink:#20242B;--mut:rgba(32,36,43,.68);
+  --brand:#3A414C;--accent:#7A5A06;--accent-bright:#FFC42B;--line:rgba(32,36,43,.12);
+  --display:'Chivo',sans-serif;--body:'Inter Tight',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand);color:#fff;font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-weight:700;font-size:21px;color:var(--brand);text-decoration:none}
+.nav-back{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-decoration:none}
+.nav-back:hover{color:var(--accent)}
+header{padding:90px 0 60px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--accent);margin-bottom:18px}
+h1{font-family:var(--display);font-weight:900;font-size:clamp(38px,6vw,64px);line-height:1.05;color:var(--brand)}
+.intro{max-width:600px;margin:22px auto 0;color:var(--mut);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:30px 26px;cursor:pointer;transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s;text-align:left}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.1);outline:none}
+.post .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.post h3{font-family:var(--display);font-weight:700;font-size:21px;margin:12px 0 8px;line-height:1.25}
+.post p{color:var(--mut);font-size:14.5px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);font-weight:800;font-size:clamp(28px,4vw,44px);margin-bottom:28px;text-align:center;color:var(--brand)}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent);font-size:22px}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(0,0,0,.55);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--bg);max-width:680px;width:100%;border-radius:22px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(0,0,0,.4)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut)}
+.asheet .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.asheet h2{font-family:var(--display);font-weight:800;font-size:clamp(26px,4vw,36px);margin:12px 0 20px;line-height:1.2;color:var(--brand)}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--accent-bright);color:var(--brand);text-decoration:none;font-weight:700;font-size:14px;padding:13px 26px;border-radius:99px}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for CJ Electrical &amp; Solar by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">CJ Electrical &amp; Solar</a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">The Circuit · Electrical &amp; Solar Journal</p>
+    <h1>Straight answers for Durban homes</h1>
+    <p class="intro">Load-shedding, DB boards, solar retrofits and the questions Durban homeowners keep asking — written plainly, no jargon.</p>
+  </div>
+</header>
+
+<div class="wrap"><div class="grid" id="postGrid"></div></div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="qa">
+      <details><summary>How many load-shedding stages does Durban see, and does it matter for my wiring?</summary><p>Load-shedding stages control how often and how long the power cuts — the electrical impact comes from the repeated on/off switching itself, which is worth understanding regardless of the stage.</p></details>
+      <details><summary>Do I need an electrician to add solar to my home, or can I DIY it?</summary><p>Connecting solar to your home's wiring and distribution board involves live electrical work, so it should be handled by a qualified electrician rather than as a DIY project.</p></details>
+      <details><summary>Why does my DB board keep tripping when the power comes back on?</summary><p>Repeated switching during load-shedding can strain circuits and DB boards over time, which is a common reason boards trip more often as outages continue — an electrician can identify the specific cause.</p></details>
+      <details><summary>How do I book?</summary><p>Call or WhatsApp 072 348 8289. Online booking is coming to this site soon.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap">CJ Electrical &amp; Solar · Service area: greater Durban · Concept by Arkatype Digital — draft, awaiting client sign-off</div></footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#visit">Get in touch →</a>
+  </div>
+</div>
+
+<script>
+const POSTS = [
+  { tag: 'Load-shedding', title: "Load-shedding stages and what they do to your Durban home's wiring", teaser: 'Why the repeated switching matters more than the stage number.', body: `<p>Durban homeowners talk about load-shedding in terms of "stage" — but for your home's wiring, it's not really the stage number that matters most. It's the repeated cycle of power cutting out and surging back on, over and over, week after week.</p><p>Every time the grid comes back on, appliances and circuits take a small jolt. On their own, these are minor. Repeated many times a month, over years, they add up — showing up as circuits that trip more easily, DB boards that feel "tired," or connections that were fine five years ago and now aren't.</p><ul><li>Higher stages mean more outages, not necessarily bigger surges</li><li>Older DB boards and loose connections feel the cumulative effect first</li><li>A periodic check-up catches small issues before they become no-power calls</li></ul><p class="mut">General guidance for Durban homeowners — not a diagnosis of any specific property.</p>` },
+  { tag: 'Solar', title: 'Solar quotes after another Durban tariff hike: what to actually compare', teaser: 'Panels are only one line item — here is the fuller picture.', body: `<p>Every time municipal or Eskom tariffs move, solar enquiries in Durban spike — understandably. But comparing solar quotes on panel price alone misses most of what actually determines value.</p><ul><li><b>System sizing</b> — matched to your actual usage, not a generic package</li><li><b>Inverter quality</b> — often the component that fails first if under-specified</li><li><b>Battery vs grid-tied only</b> — whether you're covered during outages, not just saving on the bill</li><li><b>Installation standard</b> — mounting, wiring and DB integration done properly</li></ul><p>A like-for-like comparison across quotes usually reveals bigger differences in these areas than in the panels themselves.</p><p class="mut">General guidance — get quotes tailored to your home's actual usage and roof.</p>` },
+  { tag: 'DB boards', title: "Why your DB board trips every time Durban's power comes back on", teaser: 'The switching itself is often the real culprit, not one faulty appliance.', body: `<p>It's a familiar Durban moment: the power returns after an outage, and almost immediately a breaker trips. The instinct is to blame whatever appliance was running — but the switching moment itself is often the bigger factor.</p><ul><li>Multiple appliances restarting simultaneously can spike demand on a circuit</li><li>Ageing breakers can become more sensitive over years of repeated cycling</li><li>A board that's undersized for the home's current appliance load will show it here first</li></ul><p>If it's happening consistently rather than occasionally, it's worth having the board looked at rather than just resetting the breaker each time.</p><p class="mut">General guidance for Durban homes — not a diagnosis of any specific board.</p>` },
+  { tag: 'Solar', title: 'Retrofitting solar onto an older Durban home: what to check first', teaser: 'Older wiring and roofs need a different starting point than new builds.', body: `<p>Many of Durban's homes weren't built with solar in mind, which makes the retrofit process a bit different from a new-build installation. A few things are worth checking before panels go up.</p><ul><li><b>Roof condition</b> — older tiles or sheeting may need attention before mounting</li><li><b>Existing DB board capacity</b> — whether it can safely integrate a new solar feed</li><li><b>Wiring age</b> — older homes sometimes need partial upgrades alongside the solar install</li><li><b>Shading</b> — mature trees and neighbouring structures change over decades</li></ul><p>None of these rule out solar — they just shape how the installation is planned.</p><p class="mut">General guidance for older Durban properties — an on-site assessment gives the specifics.</p>` },
+  { tag: 'Load-shedding', title: 'Battery, generator, or solar: Durban’s load-shedding decision explained', teaser: 'Three different tools for three different problems.', body: `<p>Durban homeowners weighing up backup power options often assume it's one choice — it's really three different tools solving slightly different problems.</p><ul><li><b>Generator</b> — cheapest to start with, runs on fuel, needs manual starting and ventilation</li><li><b>Battery/inverter</b> — silent, automatic, but limited by battery capacity and needs charging</li><li><b>Solar + battery</b> — recharges itself during the day, the most self-sufficient but the highest upfront cost</li></ul><p>The right fit usually comes down to how often the power is out, how long for, and which appliances actually need to stay on.</p><p class="mut">General guidance — the best option depends on your household's specific needs.</p>` },
+  { tag: 'Bills', title: 'Reading your Eskom vs municipal bill in Durban: what actually costs you', teaser: 'Two different billing systems, two different things to watch.', body: `<p>Depending on where in greater Durban a home sits, power may come via eThekwini Municipality or directly from Eskom — and the bills don't read the same way.</p><ul><li>Municipal bills often bundle usage with other services, making the electricity portion less obvious</li><li>Tariff structures (block rates, time-of-use) affect when running appliances costs more</li><li>Prepaid vs post-paid changes how quickly a tariff increase is felt</li></ul><p>Understanding which structure applies to your home is the first step before deciding whether solar, battery backup, or simply shifting usage times makes the most financial sense.</p><p class="mut">General guidance — check your specific bill and supplier for exact terms.</p>` }
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

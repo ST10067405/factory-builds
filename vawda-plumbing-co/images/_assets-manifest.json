@@ -2,37 +2,47 @@
   "lead": "Vawda Plumbing Co.",
   "query": "Vawda Plumbing Co. Durban plumber",
   "pulled": 6,
-  "kept": [
+  "kept": [],
+  "rejected": [
+    { "file": "real_01.jpg", "reason": "Two branded work trucks reading 'DRAIN MEISTER' — a different Durban plumbing business; visible competitor branding." },
+    { "file": "real_02.jpg", "reason": "Sourced from proplumbersdurban.co.za / 'AJ's ER Plumbers' listing (per manifest source metadata) — a different Durban plumbing business, not confirmed as Vawda's own photo; reject on uncertainty per SOP." },
+    { "file": "real_03.png", "reason": "Logo graphic for 'Academy Plumbers' — a different business's brand mark, not a work photo." },
+    { "file": "real_04.jpg", "reason": "Worker posed in front of a truck branded 'GANGA PLUMBERS' — a different Durban plumbing business; visible competitor branding." },
+    { "file": "real_05.jpg", "reason": "Marketing flyer for 'Academy Plumbing Services DBN' — a different business's promotional graphic, not a Vawda photo." }
+  ],
+  "note": "All 5 scouted 'real' photos were confirmed mis-attributed to other Durban plumbing businesses (Serper cross-attribution) — none plausibly belong to Vawda Plumbing Co. All rejected and deleted per SOP (uncertain/competitor-branded -> reject). Kept real photos = 0, so stock fill is mandatory (Step 2).",
+  "stock": [
     {
-      "file": "real_01.jpg",
-      "dim": "1920x1080",
-      "source": "Drain Meister",
-      "title": "New Durban Plumbers Website - Drain Meister"
+      "file": "stock_01.jpg",
+      "source": "https://unsplash.com/photos/D7LT-vTTt88",
+      "cdn": "https://images.unsplash.com/photo-1745426863308-308b92bff031",
+      "desc": "Sunlit shot of two crossed adjustable/spanner wrenches on a wooden workbench next to a yellow spirit level — tools category."
     },
     {
-      "file": "real_02.jpg",
-      "dim": "1920x1080",
-      "source": "www.proplumbersdurban.co.za",
-      "title": "TRUSTED Plumbers Durban * 031-812-0455 * AJ's ER Plumbers in"
+      "file": "stock_02.jpg",
+      "source": "https://unsplash.com/photos/4mAcustUNPs",
+      "cdn": "https://images.unsplash.com/photo-1503789146722-cf137a3c0fea",
+      "desc": "Monochrome studio shot of a vintage pipe wrench and adjustable wrench on black background — tools category."
     },
     {
-      "file": "real_03.jpg",
-      "dim": "1386x924",
-      "source": "www.academyplumbers.co.za",
-      "title": "Durban Plumbers - Affordable rates - Available 24/7 - Contac"
+      "file": "stock_03.jpg",
+      "source": "https://unsplash.com/photos/L94dWXNKwrY",
+      "cdn": "https://images.unsplash.com/photo-1454694220579-9d6672b1ec2a",
+      "desc": "Tradesman's tool belt with hammer, adjustable wrench and pliers resting on a pipe at a job site — maintenance/site-work category."
     },
     {
-      "file": "real_04.jpg",
-      "dim": "1280x856",
-      "source": "gangaplumbers.co.za",
-      "title": "Expert Plumbing Services in Durban | Ganga Plumbers"
+      "file": "stock_04.jpg",
+      "source": "https://unsplash.com/photos/oHoOrmEms38",
+      "cdn": "https://images.unsplash.com/photo-1569783899817-a49d2d25287c",
+      "desc": "Monochrome macro close-up of wrenches and pipe fittings — tools/maintenance category."
     },
     {
-      "file": "real_05.jpg",
-      "dim": "1024x1024",
-      "source": "Academy Plumbing Services",
-      "title": "Plumbing In Durban - Academy Plumbing - Call 0861 115 129"
+      "file": "stock_05.jpg",
+      "source": "https://unsplash.com/photos/ii5IRyypPhs",
+      "cdn": "https://images.unsplash.com/photo-1575299737366-39c143459bc5",
+      "desc": "Wall-mounted instant water heater (geyser) above a bathroom sink with exposed plumbing — geysers category."
     }
   ],
-  "note": "UNVETTED scout pool — Read-vet before using in a build (SOP)."
+  "footer_disclosure_required": true,
+  "note2": "Page is stock-led (0 kept real photos) — footer must carry: 'Some imagery is representative stock — client photos to follow.'"
 }

@@ -2,43 +2,72 @@
   "lead": "THUL'S BEAUTY STUDIO",
   "query": "THUL'S BEAUTY STUDIO Westville beauty",
   "pulled": 6,
-  "kept": [
+  "kept": [],
+  "rejected": [
     {
       "file": "real_01.jpg",
-      "dim": "1292x927",
-      "source": "Fresha",
-      "title": "Xqizit Beauty Club Westville - 7 Harry Gwala Road - Durban |"
+      "reason": "Xqizit Beauty Club promo poster — competing business branding + pricing visible, not this venue"
     },
     {
       "file": "real_02.jpg",
-      "dim": "1280x854",
-      "source": "Fresha",
-      "title": "Best Hair Coloring near me in Dawncliffe, Westville | Fresha"
+      "reason": "Uncertain/mismatched — generic male-haircut/barbershop stock image, no venue confirmation, wrong service focus for a beauty studio"
     },
     {
       "file": "real_03.jpg",
-      "dim": "1280x853",
-      "source": "Fresha",
-      "title": "Best Hair Coloring near me in Dawncliffe, Westville | Fresha"
+      "reason": "Uncertain — generic upscale salon stock/listicle photo ('Best Salons in Westville'), interior does not match this venue, no branding confirmation"
     },
     {
       "file": "real_04.jpg",
-      "dim": "1280x720",
-      "source": "Fresha",
-      "title": "Xqizit Beauty Club Westville - 7 Harry Gwala Road - Durban |"
+      "reason": "Xqizit Beauty Club venue — reversed 'Xqizit' signage visible in glass door, competing business"
     },
     {
       "file": "real_05.jpg",
-      "dim": "1280x720",
-      "source": "Fresha",
-      "title": "Best Salons in Westville, South Africa | Fresha"
+      "reason": "Wrong business/address — sourced as 'The Beauty Studio, 148 Locksley Drive', not Thul's 100 Jan Hofmeyr Rd"
     },
     {
       "file": "real_06.jpg",
-      "dim": "909x515",
-      "source": "Fresha",
-      "title": "The Beauty Studio - 148 Locksley Drive - Durban | Fresha"
+      "reason": "Competing business branding visible — 'DS ... BEAUTY STUDIO / BEAUTY|MAKEUP|LASER' signage, not Thul's"
     }
   ],
-  "note": "UNVETTED scout pool — Read-vet before using in a build (SOP)."
+  "stock": [
+    {
+      "file": "stock_01.jpg",
+      "source": "https://unsplash.com/photos/PtOfbGkU3uI",
+      "cdn": "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f",
+      "desc": "Salon interior — styling chairs at mirror station"
+    },
+    {
+      "file": "stock_02.jpg",
+      "source": "https://unsplash.com/photos/Pe9IXUuC6QU",
+      "cdn": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881",
+      "desc": "Facial mask treatment being applied"
+    },
+    {
+      "file": "stock_03.jpg",
+      "source": "https://unsplash.com/photos/r-Ej0NQmFlQ",
+      "cdn": "https://images.unsplash.com/photo-1519014816548-bf5fe059798b",
+      "desc": "Manicured hand, red nail polish detail"
+    },
+    {
+      "file": "stock_04.jpg",
+      "source": "https://unsplash.com/photos/KVIlNRoGwxk",
+      "cdn": "https://images.unsplash.com/photo-1555820585-c5ae44394b79",
+      "desc": "Warm-toned close portrait, closed eyes — glam mood shot"
+    }
+  ],
+  "note": "All 6 scout photos rejected on Read-vet (competing-business branding or unverifiable/wrong venue). Page is fully stock-led; footer disclosure added per SOP.",
+  "dedupeReplacements": [
+    {
+      "file": "stock_01.jpg",
+      "source": "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=1600&q=80",
+      "note": "moody makeup brushes (noir palette)",
+      "reason": "previous file was a cross-client duplicate (or unverifiable shared \"real\" photo) — replaced with a distinct, orchestrator-vetted Unsplash stock image on 2026-07-12"
+    },
+    {
+      "file": "stock_02.jpg",
+      "source": "https://images.unsplash.com/photo-1457972729786-0411a3b2b626?w=1600&q=80",
+      "note": "manicure in progress (nails article)",
+      "reason": "previous file was a cross-client duplicate (or unverifiable shared \"real\" photo) — replaced with a distinct, orchestrator-vetted Unsplash stock image on 2026-07-12"
+    }
+  ]
 }

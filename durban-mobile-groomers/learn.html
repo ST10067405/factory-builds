@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Wag — Durban Mobile Groomers Journal</title>
+<meta name="description" content="Practical, breed-neutral dog-care reading for greater Durban pet parents, from the Durban Mobile Groomers journal.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How often should I book a mobile groom?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on breed and coat, but most dogs do well with a groom every 4 to 8 weeks. Shorter-coated dogs can often stretch longer; heavy-shedding or curly coats usually need it more often to avoid matting." } },
+    { "@type": "Question", "name": "Do I need to prepare anything before the groomer arrives?", "acceptedAnswer": { "@type": "Answer", "text": "A bit of space near a tap or outdoor point helps, plus somewhere for your dog to relax afterwards. Beyond that, mobile grooming is built to fit around your home as it is." } },
+    { "@type": "Question", "name": "Is mobile grooming less stressful for my dog?", "acceptedAnswer": { "@type": "Answer", "text": "Many dogs find it calmer — no car ride, no waiting room, and no other dogs to react to. Nervous dogs in particular often settle faster in a familiar space." } },
+    { "@type": "Question", "name": "How do I book?", "acceptedAnswer": { "@type": "Answer", "text": "Call or WhatsApp 068 334 7050. Online booking is coming to this site soon." } }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#FFFBF0;--surface:#fff;--ink:#233042;--mut:rgba(35,48,66,.72);
+  --brand:#2E9BD6;--accent:#FFC84A;--accent-ink:#7A5410;--brand-ink:#1D6A96;--line:rgba(35,48,66,.12);
+  --display:'Quicksand',sans-serif;--body:'Nunito',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand-ink);color:#fff;font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,251,240,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-size:21px;font-weight:700;color:var(--brand-ink);text-decoration:none}
+.nav-back{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-decoration:none;font-weight:600}
+.nav-back:hover{color:var(--brand-ink)}
+header{padding:90px 0 60px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--accent-ink);margin-bottom:18px}
+h1{font-family:var(--display);font-size:clamp(38px,6vw,64px);line-height:1.05;color:var(--brand-ink)}
+.intro{max-width:600px;margin:22px auto 0;color:var(--mut);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:18px;padding:30px 26px;cursor:pointer;transition:transform .3s cubic-bezier(0.22,1,0.36,1),box-shadow .3s;text-align:left}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(30,60,90,.14);outline:none}
+.post .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);font-weight:700}
+.post h3{font-family:var(--display);font-size:22px;margin:12px 0 8px;line-height:1.25;color:var(--brand-ink)}
+.post p{color:var(--mut);font-size:14.5px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);font-size:clamp(28px,4vw,42px);margin-bottom:28px;text-align:center;color:var(--brand-ink)}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:700;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent-ink);font-size:22px}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(29,58,80,.55);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--bg);max-width:680px;width:100%;border-radius:22px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(20,40,60,.4)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut)}
+.asheet .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);font-weight:700}
+.asheet h2{font-family:var(--display);font-size:clamp(26px,4vw,36px);margin:12px 0 20px;line-height:1.15;color:var(--brand-ink)}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--brand);color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:13px 26px;border-radius:99px}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s cubic-bezier(0.22,1,0.36,1),transform .6s cubic-bezier(0.22,1,0.36,1)}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--accent-ink);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for Durban Mobile Groomers by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">Durban Mobile Groomers</a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">The Journal</p>
+    <h1>The Wag</h1>
+    <p class="intro">Practical, breed-neutral dog-care reading for greater Durban pet parents — coats, nerves, humidity and getting the most from a mobile groom.</p>
+  </div>
+</header>
+
+<div class="wrap"><div class="grid" id="postGrid"></div></div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="qa">
+      <details><summary>How often should I book a mobile groom?</summary><p>It depends on breed and coat, but most dogs do well with a groom every 4 to 8 weeks. Shorter-coated dogs can often stretch longer; heavy-shedding or curly coats usually need it more often to avoid matting.</p></details>
+      <details><summary>Do I need to prepare anything before the groomer arrives?</summary><p>A bit of space near a tap or outdoor point helps, plus somewhere for your dog to relax afterwards. Beyond that, mobile grooming is built to fit around your home as it is.</p></details>
+      <details><summary>Is mobile grooming less stressful for my dog?</summary><p>Many dogs find it calmer — no car ride, no waiting room, and no other dogs to react to. Nervous dogs in particular often settle faster in a familiar space.</p></details>
+      <details><summary>How do I book?</summary><p>Call or WhatsApp 068 334 7050. Online booking is coming to this site soon.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap">Durban Mobile Groomers · Mobile service, greater Durban · Concept by Arkatype Digital — draft, awaiting client sign-off</div></footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#visit">Book your visit →</a>
+  </div>
+</div>
+
+<script>
+/* 6 audience-matched articles. body = HTML string (use <ul><li> for tips).
+   Generic educational advice only — no invented claims about the business. */
+const POSTS = [
+  { tag: 'At your door', title: 'What Actually Happens When Durban Mobile Groomers Arrives', teaser: 'A walk-through of a typical mobile grooming visit, from set-up to the final brush-out.', body: `
+    <p>Mobile grooming works differently to a shop visit, and knowing the flow can make the first booking feel less unfamiliar.</p>
+    <ul>
+      <li>The groomer sets up a small wash and grooming station, usually near a tap or outdoor point.</li>
+      <li>Your dog is bathed, dried and brushed one-on-one — no queue, no other dogs in the room.</li>
+      <li>Clipping, trimming or de-shedding happens next, based on coat and breed.</li>
+      <li>A final brush-out and tidy finishes the visit before the groomer packs up.</li>
+    </ul>
+    <p class="mut">Most visits take a similar amount of time to an in-shop groom — the difference is where it happens.</p>
+  ` },
+  { tag: 'Coat care', title: 'Getting Your Dog’s Coat Ready for Durban’s Humidity', teaser: 'Why coastal humidity changes how often coats need attention, and what to watch for between grooms.', body: `
+    <p>Durban's humidity keeps coats damp for longer after walks and baths, which affects matting, odour and skin comfort.</p>
+    <ul>
+      <li>Damp undercoats are more prone to matting — regular brushing helps prevent it building up.</li>
+      <li>Towel-dry thoroughly after rain or beach walks, especially around the neck, chest and paws.</li>
+      <li>Watch for a musty smell or flaky skin — both are common signs a coat needs attention sooner.</li>
+      <li>Lighter, shorter trims in summer months can make humid weather more comfortable for your dog.</li>
+    </ul>
+  ` },
+  { tag: 'Setting up', title: 'Driveway, Garage or Garden: Setting Up for a Mobile Groom', teaser: 'What kind of space works best when a groomer visits your home, wherever you live in greater Durban.', body: `
+    <p>Mobile grooming is flexible about space — most homes already have somewhere that works well.</p>
+    <ul>
+      <li>A driveway, garage or paved garden area near an outdoor tap is usually ideal.</li>
+      <li>Shade matters on hot days, both for comfort and for keeping products at the right temperature.</li>
+      <li>A small area to towel off and settle your dog afterwards helps them wind down calmly.</li>
+      <li>No dedicated space? A groomer can usually work with whatever's practical on the day.</li>
+    </ul>
+  ` },
+  { tag: 'Nervous dogs', title: 'Helping a Nervous Dog Through a Mobile Grooming Visit', teaser: 'Small ways to make a first mobile groom easier on an anxious or reactive dog.', body: `
+    <p>Nervous dogs often respond well to grooming at home, but a little preparation still helps.</p>
+    <ul>
+      <li>Keep your dog's normal routine before the visit — a walk beforehand can take the edge off.</li>
+      <li>Stay nearby but calm; dogs pick up on their owner's energy more than most people expect.</li>
+      <li>Let the groomer know about any specific triggers, like clippers, nail trims or being lifted.</li>
+      <li>Short, more frequent grooms can build confidence faster than one long, stressful session.</li>
+    </ul>
+  ` },
+  { tag: 'Coastal coats', title: 'Sand, Salt and Shedding: Coastal Durban Coat Care', teaser: 'Keeping a coat healthy for dogs that spend time on Durban beaches and in salt water.', body: `
+    <p>Sand and salt water are part of life for many Durban dogs, but they take a toll on skin and coat if left unrinsed.</p>
+    <ul>
+      <li>Rinse salt water off as soon as practical — it can dry out skin and irritate sensitive areas.</li>
+      <li>Sand trapped in paws and between toes is a common cause of small cuts and irritation.</li>
+      <li>Regular brushing removes loose salt-dried fur before it mats into the undercoat.</li>
+      <li>Dogs with frequent beach time often benefit from slightly more frequent grooming visits.</li>
+    </ul>
+  ` },
+  { tag: 'Booking', title: 'Picking a Mobile Grooming Slot That Suits Your Durban Street', teaser: 'Practical tips for timing a mobile groom around traffic, parking and your neighbourhood.', body: `
+    <p>A little thought about timing and access makes a mobile grooming visit smoother for everyone.</p>
+    <ul>
+      <li>Mid-morning or early afternoon slots often avoid peak school and work traffic.</li>
+      <li>Let the groomer know about parking, gate codes or security access ahead of time.</li>
+      <li>If your street is narrow or busy, mention a nearby alternative spot when you book.</li>
+      <li>Booking a regular slot (say, every 6 weeks) makes scheduling easier for both sides.</li>
+    </ul>
+  ` }
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
