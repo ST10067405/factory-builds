@@ -1,0 +1,44 @@
+{
+  "lead": "The LivingRoom at Summerhill Guest Estate",
+  "query": "The LivingRoom at Summerhill Guest Estate Durban fine",
+  "pulled": 6,
+  "kept": [
+    {
+      "file": "real_01.jpg",
+      "dim": "1440x1800",
+      "source": "DineXp",
+      "title": "The LivingRoom at Summerhill Guest Estate Menu, Prices & 5☆"
+    },
+    {
+      "file": "real_02.jpg",
+      "dim": "1440x1800",
+      "source": "DineXp",
+      "title": "The LivingRoom at Summerhill Guest Estate Menu, Prices & 5☆"
+    },
+    {
+      "file": "real_03.jpg",
+      "dim": "1920x1280",
+      "source": "summerhillkzn.com",
+      "title": "Summerhill Guest Estate | Home of the Livingroom"
+    },
+    {
+      "file": "real_04.jpg",
+      "dim": "1280x1920",
+      "source": "Summerhill Guest Estate",
+      "title": "LivingRoom | Summerhill Guest Estate"
+    },
+    {
+      "file": "real_05.jpg",
+      "dim": "1200x1600",
+      "source": "African Travel Bird",
+      "title": "Summerhill Guest Estate - The night I finally experienced .."
+    },
+    {
+      "file": "real_06.jpg",
+      "dim": "1200x1600",
+      "source": "African Travel Bird",
+      "title": "Summerhill Guest Estate - The night I finally experienced .."
+    }
+  ],
+  "note": "UNVETTED scout pool — Read-vet before using in a build (SOP)."
+}

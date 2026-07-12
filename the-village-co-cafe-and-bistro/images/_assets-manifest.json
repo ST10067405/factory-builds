@@ -1,0 +1,14 @@
+{
+  "lead": "The Village Co Cafe & Bistro",
+  "query": "The Village Co Cafe & Bistro Durban coffee",
+  "pulled": 3,
+  "kept": [
+    {
+      "file": "real_02.jpg",
+      "dim": "900x1200",
+      "source": "Coffee Magazine",
+      "title": "Cafe Focus: Village, Howick - Coffee Magazine"
+    }
+  ],
+  "note": "UNVETTED scout pool — Read-vet before using in a build (SOP)."
+}

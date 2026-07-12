@@ -1,0 +1,38 @@
+{
+  "lead": "DR KARMINI NAIDOO DENTAL SURGERY",
+  "query": "DR KARMINI NAIDOO DENTAL SURGERY Pinetown dental",
+  "pulled": 6,
+  "kept": [
+    {
+      "file": "real_01.jpg",
+      "dim": "1024x960",
+      "source": "Business in eThekwini Portal",
+      "title": "Primecure Pinetown Dental Services - Business in eThekwini P"
+    },
+    {
+      "file": "real_02.jpg",
+      "dim": "1000x700",
+      "source": "Aesthetic Dental Institute",
+      "title": "Meet Dr Naidoo – Aesthetic Dental Institute"
+    },
+    {
+      "file": "real_03.jpg",
+      "dim": "800x800",
+      "source": "LinkedIn",
+      "title": "Dr Karmini Naidoo - 1. Dental Surgeon, owner at Dr Karmini N"
+    },
+    {
+      "file": "real_04.jpg",
+      "dim": "800x800",
+      "source": "LinkedIn",
+      "title": "Dr Karmini Naidoo - 1. Dental Surgeon, owner at Dr Karmini N"
+    },
+    {
+      "file": "real_05.jpg",
+      "dim": "800x525",
+      "source": "The Bugle",
+      "title": "Private Dental Studio & Dr Kevin Naidoo | The Bugle - Weekly"
+    }
+  ],
+  "note": "UNVETTED scout pool — Read-vet before using in a build (SOP)."
+}

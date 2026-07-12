@@ -1,0 +1,14 @@
+{
+  "lead": "Elegant Dog Parlour",
+  "query": "Elegant Dog Parlour Westville pet",
+  "pulled": 2,
+  "kept": [
+    {
+      "file": "real_02.jpg",
+      "dim": "642x608",
+      "source": "Garden Route and Klein Karoo App",
+      "title": "Wags & Whiskers Pet Parlour Stilbaai Professional Grooming s"
+    }
+  ],
+  "note": "UNVETTED scout pool — Read-vet before using in a build (SOP)."
+}

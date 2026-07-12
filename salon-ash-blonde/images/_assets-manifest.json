@@ -1,0 +1,26 @@
+{
+  "lead": "Salon Ash Blonde",
+  "query": "Salon Ash Blonde Waterfall beauty",
+  "pulled": 3,
+  "kept": [
+    {
+      "file": "real_01.jpg",
+      "dim": "1200x630",
+      "source": "iVote",
+      "title": "Ash Blonde Unisex Salon in Waterfall, South Africa"
+    },
+    {
+      "file": "real_02.jpg",
+      "dim": "736x736",
+      "source": "Pinterest",
+      "title": "10 Hair ideas | ashy lavender balayage, ash blonde with lave"
+    },
+    {
+      "file": "real_03.jpg",
+      "dim": "600x780",
+      "source": "Fab Mood",
+      "title": "Rooted Ash Blonde with Sleek Waterfall Face-Framing Layers"
+    }
+  ],
+  "note": "UNVETTED scout pool — Read-vet before using in a build (SOP)."
+}

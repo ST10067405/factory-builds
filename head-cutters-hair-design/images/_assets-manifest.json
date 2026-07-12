@@ -1,0 +1,32 @@
+{
+  "lead": "Head Cutters Hair Design",
+  "query": "Head Cutters Hair Design Westville hair",
+  "pulled": 6,
+  "kept": [
+    {
+      "file": "real_01.jpg",
+      "dim": "1280x854",
+      "source": "Fresha",
+      "title": "Best Hair Coloring near me in Dawncliffe, Westville | Fresha"
+    },
+    {
+      "file": "real_02.jpg",
+      "dim": "1280x853",
+      "source": "Fresha",
+      "title": "Best Hair Coloring near me in Dawncliffe, Westville | Fresha"
+    },
+    {
+      "file": "real_03.jpg",
+      "dim": "1280x852",
+      "source": "Fresha",
+      "title": "Best Hair Coloring near me in Dawncliffe, Westville | Fresha"
+    },
+    {
+      "file": "real_05.jpg",
+      "dim": "1024x768",
+      "source": "our vanity list",
+      "title": "Headcutters Hair Design - OUR VANITY LIST"
+    }
+  ],
+  "note": "UNVETTED scout pool — Read-vet before using in a build (SOP)."
+}

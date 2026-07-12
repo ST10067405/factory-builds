@@ -1,0 +1,14 @@
+{
+  "lead": "Chi Chis",
+  "query": "Chi Chis Westville hair",
+  "pulled": 1,
+  "kept": [
+    {
+      "file": "real_01.jpg",
+      "dim": "1280x720",
+      "source": "Fresha",
+      "title": "Chi Chis - 17 Burlington Dr, Dawncliffe, Westville, 3629, So"
+    }
+  ],
+  "note": "UNVETTED scout pool — Read-vet before using in a build (SOP)."
+}

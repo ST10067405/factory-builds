@@ -1,0 +1,32 @@
+{
+  "lead": "CJ Electrical & Solar",
+  "query": "CJ Electrical & Solar Durban electrician",
+  "pulled": 4,
+  "kept": [
+    {
+      "file": "real_01.jpg",
+      "dim": "1800x1200",
+      "source": "Lake Mac Family Life",
+      "title": "CJ Electrical & Solar Pty Ltd – Lake Mac Family Life"
+    },
+    {
+      "file": "real_02.jpg",
+      "dim": "650x429",
+      "source": "Lake Mac Family Life",
+      "title": "CJ Electrical & Solar Pty Ltd – Lake Mac Family Life"
+    },
+    {
+      "file": "real_03.jpg",
+      "dim": "650x429",
+      "source": "Lake Mac Family Life",
+      "title": "CJ Electrical & Solar Pty Ltd – Lake Mac Family Life"
+    },
+    {
+      "file": "real_04.jpg",
+      "dim": "585x385",
+      "source": "JC Solar Panels",
+      "title": "Electrical services in Gauteng - JC Solar Panels"
+    }
+  ],
+  "note": "UNVETTED scout pool — Read-vet before using in a build (SOP)."
+}
