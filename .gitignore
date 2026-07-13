@@ -6,3 +6,5 @@ package.json
 package-lock.json
 .claude/skills/
 .impeccable/
+
+scripts/cloudflared.exe

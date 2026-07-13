@@ -146,7 +146,30 @@ function insideAllowed(p) {
 function sendJSON(res, code, obj) { const b = JSON.stringify(obj); res.writeHead(code, { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(b) }); res.end(b); }
 function body(req) { return new Promise(r => { let d = ''; req.on('data', c => d += c); req.on('end', () => r(d)); }); }
 
+// ---------- optional HTTP Basic Auth (for remote/tunnel access) ----------
+// Enabled when BOARD_PASSWORD env var or "password" in board.config.json is set.
+// Local-only usage with no password configured behaves exactly as before.
+const PASSWORD = process.env.BOARD_PASSWORD || CONFIG.password || null;
+function authorized(req) {
+  if (!PASSWORD) return true;
+  const h = req.headers['authorization'] || '';
+  if (!h.startsWith('Basic ')) return false;
+  let user = '', pass = '';
+  try {
+    const dec = Buffer.from(h.slice(6), 'base64').toString('utf8');
+    const i = dec.indexOf(':');
+    user = dec.slice(0, i); pass = dec.slice(i + 1);
+  } catch (e) { return false; }
+  const a = Buffer.from(pass), b = Buffer.from(PASSWORD);
+  return a.length === b.length && crypto.timingSafeEqual(a, b);
+}
+if (PASSWORD) console.log('(basic auth ENABLED — username "arkatype", password from config/env)');
+
 const server = http.createServer(async (req, res) => {
+  if (!authorized(req)) {
+    res.writeHead(401, { 'WWW-Authenticate': 'Basic realm="Arkatype Factory Board"', 'Content-Type': 'text/plain' });
+    return res.end('auth required');
+  }
   const u = new URL(req.url, 'http://localhost');
   const p = decodeURIComponent(u.pathname);
 

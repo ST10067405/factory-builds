@@ -1,4 +1,5 @@
 {
-  "_comment": "Copy this file to board.config.json and edit vaultPath for THIS machine. If the vault folder isn't present, vault-linked documents just won't open — everything else on the board (all project cards, previews, notes, graph) still works with zero setup.",
-  "vaultPath": "C:/Users/jaime/Desktop/obsidian-vault"
+  "_comment": "Copy this file to board.config.json and edit vaultPath for THIS machine. If the vault folder isn't present, vault-linked documents just won't open — everything else on the board (all project cards, previews, notes, graph) still works with zero setup. Optional: set \"password\" to enable HTTP Basic Auth (username: arkatype) — REQUIRED before exposing the board through a tunnel (start-board-remote.bat).",
+  "vaultPath": "C:/Users/jaime/Desktop/obsidian-vault",
+  "password": ""
 }
