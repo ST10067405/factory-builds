@@ -219,6 +219,7 @@ function card(p){
       <div><div class="lbl">Next action</div><input class="na" placeholder="Next action…" value="${esc(p.nextAction)}"></div>
       <div class="actions">
         <button class="act primary review">🔍 Review</button>
+        <button class="act finish">🎛 Finish</button>
         <a class="act" href="/${p.slug}/" target="_blank">↗ Site</a>
         ${p.publicSlug?`<a class="act" href="${PROD_BASE}/${p.publicSlug}/" target="_blank">🌐 Live</a>`:''}
         ${p.hasLearn?`<a class="act" href="/${p.slug}/learn.html" target="_blank">📓 Journal</a>`:''}
@@ -238,6 +239,7 @@ function card(p){
   const na=el.querySelector('.na'); na.onblur=()=>{ if(na.value!==p.nextAction){ p.nextAction=na.value; save({nextAction:na.value}); } };
   el.querySelector('.open-ov').onclick=()=>window.open('/'+p.slug+'/','_blank');
   el.querySelector('.review').onclick=()=>{ location.href='review.html?slug='+p.slug; };
+  el.querySelector('.finish').onclick=()=>{ location.href='cockpit.html?slug='+p.slug; };
   el.querySelector('.openAssets').onclick=()=>openSlug(p.slug);
   el.querySelector('.slug-copy').onclick=()=>{ if(!p.publicSlug){toast('No public slug yet');return;} navigator.clipboard.writeText(PROD_BASE+'/'+p.publicSlug+'/'); toast('Live URL copied'); };
   el._preview = el.querySelector('.preview'); el._iframe = el.querySelector('iframe');

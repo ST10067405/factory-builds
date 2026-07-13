@@ -38,6 +38,17 @@ function loadConfig() {
 const CONFIG = loadConfig();
 const VAULT = CONFIG.vaultPath ? path.resolve(CONFIG.vaultPath) : null;
 const VAULT_OK = !!(VAULT && fs.existsSync(VAULT));
+
+// ---------- Cockpit shelves (per-machine, degrade gracefully like the vault) ----------
+// effectsPath  → the factory-effects folder (Shelf A: UI-effects library, served at /effects-lib/)
+// assetsPath   → direction-engine/assets    (Shelf C: per-client asset folders, served at /client-assets/)
+const GRIGO = 'C:/Users/jaime/Desktop/Instagram Workflow/webdesign-inspiration/grigoletto-pack';
+const EFFECTS_DIR = path.resolve(CONFIG.effectsPath || path.join(GRIGO, 'factory-effects'));
+const ASSETS_DIR = path.resolve(CONFIG.assetsPath || path.join(GRIGO, 'direction-engine/assets'));
+const EFFECTS_OK = fs.existsSync(EFFECTS_DIR);
+const ASSETS_OK = fs.existsSync(ASSETS_DIR);
+if (!EFFECTS_OK) console.log(`(effectsPath not found: ${EFFECTS_DIR} — Cockpit effects shelf will show as unavailable)`);
+if (!ASSETS_OK) console.log(`(assetsPath not found: ${ASSETS_DIR} — Cockpit client-asset shelves will show as unavailable)`);
 if (!fs.existsSync(CONFIG_FILE)) {
   console.log(`(no board.config.json — copy board.config.example.json to board.config.json and set vaultPath for this machine)`);
 }
@@ -181,7 +192,7 @@ const server = http.createServer(async (req, res) => {
     const slug = p.slice('/api/project/'.length);
     if (!listBuilds().includes(slug)) return sendJSON(res, 404, { error: 'unknown slug' });
     let patch; try { patch = JSON.parse(await body(req)); } catch (e) { return sendJSON(res, 400, { error: 'bad json' }); }
-    const allowed = ['title', 'status', 'priority', 'notes', 'nextAction', 'caveats', 'notionUrl', 'docs', 'tags', 'sources', 'changeNotes'];
+    const allowed = ['title', 'status', 'priority', 'notes', 'nextAction', 'caveats', 'notionUrl', 'docs', 'tags', 'sources', 'changeNotes', 'cockpit'];
     const data = loadData();
     data.projects[slug] = data.projects[slug] || {};
     for (const k of allowed) if (k in patch) data.projects[slug][k] = patch[k];
@@ -232,6 +243,64 @@ const server = http.createServer(async (req, res) => {
     return sendJSON(res, 200, { ok: true, opened: target });
   }
   if (p === '/api/preflight/refresh' && req.method === 'POST') { pfCache = { at: 0, result: null }; return sendJSON(res, 200, preflight()); }
+
+  // ----- Cockpit APIs -----
+  // Effects list (Shelf A): parsed once from factory-effects/gallery/index.html so the
+  // gallery file stays the single source of truth as the library grows.
+  if (p === '/api/effects' && req.method === 'GET') {
+    if (!EFFECTS_OK) return sendJSON(res, 200, { available: false, effects: [] });
+    try {
+      const html = fs.readFileSync(path.join(EFFECTS_DIR, 'gallery', 'index.html'), 'utf8');
+      const start = html.indexOf('const FX = [');
+      if (start < 0) throw new Error('FX array not found');
+      let i = html.indexOf('[', start), depth = 0, end = -1;
+      for (let j = i; j < html.length; j++) {
+        if (html[j] === '[') depth++;
+        else if (html[j] === ']') { depth--; if (depth === 0) { end = j; break; } }
+      }
+      const D = { nocturne: 'http://localhost:5510', prism: 'http://localhost:5530', lark: 'http://localhost:5540', botanica: 'http://localhost:5550', glass: 'http://localhost:5570' };
+      const effects = new Function('D', 'return ' + html.slice(i, end + 1) + ';')(D);
+      return sendJSON(res, 200, { available: true, count: effects.length, effects });
+    } catch (e) { return sendJSON(res, 200, { available: false, effects: [], error: e.message }); }
+  }
+  // Combined asset shelves (Shelf C + the build's own images/) for one client.
+  if (p.startsWith('/api/assets/') && req.method === 'GET') {
+    const slug = p.slice('/api/assets/'.length);
+    if (!listBuilds().includes(slug)) return sendJSON(res, 404, { error: 'unknown slug' });
+    const imgDir = path.join(ROOT, slug, 'images');
+    const buildImages = fs.existsSync(imgDir)
+      ? fs.readdirSync(imgDir).filter(f => /\.(jpe?g|png|webp|gif|svg)$/i.test(f)).sort()
+      : [];
+    const shelves = {}; let manifest = null; let shelvesAvailable = false;
+    if (ASSETS_OK && fs.existsSync(path.join(ASSETS_DIR, slug))) {
+      shelvesAvailable = true;
+      for (const cat of ['location', 'props', 'staff', 'brand', 'inspo', 'generated']) {
+        const d = path.join(ASSETS_DIR, slug, cat);
+        shelves[cat] = fs.existsSync(d)
+          ? fs.readdirSync(d).filter(f => /\.(jpe?g|png|webp|gif|svg|mp4|webm)$/i.test(f)).sort()
+          : [];
+      }
+      manifest = readJSON(path.join(ASSETS_DIR, slug, 'manifest.json'), null);
+    }
+    return sendJSON(res, 200, { slug, buildImages, shelvesAvailable, shelves, manifest });
+  }
+
+  // ----- Cockpit static mounts (read-only, path-guarded) -----
+  if (p.startsWith('/effects-lib/') || p.startsWith('/client-assets/')) {
+    const isFx = p.startsWith('/effects-lib/');
+    const base = isFx ? EFFECTS_DIR : ASSETS_DIR;
+    if (!(isFx ? EFFECTS_OK : ASSETS_OK)) { res.writeHead(404, { 'Content-Type': 'text/plain' }); return res.end('shelf not available on this machine'); }
+    let rel2 = p.slice(isFx ? '/effects-lib/'.length : '/client-assets/'.length);
+    if (rel2 === '' || rel2.endsWith('/')) rel2 += 'index.html';
+    const f = path.resolve(base, rel2);
+    if (!f.startsWith(base)) { res.writeHead(403); return res.end('forbidden'); }
+    return fs.readFile(f, (err, buf) => {
+      if (err) { res.writeHead(404, { 'Content-Type': 'text/plain' }); return res.end('404 ' + rel2); }
+      const ext = path.extname(f).toLowerCase();
+      res.writeHead(200, { 'Content-Type': MIME[ext] || 'application/octet-stream', 'Cache-Control': 'no-store' });
+      res.end(buf);
+    });
+  }
 
   // ----- static (repo root) -----
   let rel = p === '/' ? '/board/index.html' : p;
