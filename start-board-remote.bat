@@ -34,6 +34,9 @@ if not exist "%CFD%" (
   if not exist "%CFD%" ( echo [ERROR] cloudflared download failed & pause & exit /b 1 )
 )
 
+rem -- kill any stuck/old tunnel so this run gives exactly ONE fresh URL ----------
+taskkill /im cloudflared.exe /f >nul 2>&1
+
 rem -- start the board server (skips if port already busy) -----------------------
 start "factory-board" /min cmd /c "node scripts\board-server.js"
 timeout /t 2 /nobreak >nul
