@@ -38,20 +38,54 @@ header{flex:none;display:flex;align-items:center;gap:14px;padding:10px 18px;back
 .openbtn{background:var(--panel2);border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:7px 13px;cursor:pointer;font-size:12.5px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:border-color .25s var(--ease)}
 .openbtn:hover{border-color:var(--ours)}
 
-/* ---------- main layout ---------- */
-main{flex:1;min-height:0;display:grid;grid-template-columns:58% 1fr;gap:14px;padding:14px 18px}
-@media (max-width:1100px){
-  main{grid-template-columns:1fr;grid-auto-rows:56vh;overflow-y:auto}
+/* ---------- main layout: loot bar | stage | right column ---------- */
+main{flex:1;min-height:0;display:grid;grid-template-columns:240px 1fr 380px;gap:14px;padding:14px 18px}
+@media (max-width:900px){
+  main{grid-template-columns:1fr !important;grid-auto-rows:56vh;overflow-y:auto}
 }
-.stage,.library{display:flex;flex-direction:column;min-height:0;background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+body.pane-side main{grid-template-columns:1fr !important}
+body.pane-side .lootbar,body.pane-side .stage{display:none}
+.lootbar,.stage,.rightcol{display:flex;flex-direction:column;min-height:0;background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
 
-/* ---------- stage: section chips + iframe + director ---------- */
-.stage-head{flex:none;padding:10px 12px;border-bottom:1px solid var(--line);overflow-x:auto;white-space:nowrap;scrollbar-width:thin}
+/* ---------- loot bar ---------- */
+.lootbar-head{flex:none;display:flex;align-items:center;gap:6px;padding:10px;border-bottom:1px solid var(--line)}
+.fx-search{flex:1;min-width:0;background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:6px 9px;font-size:12px;outline:none;transition:border-color .25s var(--ease)}
+.fx-search:focus{border-color:var(--ours)}
+.lootbar-toggle{flex:none;background:var(--panel2);border:1px solid var(--line);color:var(--body);width:26px;height:26px;border-radius:7px;cursor:pointer;font-size:13px;transition:border-color .25s var(--ease),color .25s var(--ease)}
+.lootbar-toggle:hover{color:var(--ink);border-color:var(--ours)}
+.lootbar.collapsed .fx-search,.lootbar.collapsed .lootbar-body,.lootbar.collapsed .lootbar-foot{display:none}
+.lootbar.collapsed .lootbar-head{justify-content:center}
+.lootbar-body{flex:1;min-height:0;overflow-y:auto;padding:8px 10px}
+.loot-group{margin-bottom:10px}
+.loot-cat{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--mut);padding:6px 4px 4px}
+.loot-item{position:relative;display:flex;align-items:center;gap:7px;width:100%;padding:6px 7px;border:0;background:transparent;border-radius:8px;cursor:pointer;font-size:12px;color:var(--body);text-align:left;transition:background .2s var(--ease),color .2s var(--ease)}
+.loot-item:hover,.loot-item:focus-visible{background:var(--panel2);color:var(--ink)}
+.loot-dot{flex:none;width:7px;height:7px;border-radius:50%}
+.dot-ours{background:var(--ours)} .dot-bits{background:var(--bits)} .dot-figma{background:var(--figma)} .dot-build{background:var(--build)}
+.loot-name{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.loot-live{flex:none;font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--good);border:1px solid rgba(91,214,160,.4);border-radius:4px;padding:1px 4px}
+.loot-tip{display:none;position:absolute;left:100%;top:0;margin-left:8px;width:200px;background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:11.5px;color:var(--body);line-height:1.4;z-index:20;box-shadow:0 8px 24px rgba(0,0,0,.4)}
+.loot-item:hover .loot-tip,.loot-item:focus-visible .loot-tip{display:block}
+.loot-empty{color:var(--mut);font-size:12px;padding:10px 4px;line-height:1.5}
+.lootbar-foot{flex:none;padding:9px 12px;border-top:1px solid var(--line)}
+.lootbar-foot a{color:var(--ours);text-decoration:none;font-size:11.5px}
+.lootbar-foot a:hover{text-decoration:underline}
+
+/* ---------- stage: source chips + section chips + iframe + director ---------- */
+.stage-head{flex:none;border-bottom:1px solid var(--line)}
+.chips-row{padding:10px 12px;overflow-x:auto;white-space:nowrap;scrollbar-width:thin}
 .chips{display:inline-flex;gap:7px}
 .chip{background:var(--panel2);border:1px solid var(--line);color:var(--body);padding:6px 12px;border-radius:99px;cursor:pointer;font-size:11.5px;white-space:nowrap;transition:border-color .25s var(--ease),color .25s var(--ease),background .25s var(--ease)}
 .chip:hover{color:var(--ink)}
 .chip.on{background:var(--ours);color:#062018;border-color:var(--ours);font-weight:650}
 .hint{color:var(--mut);font-size:12px;padding:4px 2px}
+.src-chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 12px 10px}
+.src-chip{background:var(--panel2);border:1px solid var(--line);color:var(--body);padding:4px 10px;border-radius:99px;cursor:pointer;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;transition:border-color .25s var(--ease),color .25s var(--ease)}
+.src-chip:hover{color:var(--ink);border-color:var(--bits)}
+.src-chip-instagram{color:#fd6fae;border-color:rgba(253,111,174,.35)}
+.src-chip-facebook{color:#6aa8ff;border-color:rgba(106,168,255,.35)}
+.src-chip-maps{color:#5bd6a0;border-color:rgba(91,214,160,.35)}
+.src-chip-website{color:var(--body)}
 .frame-wrap{flex:1 1 auto;min-height:120px;margin:12px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#0a0c10;position:relative}
 .frame-wrap iframe{width:100%;height:100%;border:0;background:#fff;display:block}
 .director{flex:none;max-height:42%;overflow-y:auto;border-top:1px solid var(--line);padding:14px 16px 16px;background:var(--panel2)}
@@ -73,19 +107,46 @@ main{flex:1;min-height:0;display:grid;grid-template-columns:58% 1fr;gap:14px;pad
 .src-figma{background:rgba(239,172,106,.15);color:var(--figma);border:1px solid rgba(239,172,106,.35)}
 .src-build{background:rgba(195,155,255,.15);color:var(--build);border:1px solid rgba(195,155,255,.35)}
 
-/* ---------- library ---------- */
-.tabs{flex:none;display:flex;gap:4px;padding:10px 12px;border-bottom:1px solid var(--line)}
-.tab{background:transparent;border:1px solid var(--line);color:var(--mut);padding:7px 14px;border-radius:8px;cursor:pointer;font-size:12.5px;font-weight:600;transition:border-color .25s var(--ease),color .25s var(--ease),background .25s var(--ease)}
-.tab:hover{color:var(--ink)}
-.tab.on{background:var(--panel2);color:var(--ink);border-color:var(--bits)}
-.tabpane{flex:1;min-height:0;position:relative}
-#paneFx{overflow:hidden}
-#paneFx iframe{width:100%;height:100%;border:0;background:#fff;display:block}
-.fx-unavailable{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px;color:var(--body);font-size:13px;line-height:1.6}
-#paneAssets{overflow-y:auto;padding:14px}
+/* ---------- right column: OpenArt Director (top) + Assets shelf (bottom) ---------- */
+.rc-head{flex:none;display:flex;align-items:center;gap:8px;padding:10px 12px;border-bottom:1px solid var(--line)}
+.rc-icon-btn{background:var(--panel2);border:1px solid var(--line);color:var(--body);border-radius:8px;padding:6px 10px;cursor:pointer;font-size:11.5px;white-space:nowrap;transition:border-color .25s var(--ease),color .25s var(--ease)}
+.rc-icon-btn:hover{color:var(--ink);border-color:var(--ours)}
+.rightcol.collapsed .rc-body{display:none}
+.rightcol.collapsed .rc-head{justify-content:center}
+.rightcol.collapsed .rc-head .grow,.rightcol.collapsed #detachBtn{display:none}
+body.pane-side #rcCollapseToggle,body.pane-side #detachBtn{display:none}
+.rc-body{flex:1;min-height:0;display:flex;flex-direction:column;overflow:hidden}
+.openart{flex:1 1 50%;min-height:0;overflow-y:auto;padding:14px 16px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:10px}
+.openart-head h2{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut);font-weight:650}
+#rcSection{background:var(--panel2);border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:7px 9px;font-size:12px;outline:none;width:100%;transition:border-color .25s var(--ease)}
+#rcSection:focus{border-color:var(--ours)}
+.card-types{display:flex;gap:8px}
+.card-type-btn{flex:1;background:var(--panel2);border:1px solid var(--line);color:var(--body);border-radius:9px;padding:9px 6px;cursor:pointer;font-size:11px;font-weight:700;letter-spacing:.05em;transition:border-color .25s var(--ease),color .25s var(--ease)}
+.card-type-btn:hover{color:var(--ink);border-color:var(--build)}
+#openartPrompt{width:100%;background:var(--panel2);border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:10px 11px;resize:vertical;min-height:110px;outline:none;font-size:12.5px;font-family:inherit;transition:border-color .25s var(--ease)}
+#openartPrompt:focus{border-color:var(--build)}
+.openart-actions{display:flex;gap:8px}
+.openart-actions button{flex:1;background:var(--panel2);border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:8px 10px;cursor:pointer;font-size:12px;font-weight:600;transition:border-color .25s var(--ease)}
+.openart-actions button:hover{border-color:var(--build)}
+.openart-note{font-size:11px;color:var(--build)}
+.prompt-kit{border-top:1px solid var(--line);padding-top:8px}
+.pk-toggle{background:transparent;border:0;color:var(--body);cursor:pointer;font-size:11.5px;font-weight:650;text-transform:uppercase;letter-spacing:.08em;padding:4px 0;width:100%;text-align:left}
+.pk-toggle:hover{color:var(--ink)}
+.pk-body{max-height:260px;overflow-y:auto;margin-top:6px;display:flex;flex-direction:column;gap:6px}
+.pk-block{border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.pk-block-head{width:100%;text-align:left;background:var(--panel2);border:0;color:var(--ink);padding:8px 10px;cursor:pointer;font-size:12px;font-weight:600}
+.pk-block-head:hover{color:var(--ours)}
+.pk-block-body{padding:8px 10px;background:var(--panel)}
+.pk-snippet{font-size:11.5px;color:var(--body);line-height:1.5;margin-bottom:8px;white-space:pre-wrap}
+.pk-insert{background:var(--panel2);border:1px solid var(--line);color:var(--ours);border-radius:7px;padding:5px 10px;cursor:pointer;font-size:11.5px;font-weight:600;transition:border-color .25s var(--ease)}
+.pk-insert:hover{border-color:var(--ours)}
+.assets-shelf{flex:1 1 50%;min-height:0;overflow-y:auto;padding:14px}
+
+/* ---------- shared: upload zone + asset thumbs (reused by assets shelf) ---------- */
 .upload-zone{border:1.5px dashed var(--line);border-radius:12px;padding:20px 14px;text-align:center;color:var(--body);font-size:12.5px;cursor:pointer;transition:border-color .25s var(--ease),background .25s var(--ease);margin-bottom:16px}
 .upload-zone:hover,.upload-zone.over{border-color:var(--ours);color:var(--ink);background:var(--panel2)}
 .upload-zone b{color:var(--ours)}
+.upload-zone .oa-hint{display:block;margin-top:6px;color:var(--build);font-size:11px}
 .asset-group{margin-bottom:18px}
 .grp-lbl{font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--mut);margin-bottom:8px}
 .thumb-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:8px}
@@ -129,8 +190,20 @@ footer.legend .lg{font-weight:700}
 </header>
 
 <main id="main">
+  <aside class="lootbar" id="lootbar">
+    <div class="lootbar-head">
+      <input type="text" id="fxSearch" class="fx-search" placeholder="Search effects…" autocomplete="off">
+      <button class="lootbar-toggle" id="lootbarToggle" type="button" title="Collapse">‹</button>
+    </div>
+    <div class="lootbar-body" id="lootbarBody"><p class="loot-empty">Loading…</p></div>
+    <div class="lootbar-foot"><a href="/effects-lib/gallery/" id="fxGalleryLink" target="_blank" style="display:none">open full gallery ↗</a></div>
+  </aside>
+
   <section class="stage" id="stage">
-    <div class="stage-head"><div class="chips" id="secChips"><span class="hint">Loading site preview…</span></div></div>
+    <div class="stage-head">
+      <div class="chips-row"><div class="chips" id="secChips"><span class="hint">Loading site preview…</span></div></div>
+      <div class="src-chips" id="srcChips" style="display:none"></div>
+    </div>
     <div class="frame-wrap"><iframe id="siteFrame" title="Site preview"></iframe></div>
     <div class="director disabled" id="director">
       <div class="director-head">
@@ -169,19 +242,38 @@ footer.legend .lg{font-weight:700}
     </div>
   </section>
 
-  <section class="library" id="library">
-    <div class="tabs">
-      <button class="tab on" data-tab="fx" type="button">UI Effects</button>
-      <button class="tab" data-tab="assets" type="button">Assets</button>
+  <section class="rightcol" id="rightcol">
+    <div class="rc-head">
+      <span style="font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--mut);font-weight:650">Director</span>
+      <div class="grow"></div>
+      <button class="rc-icon-btn" id="rcCollapseToggle" type="button" title="Collapse panel">⇲</button>
+      <button class="rc-icon-btn" id="detachBtn" type="button" title="Open this panel in its own window">⇱ Detach panel</button>
     </div>
-    <div class="tabpane" id="paneFx">
-      <iframe id="fxFrame" title="Effects library" style="display:none"></iframe>
-      <div class="fx-unavailable" id="fxUnavailable" style="display:none">Effects shelf isn't on this machine — clone grigoletto-pack or set effectsPath in board.config.json.</div>
-    </div>
-    <div class="tabpane" id="paneAssets" style="display:none">
-      <div class="upload-zone" id="dropZone">Drag an image here, <b>paste</b> (Ctrl+V), or <b>click</b> to pick — saves straight into this client's <code>images/</code> folder.</div>
-      <input type="file" id="fileInput" accept="image/*" multiple hidden>
-      <div id="assetGrid"></div>
+    <div class="rc-body" id="rcBody">
+      <div class="openart" id="openart">
+        <div class="openart-head"><h2>🎨 OpenArt Director</h2></div>
+        <select id="rcSection"></select>
+        <div class="card-types">
+          <button class="card-type-btn" data-type="asset" type="button">ASSET</button>
+          <button class="card-type-btn" data-type="space" type="button">SPACE</button>
+          <button class="card-type-btn" data-type="location" type="button">LOCATION</button>
+        </div>
+        <textarea id="openartPrompt" placeholder="Pick ASSET / SPACE / LOCATION above to scaffold a prompt, or write your own…"></textarea>
+        <div class="openart-actions">
+          <button id="copyPrompt" type="button">📋 Copy prompt</button>
+          <button id="openOpenArt" type="button">Open OpenArt ↗</button>
+        </div>
+        <p class="openart-note">OpenArt is metered — premium clients only.</p>
+        <div class="prompt-kit" id="promptKit" style="display:none">
+          <button class="pk-toggle" id="pkToggle" type="button">Prompt kit ▾</button>
+          <div class="pk-body" id="pkBody" style="display:none"></div>
+        </div>
+      </div>
+      <div class="assets-shelf" id="assetsShelf">
+        <div class="upload-zone" id="dropZone">Drag an image here, <b>paste</b> (Ctrl+V), or <b>click</b> to pick — saves straight into this client's <code>images/</code> folder.<span class="oa-hint">drag OpenArt results here — they file into the client's folder</span></div>
+        <input type="file" id="fileInput" accept="image/*" multiple hidden>
+        <div id="assetGrid"></div>
+      </div>
     </div>
   </section>
 </main>
@@ -193,13 +285,17 @@ footer.legend .lg{font-weight:700}
 
 <script>
 const $ = s => document.querySelector(s);
-const slug = new URLSearchParams(location.search).get('slug');
-let PROJ = null, EFFECTS = null, ASSETS = null;
+const qs = new URLSearchParams(location.search);
+const slug = qs.get('slug');
+const paneSide = qs.get('pane') === 'side';
+let PROJ = null, EFFECTS = null, ASSETS = null, PROMPT_KIT = null;
 let cockpit = { sections:{}, updatedAt:null };
 let sectionsList = [];
 let selectedSection = null;
 let sectionsResolved = false;
 let saveTimer = null;
+let lootCollapsed = window.innerWidth < 1200;
+let rcCollapsed = false;
 
 const FALLBACK = [
   {key:'hero',label:'Hero',el:null},
@@ -247,6 +343,36 @@ async function doSave(){
   } catch(e){ setSaveState('error'); }
 }
 
+/* ---------- layout: loot bar / right column widths, collapse, detach ---------- */
+function updateMainGrid(){
+  const main = $('#main');
+  if(paneSide){ main.style.gridTemplateColumns = '1fr'; return; }
+  const lootW = lootCollapsed ? '44px' : '240px';
+  const rcW = rcCollapsed ? '44px' : '380px';
+  main.style.gridTemplateColumns = lootW + ' 1fr ' + rcW;
+}
+function setLootCollapsed(v){
+  lootCollapsed = v;
+  $('#lootbar').classList.toggle('collapsed', v);
+  $('#lootbarToggle').textContent = v ? '›' : '‹';
+  updateMainGrid();
+}
+function wireRightColCollapse(){
+  $('#rcCollapseToggle').onclick = () => {
+    rcCollapsed = !rcCollapsed;
+    $('#rightcol').classList.toggle('collapsed', rcCollapsed);
+    updateMainGrid();
+  };
+  $('#detachBtn').onclick = () => {
+    const w=760,h=920;
+    window.open('cockpit.html?slug='+encodeURIComponent(slug)+'&pane=side','_blank',
+      'width='+w+',height='+h+',left='+Math.max(0,screen.availWidth-w)+',top=40');
+    rcCollapsed = true;
+    $('#rightcol').classList.add('collapsed');
+    updateMainGrid();
+  };
+}
+
 /* ---------- stage: sections ---------- */
 function wireIframe(){
   const ifr = $('#siteFrame');
@@ -281,19 +407,48 @@ function trySections(){
 }
 function renderChips(){
   const wrap = $('#secChips');
-  if(!sectionsList.length){ wrap.innerHTML = '<span class="hint">No sections detected.</span>'; return; }
-  wrap.innerHTML = sectionsList.map(s => '<button type="button" class="chip" data-key="'+esc(s.key)+'">'+esc(s.label)+'</button>').join('');
-  wrap.querySelectorAll('.chip').forEach(b => b.onclick = () => selectSection(b.dataset.key));
+  if(!sectionsList.length){
+    wrap.innerHTML = '<span class="hint">No sections detected.</span>';
+  } else {
+    wrap.innerHTML = sectionsList.map(s => '<button type="button" class="chip" data-key="'+esc(s.key)+'">'+esc(s.label)+'</button>').join('');
+    wrap.querySelectorAll('.chip').forEach(b => b.onclick = () => selectSection(b.dataset.key));
+  }
+  renderSectionSelect();
   $('#director').classList.remove('disabled');
-  const keep = selectedSection && sectionsList.some(s => s.key===selectedSection) ? selectedSection : sectionsList[0].key;
-  selectSection(keep);
+  const keep = selectedSection && sectionsList.some(s => s.key===selectedSection) ? selectedSection : (sectionsList[0] && sectionsList[0].key);
+  if(keep) selectSection(keep);
+}
+function renderSectionSelect(){
+  const sel = $('#rcSection');
+  if(!sel) return;
+  sel.innerHTML = sectionsList.map(s => '<option value="'+esc(s.key)+'">'+esc(s.label)+'</option>').join('');
+  if(selectedSection) sel.value = selectedSection;
 }
 function selectSection(key){
   selectedSection = key;
   document.querySelectorAll('#secChips .chip').forEach(b => b.classList.toggle('on', b.dataset.key===key));
+  const sel = $('#rcSection');
+  if(sel && sel.value !== key) sel.value = key;
   loadRecipe(key);
   const s = sectionsList.find(x => x.key===key);
   if(s && s.el){ try{ s.el.scrollIntoView({behavior:'smooth', block:'start'}); } catch(e){} }
+}
+
+/* ---------- source chips (compare site to client's socials) ---------- */
+function renderSourceChips(){
+  const el = $('#srcChips');
+  if(!el) return;
+  const sources = (PROJ && PROJ.sources) || [];
+  if(!sources.length){ el.style.display='none'; el.innerHTML=''; return; }
+  el.style.display = '';
+  el.innerHTML = sources.map(s => {
+    return '<button type="button" class="src-chip src-chip-'+esc(s.type)+'" data-url="'+esc(s.url)+'" title="'+esc(s.url)+'">'+esc(s.type)+'</button>';
+  }).join('');
+  el.querySelectorAll('.src-chip').forEach(b => b.onclick = () => dockPopup(b.dataset.url));
+}
+function dockPopup(url){
+  const w = 480, h = 800;
+  window.open(url, '_blank', 'width='+w+',height='+h+',left='+Math.max(0,screen.availWidth-w)+',top=0');
 }
 
 /* ---------- director panel ---------- */
@@ -304,11 +459,12 @@ function loadRecipe(key){
   $('#fAsset').value = r.asset || '';
   $('#fTiming').value = r.timing || '';
   $('#fNotes').value = r.notes || '';
+  $('#openartPrompt').value = r.openartPrompt || '';
   updateEffectMeta();
 }
 function saveField(field, value){
   if(!selectedSection) return;
-  cockpit.sections[selectedSection] = cockpit.sections[selectedSection] || {effect:'',action:'',asset:'',timing:'',notes:''};
+  cockpit.sections[selectedSection] = cockpit.sections[selectedSection] || {effect:'',action:'',asset:'',timing:'',notes:'',openartPrompt:''};
   cockpit.sections[selectedSection][field] = value;
   cockpit.updatedAt = new Date().toISOString();
   scheduleSave();
@@ -328,6 +484,8 @@ function wireDirector(){
   $('#fTiming').addEventListener('input', () => saveField('timing', $('#fTiming').value));
   $('#fNotes').addEventListener('input', () => saveField('notes', $('#fNotes').value));
   $('#copyBrief').onclick = copyBrief;
+  const sel = $('#rcSection');
+  if(sel) sel.addEventListener('change', () => selectSection(sel.value));
 }
 function copyBrief(){
   if(!selectedSection){ toast('Select a section first'); return; }
@@ -351,31 +509,172 @@ function setAssetField(path){
   toast('Asset set → '+path);
 }
 
-/* ---------- tabs ---------- */
-function wireTabs(){
-  document.querySelectorAll('.tab').forEach(b => b.onclick = () => {
-    document.querySelectorAll('.tab').forEach(x => x.classList.remove('on'));
-    b.classList.add('on');
-    const t = b.dataset.tab;
-    $('#paneFx').style.display = t==='fx' ? '' : 'none';
-    $('#paneAssets').style.display = t==='assets' ? '' : 'none';
+/* ---------- loot bar: effects grouped by category, searchable ---------- */
+function renderLootbar(){
+  const body = $('#lootbarBody');
+  if(!EFFECTS || !EFFECTS.available){
+    body.innerHTML = '<p class="loot-empty">effects shelf not on this machine — clone grigoletto-pack or set effectsPath in board.config.json.</p>';
+    $('#fxGalleryLink').style.display = 'none';
+    return;
+  }
+  $('#fxGalleryLink').style.display = '';
+  const q = ($('#fxSearch') && $('#fxSearch').value || '').trim().toLowerCase();
+  const groups = {};
+  (EFFECTS.effects||[]).forEach(e => {
+    if(q){
+      const hay = ((e.n||'')+' '+(e.c||'')+' '+(e.d||'')).toLowerCase();
+      if(!hay.includes(q)) return;
+    }
+    const cat = e.c || 'Other';
+    (groups[cat] = groups[cat] || []).push(e);
   });
+  const cats = Object.keys(groups);
+  if(!cats.length){ body.innerHTML = '<p class="loot-empty">No effects match "'+esc(q)+'".</p>'; return; }
+  body.innerHTML = cats.map(cat =>
+    '<div class="loot-group"><div class="loot-cat">'+esc(cat)+'</div>' +
+    groups[cat].map(e =>
+      '<button type="button" class="loot-item" data-name="'+esc(e.n)+'">' +
+        '<span class="loot-dot dot-'+esc(e.s)+'"></span>' +
+        '<span class="loot-name">'+esc(e.n)+'</span>' +
+        (e.live ? '<span class="loot-live">live</span>' : '') +
+        '<span class="loot-tip">'+esc(e.d||'')+'</span>' +
+      '</button>'
+    ).join('') +
+    '</div>'
+  ).join('');
+  body.querySelectorAll('.loot-item').forEach(it => it.onclick = () => pickEffect(it.dataset.name));
 }
-
-/* ---------- effects (Shelf A) ---------- */
+function pickEffect(name){
+  if(!selectedSection){ toast('Select a section first'); return; }
+  $('#fEffect').value = name;
+  updateEffectMeta();
+  saveField('effect', name);
+  toast('Effect set');
+}
+function wireLootbar(){
+  $('#fxSearch').addEventListener('input', renderLootbar);
+  $('#lootbarToggle').onclick = () => setLootCollapsed(!lootCollapsed);
+  $('#lootbar').classList.toggle('collapsed', lootCollapsed);
+  $('#lootbarToggle').textContent = lootCollapsed ? '›' : '‹';
+}
 async function loadEffects(){
   try{ EFFECTS = await fetch('/api/effects').then(r => r.json()); }
   catch(e){ EFFECTS = { available:false, effects:[] }; }
   $('#effectList').innerHTML = (EFFECTS.effects||[]).map(e => '<option value="'+esc(e.n)+'">').join('');
-  if(EFFECTS.available){
-    $('#fxFrame').src = '/effects-lib/gallery/';
-    $('#fxFrame').style.display = '';
-    $('#fxUnavailable').style.display = 'none';
-  } else {
-    $('#fxFrame').style.display = 'none';
-    $('#fxUnavailable').style.display = '';
-  }
+  renderLootbar();
   updateEffectMeta();
+}
+
+/* ---------- OpenArt Director ---------- */
+function openartScaffold(type){
+  const r = cockpit.sections[selectedSection] || {};
+  const title = (PROJ && PROJ.title) || slug;
+  const sec = selectedSection || '(section)';
+  if(type === 'asset'){
+    const subject = r.asset || "describe subject";
+    return 'Consistent product/character card for '+title+' — '+sec+' section. Subject: '+subject+'. Style: premium, editorial, photoreal. Keep identity consistent across 10 generations.';
+  }
+  if(type === 'space'){
+    const from = r.notes || 'current mood';
+    return 'Set/lighting relight for '+title+' — '+sec+' section. relight: shift '+from+' → [new mood]. Style: premium, editorial, photoreal. Keep composition and geometry identical, change only lighting/mood.';
+  }
+  if(type === 'location'){
+    const motion = r.action || 'pan';
+    return 'Camera direction for '+title+' — '+sec+' section. camera: [angle e.g. low-angle / overhead / dolly-in], slow '+motion+' move. Style: premium, editorial, photoreal.';
+  }
+  return '';
+}
+function wireOpenart(){
+  document.querySelectorAll('.card-type-btn').forEach(b => {
+    b.onclick = () => {
+      if(!selectedSection){ toast('Select a section first'); return; }
+      const scaffold = openartScaffold(b.dataset.type);
+      $('#openartPrompt').value = scaffold;
+      saveField('openartPrompt', scaffold);
+    };
+  });
+  $('#openartPrompt').addEventListener('input', () => saveField('openartPrompt', $('#openartPrompt').value));
+  $('#copyPrompt').onclick = () => {
+    const text = $('#openartPrompt').value || '';
+    if(!text){ toast('Nothing to copy'); return; }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(()=>toast('Prompt copied')).catch(()=>toast('Copy failed — clipboard blocked'));
+    } else toast('Clipboard unavailable');
+  };
+  $('#openOpenArt').onclick = () => {
+    const w=1100, h=800;
+    window.open('https://openart.ai/create', '_blank',
+      'width='+w+',height='+h+',left='+Math.max(0,(screen.availWidth-w)/2)+',top='+Math.max(0,(screen.availHeight-h)/2));
+  };
+  $('#pkToggle').onclick = () => {
+    const b = $('#pkBody');
+    const open = b.style.display !== 'none';
+    b.style.display = open ? 'none' : '';
+    $('#pkToggle').textContent = 'Prompt kit ' + (open ? '▾' : '▴');
+  };
+}
+
+/* ---------- prompt kit drawer ---------- */
+function extractSnippet(text){
+  let m = text.match(/```[a-zA-Z]*\n([\s\S]*?)```/);
+  if(m) return m[1].trim();
+  const lines = text.split(/\r?\n/);
+  let quote = [];
+  for(const line of lines){
+    if(/^\s*>/.test(line)){ quote.push(line.replace(/^\s*>\s?/,'')); }
+    else if(quote.length){ break; }
+  }
+  if(quote.length) return quote.join(' ').trim();
+  for(const line of lines){
+    const t = line.trim();
+    if(t && !/^#{1,6}\s/.test(t) && !/^\|/.test(t) && !/^-{2,}$/.test(t)){
+      return t;
+    }
+  }
+  return '';
+}
+function renderPromptKit(md){
+  const body = $('#pkBody');
+  const parts = md.split(/\n(?=##\s)/);
+  const blocks = parts.filter(p => /^##\s/.test(p.trim()));
+  if(!blocks.length){ body.innerHTML = '<p class="loot-empty">No sections found in the prompt kit.</p>'; return; }
+  body.innerHTML = blocks.map((b,i) => {
+    const titleLine = b.match(/^##\s*(.+)$/m);
+    const title = titleLine ? titleLine[1].trim() : ('Section '+(i+1));
+    const snippet = extractSnippet(b.replace(/^##.*$/m,''));
+    return '<div class="pk-block">' +
+      '<button class="pk-block-head" data-i="'+i+'" type="button">'+esc(title)+'</button>' +
+      '<div class="pk-block-body" id="pkBlock'+i+'" style="display:none">' +
+        '<p class="pk-snippet">'+esc(snippet || '(no snippet found)')+'</p>' +
+        '<button class="pk-insert" data-i="'+i+'" type="button">Insert</button>' +
+      '</div>' +
+    '</div>';
+  }).join('');
+  body.querySelectorAll('.pk-block-head').forEach(btn => {
+    btn.onclick = () => {
+      const target = $('#pkBlock'+btn.dataset.i);
+      const open = target.style.display !== 'none';
+      target.style.display = open ? 'none' : '';
+    };
+  });
+  body.querySelectorAll('.pk-insert').forEach(btn => {
+    btn.onclick = () => {
+      const i = btn.dataset.i;
+      const snippet = blocks[i] ? extractSnippet(blocks[i].replace(/^##.*$/m,'')) : '';
+      if(!snippet){ toast('Nothing to insert'); return; }
+      const ta = $('#openartPrompt');
+      ta.value = (ta.value ? ta.value.trim()+'\n\n' : '') + snippet;
+      saveField('openartPrompt', ta.value);
+      toast('Inserted');
+    };
+  });
+}
+async function loadPromptKit(){
+  try{ PROMPT_KIT = await fetch('/api/prompt-kit').then(r => r.json()); }
+  catch(e){ PROMPT_KIT = { available:false, markdown:'' }; }
+  if(!PROMPT_KIT.available){ $('#promptKit').style.display = 'none'; return; }
+  $('#promptKit').style.display = '';
+  renderPromptKit(PROMPT_KIT.markdown || '');
 }
 
 /* ---------- assets (Shelf B/C) ---------- */
@@ -461,7 +760,7 @@ function wireUpload(){
   dropZone.addEventListener('drop', e => { e.preventDefault(); dropZone.classList.remove('over'); handleFiles(e.dataTransfer.files); });
   addEventListener('paste', e => {
     const tag = (document.activeElement && document.activeElement.tagName) || '';
-    if(tag==='INPUT' || tag==='TEXTAREA') return; // don't hijack text paste into director/notes fields
+    if(tag==='INPUT' || tag==='TEXTAREA') return; // don't hijack text paste into director/notes/openart fields
     const items = [...(e.clipboardData && e.clipboardData.items || [])].filter(i => i.type.startsWith('image/'));
     if(!items.length) return;
     items.forEach(it => {
@@ -474,6 +773,19 @@ function wireUpload(){
   });
 }
 
+/* ---------- cross-window sync (two-monitor mode) ---------- */
+async function syncFromServer(){
+  try{
+    const state = await fetch('/api/state').then(r => r.json());
+    const p = (state.projects||[]).find(x => x.slug===slug);
+    if(!p) return;
+    PROJ = p;
+    cockpit = (p.cockpit && p.cockpit.sections) ? p.cockpit : { sections:{}, updatedAt:null };
+    if(selectedSection) loadRecipe(selectedSection);
+    renderSourceChips();
+  } catch(e){ /* stay on last known state */ }
+}
+
 /* ---------- boot ---------- */
 async function boot(){
   if(!slug){ showEmpty('No project selected.'); return; }
@@ -483,13 +795,33 @@ async function boot(){
   PROJ = (state.projects||[]).find(p => p.slug===slug);
   if(!PROJ){ showEmpty('Unknown project: '+slug); return; }
   cockpit = (PROJ.cockpit && PROJ.cockpit.sections) ? PROJ.cockpit : { sections:{}, updatedAt:null };
+
+  if(paneSide) document.body.classList.add('pane-side');
+
   renderHeader();
-  wireIframe();
+  renderSourceChips();
   wireDirector();
-  wireTabs();
+  wireOpenart();
   wireUpload();
+  wireLootbar();
   loadEffects();
   loadAssets();
+  loadPromptKit();
+
+  if(paneSide){
+    const keys = Object.keys(cockpit.sections);
+    sectionsList = keys.length ? keys.map(k => ({key:k, label:k, el:null})) : FALLBACK.slice();
+    sectionsResolved = true;
+    renderSectionSelect();
+    $('#director').classList.remove('disabled');
+    selectSection(sectionsList[0].key);
+  } else {
+    wireIframe();
+    wireRightColCollapse();
+  }
+
+  updateMainGrid();
+  addEventListener('focus', syncFromServer);
 }
 boot();
 </script>

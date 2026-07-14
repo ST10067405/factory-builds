@@ -263,6 +263,12 @@ const server = http.createServer(async (req, res) => {
       return sendJSON(res, 200, { available: true, count: effects.length, effects });
     } catch (e) { return sendJSON(res, 200, { available: false, effects: [], error: e.message }); }
   }
+  // The GRIGOLETTO ai-prompt-kit (raw markdown) for the Cockpit's OpenArt composer.
+  if (p === '/api/prompt-kit' && req.method === 'GET') {
+    const kit = path.join(path.dirname(EFFECTS_DIR), 'ai-prompt-kit.md');
+    if (!fs.existsSync(kit)) return sendJSON(res, 200, { available: false, markdown: '' });
+    return sendJSON(res, 200, { available: true, markdown: fs.readFileSync(kit, 'utf8') });
+  }
   // Combined asset shelves (Shelf C + the build's own images/) for one client.
   if (p.startsWith('/api/assets/') && req.method === 'GET') {
     const slug = p.slice('/api/assets/'.length);
