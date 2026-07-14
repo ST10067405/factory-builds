@@ -46,4 +46,4 @@ echo.
 echo  Look for the https://xxxxx.trycloudflare.com URL below - that is the remote
 echo  board address. Username: arkatype   Password: the one in board.config.json
 echo.
-"%CFD%" tunnel --url http://localhost:8105
+"%CFD%" tunnel --url http://localhost:8105 --protocol http2 --no-autoupdate
