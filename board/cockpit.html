@@ -45,16 +45,16 @@ main{flex:1;min-height:0;display:grid;grid-template-columns:240px 1fr 380px;gap:
 }
 body.pane-side main{grid-template-columns:1fr !important}
 body.pane-side .lootbar,body.pane-side .stage{display:none}
-.lootbar,.stage,.rightcol{display:flex;flex-direction:column;min-height:0;background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.lootbar,.stage,.rightcol{display:flex;flex-direction:column;min-height:0;min-width:0;background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
 
 /* ---------- loot bar ---------- */
-.lootbar-head{flex:none;display:flex;align-items:center;gap:6px;padding:10px;border-bottom:1px solid var(--line)}
+.lootbar-head{flex:none;display:flex;align-items:center;gap:6px;padding:10px;border-bottom:1px solid var(--line);min-width:0}
 .fx-search{flex:1;min-width:0;background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:6px 9px;font-size:12px;outline:none;transition:border-color .25s var(--ease)}
 .fx-search:focus{border-color:var(--ours)}
 .lootbar-toggle{flex:none;background:var(--panel2);border:1px solid var(--line);color:var(--body);width:26px;height:26px;border-radius:7px;cursor:pointer;font-size:13px;transition:border-color .25s var(--ease),color .25s var(--ease)}
 .lootbar-toggle:hover{color:var(--ink);border-color:var(--ours)}
 .lootbar.collapsed .fx-search,.lootbar.collapsed .lootbar-body,.lootbar.collapsed .lootbar-foot{display:none}
-.lootbar.collapsed .lootbar-head{justify-content:center}
+.lootbar.collapsed .lootbar-head{justify-content:center;padding:10px 8px}
 .lootbar-body{flex:1;min-height:0;overflow-y:auto;padding:8px 10px}
 .loot-group{margin-bottom:10px}
 .loot-cat{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--mut);padding:6px 4px 4px}
@@ -86,10 +86,16 @@ body.pane-side .lootbar,body.pane-side .stage{display:none}
 .src-chip-facebook{color:#6aa8ff;border-color:rgba(106,168,255,.35)}
 .src-chip-maps{color:#5bd6a0;border-color:rgba(91,214,160,.35)}
 .src-chip-website{color:var(--body)}
-.frame-wrap{flex:1 1 auto;min-height:120px;margin:12px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#0a0c10;position:relative}
+.stage-body{flex:1;min-height:0;min-width:0;display:flex;gap:12px;padding:12px}
+.frame-wrap{flex:0 0 60%;min-width:0;min-height:120px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#0a0c10;position:relative}
 .frame-wrap iframe{width:100%;height:100%;border:0;background:#fff;display:block}
-.director{flex:none;max-height:42%;overflow-y:auto;border-top:1px solid var(--line);padding:14px 16px 16px;background:var(--panel2)}
+.director{flex:1 1 0%;min-width:0;min-height:0;overflow-y:auto;border:1px solid var(--line);border-radius:10px;padding:14px 16px 16px;background:var(--panel2)}
 .director.disabled{opacity:.5;pointer-events:none}
+@media (max-width:1199px){
+  .stage-body{flex-direction:column}
+  .frame-wrap{flex:1 1 auto;min-height:160px}
+  .director{flex:none;max-height:42%}
+}
 .director-head{display:flex;align-items:center;gap:10px;margin-bottom:12px}
 .director-head h2{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut);font-weight:650}
 .copybtn{margin-left:auto;background:var(--panel);border:1px solid var(--line);color:var(--ours);border-radius:8px;padding:6px 12px;cursor:pointer;font-size:12px;font-weight:600;transition:border-color .25s var(--ease)}
@@ -108,22 +114,23 @@ body.pane-side .lootbar,body.pane-side .stage{display:none}
 .src-build{background:rgba(195,155,255,.15);color:var(--build);border:1px solid rgba(195,155,255,.35)}
 
 /* ---------- right column: OpenArt Director (top) + Assets shelf (bottom) ---------- */
-.rc-head{flex:none;display:flex;align-items:center;gap:8px;padding:10px 12px;border-bottom:1px solid var(--line)}
+.rc-head{flex:none;display:flex;align-items:center;gap:8px;padding:10px 12px;border-bottom:1px solid var(--line);min-width:0}
+.rc-label{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
 .rc-icon-btn{background:var(--panel2);border:1px solid var(--line);color:var(--body);border-radius:8px;padding:6px 10px;cursor:pointer;font-size:11.5px;white-space:nowrap;transition:border-color .25s var(--ease),color .25s var(--ease)}
 .rc-icon-btn:hover{color:var(--ink);border-color:var(--ours)}
 .rightcol.collapsed .rc-body{display:none}
-.rightcol.collapsed .rc-head{justify-content:center}
-.rightcol.collapsed .rc-head .grow,.rightcol.collapsed #detachBtn{display:none}
+.rightcol.collapsed .rc-head{justify-content:center;padding:10px 4px}
+.rightcol.collapsed .rc-head .grow,.rightcol.collapsed #detachBtn,.rightcol.collapsed .rc-head .rc-label{display:none}
 body.pane-side #rcCollapseToggle,body.pane-side #detachBtn{display:none}
-.rc-body{flex:1;min-height:0;display:flex;flex-direction:column;overflow:hidden}
-.openart{flex:1 1 50%;min-height:0;overflow-y:auto;padding:14px 16px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:10px}
+.rc-body{flex:1;min-height:0;min-width:0;display:flex;flex-direction:column;overflow:hidden}
+.openart{flex:none;min-height:0;overflow-y:visible;padding:14px 16px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:10px}
 .openart-head h2{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut);font-weight:650}
 #rcSection{background:var(--panel2);border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:7px 9px;font-size:12px;outline:none;width:100%;transition:border-color .25s var(--ease)}
 #rcSection:focus{border-color:var(--ours)}
 .card-types{display:flex;gap:8px}
 .card-type-btn{flex:1;background:var(--panel2);border:1px solid var(--line);color:var(--body);border-radius:9px;padding:9px 6px;cursor:pointer;font-size:11px;font-weight:700;letter-spacing:.05em;transition:border-color .25s var(--ease),color .25s var(--ease)}
 .card-type-btn:hover{color:var(--ink);border-color:var(--build)}
-#openartPrompt{width:100%;background:var(--panel2);border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:10px 11px;resize:vertical;min-height:110px;outline:none;font-size:12.5px;font-family:inherit;transition:border-color .25s var(--ease)}
+#openartPrompt{width:100%;background:var(--panel2);border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:10px 11px;resize:vertical;min-height:150px;outline:none;font-size:12.5px;font-family:inherit;transition:border-color .25s var(--ease)}
 #openartPrompt:focus{border-color:var(--build)}
 .openart-actions{display:flex;gap:8px}
 .openart-actions button{flex:1;background:var(--panel2);border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:8px 10px;cursor:pointer;font-size:12px;font-weight:600;transition:border-color .25s var(--ease)}
@@ -140,7 +147,7 @@ body.pane-side #rcCollapseToggle,body.pane-side #detachBtn{display:none}
 .pk-snippet{font-size:11.5px;color:var(--body);line-height:1.5;margin-bottom:8px;white-space:pre-wrap}
 .pk-insert{background:var(--panel2);border:1px solid var(--line);color:var(--ours);border-radius:7px;padding:5px 10px;cursor:pointer;font-size:11.5px;font-weight:600;transition:border-color .25s var(--ease)}
 .pk-insert:hover{border-color:var(--ours)}
-.assets-shelf{flex:1 1 50%;min-height:0;overflow-y:auto;padding:14px}
+.assets-shelf{flex:1;min-height:0;min-width:0;overflow-y:auto;padding:14px}
 
 /* ---------- shared: upload zone + asset thumbs (reused by assets shelf) ---------- */
 .upload-zone{border:1.5px dashed var(--line);border-radius:12px;padding:20px 14px;text-align:center;color:var(--body);font-size:12.5px;cursor:pointer;transition:border-color .25s var(--ease),background .25s var(--ease);margin-bottom:16px}
@@ -204,47 +211,49 @@ footer.legend .lg{font-weight:700}
       <div class="chips-row"><div class="chips" id="secChips"><span class="hint">Loading site preview…</span></div></div>
       <div class="src-chips" id="srcChips" style="display:none"></div>
     </div>
-    <div class="frame-wrap"><iframe id="siteFrame" title="Site preview"></iframe></div>
-    <div class="director disabled" id="director">
-      <div class="director-head">
-        <h2>Director</h2>
-        <button class="copybtn" id="copyBrief" type="button">📋 Copy brief</button>
-      </div>
-      <div class="fields">
-        <label>Effect
-          <input list="effectList" id="fEffect" placeholder="Start typing an effect…" autocomplete="off">
-          <datalist id="effectList"></datalist>
-          <div class="effect-meta" id="effectMeta"></div>
-        </label>
-        <label>Action
-          <select id="fAction">
-            <option value="">—</option>
-            <option value="scroll-down">scroll-down</option>
-            <option value="in-view">in-view</option>
-            <option value="hover">hover</option>
-            <option value="cursor-proximity">cursor-proximity</option>
-            <option value="click">click</option>
-            <option value="fold-image-into-image">fold-image-into-image</option>
-            <option value="journey-through-landscape">journey-through-landscape</option>
-          </select>
-        </label>
-        <label>Asset
-          <input list="assetList" id="fAsset" placeholder="filename or category/filename" autocomplete="off">
-          <datalist id="assetList"></datalist>
-        </label>
-        <label>Timing
-          <input id="fTiming" placeholder="cubic-bezier(.22,1,.36,1) · 0.6s" autocomplete="off">
-        </label>
-        <label class="notes-field">Notes
-          <textarea id="fNotes" placeholder="Anything else Claude should know when wiring this in…"></textarea>
-        </label>
+    <div class="stage-body">
+      <div class="frame-wrap"><iframe id="siteFrame" title="Site preview"></iframe></div>
+      <div class="director disabled" id="director">
+        <div class="director-head">
+          <h2>Director</h2>
+          <button class="copybtn" id="copyBrief" type="button">📋 Copy brief</button>
+        </div>
+        <div class="fields">
+          <label>Effect
+            <input list="effectList" id="fEffect" placeholder="Start typing an effect…" autocomplete="off">
+            <datalist id="effectList"></datalist>
+            <div class="effect-meta" id="effectMeta"></div>
+          </label>
+          <label>Action
+            <select id="fAction">
+              <option value="">—</option>
+              <option value="scroll-down">scroll-down</option>
+              <option value="in-view">in-view</option>
+              <option value="hover">hover</option>
+              <option value="cursor-proximity">cursor-proximity</option>
+              <option value="click">click</option>
+              <option value="fold-image-into-image">fold-image-into-image</option>
+              <option value="journey-through-landscape">journey-through-landscape</option>
+            </select>
+          </label>
+          <label>Asset
+            <input list="assetList" id="fAsset" placeholder="filename or category/filename" autocomplete="off">
+            <datalist id="assetList"></datalist>
+          </label>
+          <label>Timing
+            <input id="fTiming" placeholder="cubic-bezier(.22,1,.36,1) · 0.6s" autocomplete="off">
+          </label>
+          <label class="notes-field">Notes
+            <textarea id="fNotes" placeholder="Anything else Claude should know when wiring this in…"></textarea>
+          </label>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="rightcol" id="rightcol">
     <div class="rc-head">
-      <span style="font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--mut);font-weight:650">Director</span>
+      <span class="rc-label" style="font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--mut);font-weight:650">Director</span>
       <div class="grow"></div>
       <button class="rc-icon-btn" id="rcCollapseToggle" type="button" title="Collapse panel">⇲</button>
       <button class="rc-icon-btn" id="detachBtn" type="button" title="Open this panel in its own window">⇱ Detach panel</button>
