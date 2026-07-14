@@ -163,6 +163,9 @@ function body(req) { return new Promise(r => { let d = ''; req.on('data', c => d
 const PASSWORD = process.env.BOARD_PASSWORD || CONFIG.password || null;
 function authorized(req) {
   if (!PASSWORD) return true;
+  // localhost is trusted — the password protects REMOTE access (Tailscale/tunnel)
+  const ra = req.socket.remoteAddress || '';
+  if (ra === '127.0.0.1' || ra === '::1' || ra === '::ffff:127.0.0.1') return true;
   const h = req.headers['authorization'] || '';
   if (!h.startsWith('Basic ')) return false;
   let user = '', pass = '';
@@ -262,6 +265,76 @@ const server = http.createServer(async (req, res) => {
       const effects = new Function('D', 'return ' + html.slice(i, end + 1) + ';')(D);
       return sendJSON(res, 200, { available: true, count: effects.length, effects });
     } catch (e) { return sendJSON(res, 200, { available: false, effects: [], error: e.message }); }
+  }
+  // Pull candidate photos for a client via Serper image search (the Cockpit's
+  // "pull best photos" tool). SAFE naming: pulled_NN.jpg, never overwrites the
+  // vetted real_*/stock_* files. The human vets in the assets grid (keep/delete).
+  if (p.startsWith('/api/pull/') && req.method === 'POST') {
+    const slug = p.slice('/api/pull/'.length);
+    if (!listBuilds().includes(slug)) return sendJSON(res, 404, { error: 'unknown slug' });
+    let b; try { b = JSON.parse(await body(req)); } catch (e) { return sendJSON(res, 400, { error: 'bad json' }); }
+    const query = String(b.query || '').trim().slice(0, 120);
+    if (!query) return sendJSON(res, 400, { error: 'query required' });
+    const count = Math.min(Math.max(parseInt(b.count || 8, 10) || 8, 1), 15);
+    const https = require('https');
+    const SERPER_KEY = process.env.SERPER_KEY || 'c7d30ed2084ef1ce75082cc5147f19810ae7fc2a';
+    const imgDir = path.join(ROOT, slug, 'images');
+    fs.mkdirSync(imgDir, { recursive: true });
+    const serper = () => new Promise((resolve, reject) => {
+      const bd = JSON.stringify({ q: query, gl: 'za', num: 30 });
+      const rq = https.request({ hostname: 'google.serper.dev', path: '/images', method: 'POST', headers: { 'X-API-KEY': SERPER_KEY, 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(bd) } },
+        r => { let d = ''; r.on('data', c => d += c); r.on('end', () => { try { resolve(JSON.parse(d)); } catch (e) { reject(e); } }); });
+      rq.on('error', reject); rq.write(bd); rq.end();
+    });
+    const dl = (url, dest, redirects = 3) => new Promise(resolve => {
+      let u; try { u = new URL(url); } catch (e) { return resolve(false); }
+      const rq = https.request({ hostname: u.hostname, path: u.pathname + u.search, method: 'GET', timeout: 15000, headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)', 'Accept': 'image/*' } }, r => {
+        if ([301, 302, 303, 307, 308].includes(r.statusCode) && r.headers.location && redirects > 0) { r.resume(); return resolve(dl(r.headers.location.startsWith('http') ? r.headers.location : u.origin + r.headers.location, dest, redirects - 1)); }
+        if (r.statusCode !== 200) { r.resume(); return resolve(false); }
+        const chunks = []; r.on('data', c => chunks.push(c));
+        r.on('end', () => { const buf = Buffer.concat(chunks); if (buf.length > 3000 && buf[0] === 0xff && buf[1] === 0xd8) { fs.writeFileSync(dest, buf); resolve(true); } else resolve(false); });
+      });
+      rq.on('timeout', () => { rq.destroy(); resolve(false); });
+      rq.on('error', () => resolve(false));
+      rq.end();
+    });
+    try {
+      const out = await serper();
+      const GOOD = /(facebook|fbsbx|instagram|fresha|cdninstagram|lookaside)/i;
+      const ranked = (out.images || [])
+        .filter(im => im.imageUrl && (im.imageWidth || 0) >= 500)
+        .sort((a, bb) => (GOOD.test(bb.source || bb.imageUrl) - GOOD.test(a.source || a.imageUrl)) || ((bb.imageWidth * bb.imageHeight) - (a.imageWidth * a.imageHeight)));
+      let next = 1;
+      while (fs.existsSync(path.join(imgDir, `pulled_${String(next).padStart(2, '0')}.jpg`))) next++;
+      const saved = [];
+      for (const im of ranked) {
+        if (saved.length >= count) break;
+        const name = `pulled_${String(next).padStart(2, '0')}.jpg`;
+        if (await dl(im.imageUrl, path.join(imgDir, name))) {
+          saved.push({ file: name, source: im.source || '', title: (im.title || '').slice(0, 70), w: im.imageWidth, h: im.imageHeight });
+          next++;
+        }
+      }
+      return sendJSON(res, 200, { ok: true, slug, query, saved });
+    } catch (e) { return sendJSON(res, 500, { error: 'pull failed: ' + e.message }); }
+  }
+  // Delete one image from a build (the human "reject" in the vetting flow).
+  // Refuses to delete a file the site's pages still reference.
+  if (p.startsWith('/api/delete-image/') && req.method === 'POST') {
+    const slug = p.slice('/api/delete-image/'.length);
+    if (!listBuilds().includes(slug)) return sendJSON(res, 404, { error: 'unknown slug' });
+    let b; try { b = JSON.parse(await body(req)); } catch (e) { return sendJSON(res, 400, { error: 'bad json' }); }
+    const f = String(b.filename || '');
+    if (!/^[a-zA-Z0-9._-]+\.(jpe?g|png|webp|gif)$/i.test(f)) return sendJSON(res, 400, { error: 'bad filename' });
+    const target = path.join(ROOT, slug, 'images', f);
+    if (!fs.existsSync(target)) return sendJSON(res, 404, { error: 'file not found' });
+    for (const page of ['index.html', 'learn.html']) {
+      const pf = path.join(ROOT, slug, page);
+      if (fs.existsSync(pf) && fs.readFileSync(pf, 'utf8').includes('images/' + f))
+        return sendJSON(res, 409, { error: `refused: ${page} still uses images/${f}` });
+    }
+    fs.unlinkSync(target);
+    return sendJSON(res, 200, { ok: true, deleted: f });
   }
   // The GRIGOLETTO ai-prompt-kit (raw markdown) for the Cockpit's OpenArt composer.
   if (p === '/api/prompt-kit' && req.method === 'GET') {
