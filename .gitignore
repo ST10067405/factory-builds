@@ -8,3 +8,4 @@ package-lock.json
 .impeccable/
 
 scripts/cloudflared.exe
+board/tunnel.log
