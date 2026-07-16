@@ -4,8 +4,8 @@
       "title": "Synergy Hair Kloof",
       "status": "deployed",
       "priority": "hot",
-      "notes": "Warm lead - Jaime is on their WhatsApp. Has an existing basic site (synergyhair.co.za), so pitch is a rebuild/upgrade, not greenfield. 2 real client colour-work photos on the build.",
-      "nextAction": "Deploy demo + send rebuild pitch",
+      "notes": "Warm lead - Jaime is on their WhatsApp. Has an existing basic site (synergyhair.co.za), so pitch is a rebuild/upgrade, not greenfield. 2 real client colour-work photos on the build.\n\nJaimes notes: no em-dashes. site looks good.",
+      "nextAction": "review jaime's notes",
       "caveats": [
         "Existing basic site — pitch as REBUILD",
         "WhatsApp confirmed: 072 469 7969"
@@ -812,8 +812,8 @@
       "title": "DR KARMINI NAIDOO DENTAL SURGERY",
       "status": "gate_passed",
       "priority": "hot",
-      "notes": "Dental clinic, Pinetown. 4.9★ / 169 Google reviews. Ph 083 790 6732. Local-scout lead (presence-gated, no website). First-pass icon-forward concept site.",
-      "nextAction": "Jaime review → commit/deploy done via factory pipeline → outreach draft (human send gate)",
+      "notes": "Dental clinic, Pinetown. 4.9★ / 169 Google reviews. Ph 083 790 6732. Local-scout lead (presence-gated, no website). First-pass icon-forward concept site.\n\nJaime notes: she has a wix site, use this to scrape information from: https://knaidoowebsite.wixsite.com/drkarmininaidoo?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExNWZUYmM5eDRNNzM0cHVtenNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR6i-AQvtAbsqrtdBR3sSAYLfqUdXotRMNxr1I1BLJ1_F1svnnnH_xT83cgzyQ_aem_xG40-yr2bQCwnyBsFDkTzA\n\nI think we can pull images from there too. no em-dashes",
+      "nextAction": "review jaime's notes",
       "caveats": [
         "All 5 pulled photos rejected as contaminated — fully stock-led with on-page disclosure; practice photos needed from client"
       ],
@@ -844,8 +844,8 @@
       "title": "Guru G Barber Shop",
       "status": "gate_passed",
       "priority": "hot",
-      "notes": "Barber shop, Westville. 4.5★ / 183 Google reviews. Ph 074 092 4460. Local-scout lead (presence-gated, no website). First-pass icon-forward concept site.",
-      "nextAction": "Jaime review → commit/deploy done via factory pipeline → outreach draft (human send gate)",
+      "notes": "Barber shop, Westville. 4.5★ / 183 Google reviews. Ph 074 092 4460. Local-scout lead (presence-gated, no website). First-pass icon-forward concept site.\n\nJaime's notes: The colour theme is wrong has their logo is blue and white? I think matching blue, white, possible black acents would be best. try to create a pleasant colour pallete with that. \n\nJaimes notes: no em-dashes",
+      "nextAction": "review jaime's notes",
       "caveats": [
         "1 real photo (address-matched Fresha); rejected pulls belonged to Guru G's OTHER branches; stock-led with disclosure"
       ],
