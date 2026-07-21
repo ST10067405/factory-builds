@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Avant Garde Hair Hillcrest — Arty Colour &amp; Cutting Salon</title>
-<meta name="description" content="Avant Garde Hair Hillcrest — a 4.9-star, 98-review women-owned, LGBTQ+ friendly salon at Fig Tree Farm. Amber and her team are known for colour-correction, precise cuts, and genuinely caring service.">
+<title>Avant Garde Hair Hillcrest | Arty Colour &amp; Cutting Salon</title>
+<meta name="description" content="Avant Garde Hair Hillcrest, a 4.9-star, 98-review women-owned, LGBTQ+ friendly salon at Fig Tree Farm. Amber and her team are known for colour-correction, precise cuts, and genuinely caring service.">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,15 +26,15 @@
 }
 </script>
 <style>
-/* ===== THEME — the ONLY block you re-style per client ===== */
+/* ===== THEME: the ONLY block you re-style per client ===== */
 :root{
   --bg:#F6F0EA;
   --surface:#FFFFFF;
   --ink:#2B1B2E;
-  --mut:rgba(43,27,46,.7);     /* muted body — AA (5.67:1 cream, 6.03:1 white) */
+  --mut:rgba(43,27,46,.7);     /* muted body, AA (5.67:1 cream, 6.03:1 white) */
   --brand:#2B1B2E;
-  --accent:#FF6B6B;            /* coral — FILLS, borders, decorative/mesh only */
-  --accent-ink:#B03A47;        /* deep raspberry — accent-coloured TEXT/icons on light (AA: 5.24:1 cream, 5.93:1 white) */
+  --accent:#FF6B6B;            /* coral, FILLS, borders, decorative/mesh only */
+  --accent-ink:#B03A47;        /* deep raspberry, accent-coloured TEXT/icons on light (AA: 5.24:1 cream, 5.93:1 white) */
   --line:rgba(43,27,46,.14);
   --display:'Syne',sans-serif;
   --body:'Inter',sans-serif;
@@ -57,13 +57,15 @@ nav.scrolled{background:var(--bg);backdrop-filter:blur(10px);box-shadow:0 1px 0 
 @media(max-width:760px){.nav-links{display:none}}
 header{position:relative;overflow:hidden;padding:128px 0 72px}
 .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(30px,5vw,60px);align-items:center;max-width:1140px;margin:0 auto;padding:0 24px}
+.hero-grid>*{min-width:0} /* keep columns on the fr ratio instead of sizing to the headline */
 .hero-text>*{animation:hero-rise .7s cubic-bezier(.22,1,.36,1) backwards}
 .hero-text>*:nth-child(2){animation-delay:.03s}.hero-text>*:nth-child(3){animation-delay:.08s}
 .hero-text>*:nth-child(4){animation-delay:.13s}.hero-text>*:nth-child(5){animation-delay:.18s}.hero-text>*:nth-child(6){animation-delay:.23s}
 @keyframes hero-rise{from{transform:translateY(14px)}to{transform:translateY(0)}}
 @keyframes hero-scale{from{transform:scale(1.05)}to{transform:scale(1)}}
 @media(max-width:900px){header{padding:116px 0 52px}.hero-grid{grid-template-columns:1fr;gap:32px}}
-h1{font-family:var(--display);font-weight:800;font-size:clamp(44px,7.5vw,88px);line-height:1.03;letter-spacing:-.01em;text-wrap:balance;color:var(--ink)}
+/* Syne needs ~1.19em of line box; anything tighter clips the descenders on "Language". */
+h1{font-family:var(--display);font-weight:800;font-size:clamp(32px,4.1vw,52px);line-height:1.16;letter-spacing:-.01em;padding-bottom:.06em;color:var(--ink)}
 .kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--accent-ink);margin-bottom:20px}
 .hero-sub{max-width:48ch;margin-top:24px;color:var(--mut);font-size:17px;text-wrap:pretty}
 .hero-proof{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:30px;font-size:13.5px;color:var(--mut)}
@@ -181,7 +183,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent-ink);outline
 </style>
 </head>
 <body>
-<div class="draft">Concept draft — built for Avant Garde Hair Hillcrest by Arkatype Digital · not yet live</div>
+<div class="draft">Concept draft, built for Avant Garde Hair Hillcrest by Arkatype Digital · not yet live</div>
 
 <nav id="nav" aria-label="Main">
   <div class="nav-in">
@@ -203,7 +205,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent-ink);outline
     <div class="hero-text">
       <p class="kicker">Hair Salon · Hillcrest</p>
       <h1>Colour Is Our<br>Language</h1>
-      <p class="hero-sub">Amber and her team run an arty, women-owned, LGBTQ+ friendly salon at Fig Tree Farm — loved for colour-correction that actually corrects, precise cuts, and never double-booking your time.</p>
+      <p class="hero-sub">Amber and her team run an arty, women-owned, LGBTQ+ friendly salon at Fig Tree Farm, loved for colour-correction that actually corrects, precise cuts, and never double-booking your time.</p>
       <div class="hero-proof">
         <span><span class="stars">★★★★★</span>&nbsp;<strong style="color:var(--ink)">4.9</strong> · 98 Google reviews</span>
         <span class="trust-pill">Colour-correction specialists</span>
@@ -215,8 +217,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent-ink);outline
       <p class="hero-loc">Fig Tree Farm, 56 Inanda Rd, Hillcrest · 064 117 3763</p>
     </div>
     <div class="hero-photo">
-      <img src="images/about-colour.jpg" alt="Vivid salon colour work in progress" loading="eager">
-      <div class="hero-cap"><span class="stars">★★★★★</span>"…amazing with colour work and a precise cut. She colour-corrected my hair perfectly." — Shraddha R.</div>
+      <img src="images/real-interior.jpg" alt="A stylist finishing a blonde client in front of the backlit oval mirrors at Avant Garde Hair, Fig Tree Farm" loading="eager">
+      <div class="hero-cap"><span class="stars">★★★★★</span>"…amazing with colour work and a precise cut. She colour-corrected my hair perfectly." · Shraddha R.</div>
     </div>
   </div>
 </header>
@@ -227,7 +229,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent-ink);outline
     <p class="lede reveal">Set at Fig Tree Farm in Hillcrest, Avant Garde Hair is a women-owned, LGBTQ+ friendly salon with an arty, editorial edge. Amber and her team are known across dozens of reviews for colour expertise, precise cutting, and genuinely caring about you and your hair.</p>
     <div class="cards">
       <div class="card reveal"><h3>Colour &amp; Correction</h3><p>"Amber is absolutely amazing with colour work and a precise cut. She colour-corrected my hair perfectly." Reviewers consistently single out her colour eye.</p></div>
-      <div class="card reveal"><h3>Never Double-Booked</h3><p>"Always on time, no double-up appointments wasting your time!" Your slot is your slot — no rushing, no waiting.</p></div>
+      <div class="card reveal"><h3>Never Double-Booked</h3><p>"Always on time, no double-up appointments wasting your time!" Your slot is your slot, no rushing, no waiting.</p></div>
       <div class="card reveal"><h3>Genuinely Cares</h3><p>"Not only does she have years of experience, but she genuinely cares about you and your hair." That's the reputation, visit after visit.</p></div>
     </div>
     <div class="gallery reveal" style="margin-top:52px">
@@ -240,23 +242,23 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent-ink);outline
 <section id="work" style="padding-top:0">
   <div class="wrap">
     <h2 class="reveal">Colour With An Edge</h2>
-    <p class="lede reveal">A glimpse of the arty, editorial energy Amber and her team bring to the chair — precise cutting and colour work with real personality.</p>
+    <p class="lede reveal">A glimpse of the arty, editorial energy Amber and her team bring to the chair, precise cutting and colour work with real personality.</p>
     <div class="work-grid reveal">
+      <figure><img src="images/real-products.jpg" alt="Micro Keratin care range on a wooden stand at Avant Garde Hair" loading="lazy"><figcaption>The care range we work with</figcaption></figure>
       <figure><img src="images/hero-salon.jpg" alt="Styling area at Avant Garde Hair Hillcrest" loading="lazy"><figcaption>The studio at Fig Tree Farm</figcaption></figure>
       <figure><img src="images/about-colour.jpg" alt="Colour work in progress at Avant Garde Hair" loading="lazy"><figcaption>Colour work in progress</figcaption></figure>
-      <figure><img src="images/visit-interior.jpg" alt="Salon interior at Avant Garde Hair Hillcrest" loading="lazy"><figcaption>Cut &amp; finish</figcaption></figure>
     </div>
-    <p class="work-note reveal">Studio imagery shown here; full client gallery supplied by Avant Garde Hair Hillcrest.</p>
+    <p class="work-note reveal">The hero and care-range shots are real photos of the Fig Tree Farm studio; the remaining two are representative stock until Avant Garde Hair Hillcrest supplies a full client gallery.</p>
   </div>
 </section>
 
 <section id="services" style="padding-top:0">
   <div class="wrap">
     <h2 class="reveal">Cuts, Colour &amp; Care</h2>
-    <p class="menu-note reveal">sample layout — final service list and prices supplied by Avant Garde Hair Hillcrest</p>
+    <p class="menu-note reveal">sample layout · final service list and prices supplied by Avant Garde Hair Hillcrest</p>
     <div class="menu-grid reveal">
       <div class="mi"><div><b>Precision Cut</b><small>Shaped and finished to suit you</small></div><span class="dots"></span><span class="price">R —</span></div>
-      <div class="mi"><div><b>Colour &amp; Colour-Correction</b><small>Amber's specialty — full colour or correction work</small></div><span class="dots"></span><span class="price">R —</span></div>
+      <div class="mi"><div><b>Colour &amp; Colour-Correction</b><small>Amber's specialty, full colour or correction work</small></div><span class="dots"></span><span class="price">R —</span></div>
       <div class="mi"><div><b>Head Massage</b><small>A relaxing touch reviewers rave about</small></div><span class="dots"></span><span class="price">R —</span></div>
       <div class="mi"><div><b>Blow Wave &amp; Styling</b><small>Wash, blow dry &amp; finish</small></div><span class="dots"></span><span class="price">R —</span></div>
     </div>
@@ -267,16 +269,16 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent-ink);outline
   <div class="wrap">
     <h2 class="reveal">98 Reviews, 4.9 Stars</h2>
     <div class="rev-grid">
-      <blockquote class="rev reveal"><p>"Amber is one of a kind — not only does she have years of experience, but she genuinely cares about you and your hair."</p><footer>— Morgan M. · Google review</footer></blockquote>
-      <blockquote class="rev reveal"><p>"Always on time, no double-up appointments wasting your time! Amber and her team are amazing!"</p><footer>— Demi K. · Google review</footer></blockquote>
-      <blockquote class="rev reveal"><p>"Amber is absolutely amazing with colour work and a precise cut. She colour-corrected my hair perfectly."</p><footer>— Shraddha R. · Google review</footer></blockquote>
+      <blockquote class="rev reveal"><p>"Amber is one of a kind. Not only does she have years of experience, but she genuinely cares about you and your hair."</p><footer>Morgan M. · Google review</footer></blockquote>
+      <blockquote class="rev reveal"><p>"Always on time, no double-up appointments wasting your time! Amber and her team are amazing!"</p><footer>Demi K. · Google review</footer></blockquote>
+      <blockquote class="rev reveal"><p>"Amber is absolutely amazing with colour work and a precise cut. She colour-corrected my hair perfectly."</p><footer>Shraddha R. · Google review</footer></blockquote>
     </div>
   </div>
 </section>
 
 <section id="journal" style="padding-top:0">
   <div class="wrap">
-    <h2 class="reveal">The Edit — Hair Journal</h2>
+    <h2 class="reveal">The Edit: Hair Journal</h2>
     <p class="lede reveal">Tips Amber and her team share with clients: making colour last, caring for hair between visits, and getting the most from your appointment.</p>
     <div class="journal-grid reveal">
       <a class="jpost" href="learn.html"><span class="tag">Vivid</span><h3>Living with vivid & fashion colour</h3><p>Keep bold tones saturated between visits.</p><div class="more">Read in the journal &rarr;</div></a>
@@ -292,7 +294,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent-ink);outline
       <h2>Come Say Hello</h2>
       <div class="vitem"><div><b>Where</b><span>Fig Tree Farm, 56 Inanda Rd, Hillcrest, 3610</span></div></div>
       <div class="vitem"><div><b>Call</b><a href="tel:+27641173763">064 117 3763</a></div></div>
-      <div class="vitem"><div><b>Hours</b><span>Hours to be confirmed <em style="font-size:11px;color:var(--accent-ink)">(draft — hours to be confirmed)</em></span></div></div>
+      <div class="vitem"><div><b>Hours</b><span>Hours to be confirmed <em style="font-size:11px;color:var(--accent-ink)">(draft, hours to be confirmed)</em></span></div></div>
       <div class="vitem"><div><b>Follow</b><a href="https://www.instagram.com/amberatavantgarde" rel="noopener" target="_blank">@amberatavantgarde</a></div></div>
       <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center">
         <a class="cta-big" href="tel:+27641173763">Call to book → 064 117 3763</a>
@@ -311,7 +313,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent-ink);outline
 <footer class="site">
   <div class="wrap foot-in">
     <span>Avant Garde Hair Hillcrest · Hillcrest</span>
-    <span>Concept by Arkatype Digital · draft — awaiting client sign-off</span>
+    <span>Concept by Arkatype Digital · draft, awaiting client sign-off</span>
   </div>
 </footer>
 
@@ -325,7 +327,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent-ink);outline
   </button>
 </div>
 <div class="chatbox" id="chatbox" role="dialog" aria-label="Quick questions">
-  <div class="chat-head"><span>Avant Garde Hair — quick answers</span><button id="chatClose" aria-label="Close chat">✕</button></div>
+  <div class="chat-head"><span>Avant Garde Hair · quick answers</span><button id="chatClose" aria-label="Close chat">✕</button></div>
   <div class="chat-log" id="chatLog"><div class="msg bot">Hi! Ask me about location, hours, services, or booking.</div></div>
   <div class="chips" id="chatChips"></div>
 </div>
@@ -336,11 +338,11 @@ addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 40),
 const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12});
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-// Comms Bridge chat — answers use REAL data only; booking answer is the Tier 1 upsell hook
+// Comms Bridge chat: answers use REAL data only; booking answer is the Tier 1 upsell hook
 const QA = [
-  { q: 'Where are you?', a: 'We\'re at Fig Tree Farm, 56 Inanda Rd, Hillcrest, 3610 — use the Navigate button below to get directions.' },
-  { q: 'What are your hours?', a: 'Our hours are still being confirmed for this site (draft — final hours from Avant Garde Hair Hillcrest.)' },
-  { q: 'What services do you offer?', a: 'Cuts, colour and colour-correction, styling, and a relaxing head massage — see the Services section above for the full list.' },
+  { q: 'Where are you?', a: 'We\'re at Fig Tree Farm, 56 Inanda Rd, Hillcrest, 3610. Use the Navigate button below to get directions.' },
+  { q: 'What are your hours?', a: 'Our hours are still being confirmed for this site (draft, final hours from Avant Garde Hair Hillcrest.)' },
+  { q: 'What services do you offer?', a: 'Cuts, colour and colour-correction, styling, and a relaxing head massage. See the Services section above for the full list.' },
   { q: 'How do I book?', a: 'Call or WhatsApp 064 117 3763. Online booking is coming to this site soon.' }
 ];
 const box = document.getElementById('chatbox'), log = document.getElementById('chatLog'), chips = document.getElementById('chatChips'), toggle = document.getElementById('chatToggle');

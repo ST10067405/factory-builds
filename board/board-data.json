@@ -5,7 +5,7 @@
       "status": "deployed",
       "priority": "hot",
       "notes": "Warm lead - Jaime is on their WhatsApp. Has an existing basic site (synergyhair.co.za), so pitch is a rebuild/upgrade, not greenfield. 2 real client colour-work photos on the build.\n\nJaimes notes: no em-dashes. site looks good.",
-      "nextAction": "review jaime's notes",
+      "nextAction": "Outreach: pitch as a rebuild of synergyhair.co.za",
       "caveats": [
         "Existing basic site — pitch as REBUILD",
         "WhatsApp confirmed: 072 469 7969"
@@ -35,7 +35,7 @@
           "url": "https://www.google.com/maps/search/Synergy+Hair+Kloof+Village+Mall"
         }
       ],
-      "changeNotes": "2026-07-09 — /impeccable + /ui-ux-pro-max pass: image-led split hero (real colour-work photo + review caption + Call/WhatsApp CTAs), WCAG-AA contrast split (--accent-ink), 44px touch targets, ambient motion with reduced-motion guard. Preflight PASS, redeployed."
+      "changeNotes": "2026-07-09 — /impeccable + /ui-ux-pro-max pass: image-led split hero (real colour-work photo + review caption + Call/WhatsApp CTAs), WCAG-AA contrast split (--accent-ink), 44px touch targets, ambient motion with reduced-motion guard. Preflight PASS, redeployed. | 2026-07-21 — Jaime notes applied: all em-dashes removed from index + journal copy (only the \"R —\" price placeholders remain, which preflight mandates). Now also in the public portfolio at arkatypestudios.com/work/synergy-hair/."
     },
     "avant-garde-hair": {
       "title": "Avant Garde Hair Hillcrest",
@@ -45,7 +45,7 @@
       "nextAction": "Verify listed site is dead, then outreach",
       "caveats": [
         "Listed site avantgarde.za.live is DEAD — verify before outreach",
-        "No real photos available — client to supply"
+        "2 real photos found (studio interior + care range); client still to supply a full client-work gallery"
       ],
       "notionUrl": "",
       "docs": [],
@@ -68,7 +68,7 @@
           "url": "https://www.google.com/maps/search/Avant+Garde+Hair+Fig+Tree+Farm+Inanda+Rd+Hillcrest"
         }
       ],
-      "changeNotes": "2026-07-09 — /impeccable + /ui-ux-pro-max pass: image-led split hero (colour photo + Shraddha R. review caption + Call/WhatsApp CTAs) over the coral→lavender mesh, WCAG-AA contrast split (--accent-ink), 44px touch targets, reduced-motion guard. Preflight PASS, redeployed."
+      "changeNotes": "2026-07-09 — /impeccable + /ui-ux-pro-max pass: image-led split hero (colour photo + Shraddha R. review caption + Call/WhatsApp CTAs) over the coral→lavender mesh, WCAG-AA contrast split (--accent-ink), 44px touch targets, reduced-motion guard. Preflight PASS, redeployed. | 2026-07-21 — Jaime notes applied: em-dashes removed; hero \"g\" clipping fixed (Syne needs ~1.19em line box, line-height was 1.03 — now 1.16, h1 resized, min-width:0 on hero-grid children so the manual <br> gives 2 lines not 3). 2 genuine Fig Tree Farm photos wired in; a watermarked hji.co.uk shot was rejected. Now in the public portfolio at /work/avant-garde/."
     },
     "village-pet-parlour": {
       "title": "Village Pet Parlour",
@@ -96,7 +96,7 @@
           "url": "https://www.google.com/maps/search/Village+Pet+Parlour+2+St+Marys+Rd+Kloof"
         }
       ],
-      "changeNotes": "2026-07-09 — /impeccable polish + hero redo + animated hero background (drifting glows, pointer parallax); ui-ux-pro-max 44px touch targets + zero-CLS aspect ratios; reduced-motion guard. Preflight PASS, redeployed."
+      "changeNotes": "2026-07-09 — /impeccable polish + hero redo + animated hero background (drifting glows, pointer parallax); ui-ux-pro-max 44px touch targets + zero-CLS aspect ratios; reduced-motion guard. Preflight PASS, redeployed. | 2026-07-21 — Jaime notes applied: all em-dashes removed from index + journal copy. Now in the public portfolio at /work/village-pet/."
     },
     "integrity-hair": {
       "title": "Integrity Hair",
@@ -813,9 +813,12 @@
       "status": "gate_passed",
       "priority": "hot",
       "notes": "Dental clinic, Pinetown. 4.9★ / 169 Google reviews. Ph 083 790 6732. Local-scout lead (presence-gated, no website). First-pass icon-forward concept site.\n\nJaime notes: she has a wix site, use this to scrape information from: https://knaidoowebsite.wixsite.com/drkarmininaidoo?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExNWZUYmM5eDRNNzM0cHVtenNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR6i-AQvtAbsqrtdBR3sSAYLfqUdXotRMNxr1I1BLJ1_F1svnnnH_xT83cgzyQ_aem_xG40-yr2bQCwnyBsFDkTzA\n\nI think we can pull images from there too. no em-dashes",
-      "nextAction": "review jaime's notes",
+      "nextAction": "RECLASSIFY BEFORE OUTREACH: practice HAS a live Wix site, so this is a rebuild/SEO pitch, not a Tier-0 \"you have no website\" demo",
       "caveats": [
-        "All 5 pulled photos rejected as contaminated — fully stock-led with on-page disclosure; practice photos needed from client"
+        "HAS A LIVE SITE: knaidoowebsite.wixsite.com/drkarmininaidoo — presence gate would return HAS_SITE. Pitch as REBUILD, not greenfield.",
+        "Two locations, not one: Pinetown (Union Main Centre) and Kloof (3 Bridle Rd)",
+        "Portrait + logo are the practice own; treatment-room imagery still representative stock",
+        "Public portfolio copy at /work/karmini-dental/ is DE-IDENTIFIED (no portrait, logo or named testimonial) pending her sign-off"
       ],
       "notionUrl": "",
       "docs": [],
@@ -838,14 +841,14 @@
           "url": "https://www.facebook.com/drkarmininaidoo/"
         }
       ],
-      "changeNotes": "2026-07-12 — NEW local-scout lead (score 74). Icon-forward concept site generated (real data, category theme, Comms Bridge, maps, noindex+draft+reduced-motion). Preflight PASS. | 2026-07-12 (late) — Upgraded to FULL SOP spec: photo-led premium rebuild, Our Work gallery, unique 6-article journal (learn.html, FAQPage JSON-LD), Comms Bridge kept, photos strictly Read-vetted (mis-attributed Serper/Fresha pulls rejected), stock fill disclosed where needed. Repo-wide preflight PASS."
+      "changeNotes": "2026-07-12 — NEW local-scout lead (score 74). Icon-forward concept site generated (real data, category theme, Comms Bridge, maps, noindex+draft+reduced-motion). Preflight PASS. | 2026-07-12 (late) — Upgraded to FULL SOP spec: photo-led premium rebuild, Our Work gallery, unique 6-article journal (learn.html, FAQPage JSON-LD), Comms Bridge kept, photos strictly Read-vetted (mis-attributed Serper/Fresha pulls rejected), stock fill disclosed where needed. Repo-wide preflight PASS. | 2026-07-21 — Jaime notes applied: rebuilt on real data scraped from her Wix site (BDS (WITS), \"We Create Memorable Smiles\", bio pull-quote, portrait, real hours, 12-item treatment list, all numbers + emergency line, email, both surgery addresses, medical aids, biological dentistry, Lizo Makhoba testimonial). Address corrected to Union Main Centre, 45-51 Old Main Road. REMOVED the false \"no website\" pitch line. Retheme to the navy+gold of her own logo, which also fixed two gold-on-dark contrast failures (2.1:1 and 2.6:1 to 6.9:1 and 9.3:1). Em-dashes removed, chatbot rewritten on real data."
     },
     "guru-g-barber-shop": {
       "title": "Guru G Barber Shop",
       "status": "gate_passed",
       "priority": "hot",
       "notes": "Barber shop, Westville. 4.5★ / 183 Google reviews. Ph 074 092 4460. Local-scout lead (presence-gated, no website). First-pass icon-forward concept site.\n\nJaime's notes: The colour theme is wrong has their logo is blue and white? I think matching blue, white, possible black acents would be best. try to create a pleasant colour pallete with that. \n\nJaimes notes: no em-dashes",
-      "nextAction": "review jaime's notes",
+      "nextAction": "Wire in the 3 real photos Jaime added (currently unused), then outreach",
       "caveats": [
         "1 real photo (address-matched Fresha); rejected pulls belonged to Guru G's OTHER branches; stock-led with disclosure"
       ],
@@ -870,7 +873,7 @@
           "url": "https://www.facebook.com/WestvilleJunction/photos/dont-just-get-a-fresh-haircut-but-trim-your-beard-toofor-quality-haircuts-and-fr/3037311089726161/"
         }
       ],
-      "changeNotes": "2026-07-12 — NEW local-scout lead (score 73). Icon-forward concept site generated (real data, category theme, Comms Bridge, maps, noindex+draft+reduced-motion). Preflight PASS. | 2026-07-12 (late) — Upgraded to FULL SOP spec: photo-led premium rebuild, Our Work gallery, unique 6-article journal (learn.html, FAQPage JSON-LD), Comms Bridge kept, photos strictly Read-vetted (mis-attributed Serper/Fresha pulls rejected), stock fill disclosed where needed. Repo-wide preflight PASS.",
+      "changeNotes": "2026-07-12 — NEW local-scout lead (score 73). Icon-forward concept site generated (real data, category theme, Comms Bridge, maps, noindex+draft+reduced-motion). Preflight PASS. | 2026-07-12 (late) — Upgraded to FULL SOP spec: photo-led premium rebuild, Our Work gallery, unique 6-article journal (learn.html, FAQPage JSON-LD), Comms Bridge kept, photos strictly Read-vetted (mis-attributed Serper/Fresha pulls rejected), stock fill disclosed where needed. Repo-wide preflight PASS. | 2026-07-21 — Jaime notes applied: em-dashes removed, and the warm copper theme replaced with the blue/white/black palette from the storefront sign (navy #0A1626, surface #10233A, sign-blue #4A97E8, light blue #9CCBF5, near-black #04101F). Contrast: 16.9:1 body, 10.6:1 accents, 6.3:1 button text, all AA+. NOTE: the 3 real_added_* photos Jaime committed are not referenced by index.html or hero-video.html, so they are sitting unused while the site runs stock-led on 1 real photo. Now in the public portfolio at /work/guru-g/.",
       "cockpit": {
         "sections": {
           "hero": {
