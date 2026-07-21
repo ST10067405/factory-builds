@@ -870,7 +870,20 @@
           "url": "https://www.facebook.com/WestvilleJunction/photos/dont-just-get-a-fresh-haircut-but-trim-your-beard-toofor-quality-haircuts-and-fr/3037311089726161/"
         }
       ],
-      "changeNotes": "2026-07-12 — NEW local-scout lead (score 73). Icon-forward concept site generated (real data, category theme, Comms Bridge, maps, noindex+draft+reduced-motion). Preflight PASS. | 2026-07-12 (late) — Upgraded to FULL SOP spec: photo-led premium rebuild, Our Work gallery, unique 6-article journal (learn.html, FAQPage JSON-LD), Comms Bridge kept, photos strictly Read-vetted (mis-attributed Serper/Fresha pulls rejected), stock fill disclosed where needed. Repo-wide preflight PASS."
+      "changeNotes": "2026-07-12 — NEW local-scout lead (score 73). Icon-forward concept site generated (real data, category theme, Comms Bridge, maps, noindex+draft+reduced-motion). Preflight PASS. | 2026-07-12 (late) — Upgraded to FULL SOP spec: photo-led premium rebuild, Our Work gallery, unique 6-article journal (learn.html, FAQPage JSON-LD), Comms Bridge kept, photos strictly Read-vetted (mis-attributed Serper/Fresha pulls rejected), stock fill disclosed where needed. Repo-wide preflight PASS.",
+      "cockpit": {
+        "sections": {
+          "hero": {
+            "effect": "",
+            "action": "",
+            "asset": "",
+            "timing": "",
+            "notes": "",
+            "openartPrompt": "Consistent product/character card for Guru G Barber Shop — hero section. Subject: describe subject. Style: premium, editorial, photoreal. Keep identity consistent across 10 generations."
+          }
+        },
+        "updatedAt": "2026-07-14T20:30:03.764Z"
+      }
     },
     "seven-seeds-coffee-shop": {
       "title": "Seven Seeds Coffee Shop",
