@@ -59,6 +59,10 @@ for (const slug of clients) {
   if (fs.existsSync(imgDir)) {
     for (const f of fs.readdirSync(imgDir)) {
       if (!/\.(jpe?g|png|webp|gif|svg)$/i.test(f)) continue;
+      // pulled_* files are unvetted, never-deployed photo candidates (excluded from the
+      // build output by build.js) — cross-client duplication among them is expected and
+      // harmless until a human vets one in, at which point it gets a real_/stock_ name.
+      if (/^pulled_/i.test(f)) continue;
       const h = crypto.createHash('md5').update(fs.readFileSync(path.join(imgDir, f))).digest('hex');
       (imgHashes[h] = imgHashes[h] || []).push(`${slug}/images/${f}`);
     }

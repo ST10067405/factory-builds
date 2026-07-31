@@ -44,6 +44,9 @@ function listBuildFolders() {
 // Internal design/brief docs live co-located in each client folder but must NEVER
 // deploy to the public site (they hold strategy, anti-references, pitch notes).
 const SKIP_DEPLOY_FILES = new Set(["PRODUCT.md", "DESIGN.md"]);
+// Same rule for whole subfolders: <slug>/docs/ holds quotes, needs assessments and
+// competitor/gap analyses — business paperwork that must never reach the public URL.
+const SKIP_DEPLOY_DIRS = new Set(["docs"]);
 
 function copyDir(src, dest) {
   fs.mkdirSync(dest, { recursive: true });
@@ -52,8 +55,11 @@ function copyDir(src, dest) {
     const destPath = path.join(dest, entry.name);
     if (entry.isDirectory()) {
       if (entry.name.startsWith(".")) continue; // skip nested .claude etc.
+      if (SKIP_DEPLOY_DIRS.has(entry.name)) continue;
       copyDir(srcPath, destPath);
-    } else if (!SKIP_DEPLOY_FILES.has(entry.name)) {
+    } else if (!SKIP_DEPLOY_FILES.has(entry.name) && !/^pulled_/i.test(entry.name)) {
+      // pulled_* images are UNVETTED photo candidates (Cockpit pull tool / lead refresh) —
+      // they never deploy; vetting renames them real_added_* / stock_* via the review flow.
       fs.copyFileSync(srcPath, destPath);
     }
   }
