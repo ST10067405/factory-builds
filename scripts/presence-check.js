@@ -21,8 +21,17 @@
 
 const https = require('https');
 
-const SERPER_KEY = process.env.SERPER_KEY || 'c7d30ed2084ef1ce75082cc5147f19810ae7fc2a';
-const NOTION_TOKEN = process.env.NOTION_TOKEN || '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';
+function requireEnv(name) {
+  const v = process.env[name];
+  if (!v) {
+    console.error(`FATAL: ${name} is not set. Export it before running — there is no hardcoded fallback.`);
+    process.exit(2);
+  }
+  return v;
+}
+
+const SERPER_KEY = requireEnv('SERPER_KEY');
+const NOTION_TOKEN = requireEnv('NOTION_TOKEN');
 const LEADS_DB = '8c668bf4-4140-464e-9a66-242df372ce5a';
 
 // Domains that are never a small business's OWN marketing site.

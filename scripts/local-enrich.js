@@ -8,7 +8,15 @@
 const https = require('https');
 const fs = require('fs');
 const SP = process.env.SP || 'C:/Users/jaime/AppData/Local/Temp/claude/C--Users-jaime-Videos-instagram-videos/cf37edfb-bf7d-4463-b51e-0bad7846945f/scratchpad';
-const SERPER_KEY = process.env.SERPER_KEY || 'c7d30ed2084ef1ce75082cc5147f19810ae7fc2a';
+function requireEnv(name) {
+  const v = process.env[name];
+  if (!v) {
+    console.error('FATAL: ' + name + ' is not set. Export it before running — there is no hardcoded fallback.');
+    process.exit(2);
+  }
+  return v;
+}
+const SERPER_KEY = requireEnv('SERPER_KEY');
 const TARGET = 20;
 const buildable = JSON.parse(fs.readFileSync(SP + '/buildable.json', 'utf8'));
 

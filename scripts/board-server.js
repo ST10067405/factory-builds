@@ -277,7 +277,10 @@ const server = http.createServer(async (req, res) => {
     if (!query) return sendJSON(res, 400, { error: 'query required' });
     const count = Math.min(Math.max(parseInt(b.count || 8, 10) || 8, 1), 15);
     const https = require('https');
-    const SERPER_KEY = process.env.SERPER_KEY || 'c7d30ed2084ef1ce75082cc5147f19810ae7fc2a';
+    // No hardcoded fallback. This is a long-running server, so disable the one route
+    // rather than exiting the process the whole board depends on.
+    const SERPER_KEY = process.env.SERPER_KEY;
+    if (!SERPER_KEY) return sendJSON(res, 503, { error: 'SERPER_KEY not set — photo pull disabled' });
     const imgDir = path.join(ROOT, slug, 'images');
     fs.mkdirSync(imgDir, { recursive: true });
     const serper = () => new Promise((resolve, reject) => {

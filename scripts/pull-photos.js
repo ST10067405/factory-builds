@@ -14,7 +14,15 @@ const https = require('https');
 const fs = require('fs');
 const path = require('path');
 
-const SERPER_KEY = process.env.SERPER_KEY || 'c7d30ed2084ef1ce75082cc5147f19810ae7fc2a';
+function requireEnv(name) {
+  const v = process.env[name];
+  if (!v) {
+    console.error('FATAL: ' + name + ' is not set. Export it before running — there is no hardcoded fallback.');
+    process.exit(2);
+  }
+  return v;
+}
+const SERPER_KEY = requireEnv('SERPER_KEY');
 const [query, slug, countArg] = process.argv.slice(2);
 if (!query || !slug) { console.log('usage: node scripts/pull-photos.js "query" <slug> [count]'); process.exit(1); }
 const COUNT = parseInt(countArg || '10', 10);
