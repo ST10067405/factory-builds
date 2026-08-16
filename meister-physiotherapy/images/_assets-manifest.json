@@ -1,0 +1,21 @@
+{
+  "kept": [],
+  "rejected": [
+    { "file": "real_01.jpg", "reason": "Wrong trade — pet-grooming salon interior (pink recliner chairs, litter tray, grooming supplies), not a physiotherapy clinic." },
+    { "file": "real_02.jpg", "reason": "Wrong trade — generic aesthetics/beauty-spa stock photo (facial treatment robe + skincare devices), not physiotherapy." },
+    { "file": "real_03.jpg", "reason": "Another business's branding — staff posing under an explicit 'Virgin Active' wall logo. Verified via web search that Virgin Active Westville is at Westville Mall, Cnr Buckingham Terrace & Menstone Dr — a different address from Meister Physiotherapy's 9 Kensington Dr. This is a different practice (a physio/biokinetics operator inside that gym), not this client." },
+    { "file": "real_04.jpg", "reason": "Same staff uniform, treatment-room 'THE PATIENT JOURNEY' poster set, and premises as real_03/real_07/real_08 (confirmed Virgin Active-linked practice) — not Meister Physiotherapy." },
+    { "file": "real_05.jpg", "reason": "Same red-walled gym floor and staff uniform as the confirmed Virgin Active-branded photos (real_03/real_08) — mis-attributed to a different business." },
+    { "file": "real_06.jpg", "reason": "Same red-walled gym floor and staff uniform as the confirmed Virgin Active-branded photos (real_03/real_08) — mis-attributed to a different business." },
+    { "file": "real_07.jpg", "reason": "Same staff uniform and 'THE PATIENT JOURNEY' branded treatment-room poster set as real_04 — part of the same mis-attributed Virgin Active-linked practice." },
+    { "file": "real_08.jpg", "reason": "Another business's branding — explicit 'Virgin Active' wall logo, same reception as real_03. Confirmed different address/practice from Meister Physiotherapy." }
+  ],
+  "stock": [
+    { "file": "stock_01.jpg", "source": "https://unsplash.com/photos/Vn9CwVvk7CU", "cdn": "https://images.unsplash.com/photo-1540205895360-4ad4cffb3aa8", "use": "sports injury / assisted stretch rehab" },
+    { "file": "stock_02.jpg", "source": "https://unsplash.com/photos/pbUWW-CBoqY", "cdn": "https://images.unsplash.com/photo-1649751361457-01d3a696c7e6", "use": "hero + general clinical treatment (knee/leg assessment on plinth)" },
+    { "file": "stock_03.jpg", "source": "https://unsplash.com/photos/inoZpsBQRqk", "cdn": "https://images.unsplash.com/photo-1645005512968-0c1fe99f0093", "use": "post-op / shoulder rehab close-up" },
+    { "file": "stock_04.jpg", "source": "https://unsplash.com/photos/Divaris-Shirichena-desk-stretch", "cdn": "https://images.unsplash.com/photo-1685541087053-c9cab78e4a9e", "use": "desk ergonomics / posture" },
+    { "file": "stock_05.jpg", "source": "https://unsplash.com/photos/YidaiQHHmlM", "cdn": "https://images.unsplash.com/photo-1699523229199-fce5aa6b0ec3", "use": "manual therapy / dry needling close-up" }
+  ],
+  "note": "Stock-led build — all 8 Serper-pulled photos rejected (wrong trade or a different, Virgin-Active-linked physio practice). Footer carries the 'representative stock' disclosure line."
+}

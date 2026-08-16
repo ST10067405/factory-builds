@@ -1,0 +1,41 @@
+{
+  "lead": "Pinemed Optometrist",
+  "query": "Pinemed Optometrist Pinetown CBD optometry",
+  "pulled": 0,
+  "vetted": true,
+  "kept": [],
+  "rejected": [],
+  "stock": [
+    {
+      "file": "stock_01.jpg",
+      "use": "hero",
+      "source_url": "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?w=1200&q=80",
+      "note": "Clean studio portrait of a man wearing glasses, neutral grey background — used as the photo-led hero; reads as sharp/clear vision, fits the navy/optic-white palette."
+    },
+    {
+      "file": "stock_02.jpg",
+      "use": "gallery (Our Work)",
+      "source_url": "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=1200&q=80",
+      "note": "Tortoiseshell frames resting on a closed book, soft white background — minimal, editorial, matches the 'optical clarity' design direction."
+    },
+    {
+      "file": "stock_03.jpg",
+      "use": "gallery (Our Work)",
+      "source_url": "https://images.unsplash.com/photo-1508296695146-257a814070b4?w=1200&q=80",
+      "note": "Cat-eye sunglasses in a soft peach/blush tone — the warm tone reads close to the site's coral accent."
+    },
+    {
+      "file": "stock_04.jpg",
+      "use": "gallery (Our Work)",
+      "source_url": "https://images.unsplash.com/photo-1591076482161-42ce6da69f67?w=1200&q=80",
+      "note": "Clubmaster-style glasses on a wooden deck with warm bokeh. A manufacturer logo (Ray-Ban) is faintly visible on the temple — this is a product brand, not a competing local business, so it's not a rejection-worthy branding conflict."
+    },
+    {
+      "file": "stock_05.jpg",
+      "use": "visit section",
+      "source_url": "https://images.unsplash.com/photo-1577803645773-f96470509666?w=1200&q=80",
+      "note": "Sunglasses on a boat deck with sea/sky behind — used to support the UV-protection angle in the visit section."
+    }
+  ],
+  "note": "0 real photos supplied for this lead (per brief: 'Photos: 0 pulled'), so this build is stock-led per SOP. 10 additional Unsplash candidates were pulled and Read-vetted; 5 rejected as off-topic (makeup flatlay, an unrelated hospital ward interior, a Netflix tablet screen, a sticky-note planning session, a chef in a kitchen) and discarded before selection. Footer discloses representative stock imagery."
+}

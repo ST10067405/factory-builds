@@ -1,0 +1,72 @@
+{
+  "business": "Heron & Crow Tattoo",
+  "slug": "heron-and-crow-tattoo",
+  "kept": [
+    {
+      "file": "stock_closeup.jpg",
+      "vetted": true,
+      "source": "stock",
+      "unsplash_url": "https://unsplash.com/photos/hxNiXP498UI",
+      "cdn_source": "https://images.unsplash.com/photo-1568515045052-f9a854d70bfd",
+      "note": "Gloved artist hands tattooing a detailed black-and-grey forearm sleeve (Japanese-influenced motif, clock face). No logos, no watermark, on-topic."
+    },
+    {
+      "file": "stock_arm.jpg",
+      "vetted": true,
+      "source": "stock",
+      "unsplash_url": "https://unsplash.com/photos/zeT_i6av9rU",
+      "cdn_source": "https://images.unsplash.com/photo-1565058379802-bbe93b2f703a",
+      "note": "Artist tattooing a blackwork wave/dragon piece in progress on a forearm/hand. Clean, bright, no branding visible."
+    },
+    {
+      "file": "stock_text.jpg",
+      "vetted": true,
+      "source": "stock",
+      "unsplash_url": "https://unsplash.com/photos/a-close-up-of-a-person-with-a-tattoo-on-his-arm-HI9nSZDBhN0",
+      "cdn_source": "https://images.unsplash.com/photo-1707390588496-6c50ad954935",
+      "note": "Fine-line minimalist text tattoo on forearm ('I AM WHO I AM'). Moody lighting, no branding."
+    },
+    {
+      "file": "stock_tray.jpg",
+      "vetted": true,
+      "source": "stock",
+      "unsplash_url": "https://unsplash.com/photos/EQucs66pts0",
+      "cdn_source": "https://images.unsplash.com/photo-1583213261205-63258746ed4c",
+      "note": "Dark, moody still-life of tattoo ink bottles and equipment on a tray. Texture/atmosphere image, no people or branding."
+    }
+  ],
+  "rejected": [
+    {
+      "file": "real_01.jpg (deleted)",
+      "reason": "Heron back-piece tattoo photo carried a visible 'ADANOLA' clothing-brand watermark in frame -- another business's branding baked into the shot, and no way to confirm it originated from this Gillitts studio. Rejected per guardrail against another business's branding."
+    },
+    {
+      "file": "real_02.jpg (deleted)",
+      "reason": "Three-panel professional composite of a colour sleeve tattoo, styled like a curated portfolio/listicle grab (small tag markers visible in each panel) rather than a raw shop photo. No way to verify it is this studio's own work -- uncertain, rejected per 'uncertain -> reject' rule."
+    },
+    {
+      "file": "stock_01_nike.jpg (deleted, not shipped)",
+      "reason": "Candidate stock photo (Unsplash tattoo-artist search) showed a prominent 'NIKE' logo on the artist's t-shirt -- distracting third-party branding for a client site. Rejected before use."
+    },
+    {
+      "file": "stock_02_convention.jpg (deleted, not shipped)",
+      "reason": "Candidate stock photo was a busy tattoo-convention floor shot with rival studio signage ('ACES...') visible in the background and low compositional quality. Rejected before use."
+    },
+    {
+      "file": "stock_03_faded.jpg (deleted, not shipped)",
+      "reason": "Candidate stock photo showed amateurish, faded, poorly-executed tattoo work (crude EKG-line/shape) -- wrong quality signal for a tattoo studio's own site. Rejected before use."
+    },
+    {
+      "file": "stock_05_abstract.jpg (deleted, not shipped)",
+      "reason": "Candidate image tagged 'a close up of a tattoo' was actually an abstract purple/blue paint-pour texture with no skin or tattoo visible -- misleading if used as tattoo work. Rejected before use."
+    },
+    {
+      "file": "stock_hands_premium.jpg (deleted, not shipped)",
+      "reason": "Unsplash+ premium photo (plus.unsplash.com) -- downloaded preview was tiled with 'Unsplash+' watermarks, not licensed for free use. Rejected before use."
+    },
+    {
+      "file": "stock_machines_premium.jpg (deleted, not shipped)",
+      "reason": "Unsplash+ premium photo (plus.unsplash.com) -- downloaded preview was tiled with 'Unsplash+' watermarks, not licensed for free use. Rejected before use."
+    }
+  ]
+}

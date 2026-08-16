@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Ink Journal | Heron & Crow Tattoo</title>
+<meta name="description" content="Straight, practical tattoo guidance from Heron & Crow Tattoo in Gillitts — first-tattoo prep, aftercare, placement, cover-ups, healing timelines and consultation questions.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How do I get started — walk-in or consultation?", "acceptedAnswer": { "@type": "Answer", "text": "Message us on WhatsApp with your idea, size and placement — we set up a proper consultation before booking your session." } },
+    { "@type": "Question", "name": "How much does a tattoo cost?", "acceptedAnswer": { "@type": "Answer", "text": "Every piece is priced individually based on size, detail and placement after a consultation. WhatsApp us with your idea for a straight answer." } },
+    { "@type": "Question", "name": "Where exactly are you in Gillitts?", "acceptedAnswer": { "@type": "Answer", "text": "Shop 5, Gillitts Shopping Centre, 1 Clifton Rd, Gillitts, 3610 — on the Upper Highway corridor between Hillcrest and Kloof." } },
+    { "@type": "Question", "name": "How do I book?", "acceptedAnswer": { "@type": "Answer", "text": "Call or WhatsApp 078 043 8123. Online booking is coming to this site soon." } }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#0B0A09;--surface:#171310;--surface2:#1F1A16;--ink:#F2EAD9;--mut:rgba(242,234,217,.62);
+  --brand:#8C1B24;--accent:#B4453B;--line:rgba(242,234,217,.14);
+  --display:'Cormorant Garamond',serif;--body:'Inter',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand);color:var(--ink);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:rgba(11,10,9,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-size:22px;color:var(--ink);text-decoration:none}
+.logo em{color:var(--accent);font-style:italic}
+.nav-back{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-decoration:none}
+.nav-back:hover{color:var(--accent)}
+header{padding:90px 0 60px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--accent);margin-bottom:18px}
+h1{font-family:var(--display);font-size:clamp(38px,6vw,68px);line-height:1.05}
+h1 em{font-style:italic;color:var(--accent)}
+.intro{max-width:600px;margin:22px auto 0;color:var(--mut);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:30px 26px;cursor:pointer;transition:transform .3s,box-shadow .3s;text-align:left}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.4);outline:none}
+.post .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.post h3{font-family:var(--display);font-size:23px;margin:12px 0 8px;line-height:1.2;font-weight:600;color:var(--ink)}
+.post p{color:var(--mut);font-size:14.5px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);font-size:clamp(28px,4vw,44px);margin-bottom:28px;text-align:center;font-weight:600}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent);font-size:22px}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(0,0,0,.7);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--bg);max-width:680px;width:100%;border-radius:22px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(0,0,0,.6);border:1px solid var(--line)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut)}
+.asheet .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.asheet h2{font-family:var(--display);font-size:clamp(26px,4vw,38px);margin:12px 0 20px;line-height:1.15;font-weight:600}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--accent);color:var(--ink);text-decoration:none;font-weight:600;font-size:14px;padding:13px 26px;border-radius:99px}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for Heron & Crow Tattoo by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">Heron <em>&</em> Crow</a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">the ink journal</p>
+    <h1>Straight Answers, <em>Before You Book.</em></h1>
+    <p class="intro">Prep, placement, cover-ups and healing — written for anyone booking their first (or next) piece at Heron & Crow, Gillitts.</p>
+  </div>
+</header>
+
+<div class="wrap"><div class="grid" id="postGrid"></div></div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="qa">
+      <details><summary>How do I get started — walk-in or consultation?</summary><p>Message us on WhatsApp with your idea, size and placement — we set up a proper consultation before booking your session.</p></details>
+      <details><summary>How much does a tattoo cost?</summary><p>Every piece is priced individually based on size, detail and placement after a consultation. WhatsApp us with your idea for a straight answer.</p></details>
+      <details><summary>Where exactly are you in Gillitts?</summary><p>Shop 5, Gillitts Shopping Centre, 1 Clifton Rd, Gillitts, 3610 — on the Upper Highway corridor between Hillcrest and Kloof.</p></details>
+      <details><summary>How do I book?</summary><p>Call or WhatsApp 078 043 8123. Online booking is coming to this site soon.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap">Heron & Crow Tattoo · Shop 5, Gillitts Shopping Centre, Gillitts · Concept by Arkatype Digital — draft, awaiting client sign-off</div></footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#visit">Book your visit →</a>
+  </div>
+</div>
+
+<script>
+const POSTS = [
+  { tag: 'First Tattoo', title: 'Getting Your First Tattoo in Gillitts: What to Do the Night Before', teaser: 'The prep that actually matters — and the mistakes that turn a good session into a rough one.', body: `
+    <p>A first tattoo is mostly decided the night before it happens, not in the chair. Here's the honest checklist.</p>
+    <p><strong>Sleep and food first.</strong> Get a proper night's sleep and eat a real meal before you come in — an empty stomach and low blood sugar are the two biggest reasons first-timers feel light-headed mid-session. Bring a snack and water if your appointment runs long.</p>
+    <p><strong>Skip the alcohol.</strong> Don't drink the night before or the day of. Alcohol thins your blood, which means more bleeding, patchier ink saturation, and a longer, harder session for you and the artist.</p>
+    <p><strong>Dress for the spot.</strong> Wear loose clothing that gives easy access to the area being tattooed, and that you don't mind getting a little ink or stencil transfer on.</p>
+    <p><strong>Plan the trip.</strong> If you're coming from Hillcrest, Kloof or further along the Upper Highway, build in parking time at the Gillitts Shopping Centre — arriving rushed and stressed makes for a tenser session than it needs to be.</p>
+    <p><strong>Bring references, not just ideas.</strong> Reference images speak louder than descriptions. Even rough ones help your artist get to your final design faster.</p>
+  `},
+  { tag: 'Aftercare', title: 'Aftercare on the Upper Highway: Healing Ink Through a Durban Summer', teaser: 'KZN heat, humidity and sweat all change how a fresh tattoo heals. Here is how to manage it.', body: `
+    <p>Durban's humidity and heat make aftercare a little more demanding than it would be somewhere cooler and drier — sweat, sun and moisture all interact with a healing tattoo.</p>
+    <p><strong>Keep it clean and dry-ish.</strong> Wash gently with unscented soap and lukewarm water twice a day, pat dry (never rub), and apply a thin layer of fragrance-free moisturiser or a dedicated tattoo balm.</p>
+    <p><strong>Sweat is the enemy in summer.</strong> Heavy sweating during the first two weeks can irritate fresh ink and slow healing. If you're active outdoors in the Highway heat, plan lighter activity until the peeling stage is done.</p>
+    <p><strong>Sun is worse.</strong> UV exposure fades new ink fast and can cause serious irritation on unhealed skin. Keep it covered or in shade for the first few weeks, and once healed, sunscreen becomes a permanent habit if you want the piece to hold its colour.</p>
+    <p><strong>Skip the pool and the sea.</strong> Chlorine, salt water and communal water all carry infection risk on broken skin. Give it the full healing window before you swim.</p>
+    <p>If anything looks unusually red, hot or swollen past the first few days, message us on WhatsApp — we'd rather answer a quick question early than see a problem later.</p>
+  `},
+  { tag: 'Placement', title: 'Choosing Tattoo Placement: A Gillitts Studio’s Honest Guide', teaser: 'Placement affects how a piece reads, how it ages, and how much it hurts. Here is how to think about it.', body: `
+    <p>Placement is one of the most under-thought decisions in getting a tattoo, and one of the most permanent. A few honest factors worth weighing before you decide.</p>
+    <p><strong>Design should follow form.</strong> A piece designed for a forearm doesn't automatically work on a calf or shoulder blade — good placement means the design is built (or adapted) to flow with that specific part of your body.</p>
+    <p><strong>Some areas age better than others.</strong> Skin that stretches, creases or sees constant friction — hands, feet, inner elbow — tends to lose detail faster than fleshier, more stable areas like the outer arm, thigh or upper back.</p>
+    <p><strong>Pain varies a lot by zone.</strong> Bony areas and spots close to nerves (ribs, spine, sternum, tops of feet) tend to hurt more. Fleshier areas are generally more comfortable, which matters for longer custom sessions.</p>
+    <p><strong>Concealability is a real, practical question.</strong> Think honestly about work dress codes, family events, or anything else where visibility matters to you — it's much easier to plan for that upfront than to manage it after.</p>
+    <p>None of this is a reason to overthink it forever — it's exactly what a consultation is for.</p>
+  `},
+  { tag: 'Cover-Ups', title: 'Cover-Up Tattoos: What’s Actually Possible', teaser: 'An honest look at what a cover-up can and can’t fix, before you book one.', body: `
+    <p>Cover-ups get sold on Instagram as pure magic. In reality, they're a craft with real constraints — worth understanding before you commit.</p>
+    <p><strong>The new piece is usually bigger and darker.</strong> To fully hide old linework or solid colour, a cover-up almost always needs to be larger than the original tattoo and use more saturated, darker tones — a pale, delicate design usually can't sit on top of dark existing ink.</p>
+    <p><strong>Some ink needs lightening first.</strong> Heavily saturated or poorly-healed old tattoos sometimes need one or more laser lightening sessions before a cover-up will read cleanly. That's a real timeline factor, not an upsell.</p>
+    <p><strong>Not every old tattoo is coverable in one sitting.</strong> Size, ink colour, scarring and skin condition all affect what's realistic. A proper assessment — in person or via clear photos — is the only honest way to know what's actually possible for your piece.</p>
+    <p><strong>Bring your existing tattoo's full context.</strong> How old it is, whether it's raised or scarred, and what colours were used all change the plan. The more information your artist has upfront, the more realistic the first conversation can be.</p>
+    <p>If you're sitting on a tattoo you regret, a consultation costs you nothing but the conversation.</p>
+  `},
+  { tag: 'Healing', title: 'The Tattoo Healing Timeline, Week by Week', teaser: 'What actually happens to a fresh tattoo, stage by stage, so you know what is normal.', body: `
+    <p>Healing follows a fairly predictable pattern. Knowing what's normal at each stage helps you tell the difference between "this is just healing" and "I should ask someone."</p>
+    <p><strong>Days 1–3: Fresh and tender.</strong> Expect redness, mild swelling and some oozing of plasma and excess ink. Keep it clean, moisturised and uncovered as much as practical after the first few hours.</p>
+    <p><strong>Days 4–7: The peel begins.</strong> Skin starts to flake and peel like a mild sunburn. It will look duller and patchier during this stage — that's completely normal and not a sign the ink is coming out.</p>
+    <p><strong>Days 8–14: Itching and settling.</strong> The peeling slows and itching often peaks here. Resist scratching or picking — pat or gently slap the area instead, and keep moisturising.</p>
+    <p><strong>Weeks 3–4: Looking healed, not quite there.</strong> The surface looks settled and the colour brightens back up, but the skin underneath is still repairing. Sun protection and gentle care still matter.</p>
+    <p><strong>Month 2 onward: Fully healed.</strong> This is roughly when a tattoo is considered completely healed below the surface. Long-term care from here is mostly about sun protection to keep the piece sharp for years.</p>
+  `},
+  { tag: 'Consultation', title: 'What to Bring to Your Consultation at Heron & Crow', teaser: 'A short list that makes your first conversation faster and your design better.', body: `
+    <p>A good consultation is a two-way conversation, and a little preparation makes it far more productive for both you and your artist.</p>
+    <p>Come with:</p>
+    <ul>
+      <li><strong>Reference images.</strong> Even a handful of loosely related images (style, subject, linework weight) give your artist far more to work with than a verbal description alone.</li>
+      <li><strong>A rough idea of placement.</strong> You don't need to have it perfectly decided, but knowing roughly where on your body helps shape scale and composition from the start.</li>
+      <li><strong>An honest sense of size.</strong> Bigger, more detailed pieces take longer and usually need multiple sessions — worth discussing openly upfront rather than assuming.</li>
+      <li><strong>Any relevant skin history.</strong> Scarring, skin conditions, or old tattoos in the area all affect what's realistic.</li>
+      <li><strong>Your questions.</strong> Healing time, session length, touch-ups, aftercare — ask everything. A studio that welcomes questions is one worth trusting with permanent work.</li>
+    </ul>
+    <p>Message us on WhatsApp to set a time — consultations are how every custom piece at Heron & Crow actually starts.</p>
+  `}
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

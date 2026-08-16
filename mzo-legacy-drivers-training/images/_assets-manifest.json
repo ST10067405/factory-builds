@@ -1,0 +1,20 @@
+{
+  "business": "MZO Legacy Driver's Training",
+  "slug": "mzo-legacy-drivers-training",
+  "kept": [],
+  "rejected": [
+    { "file": "real_01.jpg", "reason": "Wrong business — car branded 'LEGACY DRIVING ACADEMY', phone 072 799 7666, legacydriving.co.za; not MZO Legacy (076 407 2937). Jacaranda-street setting reads as Gauteng, not Pinetown." },
+    { "file": "real_02.jpg", "reason": "Same 'LEGACY DRIVING ACADEMY' fleet branding as real_01, different business, jacaranda-lined street (Gauteng-style), not New Germany/Pinetown." },
+    { "file": "real_03.jpg", "reason": "Same 'LEGACY DRIVING ACADEMY' branded car and staff shirt — wrong business, coincidental name overlap with 'MZO Legacy'." },
+    { "file": "real_04.png", "reason": "Promotional listicle graphic for 'BONUS DRIVING SCHOOL', Pretoria (081 821 3888, bonusdrivingschool.co.za) — entirely different business and city." },
+    { "file": "real_05.jpg", "reason": "Flatbed truck branded 'HE & SHE DRIVER TRAINING CENTRE', Cape Town area code (021 931 8214) — wrong business, wrong trade vehicle, wrong city." }
+  ],
+  "stock": [
+    { "file": "stock_01.jpg", "source": "https://unsplash.com/photos/54toi0XWIig", "url": "https://images.unsplash.com/photo-1667020854803-0305af085242", "desc": "Instructor and learner smiling in car, hands on wheel — used as hero image", "license": "Unsplash License (free to use)" },
+    { "file": "stock_02.jpg", "source": "https://unsplash.com/photos/lcirqLKB8B4", "url": "https://images.unsplash.com/photo-1527593167147-e9c94a5883e6", "desc": "Close-up hands on steering wheel while driving — gallery / K53 practice", "license": "Unsplash License (free to use)" },
+    { "file": "stock_03.jpg", "source": "https://unsplash.com/photos/LcSpQ36Q2us", "url": "https://images.unsplash.com/photo-1537211790624-e6f568af4b13", "desc": "Two people in car from behind, dashboard and road ahead — gallery / lesson in progress", "license": "Unsplash License (free to use)" },
+    { "file": "stock_04.jpg", "source": "https://unsplash.com/photos/zAm1sdicGXc", "url": "https://images.unsplash.com/photo-1516862523118-a3724eb136d7", "desc": "Young learner driving, hand on wheel, rear angle — gallery / solo practice", "license": "Unsplash License (free to use)" },
+    { "file": "stock_05.jpg", "source": "https://unsplash.com/photos/_c7haaSAcIg", "url": "https://images.unsplash.com/photo-1553782097-130fef5d3e27", "desc": "Two people in car, city road ahead through windscreen — visit section image", "license": "Unsplash License (free to use)" }
+  ],
+  "note": "All 5 pulled real_NN photos were wrong-business/wrong-city and rejected — build is fully stock-led. Footer disclosure line added per SOP."
+}

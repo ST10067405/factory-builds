@@ -1,0 +1,52 @@
+{
+  "kept": [
+    {
+      "file": "real_02.jpg",
+      "vetted": true,
+      "source": "Serper-pulled (real_02.jpg)",
+      "note": "Candid gym-floor photo — man on a treadmill, cardio machines, stationary bikes and windows visible in background. No third-party branding, plausible interior shot from this business, on-topic. Used in the Our Work gallery."
+    },
+    {
+      "file": "stock_01.jpg",
+      "vetted": true,
+      "source": "Unsplash photo-1517836357463-d25dfeac3438 (w=1600&q=80)",
+      "note": "Close-up barbell deadlift set-up on dark rubber gym flooring — on-topic, distinctive, matches iron & grit direction."
+    },
+    {
+      "file": "stock_02.jpg",
+      "vetted": true,
+      "source": "Unsplash photo-1526506118085-60ce8714f8c5 (w=1600&q=80)",
+      "note": "Black-and-white dramatic pull-up shot on a power rack — used as the photo-led hero background and reused in the Visit section."
+    },
+    {
+      "file": "stock_03.jpg",
+      "vetted": true,
+      "source": "Unsplash photo-1571019613454-1cb2f99b2d8b (w=1600&q=80)",
+      "note": "Close-up of a hand gripping a dumbbell on a weight rack, gritty gym lighting — matches free-weights facility description."
+    },
+    {
+      "file": "stock_04.jpg",
+      "vetted": true,
+      "source": "Unsplash photo-1546483875-ad9014c88eba (w=1600&q=80)",
+      "note": "Dumbbell row on a bench, dumbbell racks in background, red training kit echoing the site's signal-red accent."
+    }
+  ],
+  "rejected": [
+    {
+      "file": "real_01.jpg (deleted)",
+      "reason": "Authentic-looking (visible partial 'Body Physiqu...' signage + interior matches this gym) but a ~2020 COVID-lockdown protest photo — masked people holding 'Open Our Gyms' / 'Save Our Jobs' picket signs. Dated (5-6 years old), not representative of the current training floor, unsuitable tone for a 2026 marketing site. Deleted."
+    },
+    {
+      "reason": "Rejected candidate (not saved) — Unsplash photo-1571731956672-... bright studio sit-up shot: boutique/bright-airy tone, off-brand for the matte-black 'iron & grit' direction."
+    },
+    {
+      "reason": "Rejected candidate (not saved) — outdoor bootcamp/park class: wrong setting (not an indoor iron gym) and a partially visible third-party shield/badge logo and 'train...' branded shirt in the background."
+    },
+    {
+      "reason": "Rejected candidate (not saved) — white studio-backdrop fitness jump-kick shot: generic listicle stock look, no gym environment, off-brand."
+    },
+    {
+      "reason": "Rejected candidate (not saved) — massage-therapy close-up: wrong trade entirely (spa/physio, not a gym)."
+    }
+  ]
+}

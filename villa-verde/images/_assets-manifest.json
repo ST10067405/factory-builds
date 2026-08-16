@@ -1,0 +1,16 @@
+{
+  "kept": [
+    { "file": "real_01.jpg", "vetted": true, "desc": "Thatched-roof reception with garden lawn, stone path and courtyard dining table — bright daylight" },
+    { "file": "real_02.jpg", "vetted": true, "desc": "Garden and pool glimpsed through palms and trees, guest room balcony visible at right" },
+    { "file": "real_03.jpg", "vetted": true, "desc": "On-site entrance signage reading 'Villa Verde' with tree logo and 'part of the Ella Bella Guesthouse Group' — confirms property identity" },
+    { "file": "real_04.jpg", "vetted": true, "desc": "Room exterior — two guest-room doors, outdoor seating on a brick-paved patio" },
+    { "file": "real_05.jpg", "vetted": true, "desc": "Brick-paved breezeway between guest rooms, terracotta planters, daylight" },
+    { "file": "real_06.jpg", "vetted": true, "desc": "Thatched courtyard dining area at night, string lighting, garden lawn foreground" },
+    { "file": "real_08.jpg", "vetted": true, "desc": "Thatched dining/lounge area at night — armchair, long table, lanterns" }
+  ],
+  "rejected": [
+    { "file": "real_07.jpg", "reason": "Different building entirely — modern glass-and-brick two-storey structure with a different 'Villa Verde Guest House' pole sign (red/white motel-style branding), inconsistent with the thatched farm-stay architecture and reception signage (tree logo, 'part of the Ella Bella Guesthouse Group') seen in every other kept photo. Almost certainly a same-named but unrelated business. Rejected and deleted." }
+  ],
+  "stock": [],
+  "note": "7 real photos kept, well above the 2-photo minimum — no stock fill required or added, per Step 2 (optional fill skipped)."
+}

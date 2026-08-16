@@ -1,0 +1,38 @@
+{
+  "kept": [
+    {
+      "file": "real_03.jpg",
+      "vetted": true,
+      "use": "hero + Our Work gallery",
+      "note": "Two technicians working on an open dryer/washing machine drum at a workshop bench — on-trade (appliance repair), documentary/workshop setting, no rival business branding or signage visible."
+    },
+    {
+      "file": "real_05.jpg",
+      "vetted": true,
+      "use": "Our Work gallery",
+      "note": "Split shot: stacked used microwaves (LG/Defy brand units visible on the units themselves, not a competitor's business branding) in a workshop back room, plus soldering iron/wire/screws on a workbench — matches microwave/appliance repair trade directly."
+    },
+    {
+      "file": "real_06.png",
+      "vetted": true,
+      "use": "Our Work gallery + Visit section",
+      "note": "Technician in overalls repairing a built-in fridge in a kitchen setting — on-trade, no competing business name/logo visible."
+    },
+    {
+      "file": "real_07.jpg",
+      "vetted": true,
+      "use": "Our Work gallery",
+      "note": "Close-up of hands servicing a dishwasher spray-arm/filter assembly — on-trade appliance repair detail shot, no branding conflicts."
+    }
+  ],
+  "rejected": [
+    { "file": "real_01.png", "reason": "Generic manufacturer/retail product-catalogue cutout montage of 6 different appliance types on a transparent background (Samsung 'Metal Cooling' marketing-style imagery) — stock-listicle product shot, not a repair scene, not this business." },
+    { "file": "real_02.jpg", "reason": "CGI/3D-rendered product grouping of appliances on a white studio floor — clearly a rendered stock/catalogue image, not real photography of a repair job or premises." },
+    { "file": "real_04.png", "reason": "Generic stock product-catalogue montage (fridge, oven, washer, heater, vacuum, iron, microwave, air-con) on white background — stock-listicle style, includes products outside this business's trade (vacuum, heater, air-con), not repair-relevant." },
+    { "file": "real_08.jpg", "reason": "Close-up of a manicured hand pressing a microwave's control panel — a product-use/demo stock shot, not a repair scene; no tools, no technician, doesn't support the repair-trade story." }
+  ],
+  "stock_fill": {
+    "used": false,
+    "reason": "4 vetted real-trade photos kept (>= 2 threshold), so stock fill was optional and skipped — no curl-downloaded stock images added."
+  }
+}

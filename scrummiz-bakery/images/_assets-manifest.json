@@ -1,0 +1,45 @@
+{
+  "kept": [],
+  "rejected": [
+    {
+      "file": "real_01.jpg",
+      "reason": "Pulled photo shows swirled cinnamon/danish pastries on a rustic wooden board — wrong trade focus (business is a custom cake & macaron bakery, not a pastry/danish counter), no identifying branding or context tying it to Scrummiz Bakery specifically, and the polished generic food-photography styling reads as stock/listicle rather than an authentic pull from this business. Uncertain provenance -> rejected per vetting rule.",
+      "vetted": false
+    }
+  ],
+  "stock": [
+    {
+      "file": "stock_01.jpg",
+      "source": "https://unsplash.com/photos/u9xZvYEoLTE",
+      "directUrl": "https://images.unsplash.com/photo-1735547928546-2be7e5616a3e",
+      "photographer": "Marek Studzinski",
+      "description": "Tiered custom cake with cascading pink/blush rose decoration",
+      "use": "Our Work gallery"
+    },
+    {
+      "file": "stock_02.jpg",
+      "source": "https://unsplash.com/photos/71jYZb6Ag7M",
+      "directUrl": "https://images.unsplash.com/photo-1490368168320-00b82f60dd71",
+      "photographer": "Unsplash contributor",
+      "description": "Three pastel macarons (pistachio, mango, strawberry) stacked on a marble coaster",
+      "use": "Our Work gallery / macarons category"
+    },
+    {
+      "file": "stock_03.jpg",
+      "source": "https://unsplash.com/photos/HjnFuC5pcA8",
+      "directUrl": "https://images.unsplash.com/photo-1547736809-6d7227d324d3",
+      "photographer": "Deva Williamson",
+      "description": "White celebration cake with soft pink buttercream piping, heart sprinkles and pearl detail",
+      "use": "Hero panel image"
+    },
+    {
+      "file": "stock_04.jpg",
+      "source": "https://unsplash.com/photos/rows-of-colorful-macarons-arranged-in-a-display-case-F3_MMTa0Sf4",
+      "directUrl": "https://images.unsplash.com/photo-1760124056928-a9960b1b1dd2",
+      "photographer": "Karina Syrotiuk",
+      "description": "Rows of colourful macarons arranged on a patisserie counter",
+      "use": "Our Work gallery / Visit panel image"
+    }
+  ],
+  "notes": "Only 1 real photo was pulled and it was rejected (wrong trade focus / uncertain provenance) — kept real photos = 0, so stock fill is REQUIRED per spec. A 5th stock candidate (bakery display case, unsplash photo yQPkdiBPWeU / photo-1640274251909-aff175d87ff6) was downloaded then discarded: it visibly showed another real business's branding ('CAFFÉ SCUDIERI FIRENZE' packaging on the shelf) and was rejected under the same no-other-business-branding rule used for real photos. Footer disclosure added since the build is fully stock-led: 'Some imagery is representative stock — client photos to follow.'"
+}

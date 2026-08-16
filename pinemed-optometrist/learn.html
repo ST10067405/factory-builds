@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Sightline — Eye Health Journal | PineMed Optometrist</title>
+<meta name="description" content="The Sightline — plain-language eye-health reads from PineMed Optometrist, Pinetown CBD: eye test frequency, screen strain, kids' eye care, contact lenses, UV protection and warning signs.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How often should I get an eye test?", "acceptedAnswer": { "@type": "Answer", "text": "As a general guideline, most adults benefit from an eye test every one to two years, and more often for children, contact lens wearers, or anyone with a family history of eye conditions. An optometrist can recommend a schedule that suits you specifically." } },
+    { "@type": "Question", "name": "Do you accept medical aid?", "acceptedAnswer": { "@type": "Answer", "text": "Medical aid claims — ask us. WhatsApp or call 071 014 2046 and we'll help you check what your scheme covers." } },
+    { "@type": "Question", "name": "What should I bring to my appointment?", "acceptedAnswer": { "@type": "Answer", "text": "Your current glasses or contact lenses (if you wear them), any previous prescription you have, your medical aid card, and a pair of sunglasses in case your eyes feel more light-sensitive afterwards." } },
+    { "@type": "Question", "name": "How do I book?", "acceptedAnswer": { "@type": "Answer", "text": "Call or WhatsApp 071 014 2046. Online booking is coming to this site soon." } }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#FFFFFF;--surface:#F2F5F9;--ink:#0C2340;--mut:rgba(12,35,64,.62);
+  --brand:#0C2340;--accent:#FF6B4A;--line:rgba(12,35,64,.12);
+  --display:'Sora',sans-serif;--body:'Inter',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand);color:#fff;font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-weight:700;font-size:21px;color:var(--brand);text-decoration:none}
+.nav-back{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-decoration:none}
+.nav-back:hover{color:var(--accent)}
+header{padding:90px 0 60px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--accent);margin-bottom:18px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(36px,5.6vw,60px);line-height:1.08}
+.intro{max-width:600px;margin:22px auto 0;color:var(--mut);font-size:16.5px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:30px 26px;cursor:pointer;transition:transform .3s,box-shadow .3s;text-align:left}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(12,35,64,.1);outline:none}
+.post .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.post h3{font-family:var(--display);font-size:20px;margin:12px 0 8px;line-height:1.25}
+.post p{color:var(--mut);font-size:14px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);font-weight:700;font-size:clamp(28px,4vw,42px);margin-bottom:28px;text-align:center}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent);font-size:22px}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(12,35,64,.55);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--bg);max-width:680px;width:100%;border-radius:22px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(12,35,64,.4)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut)}
+.asheet .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.asheet h2{font-family:var(--display);font-weight:700;font-size:clamp(24px,4vw,34px);margin:12px 0 20px;line-height:1.2}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;font-size:14px;padding:13px 26px;border-radius:99px}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for PineMed Optometrist by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">PineMed Optometrist</a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">The Sightline · Eye Health Journal</p>
+    <h1>Straight talk on looking after your eyes</h1>
+    <p class="intro">Plain-language reads from PineMed Optometrist, for Pinetown CBD readers who'd rather understand their eyes than guess.</p>
+  </div>
+</header>
+
+<div class="wrap"><div class="grid" id="postGrid"></div></div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="qa">
+      <details><summary>How often should I get an eye test?</summary><p>As a general guideline, most adults benefit from an eye test every one to two years, and more often for children, contact lens wearers, or anyone with a family history of eye conditions. An optometrist can recommend a schedule that suits you specifically.</p></details>
+      <details><summary>Do you accept medical aid?</summary><p>Medical aid claims — ask us. WhatsApp or call 071 014 2046 and we'll help you check what your scheme covers.</p></details>
+      <details><summary>What should I bring to my appointment?</summary><p>Your current glasses or contact lenses (if you wear them), any previous prescription you have, your medical aid card, and a pair of sunglasses in case your eyes feel more light-sensitive afterwards.</p></details>
+      <details><summary>How do I book?</summary><p>Call or WhatsApp 071 014 2046. Online booking is coming to this site soon.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap">PineMed Optometrist · 11 Hill St, Pinetown CBD · Concept by Arkatype Digital — draft, awaiting client sign-off</div></footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#visit">Book your visit →</a>
+  </div>
+</div>
+
+<script>
+const POSTS = [
+  { tag: 'Eye care', title: 'How Often Should Pinetown Residents Really Test Their Eyes?', teaser: 'A simple guide to how often different age groups should book an eye test.', body: `
+    <p>There's no single answer that fits everyone — how often you should have your eyes tested depends on your age, your health, and whether you already wear glasses or contact lenses.</p>
+    <ul>
+      <li><b>Adults with no known issues:</b> generally every one to two years.</li>
+      <li><b>Children:</b> more frequently, since eyesight and prescriptions can change quickly while they're growing.</li>
+      <li><b>Contact lens wearers:</b> annually, as fit and comfort can shift over time.</li>
+      <li><b>Anyone over 40, or with a family history of glaucoma or diabetes:</b> more regular checks are usually recommended, since some conditions develop without obvious symptoms.</li>
+    </ul>
+    <p>If in doubt, the simplest rule is this: if you can't remember your last eye test, it's probably time to book one.</p>
+  ` },
+  { tag: 'Screens', title: 'Screen Strain and the Pinetown CBD 9-to-5', teaser: 'Why office eyes feel tired by 3pm, and what actually helps.', body: `
+    <p>Digital eye strain is one of the most common complaints among office workers, and it usually isn't caused by damage to the eyes — it's caused by habits.</p>
+    <ul>
+      <li><b>The 20-20-20 rule:</b> every 20 minutes, look at something roughly 20 feet away for at least 20 seconds.</li>
+      <li><b>Blink more:</b> screen focus reduces blink rate, which dries the eyes out and makes them feel gritty by the afternoon.</li>
+      <li><b>Check your lighting:</b> harsh overhead light or a bright window behind your monitor both make the eyes work harder than they need to.</li>
+      <li><b>Get your prescription checked:</b> squinting at a screen all day is often a sign glasses are overdue, not just a symptom of a long week.</li>
+    </ul>
+    <p>If tired eyes, headaches or blurry text by the end of the day are a regular pattern for you, it's worth having your eyes tested rather than just pushing through it.</p>
+  ` },
+  { tag: 'Kids', title: 'Getting Your Child Ready for Their First Eye Test in Pinetown', teaser: 'What a kids’ eye test actually involves, and how to make it easy.', body: `
+    <p>A first eye test can feel like a big deal to a small child, but the process is usually simple, quick, and doesn't involve anything painful.</p>
+    <ul>
+      <li><b>What to expect:</b> picture-based charts for younger children who can't yet read letters, plus simple questions about how they see at school and at home.</li>
+      <li><b>Watch for the signs:</b> sitting close to the TV, holding books very near their face, headaches, or losing their place while reading can all be early clues.</li>
+      <li><b>Keep it low-pressure:</b> framing it as a normal check-up (like a dentist visit) helps take the anxiety out of it.</li>
+      <li><b>Bring a favourite toy or book:</b> something familiar helps younger children stay calm and cooperative.</li>
+    </ul>
+    <p>Catching vision problems early matters — a lot of learning in the early school years depends on being able to see the board and the page clearly.</p>
+  ` },
+  { tag: 'Contact lenses', title: 'Contact Lenses 101: A First-Timer’s Guide', teaser: 'What to expect from your first fitting, and the habits that keep your eyes healthy.', body: `
+    <p>Switching from glasses to contact lenses (or wearing both) is a common step, and it usually starts with a proper fitting — not just picking a box off a shelf.</p>
+    <ul>
+      <li><b>Fitting first:</b> your eye shape and tear film affect which lens type suits you, which is why a fitting (not just a glasses prescription) matters.</li>
+      <li><b>Hygiene is non-negotiable:</b> always wash hands before handling lenses, and never rinse them with tap water.</li>
+      <li><b>Respect the replacement schedule:</b> daily, fortnightly or monthly lenses are designed to be replaced on time, even if they still feel comfortable.</li>
+      <li><b>Never sleep in lenses</b> unless a lens has specifically been prescribed for overnight wear.</li>
+    </ul>
+    <p>Most first-time discomfort comes down to fit or handling habits rather than the lenses themselves — both are easy to fix with the right guidance.</p>
+  ` },
+  { tag: 'UV protection', title: 'UV Protection for Highway-Area Commuters', teaser: 'Why sun exposure adds up on the daily Pinetown commute, and how to protect your eyes.', body: `
+    <p>UV exposure to the eyes builds up over years, not just on obviously sunny beach days — and daily driving is one of the most overlooked sources.</p>
+    <ul>
+      <li><b>Windscreens don't block everything:</b> they cut most UVB but let more UVA through than people expect, especially through side windows.</li>
+      <li><b>Look for UV400 lenses:</b> this rating means a lens blocks effectively all UVA and UVB light, whether the tint is dark or barely there.</li>
+      <li><b>Tint isn't the same as protection:</b> a dark lens with no UV coating can actually be worse, since it makes the pupil open wider while still letting UV through.</li>
+      <li><b>Wraparound styles help:</b> less light sneaks in around the edges of the frame during long commutes.</li>
+    </ul>
+    <p>Cumulative sun exposure is linked to conditions like cataracts later in life, so treating sunglasses as daily protective gear — not just a style choice — is worth it.</p>
+  ` },
+  { tag: 'Warning signs', title: 'Five Warning Signs Your Eyes Are Telling You Something', teaser: 'Symptoms that are worth acting on sooner rather than later.', body: `
+    <p>Most day-to-day eye discomfort is minor, but a handful of symptoms are worth taking seriously and getting checked promptly.</p>
+    <ul>
+      <li><b>Sudden flashes of light or new floaters:</b> can be an early sign of retinal changes and shouldn't be left unchecked.</li>
+      <li><b>A curtain or shadow across part of your vision:</b> needs urgent attention, not a wait-and-see approach.</li>
+      <li><b>Persistent eye pain, redness or discharge:</b> especially if it doesn't improve within a day or two.</li>
+      <li><b>Sudden blurred vision in one or both eyes:</b> particularly if it comes on quickly rather than gradually.</li>
+      <li><b>Frequent headaches linked to visual tasks:</b> reading, screens or driving triggering headaches is often an eyesight issue in disguise.</li>
+    </ul>
+    <p>None of these symptoms are things to self-diagnose — if any of them sound familiar, it's worth getting your eyes looked at rather than waiting it out.</p>
+  ` }
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

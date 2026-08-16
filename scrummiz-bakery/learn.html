@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Journal | Scrummiz Bakery</title>
+<meta name="description" content="Cake-ordering know-how, macaron notes and celebration-baking guidance from Scrummiz Bakery, Pinetown.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How far ahead should I order a custom cake?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on the design and how busy the diary is — the safest approach is to DM us as soon as you have a date, even before every detail is final." } },
+    { "@type": "Question", "name": "Can you cater for dietary requirements?", "acceptedAnswer": { "@type": "Answer", "text": "Ask us directly via DM — tell us what's needed and we'll confirm what's possible for your order." } },
+    { "@type": "Question", "name": "How is cake size chosen for a celebration?", "acceptedAnswer": { "@type": "Answer", "text": "It's usually planned around your guest count and how many tiers you'd like — DM us your numbers and we'll suggest a starting size." } },
+    { "@type": "Question", "name": "How do I order?", "acceptedAnswer": { "@type": "Answer", "text": "DM us on Instagram @scrummizbakery. Online ordering is coming to this site soon." } }
+  ]
+}
+</script>
+<style>
+:root{--bg:#FAF2E7;--surface:#fff;--ink:#3A2417;--mut:rgba(58,36,23,.68);--brand:#5C3826;--accent:#D98FA0;--accent-ink:#9C5568;--line:rgba(58,36,23,.12);--display:'Playfair Display',serif;--body:'Karla',sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand);color:#fff;font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-size:22px;font-weight:700;font-style:italic;color:var(--brand);text-decoration:none}
+.nav-back{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-decoration:none}
+.nav-back:hover{color:var(--accent-ink)}
+header{padding:90px 0 60px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--accent-ink);margin-bottom:18px}
+h1{font-family:var(--display);font-size:clamp(38px,6vw,68px);line-height:1.05}
+h1 em{font-style:italic;color:var(--accent-ink)}
+.intro{max-width:600px;margin:22px auto 0;color:var(--mut);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:20px;padding:30px 26px;cursor:pointer;transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s;text-align:left}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(58,36,23,.12);outline:none}
+.post .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);font-weight:700}
+.post h3{font-family:var(--display);font-size:22px;margin:12px 0 8px;line-height:1.25;color:var(--brand)}
+.post p{color:var(--mut);font-size:14.5px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);font-size:clamp(28px,4vw,44px);margin-bottom:28px;text-align:center}
+.faq h2 em{font-style:italic;color:var(--accent-ink)}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent-ink);font-size:22px}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(58,36,23,.55);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--bg);max-width:680px;width:100%;border-radius:22px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(58,36,23,.4)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut)}
+.asheet .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);font-weight:700}
+.asheet h2{font-family:var(--display);font-size:clamp(26px,4vw,38px);margin:12px 0 20px;line-height:1.15;color:var(--brand)}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--brand);color:#fff;text-decoration:none;font-weight:600;font-size:14px;padding:13px 26px;border-radius:99px}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--accent-ink);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for Scrummiz Bakery by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">Scrummiz</a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">The Journal</p>
+    <h1>Celebration-baking notes, from <em>Pinetown</em></h1>
+    <p class="intro">Ordering know-how, macaron notes and cake-planning guidance from the Scrummiz Bakery counter on Sunnyside Lane.</p>
+  </div>
+</header>
+
+<div class="wrap"><div class="grid" id="postGrid"></div></div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common <em>questions</em></h2>
+    <div class="qa">
+      <details><summary>How far ahead should I order a custom cake?</summary><p>It depends on the design and how busy the diary is — the safest approach is to DM us as soon as you have a date, even before every detail is final.</p></details>
+      <details><summary>Can you cater for dietary requirements?</summary><p>Ask us directly via DM — tell us what's needed and we'll confirm what's possible for your order.</p></details>
+      <details><summary>How is cake size chosen for a celebration?</summary><p>It's usually planned around your guest count and how many tiers you'd like — DM us your numbers and we'll suggest a starting size.</p></details>
+      <details><summary>How do I order?</summary><p>DM us on Instagram @scrummizbakery. Online ordering is coming to this site soon.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap">Scrummiz Bakery · 12 Sunnyside Lane, Pinetown · Concept by Arkatype Digital — draft, awaiting client sign-off</div></footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#ordering">See how ordering works →</a>
+  </div>
+</div>
+
+<script>
+const POSTS = [
+  { tag: 'Ordering', title: 'How to Brief a Custom Cake in Pinetown', teaser: 'What to bring to your DM so the quote comes back right the first time.', body: `<p>A good custom-cake brief saves everyone a few rounds of back-and-forth. Before you DM a bakery, it helps to have the basics ready:</p><ul><li><b>The date and time</b> you need it for, plus whether it's for collection or the cake needs to arrive already set up.</li><li><b>Guest count</b> — this drives size and tier count more than anything else.</li><li><b>Reference photos</b> — even two or three examples of a style you like (or don't) says more than a paragraph of description.</li><li><b>Flavour and dietary notes</b> — any allergies or preferences among your guests, flagged upfront rather than added later.</li><li><b>A rough budget range</b> — it helps a baker suggest realistic tier counts and finishes rather than guessing.</li></ul><p class="mut">The clearer the brief, the faster (and more accurate) the quote that comes back.</p>` },
+  { tag: 'Flavours', title: 'Macaron Flavours Explained: A Pinetown Baker’s Guide', teaser: 'A short primer on shells, fillings and how to build a mixed box.', body: `<p>A macaron is really two components working together: the almond-meringue shell, and the filling sandwiched between two shells.</p><ul><li><b>The shell</b> — made from almond flour, icing sugar and whipped egg whites, prized for a crisp outside and a slightly chewy centre ("the foot").</li><li><b>The filling</b> — usually a buttercream, ganache or fruit curd, which is where most of the flavour actually comes from.</li><li><b>Flavour families</b> — fruit (raspberry, lemon), chocolate and nutty (dark chocolate, pistachio, hazelnut), and floral or spiced (rose, lavender, cinnamon) are the broad categories most macaron menus draw from.</li><li><b>Building a mixed box</b> — a good spread usually balances one or two "safe" crowd-pleasers with one or two more adventurous flavours.</li></ul><p class="mut">Exact flavours on offer at any time are confirmed directly with the bakery — ask what's available when you enquire.</p>` },
+  { tag: 'Planning', title: 'Cake Sizing for Guest Counts: A General Guide for Pinetown Events', teaser: 'A general guide to matching cake size and tiers to your guest list.', body: `<p>Cake sizing is one of the first things a baker will ask about, and it's worth thinking through before you enquire.</p><ul><li><b>Start with guest count</b>, not the look you want — the size needs to serve the room first, decoration comes second.</li><li><b>Round up, not down</b> — most hosts prefer a small amount left over to a cake that runs out mid-event.</li><li><b>Tiers add height, not just servings</b> — a two- or three-tier cake can look far more dramatic than a single large tier, for a similar total serving count.</li><li><b>Consider how it's cut</b> — some tiers are purely for display and aren't meant to be served, which changes how much "eating cake" you actually need.</li></ul><p class="mut">This is general guidance — your baker will size specifically once they know your guest count and how the cake will be served.</p>` },
+  { tag: 'Care', title: 'Storing a Celebration Cake Before a Pinetown Party', teaser: "Simple do's and don'ts to keep a cake looking (and tasting) its best until the big moment.", body: `<p>A cake can look perfect at collection and still need careful handling before the event. A few general rules help:</p><ul><li><b>Keep it cool, not cold</b> — a stable, cool room is usually better than a fridge for buttercream cakes close to serving time, since condensation can spoil the finish.</li><li><b>Out of direct sun and heat</b> — especially relevant in KwaZulu-Natal's warmer months; buttercream and fondant both soften quickly in heat.</li><li><b>Transport it flat</b> — use a flat car floor or footwell rather than a seat, and brake gently. A non-slip mat under the box helps.</li><li><b>Add fresh flowers or toppers last</b> — attach anything non-edible as close to the event as possible, not at collection.</li></ul><p class="mut">If in doubt, ask the bakery for care instructions specific to your cake's finish when you collect it.</p>` },
+  { tag: 'Ordering', title: 'Dietary Options to Ask About When Ordering a Celebration Cake', teaser: 'The questions worth asking your baker before you order.', body: `<p>Dietary needs are easiest to manage when they're raised early, not as an afterthought. Questions worth asking any bakery:</p><ul><li><b>Are egg-free or dairy-free options available?</b> — not every bakery offers these, so it's worth confirming before you commit to a design.</li><li><b>Is there a nut-free guarantee, or just nut-free ingredients?</b> — a real distinction if any guest has a severe allergy, since a shared kitchen may not be able to promise zero cross-contact.</li><li><b>What's the decoration made from?</b> — fondant, buttercream and gum-paste details can each carry different allergens (egg white, gluten in some stabilisers).</li><li><b>How should you communicate allergies</b> — a written list in your DM, rather than a verbal mention, avoids anything getting lost.</li></ul><p class="mut">Every bakery's capability is different — always confirm directly rather than assuming.</p>` },
+  { tag: 'Planning', title: 'Planning a Cake for a Sunnyside Lane Event: A Pinetown Timeline', teaser: 'A rough order of operations for getting your celebration cake sorted.', body: `<p>There's no single "correct" timeline for ordering a cake, but a sensible order of operations looks something like this:</p><ul><li><b>As soon as you have a date</b> — send an enquiry, even if the design isn't decided yet. This is what secures the slot.</li><li><b>Once venue and catering are set</b> — share the guest count and any theme or colour palette so the design brief can firm up.</li><li><b>Confirm the design and get a quote</b> — reference photos plus flavour and dietary notes, as covered in our cake-briefing guide.</li><li><b>Closer to the day</b> — reconfirm final numbers, collection or delivery time, and any last-minute changes.</li></ul><p class="mut">The earlier the first step happens, the more flexibility you'll have later in the process.</p>` }
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

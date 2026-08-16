@@ -1,0 +1,15 @@
+{
+  "kept": [],
+  "rejected": [
+    { "file": "real_01.jpg", "reason": "Large multi-bay indoor dealership service centre with US-style two-post lifts and a Chevrolet Silverado visible in the background — wrong setting entirely for a mobile call-out mechanic with no premises; reads as generic dealership stock." },
+    { "file": "real_02.png", "reason": "Logo/business-card graphic for a different 'Johnny's Mobile Mechanic LLC' — the 'LLC' suffix is a US entity type, not used in South Africa, and the cartoon turtle mascot is a generic purchased clip-art template, not this client's branding." },
+    { "file": "real_03.png", "reason": "Logo graphic for a same-named 'Johnny's Mobile Mechanic' listing phone numbers 065 990 9548 / 081 321 0661 — does not match the brief's verified number 074 325 0503, so this is a different business entirely (name collision)." },
+    { "file": "real_04.jpg", "reason": "Branded banner for 'NF Gearbox' in Midrand — wrong business, wrong trade focus (gearbox specialist vs. general mobile mechanic), wrong city (Midrand vs. Queensburgh/Durban)." }
+  ],
+  "stock": [
+    { "file": "stock_01.jpg", "source": "https://unsplash.com/photos/a-man-working-on-a-car-engine-with-a-wrench-vvmIhgAlBk0", "url": "https://images.unsplash.com/photo-1703632998797-a8d220ce58ce", "note": "Hands in orange work gloves gripping a socket wrench in an engine bay — matches the hi-vis orange accent chosen for this build. Used as hero/gallery image." },
+    { "file": "stock_02.jpg", "source": "https://unsplash.com/s/photos/jump-start", "url": "https://images.unsplash.com/photo-1597766325363-f5576d851d6a", "note": "Jump-start cable clamps on a car battery — used for the battery/diagnostics service imagery." },
+    { "file": "stock_03.jpg", "source": "https://unsplash.com/photos/a-close-up-of-a-tire-on-a-car-DYeP4W7RerM", "url": "https://images.unsplash.com/photo-1694787683490-0b9dff60d8ab", "note": "Clean macro shot of a car tire and rim, no visible branding — used for tyres/brakes service imagery." },
+    { "file": "stock_04.jpg", "source": "https://unsplash.com/photos/a-box-filled-with-lots-of-wrenches-and-other-tools-1N5jjLyBafc", "url": "https://images.unsplash.com/photo-1640682841767-cdfce3aea6e0", "note": "Toolbox full of wrenches and hand tools — used for 'we bring the workshop to you' imagery." }
+  ]
+}

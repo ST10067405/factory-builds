@@ -1464,6 +1464,278 @@
         }
       ],
       "changeNotes": "2026-07-12 — NEW local-scout lead (score 45). Icon-forward concept site generated (real data, category theme, Comms Bridge, maps, noindex+draft+reduced-motion). Preflight PASS. | 2026-07-12 (late) — Upgraded to FULL SOP spec: photo-led premium rebuild, Our Work gallery, unique 6-article journal (learn.html, FAQPage JSON-LD), Comms Bridge kept, photos strictly Read-vetted (mis-attributed Serper/Fresha pulls rejected), stock fill disclosed where needed. Repo-wide preflight PASS."
+    },
+    "meister-physiotherapy": {
+      "title": "Meister Physiotherapy",
+      "status": "gate_passed",
+      "priority": "cold",
+      "notes": "Physiotherapist, Westville. 5★ / 26 Google reviews. Ph 079 317 2496. Local-scout lead 2026-07-31 (presence-gated). Built to full SOP standard in the same pass with docs/ pack (quote, needs, competitors, gap).",
+      "nextAction": "Jaime review (site + docs) → outreach draft (human send gate)",
+      "caveats": [
+        "All 8 pulled photos rejected (6 were a different physio inside Virgin Active Westville) — stock-led with disclosure",
+        "Practice email reportedly down — WhatsApp is the only channel cited"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "physiotherapist",
+        "batch-2026-07-31"
+      ],
+      "sources": [
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/meister_physio/"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/meisterphysio/"
+        }
+      ],
+      "changeNotes": "2026-07-31 — NEW local-scout lead built straight to FULL SOP spec (photo-led, journal, Comms Bridge, vetted assets, docs pack). Preflight PASS."
+    },
+    "mzo-legacy-drivers-training": {
+      "title": "MZO Legacy Driver's Training",
+      "status": "gate_passed",
+      "priority": "cold",
+      "notes": "Driving school, Pinetown. 4.9★ / 27 Google reviews. Ph 076 407 2937. Local-scout lead 2026-07-31 (presence-gated). Built to full SOP standard in the same pass with docs/ pack (quote, needs, competitors, gap).",
+      "nextAction": "Jaime review (site + docs) → outreach draft (human send gate)",
+      "caveats": [
+        "All 5 pulled photos were other driving schools (Gauteng/Pretoria/Cape) — stock-led with disclosure"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "driving school",
+        "batch-2026-07-31"
+      ],
+      "sources": [
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/p/MZO-Legacy-Drivers-Training-61561630764844/"
+        }
+      ],
+      "changeNotes": "2026-07-31 — NEW local-scout lead built straight to FULL SOP spec (photo-led, journal, Comms Bridge, vetted assets, docs pack). Preflight PASS."
+    },
+    "heron-and-crow-tattoo": {
+      "title": "Heron & Crow Tattoo",
+      "status": "gate_passed",
+      "priority": "cold",
+      "notes": "Tattoo studio, Gillitts. 5★ / 23 Google reviews. Ph 078 043 8123. Local-scout lead 2026-07-31 (presence-gated). Built to full SOP standard in the same pass with docs/ pack (quote, needs, competitors, gap).",
+      "nextAction": "Jaime review (site + docs) → outreach draft (human send gate)",
+      "caveats": [
+        "Both pulled photos rejected (clothing-brand watermark / unverifiable composite) — stock-led with disclosure; real portfolio photos are the #1 ask"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "tattoo studio",
+        "batch-2026-07-31"
+      ],
+      "sources": [
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/heronandcrowtattoo/"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/p/Heron-Crow-Tattoo-61588004666951/"
+        }
+      ],
+      "changeNotes": "2026-07-31 — NEW local-scout lead built straight to FULL SOP spec (photo-led, journal, Comms Bridge, vetted assets, docs pack). Preflight PASS."
+    },
+    "graysculpt-pilates": {
+      "title": "GraySculpt Pilates",
+      "status": "gate_passed",
+      "priority": "cold",
+      "notes": "Pilates studio, Gillitts. 5★ / 20 Google reviews. Ph 063 773 1577. Local-scout lead 2026-07-31 (presence-gated). Built to full SOP standard in the same pass with docs/ pack (quote, needs, competitors, gap).",
+      "nextAction": "Jaime review (site + docs) → outreach draft (human send gate)",
+      "caveats": [
+        "5 genuine studio photos kept",
+        "REAL Rezerv booking link wired as primary CTA",
+        "Old dead domain from previous owner — reclaim-vs-reregister decision before go-live",
+        "Enriched email looks like previous owner's — not cited"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "pilates studio",
+        "batch-2026-07-31"
+      ],
+      "sources": [
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/graysculptpilates/"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/61584104815466"
+        },
+        {
+          "type": "website",
+          "url": "https://graysculptpilates.rezerv.co/"
+        }
+      ],
+      "changeNotes": "2026-07-31 — NEW local-scout lead built straight to FULL SOP spec (photo-led, journal, Comms Bridge, vetted assets, docs pack). Preflight PASS."
+    },
+    "pinemed-optometrist": {
+      "title": "Pinemed Optometrist",
+      "status": "gate_passed",
+      "priority": "cold",
+      "notes": "Optometrist, Pinetown. 5★ / 24 Google reviews. Ph 071 014 2046. Local-scout lead 2026-07-31 (presence-gated). Built to full SOP standard in the same pass with docs/ pack (quote, needs, competitors, gap).",
+      "nextAction": "Jaime review (site + docs) → outreach draft (human send gate)",
+      "caveats": [
+        "0 photos found — fully stock-led with disclosure",
+        "Competes with Specsavers/Torga next door — never named on-page"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "optometrist",
+        "batch-2026-07-31"
+      ],
+      "sources": [
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/pinemedoptometrist/"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/p/PineMed-Optometrist-61566630268285/"
+        }
+      ],
+      "changeNotes": "2026-07-31 — NEW local-scout lead built straight to FULL SOP spec (photo-led, journal, Comms Bridge, vetted assets, docs pack). Preflight PASS."
+    },
+    "microwave-repairs-centre": {
+      "title": "Microwave Repairs Centre",
+      "status": "gate_passed",
+      "priority": "cold",
+      "notes": "Appliance repair, Westville. 4.6★ / 45 Google reviews. Ph 083 782 5069. Local-scout lead 2026-07-31 (presence-gated). Built to full SOP standard in the same pass with docs/ pack (quote, needs, competitors, gap).",
+      "nextAction": "Jaime review (site + docs) → outreach draft (human send gate)",
+      "caveats": [
+        "4 genuine workshop photos kept",
+        "Trading since 2002 (real) shown as count-up"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "appliance repair",
+        "batch-2026-07-31"
+      ],
+      "sources": [
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/mwrepairs/"
+        }
+      ],
+      "changeNotes": "2026-07-31 — NEW local-scout lead built straight to FULL SOP spec (photo-led, journal, Comms Bridge, vetted assets, docs pack). Preflight PASS."
+    },
+    "scrummiz-bakery": {
+      "title": "Scrummiz Bakery",
+      "status": "built",
+      "priority": "cold",
+      "notes": "Bakery, Pinetown. 5★ / 23 Google reviews. No phone on record. Local-scout lead 2026-07-31 (presence-gated). Built to full SOP standard in the same pass with docs/ pack (quote, needs, competitors, gap).",
+      "nextAction": "Get a phone/WhatsApp number via IG DM, then add to current-builds.txt",
+      "caveats": [
+        "NO verified phone — NOT in current-builds.txt; Instagram DM is the contact channel",
+        "Stock-led with disclosure; their old .company.site page confirmed dead"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "bakery",
+        "batch-2026-07-31"
+      ],
+      "sources": [
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/scrummizbakery/"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/p/ScrummizBakery-100065034097685/"
+        }
+      ],
+      "changeNotes": "2026-07-31 — NEW local-scout lead built straight to FULL SOP spec (photo-led, journal, Comms Bridge, vetted assets, docs pack). Preflight PASS."
+    },
+    "johnnys-mobile-auto-mechanic": {
+      "title": "Johnny's Mobile Auto Mechanic",
+      "status": "gate_passed",
+      "priority": "warm",
+      "notes": "Auto mechanic, Queensburgh. 4.9★ / 73 Google reviews. Ph 074 325 0503. Local-scout lead 2026-07-31 (presence-gated). Built to full SOP standard in the same pass with docs/ pack (quote, needs, competitors, gap).",
+      "nextAction": "Jaime review (site + docs) → outreach draft (human send gate)",
+      "caveats": [
+        "All 4 pulled photos were other same-named mechanics (US LLC / other SA numbers / Midrand) — stock-led with disclosure",
+        "\"24/7\" softened to \"call-outs day and night — WhatsApp to check\" (unverified hours)"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "auto mechanic",
+        "batch-2026-07-31"
+      ],
+      "sources": [
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/johnnymobilemechanic/"
+        }
+      ],
+      "changeNotes": "2026-07-31 — NEW local-scout lead built straight to FULL SOP spec (photo-led, journal, Comms Bridge, vetted assets, docs pack). Preflight PASS."
+    },
+    "body-physique-gym": {
+      "title": "Body Physique Gym",
+      "status": "gate_passed",
+      "priority": "warm",
+      "notes": "Gym, Queensburgh. 4.9★ / 103 Google reviews. Ph 082 773 6529. Local-scout lead 2026-07-31 (presence-gated). Built to full SOP standard in the same pass with docs/ pack (quote, needs, competitors, gap).",
+      "nextAction": "Jaime review (site + docs) → outreach draft (human send gate)",
+      "caveats": [
+        "1 genuine photo kept; 1 authentic-but-2020-lockdown-protest photo rejected as off-tone; stock fill with disclosure"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "gym",
+        "batch-2026-07-31"
+      ],
+      "sources": [
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/bodyphysique1/"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/p/Body-Physique-Gym-100057325876770/"
+        }
+      ],
+      "changeNotes": "2026-07-31 — NEW local-scout lead built straight to FULL SOP spec (photo-led, journal, Comms Bridge, vetted assets, docs pack). Preflight PASS."
+    },
+    "villa-verde": {
+      "title": "Villa Verde",
+      "status": "gate_passed",
+      "priority": "cold",
+      "notes": "Guest house, Hillcrest. 4.6★ / 30 Google reviews. Ph 073 233 3033. Local-scout lead 2026-07-31 (presence-gated). Built to full SOP standard in the same pass with docs/ pack (quote, needs, competitors, gap).",
+      "nextAction": "Jaime review (site + docs) → outreach draft (human send gate)",
+      "caveats": [
+        "7 genuine photos kept (no stock)",
+        "A DIFFERENT same-named \"Villa Verde Guest House\" exists — used as the local-SEO/GEO argument",
+        "Landline — WhatsApp unconfirmed (\"Message us\" label)"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "guest house",
+        "batch-2026-07-31"
+      ],
+      "sources": [
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/villaverde_southafrica/"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/p/Villa-Verde-100058483915929/"
+        }
+      ],
+      "changeNotes": "2026-07-31 — NEW local-scout lead built straight to FULL SOP spec (photo-led, journal, Comms Bridge, vetted assets, docs pack). Preflight PASS."
     }
   },
   "documents": [

@@ -1,0 +1,53 @@
+{
+  "kept": [
+    {
+      "file": "real_01.jpg",
+      "vetted": true,
+      "use": "hero background + Visit image",
+      "note": "Wide reformer studio interior — warm greige cabinetry, arched window, wood floor, 4+ reformers. No competing branding visible. Matches shop-unit trade/setting."
+    },
+    {
+      "file": "real_02.jpg",
+      "vetted": true,
+      "use": "Our Work gallery",
+      "note": "Overhead close-up of a client on a reformer footbar, same warm wood floor/beige mat tone as real_01/real_04. Consistent studio setting."
+    },
+    {
+      "file": "real_03.jpg",
+      "vetted": true,
+      "use": "Our Work gallery",
+      "note": "Close-up of hands on a reformer handle bar; wood floor + cream wall visible in background, consistent with the same studio."
+    },
+    {
+      "file": "real_04.jpg",
+      "vetted": true,
+      "use": "Our Work gallery",
+      "note": "Same room as real_01 (identical cabinetry, cloud-pattern accent wall, reformers, floor) — different angle. Clearly the same real studio interior."
+    },
+    {
+      "file": "real_05.jpg",
+      "vetted": true,
+      "use": "Our Work gallery",
+      "note": "Client kneeling on a reformer, wood floor + beige mat consistent with the other kept photos. Plausibly the same studio, different session."
+    },
+    {
+      "file": "real_08.jpg",
+      "vetted": true,
+      "use": "brand-reference only (NOT used as a gallery/content photo)",
+      "note": "This is the actual GraySculpt Pilates wordmark/logo on a cream card — confirms real brand identity (cream/black, handwritten 'Gray' + bold 'SCULPT' + tracked 'PILATES'). Used only to sanity-check the palette direction, not placed on the site as a photo."
+    }
+  ],
+  "rejected": [
+    {
+      "file": "real_06.jpg",
+      "reason": "Wrong setting/trade — mat-only lunge stretch shot in a bright brick-loft studio with large arched sash windows; no reformer, no match to a Gillitts Shopping Centre shop unit. Reads as generic stock/editorial fitness photography, not this business."
+    },
+    {
+      "file": "real_07.jpg",
+      "reason": "Stock-looking — plain seamless grey studio backdrop (not a real interior), no reformer or studio context, and faint 'mi...' wordmark visible on the model's leggings (a clothing brand, not GraySculpt). Rejected as another brand's asset / generic stock."
+    }
+  ],
+  "stock": [],
+  "stock_fill_needed": false,
+  "notes": "5 real photos kept (>=2 threshold met) — no stock fill required per Step 2. All 5 kept photos share consistent flooring/wall tones and equipment, supporting that they are genuinely from the same real studio. real_08.jpg (logo) kept for reference only, not deployed as a site image."
+}

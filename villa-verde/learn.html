@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Villa Verde Journal | Villa Verde</title>
+<meta name="description" content="Farm-stay tips and slow-weekend ideas around Assagay and the Upper Highway, from the team at Villa Verde guest house.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Where is Villa Verde?", "acceptedAnswer": { "@type": "Answer", "text": "16 Hlupeka Pl, Assagay, Hillcrest, 3650 — see the map on the home page for directions." } },
+    { "@type": "Question", "name": "What's on-site at Villa Verde?", "acceptedAnswer": { "@type": "Answer", "text": "Guest rooms, an on-site café and a small gallery, set across thatched-roof courtyards and gardens." } },
+    { "@type": "Question", "name": "Can I book directly instead of through a booking site?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — message the property directly using the contact details on this site to enquire about a stay." } },
+    { "@type": "Question", "name": "How do I book?", "acceptedAnswer": { "@type": "Answer", "text": "Direct online booking is coming to this site soon. Message us to reserve." } }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#FAF7EE;--surface:#F1EAD8;--ink:#1E2B21;--mut:rgba(30,43,33,.62);
+  --brand:#24402D;--accent:#B08A54;--line:rgba(30,43,33,.14);
+  --display:'Cormorant',serif;--body:'Montserrat',sans-serif;--ease:cubic-bezier(.22,1,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand);color:var(--bg);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-style:italic;font-size:22px;color:var(--brand);text-decoration:none}
+.nav-back{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-decoration:none}
+.nav-back:hover{color:var(--accent)}
+header{padding:90px 0 60px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--accent);margin-bottom:18px}
+h1{font-family:var(--display);font-size:clamp(38px,6vw,68px);line-height:1.05}
+.intro{max-width:600px;margin:22px auto 0;color:var(--mut);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:30px 26px;cursor:pointer;transition:transform .3s var(--ease),box-shadow .3s var(--ease);text-align:left}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(30,43,33,.1);outline:none}
+.post .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.post h3{font-family:var(--display);font-size:23px;margin:12px 0 8px;line-height:1.2}
+.post p{color:var(--mut);font-size:14.5px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);font-size:clamp(28px,4vw,44px);margin-bottom:28px;text-align:center}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent);font-size:22px}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(20,29,22,.55);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--bg);max-width:680px;width:100%;border-radius:22px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(20,29,22,.4)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut)}
+.asheet .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.asheet h2{font-family:var(--display);font-size:clamp(26px,4vw,38px);margin:12px 0 20px;line-height:1.15}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:600;font-size:14px;padding:13px 26px;border-radius:99px}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for Villa Verde by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">Villa Verde</a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">The Villa Verde Journal</p>
+    <h1>Notes On A Slower Stay</h1>
+    <p class="intro">Farm-stay tips and slow-weekend ideas around Assagay and the Upper Highway, from the team at Villa Verde.</p>
+  </div>
+</header>
+
+<div class="wrap"><div class="grid" id="postGrid"></div></div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="qa">
+      <details><summary>Where is Villa Verde?</summary><p>16 Hlupeka Pl, Assagay, Hillcrest, 3650 — see the map on the home page for directions.</p></details>
+      <details><summary>What's on-site at Villa Verde?</summary><p>Guest rooms, an on-site café and a small gallery, set across thatched-roof courtyards and gardens.</p></details>
+      <details><summary>Can I book directly instead of through a booking site?</summary><p>Yes — message the property directly using the contact details on this site to enquire about a stay.</p></details>
+      <details><summary>How do I book?</summary><p>Direct online booking is coming to this site soon. Message us to reserve.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap">Villa Verde · 16 Hlupeka Pl, Assagay, Hillcrest · Concept by Arkatype Digital — draft, awaiting client sign-off</div></footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#visit">Plan your stay →</a>
+  </div>
+</div>
+
+<script>
+const POSTS = [
+  { tag: 'Farm-Stay', title: 'Packing For A Farm-Stay Weekend In Assagay', teaser: 'What actually earns a place in the bag for a night on a green estate.', body: `
+    <p>A farm-stay weekend calls for a slightly different packing list than a city hotel break. A few things worth throwing in before you leave:</p>
+    <ul>
+      <li><strong>Layers.</strong> Upper Highway evenings cool down faster than the daytime warmth suggests, especially sitting out in a thatched courtyard after dark.</li>
+      <li><strong>Comfortable, closed shoes.</strong> Garden paths, brick breezeways and lawns are lovely underfoot but not built for heels.</li>
+      <li><strong>Insect repellent.</strong> Green, garden-heavy grounds mean more insects than a paved-over city block — pack accordingly for evenings outside.</li>
+      <li><strong>Swimwear.</strong> If the property you're booking has a pool, it's worth having on hand even outside peak summer.</li>
+      <li><strong>A camera or phone with some storage free.</strong> Between the gardens and an on-site gallery, there's more worth photographing than the average overnight stop.</li>
+    </ul>
+    <p class="mut">General guidance for farm-stay and guest-estate visits — confirm specific amenities directly with the property you're booking.</p>
+  `},
+  { tag: 'Local', title: 'A Slow Weekend Around Assagay And The Upper Highway', teaser: 'Where to wander when the plan is simply: don’t rush.', body: `
+    <p>Assagay sits inside Durban's Upper Highway belt — Hillcrest, Kloof, Gillitts and Waterfall are all close enough for an easy, unhurried loop without much driving.</p>
+    <ul>
+      <li><strong>Start slow.</strong> A late breakfast on the grounds beats an early check-out — there's no reason to treat a farm stay like a city itinerary.</li>
+      <li><strong>Nature close by.</strong> The Upper Highway area is known for its green belts and nature reserves — worth a short drive if you want a walk with a view.</li>
+      <li><strong>Local nurseries and farm stalls.</strong> The area has a strong gardening and produce culture — a nice way to spend an unstructured afternoon.</li>
+      <li><strong>Come back before dark.</strong> The grounds tend to be at their best in the early evening light — don't plan your day so tightly that you miss it.</li>
+    </ul>
+    <p class="mut">General regional guidance — check current opening hours and access for any specific reserve, nursery or stall before setting out.</p>
+  `},
+  { tag: 'Local', title: 'Kloof, Hillcrest & Beyond: A Guest’s Guide To The Upper Highway', teaser: 'The suburbs around Villa Verde, and what each is known for.', body: `
+    <p>If you're new to the area, the Upper Highway suburbs blur together on a map but each has its own character:</p>
+    <ul>
+      <li><strong>Hillcrest.</strong> The area's commercial hub — shops, restaurants and services, a short drive from Assagay.</li>
+      <li><strong>Kloof.</strong> Known for its green belts, gorge walks and a slightly quieter, leafier feel.</li>
+      <li><strong>Gillitts and Waterfall.</strong> Residential and semi-rural, with more of the open, garden-estate feel that defines a farm stay.</li>
+      <li><strong>Assagay itself.</strong> Smaller and quieter than its neighbours — part of why a guest house out here feels more like an escape than a stopover.</li>
+    </ul>
+    <p class="mut">General area overview — for current business hours or specific attractions, check directly before visiting.</p>
+  `},
+  { tag: 'On The Grounds', title: 'Spending A Morning In Villa Verde’s Café And Gallery', teaser: 'How to spend a slow morning without ever leaving the property.', body: `
+    <p>Not every morning on a farm stay needs a destination. Some of the best ones happen without leaving the grounds at all.</p>
+    <ul>
+      <li><strong>Start with the café.</strong> A slow coffee before the day heats up is one of the simplest arguments for staying on-site rather than driving out for breakfast.</li>
+      <li><strong>Walk through the gallery.</strong> Ask at reception what's currently on display — a small on-site gallery is worth ten unhurried minutes.</li>
+      <li><strong>Loop the gardens.</strong> The courtyards and brick pathways make an easy, low-effort walk between coffee and whatever the rest of the day holds.</li>
+      <li><strong>Let it be unstructured.</strong> The whole point of a grounds-only morning is not having anywhere to be.</li>
+    </ul>
+    <p class="mut">General suggestion for guests — café hours, gallery access and current exhibits are best confirmed directly with Villa Verde.</p>
+  `},
+  { tag: 'Farm-Stay', title: 'Farm-Stay Etiquette For Guests At An Assagay Estate', teaser: 'A few unwritten rules for staying on a working green estate.', body: `
+    <p>A guest estate is a shared space, not a private hotel floor — a few habits make it better for everyone staying:</p>
+    <ul>
+      <li><strong>Keep courtyard noise down after dark.</strong> Thatched, open-sided seating areas carry sound further than an enclosed hotel bar.</li>
+      <li><strong>Respect the garden.</strong> Ask before picking flowers, herbs or produce, even if it looks like it's just for show.</li>
+      <li><strong>Park considerately.</strong> Shared driveways and courtyards work best when everyone leaves room for the next arrival.</li>
+      <li><strong>Say hello.</strong> Guest estates tend to be smaller and more personal than big hotels — a bit of friendliness goes further here.</li>
+    </ul>
+    <p class="mut">General etiquette guidance for farm-stay and guest-estate visits, not specific rules published by any one property.</p>
+  `},
+  { tag: 'Events', title: 'Planning A Small Gathering At Villa Verde', teaser: 'What to think about first when considering a small event at a guest estate.', body: `
+    <p>Guest estates like Villa Verde can make an appealing backdrop for a small gathering — a family lunch, a modest celebration, a low-key group booking. A few things worth thinking through first:</p>
+    <ul>
+      <li><strong>Headcount vs. rooms.</strong> Work out early how many guests need to stay over versus simply attend for the day.</li>
+      <li><strong>Ask about the café for catering.</strong> An on-site café may be able to help with food for a small group — worth raising directly, not assuming.</li>
+      <li><strong>Use the grounds as the setting.</strong> Courtyards, gardens and the gallery can all double as a backdrop without needing a dedicated function room.</li>
+      <li><strong>Enquire early.</strong> Small guest estates have limited capacity — the earlier you ask, the more likely your dates are free.</li>
+    </ul>
+    <p class="mut">General planning guidance — confirm event capacity, catering and availability directly with Villa Verde before making arrangements.</p>
+  `}
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

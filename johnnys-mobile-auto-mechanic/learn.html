@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Roadside Journal | Johnny's Mobile Auto Mechanic</title>
+<meta name="description" content="Practical car-care advice for drivers around Queensburgh and greater Durban — breakdowns, brakes, batteries, service intervals, warning lights and road-trip checks.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Do you really come to me?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — Johnny's Mobile Auto Mechanic travels to you for most breakdowns, servicing and diagnostics, wherever you're parked across Queensburgh and greater Durban." } },
+    { "@type": "Question", "name": "What areas do you cover?", "acceptedAnswer": { "@type": "Answer", "text": "Based in Northdene, Queensburgh, with call-outs across greater Durban including Pinetown and the Upper Highway. Not sure if you're covered? WhatsApp your location and we'll confirm." } },
+    { "@type": "Question", "name": "What if my car needs parts?", "acceptedAnswer": { "@type": "Answer", "text": "That depends on the job — WhatsApp Johnny with your vehicle's issue and he'll let you know what's needed before any work starts." } },
+    { "@type": "Question", "name": "How do I book?", "acceptedAnswer": { "@type": "Answer", "text": "Call or WhatsApp 074 325 0503. Online booking is coming to this site soon." } }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#FAFAF8;--surface:#EDEDE8;--ink:#1A1A1A;--mut:rgba(26,26,26,.62);
+  --brand:#232323;--accent:#FF6A13;--line:rgba(0,0,0,.12);
+  --display:'Oswald',sans-serif;--body:'Roboto',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand);color:var(--bg);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-size:20px;color:var(--brand);text-decoration:none;text-transform:uppercase;letter-spacing:.02em}
+.nav-back{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-decoration:none}
+.nav-back:hover{color:var(--accent)}
+header{padding:90px 0 60px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--accent);margin-bottom:18px}
+h1{font-family:var(--display);font-size:clamp(36px,6vw,64px);line-height:1.05;text-transform:uppercase}
+.intro{max-width:600px;margin:22px auto 0;color:var(--mut);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:30px 26px;cursor:pointer;transition:transform .3s,box-shadow .3s;text-align:left}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.1);outline:none}
+.post .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.post h3{font-family:var(--display);font-size:21px;margin:12px 0 8px;line-height:1.25;text-transform:uppercase}
+.post p{color:var(--mut);font-size:14.5px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);font-size:clamp(28px,4vw,44px);margin-bottom:28px;text-align:center;text-transform:uppercase}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent);font-size:22px}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(0,0,0,.55);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--bg);max-width:680px;width:100%;border-radius:22px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(0,0,0,.4)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut)}
+.asheet .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.asheet h2{font-family:var(--display);font-size:clamp(24px,4vw,34px);margin:12px 0 20px;line-height:1.2;text-transform:uppercase}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:13px 26px;border-radius:99px}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for Johnny's Mobile Auto Mechanic by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">Johnny's Mobile</a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">car care journal</p>
+    <h1>The Roadside Journal</h1>
+    <p class="intro">Practical, no-nonsense advice for drivers around Queensburgh and greater Durban — from breakdown basics to pre-road-trip checks.</p>
+  </div>
+</header>
+
+<div class="wrap"><div class="grid" id="postGrid"></div></div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="qa">
+      <details><summary>Do you really come to me?</summary><p>Yes — Johnny's Mobile Auto Mechanic travels to you for most breakdowns, servicing and diagnostics, wherever you're parked across Queensburgh and greater Durban.</p></details>
+      <details><summary>What areas do you cover?</summary><p>Based in Northdene, Queensburgh, with call-outs across greater Durban including Pinetown and the Upper Highway. Not sure if you're covered? WhatsApp your location and we'll confirm.</p></details>
+      <details><summary>What if my car needs parts?</summary><p>That depends on the job — WhatsApp Johnny with your vehicle's issue and he'll let you know what's needed before any work starts.</p></details>
+      <details><summary>How do I book?</summary><p>Call or WhatsApp 074 325 0503. Online booking is coming to this site soon.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap">Johnny's Mobile Auto Mechanic · O'Reilly Crescent, Northdene, Queensburgh · Concept by Arkatype Digital — draft, awaiting client sign-off</div></footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#visit">Book a call-out →</a>
+  </div>
+</div>
+
+<script>
+const POSTS = [
+  { tag: 'Breakdowns', title: 'The Northdene Breakdown Checklist: What To Do Before You Call a Mechanic', teaser: 'Five things worth checking from behind the wheel before you dial for help.', body: `<p>A breakdown is stressful, but a few quick checks from the driver's seat can save time — and sometimes save the call-out altogether.</p><ul><li><b>Get safe first.</b> Hazards on, pull as far off the road as you can, and stay visible before you check anything else.</li><li><b>Look at the dashboard.</b> Is a warning light on? Note the colour and symbol — it's the first thing a mechanic will ask about.</li><li><b>Try the obvious.</b> Flat battery symptoms (dim lights, slow crank, clicking) are different from an engine that cranks but won't start.</li><li><b>Smell and sound.</b> Burning smells, hissing, or grinding noises are worth mentioning when you call — they narrow down the problem fast.</li><li><b>Know your location.</b> A street name, landmark or what3words/pin drop gets help to you faster than a general area.</li></ul><p class="mut">General guidance — for anything beyond a quick check, WhatsApp us your symptoms and location.</p>` },
+  { tag: 'Brakes', title: 'Brakes Squealing on the Queensburgh Hills? Here’s What It Means', teaser: 'Some squeals are harmless. Some aren’t. Here’s how to tell the difference.', body: `<p>Queensburgh's hillier roads put brakes to work — so a squeal here and there isn't unusual. But not all brake noises mean the same thing.</p><ul><li><b>A light, intermittent squeal</b> — often just dust, moisture, or glazing on the pads. Common after rain or a car sitting overnight.</li><li><b>A constant high-pitched squeal</b> — frequently a built-in wear indicator telling you the pads are due for replacement soon.</li><li><b>A grinding or metallic scraping sound</b> — this usually means the pads are worn through to metal. Treat this as urgent, not routine.</li><li><b>A pulsing or vibrating pedal</b> — can point to a warped disc/rotor rather than the pads themselves.</li></ul><p class="mut">General guidance, not a diagnosis for your specific vehicle — if in doubt, get it checked before your next long drive.</p>` },
+  { tag: 'Batteries', title: 'Battery Warning Signs Durban Drivers Shouldn’t Ignore', teaser: 'Slow cranks, dim lights and dashboard clues — what your battery is trying to tell you.', body: `<p>Batteries rarely fail without warning — they usually give a few signs first.</p><ul><li><b>Slow cranking.</b> The engine takes longer than usual to turn over, especially first thing in the morning.</li><li><b>Dim or flickering lights.</b> Headlights or interior lights looking weaker than normal, particularly at idle.</li><li><b>Dashboard battery light.</b> If it's on and staying on, don't ignore it.</li><li><b>Clicking when you turn the key.</b> Often a sign the battery can't deliver enough current to the starter.</li><li><b>Corrosion on the terminals.</b> A white or bluish crust around the battery posts can affect the connection even if the battery itself is fine.</li><li><b>Age.</b> Most car batteries last a few years — if yours is getting on and showing any of the above, it's worth testing rather than waiting for it to strand you.</li></ul><p class="mut">General guidance — a proper battery and charging-system test gives a definite answer.</p>` },
+  { tag: 'Servicing', title: 'Service Intervals Explained: How Often Does Your Car Actually Need One?', teaser: 'Oil changes, filters, and the difference between the manual’s schedule and real-world driving.', body: `<p>"How often should I service my car?" doesn't have one universal answer — it depends on the manufacturer's schedule and how the car is actually driven.</p><ul><li><b>Start with the owner's manual.</b> Manufacturers publish a service interval based on distance and/or time, whichever comes first.</li><li><b>"Severe" driving conditions reset the clock.</b> Short stop-start trips, heavy traffic, dusty roads and towing are all classed as severe use — and usually call for more frequent servicing than the standard interval.</li><li><b>Oil doesn't just wear out by distance.</b> Oil also degrades with time and heat cycles, so a car that's driven rarely can still need a service on a time basis.</li><li><b>Watch for signs between services.</b> A noticeably rougher idle, new noises, or a service-reminder light are all reasons to bring a service forward rather than wait it out.</li></ul><p class="mut">General guidance — the exact interval for your car depends on its make, model and how it's driven.</p>` },
+  { tag: 'Warning Lights', title: 'Dashboard Warning Lights Decoded: Red vs Amber, and When To Stop', teaser: 'Not every light means pull over immediately — but some do. Here’s how to read them.', body: `<p>Dashboard warning lights follow a rough colour code across most vehicles, which is a useful starting point when one comes on.</p><ul><li><b>Red lights</b> — generally mean stop as soon as it's safe to do so. Oil pressure, engine temperature and brake system warnings fall here — continuing to drive can cause serious damage.</li><li><b>Amber/orange lights</b> — usually mean "get this checked soon," not "pull over now." Check engine, ABS and tyre-pressure lights are common examples.</li><li><b>Green or blue lights</b> — typically just status indicators (headlights, cruise control, indicators) rather than warnings.</li><li><b>When two lights come on together</b> — treat it more seriously than either alone, and get it looked at promptly.</li></ul><p class="mut">General guidance — your owner's manual has the exact meaning for your dashboard's symbols.</p>` },
+  { tag: 'Road Trips', title: 'Pre-Road-Trip Check: Leaving Queensburgh for the Holidays', teaser: 'A ten-minute check before a long drive out of Durban.', body: `<p>Before a longer trip out of Durban, a short walk-around can catch problems while you're still at home, not on the N3.</p><ul><li><b>Tyres.</b> Check pressure (including the spare) and look at tread depth — worn tyres matter more on a long, loaded trip.</li><li><b>Oil and coolant.</b> Quick level checks take a minute and prevent a bigger problem down the road.</li><li><b>Lights.</b> Headlights, brake lights and indicators — ask someone to check while you cycle through them.</li><li><b>Wipers and washer fluid.</b> Easy to forget, unwelcome to discover in the rain on the road.</li><li><b>Brakes.</b> Any squealing, grinding or a soft pedal is worth sorting before, not during, a long drive.</li><li><b>Battery terminals.</b> A quick visual check for corrosion, especially if the car doesn't get driven daily.</li></ul><p class="mut">General guidance — for a proper pre-trip once-over, book a call-out before you leave.</p>` }
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

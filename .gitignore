@@ -10,3 +10,5 @@ package-lock.json
 scripts/cloudflared.exe
 board/tunnel.log
 */images/pulled_*
+
+.env
