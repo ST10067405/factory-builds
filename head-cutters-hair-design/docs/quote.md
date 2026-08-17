@@ -19,7 +19,35 @@ The concept build at `head-cutters-hair-design/` is live-ready in draft form:
 - An embedded Google Map and "Navigate to Head Cutters" link in the Visit section, and Instagram/Facebook links live.
 - A hero and one interior gallery shot are the salon's own photo (name-matched); the other four gallery images are clearly disclosed as representative stock until real photos come in.
 
-## Recommended path — The Foundation (R16,500 once-off)
+## Two ways to start — pick the one that fits
+
+Most owners we meet don't need to decide *whether* to have a site — just *which* version to start with. Both options below are the demo you've already seen; they differ in depth, not quality.
+
+### Option A — The Signpost · R4,500 once-off
+The demo cut down to one premium scrolling page: hero, treatment menu, gallery strip, hours-to-confirm, click-to-call + WhatsApp, Google Maps + Navigate, and a lead-capture form. Live in about a week.
+
+Add-ons that fit (optional, any time):
+- **Booking/calendar integration — R3,600** — real online booking instead of "message to book"; the demo's chatbot already primes for it.
+- **WhatsApp automation — R6,500 setup** — auto-replies, FAQ handling and lead capture on WhatsApp Business.
+- **Specials hero banner — R1,400** (priced as an additional page-section) — a promo banner on the landing page you can update for monthly specials.
+
+### Option B — The Foundation · R16,500 once-off
+The full demo as seen — up to 5 pages, signature motion, the hair-care Journal, on-page SEO, hosting + domain + deployment handled, 2 revision rounds.
+
+Add-ons that fit (optional, any time):
+- **Booking/calendar integration — R3,600** — real online booking instead of "message to book"; the demo's chatbot already primes for it.
+- **WhatsApp automation — R6,500 setup** — auto-replies, FAQ handling and lead capture on WhatsApp Business.
+- **Specials hero banner — R1,400** — rotating promo banner on the landing page for monthly specials.
+- **Online shop — from R55,000 (The Landmark) for a full store**, or the light path: **payment gateway integration R3,200 + a products page R1,400** to sell retail (products, vouchers) without a full e-commerce build. Natural upsell once the site is live.
+- **SEO Launch setup — R4,500 once.**
+
+Both options include a care plan from **Essential R450 pm** (hosting, SSL, backups, uptime, security, 30 min of changes/month). Everything can move from A to B later — nothing is thrown away.
+
+*Sales note (internal): Salons buy visually — lead with the demo on the owner's phone, then present A and B side by side. The specials banner and shop are upsells that come up naturally in the conversation; price them, don't push them.*
+
+---
+
+## Our recommendation between the two — The Foundation (R16,500 once-off)
 
 Head Cutters is a straightforward single-location salon — the job for the website is to convert an already-strong reputation (4.9★, 43 reviews) into calls and messages, not to run a multi-service booking operation with staff logins or e-commerce. That's exactly the Foundation tier: up to 5 pages, motion, WhatsApp, Maps, basic SEO, hosting + domain handled, 2 revisions. The demo already fits inside that scope (2 pages used, room for 3 more — e.g. a dedicated pricing page once real numbers are confirmed). The Structure tier (R32,000) would only make sense if Head Cutters wanted a true booking calendar with staff/service logic and conversion analytics from day one — nothing in the lead data or the demo suggests that need yet.
 

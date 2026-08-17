@@ -18,7 +18,32 @@ We built a speculative concept site (`index.html` + `learn.html`) so this starts
 - The real 5.0★ / 24-review Google rating shown in the hero, the about section and the hero photo badge — the practice's strongest, currently-invisible asset.
 - Mobile-responsive, fast-loading static HTML (no page-builder bloat), scroll-reveal motion, `noindex` and marked as a draft, awaiting sign-off.
 
-## Recommended path — The Structure, R32,000
+## Two ways to start — pick the one that fits
+
+Most owners we meet don't need to decide *whether* to have a site — just *which* version to start with. Both options below are the demo you've already seen; they differ in depth, not quality.
+
+### Option A — The Foundation · R16,500 once-off
+The demo as seen — practice pages, services, WhatsApp-to-book, Maps, the patient-education Journal, on-page SEO, hosting + domain + deployment, 2 revisions.
+
+Add-ons that fit (optional, any time):
+- **Booking/calendar integration — R3,600** — real online booking instead of "message to book"; the demo's chatbot already primes for it.
+- **AI website chatbot — R9,500 setup + R950 pm** — answers patient questions and booking requests after hours.
+
+### Option B — The Structure · R32,000 once-off
+Up to 10 pages with a real booking form + enquiry routing, practitioner/service pages, testimonials, full on-page SEO + indexing, analytics + conversion tracking, 3 revisions + training — the "measurable" build a practice can hold us to.
+
+Add-ons that fit (optional, any time):
+- **Booking/calendar integration — R3,600** — real online booking instead of "message to book"; the demo's chatbot already primes for it.
+- **AI website chatbot — R9,500 setup + R950 pm.**
+- **SEO Launch R4,500 once + Visibility R4,500 pm** — practices compete with franchises and established sites already indexed.
+
+Both options include a care plan from **Essential R450 pm** (hosting, SSL, backups, uptime, security, 30 min of changes/month). Everything can move from A to B later — nothing is thrown away.
+
+*Sales note (internal): Clinics have budget but need proof and measurement — present A as the credible start and B as the practice that shows up in numbers. The Signpost is too thin for a practice; don't offer it here.*
+
+---
+
+## Our recommendation between the two — The Structure, R32,000
 
 The Foundation (R16,500) is our usual "get a demo live" recommendation, but the pain signal here is specific: *a 5.0★ independent practice sitting a few doors down from Specsavers and Torga, with no way for anyone to find it, trust it, or book with it online.* That's a booking-and-trust problem against well-resourced franchise competitors, which is exactly what The Structure is built for:
 

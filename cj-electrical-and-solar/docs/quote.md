@@ -22,7 +22,32 @@ It's currently `noindex` (not live, not found by Google) and built on stock phot
 
 ---
 
-## Recommended path: The Foundation — R16,500 once-off
+## Two ways to start — pick the one that fits
+
+Most owners we meet don't need to decide *whether* to have a site — just *which* version to start with. Both options below are the demo you've already seen; they differ in depth, not quality.
+
+### Option A — The Signpost · R4,500 once-off
+One premium page built for emergencies: big click-to-call + WhatsApp, services list, service area, Google Maps, lead form. Live in about a week — the fastest way to stop losing "near me" searches to competitors with sites.
+
+Add-ons that fit (optional, any time):
+- **DialCover AI call answering — R3,500 setup + R1,650 pm** — answers the calls missed while hands are on the job; the single highest-value add-on for a call-out trade.
+- **WhatsApp automation — R6,500 setup** — auto-replies, FAQ handling and lead capture on WhatsApp Business.
+
+### Option B — The Foundation · R16,500 once-off
+The full demo as seen — services pages, the homeowner Journal, on-page SEO, hosting + domain + deployment, 2 revision rounds.
+
+Add-ons that fit (optional, any time):
+- **DialCover AI call answering — R3,500 setup + R1,650 pm.**
+- **WhatsApp automation — R6,500 setup** — auto-replies, FAQ handling and lead capture on WhatsApp Business.
+- **SEO Launch R4,500 once + Visibility R4,500 pm** — "plumber/electrician/mechanic near me" is the whole game for emergency trades.
+
+Both options include a care plan from **Essential R450 pm** (hosting, SSL, backups, uptime, security, 30 min of changes/month). Everything can move from A to B later — nothing is thrown away.
+
+*Sales note (internal): Referral-driven trades are budget-cautious but understand missed calls = missed jobs. Present A + DialCover as the "never miss a job" starter; B when they want to be found on Google.*
+
+---
+
+## Our recommendation between the two: The Foundation — R16,500 once-off
 
 Your pain point is specific: a 5.0★, word-of-mouth trade business with glowing referrals that simply isn't converting into online enquiries, because there's no site to send people to. That's exactly what **The Foundation** (≤5 pages, motion, WhatsApp, Maps, basic SEO, hosting + domain handled, 2 revisions) is built for — it takes the demo you've already seen and makes it real: live domain, real photos, your actual hours and confirmed service details, hosted and indexed.
 

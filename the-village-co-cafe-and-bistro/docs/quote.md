@@ -22,7 +22,35 @@ mockup on paper:
   section.
 - Fully responsive, mobile-first build that loads light — no bloated page-builder overhead.
 
-## Recommended path — The Foundation, R16,500
+## Two ways to start — pick the one that fits
+
+Most owners we meet don't need to decide *whether* to have a site — just *which* version to start with. Both options below are the demo you've already seen; they differ in depth, not quality.
+
+### Option A — The Signpost · R4,500 once-off
+One premium page: hero, menu categories, gallery strip, hours-to-confirm, Maps + Navigate, order/enquiry CTA. Live in about a week.
+
+Add-ons that fit (optional, any time):
+- **WhatsApp automation — R6,500** (once a business number is confirmed; the demo currently routes to Instagram DM).
+- **Specials hero banner — R1,400** — daily/weekly specials on the landing page.
+- **Newsletter setup — R2,800** — the cheapest repeat-visit tool a café has.
+
+### Option B — The Foundation · R16,500 once-off
+The full demo as seen — menu, story, gallery, the coffee/food Journal, on-page SEO, hosting + domain + deployment, 2 revisions.
+
+Add-ons that fit (optional, any time):
+- **WhatsApp automation — R6,500** (once a business number is confirmed; the demo currently routes to Instagram DM).
+- **Specials hero banner — R1,400.**
+- **Newsletter setup — R2,800.**
+- **Online ordering / vouchers — payment gateway R3,200 + a products page R1,400** (light path); full store from R55,000 (The Landmark).
+- **SEO Launch setup — R4,500 once.**
+
+Both options include a care plan from **Essential R450 pm** (hosting, SSL, backups, uptime, security, 30 min of changes/month). Everything can move from A to B later — nothing is thrown away.
+
+*Sales note (internal): Cafés run week-to-week — frame A per-day ("about R15 a day over a year") if the debit-order fear shows up. B when they want menu + story + search presence.*
+
+---
+
+## Our recommendation between the two — The Foundation, R16,500
 
 The Village Co is a straightforward neighbourhood cafe — the job right now is closing the gap
 in the pain signal that brought this build about: **no menu, hours or location online**. That's

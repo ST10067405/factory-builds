@@ -19,7 +19,35 @@ A working speculative demo already built, live at their own concept URL, ready t
 
 One honest gap: the gallery is currently stock-only. The one photo we thought was a genuine Chi Chi's interior turned out to be a mis-attributed/duplicate Fresha image and was swapped back to stock — this is disclosed on the page footer. Real photos are the single biggest thing missing before this goes live.
 
-## Recommended path — The Foundation (R16,500)
+## Two ways to start — pick the one that fits
+
+Most owners we meet don't need to decide *whether* to have a site — just *which* version to start with. Both options below are the demo you've already seen; they differ in depth, not quality.
+
+### Option A — The Signpost · R4,500 once-off
+The demo cut down to one premium scrolling page: hero, treatment menu, gallery strip, hours-to-confirm, click-to-call + WhatsApp, Google Maps + Navigate, and a lead-capture form. Live in about a week.
+
+Add-ons that fit (optional, any time):
+- **Booking/calendar integration — R3,600** — real online booking instead of "message to book"; the demo's chatbot already primes for it.
+- **WhatsApp automation — R6,500 setup** — auto-replies, FAQ handling and lead capture on WhatsApp Business.
+- **Specials hero banner — R1,400** (priced as an additional page-section) — a promo banner on the landing page you can update for monthly specials.
+
+### Option B — The Foundation · R16,500 once-off
+The full demo as seen — up to 5 pages, signature motion, the hair-care Journal, on-page SEO, hosting + domain + deployment handled, 2 revision rounds.
+
+Add-ons that fit (optional, any time):
+- **Booking/calendar integration — R3,600** — real online booking instead of "message to book"; the demo's chatbot already primes for it.
+- **WhatsApp automation — R6,500 setup** — auto-replies, FAQ handling and lead capture on WhatsApp Business.
+- **Specials hero banner — R1,400** — rotating promo banner on the landing page for monthly specials.
+- **Online shop — from R55,000 (The Landmark) for a full store**, or the light path: **payment gateway integration R3,200 + a products page R1,400** to sell retail (products, vouchers) without a full e-commerce build. Natural upsell once the site is live.
+- **SEO Launch setup — R4,500 once.**
+
+Both options include a care plan from **Essential R450 pm** (hosting, SSL, backups, uptime, security, 30 min of changes/month). Everything can move from A to B later — nothing is thrown away.
+
+*Sales note (internal): Salons buy visually — lead with the demo on the owner's phone, then present A and B side by side. The specials banner and shop are upsells that come up naturally in the conversation; price them, don't push them.*
+
+---
+
+## Our recommendation between the two — The Foundation (R16,500)
 
 Chi Chi's needs is contained: a treatment menu, a gallery, and a booking link — exactly the Foundation's scope (≤5 pages, motion, WhatsApp, Maps, basic SEO, hosting + domain handled, 2 revisions). This isn't a deep-booking or high-page-count business like a dental practice or a franchise, so the Structure tier's extra machinery (self-update journal engine, analytics/conversion tracking, 10-page depth) isn't needed yet — it's an easy upsell later once the site is proving itself.
 

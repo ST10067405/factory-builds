@@ -1,5 +1,32 @@
 DRAFT — internal, for Jaime's review · generated 2026-07-31 · prices valid 30 days from issue once sent
 
+## Two ways to start — pick the one that fits
+
+Most owners we meet don't need to decide *whether* to have a site — just *which* version to start with. Both options below are the demo you've already seen; they differ in depth, not quality.
+
+### Option A — The Signpost · R4,500 once-off
+The demo cut down to one premium scrolling page: hero, services/classes, gallery strip, click-to-call + WhatsApp, Maps + Navigate, lead form. Live in about a week.
+
+Add-ons that fit (optional, any time):
+- **Booking/calendar integration — R3,600** — real online booking instead of "message to book"; the demo's chatbot already primes for it.
+- **WhatsApp automation — R6,500 setup** — auto-replies, FAQ handling and lead capture on WhatsApp Business.
+
+### Option B — The Foundation · R16,500 once-off
+The full demo as seen — up to 5 pages, signature motion, the educational Journal, on-page SEO, hosting + domain + deployment, 2 revisions.
+
+Add-ons that fit (optional, any time):
+- **Booking/calendar integration — R3,600** — real online booking instead of "message to book"; the demo's chatbot already primes for it.
+- **WhatsApp automation — R6,500 setup** — auto-replies, FAQ handling and lead capture on WhatsApp Business.
+- **Newsletter setup — R2,800** — class/slot/flash-day announcements.
+- **SEO Launch setup — R4,500 once.**
+
+Both options include a care plan from **Essential R450 pm** (hosting, SSL, backups, uptime, security, 30 min of changes/month). Everything can move from A to B later — nothing is thrown away.
+
+*Sales note (internal): Owner-operated studios are budget-cautious and phone-first — most start with A + booking. Present both side by side.*
+
+---
+
+
 # Quote — Durban Mobile Groomers
 
 **Client:** Durban Mobile Groomers · Mobile pet groomer · Service area: greater Durban (no premises)

@@ -17,7 +17,32 @@ The speculative demo (`index.html` + `learn.html`) is built and live-ready pendi
 - The shop's real 4.6★ / 106-review Google rating surfaced prominently, plus a photo gallery led by one vetted real interior shot (East Coast Barbers-branded gear visible) and 3 disclosed stock images as fill.
 - A scaffolded services list (cuts & fades, beard trims, hot-towel shave, kids' cuts, line-ups, styling) with pricing left open, pending the shop's real price list.
 
-## Recommended path — The Foundation, R16,500
+## Two ways to start — pick the one that fits
+
+Most owners we meet don't need to decide *whether* to have a site — just *which* version to start with. Both options below are the demo you've already seen; they differ in depth, not quality.
+
+### Option A — The Signpost · R4,500 once-off
+The demo cut down to one premium scrolling page: hero, services, gallery strip, hours-to-confirm, click-to-call + WhatsApp, Google Maps + Navigate, and a lead-capture form. Live in about a week. It puts the shop on the map properly without a big spend.
+
+Add-ons that fit (optional, any time):
+- **Booking/calendar integration — R3,600** — real online booking instead of "message to book"; the demo's chatbot already primes for it.
+- **WhatsApp automation — R6,500 setup** — auto-replies, FAQ handling and lead capture on WhatsApp Business.
+
+### Option B — The Foundation · R16,500 once-off
+The full demo as seen — up to 5 sections/pages, signature motion, the grooming Journal (`learn.html`), on-page SEO, hosting + domain + deployment handled, 2 revision rounds.
+
+Add-ons that fit (optional, any time):
+- **Booking/calendar integration — R3,600** — real online booking instead of "message to book"; the demo's chatbot already primes for it.
+- **WhatsApp automation — R6,500 setup** — auto-replies, FAQ handling and lead capture on WhatsApp Business.
+- **SEO Launch setup — R4,500 once** — titles/meta/schema/GBP so "barber near me" searches actually find the shop.
+
+Both options include a care plan from **Essential R450 pm** (hosting, SSL, backups, uptime, security, 30 min of changes/month). Everything can move from A to B later — nothing is thrown away.
+
+*Sales note (internal): Barbershops are walk-in, phone-first businesses — most owners start with A and add booking once they see enquiries arrive. Present both; let them pick.*
+
+---
+
+## Our recommendation between the two — The Foundation, R16,500
 
 This is a single walk-in barbershop running on word of mouth with zero online discovery today — the pain isn't booking depth or content volume, it's simply not existing online. The Foundation (≤5 pages, motion, WhatsApp, Maps, basic SEO, hosting + domain handled, 2 revisions) matches exactly what's already been speculatively built and gets it live.
 

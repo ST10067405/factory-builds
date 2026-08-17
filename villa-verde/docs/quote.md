@@ -20,7 +20,32 @@ We built a concept site on spec so this conversation could start from a working 
 
 This is a demo, not yet deployed — it currently carries a "noindex" tag and a visible draft banner until you sign off.
 
-## Recommended path — The Structure (R32,000 once-off)
+## Two ways to start — pick the one that fits
+
+Most owners we meet don't need to decide *whether* to have a site — just *which* version to start with. Both options below are the demo you've already seen; they differ in depth, not quality.
+
+### Option A — The Foundation · R16,500 once-off
+The demo as seen — rooms, gallery, café/experiences, "book direct" enquiry, Maps, the guest Journal, on-page SEO, hosting + domain + deployment, 2 revisions.
+
+Add-ons that fit (optional, any time):
+- **Booking/calendar integration — R3,600** — real online booking instead of "message to book"; the demo's chatbot already primes for it.
+- **Photography/video shoot — TBC** — the estate is the product.
+
+### Option B — The Structure · R32,000 once-off
+Up to 10 pages with a live availability/booking flow + enquiry routing, room/rate pages, gallery + reviews, full on-page SEO + indexing, analytics + conversion tracking — the build that actually replaces OTA commission.
+
+Add-ons that fit (optional, any time):
+- **Booking/calendar integration — R3,600** — real online booking instead of "message to book"; the demo's chatbot already primes for it.
+- **Photography/video shoot — TBC.**
+- **SEO Launch R4,500 once + Visibility+GEO R8,500 pm** — "farm stay near Durban" is exactly the query AI tools now answer.
+
+Both options include a care plan from **Essential R450 pm** (hosting, SSL, backups, uptime, security, 30 min of changes/month). Everything can move from A to B later — nothing is thrown away.
+
+*Sales note (internal): The maths sells itself: direct bookings vs OTA commission. A gets the estate a home; B pays for itself when it takes bookings.*
+
+---
+
+## Our recommendation between the two — The Structure (R32,000 once-off)
 
 We're recommending **The Structure** rather than the entry-level Foundation, because Villa Verde's actual problem — guests only finding rooms via OTA/booking-site listings that take a commission — is exactly what Structure is built to fix:
 

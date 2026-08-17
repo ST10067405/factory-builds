@@ -2,6 +2,32 @@
 
 **DRAFT — internal, for Jaime's review · generated 2026-08-16 · prices valid 30 days from issue once sent**
 
+## Two ways to start — pick the one that fits
+
+Most owners we meet don't need to decide *whether* to have a site — just *which* version to start with. Both options below are the demo you've already seen; they differ in depth, not quality.
+
+### Option A — The Signpost · R4,500 once-off
+One premium page built for emergencies: big click-to-call + WhatsApp, services list, service area, Google Maps, lead form. Live in about a week — the fastest way to stop losing "near me" searches to competitors with sites.
+
+Add-ons that fit (optional, any time):
+- **DialCover AI call answering — R3,500 setup + R1,650 pm** — answers the calls missed while hands are on the job; the single highest-value add-on for a call-out trade.
+- **WhatsApp automation — R6,500 setup** — auto-replies, FAQ handling and lead capture on WhatsApp Business.
+
+### Option B — The Foundation · R16,500 once-off
+The full demo as seen — services pages, the homeowner Journal, on-page SEO, hosting + domain + deployment, 2 revision rounds.
+
+Add-ons that fit (optional, any time):
+- **DialCover AI call answering — R3,500 setup + R1,650 pm.**
+- **WhatsApp automation — R6,500 setup** — auto-replies, FAQ handling and lead capture on WhatsApp Business.
+- **SEO Launch R4,500 once + Visibility R4,500 pm** — "plumber/electrician/mechanic near me" is the whole game for emergency trades.
+
+Both options include a care plan from **Essential R450 pm** (hosting, SSL, backups, uptime, security, 30 min of changes/month). Everything can move from A to B later — nothing is thrown away.
+
+*Sales note (internal): Referral-driven trades are budget-cautious but understand missed calls = missed jobs. Present A + DialCover as the "never miss a job" starter; B when they want to be found on Google.*
+
+---
+
+
 Client: Johnny's Mobile Auto Mechanic · Mobile mechanic · O'Reilly Crescent, Northdene, Queensburgh 4093 (base — service-area, come-to-you business)
 Phone/WhatsApp: 074 325 0503 · Facebook /johnnymobilemechanic/ · Email Johnnysmobilemechanic@yahoo.com
 Google: 4.9★ (73 reviews)
