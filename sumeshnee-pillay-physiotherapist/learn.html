@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Northdene Recovery Journal | Sumeshnee Pillay Physiotherapist</title>
+<meta name="description" content="Practical, Queensburgh/Northdene/Moseley-specific physiotherapy education from Sumeshnee Pillay Physiotherapist — back pain, desk posture, running injuries, post-op rehab, home stretching and more.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Do I need a doctor’s referral to see a physio?", "acceptedAnswer": { "@type": "Answer", "text": "No — physiotherapists in South Africa are first-contact practitioners, so you can book directly. Some medical aids ask for a referral for claims purposes, so it’s worth checking your plan first." } },
+    { "@type": "Question", "name": "Do you accept medical aid?", "acceptedAnswer": { "@type": "Answer", "text": "Medical aid claims — ask us. WhatsApp your scheme and membership details and we’ll confirm what’s claimable before you book." } },
+    { "@type": "Question", "name": "What should I bring to my first appointment?", "acceptedAnswer": { "@type": "Answer", "text": "Comfortable clothing you can move in, any recent scans or referral letters you have, and a list of current medication if relevant." } },
+    { "@type": "Question", "name": "How do I book?", "acceptedAnswer": { "@type": "Answer", "text": "You can book online now via Fresha, or call/WhatsApp 073 277 3957." } }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#FAF8F2;--surface:#EEF2E8;--ink:#232B26;--mut:rgba(35,43,38,.62);
+  --brand:#2E3B35;--accent:#8CA889;--line:rgba(46,59,53,.14);
+  --display:'Manrope',sans-serif;--body:'Inter',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand);color:#fff;font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-size:19px;font-weight:800;color:var(--brand);text-decoration:none}
+.nav-back{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-decoration:none;font-weight:600}
+.nav-back:hover{color:var(--accent)}
+header{padding:86px 0 56px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--accent);margin-bottom:18px}
+h1{font-family:var(--display);font-size:clamp(34px,5.4vw,58px);line-height:1.08;font-weight:800}
+.intro{max-width:600px;margin:22px auto 0;color:var(--mut);font-size:16.5px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:30px 26px;cursor:pointer;transition:transform .3s,box-shadow .3s;text-align:left}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(35,43,38,.12);outline:none}
+.post .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.post h3{font-family:var(--display);font-size:20px;margin:12px 0 8px;line-height:1.25;font-weight:700}
+.post p{color:var(--mut);font-size:14.5px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);font-size:clamp(28px,4vw,44px);margin-bottom:28px;text-align:center;font-weight:800}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:700;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent);font-size:22px}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(35,43,38,.55);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--bg);max-width:680px;width:100%;border-radius:22px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(35,43,38,.4)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut)}
+.asheet .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.asheet h2{font-family:var(--display);font-size:clamp(24px,4vw,36px);margin:12px 0 20px;line-height:1.18;font-weight:800}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--brand);color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:13px 26px;border-radius:99px}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for Sumeshnee Pillay Physiotherapist by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">Sumeshnee Pillay Physiotherapist</a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">The Northdene Recovery Journal</p>
+    <h1>Practical physio, for Queensburgh</h1>
+    <p class="intro">Posture, injuries, recovery and the myths in between — written for people who live and work around Northdene, Moseley and Main Road, Queensburgh.</p>
+  </div>
+</header>
+
+<div class="wrap"><div class="grid" id="postGrid"></div></div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="qa">
+      <details><summary>Do I need a doctor’s referral to see a physio?</summary><p>No — physiotherapists in South Africa are first-contact practitioners, so you can book directly. Some medical aids ask for a referral for claims purposes, so it’s worth checking your plan first.</p></details>
+      <details><summary>Do you accept medical aid?</summary><p>Medical aid claims — ask us. WhatsApp your scheme and membership details and we’ll confirm what’s claimable before you book.</p></details>
+      <details><summary>What should I bring to my first appointment?</summary><p>Comfortable clothing you can move in, any recent scans or referral letters you have, and a list of current medication if relevant.</p></details>
+      <details><summary>How do I book?</summary><p>You can book online now via Fresha, or call/WhatsApp 073 277 3957.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap">Sumeshnee Pillay Physiotherapist · Northdene Medical on Main, 906 Main Rd, Queensburgh · Concept by Arkatype Digital — draft, awaiting client sign-off</div></footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#visit">Book your visit →</a>
+  </div>
+</div>
+
+<script>
+const POSTS = [
+  { tag: 'Back Pain', title: 'Lower-Back Pain Basics for Main Road Commuters', teaser: "What's usually behind everyday lower-back pain, and when it needs more than rest.", body: `
+    <p>Most lower-back pain isn't caused by a single dramatic injury — it's the slow build-up of long drives, desk hours and sitting in traffic along Main Road that finally catches up. Understanding the basics helps you respond sensibly instead of panicking or ignoring it.</p>
+    <ul>
+      <li><b>Most back pain is mechanical:</b> it comes from muscles, joints and discs reacting to load and posture, not from something seriously wrong with your spine.</li>
+      <li><b>Movement helps more than rest:</b> gentle walking and normal daily activity usually speeds recovery better than lying flat for days.</li>
+      <li><b>Heat, not always ice:</b> for stiff, achy back pain (as opposed to a fresh injury), warmth often eases muscle guarding better than ice.</li>
+      <li><b>Sitting posture matters, but perfection doesn't:</b> the best position is the next one — shift and move regularly rather than chasing one "correct" posture.</li>
+      <li><b>Red flags:</b> numbness, weakness down a leg, or pain that wakes you at night deserves a proper assessment, not a wait-and-see approach.</li>
+    </ul>
+    <p>If pain hasn't started easing within a week or two of sensible activity, that's usually the point to have it properly assessed.</p>
+  ` },
+  { tag: 'Posture', title: 'The Northdene Desk-Posture Fix', teaser: 'A 5-minute desk check for anyone working from home around Northdene and Moseley.', body: `
+    <p>Working from a kitchen table or a spare-room desk in Northdene or Moseley usually means a setup that was never actually designed for a full working day. A five-minute check catches most of the damage before it becomes pain.</p>
+    <ul>
+      <li><b>Screen height:</b> the top third of your screen should sit at eye level — stacking books under a laptop works as well as a monitor stand.</li>
+      <li><b>Shoulders:</b> roll them back and down twice. If they've crept up toward your ears, your desk or chair height is off.</li>
+      <li><b>Feet:</b> flat on the floor or a low box — not tucked under the chair or dangling.</li>
+      <li><b>Lower back support:</b> a rolled towel or small cushion behind it keeps the natural curve instead of flattening it.</li>
+      <li><b>The 30-minute rule:</b> stand, stretch or walk at least once every half hour — no chair fixes a body that never moves.</li>
+    </ul>
+    <p>If discomfort persists after a few weeks of adjustments, it's worth having the underlying movement pattern assessed, not just the desk setup.</p>
+  ` },
+  { tag: 'Running', title: 'The Queensburgh Runner’s Guide to Avoiding Overuse Injuries', teaser: 'Preventing the niggles that build up gradually when training on local roads and pavements.', body: `
+    <p>Most running injuries around Queensburgh aren't caused by one bad step — they build gradually from too much distance, too soon, on unforgiving pavement and camber.</p>
+    <ul>
+      <li><b>The 10% rule:</b> increase weekly running distance by no more than about 10% at a time — sudden jumps are the most common cause of overuse injury.</li>
+      <li><b>Pavement camber adds up:</b> roads slope toward the gutter, so always running on the same side loads one leg more than the other — alternate sides or use a path where you can.</li>
+      <li><b>Footwear matters more than most runners think:</b> worn-out soles change how load travels up through your knees and hips, well before they look obviously worn.</li>
+      <li><b>Strength training isn't optional:</b> calf, glute and hip strength are what actually protect joints from repetitive impact — running alone doesn't build enough of it.</li>
+    </ul>
+    <p>A niggle that fades within a day or two of easy running is usually normal fatigue. Pain that lingers, sharpens, or changes your stride is worth having assessed before it becomes a lay-off.</p>
+  ` },
+  { tag: 'Rehab', title: 'What to Expect After Surgery: A Northdene Rehab Timeline', teaser: 'What a sensible recovery timeline actually looks like after surgery, from day one onward.', body: `
+    <p>Every surgery has its own timeline set by your surgeon, but good rehabilitation generally follows the same shape: protect, restore, then rebuild.</p>
+    <ul>
+      <li><b>Protect (early days):</b> follow your surgeon's weight-bearing and movement limits exactly — rehabbing too early can undo the repair.</li>
+      <li><b>Restore (weeks in):</b> gentle, guided movement to bring back range of motion before it stiffens into scar tissue.</li>
+      <li><b>Rebuild (later stage):</b> progressive strength and load work to get the area — and the muscles around it — back to full function, not just "good enough".</li>
+    </ul>
+    <p>The most common mistake isn't doing too little too early — it's stopping rehab as soon as pain settles, before strength and control have actually caught up. A structured programme, checked against your surgeon's timeline, closes that gap.</p>
+  ` },
+  { tag: 'When To See A Physio', title: 'Sore After Sport in Queensburgh? When To Get It Checked', teaser: 'How to tell the difference between "give it a few days" and "get it assessed".', body: `
+    <p>Most everyday aches from weekend sport settle on their own within a few days. A few signs suggest it's worth having a physiotherapist look at it sooner rather than later:</p>
+    <ul>
+      <li><b>It's not improving day-on-day</b> — mild pain that plateaus instead of easing, even slightly, after 5–7 days.</li>
+      <li><b>It changes how you move</b> — a limp, guarding a shoulder, or avoiding a particular movement altogether.</li>
+      <li><b>It followed a specific event</b> — a fall, a twist, a "pop" you felt or heard during activity.</li>
+      <li><b>It's affecting sleep or daily tasks</b> — pain that wakes you up, or that you're now working around rather than through.</li>
+      <li><b>It's happened before</b> — repeat niggles in the same spot are usually a sign of an underlying pattern worth addressing properly.</li>
+    </ul>
+    <p>When in doubt, a single assessment is a small investment compared to months of a niggle quietly getting worse.</p>
+  ` },
+  { tag: 'Stretching', title: 'Simple Home Stretches for Moseley & Northdene Desk Workers', teaser: 'A short, no-equipment stretch routine you can actually stick to between appointments.', body: `
+    <p>You don't need a gym or special equipment to keep a desk-bound body moving — five simple stretches, done consistently, cover most of what a long sitting day undoes.</p>
+    <ul>
+      <li><b>Chest opener:</b> clasp hands behind your back and gently lift, opening the chest for 20–30 seconds — undoes the forward-hunch most desk postures create.</li>
+      <li><b>Seated spinal twist:</b> sitting tall, rotate gently toward one side using the chair back for leverage, hold, then switch — keeps the mid-back mobile.</li>
+      <li><b>Hip flexor stretch:</b> a gentle half-kneeling lunge, tucking the hips under — counters hours of hip flexion from sitting.</li>
+      <li><b>Hamstring stretch:</b> seated or standing, hinge gently forward with a straight-ish leg — hamstrings shorten fast with a sedentary day.</li>
+      <li><b>Neck side-bend:</b> tilt your ear gently toward your shoulder, hold, switch sides — releases the tension that builds from screen-watching.</li>
+    </ul>
+    <p>Gentle tension is the goal, never sharp pain. Hold each stretch for 20–30 seconds and repeat a few times a day — consistency matters far more than intensity.</p>
+  ` }
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "business": "DZL Services and Repairs",
+  "slug": "dzl-services-and-repairs",
+  "vetted_date": "2026-08-19",
+  "kept": [
+    {
+      "file": "real_04.jpg",
+      "vetted": true,
+      "note": "Technician in navy workshop uniform leaning on a silver Mercedes-Benz with the hood open, inside a genuine small workshop bay (worn concrete floor, plain painted walls). Trade and setting match a Queensburgh-area independent mechanic workshop. Small chest logo/badge is illegible at readable size and does not identify a different named competitor. No stock-photo styling (natural light, candid pose, real wear on the premises)."
+    },
+    {
+      "file": "real_06.jpg",
+      "vetted": true,
+      "note": "Two technicians in workwear (one navy, one olive coveralls with reflective trim) working under the open bonnet of a silver Nissan SUV inside a corrugated-metal workshop bay. Trade and setting match. No branding, signage, or logos visible for any business — candid, unposed working shot, not a stock/listicle image."
+    },
+    {
+      "file": "real_08.jpg",
+      "vetted": true,
+      "note": "Man in workshop uniform standing at a workshop entrance beside a board of trade-body and parts-brand decals (RMI, AA, MIQ, SABFIA, Bosch, Denso, Zexel, Delphi) with service vehicles visible behind him. RMI (Retail Motor Industry Organisation) and parts-brand decals are generic trade affiliations, not a competing business name. Plausible owner/technician environmental portrait at a real workshop premises."
+    }
+  ],
+  "rejected": [
+    { "file": "real_01.jpg", "reason": "Technician's workwear reads 'DAS — Dezine Auto Solutions, Vehicle Repairs and Service, Tel: 012-327 5..' — a different, named competing business." },
+    { "file": "real_02.jpg", "reason": "Green-on-black 'Mega Motors' logo/template graphic with 'www.megamotors.co.za' watermark and placeholder 'ADD NEW TEXT' — a generic branding template, not a photo of this business." },
+    { "file": "real_03.jpg", "reason": "Polished studio-lit stock photograph (mechanic in immaculate blue overalls with a clipboard over a spotless engine bay) — no connection to this business, reads as generic stock imagery." },
+    { "file": "real_05.jpg", "reason": "Polished studio-lit stock photograph (two models in immaculate blue overalls handling an engine block in a showroom-clean bay) — no connection to this business, reads as generic stock imagery." },
+    { "file": "real_07.jpg", "reason": "Promotional flyer for 'SJ Hydraulic/Mechanical Repairs & Field Service — Rustenburg & surrounding areas' — a different, named competing business in a different city." }
+  ],
+  "stock": [],
+  "stock_decision": "Skipped. 3 real, vetted photos were kept (above the 2-photo minimum that would trigger required stock fill), covering a technician-with-vehicle shot, a two-person team shot, and a premises/owner portrait — enough range for hero, gallery and visit sections without needing stock fill. No stock images used; footer 'representative stock' disclosure line therefore not needed."
+}

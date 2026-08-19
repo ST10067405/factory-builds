@@ -1,0 +1,60 @@
+{
+  "kept": [
+    {
+      "file": "real_04.png",
+      "vetted": true,
+      "subject": "Ethekweni Locksmiths business card on a tabletop — 'Wezley', Cell 0832612463, Tel 0314643701, Address: 434 Main Road Malvern 4093.",
+      "note": "Genuine own-business asset — the cell number 0832612463 matches the brief's phone exactly, confirming this is the client's real card. NOT used on the visible site: the card's printed address (434 Main Road, Malvern) differs from the brief's address (65-67 Sarnia Rd, Escombe, Queensburgh), and displaying it risked visible confusion. Kept in the manifest as vetted evidence only, held back from index.html/learn.html."
+    },
+    {
+      "file": "real_05.png",
+      "vetted": true,
+      "subject": "Small grey safe with a key inserted, on a cluttered shop counter with a fire extinguisher and wood panelling behind it.",
+      "note": "Genuine unstaged workshop/shop photo — messy real-world setting, not stock. Used in Our Work gallery for the safes service."
+    },
+    {
+      "file": "real_06.png",
+      "vetted": true,
+      "subject": "Car remote key fob photographed on a car's carpeted floor mat.",
+      "note": "Genuine unstaged field photo — informal composition typical of a technician's own phone snap, not stock. Used in Our Work gallery for the car-key service."
+    },
+    {
+      "file": "real_07.png",
+      "vetted": true,
+      "subject": "Pegboard wall display of lock hardware — deadbolts, handles, cylinders and packaged stock — on wood panelling.",
+      "note": "Genuine unstaged shop/workshop photo showing real hardware stock. Used in Our Work gallery."
+    }
+  ],
+  "rejected": [
+    {
+      "file": "real_01.jpg",
+      "reason": "Polished commercial stock photo (pristine white door, brand-new silicone gloves, studio lighting) — no verifiable connection to this specific business; uncertain, so rejected."
+    },
+    {
+      "file": "real_02.png",
+      "reason": "Another business's logo — 'Unique Locksmith / A Pick Above The Rest' — wrong business branding."
+    },
+    {
+      "file": "real_03.jpg",
+      "reason": "LASA (Locksmiths Association of South Africa) membership certificate issued to a different business — 'Limax Security Specialists' — wrong business branding."
+    },
+    {
+      "file": "real_08.jpg",
+      "reason": "Polished commercial stock photo of a technician kneeling at a door (styled orange-accent furniture, studio-grade lighting) — production values inconsistent with this shop's other genuine photos; no verifiable connection to this business, so rejected."
+    }
+  ],
+  "stock": [
+    {
+      "file": "stock_01.jpg",
+      "source_url": "https://images.unsplash.com/photo-1750614335370-fa6e54d970db?w=1600&q=80",
+      "unsplash_page": "https://unsplash.com/photos/keys-hanging-in-a-door-lock-WETkxYfCPGw",
+      "desc": "Moody close-up of a vintage brass key hanging in a wooden door's lock. Used as the photo-led hero background — matches the security-navy + brass palette."
+    },
+    {
+      "file": "stock_02.jpg",
+      "source_url": "https://images.unsplash.com/photo-1733244766159-f58f4184fd38?w=1600&q=80",
+      "unsplash_page": "https://unsplash.com/photos/a-hand-holding-a-key-to-a-door-3HfGnyPfWqQ",
+      "desc": "A hand holding out a house-shaped keyring with two keys, in front of an open door. Used as a tasteful fill image in the Our Work gallery (4 real photos already kept, so this is optional fill for hero/gallery variety, not a requirement)."
+    }
+  ]
+}

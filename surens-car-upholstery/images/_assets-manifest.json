@@ -1,0 +1,43 @@
+{
+  "kept": [
+    {
+      "file": "real_01.jpg",
+      "vetted": true,
+      "reason": "Diamond-stitched black leather car seat, in-vehicle phone photo. No competing branding, matches trade (upholstery retrim) and setting. Used as hero + gallery image."
+    },
+    {
+      "file": "real_03.jpg",
+      "vetted": true,
+      "reason": "Golf cart bench seat retrimmed in tan vinyl, outdoor phone photo (clubhouse/hedges background). No competing branding; plausible generic trim work by this shop (adjacent to the brief's 'boat/bike seats' generic categories)."
+    },
+    {
+      "file": "real_05.jpg",
+      "vetted": true,
+      "reason": "Black leather bakkie seats with red stitching and embroidered 'AMAROK' badge (the vehicle model name, not a rival business). In-vehicle phone photo with real background (houses, trailer) — plausible genuine retrim work."
+    },
+    {
+      "file": "real_06.jpg",
+      "vetted": true,
+      "reason": "Red/black leather seat with personalised embroidered surname ('Mnguni') — common personalisation request for trim shops. Amateur in-vehicle phone photo, no competing branding."
+    }
+  ],
+  "rejected": [
+    {
+      "file": "real_02.png",
+      "reason": "Two-photo collage; right-hand image shows a staff polo shirt embroidered 'KEHLS... Since 1970' — another business's branding visible."
+    },
+    {
+      "file": "real_04.jpg",
+      "reason": "Studio product-catalogue shot (seat on plain gradient/reflective floor, professional lighting) — stock/marketing render, not a workshop photo of this business's own work."
+    },
+    {
+      "file": "real_07.jpg",
+      "reason": "Highly stylised editorial photo of a Land Rover Defender interior (cinematic lighting, panoramic sunroof) — production value and style consistent with another company's marketing photography, not an amateur workshop shot. Uncertain provenance → rejected per house rule."
+    },
+    {
+      "file": "real_08.jpg",
+      "reason": "Hand touching a tablet with colourful graphic overlay dots — generic tech/app stock image, wrong trade entirely."
+    }
+  ],
+  "stock": []
+}

@@ -1736,6 +1736,121 @@
         }
       ],
       "changeNotes": "2026-07-31 — NEW local-scout lead built straight to FULL SOP spec (photo-led, journal, Comms Bridge, vetted assets, docs pack). Preflight PASS."
+    },
+    "surens-car-upholstery": {
+      "title": "Suren's Car Upholstery",
+      "status": "gate_passed",
+      "priority": "cold",
+      "notes": "Upholstery shop, Pinetown. 4.9★ / 41 Google reviews. Ph 082 699 2844. Local-scout lead 2026-07-31 batch 3 (presence-gated + manually re-verified). Built to full SOP standard with docs/ pack + two-option quote.",
+      "nextAction": "Jaime review (site + docs) → outreach draft (human send gate)",
+      "caveats": [
+        "4 genuine work photos kept (diamond-stitch, bakkie seats); no stock",
+        "Rejected pull was a Pinetown upholstery SUPPLIER (Kehls) staff shirt"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "upholstery shop",
+        "batch3-2026-07-31"
+      ],
+      "sources": [
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/surensupholstery/"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/61556402003893/"
+        }
+      ],
+      "changeNotes": "2026-07-31 — NEW batch-3 lead built straight to FULL SOP spec. Preflight PASS (41 active). Render sweep 0 failures."
+    },
+    "sunshine-flowers": {
+      "title": "Sunshine Flowers",
+      "status": "gate_passed",
+      "priority": "cold",
+      "notes": "Florist, Pinetown. 4.8★ / 20 Google reviews. Ph 083 331 0945. Local-scout lead 2026-07-31 batch 3 (presence-gated + manually re-verified). Built to full SOP standard with docs/ pack + two-option quote.",
+      "nextAction": "Jaime review (site + docs) → outreach draft (human send gate)",
+      "caveats": [
+        "All 6 pulls were marketplace product photography — fully stock-led with disclosure",
+        "No owned IG/FB business page (only a personal profile) — not linked; a DIFFERENT \"Sunshine Flowers CC\" on Josiah Gumede Rd exists — never referenced"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "florist",
+        "batch3-2026-07-31"
+      ],
+      "sources": [],
+      "changeNotes": "2026-07-31 — NEW batch-3 lead built straight to FULL SOP spec. Preflight PASS (41 active). Render sweep 0 failures."
+    },
+    "dzl-services-and-repairs": {
+      "title": "DZL Services and Repairs",
+      "status": "gate_passed",
+      "priority": "cold",
+      "notes": "Auto mechanic, Queensburgh. 5★ / 21 Google reviews. Ph 072 918 9883. Local-scout lead 2026-07-31 batch 3 (presence-gated + manually re-verified). Built to full SOP standard with docs/ pack + two-option quote.",
+      "nextAction": "Jaime review (site + docs) → outreach draft (human send gate)",
+      "caveats": [
+        "3 genuine workshop photos kept (premises w/ RMI/Bosch decals); no stock",
+        "No owned IG/FB on record"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "auto mechanic",
+        "batch3-2026-07-31"
+      ],
+      "sources": [],
+      "changeNotes": "2026-07-31 — NEW batch-3 lead built straight to FULL SOP spec. Preflight PASS (41 active). Render sweep 0 failures."
+    },
+    "ethekweni-locksmiths": {
+      "title": "Ethekweni Locksmiths",
+      "status": "gate_passed",
+      "priority": "cold",
+      "notes": "Locksmith, Queensburgh. 4.8★ / 44 Google reviews. Ph 083 261 2463. Local-scout lead 2026-07-31 batch 3 (presence-gated + manually re-verified). Built to full SOP standard with docs/ pack + two-option quote.",
+      "nextAction": "Jaime review (site + docs) → outreach draft (human send gate)",
+      "caveats": [
+        "4 genuine shop photos kept + 2 disclosed stock",
+        "Business card shows 434 Main Rd MALVERN vs Places address Sarnia Rd Escombe — address conflict, kept off-site, verify with client",
+        "No owned IG/FB (a \"Goldman Locksmiths\" page was a false match)"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "locksmith",
+        "batch3-2026-07-31"
+      ],
+      "sources": [],
+      "changeNotes": "2026-07-31 — NEW batch-3 lead built straight to FULL SOP spec. Preflight PASS (41 active). Render sweep 0 failures."
+    },
+    "sumeshnee-pillay-physiotherapist": {
+      "title": "Sumeshnee Pillay Physiotherapist",
+      "status": "gate_passed",
+      "priority": "warm",
+      "notes": "Physiotherapist, Queensburgh. 5★ / 90 Google reviews. Ph 073 277 3957. Local-scout lead 2026-07-31 batch 3 (presence-gated + manually re-verified). Built to full SOP standard with docs/ pack + two-option quote.",
+      "nextAction": "Jaime review (site + docs) → outreach draft (human send gate)",
+      "caveats": [
+        "All 5 pulls rejected (beauty salons / HG Physio / Caroline Hawkins branding) — stock-led with disclosure",
+        "REAL Fresha booking link wired as primary CTA",
+        "Old domain spphysio.co.za confirmed dead"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "physiotherapist",
+        "batch3-2026-07-31"
+      ],
+      "sources": [
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/SPphysio.northdene/"
+        },
+        {
+          "type": "website",
+          "url": "https://www.fresha.com/lvp/sumeshnee-pillay-physiotherapist-main-road-durban-QvRN2W"
+        }
+      ],
+      "changeNotes": "2026-07-31 — NEW batch-3 lead built straight to FULL SOP spec. Preflight PASS (41 active). Render sweep 0 failures."
     }
   },
   "documents": [

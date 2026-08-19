@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Workshop Notes | DZL Services and Repairs</title>
+<meta name="description" content="Plain-language car care guides for Hillary and Queensburgh drivers — servicing, warning lights, brakes, clutch, pre-trip checks and diagnostics, from DZL Services and Repairs.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;600;700;900&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What does DZL Services and Repairs actually work on?", "acceptedAnswer": { "@type": "Answer", "text": "General mechanical work on everyday cars — servicing, diagnostics, brakes, clutch, suspension and both minor and major repairs. Message us with your vehicle's make and the issue and we'll confirm we can help." } },
+    { "@type": "Question", "name": "Do I need to book, or can I just bring the car in?", "acceptedAnswer": { "@type": "Answer", "text": "Message us on WhatsApp first with the issue — it helps us plan the bay and give you a realistic idea of timing before you drop the car off." } },
+    { "@type": "Question", "name": "How do you decide what a repair will cost?", "acceptedAnswer": { "@type": "Answer", "text": "We diagnose the actual fault first, then quote before any work starts, so you know roughly what you're paying for before it happens." } },
+    { "@type": "Question", "name": "How do I book?", "acceptedAnswer": { "@type": "Answer", "text": "Call or WhatsApp 072 918 9883. Online booking is coming to this site soon." } }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#FAFAF8;--surface:#EFEDE8;--ink:#1C1D1E;--mut:rgba(28,29,30,.62);
+  --brand:#33373C;--accent:#D62828;--line:rgba(0,0,0,.12);
+  --display:'Chivo',sans-serif;--body:'Source Sans 3',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand);color:var(--bg);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-weight:700;font-size:22px;color:var(--brand);text-decoration:none}
+.nav-back{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-decoration:none}
+.nav-back:hover{color:var(--accent)}
+header{padding:90px 0 60px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--accent);margin-bottom:18px}
+h1{font-family:var(--display);font-weight:900;font-size:clamp(38px,6vw,68px);line-height:1.05}
+.intro{max-width:600px;margin:22px auto 0;color:var(--mut);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:30px 26px;cursor:pointer;transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s;text-align:left}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.1);outline:none}
+.post .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.post h3{font-family:var(--display);font-weight:700;font-size:22px;margin:12px 0 8px;line-height:1.2}
+.post p{color:var(--mut);font-size:14.5px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);font-weight:700;font-size:clamp(28px,4vw,44px);margin-bottom:28px;text-align:center}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent);font-size:22px}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(0,0,0,.55);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--bg);max-width:680px;width:100%;border-radius:22px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(0,0,0,.4)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut)}
+.asheet .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.asheet h2{font-family:var(--display);font-weight:700;font-size:clamp(26px,4vw,38px);margin:12px 0 20px;line-height:1.15}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:600;font-size:14px;padding:13px 26px;border-radius:99px}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for DZL Services and Repairs by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">DZL Services and Repairs</a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">journal</p>
+    <h1>The Workshop Notes</h1>
+    <p class="intro">Plain-language car care for Hillary and Queensburgh drivers — no jargon, no upsell. Six practical guides on the things that actually go wrong.</p>
+  </div>
+</header>
+
+<div class="wrap"><div class="grid" id="postGrid"></div></div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="qa">
+      <details><summary>What does DZL Services and Repairs actually work on?</summary><p>General mechanical work on everyday cars — servicing, diagnostics, brakes, clutch, suspension and both minor and major repairs. Message us with your vehicle's make and the issue and we'll confirm we can help.</p></details>
+      <details><summary>Do I need to book, or can I just bring the car in?</summary><p>Message us on WhatsApp first with the issue — it helps us plan the bay and give you a realistic idea of timing before you drop the car off.</p></details>
+      <details><summary>How do you decide what a repair will cost?</summary><p>We diagnose the actual fault first, then quote before any work starts, so you know roughly what you're paying for before it happens.</p></details>
+      <details><summary>How do I book?</summary><p>Call or WhatsApp 072 918 9883. Online booking is coming to this site soon.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap">DZL Services and Repairs · 71 Parkside Ave, Hillary, Queensburgh · Concept by Arkatype Digital — draft, awaiting client sign-off</div></footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#visit">Book your service →</a>
+  </div>
+</div>
+
+<script>
+const POSTS = [
+  { tag: 'Servicing', title: 'How Often Your Car Really Needs a Service, Living in Hillary', teaser: 'Stop-start suburb traffic wears a car differently than the open road — here is a realistic interval.', body: `<p>"How often should I service my car?" does not have one universal answer for every driver — it depends on the manufacturer's schedule and how the car is actually driven day to day.</p><ul><li><b>Start with the owner's manual.</b> Manufacturers publish a service interval based on distance and/or time, whichever comes first.</li><li><b>Short, stop-start trips count as "severe" driving.</b> Frequent short runs around the suburb wear oil and components faster than steady highway distance does.</li><li><b>Time matters as much as distance.</b> A car that mostly does short local trips can still need a service on the calendar, even if the odometer has barely moved.</li><li><b>Listen for changes between services.</b> A rougher idle, a new noise, or a dashboard service reminder are all reasons to bring a service forward rather than wait it out.</li></ul><p class="mut">General guidance — the exact interval for your car depends on its make, model and how it is driven.</p>` },
+  { tag: 'Warning Lights', title: 'What Your Dashboard Warning Lights Are Actually Telling You', teaser: 'Amber is not always urgent and red is not always the end of the world — a plain-language guide to what is under the dash.', body: `<p>Dashboard warning lights follow a rough colour code across most vehicles, which is a useful starting point when one comes on.</p><ul><li><b>Red lights</b> — generally mean stop as soon as it is safe to do so. Oil pressure, engine temperature and brake-system warnings fall here; continuing to drive can cause real damage.</li><li><b>Amber or orange lights</b> — usually mean "get this checked soon," not "pull over now." Check-engine, ABS and tyre-pressure lights are common examples.</li><li><b>Green or blue lights</b> — typically just status indicators, such as headlights or cruise control, rather than warnings.</li><li><b>More than one light at once</b> — worth treating more seriously than either alone, and getting looked at promptly.</li></ul><p class="mut">General guidance — your owner's manual has the exact meaning for your dashboard's symbols.</p>` },
+  { tag: 'Brakes', title: '5 Signs Your Brakes Need Attention Before Your Next Queensburgh Commute', teaser: 'Squealing is the easy one to notice — these four other signs matter just as much.', body: `<p>Brake wear is usually gradual, which is exactly why it is easy to miss until a longer drive makes it obvious.</p><ul><li><b>A high-pitched squeal that will not go away.</b> Often a built-in wear indicator telling you the pads are due.</li><li><b>Grinding or a metal-on-metal sound.</b> Usually means the pads are worn through — treat this as urgent, not routine.</li><li><b>A pedal that feels soft or sinks lower than usual.</b> Can point to air in the brake lines or a fluid issue.</li><li><b>Vibration through the pedal or steering wheel when braking.</b> Often points to a warped disc or rotor.</li><li><b>The car pulling to one side under braking.</b> Can mean uneven wear or a caliper issue.</li></ul><p class="mut">General guidance, not a diagnosis for your specific vehicle — if in doubt, get it checked before a longer drive.</p>` },
+  { tag: 'Clutch', title: 'Clutch Slipping or Just Getting Old? Symptoms Every Driver Should Know', teaser: 'A clutch rarely fails without warning — here is what to listen and feel for first.', body: `<p>Clutch wear tends to build gradually, so knowing the early signs makes a real difference to how simple the eventual fix is.</p><ul><li><b>Engine revs rise without a matching gain in speed.</b> The classic sign of a slipping clutch, especially noticeable going uphill or accelerating hard.</li><li><b>A burning smell, particularly in traffic.</b> Can point to a clutch working harder than it should.</li><li><b>A spongy, sticking, or unusually high biting point.</b> Worth having checked rather than just getting used to it.</li><li><b>Difficulty selecting gears, or a grinding sound when changing.</b> Does not always mean the clutch itself, but it is worth mentioning when you book a check.</li><li><b>A judder when pulling away from a stop.</b> Often linked to worn or contaminated clutch components.</li></ul><p class="mut">General guidance — a check while symptoms are mild is usually a smaller job than waiting for a full failure.</p>` },
+  { tag: 'Pre-Trip Checks', title: 'The Pre-Trip Check Every Hillary Driver Should Do Before a Long Drive', teaser: 'Five minutes before you load the car can save you a breakdown on the road.', body: `<p>Before a longer trip out of Queensburgh, a short walk-around can catch problems while the car is still at home, not on the highway.</p><ul><li><b>Tyres.</b> Check pressure, including the spare, and look at tread depth — worn tyres matter more on a long, loaded trip.</li><li><b>Oil and coolant levels.</b> A quick check takes a minute and can prevent a bigger problem down the road.</li><li><b>Lights.</b> Headlights, brake lights and indicators — ask someone to check while you cycle through them.</li><li><b>Wipers and washer fluid.</b> Easy to forget, unwelcome to discover in the rain.</li><li><b>Brakes.</b> Any squealing, grinding, or a soft pedal is worth sorting before a long drive, not during one.</li></ul><p class="mut">General guidance — for a proper pre-trip once-over, book a check before you leave.</p>` },
+  { tag: 'Diagnostics', title: 'What a Diagnostic Scan Actually Tells a Mechanic (And What It Does Not)', teaser: 'A scan tool finds a fault code — it does not replace a technician working out what it means.', body: `<p>A diagnostic scan is often the first step in a repair, but it is easy to assume it gives more certainty than it actually does.</p><ul><li><b>A scan reads stored fault codes.</b> Modern cars log a code when a sensor reading falls outside its expected range.</li><li><b>A code points to an area, not always the exact part.</b> "Misfire on cylinder 2" does not automatically mean a new coil pack — several different things can trigger the same code.</li><li><b>Codes can have more than one possible cause.</b> Working out the actual root cause still takes a technician's judgement and further checks, not just the scan report on its own.</li><li><b>Clearing a code does not fix the problem.</b> If the underlying fault is not addressed, the light usually comes back.</li></ul><p class="mut">General guidance — a diagnostic scan is the starting point of a repair, not the end of it.</p>` }
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

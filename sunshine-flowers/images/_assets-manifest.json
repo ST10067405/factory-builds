@@ -1,0 +1,70 @@
+{
+  "kept": [
+    {
+      "file": "stock_01.jpg",
+      "vetted": true,
+      "source": "https://unsplash.com/photos/a-woman-arranging-flowers-in-a-flower-shop-3DyfEiITFz4",
+      "url": "https://images.unsplash.com/photo-1709294728779-6be509d45255",
+      "note": "Stock — florist's hands finishing a hand-tied bouquet. Used for hero + gallery."
+    },
+    {
+      "file": "stock_02.jpg",
+      "vetted": true,
+      "source": "https://unsplash.com/photos/a-greenhouse-filled-with-lush-green-plants-and-flowers-z2XL3K7aPWs",
+      "url": "https://images.unsplash.com/photo-1772907952251-09e722aafa6a",
+      "note": "Stock — plant nursery / greenhouse walkway. Used for 'From the nursery' section."
+    },
+    {
+      "file": "stock_04.jpg",
+      "vetted": true,
+      "source": "https://unsplash.com/photos/green-plants-inside-the-greenhouse-dDP2q2kChjE",
+      "url": "https://images.unsplash.com/photo-1496098868818-75736fc02eeb",
+      "note": "Stock — potted plants inside a greenhouse. Used in Our Work gallery."
+    },
+    {
+      "file": "stock_05.jpg",
+      "vetted": true,
+      "source": "https://unsplash.com/photos/hand-holds-a-bouquet-of-colorful-flowers-okM4D8LSch0",
+      "url": "https://images.unsplash.com/photo-1751891480287-0b662b3b2aa0",
+      "note": "Stock — bright mixed bouquet held against blue sky. Used in Our Work gallery."
+    },
+    {
+      "file": "stock_06.jpg",
+      "vetted": true,
+      "source": "https://unsplash.com/photos/a-woman-holding-a-bouquet-of-sunflowers-in-her-hands-0nO9F02i_JI",
+      "url": "https://images.unsplash.com/photo-1694978438016-5f2fadf302a6",
+      "note": "Stock — sunflower bouquet tied with twine. Used in gallery + Visit section."
+    }
+  ],
+  "rejected": [
+    {
+      "file": "real_01.jpg (pulled, deleted)",
+      "reason": "Seamless white-backdrop studio product photography of a rose/carnation bouquet with a branded AFRIKOA chocolate bar placed beside it — an e-commerce/marketplace gift-bundle listing shot, not plausibly this one-person florist's own photography."
+    },
+    {
+      "file": "real_02.jpg (pulled, deleted)",
+      "reason": "Studio product shot, hand holding a bouquet against a plain white backdrop — matches the brief's explicit warning re: Interflora/petals.africa-style marketplace listing imagery."
+    },
+    {
+      "file": "real_03.jpg (pulled, deleted)",
+      "reason": "Seamless white-backdrop studio bouquet-in-vase shot — e-commerce product photography style, no plausible link to a small nursery-based florist."
+    },
+    {
+      "file": "real_04.jpg (pulled, deleted)",
+      "reason": "Overhead studio shot of a rose bouquet on white — same marketplace product-photography pattern as the rest of this pulled set."
+    },
+    {
+      "file": "real_05.jpg (pulled, deleted)",
+      "reason": "Studio bouquet-in-vase shot with a branded FERRERO ROCHER box placed beside it — a gift-bundle e-commerce listing image, not the business's own photography."
+    },
+    {
+      "file": "real_06.jpg (pulled, deleted)",
+      "reason": "Studio product shot of a hand-held mixed bouquet on a seamless white backdrop — marketplace listing style, rejected with the rest of the pulled set."
+    },
+    {
+      "file": "candidate stock — florist market stall photo",
+      "reason": "Rejected during stock sourcing: shows a visible 'FLORIST' sign plus another business's partial branding/price list ('Kaya...', 'SINCE 1997') at a market stall — risks reading as a different, identifiable business. Not downloaded."
+    }
+  ],
+  "notes": "All 6 pulled real_NN.jpg were professional e-commerce/marketplace studio product photography (seamless white backgrounds, branded gift add-ons like Ferrero Rocher and Afrikoa chocolate) — exactly the Interflora/petals.africa marketplace pattern the brief flagged for rejection. None were plausibly this one-person, nursery-based florist's own photography. All 6 rejected and deleted; stock fill was required (Step 2) and used instead."
+}

@@ -1,0 +1,18 @@
+{
+  "kept": [],
+  "rejected": [
+    { "file": "real_01.jpg", "reason": "Wrong trade — dark-walled beauty/aesthetics treatment room (ornate mirror, decorative pillows, skincare product shelf), not a physiotherapy practice." },
+    { "file": "real_02.jpg", "reason": "Wrong trade — beauty-salon waiting area with reclining pedicure/facial-style chairs and black brick feature wall; no physio equipment or signage." },
+    { "file": "real_03.jpg", "reason": "Wrong trade — lash/beauty treatment room; wall decor is literally cut-out eyelash shapes above a grooming trolley. Not a physiotherapy setting." },
+    { "file": "real_04.jpg", "reason": "Another business's branding — headshot shows a polo shirt embroidered 'HG PHYSIO', a different, unrelated physiotherapy practice, not Sumeshnee Pillay Physiotherapist." },
+    { "file": "real_05.jpg", "reason": "Another business's branding — photo carries an explicit 'Caroline HAWKINS Physiotherapy' logo watermark, a different physiotherapist entirely." }
+  ],
+  "stock": [
+    { "file": "stock_01.jpg", "source": "https://unsplash.com/photos/O28iNtdQy8Y-alt-search-result", "cdn": "https://images.unsplash.com/photo-1706353399656-210cca727a33", "use": "hero-adjacent — hands-on manual therapy on patient's back/shoulder, treatment-table setting" },
+    { "file": "stock_02.jpg", "source": "https://unsplash.com/photos/ZzkNkbUxFMc", "cdn": "https://images.unsplash.com/photo-1768507423533-b87b62769758", "use": "back & neck pain — close-up manual therapy on upper back/neck" },
+    { "file": "stock_03.jpg", "source": "https://unsplash.com/photos/aQgyFIAXUrE", "cdn": "https://images.unsplash.com/photo-1754941622136-6664a3f50b2e", "use": "sports injury rehab — laser therapy device applied to knee" },
+    { "file": "stock_04.jpg", "source": "https://unsplash.com/photos/PBdLYkML-b0", "cdn": "https://images.unsplash.com/photo-1772122028843-9139d23af4fb", "use": "modality/equipment treatment — device applied to patient's arm, clinical setting" },
+    { "file": "stock_05.jpg", "source": "https://unsplash.com/photos/QBzckSn4fpo", "cdn": "https://images.unsplash.com/photo-1768508236664-3f294aaf7d41", "use": "close-up treatment on heel — post-op/targeted-treatment abstract shot" }
+  ],
+  "note": "Stock-led build — all 5 Serper-pulled real photos rejected (3 wrong-trade beauty/lash-salon interiors, 2 explicit other-physio-practice branding: HG Physio and Caroline Hawkins Physiotherapy). Footer carries the 'representative stock' disclosure line. None of the rejected photos matched Train Pain Academy or Kerusha Pillay imagery specifically, but all were clearly not this business."
+}

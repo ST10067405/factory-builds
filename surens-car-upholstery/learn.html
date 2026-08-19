@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Trim Bench — Car Care Journal | Suren's Car Upholstery</title>
+<meta name="description" content="Practical car seat and interior care tips from Suren's Car Upholstery, Pinetown — leather care, sun protection, headliners, materials and what affects a quote.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What services does Suren's Car Upholstery offer?", "acceptedAnswer": { "@type": "Answer", "text": "Seat re-upholstery, headliners, carpets, convertible and soft-top trim, leather repair and redye — in leather, vinyl or fabric." } },
+    { "@type": "Question", "name": "Do you only work on cars?", "acceptedAnswer": { "@type": "Answer", "text": "Cars and bakkies are the bulk of the work, but the same trim skills cover golf carts, boats and bike seats too — ask if you're not sure." } },
+    { "@type": "Question", "name": "How does a quote work?", "acceptedAnswer": { "@type": "Answer", "text": "Send a photo of the seat or trim on WhatsApp and you'll get a straight quote back — no need to bring the vehicle in first just to get a number." } },
+    { "@type": "Question", "name": "How do I book?", "acceptedAnswer": { "@type": "Answer", "text": "Call or WhatsApp 082 699 2844. Online booking is coming to this site soon." } }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#FAF5EE;--surface:#F1E3D0;--ink:#241C19;--mut:rgba(36,28,25,.62);
+  --brand:#6E1F26;--accent:#B9803F;--line:rgba(36,28,25,.14);
+  --display:'Archivo',sans-serif;--body:'Inter',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand);color:var(--bg);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-size:20px;font-weight:700;color:var(--brand);text-decoration:none}
+.nav-back{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-decoration:none}
+.nav-back:hover{color:var(--accent)}
+header{padding:90px 0 60px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--accent);margin-bottom:18px}
+h1{font-family:var(--display);font-size:clamp(38px,6vw,64px);line-height:1.05;font-weight:800}
+.intro{max-width:600px;margin:22px auto 0;color:var(--mut);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:30px 26px;cursor:pointer;transition:transform .3s,box-shadow .3s;text-align:left}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(36,28,25,.12);outline:none}
+.post .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.post h3{font-family:var(--display);font-size:22px;margin:12px 0 8px;line-height:1.2;font-weight:700}
+.post p{color:var(--mut);font-size:14.5px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);font-size:clamp(28px,4vw,44px);margin-bottom:28px;text-align:center;font-weight:800}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent);font-size:22px}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(36,28,25,.55);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--bg);max-width:680px;width:100%;border-radius:22px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(0,0,0,.4)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut)}
+.asheet .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.asheet h2{font-family:var(--display);font-size:clamp(26px,4vw,38px);margin:12px 0 20px;line-height:1.15;font-weight:800}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--brand);color:var(--bg);text-decoration:none;font-weight:600;font-size:14px;padding:13px 26px;border-radius:99px}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for Suren's Car Upholstery by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">Suren's Car Upholstery</a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">The Trim Bench</p>
+    <h1>Car Care Journal</h1>
+    <p class="intro">Practical seat and interior care tips for Pinetown drivers — leather, sun, materials and what actually drives a quote.</p>
+  </div>
+</header>
+
+<div class="wrap"><div class="grid" id="postGrid"></div></div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="qa">
+      <details><summary>What services does Suren's Car Upholstery offer?</summary><p>Seat re-upholstery, headliners, carpets, convertible and soft-top trim, leather repair and redye — in leather, vinyl or fabric.</p></details>
+      <details><summary>Do you only work on cars?</summary><p>Cars and bakkies are the bulk of the work, but the same trim skills cover golf carts, boats and bike seats too — ask if you're not sure.</p></details>
+      <details><summary>How does a quote work?</summary><p>Send a photo of the seat or trim on WhatsApp and you'll get a straight quote back — no need to bring the vehicle in first just to get a number.</p></details>
+      <details><summary>How do I book?</summary><p>Call or WhatsApp 082 699 2844. Online booking is coming to this site soon.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap">Suren's Car Upholstery · 26 Russell St, Pinetown, Durban · Concept by Arkatype Digital — draft, awaiting client sign-off</div></footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#visit">Get a quote →</a>
+  </div>
+</div>
+
+<script>
+const POSTS = [
+  { tag: 'Leather Care', title: 'Leather Seat Care for Pinetown Drivers', teaser: 'A few simple habits keep leather seats supple instead of cracked, wherever you park in Pinetown.', body: `<p>Leather is tougher than most drivers think, but it still needs a little attention — especially parked outdoors through a Pinetown summer.</p><ul><li>Wipe down seats weekly with a soft, slightly damp cloth to lift dust before it grinds into the grain.</li><li>Condition leather every one to two months with a proper leather conditioner — not household furniture polish, which can leave a sticky film.</li><li>Keep sharp objects (keys, tools, dog claws) off the seat surface — small nicks turn into splits under sun and use.</li><li>Park in shade or use a windscreen shade where you can; direct sun is the single biggest driver of leather ageing.</li></ul><p class="mut">If a seat's already cracked or badly worn, a professional re-cover usually outlasts any home fix.</p>` },
+  { tag: 'Sun & Heat', title: 'Stopping Sun Damage in KZN’s Heat', teaser: 'Durban’s sun is hard on car interiors — here’s what actually slows the damage down.', body: `<p>KwaZulu-Natal's combination of strong UV and humidity is tough on car interiors — dashboards fade, stitching dries out, and vinyl and leather both lose flexibility faster than in cooler regions.</p><ul><li>UV is the main culprit, not heat alone — a UV-blocking windscreen shade does more than tinted windows for seat protection.</li><li>Crack a window slightly when parked (safely) to reduce cabin temperature swings that stress stitching and glue lines.</li><li>Choose a UV-protectant made specifically for automotive leather or vinyl, applied every couple of months in summer.</li><li>Dark interiors absorb more heat than lighter ones — worth knowing if you're choosing trim colour on a re-cover.</li></ul><p class="mut">Once stitching or seams start drying and splitting, that's a trim job, not a cleaning job.</p>` },
+  { tag: 'Headliners', title: 'Headliner Sagging: Repair or Replace?', teaser: 'A sagging headliner is rarely fixable with glue alone — here’s how to tell what it actually needs.', body: `<p>A sagging headliner usually means the foam backing behind the fabric has broken down — the glue holding the fabric to the foam has failed, and the foam itself has often crumbled.</p><ul><li>Light sagging at the edges, caught early, can sometimes be re-glued.</li><li>Widespread sagging, bubbling, or fabric that's gone stiff and brittle usually means the backing foam has degraded — re-gluing won't hold for long.</li><li>Cracked or peeling headliner board (common in older vehicles) needs a full re-cover, not a patch.</li><li>Cheap spray-glue fixes tend to fail again within months, especially in Durban's humidity.</li></ul><p class="mut">If it's sagging in more than one spot, budget for a proper re-cover rather than repeated temporary fixes.</p>` },
+  { tag: 'Materials', title: 'Fabric or Leather? Choosing Trim for Durban’s Climate', teaser: 'Leather, vinyl and fabric each behave differently in Durban heat and humidity — here’s how to choose.', body: `<p>There's no single "best" material — the right choice depends on how the vehicle is used and how much upkeep you're willing to do.</p><ul><li><b>Leather</b> looks and feels premium and wipes clean easily, but needs regular conditioning in a humid, sunny climate or it dries and cracks.</li><li><b>Vinyl</b> is tougher against spills, kids, pets and UV than leather, and far lower-maintenance — a common choice for work vehicles and boats.</li><li><b>Fabric</b> breathes better in heat and feels cooler to sit on, but stains and holds moisture more than leather or vinyl — worth avoiding for a vehicle that gets wet often.</li></ul><p class="mut">Mixing materials — leather bolsters with fabric centres, for example — is a common compromise between comfort, cost and durability.</p>` },
+  { tag: 'Family & Pets', title: 'Protecting Car Seats From Kids and Pets', teaser: 'Small habits stop most of the everyday damage kids and pets do to car interiors.', body: `<p>Most of the damage kids and pets do to car interiors happens gradually — small scuffs, dropped snacks and claw marks that add up over months, not one big incident.</p><ul><li>A washable seat cover over the main seating area saves the trim underneath from daily wear.</li><li>Keep a lint roller or pet-hair brush in the car — hair ground into fabric over time is far harder to remove than fresh hair.</li><li>Wipe up spills immediately, especially on fabric — sugary drinks and juice stain and can attract pests if left.</li><li>Trim pet claws regularly if they ride in the car often; claws are one of the most common causes of scored leather and vinyl.</li></ul><p class="mut">Vinyl and treated leather are generally the easiest materials to keep looking good with kids or pets in the car — worth factoring in if you're re-trimming anyway.</p>` },
+  { tag: 'Quotes Explained', title: 'What Actually Affects a Car Upholstery Quote', teaser: 'Upholstery quotes vary a lot — here’s what actually drives the price up or down.', body: `<p>Two seemingly similar re-trim jobs can come back with very different quotes — the price depends on more than just "how big" the job looks.</p><ul><li><b>Material choice</b> — genuine leather costs more than vinyl or fabric, and premium or imported hides more than local ones.</li><li><b>Condition of what's underneath</b> — if foam or springs need repair as well as the cover, that adds labour beyond the trim itself.</li><li><b>Complexity of the design</b> — diamond stitching, contrast piping, embroidery or multi-tone panels all take more time than a plain single-colour re-cover.</li><li><b>How many pieces</b> — a full interior (seats, door cards, headliner) costs more than a single seat, but often comes with a better per-piece rate.</li></ul><p class="mut">A photo sent ahead of time — showing the seats, the damage, and the material you're hoping for — is usually enough for a straight, no-surprises quote.</p>` }
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

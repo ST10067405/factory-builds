@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Sunshine Journal | Sunshine Flowers</title>
+<meta name="description" content="Flower-care and gifting notes from Sunshine Flowers, Pinetown — keeping bouquets fresh in KZN heat, choosing sympathy flowers, seasonal blooms and more.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How long will my bouquet last?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on the flowers, but fresh water changed every one to two days, a clean re-cut of the stems, and keeping the arrangement out of direct sun and heat will get the most out of any bouquet — especially in Pinetown's warmer months." } },
+    { "@type": "Question", "name": "Do you deliver?", "acceptedAnswer": { "@type": "Answer", "text": "Delivery is available across Pinetown and surrounds — ask about your specific area when you WhatsApp your order." } },
+    { "@type": "Question", "name": "Can I just send a photo of what I want?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — a reference photo, a colour scheme, or even just a budget and occasion is enough to get started. We'll send back photo options before anything is finalised." } },
+    { "@type": "Question", "name": "How do I book?", "acceptedAnswer": { "@type": "Answer", "text": "Call or WhatsApp 083 331 0945. Online booking is coming to this site soon." } }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#FFFCF5;--surface:#F3EFDD;--ink:#26301F;--mut:rgba(38,48,31,.62);
+  --brand:#3E6B3A;--accent:#E2A73C;--line:rgba(38,48,31,.14);
+  --display:'Cormorant Garamond',serif;--body:'Nunito',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand);color:var(--bg);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-size:23px;color:var(--brand);text-decoration:none;font-weight:600}
+.nav-back{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-decoration:none}
+.nav-back:hover{color:var(--accent)}
+header{padding:90px 0 60px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--accent);margin-bottom:18px}
+h1{font-family:var(--display);font-size:clamp(38px,6vw,68px);line-height:1.05;font-weight:600}
+.intro{max-width:600px;margin:22px auto 0;color:var(--mut);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:30px 26px;cursor:pointer;transition:transform .3s,box-shadow .3s;text-align:left}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(38,48,31,.12);outline:none}
+.post .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.post h3{font-family:var(--display);font-size:23px;margin:12px 0 8px;line-height:1.2;font-weight:600}
+.post p{color:var(--mut);font-size:14.5px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);font-size:clamp(28px,4vw,44px);margin-bottom:28px;text-align:center;font-weight:600}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:700;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent);font-size:22px}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(38,48,31,.55);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--bg);max-width:680px;width:100%;border-radius:22px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(38,48,31,.4)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut)}
+.asheet .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.asheet h2{font-family:var(--display);font-size:clamp(26px,4vw,38px);margin:12px 0 20px;line-height:1.15;font-weight:600}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--accent);color:var(--ink);text-decoration:none;font-weight:700;font-size:14px;padding:13px 26px;border-radius:99px}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for Sunshine Flowers by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">Sunshine Flowers</a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">the sunshine journal</p>
+    <h1>Flower Care &amp; Gifting Notes</h1>
+    <p class="intro">Practical tips from a Pinetown florist — keeping blooms fresh in the heat, choosing flowers for the moments that matter, and getting the most out of every order.</p>
+  </div>
+</header>
+
+<div class="wrap"><div class="grid" id="postGrid"></div></div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="qa">
+      <details><summary>How long will my bouquet last?</summary><p>It depends on the flowers, but fresh water changed every one to two days, a clean re-cut of the stems, and keeping the arrangement out of direct sun and heat will get the most out of any bouquet — especially in Pinetown's warmer months.</p></details>
+      <details><summary>Do you deliver?</summary><p>Delivery is available across Pinetown and surrounds — ask about your specific area when you WhatsApp your order.</p></details>
+      <details><summary>Can I just send a photo of what I want?</summary><p>Yes — a reference photo, a colour scheme, or even just a budget and occasion is enough to get started. We'll send back photo options before anything is finalised.</p></details>
+      <details><summary>How do I book?</summary><p>Call or WhatsApp 083 331 0945. Online booking is coming to this site soon.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap">Sunshine Flowers · 38 Underwood Rd, Pinetown · Concept by Arkatype Digital — draft, awaiting client sign-off</div></footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#visit">Order your flowers →</a>
+  </div>
+</div>
+
+<script>
+const POSTS = [
+  { tag: 'Flower Care', title: 'Keeping Cut Flowers Fresh in a Pinetown Summer', teaser: 'Simple ways to make a bouquet last longer once the KZN heat sets in.', body: `<p>KwaZulu-Natal's heat and humidity are hard on cut flowers — but a few habits go a long way toward keeping a bouquet looking good for its full life.</p><ul><li><b>Re-cut the stems</b> — trim about 2cm off each stem at an angle before putting flowers in water, and repeat every couple of days.</li><li><b>Change the water often</b> — daily if possible, especially in hot weather when bacteria builds up faster.</li><li><b>Keep them out of direct sun and away from heat sources</b> — a bright but indirect spot, away from a sunny windowsill or an outdoor table in full sun, lasts longest.</li><li><b>Strip leaves below the waterline</b> — any foliage sitting in water speeds up bacterial growth and shortens vase life.</li><li><b>Avoid placing bouquets near ripening fruit</b> — fruit releases ethylene gas, which makes flowers age faster.</li></ul><p class="mut">Different flowers have different lifespans — ask when you order which stems in your arrangement need the most attention.</p>` },
+  { tag: 'Sympathy', title: 'Choosing Sympathy Flowers: A Gentle Guide for Pinetown Families', teaser: 'What to consider when ordering flowers for a funeral or memorial.', body: `<p>Ordering sympathy flowers can feel daunting, especially under time pressure. A few basics make it easier.</p><ul><li><b>Consider the setting</b> — a home, a church service and a graveside each suit slightly different arrangements; ask what's appropriate for the venue.</li><li><b>White and pastel tones are traditional</b>, but many families now prefer the departed's favourite colours or flowers — there's no fixed rule.</li><li><b>Check family preferences first</b> — some notices specify "flowers only" or "donations in lieu of flowers," so it's worth confirming before ordering.</li><li><b>Timing matters</b> — sympathy arrangements are often needed quickly; the more notice a florist has, the more options are available.</li><li><b>A simple card note</b> goes a long way — keep it short and sincere.</li></ul><p class="mut">If you're not sure what's needed, describe the occasion and let your florist guide the size and style.</p>` },
+  { tag: 'Seasons', title: 'What’s In Season: A Durban Bloom Calendar', teaser: 'A rough guide to which flowers are easiest to source through the year in Durban.', body: `<p>Flower availability shifts through the year, and buying what's in season usually means fresher stems and better value.</p><ul><li><b>Late summer to autumn (Feb–May)</b> — dahlias, chrysanthemums and late roses tend to be plentiful.</li><li><b>Winter (Jun–Aug)</b> — proteas and other fynbos varieties, along with hardier greenery, do well in Durban's mild winters.</li><li><b>Spring (Sep–Nov)</b> — a wide flush of colour: ranunculus, sweet peas and the season's first roses.</li><li><b>Summer (Dec–Jan)</b> — sunflowers, gerberas and other heat-tolerant blooms handle the KZN summer best.</li></ul><p class="mut">Availability varies by supplier and year — ask what's freshest on the day you order rather than requesting a specific stem out of season.</p>` },
+  { tag: 'Weddings', title: 'Wedding Flowers 101: Planning Your Big Day From Underwood Road', teaser: 'The basics of planning wedding flowers, from first enquiry to the big day.', body: `<p>Wedding flowers involve more moving parts than a single bouquet — here's a simple planning order.</p><ul><li><b>Start with a headcount and venue</b> — the number of tables and the venue's size determine how many arrangements are needed.</li><li><b>Pick a colour palette early</b> — ideally alongside (or informed by) the rest of the wedding's colour scheme.</li><li><b>Decide what actually needs flowers</b> — bridal bouquet, bridesmaids, buttonholes, ceremony arch, table centrepieces — list them out so nothing is missed.</li><li><b>Book with enough lead time</b> — popular dates and seasons need earlier booking; three to six months ahead is a reasonable rule of thumb.</li><li><b>Confirm delivery and setup times</b> against the venue's access windows on the day.</li></ul><p class="mut">Every wedding is different — the best next step is a WhatsApp conversation about your date, guest count and colours.</p>` },
+  { tag: 'Gifting', title: 'Flowers for the Office: Brightening a Pinetown Workday', teaser: 'When and why office flowers work, and how to keep them low-maintenance.', body: `<p>Flowers aren't just for homes — a reception desk or boardroom arrangement changes the feel of a workspace.</p><ul><li><b>Reception and entrance areas</b> benefit most — it's the first thing clients and visitors see.</li><li><b>Low-maintenance varieties</b> — sturdier blooms with a longer vase life suit an office better than delicate, high-care stems.</li><li><b>Standing orders work well</b> — a weekly or fortnightly refresh keeps things simple and consistent, rather than one-off requests.</li><li><b>Consider the space</b> — a small desk arrangement suits a personal office; a larger piece suits an open reception area.</li><li><b>Client gifting</b> — flowers sent to a client's office are a straightforward, well-received gesture after a big deal or as a thank-you.</li></ul><p class="mut">Ask about a standing order if you'd like office flowers refreshed on a regular schedule.</p>` },
+  { tag: 'Ordering', title: 'What to Tell Your Florist When You Order', teaser: 'The handful of details that make ordering over WhatsApp quick and accurate.', body: `<p>A few details up front make it much easier to get the right arrangement, first time.</p><ul><li><b>The occasion</b> — birthday, sympathy, anniversary, corporate gift — it shapes the whole arrangement.</li><li><b>Your budget</b> — even a rough range helps narrow down size and stems.</li><li><b>When you need it</b> — date, and whether it's for collection or delivery.</li><li><b>Colour preferences</b> — or colours to avoid, if any.</li><li><b>Delivery address and recipient details</b> — if it's a gift, include the recipient's name and any access notes for the address.</li><li><b>A reference photo</b>, if you have one — it's often the fastest way to communicate a style.</li></ul><p class="mut">Send these details over WhatsApp and expect photo options back before anything is finalised.</p>` }
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

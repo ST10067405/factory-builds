@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Journal | Ethekweni Locksmiths</title>
+<meta name="description" content="Home-security advice for Queensburgh and Escombe homeowners, from Ethekweni Locksmiths — lockouts, rekeying, locks, car keys and safes.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What should I do first if I'm locked out?", "acceptedAnswer": { "@type": "Answer", "text": "Stay calm, check every door and window before calling anyone (a back or side entry is sometimes open), and avoid forcing the lock yourself — that usually turns a simple call-out into a full lock replacement. Then call or WhatsApp a locksmith and wait somewhere safe." } },
+    { "@type": "Question", "name": "Should I rekey my lock or replace it?", "acceptedAnswer": { "@type": "Answer", "text": "Rekeying changes the internal pins so old keys stop working, without swapping the hardware — cheaper and faster, and enough after a move-in or lost key. Replacement is worth it if the lock itself is old, damaged, or you want to upgrade the security grade." } },
+    { "@type": "Question", "name": "What should I look for in a front door lock?", "acceptedAnswer": { "@type": "Answer", "text": "A solid deadbolt in addition to the handle-set lock, a strike plate with long screws into the door frame (not just the trim), and hardware rated for security rather than just style. A locksmith can talk you through what suits your specific door." } },
+    { "@type": "Question", "name": "How do I book?", "acceptedAnswer": { "@type": "Answer", "text": "Call or WhatsApp 083 261 2463. Online booking is coming to this site soon." } }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#FFFFFF;--surface:#F5F2EA;--ink:#131E31;--mut:rgba(19,30,49,.62);
+  --brand:#122341;--accent:#B8863E;--line:rgba(19,30,49,.12);
+  --display:'Oswald',sans-serif;--body:'Inter',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand);color:var(--bg);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-size:22px;color:var(--brand);text-decoration:none;text-transform:uppercase}
+.nav-back{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-decoration:none}
+.nav-back:hover{color:var(--accent)}
+header{padding:90px 0 60px;text-align:center;background:var(--surface)}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--accent);margin-bottom:18px}
+h1{font-family:var(--display);font-size:clamp(38px,6vw,68px);line-height:1.05;text-transform:uppercase}
+.intro{max-width:600px;margin:22px auto 0;color:var(--mut);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding:52px 0 40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:30px 26px;cursor:pointer;transition:transform .3s,box-shadow .3s;text-align:left}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.1);outline:none}
+.post .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.post h3{font-family:var(--display);font-size:22px;margin:12px 0 8px;line-height:1.2;text-transform:uppercase}
+.post p{color:var(--mut);font-size:14.5px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);font-size:clamp(28px,4vw,44px);margin-bottom:28px;text-align:center;text-transform:uppercase}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent);font-size:22px}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(0,0,0,.55);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--bg);max-width:680px;width:100%;border-radius:22px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(0,0,0,.4)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut)}
+.asheet .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.asheet h2{font-family:var(--display);font-size:clamp(26px,4vw,38px);margin:12px 0 20px;line-height:1.15;text-transform:uppercase}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:600;font-size:14px;padding:13px 26px;border-radius:99px}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for Ethekweni Locksmiths by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">Ethekweni Locksmiths</a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">The Journal</p>
+    <h1>Home Security, Plainly Explained</h1>
+    <p class="intro">Straightforward advice for Queensburgh and Escombe homeowners — what to do when you're locked out, how to choose hardware, and what's worth knowing before your next call-out.</p>
+  </div>
+</header>
+
+<div class="wrap"><div class="grid" id="postGrid"></div></div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="qa">
+      <details><summary>What should I do first if I'm locked out?</summary><p>Stay calm, check every door and window before calling anyone (a back or side entry is sometimes open), and avoid forcing the lock yourself — that usually turns a simple call-out into a full lock replacement. Then call or WhatsApp a locksmith and wait somewhere safe.</p></details>
+      <details><summary>Should I rekey my lock or replace it?</summary><p>Rekeying changes the internal pins so old keys stop working, without swapping the hardware — cheaper and faster, and enough after a move-in or lost key. Replacement is worth it if the lock itself is old, damaged, or you want to upgrade the security grade.</p></details>
+      <details><summary>What should I look for in a front door lock?</summary><p>A solid deadbolt in addition to the handle-set lock, a strike plate with long screws into the door frame (not just the trim), and hardware rated for security rather than just style. A locksmith can talk you through what suits your specific door.</p></details>
+      <details><summary>How do I book?</summary><p>Call or WhatsApp 083 261 2463. Online booking is coming to this site soon.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap">Ethekweni Locksmiths · Escombe, Queensburgh · Concept by Arkatype Digital — draft, awaiting client sign-off</div></footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#visit">Get in touch →</a>
+  </div>
+</div>
+
+<script>
+const POSTS = [
+  { tag: 'Lockouts', title: 'Locked Out in Queensburgh? Here’s What To Do First', teaser: 'The calm, practical steps to take before help arrives.', body: `
+    <p>A lockout is stressful, but the first few minutes decide whether it stays a quick fix or turns into a much bigger job.</p>
+    <ul>
+      <li><b>Check every entry point first.</b> A back door, side gate or window is sometimes open — walk the whole property before you call anyone.</li>
+      <li><b>Don’t force the lock.</b> Screwdrivers, coat hangers and shoulder-barges usually damage the lock or door frame, turning a simple re-entry into a full lock replacement.</li>
+      <li><b>Have your ID and proof of address ready.</b> Any locksmith worth calling will want to confirm you’re the rightful occupant before opening a lock.</li>
+      <li><b>Wait somewhere safe and visible.</b> Especially at night — a well-lit spot near the property is safer than the dark side of the house.</li>
+      <li><b>Call or WhatsApp before you panic-search.</b> A quick description of your lock type and situation helps a locksmith arrive prepared.</li>
+    </ul>
+    <p class="mut">General guidance for Queensburgh and Escombe homeowners — not a substitute for professional advice on your specific lock or door.</p>
+  `},
+  { tag: 'Locks', title: 'Rekey or Replace? Deciding After You Move Into Escombe', teaser: 'What actually differs between the two, and when each makes sense.', body: `
+    <p>Moving into a new home is one of the most common reasons to call a locksmith — but rekeying and replacing aren’t the same job, and picking the right one saves money.</p>
+    <ul>
+      <li><b>Rekeying</b> changes the internal pins inside your existing lock so old keys (the previous owner’s, an old tenant’s, a lost spare) stop working — the hardware itself stays put. It’s usually the faster, cheaper option.</li>
+      <li><b>Replacing</b> swaps the whole lock for new hardware — worth it if the existing lock is old, damaged, low security-grade, or simply doesn’t match the rest of your doors.</li>
+      <li><b>Rule of thumb:</b> if the lock works well and just needs new keys, rekey. If it’s worn, sticky, or you want a security upgrade, replace.</li>
+      <li><b>Do it before you settle in.</b> New keys in circulation from a previous occupant are a real, common risk — handling it in the first week is worth the small cost.</li>
+    </ul>
+    <p class="mut">General guidance for anyone moving into a new home in Escombe or greater Queensburgh.</p>
+  `},
+  { tag: 'Security', title: 'Choosing the Right Front Door Lock for a Queensburgh Home', teaser: 'What to look for beyond just the price tag.', body: `
+    <p>A front door lock is the single most-used piece of security hardware in a home — a few basics make a real difference.</p>
+    <ul>
+      <li><b>Add a deadbolt.</b> A handle-set lock alone is easy to force; a separate deadbolt is a genuine second barrier.</li>
+      <li><b>Check the strike plate.</b> A strike plate with long screws driven into the door frame (not just the trim) resists kick-ins far better than a short-screw fitting.</li>
+      <li><b>Match the lock to the door.</b> Timber, aluminium and security-gate doors all take different hardware — the wrong fit undermines even a good lock.</li>
+      <li><b>Think about the whole entry, not just the lock.</b> Hinges, frame condition and door thickness all affect how secure the final setup actually is.</li>
+      <li><b>Ask before you buy.</b> A locksmith can look at your specific door and recommend hardware that actually fits, rather than guessing from a shop shelf.</li>
+    </ul>
+    <p class="mut">General guidance — the right lock depends on your specific door and frame.</p>
+  `},
+  { tag: 'Car Keys', title: 'Car Key Replacement in Durban — Your Options Explained', teaser: 'Lost, broken or just need a spare? Here’s how the options differ.', body: `
+    <p>Losing a car key or snapping one off in the ignition is more common than most people expect, and the fix depends on what kind of key it is.</p>
+    <ul>
+      <li><b>Basic cut keys</b> (no chip, no remote) are usually the quickest and cheapest to duplicate or replace.</li>
+      <li><b>Remote and transponder keys</b> need both a physical cut and programming to talk to your car’s immobiliser — this is where most of the work and cost sits.</li>
+      <li><b>Lost your only key?</b> It can usually still be replaced, but expect it to take a little longer since there’s no original to copy from directly.</li>
+      <li><b>Get a spare cut early.</b> A spare car key sitting at home is one of the cheapest insurance policies against being stranded.</li>
+    </ul>
+    <p class="mut">General guidance — exact options and turnaround depend on your vehicle’s make, model and key type.</p>
+  `},
+  { tag: 'Moving Home', title: 'Moving Into a New Home in Queensburgh? A Security Checklist', teaser: 'The basics worth ticking off in your first week.', body: `
+    <p>New keys aren’t the only thing worth checking when you move into a home in Queensburgh or Escombe. A short walkthrough in the first week covers the basics.</p>
+    <ul>
+      <li><b>Rekey or replace external locks.</b> See our separate article on which makes more sense for your situation.</li>
+      <li><b>Check every window latch</b> — not just the doors. Older homes especially can have worn or missing window locks.</li>
+      <li><b>Test the gate and garage locks</b> if the property has them — these are often overlooked next to the front door.</li>
+      <li><b>Confirm the spare key situation.</b> Know exactly who else might still have a key, and change what you’re not sure about.</li>
+      <li><b>Consider a safe</b> for documents or valuables if the home doesn’t already have one built in.</li>
+    </ul>
+    <p class="mut">General guidance for new homeowners and tenants in the Queensburgh area.</p>
+  `},
+  { tag: 'Safes', title: 'Safe Basics — What to Know Before You Buy One', teaser: 'A few honest basics before you spend money on a safe.', body: `
+    <p>A safe is only as good as how it’s chosen and fitted — a few basics before you buy.</p>
+    <ul>
+      <li><b>Know what you’re protecting.</b> Documents, cash, jewellery and firearms each have different recommended safe ratings and storage requirements.</li>
+      <li><b>Fire rating and burglary rating are different things.</b> A safe rated well against fire isn’t automatically rated well against forced entry, and vice versa — check both if you need them.</li>
+      <li><b>Bolt it down.</b> An unsecured safe can simply be carried off — proper fixing to a floor or wall is part of what makes it effective.</li>
+      <li><b>Size for growth.</b> It’s common to under-buy on size and outgrow a safe within a year or two.</li>
+      <li><b>Get the key or code process right from day one</b> — a locksmith can talk you through sensible key/code management for a household or small business.</li>
+    </ul>
+    <p class="mut">General guidance — always check the specific fire and burglary ratings on any safe before buying.</p>
+  `}
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
