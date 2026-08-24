@@ -1,0 +1,42 @@
+{
+  "kept": [
+    {
+      "file": "real_01.jpg",
+      "vetted": true,
+      "source": "pulled (Serper), originally real_04.jpg",
+      "note": "Two staff in branded overalls hand-drying/valeting a blue sedan under a shade-net canopy. No competing business branding visible. Consistent with trade + generic wash-bay setting."
+    },
+    {
+      "file": "stock_01.jpg",
+      "vetted": true,
+      "source": "stock",
+      "url": "https://unsplash.com/photos/a-dark-car-being-washed-with-foam-and-water-kQdY2pR-ic8",
+      "note": "Foam rinse in a covered wash bay, no branding visible. Used as hero image."
+    },
+    {
+      "file": "stock_02.jpg",
+      "vetted": true,
+      "source": "stock",
+      "url": "https://unsplash.com/photos/pressure-washer-on-wet-ground-next-to-car-wheel-n9E3UZ89Ib8",
+      "note": "Pressure-washer wand resting beside a clean wheel. No branding visible."
+    },
+    {
+      "file": "stock_04.jpg",
+      "vetted": true,
+      "source": "stock",
+      "url": "https://unsplash.com/photos/car-wash-with-flowing-water-and-foam-side-view-of-young-car-wash-service-male-employee-holding-high-pressure-spray-with-cleaning-foam-carwash-washing-machine-at-the-station-PyKbJjZa8bA",
+      "note": "Staff member foam-cannoning a dark blue car. No branding visible."
+    }
+  ],
+  "rejected": [
+    { "file": "real_01.jpg (original pull)", "reason": "Same wash-bay tent as original real_02/real_03 — background banner reads 'Meguiar's Approved / INFINITY CAR WASH', a different Queensburgh-area car wash, not this client." },
+    { "file": "real_02.jpg (original pull)", "reason": "Background banner explicitly reads 'INFINITY CAR WASH' + Meguiar's product-ad signage — wrong business." },
+    { "file": "real_03.jpg (original pull)", "reason": "Same tent + identical Liverpool FC fan poster as real_01/real_02 — same wrong-business location (Infinity Car Wash)." },
+    { "file": "real_05.jpg (original pull)", "reason": "Not a location photo — a 'Thank You' Facebook post graphic (Queensburgh Car Wash logo, Readers' Choice award banner, click-here CTA button). Confirms the business's real identity but unusable as a hero/gallery photo; not used and no unbriefed facts (e.g. the award) were pulled into copy." },
+    { "file": "stock candidate — a-car-is-being-washed-with-foam-XgIGW3yqf7c", "reason": "Real third-party signage clearly readable in frame ('RMW Paint Protection', 'B Tint Lab', unit numbers) — a named competing detailing business, not generic." },
+    { "file": "stock candidate — auto-service...wMR9YMUs0E", "reason": "Unsplash+ premium preview — tiled 'Unsplash+' watermark across the image, not a usable free asset." },
+    { "file": "stock candidate — a-man-cleaning-car...kB0iVeU6_WY / ErJr_vGdKVM", "reason": "Unsplash+ premium preview — watermarked, not a usable free asset." },
+    { "file": "stock candidate — car-washing-outdoor...v0g2Y2TL17o", "reason": "Getty Images-sourced listing on Unsplash, not a plain free Unsplash upload — skipped in favour of clean free-license alternatives." },
+    { "file": "stock candidate — handsome-african...uVSjbXqJxVw", "reason": "Unsplash+ premium preview — watermarked, not a usable free asset." }
+  ]
+}

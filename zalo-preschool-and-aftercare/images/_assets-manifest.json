@@ -1,0 +1,54 @@
+{
+  "kept": [
+    {
+      "file": "real_06.png",
+      "vetted": true,
+      "source": "Serper-pulled (real_NN), business unknown/unbranded in shot",
+      "description": "Empty preschool classroom interior — yellow walls, alphabet/number friezes, small coloured chairs, patchwork rug, curtained windows. No people, no competing branding visible.",
+      "note": "Plausibly Zalo's own classroom (subject matches trade + no rival branding), but not confirmed — client should verify this is genuinely their room before it's treated as owned photography."
+    }
+  ],
+  "rejected": [
+    {
+      "file": "real_01.jpg",
+      "reason": "Wrong business — collage shows branded signage for \"Green Nest Preschool · Daycare · Aftercare\" and \"English Medium\" banner, plus identifiable adult staff faces. Not Zalo."
+    },
+    {
+      "file": "real_02.jpg",
+      "reason": "Wrong business and wrong city — marketing flyer for \"Soul Kids pre-School & Aftercare\", 230 Pretorius Rd, Vorna Valley (Midrand, Gauteng), not Pinetown/Caversham Glen. Also shows identifiable children's faces."
+    },
+    {
+      "file": "real_03.jpg",
+      "reason": "Wrong business — branded \"Soul Kids\" logo/marketing graphic (Vorna Valley operator, see real_02). Not Zalo."
+    },
+    {
+      "file": "real_04.jpg",
+      "reason": "SENSITIVE — classroom scene with no rival branding visible, plausibly genuinely Zalo's, but shows multiple children with clearly identifiable faces. Rejected per no-identifiable-children-faces policy regardless of provenance. Flagged for the client to review and approve directly if they want this image used with consent."
+    },
+    {
+      "file": "real_05.jpg",
+      "reason": "SENSITIVE — same as real_04: no rival branding, plausibly genuine, but shows identifiable children's faces at close range. Rejected per policy; flagged for client to approve directly."
+    }
+  ],
+  "stock": [
+    {
+      "file": "stock_01.jpg",
+      "source": "https://unsplash.com/photos/vJritQGOFvc",
+      "cdn_url": "https://images.unsplash.com/photo-1511288842297-6d0bc2e156c9?w=1600&q=80",
+      "description": "Box of Crayola crayons scattered on a wooden desk — colourful art supplies, no people."
+    },
+    {
+      "file": "stock_02.jpg",
+      "source": "https://unsplash.com/photos/a-playground-with-a-slide-and-a-play-structure-wiVwLm1YSLY",
+      "cdn_url": "https://images.unsplash.com/photo-1729147947344-865151ce9abf?w=1600&q=80",
+      "description": "Empty coral/teal castle-themed playground structure with slides, blue sky — no people."
+    },
+    {
+      "file": "stock_03.jpg",
+      "source": "https://unsplash.com/photos/childrens-playroom-with-small-tables-and-chairs-7Lbw1Dxwj3Y",
+      "cdn_url": "https://images.unsplash.com/photo-1763310225230-6e15b125935a?w=1600&q=80",
+      "description": "Bright, modern playroom with small star/bear-shaped chairs, low tables, toy kitchen and shelving — no people."
+    }
+  ],
+  "note": "Only 1 of 6 pulled real photos passed vetting (kept < 2), so tasteful stock fill was required per SOP. Footer line added noting representative stock imagery."
+}

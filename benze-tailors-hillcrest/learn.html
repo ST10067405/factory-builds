@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Cutting Table — Style & Care Journal | Benze Tailors Hillcrest</title>
+<meta name="description" content="Style and care guides from Benze Tailors Hillcrest — suit fit, alterations, matric-dance timelines and more.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What should I bring to my first fitting?", "acceptedAnswer": { "@type": "Answer", "text": "Wear or bring the shoes and shirt you'd pair with the finished garment, and bring any reference photos or an existing piece whose fit you like — it helps get the first measurements right." } },
+    { "@type": "Question", "name": "Where is Benze Tailors Hillcrest?", "acceptedAnswer": { "@type": "Answer", "text": "134 Oxford Centre, 9 Old Main Rd, Hillcrest, Durban 3610 — inside the Oxford Centre on Old Main Road. Tap Navigate on the home page for directions." } },
+    { "@type": "Question", "name": "Do you only make new suits, or do you alter existing ones too?", "acceptedAnswer": { "@type": "Answer", "text": "Both — made-to-measure suits alongside alterations & repairs, matric-dance and wedding wear, and restyling of suits you already own." } },
+    { "@type": "Question", "name": "How do I book?", "acceptedAnswer": { "@type": "Answer", "text": "Call or WhatsApp 073 358 5844. Online booking is coming to this site soon." } }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#FAF7F1;--surface:#F1EBDF;--ink:#161B2E;--mut:rgba(22,27,46,.62);
+  --brand:#161B2E;--accent:#B4813F;--line:rgba(22,27,46,.13);
+  --display:'Playfair Display',serif;--body:'Source Sans 3',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand);color:var(--bg);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-size:21px;color:var(--brand);text-decoration:none}
+.nav-back{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-decoration:none}
+.nav-back:hover{color:var(--accent)}
+header{padding:90px 0 60px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--accent);margin-bottom:18px}
+h1{font-family:var(--display);font-size:clamp(36px,5.6vw,64px);line-height:1.08}
+.intro{max-width:600px;margin:22px auto 0;color:var(--mut);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:30px 26px;cursor:pointer;transition:transform .3s,box-shadow .3s;text-align:left}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.1);outline:none}
+.post .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.post h3{font-family:var(--display);font-size:21px;margin:12px 0 8px;line-height:1.25}
+.post p{color:var(--mut);font-size:14.5px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);font-size:clamp(28px,4vw,44px);margin-bottom:28px;text-align:center}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent);font-size:22px}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(0,0,0,.55);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--bg);max-width:680px;width:100%;border-radius:22px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(0,0,0,.4)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut)}
+.asheet .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.asheet h2{font-family:var(--display);font-size:clamp(24px,4vw,36px);margin:12px 0 20px;line-height:1.2}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:600;font-size:14px;padding:13px 26px;border-radius:99px}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for Benze Tailors Hillcrest by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">Benze Tailors Hillcrest</a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">journal</p>
+    <h1>The Cutting Table — Style & Care Journal</h1>
+    <p class="intro">Practical notes on fit, alterations and getting suited up for Hillcrest's biggest occasions — from the team at Benze Tailors Hillcrest.</p>
+  </div>
+</header>
+
+<div class="wrap"><div class="grid" id="postGrid"></div></div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="qa">
+      <details><summary>What should I bring to my first fitting?</summary><p>Wear or bring the shoes and shirt you'd pair with the finished garment, and bring any reference photos or an existing piece whose fit you like — it helps get the first measurements right.</p></details>
+      <details><summary>Where is Benze Tailors Hillcrest?</summary><p>134 Oxford Centre, 9 Old Main Rd, Hillcrest, Durban 3610 — inside the Oxford Centre on Old Main Road. Tap Navigate on the home page for directions.</p></details>
+      <details><summary>Do you only make new suits, or do you alter existing ones too?</summary><p>Both — made-to-measure suits alongside alterations & repairs, matric-dance and wedding wear, and restyling of suits you already own.</p></details>
+      <details><summary>How do I book?</summary><p>Call or WhatsApp 073 358 5844. Online booking is coming to this site soon.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap">Benze Tailors Hillcrest · 134 Oxford Centre, Hillcrest · Concept by Arkatype Digital — draft, awaiting client sign-off</div></footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#visit">Book your visit →</a>
+  </div>
+</div>
+
+<script>
+const POSTS = [
+  { tag: 'Fit Basics', title: 'How A Suit Should Actually Fit: A Hillcrest Fitting-Room Checklist', teaser: 'The five checkpoints we look at on every fitting — shoulders, collar, sleeve, waist, break.', body: `<p>A suit that "sort of" fits is the most common complaint we hear — and almost always it comes down to one of five checkpoints. Run through these before you decide a jacket is right, wrong, or worth altering.</p><ul>
+    <li><b>Shoulders</b> — the seam should sit right at the edge of your shoulder bone, no divots or bunching. This is the one thing that's genuinely hard to alter, so get it right at the start.</li>
+    <li><b>Collar</b> — the jacket collar should sit flush against your shirt collar with no gap and no shirt collar swallowed underneath.</li>
+    <li><b>Sleeve length</b> — roughly a thumb's width of shirt cuff should show past the jacket sleeve.</li>
+    <li><b>Waist suppression</b> — you should be able to close the jacket with a flat hand's width of room, not a fist and not a struggle.</li>
+    <li><b>Trouser break</b> — a slight crease where the trouser hem meets the shoe, not a full stack of fabric pooling on top.</li>
+  </ul><p>If most of these check out except one or two, it's usually an alteration, not a new garment.</p>` },
+  { tag: 'Alterations', title: 'Alter Or Replace? A Straight Answer From Our Oxford Centre Fitting Room', teaser: 'Not every ill-fitting jacket needs replacing — here’s how to tell the difference.', body: `<p>Clients often bring in a suit assuming it's beyond saving. Most of the time, it isn't. Here's the general rule of thumb we work from.</p><ul>
+    <li><b>Usually alterable:</b> waist, trouser length and taper, sleeve length, taking a jacket in through the sides, shortening a jacket's length slightly.</li>
+    <li><b>Rarely alterable:</b> shoulders that are genuinely too wide or narrow, a jacket that's too short in the body, or fabric that's worn thin at stress points like the seat or elbows.</li>
+    <li><b>Worth checking before you decide:</b> the seam allowance left in the garment — a well-made suit usually has more fabric in reserve than you'd expect, which is what makes bigger alterations possible.</li>
+  </ul><p>Bring the garment in and we'll give you a straight answer on which side of that line it falls.</p>` },
+  { tag: 'Matric Dance', title: 'The Matric Dance Suit Timeline: When To Book At Benze Tailors Hillcrest', teaser: 'A season-by-season guide to booking a made-to-measure matric suit without the last-minute rush.', body: `<p>Matric dance suits are one of the most time-sensitive bookings we take — fabric has to be chosen, ordered where needed, and there are usually two fittings before the final garment is ready. A rough timeline that works well:</p><ul>
+    <li><b>8&ndash;10 weeks before:</b> initial consult — colour, cut and budget direction, first measurements taken.</li>
+    <li><b>5&ndash;6 weeks before:</b> fabric confirmed, cutting begins, first fitting booked.</li>
+    <li><b>2&ndash;3 weeks before:</b> second fitting — shoulder, waist and trouser break checked and adjusted.</li>
+    <li><b>Final week:</b> collection, with time in hand in case any last tweak is needed.</li>
+  </ul><p>Matric season gets busy fast across Hillcrest, so the earlier the first consult happens, the more relaxed the rest of the timeline stays.</p>` },
+  { tag: 'Garment Care', title: 'Caring For A Tailored Suit Between Hillcrest Fittings', teaser: 'Simple habits that keep a made-to-measure suit looking sharp for years.', body: `<p>A well-made suit is a long-term piece if it's looked after between wears. A few habits make the biggest difference.</p><ul>
+    <li><b>Brush, don't just hang.</b> A soft clothes brush after each wear lifts dust and surface grime before it works into the fabric.</li>
+    <li><b>Rotate, don't repeat.</b> Wearing the same suit two days running doesn't give the fibres time to relax back into shape — leave at least a day between wears.</li>
+    <li><b>Use a shaped hanger.</b> A wide, curved hanger supports the shoulder line the way a wire or flat hanger can't.</li>
+    <li><b>Dry-clean sparingly.</b> The solvents involved wear fabric down over time — steam or spot-clean where you can, and save dry-cleaning for when it's actually needed.</li>
+    <li><b>Store with room to breathe.</b> Suits packed tight in a cupboard crease and hold odour; a little space either side keeps them fresher for longer.</li>
+  </ul>` },
+  { tag: 'First Visit', title: 'What To Bring To Your First Fitting At 134 Oxford Centre', teaser: 'A short checklist that makes your first measuring session faster and more accurate.', body: `<p>A first fitting takes longer than it needs to when the basics haven't been thought through beforehand. A short checklist:</p><ul>
+    <li><b>The shoes you'll actually wear</b> with the finished garment — trouser length is measured against them.</li>
+    <li><b>The shirt style</b> you're likely to pair it with, especially for collar and sleeve length.</li>
+    <li><b>Reference photos</b> of a cut, lapel style or colour you like, if you have one in mind.</li>
+    <li><b>An existing garment</b> whose fit you rate, even if it's not formal wear — it's a useful reference point.</li>
+    <li><b>A little time.</b> A proper first measuring session isn't rushed — allow more than you'd think for a first visit.</li>
+  </ul>` },
+  { tag: 'Weddings', title: 'Coordinating Wedding-Party Suits: A Hillcrest Groom’s Guide', teaser: 'How to keep a wedding party looking sharp and consistent without everyone booking separately.', body: `<p>Getting a groom and groomsmen looking cohesive — not identical, just consistent — is mostly a scheduling problem more than a style one. A few things that help:</p><ul>
+    <li><b>Nominate one coordinator</b> (usually the groom) to confirm fabric and colour direction for everyone, so each fitting starts from the same brief.</li>
+    <li><b>Agree the shared elements first</b> — fabric, colour family, lapel style — then let individual fit vary person to person.</li>
+    <li><b>Book the groom first,</b> then stagger the rest of the party over the following weeks rather than everyone booking the same week.</li>
+    <li><b>Build in alteration time</b> before the big day — weight and fit can shift in the weeks before a wedding, so a buffer before the final fitting is worth having.</li>
+  </ul>` }
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

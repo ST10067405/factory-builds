@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Marquee Journal | Gillitts Marquee & Chair Hire</title>
+<meta name="description" content="Practical, general planning notes on marquee sizing, wet-weather planning, delivery timelines and hire basics for weddings and functions in Gillitts and the Upper Highway.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How far in advance should I book a marquee?", "acceptedAnswer": { "@type": "Answer", "text": "Popular wedding weekends in spring and summer can book up months ahead across the Upper Highway. As a general guide, aim for at least 2–3 months' notice where you can, and earlier for peak-season dates." } },
+    { "@type": "Question", "name": "What's included in a marquee hire?", "acceptedAnswer": { "@type": "Answer", "text": "Marquee hire on its own usually covers just the structure — tables, chairs, linen, draping, lighting and a dance floor are typically quoted separately so you can build the exact package you need." } },
+    { "@type": "Question", "name": "Do you deliver and set up?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — delivery, setup and breakdown are part of the service. Confirm site access, timing and any venue or council requirements when you get your quote." } },
+    { "@type": "Question", "name": "How do I book?", "acceptedAnswer": { "@type": "Answer", "text": "Call or WhatsApp 031 767 1630 / 082 664 6743. Online booking is coming to this site soon." } }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#FBF8F2;--surface:#F3EEE2;--ink:#282F22;--mut:rgba(40,47,34,.62);
+  --brand:#4C5D42;--accent:#C9A961;--line:rgba(40,47,34,.13);
+  --display:'Cormorant Garamond',serif;--body:'Karla',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand);color:var(--bg);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-size:22px;color:var(--brand);text-decoration:none}
+.nav-back{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-decoration:none}
+.nav-back:hover{color:var(--accent)}
+header{padding:90px 0 60px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--accent);margin-bottom:18px}
+h1{font-family:var(--display);font-size:clamp(38px,6vw,68px);line-height:1.05}
+.intro{max-width:600px;margin:22px auto 0;color:var(--mut);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:30px 26px;cursor:pointer;transition:transform .3s,box-shadow .3s;text-align:left}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.1);outline:none}
+.post .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.post h3{font-family:var(--display);font-size:23px;margin:12px 0 8px;line-height:1.2}
+.post p{color:var(--mut);font-size:14.5px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);font-size:clamp(28px,4vw,44px);margin-bottom:28px;text-align:center}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent);font-size:22px}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(0,0,0,.55);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--bg);max-width:680px;width:100%;border-radius:22px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(0,0,0,.4)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut)}
+.asheet .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.asheet h2{font-family:var(--display);font-size:clamp(26px,4vw,38px);margin:12px 0 20px;line-height:1.15}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:600;font-size:14px;padding:13px 26px;border-radius:99px}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for Gillitts Marquee & Chair Hire by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">Gillitts Marquee & Chair Hire</a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">The Marquee Journal</p>
+    <h1>Planning notes for the Upper Highway</h1>
+    <p class="intro">General, practical guidance on sizing, weather, timelines and hiring the right marquee for a wedding or function in Gillitts and the Upper Highway.</p>
+  </div>
+</header>
+
+<div class="wrap"><div class="grid" id="postGrid"></div></div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="qa">
+      <details><summary>How far in advance should I book a marquee?</summary><p>Popular wedding weekends in spring and summer can book up months ahead across the Upper Highway. As a general guide, aim for at least 2–3 months' notice where you can, and earlier for peak-season dates.</p></details>
+      <details><summary>What's included in a marquee hire?</summary><p>Marquee hire on its own usually covers just the structure — tables, chairs, linen, draping, lighting and a dance floor are typically quoted separately so you can build the exact package you need.</p></details>
+      <details><summary>Do you deliver and set up?</summary><p>Yes — delivery, setup and breakdown are part of the service. Confirm site access, timing and any venue or council requirements when you get your quote.</p></details>
+      <details><summary>How do I book?</summary><p>Call or WhatsApp 031 767 1630 / 082 664 6743. Online booking is coming to this site soon.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap">Gillitts Marquee & Chair Hire · 8 Zinnia Rd, Gillitts 3610 · Concept by Arkatype Digital — draft, awaiting client sign-off</div></footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#visit">Get a quote →</a>
+  </div>
+</div>
+
+<script>
+const POSTS = [
+  { tag: 'Guest Counts', title: 'Marquee Sizing for a Gillitts Garden Wedding', teaser: 'A general guide to matching marquee size to guest count and table style.', body: `
+    <p>Getting the marquee size right starts with two numbers: how many guests, and how they'll be seated. As a rough general guide, a seated banquet-style dinner needs more floor area per guest than a standing cocktail function — allow extra room once you add a dance floor, bar, buffet table or DJ booth into the same footprint.</p>
+    <p>Garden settings add their own variables. Uneven ground, tree roots, slopes and flower beds can all shrink the usable footprint of a lawn, so it's worth measuring the actual clear, level area available rather than assuming the whole garden is fair game.</p>
+    <ul>
+      <li>Confirm guest numbers as early as possible — marquee size is usually the first thing a hire company needs to quote accurately.</li>
+      <li>Decide on seated vs. standing (or a mix) before you ask for a size — it changes the footprint significantly.</li>
+      <li>Walk the actual site and flag any slopes, trees, septic tanks or flower beds that limit where the structure can go.</li>
+      <li>Leave room around the marquee's edges for guy ropes or anchoring, depending on the structure type.</li>
+    </ul>
+    <p class="mut">General guidance only — always confirm exact sizing with your hire company against your specific guest list and venue.</p>
+  ` },
+  { tag: 'Weather', title: 'Wet-Weather Wedding Planning for a KZN Summer', teaser: "What to build into your plan when Upper Highway weather turns during wedding season.", body: `
+    <p>KwaZulu-Natal's summer wedding season is also its storm season — afternoon downpours are common enough on the Upper Highway that it's worth planning for rain even on a forecast-clear day, rather than treating it as a remote risk.</p>
+    <p>A marquee with sides that can be closed up is the simplest wet-weather safeguard for an outdoor event, but it's not the only thing to think through. Ground can turn soft or slippery fast on grass, so flooring or matting matters as much as the roof overhead.</p>
+    <ul>
+      <li>Ask whether marquee sides are included or optional, and how quickly they can go up if weather changes mid-event.</li>
+      <li>Consider flooring or matting for wet grass, especially near entrances and pathways where guests will be walking in heels.</li>
+      <li>Have a backup plan for photos — a nearby covered spot or an agreed indoor alternative saves scrambling on the day.</li>
+      <li>Build a small weather-check buffer into your morning-of timeline so decisions aren't made in a rush.</li>
+    </ul>
+    <p class="mut">General seasonal guidance — always confirm your specific wet-weather options with your marquee and venue teams ahead of time.</p>
+  ` },
+  { tag: 'Timeline', title: 'Your Wedding-Day Timeline for Marquee & Chair Delivery', teaser: 'General guidance on when to schedule delivery, setup and breakdown around your event.', body: `
+    <p>Marquee and furniture delivery almost always needs to happen well before guests arrive — structures take time to erect and dress properly, and rushing a setup is when mistakes happen. As a general rule, build in more buffer time than feels necessary.</p>
+    <p>It helps to think of delivery as its own mini-event with its own timeline, separate from the ceremony or reception schedule, and to coordinate it with your venue, caterer and any other vendors who also need access to the space beforehand.</p>
+    <ul>
+      <li>Ask your hire company how many hours they need for setup and factor that into your morning-of schedule.</li>
+      <li>Confirm site access times with your venue — some venues restrict vehicle access before a certain hour.</li>
+      <li>Coordinate delivery timing with other vendors (caterers, florists, decorators) so nobody is working around each other unnecessarily.</li>
+      <li>Ask when breakdown happens — same night or the next morning — so it doesn't clash with your own departure plans.</li>
+    </ul>
+    <p class="mut">General planning guidance — your hire company will confirm exact delivery and collection windows once your date and venue are set.</p>
+  ` },
+  { tag: 'Chairs & Linen', title: 'Chiavari, Trestle or Cross-Back: Chair & Linen Basics', teaser: 'A general primer on chair styles and linen choices for a wedding or function.', body: `
+    <p>Chair style does a lot of quiet work in how a marquee or venue reads. Chiavari chairs (slim, often gold or white) lean formal and are a common wedding default; cross-back or farmhouse-style chairs suit a more rustic or garden aesthetic; standard function chairs (sometimes dressed with a chair cover) are the practical, budget-friendly option for larger guest counts.</p>
+    <p>Linen is where colour and texture usually enter the picture — a plain ivory or white base with a coloured runner or overlay is an easy way to bring in a palette without overcommitting the whole table to one colour.</p>
+    <ul>
+      <li>Match chair style to the overall formality of the event, not just the venue — a garden setting can still carry chiavari chairs well.</li>
+      <li>Consider chair covers as a cost-effective way to unify mismatched or standard chairs.</li>
+      <li>Test linen colours in the actual venue lighting where possible — colours can read differently indoors versus under a marquee at dusk.</li>
+      <li>Ask what's available as standard versus what needs to be specially ordered, especially for less common colours.</li>
+    </ul>
+    <p class="mut">General styling guidance — availability of specific chair styles and linen colours varies by hire company and season.</p>
+  ` },
+  { tag: 'Backyard Functions', title: 'Planning a Backyard Function on the Upper Highway', teaser: 'What to think through before hosting a marquee function at home.', body: `
+    <p>A backyard function gives you more control over the setting, but it puts more of the planning on you rather than a venue's events team. Access is usually the first practical question — can a delivery vehicle reach the setup area, and is there a reasonably flat, clear space to work with?</p>
+    <p>Power and lighting are easy to underestimate at home. A marquee at night needs its own lighting plan, and catering equipment, a DJ or a band can draw more power than a typical household circuit is set up to handle.</p>
+    <ul>
+      <li>Check vehicle access to the setup area — narrow driveways or steps can rule out certain equipment.</li>
+      <li>Assess the ground — grass, slope and drainage all affect what can be set up safely and how it will hold up if it rains.</li>
+      <li>Plan power needs early, including whether a generator is required for lighting, catering or sound.</li>
+      <li>Give neighbours a heads-up if the function will run into the evening — noise and parking are common friction points for at-home events.</li>
+    </ul>
+    <p class="mut">General planning guidance — a site visit from your hire company is the best way to confirm what your specific property can accommodate.</p>
+  ` },
+  { tag: 'Booking Smart', title: 'Questions to Ask Before You Book a Gillitts Marquee & Chair Hire Company', teaser: 'A general checklist for vetting a marquee and chair hire company before you commit.', body: `
+    <p>Marquee and chair hire is a significant piece of any wedding or function budget, and most of it is confirmed well before the event itself — so it pays to ask a few clarifying questions upfront rather than assume everything is included.</p>
+    <p>A good hire company should be able to answer these clearly and without hesitation. If answers are vague, especially around wet-weather plans or what happens if something goes wrong, treat that as useful information in itself.</p>
+    <ul>
+      <li>What exactly is included in the quoted price — structure only, or tables, chairs and linen too?</li>
+      <li>What's the wet-weather policy, and is there a plan if the forecast changes close to the date?</li>
+      <li>How far in advance is delivery, and when does breakdown happen?</li>
+      <li>What's the deposit, cancellation and damage policy?</li>
+      <li>Do they carry backup stock in case of equipment damage before your date?</li>
+    </ul>
+    <p class="mut">General guidance for comparing hire companies — ask for these details in writing as part of any quote you're considering.</p>
+  ` }
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

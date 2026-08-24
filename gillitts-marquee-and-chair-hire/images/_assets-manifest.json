@@ -1,0 +1,40 @@
+{
+  "kept": [
+    {
+      "file": "real_01.jpg",
+      "vetted": true,
+      "source": "Serper pull (business real photo)",
+      "notes": "Outdoor clear-span marquee, sides up, gold Chiavari chairs, dressed round tables, string/fairy lights inside the tent — directly on-topic for a marquee & chair hire business, plausibly the business's own installation photography."
+    },
+    {
+      "file": "stock_01.jpg",
+      "vetted": true,
+      "source": "Unsplash, https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1600&q=80",
+      "notes": "Ballroom set for a function — gold Chiavari chairs, round tables with cream linen, crystal chandeliers. On-topic for the tables/chairs/linen side of the hire business. Used as stock fill, disclosed in footer."
+    },
+    {
+      "file": "stock_02.jpg",
+      "vetted": true,
+      "source": "Unsplash, https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1600&q=80",
+      "notes": "Function hall with fabric ceiling draping, fairy lights strung overhead, white chair covers, dressed tables. On-topic for draping/chair-cover/lighting side of the hire business. Used as stock fill, disclosed in footer."
+    }
+  ],
+  "rejected": [
+    { "candidate": "stock_02 (unsplash photo-1519225421980-715cb0202aa2)", "reason": "Download failed (29-byte response, dead/removed Unsplash ID) — never rendered, discarded." },
+    { "candidate": "unsplash photo-1544078751-58fee2d8a03b", "reason": "Couple portrait on a black-sand beach — no hire equipment, wrong setting entirely, off-topic." },
+    { "candidate": "unsplash photo-1509927083803-4bd519298ac4", "reason": "Close-up of bride/groom shoes — personal wedding-photography detail shot, not a hire-product or venue image." },
+    { "candidate": "unsplash photo-1606800052052-a08af7148866", "reason": "Wedding rings macro shot — off-topic, no connection to marquee/chair/table hire." },
+    { "candidate": "unsplash photo-1470019693664-1d202d2c0907", "reason": "Black-and-white close-up of a hand playing piano — completely off-topic." },
+    { "candidate": "unsplash photo-1587271636175-90d58cdad458", "reason": "Indian wedding mandap ceremony with identifiable guests — wrong style/culture context for this generic hire business, identifiable people." },
+    { "candidate": "unsplash photo-1495434942214-9b525bb70ffd", "reason": "Download failed (29-byte response, dead/removed Unsplash ID)." },
+    { "candidate": "unsplash photo-1606216794074-735e91aa2c92", "reason": "Couple portrait under a palm tree — personal wedding photography, no hire equipment visible, off-topic." },
+    { "candidate": "unsplash photo-1583939003579-730e3918a45a", "reason": "Confetti-toss wedding-party group photo — off-topic, identifiable guests, not a hire/venue shot." },
+    { "candidate": "unsplash photo-1478146059778-26028b07395a", "reason": "Dessert/cake table against a brick wall — food styling, not marquee/chair/table hire." },
+    { "candidate": "unsplash photo-1591604466107-ec97de577aff", "reason": "Couple portrait beside a lake — personal wedding photography, off-topic." },
+    { "candidate": "unsplash photo-1519741497674-611481863552", "reason": "Bride/groom bouquet close-up with lens flare — off-topic personal detail shot." },
+    { "candidate": "unsplash photo-1544161515-4ab6ce6db874", "reason": "Spa massage-oil photo — entirely unrelated trade, wrong ID result." },
+    { "candidate": "unsplash photo-1465495976277-4387d4b0b4c6", "reason": "Crowded riverside/dock party scene, unrelated activity — off-topic." },
+    { "candidate": "unsplash photo-1527529482837-4698179dc6ce", "reason": "Bouquet close-up against exposed brick — off-topic personal detail shot." },
+    { "candidate": "unsplash photo-1519671482749-fd09be7ccebf", "reason": "Guests toasting with wine glasses, candid crowd shot — not a hire-product or venue image." }
+  ]
+}

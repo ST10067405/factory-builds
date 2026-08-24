@@ -1,0 +1,51 @@
+{
+  "business": "The Laundry Lounge Hillary",
+  "slug": "the-laundry-lounge-hillary",
+  "kept_real": [],
+  "rejected": [
+    {
+      "file": "real_01.jpg (deleted)",
+      "reason": "Same-name-trap: shows a large US-format laundromat (Huebsch machines, bilingual EN/ES 'Dry Cleaning Now Available / Tintorería Disponible' signage, exterior parking lot visible through the door) branded 'Local Laundry Lounge' — a different business entirely, not the small basement-level Shop 24 unit in Hillary, Durban."
+    },
+    {
+      "file": "real_02.jpg (deleted)",
+      "reason": "Same-name-trap: large-format US laundromat with a neon 'THE LAUNDRY LOUNGE' sign, Dexter stack dryers, and a framed Rolling Stones ('Stones') poster on the wall — American branding/decor, unrelated third-party business sharing the name."
+    },
+    {
+      "file": "real_03.jpg (deleted)",
+      "reason": "Same-name-trap: another 'The Laundry Lounge' location (different wall lettering/signage and machine brand/layout to real_02, so a third distinct site) — no evidence any of the three depict the actual Hillary/Stella Rd premises."
+    }
+  ],
+  "stock": [
+    {
+      "file": "stock_01.jpg",
+      "source": "https://unsplash.com/photos/pYpZIOj-KKs",
+      "direct_url": "https://images.unsplash.com/photo-1550025005-05b9002486c5",
+      "photographer": "Marshall Williams (Unsplash)",
+      "use": "Our Work gallery + Visit section image — rows of front-loading dryers, no business-name signage",
+      "note": "Swapped in to replace an initial pull (Danny Greenberg, photo-1757252872525) that showed prominent English/Spanish 'Dry Cleaning Now Available / Tintorería Disponible' signage — on-topic but a jarring US-context mismatch for a Durban site. This replacement shows only generic equipment-brand markings (Huebsch, a real global commercial-laundry equipment maker) and operational labels, no business identity."
+    },
+    {
+      "file": "stock_02.jpg",
+      "source": "https://unsplash.com/photos/a-basket-of-towels-next-to-a-stack-of-folded-towels-211wNqxFSVc",
+      "direct_url": "https://images.unsplash.com/photo-1649490978095-ede5f8d8f64c",
+      "photographer": "rocknwool (Unsplash)",
+      "use": "Our Work gallery — folded textiles"
+    },
+    {
+      "file": "stock_03.jpg",
+      "source": "https://unsplash.com/photos/inside-view-of-a-clean-empty-washing-machine-drum-ykivphUagM4",
+      "direct_url": "https://images.unsplash.com/photo-1761079976271-3a78f547ca67",
+      "photographer": "Vlad Deep (Unsplash)",
+      "use": "Hero background image (washing-machine drum macro)"
+    },
+    {
+      "file": "stock_04.jpg",
+      "source": "https://unsplash.com/photos/man-holding-printing-screen-near-white-window-ZCTh4f4mv18",
+      "direct_url": "https://images.unsplash.com/photo-1456456496250-d5e7c0a9b44d",
+      "photographer": "Unsplash contributor",
+      "use": "Our Work gallery + Custom Prints section — screen/vinyl-printing craft shot"
+    }
+  ],
+  "notes": "Kept real photos = 0, so stock fill was required. All 3 pulled real_NN.jpg photos were rejected as the exact 'same-name US laundromat' trap the build brief flagged (Iowa/Michigan-style large-format laundromats trading as 'Local Laundry Lounge' / 'The Laundry Lounge', unrelated to the Hillary, Durban business). Footer stock-disclosure line added per SOP."
+}

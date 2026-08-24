@@ -1,0 +1,43 @@
+{
+  "kept": [],
+  "rejected": [
+    {
+      "file": "real_01.jpg",
+      "reason": "Serper pull returned a 'Courtesy Photo'-watermarked news/stock image of an elderly tailor at a manual machine in a market-stall setting with non-Latin-script signage in the background — no verifiable link to Benze Tailors Hillcrest, wrong setting for a Hillcrest strip-mall tailor, high risk of being a different, unrelated business. Deleted."
+    }
+  ],
+  "stock": [
+    {
+      "file": "stock_01.jpg",
+      "subject": "Tweed suit torso close-up (jacket + waistcoat + tie), no face visible",
+      "source": "https://unsplash.com/photos/YOxwv1qmvNc",
+      "source_url_used": "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=1600&q=80",
+      "license": "Unsplash License (free to use)"
+    },
+    {
+      "file": "stock_02.jpg",
+      "subject": "Suit lapel and buttonhole detail, close-up",
+      "source": "https://commons.wikimedia.org/wiki/File:Spanish_tailoring_lapel.jpg",
+      "license": "Wikimedia Commons"
+    },
+    {
+      "file": "stock_03.jpg",
+      "subject": "Vintage sewing machine feed dogs, macro detail, no face",
+      "source": "https://commons.wikimedia.org/wiki/File:SingerModel27.FeedDogs.jpg",
+      "license": "Wikimedia Commons"
+    },
+    {
+      "file": "stock_04.jpg",
+      "subject": "Tailor's measuring tapes (inch + cm), flat-lay",
+      "source": "https://commons.wikimedia.org/wiki/File:Tailor%27s_measuring_tapes.jpg",
+      "license": "Wikimedia Commons, CC0"
+    },
+    {
+      "file": "stock_05.jpg",
+      "subject": "Blue tailor's chalk pencil, studio close-up",
+      "source": "https://commons.wikimedia.org/wiki/File:Blue_tailor%27s_chalk.jpg",
+      "license": "Wikimedia Commons, CC0"
+    }
+  ],
+  "note": "Stock-led build (0 kept real photos). Footer disclosure required: 'Some imagery is representative stock — client photos to follow.'"
+}

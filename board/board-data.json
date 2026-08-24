@@ -1851,6 +1851,135 @@
         }
       ],
       "changeNotes": "2026-07-31 — NEW batch-3 lead built straight to FULL SOP spec. Preflight PASS (41 active). Render sweep 0 failures."
+    },
+    "queensburgh-car-wash": {
+      "title": "Queensburgh Car Wash",
+      "status": "gate_passed",
+      "priority": "warm",
+      "notes": "Car wash, Queensburgh. 4.8★ / 141 Google reviews. Ph 081 417 7025. Local-scout lead 2026-08-23 batch 4 (presence-gated, strict rules). Built to full SOP standard with docs pack + two-option quote.",
+      "nextAction": "Jaime review (site + docs) → outreach draft (human send gate)",
+      "caveats": [
+        "1 genuine valeting photo kept; 3 rejected pulls were rival INFINITY CAR WASH branding; stock fill disclosed",
+        "Rival two streets over markets actively — speed matters on this pitch"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "car wash",
+        "batch4-2026-08-23"
+      ],
+      "sources": [
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/p/Queensburgh-Car-Wash-100063451818068/"
+        }
+      ],
+      "changeNotes": "2026-08-23 — NEW batch-4 lead built straight to FULL SOP spec. Preflight PASS (46 active). Render sweep 0 failures."
+    },
+    "gillitts-marquee-and-chair-hire": {
+      "title": "Gillitts Marquee & Chair Hire",
+      "status": "gate_passed",
+      "priority": "warm",
+      "notes": "Event/marquee hire, Gillitts. 4.9★ / 80 Google reviews. Ph 031 767 1630. Local-scout lead 2026-08-23 batch 4 (presence-gated, strict rules). Built to full SOP standard with docs pack + two-option quote.",
+      "nextAction": "Jaime review (site + docs) → outreach draft (human send gate)",
+      "caveats": [
+        "1 genuine marquee photo + 2 stock (16 candidates rejected rather than pad) — real event photos are the top ask",
+        "Landline 031 767 1630 + confirmed WhatsApp 082 664 6743; address corrected to 8 Zinnia Rd Gillitts (Places had a stale pin)"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "event/marquee hire",
+        "batch4-2026-08-23"
+      ],
+      "sources": [
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/gillittsmarquee/"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/gillittsmarquee/"
+        }
+      ],
+      "changeNotes": "2026-08-23 — NEW batch-4 lead built straight to FULL SOP spec. Preflight PASS (46 active). Render sweep 0 failures."
+    },
+    "zalo-preschool-and-aftercare": {
+      "title": "Zalo Preschool and Aftercare",
+      "status": "gate_passed",
+      "priority": "cold",
+      "notes": "Preschool, Pinetown. 4.8★ / 51 Google reviews. Ph 066 236 2369. Local-scout lead 2026-08-23 batch 4 (presence-gated, strict rules). Built to full SOP standard with docs pack + two-option quote.",
+      "nextAction": "Jaime review (site + docs) → outreach draft (human send gate)",
+      "caveats": [
+        "CHILD-SAFETY: 2 plausibly-genuine classroom photos rejected for identifiable children's faces — client must approve directly; site ships face-free",
+        "Enquiries run on a personal Gmail — branded email noted as upsell",
+        "FB page name mismatch (\"Zalo Care\") flagged"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "preschool",
+        "batch4-2026-08-23"
+      ],
+      "sources": [
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/p/Zalo-Care-100064010560925/"
+        }
+      ],
+      "changeNotes": "2026-08-23 — NEW batch-4 lead built straight to FULL SOP spec. Preflight PASS (46 active). Render sweep 0 failures."
+    },
+    "the-laundry-lounge-hillary": {
+      "title": "The Laundry Lounge Hillary",
+      "status": "gate_passed",
+      "priority": "cold",
+      "notes": "Laundromat, Queensburgh. 5★ / 34 Google reviews. Ph 069 467 7133. Local-scout lead 2026-08-23 batch 4 (presence-gated, strict rules). Built to full SOP standard with docs pack + two-option quote.",
+      "nextAction": "Jaime review (site + docs) → outreach draft (human send gate)",
+      "caveats": [
+        "All 3 pulls were same-name US laundromats — fully stock-led with disclosure",
+        "Custom vinyl-printing side line has its own section + light-ordering upsell"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "laundromat",
+        "batch4-2026-08-23"
+      ],
+      "sources": [
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/thelaundryloungehillary/"
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/p/The-Laundry-Lounge-100092301394764/"
+        }
+      ],
+      "changeNotes": "2026-08-23 — NEW batch-4 lead built straight to FULL SOP spec. Preflight PASS (46 active). Render sweep 0 failures."
+    },
+    "benze-tailors-hillcrest": {
+      "title": "Benze Tailors Hillcrest",
+      "status": "gate_passed",
+      "priority": "cold",
+      "notes": "Tailor, Hillcrest. 5★ / 23 Google reviews. Ph 073 358 5844. Local-scout lead 2026-08-23 batch 4 (presence-gated, strict rules). Built to full SOP standard with docs pack + two-option quote.",
+      "nextAction": "Jaime review (site + docs) → outreach draft (human send gate)",
+      "caveats": [
+        "Only pull rejected (watermarked, unverifiable) — fully stock-led with disclosure",
+        "benze.co.za belongs to an UNRELATED upholstery firm — owned-SEO is the core pitch; never referenced on-page"
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "tailor",
+        "batch4-2026-08-23"
+      ],
+      "sources": [
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/benze_tailors_hillcrest/"
+        }
+      ],
+      "changeNotes": "2026-08-23 — NEW batch-4 lead built straight to FULL SOP spec. Preflight PASS (46 active). Render sweep 0 failures."
     }
   },
   "documents": [

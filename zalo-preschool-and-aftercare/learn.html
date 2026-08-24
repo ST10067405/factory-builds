@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Little Steps Journal | Zalo Preschool and Aftercare</title>
+<meta name="description" content="Practical, parent-tested articles on preschool life in Caversham Glen and Pinetown — from Zalo Preschool and Aftercare.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What ages does Zalo take?", "acceptedAnswer": { "@type": "Answer", "text": "Zalo Preschool and Aftercare offers toddler, preschool and Grade-R readiness programmes, plus aftercare for children already at primary school — exact age cut-offs are best confirmed directly with the team." } },
+    { "@type": "Question", "name": "Where are you located?", "acceptedAnswer": { "@type": "Answer", "text": "26 Celtis Rd, Caversham Glen, Pinetown — tap Navigate on the home page for directions." } },
+    { "@type": "Question", "name": "What are your hours?", "acceptedAnswer": { "@type": "Answer", "text": "Hours are confirmed directly with the Zalo team — WhatsApp us and we’ll get back to you." } },
+    { "@type": "Question", "name": "How do I enrol?", "acceptedAnswer": { "@type": "Answer", "text": "WhatsApp or email us and we’ll talk you through enrolment. Online enrolment enquiry forms are coming to this site soon." } }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#FFFBF3;--surface:#FFF0E0;--ink:#3A2A22;--mut:rgba(58,42,34,.64);
+  --brand:#C74A2A;--accent:#2F7A4C;--line:rgba(58,42,34,.13);
+  --display:'Baloo 2',cursive;--body:'Nunito',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand);color:var(--bg);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:700}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-size:23px;color:var(--brand);text-decoration:none;font-weight:700}
+.nav-back{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);text-decoration:none;font-weight:600}
+.nav-back:hover{color:var(--accent)}
+header{padding:90px 0 60px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--accent);margin-bottom:18px}
+h1{font-family:var(--display);font-size:clamp(36px,5.4vw,58px);line-height:1.08}
+.intro{max-width:600px;margin:22px auto 0;color:var(--mut);font-size:16.5px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:30px 26px;cursor:pointer;transition:transform .3s,box-shadow .3s;text-align:left}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(58,42,34,.12);outline:none}
+.post .tag{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.post h3{font-family:var(--display);font-size:21px;margin:12px 0 8px;line-height:1.25;font-weight:700}
+.post p{color:var(--mut);font-size:14.5px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);font-size:clamp(26px,3.6vw,40px);margin-bottom:28px;text-align:center;font-weight:700}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:700;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent);font-size:22px}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(58,42,34,.55);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--bg);max-width:680px;width:100%;border-radius:24px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(58,42,34,.4)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut)}
+.asheet .tag{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.asheet h2{font-family:var(--display);font-size:clamp(24px,3.6vw,34px);margin:12px 0 20px;line-height:1.2;font-weight:700}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:700;font-size:14px;padding:13px 26px;border-radius:99px}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for Zalo Preschool and Aftercare by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">Zalo</a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">the little steps journal</p>
+    <h1>Notes for Caversham Glen & Pinetown parents</h1>
+    <p class="intro">Practical, parent-tested notes on preschool life — readiness, routines and the small stuff that makes the biggest difference, from the Zalo team.</p>
+  </div>
+</header>
+
+<div class="wrap"><div class="grid" id="postGrid"></div></div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="qa">
+      <details><summary>What ages does Zalo take?</summary><p>Zalo Preschool and Aftercare offers toddler, preschool and Grade-R readiness programmes, plus aftercare for children already at primary school — exact age cut-offs are best confirmed directly with the team.</p></details>
+      <details><summary>Where are you located?</summary><p>26 Celtis Rd, Caversham Glen, Pinetown — tap Navigate on the home page for directions.</p></details>
+      <details><summary>What are your hours?</summary><p>Hours are confirmed directly with the Zalo team — WhatsApp us and we’ll get back to you.</p></details>
+      <details><summary>How do I enrol?</summary><p>WhatsApp or email us and we’ll talk you through enrolment. Online enrolment enquiry forms are coming to this site soon.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap">Zalo Preschool and Aftercare · 26 Celtis Rd, Caversham Glen, Pinetown · Concept by Arkatype Digital — draft, awaiting client sign-off</div></footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#visit">Visit & enrol →</a>
+  </div>
+</div>
+
+<script>
+/* 6 audience-matched articles — generic educational advice only, no invented claims about the business. */
+const POSTS = [
+  { tag: 'Readiness', title: 'Grade R-Ready? School-Readiness Signs Caversham Glen Parents Ask About', teaser: 'The everyday signs that tend to matter more than knowing the alphabet.', body: `
+    <p>“Is my child ready for Grade R?” is one of the most common questions preschool teachers hear — and it’s rarely about knowing letters or numbers. Readiness is mostly about everyday independence and self-regulation.</p>
+    <ul>
+      <li><b>Basic independence:</b> managing the toilet, washing hands, eating without much help, and getting a jersey on and off.</li>
+      <li><b>Following instructions:</b> coping with two- or three-step instructions (“pack away your blocks, then come sit on the mat”).</li>
+      <li><b>Sitting for short periods:</b> managing a short group activity or story time without needing constant one-on-one attention.</li>
+      <li><b>Sharing and turn-taking:</b> playing alongside other children without an adult mediating every interaction.</li>
+      <li><b>Pencil grip and fine motor control:</b> holding a crayon reasonably well and attempting to draw shapes or copy patterns.</li>
+      <li><b>Curiosity and a willingness to try:</b> having a go at a new task, even if it’s not perfect the first time.</li>
+    </ul>
+    <p>Every child develops at a different pace, and a good preschool programme is designed to build these skills gradually rather than expect them on day one. If you’re not sure where your child is at, it’s always worth asking their current teacher directly — they see these signs daily.</p>
+  ` },
+  { tag: 'Settling In', title: 'Settling In at Preschool: The First Fortnight in Caversham Glen', teaser: 'What to expect in the first two weeks — and how to make goodbyes easier.', body: `
+    <p>The first two weeks at a new preschool are often harder on parents than on children — most little ones settle faster than expected once the goodbye is actually over.</p>
+    <ul>
+      <li><b>Keep goodbyes short:</b> a lingering goodbye tends to unsettle a child more than a quick, confident one.</li>
+      <li><b>Build a consistent drop-off routine:</b> the same order of events each morning helps a child know what comes next.</li>
+      <li><b>A comfort item can help:</b> a small toy or blanket from home eases the transition for many toddlers.</li>
+      <li><b>Expect some tears — from both sides:</b> it’s a normal part of adjusting, and it usually settles within one to two weeks.</li>
+      <li><b>Talk to the teacher:</b> ask how your child settled after you left — most children calm down within minutes of a parent leaving, even if it didn’t feel that way at the gate.</li>
+      <li><b>Give it real time:</b> resist judging the fit after one hard morning. Two full weeks is a fairer test.</li>
+    </ul>
+    <p>If your child is still struggling well beyond the second week, that’s worth a direct conversation with their teacher — not a sign to panic, just a cue to check in.</p>
+  ` },
+  { tag: 'Aftercare', title: 'What a Good Pinetown Aftercare Afternoon Actually Looks Like', teaser: 'The shape a solid aftercare programme should follow, from pickup to home-time.', body: `
+    <p>Aftercare exists to bridge the gap between the school day ending and a parent’s workday ending — but a good afternoon programme is more than just supervised waiting.</p>
+    <ul>
+      <li><b>A proper wind-down:</b> a snack and a breather after a full school day, before anything structured starts.</li>
+      <li><b>Homework time:</b> a quiet, supervised window for schoolwork, even if it’s not fully marked or checked.</li>
+      <li><b>Free play:</b> unstructured time is genuinely valuable after a day of following a school timetable.</li>
+      <li><b>Outdoor time:</b> a chance to run around, ideally daily and weather-permitting.</li>
+      <li><b>A consistent pickup routine:</b> a clear sign-out process so parents (and children) always know how collection works.</li>
+      <li><b>Age-appropriate supervision:</b> older and younger aftercare children often need slightly different activities and pacing.</li>
+    </ul>
+    <p>When you’re assessing any aftercare programme, it’s worth asking directly what a typical afternoon includes — the specifics vary from place to place, and a quick WhatsApp conversation usually clears it up faster than a brochure.</p>
+  ` },
+  { tag: 'Play-Based Learning', title: 'Why Play Is the Curriculum: Play-Based Learning Explained for Caversham Glen Parents', teaser: 'What’s actually being learned when your child is “just playing”.', body: `
+    <p>“They just played all day” is one of the most common (and most misleading) things a preschooler says after school. Play-based learning is a deliberate teaching method, not a lack of one.</p>
+    <ul>
+      <li><b>Fine motor skills:</b> blocks, puzzles, threading and playdough all build the hand strength and control needed for writing later.</li>
+      <li><b>Language development:</b> pretend play (“shops”, “tea parties”, “doctor”) is one of the richest environments for vocabulary and sentence-building.</li>
+      <li><b>Social skills:</b> group play teaches negotiation, turn-taking and conflict resolution far more effectively than direct instruction.</li>
+      <li><b>Early maths concepts:</b> sorting, counting, stacking and comparing sizes lay the groundwork for number sense.</li>
+      <li><b>Emotional regulation:</b> role play gives children a safe way to process feelings and situations they don’t yet have words for.</li>
+    </ul>
+    <p>A well-run play-based programme is carefully set up by the teacher, even when it looks informal from the outside — the toys, the groupings and the timing are usually chosen with a specific developmental goal in mind.</p>
+  ` },
+  { tag: 'Lunchbox', title: 'The Caversham Glen Preschool Lunchbox: What Actually Gets Eaten', teaser: 'Practical lunchbox tips for the preschool years — no lecture, just what works.', body: `
+    <p>Preschool lunchboxes are less about nutrition perfection and more about what will actually be eaten in a short break, by small hands, without help.</p>
+    <ul>
+      <li><b>Stick to familiar foods:</b> lunchtime at preschool isn’t the moment to introduce a brand-new dish — save experiments for home.</li>
+      <li><b>Bite-sized pieces:</b> cut fruit, sandwiches and vegetables into pieces a toddler can manage without cutlery.</li>
+      <li><b>Mix textures:</b> something soft, something crunchy — it keeps young eaters more interested than one uniform texture.</li>
+      <li><b>Easy-open containers:</b> if your child can’t open it themselves, it often comes home untouched.</li>
+      <li><b>Mind choking hazards:</b> whole grapes, nuts and hard sweets should be cut or avoided for younger preschoolers, per general safety guidance.</li>
+      <li><b>Label everything:</b> named, reusable containers save a surprising number of afternoon mix-ups.</li>
+    </ul>
+    <p>If you’re ever unsure what’s appropriate for your child’s age group, or whether a particular food is on a preschool’s allowed list, a quick check with the teacher is the simplest way to get a straight answer.</p>
+  ` },
+  { tag: 'Communication', title: 'Talking to Your Child’s Teacher: A Pinetown Preschool Parent’s Quick Guide', teaser: 'How to raise a concern, ask a question, or just check in — without the awkwardness.', body: `
+    <p>Most parent–teacher friction comes down to timing and channel, not the substance of what’s being said. A few habits make these conversations easier for everyone.</p>
+    <ul>
+      <li><b>Pick the right channel:</b> a quick WhatsApp note suits a simple update; anything more detailed deserves a proper conversation, not a rushed exchange at the gate.</li>
+      <li><b>Be specific:</b> “she seemed upset at pickup on Tuesday” is easier to act on than “something feels off lately”.</li>
+      <li><b>Ask before assuming:</b> teachers see your child in a different context every day — ask what they’ve noticed before drawing conclusions.</li>
+      <li><b>Mind the timing:</b> drop-off and pickup are usually the busiest, most distracted moments of a teacher’s day — a scheduled chat gets you a better answer.</li>
+      <li><b>Follow up in writing:</b> for anything that matters, a short WhatsApp message afterwards means nothing gets lost or misremembered.</li>
+    </ul>
+    <p>A good working relationship with your child’s teacher is one of the most useful things you can build in the preschool years — most of it comes down to simply asking, early and directly.</p>
+  ` }
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

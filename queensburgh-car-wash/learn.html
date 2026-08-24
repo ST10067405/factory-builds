@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Wash Bay Journal | Queensburgh Car Wash</title>
+<meta name="description" content="Practical car-care notes from Queensburgh Car Wash — washing frequency, paint care in the Durban sun, valeting, engine bays and getting a car sale-ready.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Where is Queensburgh Car Wash?", "acceptedAnswer": { "@type": "Answer", "text": "60 Main Rd, Malvern, Queensburgh 4055 — tap Navigate on the homepage for turn-by-turn directions." } },
+    { "@type": "Question", "name": "What are your hours?", "acceptedAnswer": { "@type": "Answer", "text": "Hours are still being confirmed for this site. WhatsApp us on 081 417 7025 and we'll reply with today's hours." } },
+    { "@type": "Question", "name": "What washes do you offer?", "acceptedAnswer": { "@type": "Answer", "text": "Wash & Go, Full Valet, Engine Wash and Polish & Shine. Final pricing is being confirmed — WhatsApp us for today's rate." } },
+    { "@type": "Question", "name": "How do I book?", "acceptedAnswer": { "@type": "Answer", "text": "Call or WhatsApp 081 417 7025. Online booking is coming to this site soon." } }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#F7FCFB;--surface:#EAF6F4;--ink:#0A2E33;--mut:rgba(10,46,51,.62);
+  --brand:#0B5C63;--accent:#8FBF1A;--line:rgba(10,46,51,.12);
+  --display:'Poppins',sans-serif;--body:'Inter',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.draft{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--brand);color:var(--bg);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-size:20px;font-weight:700;color:var(--brand);text-decoration:none}
+.nav-back{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-decoration:none}
+.nav-back:hover{color:var(--accent)}
+header{padding:90px 0 60px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--accent);margin-bottom:18px}
+h1{font-family:var(--display);font-size:clamp(36px,6vw,62px);line-height:1.08;font-weight:700}
+.intro{max-width:600px;margin:22px auto 0;color:var(--mut);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:40px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:30px 26px;cursor:pointer;transition:transform .3s,box-shadow .3s;text-align:left}
+.post:hover,.post:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.1);outline:none}
+.post .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.post h3{font-family:var(--display);font-size:21px;margin:12px 0 8px;line-height:1.25;font-weight:600}
+.post p{color:var(--mut);font-size:14.5px}
+.faq{padding:20px 0 90px}
+.faq h2{font-family:var(--display);font-size:clamp(28px,4vw,42px);margin-bottom:28px;text-align:center;font-weight:700}
+.qa{max-width:760px;margin:0 auto}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 22px;margin-bottom:12px}
+.qa summary{cursor:pointer;padding:18px 0;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";color:var(--accent);font-size:22px}
+.qa details[open] summary::after{content:"–"}
+.qa p{color:var(--mut);padding:0 0 20px;font-size:15px}
+.amodal{position:fixed;inset:0;z-index:120;background:rgba(0,0,0,.55);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.amodal.open{display:flex}
+.asheet{background:var(--bg);max-width:680px;width:100%;border-radius:22px;padding:44px 40px;position:relative;box-shadow:0 40px 90px rgba(0,0,0,.4)}
+@media(max-width:560px){.asheet{padding:34px 24px}}
+.aclose{position:absolute;top:18px;right:20px;background:none;border:none;font-size:26px;cursor:pointer;color:var(--mut)}
+.asheet .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.asheet h2{font-family:var(--display);font-size:clamp(24px,4vw,34px);margin:12px 0 20px;line-height:1.2;font-weight:700}
+.asheet p{color:var(--ink);margin-bottom:16px;font-size:15.5px}
+.asheet p.mut{color:var(--mut)}
+.asheet ul{margin:0 0 16px 20px;font-size:15.5px}
+.asheet li{margin-bottom:8px}
+.book-cta{display:inline-block;margin-top:10px;background:var(--brand);color:var(--bg);text-decoration:none;font-weight:600;font-size:14px;padding:13px 26px;border-radius:99px}
+footer.site{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:12.5px;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.post:focus-visible{outline:2px solid var(--brand);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.post:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">Concept draft — built for Queensburgh Car Wash by Arkatype Digital · not yet live</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">Queensburgh Car Wash</a>
+    <a class="nav-back" href="index.html">← Back to site</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">The Wash Bay Journal</p>
+    <h1>Car Care Notes For Malvern &amp; Queensburgh</h1>
+    <p class="intro">Practical, no-nonsense car-care advice — from wash frequency in our humidity to getting a car ready to sell.</p>
+  </div>
+</header>
+
+<div class="wrap"><div class="grid" id="postGrid"></div></div>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="qa">
+      <details><summary>Where is Queensburgh Car Wash?</summary><p>60 Main Rd, Malvern, Queensburgh 4055 — tap Navigate on the homepage for turn-by-turn directions.</p></details>
+      <details><summary>What are your hours?</summary><p>Hours are still being confirmed for this site. WhatsApp us on 081 417 7025 and we'll reply with today's hours.</p></details>
+      <details><summary>What washes do you offer?</summary><p>Wash &amp; Go, Full Valet, Engine Wash and Polish &amp; Shine. Final pricing is being confirmed — WhatsApp us for today's rate.</p></details>
+      <details><summary>How do I book?</summary><p>Call or WhatsApp 081 417 7025. Online booking is coming to this site soon.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap">Queensburgh Car Wash · 60 Main Rd, Malvern, Queensburgh · Concept by Arkatype Digital — draft, awaiting client sign-off</div></footer>
+
+<div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-label="Article">
+  <div class="asheet">
+    <button class="aclose" id="aclose" aria-label="Close">✕</button>
+    <p class="tag" id="atag"></p>
+    <h2 id="atitle"></h2>
+    <div id="abody"></div>
+    <a class="book-cta" href="index.html#visit">Find us on Main Road →</a>
+  </div>
+</div>
+
+<script>
+const POSTS = [
+  { tag: 'Car Care', title: 'How Often Should You Really Wash Your Car in Queensburgh’s Climate?', teaser: 'Humidity, dust and pollen change the answer more than you’d think.', body: `<p>There's no single number that fits every car, but the coastal Durban climate does change the maths compared to drier inland areas.</p><ul><li><b>Humidity speeds up grime build-up.</b> Moist air makes dust and pollution stick to paint more readily, and can encourage water spotting if a car sits dirty for too long.</li><li><b>A weekly-to-fortnightly exterior wash</b> is a reasonable general rule for a daily-driven car in this climate — more often if it's parked under trees or near the coast.</li><li><b>Salt air matters if you're closer to the sea.</b> Even a few kilometres inland, airborne salt can accelerate corrosion on exposed metal — rinsing it off regularly helps more than people expect.</li><li><b>Pollen season is its own case.</b> A fine yellow-green dusting left to bake in the sun can etch into clear coat over time if it's not rinsed off promptly.</li><li><b>Don't forget the underbody.</b> It's the part owners think about least and grime-and-salt affects most.</li></ul><p class="mut">General guidance — a car parked outdoors under trees or near the coast will need more frequent washing than one kept in a garage.</p>` },
+  { tag: 'Paint Care', title: 'Protecting Your Paint From the Malvern Sun', teaser: 'A Durban driver’s guide to sun, salt air and keeping your paintwork sharp.', body: `<p>KwaZulu-Natal's strong UV and humid, salty air are genuinely tougher on paintwork than a drier, milder climate — a few habits make a real difference.</p><ul><li><b>UV fades and dulls paint over time,</b> especially on darker colours and horizontal panels like the bonnet and roof that take the most direct sun.</li><li><b>Shade is the cheapest protection there is.</b> Parking under cover, even a simple carport or tree, meaningfully slows fading compared to full all-day sun exposure.</li><li><b>Wax or sealant adds a sacrificial layer</b> that takes the UV and grime hit instead of the clear coat underneath — reapplying every few months keeps that layer working.</li><li><b>Bird droppings and tree sap are acidic</b> and can etch clear coat surprisingly fast in hot weather — the sooner they're rinsed off, the less damage they do.</li><li><b>Regular washing matters as much as polishing.</b> Removing grit before it gets rubbed into paint by wind or a careless wipe-down prevents fine scratching (swirl marks) building up.</li></ul><p class="mut">General guidance — a professional polish and sealant is the more thorough option if paint has already started to dull.</p>` },
+  { tag: 'Valeting', title: 'Interior Valet Basics: What a Full Valet Actually Covers', teaser: 'A quick guide to what "full valet" usually means, and why each step matters.', body: `<p>"Valet" gets used loosely, so it helps to know what a thorough interior job typically involves.</p><ul><li><b>Full vacuum,</b> including under the seats and in the boot — not just the visible footwell carpets.</li><li><b>Dashboard and console wipe-down</b> with a suitable interior cleaner, avoiding anything overly glossy on the dash that can create windscreen glare in bright sun.</li><li><b>Door panels and door jambs</b> — an area that collects grime fast but gets skipped in a quick clean.</li><li><b>Seats,</b> cleaned according to the material — fabric usually needs a different approach to leather or vinyl.</li><li><b>Windows and mirrors,</b> inside and out, finished streak-free.</li><li><b>Air vents,</b> often the most neglected dust trap in the whole cabin.</li></ul><p class="mut">General guidance — the exact scope of a "full valet" can vary between providers, so it's worth asking what's included.</p>` },
+  { tag: 'Engine Care', title: 'Engine Bay Washing in Queensburgh: Pros, Cons and When to Skip It', teaser: 'It looks impressive, but it’s not always the right call. Here’s the honest version.', body: `<p>An engine wash can genuinely help — but it's not automatically a good idea for every car, every time.</p><ul><li><b>The upside:</b> removing built-up grease and road grime makes it easier to spot leaks early, and a clean engine bay is simply nicer to work on if repairs are ever needed.</li><li><b>The main risk is water and electronics.</b> Modern engine bays are packed with sensors and connectors — a careless high-pressure blast aimed at the wrong spot can cause real problems.</li><li><b>Older or higher-mileage engines</b> sometimes rely on a layer of grime to mask minor gasket seepage — cleaning it off can occasionally reveal (not cause) an existing small leak, which is worth knowing rather than being alarmed by.</li><li><b>Timing matters.</b> An engine wash is best done when the engine is warm but not hot, and ideally followed by a short drive to help dry out any residual moisture.</li><li><b>When to skip it:</b> if you're about to do a long trip immediately after, or the car has known electrical gremlins, it's worth asking first.</li></ul><p class="mut">General guidance — a professional using the right technique and products is a safer bet than an improvised home attempt with a garden hose on full pressure.</p>` },
+  { tag: 'Myths', title: 'Waterless Car Wash Myths, Busted — Queensburgh Edition', teaser: 'Convenient, sure — but does it actually clean like a proper wash? Here’s the honest answer.', body: `<p>Waterless and rinseless wash products have grown popular, but a few common claims deserve a closer look.</p><ul><li><b>Myth: "It's just as thorough as a full wash."</b> Waterless products work by lubricating dirt so it lifts away with a cloth, which is fine for light dust — but they're not designed to shift heavy grime, mud or baked-on road tar the way a proper rinse and wash can.</li><li><b>Myth: "It can't scratch your paint."</b> Any wipe-down carries some risk if the surface is heavily soiled — the lubricating spray reduces that risk significantly, but it doesn't eliminate it on a genuinely dirty car.</li><li><b>Myth: "It's always better for the environment."</b> It does save water, which is a real benefit, especially useful during restrictions — but it's not automatically "better" in every sense; it's a trade-off, not a universal upgrade.</li><li><b>Where it genuinely shines:</b> light maintenance washes between proper cleans, or for cars that are already fairly clean and just need a quick refresh.</li></ul><p class="mut">General guidance — for a car that's genuinely dirty, a full wash with water is still the safer, more thorough option.</p>` },
+  { tag: 'Selling A Car', title: 'Getting Your Car Sale-Ready Before Listing It in Malvern', teaser: 'What actually moves the needle before you take the photos.', body: `<p>First impressions matter enormously when a car is for sale — most of what moves a buyer's opinion happens in the first thirty seconds of looking at it.</p><ul><li><b>A full exterior wash and polish</b> makes the single biggest visual difference in photos and in person — dull, dusty paint reads as "neglected" even on a mechanically sound car.</li><li><b>Clean wheels and tyres</b> stand out disproportionately in photos — brake dust and dull tyres are an easy, cheap fix that noticeably lifts the overall look.</li><li><b>A proper interior valet</b> removes smells and visible wear that make buyers question how the car was looked after generally, not just cosmetically.</li><li><b>Engine bay presentation</b> is a smaller factor for most private buyers, but a clean, tidy bay still reads as "well maintained" versus a grimy, oily one.</li><li><b>Photograph in good, even light</b> — ideally an overcast day or open shade — direct harsh sun creates glare that hides both flaws and genuine condition.</li></ul><p class="mut">General guidance — a professional wash and valet before listing is one of the cheapest ways to justify asking the fair price for a car's actual condition.</p>` }
+];
+const grid = document.getElementById('postGrid');
+POSTS.forEach((p, i) => {
+  const el = document.createElement('button');
+  el.className = 'post reveal'; el.setAttribute('aria-haspopup', 'dialog');
+  el.innerHTML = '<span class="tag">' + p.tag + '</span><h3>' + p.title + '</h3><p>' + p.teaser + '</p>';
+  el.onclick = () => openArticle(i);
+  grid.appendChild(el);
+});
+const modal = document.getElementById('amodal');
+function openArticle(i) {
+  const p = POSTS[i];
+  document.getElementById('atag').textContent = p.tag;
+  document.getElementById('atitle').textContent = p.title;
+  document.getElementById('abody').innerHTML = p.body;
+  modal.classList.add('open'); document.body.style.overflow = 'hidden';
+}
+function closeArticle() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aclose').onclick = closeArticle;
+modal.addEventListener('click', e => { if (e.target === modal) closeArticle(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
