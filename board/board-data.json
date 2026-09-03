@@ -2,7 +2,7 @@
   "projects": {
     "synergy-hair-kloof": {
       "title": "Synergy Hair Kloof",
-      "status": "deployed",
+      "status": "gate_passed",
       "priority": "hot",
       "notes": "Warm lead - Jaime is on their WhatsApp. Has an existing basic site (synergyhair.co.za), so pitch is a rebuild/upgrade, not greenfield. 2 real client colour-work photos on the build.\n\nJaimes notes: no em-dashes. site looks good.",
       "nextAction": "Outreach: pitch as a rebuild of synergyhair.co.za",
@@ -35,11 +35,11 @@
           "url": "https://www.google.com/maps/search/Synergy+Hair+Kloof+Village+Mall"
         }
       ],
-      "changeNotes": "2026-07-09 — /impeccable + /ui-ux-pro-max pass: image-led split hero (real colour-work photo + review caption + Call/WhatsApp CTAs), WCAG-AA contrast split (--accent-ink), 44px touch targets, ambient motion with reduced-motion guard. Preflight PASS, redeployed. | 2026-07-21 — Jaime notes applied: all em-dashes removed from index + journal copy (only the \"R —\" price placeholders remain, which preflight mandates). Now also in the public portfolio at arkatypestudios.com/work/synergy-hair/."
+      "changeNotes": "2026-07-09 — /impeccable + /ui-ux-pro-max pass: image-led split hero (real colour-work photo + review caption + Call/WhatsApp CTAs), WCAG-AA contrast split (--accent-ink), 44px touch targets, ambient motion with reduced-motion guard. Preflight PASS, redeployed. | 2026-07-21 — Jaime notes applied: all em-dashes removed from index + journal copy (only the \"R —\" price placeholders remain, which preflight mandates). Now also in the public portfolio at arkatypestudios.com/work/synergy-hair/. | 2026-09-03 STATUS CORRECTION: this record said \"deployed\", which was never true. Nothing in this repo had ever been linked to Vercel; every build has only existed on the local machine. Reset to its real state."
     },
     "avant-garde-hair": {
       "title": "Avant Garde Hair Hillcrest",
-      "status": "deployed",
+      "status": "gate_passed",
       "priority": "warm",
       "notes": "Arty, women-owned, colour-correction salon (stylist Amber). Mobile number = good WhatsApp. No real photos indexed anywhere — using unique stock with on-page 'client to supply' note.",
       "nextAction": "Verify listed site is dead, then outreach",
@@ -68,11 +68,11 @@
           "url": "https://www.google.com/maps/search/Avant+Garde+Hair+Fig+Tree+Farm+Inanda+Rd+Hillcrest"
         }
       ],
-      "changeNotes": "2026-07-09 — /impeccable + /ui-ux-pro-max pass: image-led split hero (colour photo + Shraddha R. review caption + Call/WhatsApp CTAs) over the coral→lavender mesh, WCAG-AA contrast split (--accent-ink), 44px touch targets, reduced-motion guard. Preflight PASS, redeployed. | 2026-07-21 — Jaime notes applied: em-dashes removed; hero \"g\" clipping fixed (Syne needs ~1.19em line box, line-height was 1.03 — now 1.16, h1 resized, min-width:0 on hero-grid children so the manual <br> gives 2 lines not 3). 2 genuine Fig Tree Farm photos wired in; a watermarked hji.co.uk shot was rejected. Now in the public portfolio at /work/avant-garde/."
+      "changeNotes": "2026-07-09 — /impeccable + /ui-ux-pro-max pass: image-led split hero (colour photo + Shraddha R. review caption + Call/WhatsApp CTAs) over the coral→lavender mesh, WCAG-AA contrast split (--accent-ink), 44px touch targets, reduced-motion guard. Preflight PASS, redeployed. | 2026-07-21 — Jaime notes applied: em-dashes removed; hero \"g\" clipping fixed (Syne needs ~1.19em line box, line-height was 1.03 — now 1.16, h1 resized, min-width:0 on hero-grid children so the manual <br> gives 2 lines not 3). 2 genuine Fig Tree Farm photos wired in; a watermarked hji.co.uk shot was rejected. Now in the public portfolio at /work/avant-garde/. | 2026-09-03 STATUS CORRECTION: this record said \"deployed\", which was never true. Nothing in this repo had ever been linked to Vercel; every build has only existed on the local machine. Reset to its real state."
     },
     "village-pet-parlour": {
       "title": "Village Pet Parlour",
-      "status": "deployed",
+      "status": "gate_passed",
       "priority": "hot",
       "notes": "Dog grooming, Kloof. Pet-care journal (not hair). No real photos indexed (only competitors/logos) — unique stock + disclosure.",
       "nextAction": "Confirm WhatsApp mobile, then outreach",
@@ -96,11 +96,11 @@
           "url": "https://www.google.com/maps/search/Village+Pet+Parlour+2+St+Marys+Rd+Kloof"
         }
       ],
-      "changeNotes": "2026-07-09 — /impeccable polish + hero redo + animated hero background (drifting glows, pointer parallax); ui-ux-pro-max 44px touch targets + zero-CLS aspect ratios; reduced-motion guard. Preflight PASS, redeployed. | 2026-07-21 — Jaime notes applied: all em-dashes removed from index + journal copy. Now in the public portfolio at /work/village-pet/."
+      "changeNotes": "2026-07-09 — /impeccable polish + hero redo + animated hero background (drifting glows, pointer parallax); ui-ux-pro-max 44px touch targets + zero-CLS aspect ratios; reduced-motion guard. Preflight PASS, redeployed. | 2026-07-21 — Jaime notes applied: all em-dashes removed from index + journal copy. Now in the public portfolio at /work/village-pet/. | 2026-09-03 STATUS CORRECTION: this record said \"deployed\", which was never true. Nothing in this repo had ever been linked to Vercel; every build has only existed on the local machine. Reset to its real state."
     },
     "integrity-hair": {
       "title": "Integrity Hair",
-      "status": "deployed",
+      "status": "gate_passed",
       "priority": "warm",
       "notes": "Intimate home-based salon (Nikki), Waterfall. Budget/low-maintenance journal angle. Home salon = thin photo footprint; using stock with disclosure.",
       "nextAction": "Outreach — affordable home-salon angle",
@@ -129,11 +129,11 @@
           "url": "https://www.google.com/maps/search/Integrity+Hair+6+Rowles+Ave+Waterfall"
         }
       ],
-      "changeNotes": "2026-07-09 — /impeccable + /ui-ux-pro-max pass: image-led split hero (warm portrait + Samantha P. review caption + Call/WhatsApp CTAs), WCAG-AA contrast split (--accent-ink), 44px touch targets, reduced-motion guard. Preflight PASS, redeployed."
+      "changeNotes": "2026-07-09 — /impeccable + /ui-ux-pro-max pass: image-led split hero (warm portrait + Samantha P. review caption + Call/WhatsApp CTAs), WCAG-AA contrast split (--accent-ink), 44px touch targets, reduced-motion guard. Preflight PASS, redeployed. | 2026-09-03 STATUS CORRECTION: this record said \"deployed\", which was never true. Nothing in this repo had ever been linked to Vercel; every build has only existed on the local machine. Reset to its real state."
     },
     "charlies-hair-salon": {
       "title": "Charlie's Hair Salon",
-      "status": "deployed",
+      "status": "gate_passed",
       "priority": "warm",
       "notes": "Homely, pampering (tea + cupcakes + head massage), Waterfall. Pampering/wellbeing journal. 1 real Fresha photo used.",
       "nextAction": "Confirm owner (Charlie vs Anne) before pitching",
@@ -158,11 +158,11 @@
           "url": "https://www.google.com/search?q=Charlie's+Hair+Salon+Waterfall+instagram+facebook"
         }
       ],
-      "changeNotes": "2026-07-09 — /impeccable + /ui-ux-pro-max pass: image-led split hero (real salon photo + review caption + Call/WhatsApp CTAs) over signature drifting bokeh, WCAG-AA contrast split (--accent-ink), 44px touch targets, reduced-motion guard. Preflight PASS, redeployed."
+      "changeNotes": "2026-07-09 — /impeccable + /ui-ux-pro-max pass: image-led split hero (real salon photo + review caption + Call/WhatsApp CTAs) over signature drifting bokeh, WCAG-AA contrast split (--accent-ink), 44px touch targets, reduced-motion guard. Preflight PASS, redeployed. | 2026-09-03 STATUS CORRECTION: this record said \"deployed\", which was never true. Nothing in this repo had ever been linked to Vercel; every build has only existed on the local machine. Reset to its real state."
     },
     "pink-petals-beauty-aesthetics": {
       "title": "Pink Petals Beauty & Aesthetics",
-      "status": "deployed",
+      "status": "gate_passed",
       "priority": "warm",
       "notes": "Beauty & aesthetics (lashes, brows, facials), Village Mall, Kloof. Greenfield — verified no live site. 4.8★ / 87 Google reviews. WhatsApp 071 224 8108. 2 real client photos (lash close-up + real treatment room); no fabricated review quotes.",
       "nextAction": "Outreach — treatment-menu + gallery + booking angle",
@@ -183,11 +183,11 @@
           "url": "https://www.google.com/maps/search/Pink+Petals+Beauty+%26+Aesthetics+Village+Mall+Kloof"
         }
       ],
-      "changeNotes": "2026-07-10 — NEW build from Lead Scout pipeline (score 72). Presence-gate verified greenfield. Image-led split hero (real lash/brow photo + Call/WhatsApp CTAs), drifting-petals motion, blush/berry palette (Fraunces + Karla), WCAG-AA --accent-ink, unique 6-article beauty journal. Preflight PASS."
+      "changeNotes": "2026-07-10 — NEW build from Lead Scout pipeline (score 72). Presence-gate verified greenfield. Image-led split hero (real lash/brow photo + Call/WhatsApp CTAs), drifting-petals motion, blush/berry palette (Fraunces + Karla), WCAG-AA --accent-ink, unique 6-article beauty journal. Preflight PASS. | 2026-09-03 STATUS CORRECTION: this record said \"deployed\", which was never true. Nothing in this repo had ever been linked to Vercel; every build has only existed on the local machine. Reset to its real state."
     },
     "sylvias-hair-beauty": {
       "title": "Sylvia's Hair & Beauty Salon",
-      "status": "deployed",
+      "status": "gate_passed",
       "priority": "warm",
       "notes": "Hair & beauty salon, 72 Pitlochry Rd, Chiltern Hills, Westville. Verified greenfield (Fresha booking only, no real site). 4.9 Google rating. Phone 082 320 8384. Real brand logo used; work photos are disclosed illustrative stock (no genuine salon photos exist).",
       "nextAction": "Outreach — proper site wrapping the Fresha booking",
@@ -209,11 +209,11 @@
           "url": "https://www.google.com/maps/search/Sylvia's+Hair+%26+Beauty+Salon+72+Pitlochry+Rd+Westville"
         }
       ],
-      "changeNotes": "2026-07-10 — NEW build from Lead Scout pipeline (score 65, verified greenfield). Logo-forward luxe identity (real SS Beauty logo), image-led split hero w/ disclosed stock + honest 4.9 rating caption, gold-shimmer motion, ivory/charcoal/gold palette (Cormorant + Jost), WCAG-AA --accent-ink, unique 6-article hair-&-beauty journal. Preflight PASS."
+      "changeNotes": "2026-07-10 — NEW build from Lead Scout pipeline (score 65, verified greenfield). Logo-forward luxe identity (real SS Beauty logo), image-led split hero w/ disclosed stock + honest 4.9 rating caption, gold-shimmer motion, ivory/charcoal/gold palette (Cormorant + Jost), WCAG-AA --accent-ink, unique 6-article hair-&-beauty journal. Preflight PASS. | 2026-09-03 STATUS CORRECTION: this record said \"deployed\", which was never true. Nothing in this repo had ever been linked to Vercel; every build has only existed on the local machine. Reset to its real state."
     },
     "azalea-ink": {
       "title": "Azalea Ink",
-      "status": "deployed",
+      "status": "built",
       "priority": "cold",
       "notes": "Concept build.",
       "nextAction": "Review — legacy build, consider upgrading to current spec",
@@ -232,11 +232,11 @@
           "url": "https://www.google.com/maps/search/Azalea%20Ink%20"
         }
       ],
-      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing). | 2026-09-03 STATUS CORRECTION: this record said \"deployed\", which was never true. Nothing in this repo had ever been linked to Vercel; every build has only existed on the local machine. Reset to its real state."
     },
     "cinnamon-lace": {
       "title": "Cinnamon & Lace",
-      "status": "deployed",
+      "status": "built",
       "priority": "cold",
       "notes": "Concept build.",
       "nextAction": "Review — legacy build, consider upgrading to current spec",
@@ -255,11 +255,11 @@
           "url": "https://www.google.com/maps/search/Cinnamon%20%26%20Lace%20"
         }
       ],
-      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing). | 2026-09-03 STATUS CORRECTION: this record said \"deployed\", which was never true. Nothing in this repo had ever been linked to Vercel; every build has only existed on the local machine. Reset to its real state."
     },
     "deacons-hair-salon": {
       "title": "Deacons Hair Salon",
-      "status": "deployed",
+      "status": "built",
       "priority": "cold",
       "notes": "Concept build.",
       "nextAction": "Review — legacy build, consider upgrading to current spec",
@@ -279,11 +279,11 @@
           "url": "https://www.google.com/maps/search/Deacons%20Hair%20Salon%20"
         }
       ],
-      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing). | 2026-09-03 STATUS CORRECTION: this record said \"deployed\", which was never true. Nothing in this repo had ever been linked to Vercel; every build has only existed on the local machine. Reset to its real state."
     },
     "dimitri-pet-services": {
       "title": "Dimitri Pet Services",
-      "status": "deployed",
+      "status": "built",
       "priority": "cold",
       "notes": "Hillcrest's trusted pet care specialist. Dog grooming, bathing, nail trimming, dog walking and pet sitting: hands-on care from a passionate team with a 4.8★ Google rating. Call 079 989 8197.",
       "nextAction": "Review — legacy build, consider upgrading to current spec",
@@ -303,11 +303,11 @@
           "url": "https://www.google.com/maps/search/Dimitri%20Pet%20Services%20"
         }
       ],
-      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing). | 2026-09-03 STATUS CORRECTION: this record said \"deployed\", which was never true. Nothing in this repo had ever been linked to Vercel; every build has only existed on the local machine. Reset to its real state."
     },
     "entropy-hair-studio": {
       "title": "entropy HAIR DESIGNS STUDIO",
-      "status": "deployed",
+      "status": "built",
       "priority": "cold",
       "notes": "entropy HAIR DESIGNS STUDIO: an editorial hair and barbering studio at Lillies Quarter, Hillcrest. Cuts, colour, blow waves and beard work by expert stylists.",
       "nextAction": "Review — legacy build, consider upgrading to current spec",
@@ -327,11 +327,11 @@
           "url": "https://www.google.com/maps/search/entropy%20HAIR%20DESIGNS%20STUDIO%20Hillcrest"
         }
       ],
-      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing). | 2026-09-03 STATUS CORRECTION: this record said \"deployed\", which was never true. Nothing in this repo had ever been linked to Vercel; every build has only existed on the local machine. Reset to its real state."
     },
     "hair-by-carl-putz": {
       "title": "Hair by Carl Putz: Kloof's Boutique Hairdresser",
-      "status": "deployed",
+      "status": "built",
       "priority": "cold",
       "notes": "Hair by Carl Putz: 40+ years of expert hair and nail care in Kloof. Boutique appointments, complimentary drinks, head massage included. Book via WhatsApp.",
       "nextAction": "Review — legacy build, consider upgrading to current spec",
@@ -352,11 +352,11 @@
           "url": "https://www.google.com/maps/search/Hair%20by%20Carl%20Putz%3A%20Kloof's%20Boutique%20Hairdresser%20"
         }
       ],
-      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing). | 2026-09-03 STATUS CORRECTION: this record said \"deployed\", which was never true. Nothing in this repo had ever been linked to Vercel; every build has only existed on the local machine. Reset to its real state."
     },
     "has-solutions-electrical": {
       "title": "H.A.S. Solutions (Electrical)",
-      "status": "deployed",
+      "status": "gate_passed",
       "priority": "warm",
       "notes": "Electrician / electrical contractor, Forest Hills, Hillcrest. Brand-new business (very few reviews) with no website — relies on referrals. Phone 072 408 2155. No real photos exist, so built icon/graphic-forward (honest).",
       "nextAction": "Outreach — turn referrals into bookings with a trustworthy site + click-to-call",
@@ -377,11 +377,11 @@
           "url": "https://www.google.com/maps/search/H.A.S.+Solutions+Electrical+Forest+Hills+Hillcrest"
         }
       ],
-      "changeNotes": "2026-07-10 — NEW to-spec build from Lead Scout pipeline (score 55), replacing a stale legacy build. Icon-forward (no photos), navy/amber trust identity, unique 6-article journal. Preflight PASS."
+      "changeNotes": "2026-07-10 — NEW to-spec build from Lead Scout pipeline (score 55), replacing a stale legacy build. Icon-forward (no photos), navy/amber trust identity, unique 6-article journal. Preflight PASS. | 2026-09-03 STATUS CORRECTION: this record said \"deployed\", which was never true. Nothing in this repo had ever been linked to Vercel; every build has only existed on the local machine. Reset to its real state."
     },
     "herspace-beauty-aesthetics": {
       "title": "HerSpace Beauty & Aesthetics",
-      "status": "deployed",
+      "status": "built",
       "priority": "cold",
       "notes": "A private ladies-only sanctuary in Westville for facials, microneedling, dermaplaning, chemical peels, massage and advanced skincare. Where relaxation meets luxury: book your glow-up.",
       "nextAction": "Review — legacy build, consider upgrading to current spec",
@@ -401,11 +401,11 @@
           "url": "https://www.google.com/maps/search/HerSpace%20Beauty%20%26%20Aesthetics%20Westville"
         }
       ],
-      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing). | 2026-09-03 STATUS CORRECTION: this record said \"deployed\", which was never true. Nothing in this repo had ever been linked to Vercel; every build has only existed on the local machine. Reset to its real state."
     },
     "jooma-coffee": {
       "title": "Jooma Coffee: Artisan Coffee & Kitchen · Kloof, KZN",
-      "status": "deployed",
+      "status": "built",
       "priority": "cold",
       "notes": "Kloof's favourite neighbourhood coffee shop. Artisan espresso, all-day breakfast, sarmies, bakes and catering. 2 Village Rd, Kloof, open daily.",
       "nextAction": "Review — legacy build, consider upgrading to current spec",
@@ -424,11 +424,11 @@
           "url": "https://www.google.com/maps/search/Jooma%20Coffee%3A%20Artisan%20Coffee%20%26%20Kitchen%20%C2%B7%20Kloof%2C%20KZN%20"
         }
       ],
-      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing). | 2026-09-03 STATUS CORRECTION: this record said \"deployed\", which was never true. Nothing in this repo had ever been linked to Vercel; every build has only existed on the local machine. Reset to its real state."
     },
     "konfident-kloof-dental": {
       "title": "Konfident at Kloof",
-      "status": "deployed",
+      "status": "built",
       "priority": "cold",
       "notes": "Konfident at Kloof — friendly, affordable family and general dentistry at Kloof Village Mall. Check-ups, cleaning, fillings, crowns, whitening and kids' dentistry. Your smile in our hands. New patients welcome.",
       "nextAction": "Review — legacy build, consider upgrading to current spec",
@@ -448,11 +448,11 @@
           "url": "https://www.google.com/maps/search/Konfident%20at%20Kloof%20Kloof"
         }
       ],
-      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing). | 2026-09-03 STATUS CORRECTION: this record said \"deployed\", which was never true. Nothing in this repo had ever been linked to Vercel; every build has only existed on the local machine. Reset to its real state."
     },
     "leigh-plumbers": {
       "title": "Leigh Plumbers – Emergency Plumbing Hillcrest & Sherwood, KZN",
-      "status": "deployed",
+      "status": "built",
       "priority": "cold",
       "notes": "5.0★ rated plumbers serving Hillcrest, Sherwood, Kloof and surrounds. Emergency call-outs, leak detection, geysers, drain clearing. Call 079 886 0254.",
       "nextAction": "Review — legacy build, consider upgrading to current spec",
@@ -471,11 +471,11 @@
           "url": "https://www.google.com/maps/search/Leigh%20Plumbers%20%E2%80%93%20Emergency%20Plumbing%20Hillcrest%20%26%20Sherwood%2C%20KZN%20"
         }
       ],
-      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing). | 2026-09-03 STATUS CORRECTION: this record said \"deployed\", which was never true. Nothing in this repo had ever been linked to Vercel; every build has only existed on the local machine. Reset to its real state."
     },
     "maryvale-vet": {
       "title": "Maryvale Veterinary Clinic, Westville, Durban",
-      "status": "deployed",
+      "status": "built",
       "priority": "cold",
       "notes": "Concept build.",
       "nextAction": "Review — legacy build, consider upgrading to current spec",
@@ -494,11 +494,11 @@
           "url": "https://www.google.com/maps/search/Maryvale%20Veterinary%20Clinic%2C%20Westville%2C%20Durban%20"
         }
       ],
-      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing). | 2026-09-03 STATUS CORRECTION: this record said \"deployed\", which was never true. Nothing in this repo had ever been linked to Vercel; every build has only existed on the local machine. Reset to its real state."
     },
     "moto-cafe": {
       "title": "Moto Cafe",
-      "status": "deployed",
+      "status": "built",
       "priority": "cold",
       "notes": "Concept build.",
       "nextAction": "Review — legacy build, consider upgrading to current spec",
@@ -517,11 +517,11 @@
           "url": "https://www.google.com/maps/search/Moto%20Cafe%20"
         }
       ],
-      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing). | 2026-09-03 STATUS CORRECTION: this record said \"deployed\", which was never true. Nothing in this repo had ever been linked to Vercel; every build has only existed on the local machine. Reset to its real state."
     },
     "nolas-salon": {
       "title": "Nolas Salon",
-      "status": "deployed",
+      "status": "built",
       "priority": "cold",
       "notes": "Westville's appointments-only beauty studio. Expert nail art, hair styling, beauty therapy and bridal makeup: three specialists, one beautiful address. 54A Dunkeld Rd · 072 128 9685.",
       "nextAction": "Review — legacy build, consider upgrading to current spec",
@@ -540,11 +540,11 @@
           "url": "https://www.google.com/maps/search/Nolas%20Salon%20"
         }
       ],
-      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing). | 2026-09-03 STATUS CORRECTION: this record said \"deployed\", which was never true. Nothing in this repo had ever been linked to Vercel; every build has only existed on the local machine. Reset to its real state."
     },
     "potter-shed-bistro": {
       "title": "The Potter Shed Bistro",
-      "status": "deployed",
+      "status": "built",
       "priority": "cold",
       "notes": "The Potter Shed Bistro: Hillcrest's favourite outdoor bistro. Fresh food, home-brewed craft beer, ziplines and nature walks at Morewood Activity Centre.",
       "nextAction": "Review — legacy build, consider upgrading to current spec",
@@ -564,7 +564,7 @@
           "url": "https://www.google.com/maps/search/The%20Potter%20Shed%20Bistro%20Hillcrest"
         }
       ],
-      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing). | 2026-09-03 STATUS CORRECTION: this record said \"deployed\", which was never true. Nothing in this repo had ever been linked to Vercel; every build has only existed on the local machine. Reset to its real state."
     },
     "shampooch-dog-parlour": {
       "title": "Shampooch Doggy Parlour",
@@ -605,7 +605,7 @@
     },
     "steam-and-cream": {
       "title": "Steam and Cream Cafe",
-      "status": "deployed",
+      "status": "built",
       "priority": "cold",
       "notes": "Steam and Cream, a much-loved café in Kloof, Upper Highway. Great coffee, all-day menu, and a warm space for catch-ups, catering and group bookings.",
       "nextAction": "Review — legacy build, consider upgrading to current spec",
@@ -624,11 +624,11 @@
           "url": "https://www.google.com/maps/search/Steam%20and%20Cream%20Cafe%20"
         }
       ],
-      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing). | 2026-09-03 STATUS CORRECTION: this record said \"deployed\", which was never true. Nothing in this repo had ever been linked to Vercel; every build has only existed on the local machine. Reset to its real state."
     },
     "strands-hair-studio": {
       "title": "STRANDS",
-      "status": "deployed",
+      "status": "built",
       "priority": "cold",
       "notes": "STRANDS: precision cuts, honest colour and considered treatment at The Colony, Hillcrest. 4.9★ on Google.",
       "nextAction": "Review — legacy build, consider upgrading to current spec",
@@ -648,11 +648,11 @@
           "url": "https://www.google.com/maps/search/STRANDS%20"
         }
       ],
-      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing). | 2026-09-03 STATUS CORRECTION: this record said \"deployed\", which was never true. Nothing in this repo had ever been linked to Vercel; every build has only existed on the local machine. Reset to its real state."
     },
     "studio-spa": {
       "title": "Studio Spa: Hillcrest · Luxury Treatments & Massage",
-      "status": "deployed",
+      "status": "built",
       "priority": "cold",
       "notes": "Hillcrest's sanctuary for body and mind. Massage therapy, facials, body rituals and nail treatments. Book your escape: 065 344 7994.",
       "nextAction": "Review — legacy build, consider upgrading to current spec",
@@ -671,11 +671,11 @@
           "url": "https://www.google.com/maps/search/Studio%20Spa%3A%20Hillcrest%20%C2%B7%20Luxury%20Treatments%20%26%20Massage%20"
         }
       ],
-      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing). | 2026-09-03 STATUS CORRECTION: this record said \"deployed\", which was never true. Nothing in this repo had ever been linked to Vercel; every build has only existed on the local machine. Reset to its real state."
     },
     "the-coffee-minista": {
       "title": "The Coffee Minista",
-      "status": "deployed",
+      "status": "built",
       "priority": "cold",
       "notes": "A tranquil garden coffee stop on Old Main Road, Kloof. Friendly baristas who know your order, honest coffee, and pure quiet.",
       "nextAction": "Review — legacy build, consider upgrading to current spec",
@@ -694,11 +694,11 @@
           "url": "https://www.google.com/maps/search/The%20Coffee%20Minista%20Kloof"
         }
       ],
-      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing). | 2026-09-03 STATUS CORRECTION: this record said \"deployed\", which was never true. Nothing in this repo had ever been linked to Vercel; every build has only existed on the local machine. Reset to its real state."
     },
     "the-elite-barbers": {
       "title": "The Elite Barbers",
-      "status": "deployed",
+      "status": "built",
       "priority": "cold",
       "notes": "The Elite Barbers, a premium black-and-gold barbershop in Westville, Upper Highway. Fresh fades, sharp beard work and hot-towel shaves. 4.8★ on Google.",
       "nextAction": "Review — legacy build, consider upgrading to current spec",
@@ -717,11 +717,11 @@
           "url": "https://www.google.com/maps/search/The%20Elite%20Barbers%20"
         }
       ],
-      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing). | 2026-09-03 STATUS CORRECTION: this record said \"deployed\", which was never true. Nothing in this repo had ever been linked to Vercel; every build has only existed on the local machine. Reset to its real state."
     },
     "tipsy-flamingo": {
       "title": "Tipsy Flamingo SA",
-      "status": "deployed",
+      "status": "built",
       "priority": "cold",
       "notes": "Kloof's most vibey cocktail bar and restaurant. Craft cocktails, incredible food, live music, ladies nights and unforgettable private functions. Kloof Village Mall · Open daily 10am–2am · 083 556 5851.",
       "nextAction": "Review — legacy build, consider upgrading to current spec",
@@ -740,11 +740,11 @@
           "url": "https://www.google.com/maps/search/Tipsy%20Flamingo%20SA%20"
         }
       ],
-      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing). | 2026-09-03 STATUS CORRECTION: this record said \"deployed\", which was never true. Nothing in this repo had ever been linked to Vercel; every build has only existed on the local machine. Reset to its real state."
     },
     "velvet-coffee-co": {
       "title": "VELVET. coffee co",
-      "status": "deployed",
+      "status": "built",
       "priority": "cold",
       "notes": "Specialty slow-brew coffee in the Maytime Centre, Kloof. V60, AeroPress, flat whites and the friendliest baristas on the Upper Highway.",
       "nextAction": "Review — legacy build, consider upgrading to current spec",
@@ -764,11 +764,11 @@
           "url": "https://www.google.com/maps/search/VELVET.%20coffee%20co%20Kloof"
         }
       ],
-      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing). | 2026-09-03 STATUS CORRECTION: this record said \"deployed\", which was never true. Nothing in this repo had ever been linked to Vercel; every build has only existed on the local machine. Reset to its real state."
     },
     "xqizit-beauty-club": {
       "title": "Xqizit Beauty Club (Westville)",
-      "status": "deployed",
+      "status": "gate_passed",
       "priority": "warm",
       "notes": "Beauty club / nail & beauty, membership-led. 7 Harry Gwala Road, Westville. 4.8★ / 21 Google reviews. Phone 073 565 1752. Real assets: their Westville interior photo, membership flyer, and official logo. Currently on a basic Wix subdomain.",
       "nextAction": "Outreach — move off Wix onto their own domain (xqizitbeautyclub.co.za) + SEO",
@@ -794,11 +794,11 @@
           "url": "https://xqizitbeautyclub.wixsite.com/home"
         }
       ],
-      "changeNotes": "2026-07-10 — NEW build from Lead Scout pipeline (score 72). Photo-led, red/gold/cream identity using real interior + membership flyer + logo. Presence-gate + enrichment reviewed (Wix/SEO case, built as rebuild). Preflight PASS."
+      "changeNotes": "2026-07-10 — NEW build from Lead Scout pipeline (score 72). Photo-led, red/gold/cream identity using real interior + membership flyer + logo. Presence-gate + enrichment reviewed (Wix/SEO case, built as rebuild). Preflight PASS. | 2026-09-03 STATUS CORRECTION: this record said \"deployed\", which was never true. Nothing in this repo had ever been linked to Vercel; every build has only existed on the local machine. Reset to its real state."
     },
     "hudson-k-plumbing": {
       "title": "Hudson K Plumbing",
-      "status": "deployed",
+      "status": "gate_passed",
       "priority": "warm",
       "notes": "Plumber / plumbing contractor, Kloof. Brand-new business with only a Google pin — no website. Phone 031 764 3734. No real photos exist, so built icon/graphic-forward (honest).",
       "nextAction": "Outreach — \"look established from day one\" simple trustworthy site + click-to-call",
@@ -819,7 +819,7 @@
           "url": "https://www.google.com/maps/search/Hudson+K+Plumbing+Kloof"
         }
       ],
-      "changeNotes": "2026-07-10 — NEW to-spec build from Lead Scout pipeline (score 55). Icon-forward (no photos), teal/copper trust identity, unique 6-article journal. Preflight PASS."
+      "changeNotes": "2026-07-10 — NEW to-spec build from Lead Scout pipeline (score 55). Icon-forward (no photos), teal/copper trust identity, unique 6-article journal. Preflight PASS. | 2026-09-03 STATUS CORRECTION: this record said \"deployed\", which was never true. Nothing in this repo had ever been linked to Vercel; every build has only existed on the local machine. Reset to its real state."
     },
     "dr-karmini-naidoo-dental-surgery": {
       "title": "DR KARMINI NAIDOO DENTAL SURGERY",
