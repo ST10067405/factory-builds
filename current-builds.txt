@@ -58,3 +58,7 @@ gillitts-marquee-and-chair-hire
 zalo-preschool-and-aftercare
 the-laundry-lounge-hillary
 benze-tailors-hillcrest
+
+# 2026-08-29
+kv-first-aid
+shampooch-dog-parlour

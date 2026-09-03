@@ -567,28 +567,41 @@
       "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
     },
     "shampooch-dog-parlour": {
-      "title": "Shampooch Dog Parlour",
-      "status": "deployed",
-      "priority": "cold",
-      "notes": "Shampooch Dog Parlour: much-loved dog grooming in Waterfall, Upper Highway. Full grooms, bath & tidy, nail care and puppy's first cut. Book by phone or enquiry.",
-      "nextAction": "Review — legacy build, consider upgrading to current spec",
+      "title": "Shampooch Doggy Parlour",
+      "status": "gate_passed",
+      "priority": "warm",
+      "notes": "Shampooch Doggy Parlour (Google Maps lists it as 'Shampooch Dog Parlour'). Dog grooming, 23 Link Drive, Waterfall, Durban 3610. Landline 031 762 1627 - WhatsApp/mobile 082 753 9788 (confirmed: their Facebook page has a WhatsApp button on that number). Email shampooch44@gmail.com. Google 4.7 from 133 reviews. Facebook 989 followers, 4.8 from 17 reviews. Instagram @shampoochdogparlour (~70 followers). Tagline 'Your Wagging Good Experience!'. 2025 Best of Durban winner. Google lists them as women-owned and LGBTQ+ friendly. Hours: opens 8am, closed Mondays.",
+      "nextAction": "Get real gallery photos from their Facebook, then Jaime review -> quote",
       "caveats": [
-        "Predates current SOP standard (image-led hero / AA contrast / journal may differ) — review before pitching"
+        "NO WORKING WEBSITE, and that is the pitch: their own Facebook links shampooch-grooming.co.za, which does NOT resolve (dead domain), and their Google listing's shampoochdogparlour.business.site returns 404 (Google retired business.site). Anyone who follows their own links hits nothing.",
+        "GALLERY IS MOSTLY SAMPLE IMAGES - only the first tile is a real Shampooch groom. The on-page DRAFT note says so. Real photos still needed before this is pitched as finished.",
+        "Remaining on-page DRAFT disclosures awaiting client: exact services + prices, founding story/owner name/team photo, trading hours + booking/deposit policy.",
+        "Name inconsistency: Facebook and Instagram say 'Doggy Parlour', Google Maps says 'Dog Parlour'. Site currently says 'Dog Parlour'. Confirm which she trades as.",
+        "Board previously said status 'deployed' - that was wrong. Nothing in this repo has ever been linked to Vercel."
       ],
       "notionUrl": "",
       "docs": [],
       "tags": [
         "shampooch",
-        "dog",
-        "parlour"
+        "dog-grooming",
+        "waterfall",
+        "upper-highway"
       ],
       "sources": [
         {
+          "type": "facebook",
+          "url": "https://www.facebook.com/ShampoochDoggyParlour"
+        },
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/shampoochdogparlour"
+        },
+        {
           "type": "maps",
-          "url": "https://www.google.com/maps/search/Shampooch%20Dog%20Parlour%20"
+          "url": "https://www.google.com/maps/place/Shampooch+Dog+Parlour"
         }
       ],
-      "changeNotes": "2026-07-10 — catalogued to board for review (was missing)."
+      "changeNotes": "2026-07-10 — catalogued to board for review (was missing). | 2026-08-31 - RETROFITTED legacy build to current SOP and added to current-builds.txt (48 active), preflight PASS. Added noindex + 'Concept draft' ribbon to both pages; added WhatsApp click-to-chat on 082 753 9788 stacked above the existing chat button; renamed the chat button id to chatToggle and the gallery section id to 'work' so the gate can see them; converted the journal's ARTICLES object to a POSTS array so its 7 articles are machine-readable. Replaced the FABRICATED rating placeholder '4.x' with the real Google 4.7 and swapped the placeholder review quote for two real Google reviews (Lezane Steenkamp, Catharina F.). Renamed a journal article that collided with village-pet-parlour."
     },
     "steam-and-cream": {
       "title": "Steam and Cream Cafe",
@@ -1980,6 +1993,44 @@
         }
       ],
       "changeNotes": "2026-08-23 — NEW batch-4 lead built straight to FULL SOP spec. Preflight PASS (46 active). Render sweep 0 failures."
+    },
+    "kv-first-aid": {
+      "title": "KV First Aid",
+      "status": "gate_passed",
+      "priority": "hot",
+      "notes": "Katie Carter (signs email as Kate Visser) — owner-run first aid trainer BASED IN KLOOF with a training room on her own premises; also travels. Service area = Pietermaritzburg to Durban and everywhere in between. Call/WhatsApp 083 444 9573 · kvfirstaid@gmail.com · IG @kvfirstaid · FB page 'KV First aid training' (32 followers). WARM INBOUND, NOT A SCOUT LEAD: she ran a Level 1 course for Jaime's team on 22 Jul 2026 and asked Jaime for a website quote herself on 28 Jul ('this person is taking so slow'). Verbally quoted ~R4k single-pager, 12 instalments; Needs-Assessment doc sent 30 Jul, never returned. Courses: Level 1, Level 2, Childcare, Teenage, Fire Training + first aid kits. Certificates valid 2 years (verified on the real certificates she issued). Claims 'over 15 years' experience' and 'nationally recognised courses' — her own wording.",
+      "nextAction": "Jaime review → send demo link + revive the R4k quote in the same WhatsApp thread (human send gate)",
+      "caveats": [
+        "NO Google/FB reviews exist (FB shows \"Not yet rated\") — reviews section deliberately omitted, do not fabricate",
+        "Accreditation body UNVERIFIED — she says \"nationally recognised\" but no SETA/QCTO/DoEL number is evidenced. No badges or numbers on the page. Confirm before go-live.",
+        "Name ambiguity: certificates say Trainer Officer K.Visser / Principal J.Carter; her marketing and FB say Katie Carter. Site uses \"Kate\" + \"Katie Carter\". Confirm which she wants.",
+        "Her certificates are branded \"Star First Aid\" with \"CM FIRST AID\" footer — she trains under/with another body. Relationship unclear; not referenced on-page.",
+        "Class photo (real_class_group) shows identifiable learners — from her own public FB page, but get her consent before go-live",
+        "Photos are cropped from her own FB brand posters + one candid class shot. Ask her for a proper photo set.",
+        "presence-check.js returned HAS_SITE — FALSE POSITIVE (matched firstaidtrainingsa.co.za, an unrelated Joburg/Pretoria company). She has NO website. Buildable confirmed.",
+        "Certificate validity: Jaime says UP TO 3 YEARS, but the certificates she issued in July read 28 Jul 2026 -> 28 Jul 2028 (exactly 2 years). Site says \"up to three years\" to cover both. CONFIRM the real rule with Kate.",
+        "Street address in Kloof NOT known — map embed points at Kloof town, and the Where line carries a draft marker. Get the address before go-live.",
+        "Compliance section states the OHS Act General Safety Regulation thresholds (first aid box >5 staff; one qualified first aider per 50 staff where >10 staff). Public law, but it is the most legally-flavoured copy on the site — worth Kate sanity-checking."
+      ],
+      "notionUrl": "",
+      "docs": [],
+      "tags": [
+        "first-aid-training",
+        "inbound-lead",
+        "mobile-service",
+        "kzn"
+      ],
+      "sources": [
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/profile.php?id=61585548974813"
+        },
+        {
+          "type": "instagram",
+          "url": "https://www.instagram.com/kvfirstaid"
+        }
+      ],
+      "changeNotes": "2026-08-29 — Built to full SOP standard. Preflight PASS (47 active). Brand, copy, services and contact details all lifted from her own FB page/posters; 3 real photos (2 cropped from her brand posters, 1 candid class shot) — no stock. Signature motion: self-drawing ECG trace. Fonts Newsreader + Plus Jakarta Sans (unused elsewhere in repo). Reviews section omitted (none exist). Mobile nav/ribbon overlap fixed and re-verified. | 2026-08-29 (2nd pass, Jaime feedback): added an interactive CHOKING SCENARIO section built as a patient-monitor UI — live ECG trace, heart rate / blood oxygen / airway readouts and a clock that step through a blocked airway to flatline at 4 min, plus a 'Someone here is trained' branch that resolves it at ~40s. This is the fear-led sales hook. About cards moved to full width. Preflight still PASS. | 2026-08-29 (3rd pass): Jaime cut the choking-scenario monitor — too complicated for a first pitch, PARKED as a later upsell suggestion. Hero ECG line changed from a one-off draw to a continuously sweeping heartbeat (path drawn 2x viewBox width, translateX(-1400px) over 9s, seamless loop; percentages do not resolve on an SVG <g>, hence user units). Preflight PASS. | 2026-08-30 (4th pass, Jaime facts): service area corrected to the Pietermaritzburg-Durban corridor; she is BASED IN KLOOF and has a training room on the premises, so the site is no longer framed as purely mobile (\"your place or mine\"). Map moved Hillcrest -> Kloof, LocalBusiness schema gained a Kloof postal address + areaServed for Durban/PMB/Upper Highway. Certificate validity changed 2 years -> \"up to three years\". NEW \"Health and safety compliance, handled\" section for organisations (OHS Act thresholds + certificates-for-your-file + kits). About image focal point moved up so Kate's face is not cropped. Preflight PASS."
     }
   },
   "documents": [

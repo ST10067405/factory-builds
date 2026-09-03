@@ -6,7 +6,8 @@
 <title>Shampooch Dog Parlour | Dog grooming in Waterfall, Upper Highway</title>
 <meta name="description" content="Shampooch Dog Parlour: much-loved dog grooming in Waterfall, Upper Highway. Full grooms, bath & tidy, nail care and puppy's first cut. Book by phone or enquiry." />
 <meta property="og:title" content="Shampooch Dog Parlour | Waterfall, Upper Highway" />
-<meta property="og:description" content="Loved dog grooming in Waterfall. 133 reviews. Book a groom today." />
+<meta property="og:description" content="Loved dog grooming in Waterfall. 4.7 stars from 133 Google reviews. Book a groom today." />
+<meta name="robots" content="noindex" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -131,9 +132,21 @@
 .j-body p{margin-bottom:1rem}
 .j-body h3{font-family:Sora,system-ui,sans-serif;font-size:1.08rem;font-weight:700;margin:1.3rem 0 .4rem;color:var(--navy)}
 @media(max-width:640px){.j-box{padding:2rem 1.4rem}}
+
+/* Concept-draft ribbon + Comms Bridge (Arkatype SOP) */
+.draft-ribbon{position:fixed;top:0;left:0;right:0;z-index:9999;background:var(--navy);color:#fff;font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px;font-weight:600;font-family:Inter,sans-serif}
+body{padding-top:28px}
+@media(max-width:820px){body{padding-top:50px}}
+/* sits directly above the existing chat button (fixed at right/bottom 25.6px) */
+.fab-stack{position:fixed;right:25.6px;bottom:94px;z-index:1101;display:flex;flex-direction:column;gap:12px;align-items:flex-end}
+.fab{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;cursor:pointer;border:none;box-shadow:0 10px 30px rgba(0,0,0,.3);transition:transform .2s}
+.fab:hover,.fab:focus-visible{transform:scale(1.08)}
+.fab-wa{background:#25D366}
+@media (prefers-reduced-motion: reduce){.fab:hover{transform:none}}
 </style>
 </head>
 <body>
+<div class="draft-ribbon">Concept draft: built for Shampooch Doggy Parlour by Arkatype Digital · not yet live</div>
 <header class="nav">
   <div class="wrap nav-in">
     <a class="brand" href="#top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"/><path d="M12 11v11"/><path d="m19 3-7 8-7-8Z"/></svg>Sham<span>pooch</span></a>
@@ -197,13 +210,14 @@
   <section class="block" id="proof" style="padding-top:0">
     <div class="wrap">
       <div class="proof reveal">
-        <div class="score"><b>4.x★</b><div style="color:var(--muted);margin-top:6px">133 Google reviews</div></div>
+        <div class="score"><b>4.7★</b><div style="color:var(--muted);margin-top:6px">133 Google reviews</div></div>
         <div>
-          <blockquote>"They treat every dog like their own; our pup actually pulls us through the door."</blockquote>
-          <cite>Placeholder review · real, approved quotes added before launch</cite>
+          <blockquote>"They look after the doggies so well while they are there. Cutting the nails is a pain for me, but they take care of it and they love the doggies, they are gentle. Amazing service."</blockquote>
+          <cite>Lezane Steenkamp · Google review</cite>
+          <blockquote style="margin-top:18px">"Love taking my dogs to Shampooch. The dogs love it too. They always smell so nice and I know they get pampered whenever they go."</blockquote>
+          <cite>Catharina F. · Google review</cite>
         </div>
       </div>
-      <span class="draft">DRAFT · awaiting client: confirm rating, pick approved review quotes</span>
     </div>
   </section>
 
@@ -214,7 +228,7 @@
     .gtile img{width:100%;height:100%;object-fit:cover;display:block}
     .gtile.ph{border:1px dashed rgba(234,53,125,.45)}
   </style>
-  <section class="block" id="gallery" style="padding-top:0">
+  <section class="block" id="work" style="padding-top:0">
     <div class="wrap">
       <div class="section-head reveal">
         <p class="eyebrow">Recent grooms</p>
@@ -385,11 +399,11 @@ const J_ARTS = {
 <script>(function(){var t=document.querySelector('.navtoggle'),nl=document.querySelector('.nav-links');if(t)t.addEventListener('click',function(){nl.classList.toggle('open');});}());</script>
 
 <style>
-#cb-btn{position:fixed;bottom:1.6rem;right:1.6rem;z-index:1100;width:56px;height:56px;border-radius:50%;background:var(--blue);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(234,53,125,.4);transition:transform .25s,box-shadow .25s}
-#cb-btn:hover{transform:scale(1.08);box-shadow:0 6px 28px rgba(234,53,125,.55)}
-#cb-btn svg{width:26px;height:26px;fill:#fff;transition:opacity .2s}
-#cb-btn.open #cb-icon-chat{opacity:0;position:absolute}
-#cb-btn.open #cb-icon-close{opacity:1}
+#chatToggle{position:fixed;bottom:1.6rem;right:1.6rem;z-index:1100;width:56px;height:56px;border-radius:50%;background:var(--blue);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(234,53,125,.4);transition:transform .25s,box-shadow .25s}
+#chatToggle:hover{transform:scale(1.08);box-shadow:0 6px 28px rgba(234,53,125,.55)}
+#chatToggle svg{width:26px;height:26px;fill:#fff;transition:opacity .2s}
+#chatToggle.open #cb-icon-chat{opacity:0;position:absolute}
+#chatToggle.open #cb-icon-close{opacity:1}
 #cb-icon-close{opacity:0}
 #cb-panel{position:fixed;bottom:5rem;right:1.6rem;z-index:1099;width:340px;max-width:calc(100vw - 2rem);background:var(--light);border-radius:16px;box-shadow:0 12px 48px rgba(42,30,38,.2);display:flex;flex-direction:column;overflow:hidden;transition:opacity .28s,transform .28s;opacity:0;transform:translateY(12px) scale(.97);pointer-events:none;border:1px solid var(--line)}
 #cb-panel.open{opacity:1;transform:none;pointer-events:all}
@@ -423,7 +437,7 @@ const J_ARTS = {
 #cb-send svg{width:20px;height:20px;fill:currentColor}
 </style>
 
-<button id="cb-btn" aria-label="Chat with us"><svg id="cb-icon-chat" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.956 9.956 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm4.293 13.293c-.232-.116-1.373-.677-1.586-.754-.213-.078-.368-.116-.522.116-.155.232-.598.754-.733.909-.135.155-.27.174-.502.058-.232-.116-.98-.361-1.867-1.151-.69-.615-1.155-1.374-1.29-1.606-.136-.232-.015-.357.101-.473.104-.104.232-.27.348-.406.116-.135.155-.232.232-.387.078-.155.039-.29-.019-.406-.058-.116-.522-1.259-.715-1.723-.19-.453-.38-.39-.522-.398-.136-.006-.29-.008-.445-.008s-.406.058-.619.29c-.213.232-.812.793-.812 1.934 0 1.141.832 2.244.948 2.399.116.155 1.638 2.5 3.969 3.506.555.24.988.383 1.326.49.557.178 1.064.153 1.464.093.447-.067 1.373-.561 1.566-1.103.193-.542.193-1.007.135-1.103-.058-.097-.213-.155-.445-.271z"/></svg><svg id="cb-icon-close" viewBox="0 0 24 24" style="position:absolute"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></button>
+<button id="chatToggle" aria-label="Chat with us"><svg id="cb-icon-chat" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.956 9.956 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm4.293 13.293c-.232-.116-1.373-.677-1.586-.754-.213-.078-.368-.116-.522.116-.155.232-.598.754-.733.909-.135.155-.27.174-.502.058-.232-.116-.98-.361-1.867-1.151-.69-.615-1.155-1.374-1.29-1.606-.136-.232-.015-.357.101-.473.104-.104.232-.27.348-.406.116-.135.155-.232.232-.387.078-.155.039-.29-.019-.406-.058-.116-.522-1.259-.715-1.723-.19-.453-.38-.39-.522-.398-.136-.006-.29-.008-.445-.008s-.406.058-.619.29c-.213.232-.812.793-.812 1.934 0 1.141.832 2.244.948 2.399.116.155 1.638 2.5 3.969 3.506.555.24.988.383 1.326.49.557.178 1.064.153 1.464.093.447-.067 1.373-.561 1.566-1.103.193-.542.193-1.007.135-1.103-.058-.097-.213-.155-.445-.271z"/></svg><svg id="cb-icon-close" viewBox="0 0 24 24" style="position:absolute"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></button>
 <div id="cb-panel" role="dialog">
   <div id="cb-head"><div id="cb-avatar">🐾</div><div id="cb-head-info"><div id="cb-head-name">Shampooch</div><div id="cb-head-status">Online now</div></div></div>
   <div id="cb-msgs"></div>
@@ -434,7 +448,7 @@ const J_ARTS = {
 
 <script>
 (function(){
-  var btn=document.getElementById('cb-btn'),panel=document.getElementById('cb-panel'),msgs=document.getElementById('cb-msgs'),input=document.getElementById('cb-input'),form=document.getElementById('cb-form'),typing=document.getElementById('cb-typing'),opened=false;
+  var btn=document.getElementById('chatToggle'),panel=document.getElementById('cb-panel'),msgs=document.getElementById('cb-msgs'),input=document.getElementById('cb-input'),form=document.getElementById('cb-form'),typing=document.getElementById('cb-typing'),opened=false;
   var KB=[
     {k:['book','appoint','reserve','call','phone'],r:'Call us on <a href="tel:0317621627">031 762 1627</a> to book your dog\'s groom. We\'ll find a time that works for you. 📅'},
     {k:['service','offer','groom','bath','tidy','nail','cut','scissor','clip'],r:'We offer: <strong>Full Grooms</strong> · <strong>Bath & Tidy</strong> · <strong>Nail Trimming</strong> · <strong>Puppy\'s First Cut</strong>. Calm, kind, and tail-wag approved. ✂️'},
@@ -457,5 +471,12 @@ const J_ARTS = {
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&opened){opened=false;btn.classList.remove('open');panel.classList.remove('open');}});
 })();
 </script>
+
+<!-- Comms Bridge: WhatsApp click-to-chat (082 753 9788, confirmed on their Facebook page) -->
+<div class="fab-stack">
+  <a class="fab fab-wa" href="https://wa.me/27827539788?text=Hi%20Shampooch%2C%20I%27d%20like%20to%20book%20a%20groom%20for%20my%20dog." target="_blank" rel="noopener" aria-label="Chat to Shampooch on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.5 14.1c-.2.7-1.4 1.3-1.9 1.4-.5.1-1.1.2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.3 1.4 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2.2 1c.3.1.5.2.5.3.1.1.1.5-.1 1.1z"/></svg>
+  </a>
+</div>
 </body>
 </html>
